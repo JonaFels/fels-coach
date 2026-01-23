@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const offerings = [
@@ -49,7 +49,7 @@ const Angebote = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-background">
+      <PageBackground>
         <div className="container mx-auto px-4">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
             {t("offerings.title")}
@@ -59,7 +59,7 @@ const Angebote = () => {
             {offerings.map((offering, index) => (
               <Card
                 key={offering.titleKey}
-                className={`relative group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+                className={`relative group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/95 backdrop-blur-sm ${
                   offering.highlight
                     ? "border-secondary ring-1 ring-secondary"
                     : ""
@@ -118,7 +118,7 @@ const Angebote = () => {
             ))}
           </div>
         </div>
-      </main>
+      </PageBackground>
       <Footer />
       <CookieBanner />
     </div>

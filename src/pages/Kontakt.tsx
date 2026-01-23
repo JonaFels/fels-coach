@@ -1,8 +1,9 @@
 import { Mail, MessageCircle, Send } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Kontakt = () => {
@@ -11,13 +12,13 @@ const Kontakt = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-background">
+      <PageBackground>
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
             {t("contact.title")}
           </h1>
 
-          <Card>
+          <Card className="bg-card/95 backdrop-blur-sm">
             <CardContent className="pt-8">
               <p className="text-muted-foreground text-center mb-10 leading-relaxed">
                 {t("contact.text")}
@@ -67,7 +68,7 @@ const Kontakt = () => {
             </CardContent>
           </Card>
         </div>
-      </main>
+      </PageBackground>
       <Footer />
       <CookieBanner />
     </div>

@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Ebook = () => {
@@ -24,7 +25,7 @@ const Ebook = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-background">
+      <PageBackground>
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
             {t("ebook.title")}
@@ -32,7 +33,7 @@ const Ebook = () => {
 
           <div className="grid gap-8 md:grid-cols-2">
             {/* Form Section */}
-            <Card>
+            <Card className="bg-card/95 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="font-serif text-xl">
                   {t("ebook.subtitle")}
@@ -90,7 +91,7 @@ const Ebook = () => {
             </Card>
 
             {/* Features Section */}
-            <Card>
+            <Card className="bg-card/95 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="font-serif text-xl">
                   {t("ebook.infoTitle")}
@@ -115,7 +116,7 @@ const Ebook = () => {
             </Card>
           </div>
         </div>
-      </main>
+      </PageBackground>
       <Footer />
       <CookieBanner />
     </div>
