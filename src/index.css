@@ -16,7 +16,7 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors */
+    /* Core Brand Colors from style.css */
     --background: 0 0% 100%;
     --foreground: 0 0% 20%;
 
@@ -26,36 +26,36 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    /* Primary: Softer charcoal from Fels brand */
-    --primary: 0 0% 20%;
+    /* Primary: Manager-Look blue-gray (#2c3e50) */
+    --primary: 207 29% 24%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Blue-gray accent */
-    --secondary: 215 19% 25%;
+    /* Secondary: Text medium (#4a5568) */
+    --secondary: 220 13% 35%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted backgrounds */
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 30 40% 98%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Accent: Warm stone */
-    --accent: 30 10% 94%;
-    --accent-foreground: 0 0% 20%;
+    /* Accent: Warm brown/tan (#a0866a) */
+    --accent: 29 24% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 215 19% 25%;
+    --border: 0 0% 93%;
+    --input: 0 0% 93%;
+    --ring: 207 29% 24%;
 
     --radius: 0.25rem;
 
     /* Custom brand tokens */
     --fels-charcoal: 0 0% 20%;
-    --fels-slate: 215 19% 25%;
-    --fels-stone: 30 10% 94%;
-    --fels-cream: 40 20% 98%;
+    --fels-slate: 207 29% 24%;
+    --fels-stone: 29 24% 52%;
+    --fels-cream: 30 40% 98%;
 
     /* Sidebar tokens */
     --sidebar-background: 0 0% 98%;
