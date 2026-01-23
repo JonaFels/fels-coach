@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -6,11 +7,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { key: "nav.coaching", href: "#coaching" },
-  { key: "nav.familienaufstellung", href: "#familienaufstellung" },
-  { key: "nav.ebook", href: "#ebook" },
-  { key: "nav.kontakt", href: "#kontakt" },
-  { key: "nav.ueber", href: "#ueber" },
+  { key: "nav.coaching", href: "/" },
+  { key: "nav.familienaufstellung", href: "/familienaufstellung" },
+  { key: "nav.ebook", href: "/ebook" },
+  { key: "nav.kontakt", href: "/kontakt" },
+  { key: "nav.ueber", href: "/ueber-mich" },
 ];
 
 export const Header = () => {
@@ -21,55 +22,40 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="/" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
               Systemische Familienaufstellungen
             </h1>
-          </a>
+          </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.key}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t(item.key)}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Button asChild size="sm">
-              <a
-                href="https://cal.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("nav.termin")}
-              </a>
+              <Link to="/angebote">{t("nav.termin")}</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 -mr-2 text-foreground"
             aria-label="Menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
@@ -78,25 +64,21 @@ export const Header = () => {
         >
           <nav className="flex flex-col gap-2 pt-2">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.key}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
               >
                 {t(item.key)}
-              </a>
+              </Link>
             ))}
             <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
               <Button asChild size="sm">
-                <a
-                  href="https://cal.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link to="/angebote" onClick={() => setIsMobileMenuOpen(false)}>
                   {t("nav.termin")}
-                </a>
+                </Link>
               </Button>
             </div>
           </nav>
