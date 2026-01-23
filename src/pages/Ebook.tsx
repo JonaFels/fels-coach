@@ -16,10 +16,32 @@ const Ebook = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
-    setSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      
+      const response = await fetch("https://www.fels-coach.de/send_ebook.php", {
+        method: "POST",
+        body: formData,
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -81,8 +103,8 @@ const Ebook = () => {
                         </Link>
                         .
                       </p>
-                      <Button type="submit" className="w-full">
-                        {t("ebook.download")}
+                      <Button type="submit" className="w-full" disabled={isSubmitting}>
+                        {isSubmitting ? "Wird gesendet..." : t("ebook.download")}
                       </Button>
                     </form>
                   </>
