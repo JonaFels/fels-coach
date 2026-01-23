@@ -1,17 +1,18 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Offerings } from "@/components/Offerings";
+import { CoachingSection } from "@/components/CoachingSection";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { PageBackground } from "@/components/PageBackground";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <PageBackground className="py-0">
         <Hero />
-        <Offerings />
-      </main>
+        <CoachingSection />
+      </PageBackground>
       <Footer />
       <CookieBanner />
     </div>

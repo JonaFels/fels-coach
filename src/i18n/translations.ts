@@ -63,6 +63,53 @@ export const translations: Translations = {
     fr: "Réserver maintenant",
   },
 
+  // Coaching Description (Homepage)
+  "coaching.title": {
+    de: "Systemisches 1:1 Coaching",
+    en: "Systemic 1:1 Coaching",
+    fr: "Coaching Systémique 1:1",
+  },
+  "coaching.intro": {
+    de: "Individuelle Begleitung für Deine Transformation",
+    en: "Individual guidance for your transformation",
+    fr: "Accompagnement individuel pour votre transformation",
+  },
+  "coaching.text1": {
+    de: "Ich biete 1:1 Coachings mit einem systemischen Ansatz an, um die Wurzeln von Blockaden zu finden und festgefahrene Energie wieder in Fluss zu bringen. Gemeinsam nutzen wir die transformative Kraft von Familienaufstellungen, um dich weiter zu bringen, wo du weiter gehen möchtest.",
+    en: "I offer 1:1 coaching with a systemic approach to find the roots of blockages and get stagnant energy flowing again. Together we use the transformative power of family constellations to take you further where you want to go.",
+    fr: "Je propose des coachings 1:1 avec une approche systémique pour trouver les racines des blocages et remettre en mouvement l'énergie stagnante. Ensemble, nous utilisons le pouvoir transformateur des constellations familiales pour vous amener plus loin là où vous souhaitez aller.",
+  },
+  "coaching.text2": {
+    de: "Wenn du bereit bist innezuhalten und einen Veränderungsprozess zu starten, begleite ich dich dabei, deine inneren Ressourcen zu stärken und Klarheit für die nächsten Schritte zu finden.",
+    en: "If you are ready to pause and start a process of change, I will accompany you in strengthening your inner resources and finding clarity for the next steps.",
+    fr: "Si vous êtes prêt à faire une pause et à entamer un processus de changement, je vous accompagne pour renforcer vos ressources intérieures et trouver de la clarté pour les prochaines étapes.",
+  },
+  "coaching.details.title": {
+    de: "Termin-Details",
+    en: "Session Details",
+    fr: "Détails de la séance",
+  },
+  "coaching.detail1": {
+    de: "60 min pro Termin",
+    en: "60 min per session",
+    fr: "60 min par séance",
+  },
+  "coaching.detail2": {
+    de: "Tiefgehende Selbsterkenntnis und Auflösung alter Muster",
+    en: "Deep self-awareness and dissolution of old patterns",
+    fr: "Conscience de soi profonde et dissolution des anciens schémas",
+  },
+  "coaching.detail3": {
+    de: "Lösung tiefgreifender Konflikte",
+    en: "Resolution of deep-rooted conflicts",
+    fr: "Résolution des conflits profonds",
+  },
+  "coaching.learnMore": {
+    de: "Mehr über Familienaufstellungen erfahren",
+    en: "Learn more about Family Constellations",
+    fr: "En savoir plus sur les Constellations Familiales",
+  },
+
   // Offerings Section
   "offerings.title": {
     de: "Buchungsoptionen",

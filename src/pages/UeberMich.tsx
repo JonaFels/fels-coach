@@ -2,8 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
-import hintergrundStruktur from "@/assets/hintergrund-struktur.jpg";
 import jonaFelsHero from "@/assets/jona-fels-hero.jpg";
 
 const UeberMich = () => {
@@ -12,19 +12,8 @@ const UeberMich = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main 
-        className="flex-1 py-16 md:py-24 bg-background relative"
-        style={{
-          backgroundImage: `url(${hintergrundStruktur})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-background/85" />
-        
-        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+      <PageBackground>
+        <div className="container mx-auto px-4 max-w-4xl">
           {/* Hero Section with Photo */}
           <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-lg flex-shrink-0">
@@ -98,7 +87,7 @@ const UeberMich = () => {
             </CardContent>
           </Card>
         </div>
-      </main>
+      </PageBackground>
       <Footer />
       <CookieBanner />
     </div>

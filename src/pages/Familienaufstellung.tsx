@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Familienaufstellung = () => {
@@ -13,14 +14,14 @@ const Familienaufstellung = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-background">
+      <PageBackground>
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
             {t("family.title")}
           </h1>
 
           {/* Intro Section */}
-          <Card className="mb-8">
+          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
                 {t("family.intro.title")}
@@ -34,7 +35,7 @@ const Familienaufstellung = () => {
           </Card>
 
           {/* Benefits Section */}
-          <Card className="mb-8">
+          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
                 {t("family.benefits.title")}
@@ -63,7 +64,7 @@ const Familienaufstellung = () => {
           </Card>
 
           {/* Process Section */}
-          <Card className="mb-8">
+          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
                 {t("family.process.title")}
@@ -113,7 +114,7 @@ const Familienaufstellung = () => {
             </Button>
           </div>
         </div>
-      </main>
+      </PageBackground>
       <Footer />
       <CookieBanner />
     </div>
