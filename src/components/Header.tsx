@@ -22,7 +22,7 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex-shrink-0">
+          <Link to="/angebote" className="flex-shrink-0">
             <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
               Systemische Familienaufstellungen
             </h1>
