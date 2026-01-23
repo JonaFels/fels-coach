@@ -5,7 +5,7 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-b from-accent/30 to-background">
+    <section className="relative py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight animate-fade-in-up">
