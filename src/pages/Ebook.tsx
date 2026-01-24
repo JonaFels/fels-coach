@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,9 +9,11 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useToast } from "@/hooks/use-toast";
 
 const Ebook = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,6 +23,11 @@ const Ebook = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    toast({
+      title: "E-Book wird gesendet...",
+      description: "Bitte warte einen Moment, dein E-Book ist unterwegs!",
+    });
     
     try {
       const formData = new FormData();
@@ -34,11 +41,24 @@ const Ebook = () => {
       
       if (response.ok) {
         setSubmitted(true);
+        toast({
+          title: "E-Book erfolgreich gesendet!",
+          description: "Prüfe dein E-Mail-Postfach für den Download-Link.",
+        });
       } else {
-        console.error("Form submission failed");
+        toast({
+          title: "Fehler beim Senden",
+          description: "Bitte versuche es später erneut.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast({
+        title: "Verbindungsfehler",
+        description: "Bitte überprüfe deine Internetverbindung.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -104,7 +124,14 @@ const Ebook = () => {
                         .
                       </p>
                       <Button type="submit" className="w-full" disabled={isSubmitting}>
-                        {isSubmitting ? "Wird gesendet..." : t("ebook.download")}
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            E-Book wird gesendet...
+                          </>
+                        ) : (
+                          t("ebook.download")
+                        )}
                       </Button>
                     </form>
                   </>
