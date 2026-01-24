@@ -55,9 +55,6 @@ const Angebote = () => {
                       {offering.price}€
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    {t("offerings.onlinePayment")}
-                  </p>
                 </CardContent>
                 <CardFooter>
                   <Button
