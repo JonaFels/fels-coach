@@ -22,7 +22,7 @@ export const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61562014600393"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
@@ -31,7 +31,7 @@ export const Footer = () => {
               <Facebook className="h-5 w-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/jona.fels/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
