@@ -20,12 +20,46 @@ export const CookieBanner = () => {
     analytics: false,
   });
 
+  // Load GA4 script when analytics is enabled
+  const loadGoogleAnalytics = () => {
+    const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // TODO: Replace with your GA4 Measurement ID
+    
+    // Check if already loaded
+    if (document.querySelector(`script[src*="gtag/js?id=${GA_MEASUREMENT_ID}"]`)) {
+      return;
+    }
+
+    // Load gtag.js script
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
+    function gtag(...args: unknown[]) {
+      (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
+    }
+    gtag("js", new Date());
+    gtag("config", GA_MEASUREMENT_ID, {
+      anonymize_ip: true,
+    });
+
+    // Make gtag available globally
+    (window as unknown as { gtag: typeof gtag }).gtag = gtag;
+  };
+
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
     if (!consent) {
       setIsVisible(true);
     } else {
-      setPreferences(JSON.parse(consent));
+      const savedPrefs = JSON.parse(consent);
+      setPreferences(savedPrefs);
+      // Load GA if user previously consented
+      if (savedPrefs.analytics) {
+        loadGoogleAnalytics();
+      }
     }
   }, []);
 
@@ -34,6 +68,11 @@ export const CookieBanner = () => {
     setPreferences(prefs);
     setIsVisible(false);
     setShowPreferences(false);
+    
+    // Load or disable analytics based on preference
+    if (prefs.analytics) {
+      loadGoogleAnalytics();
+    }
   };
 
   const acceptAll = () => {
