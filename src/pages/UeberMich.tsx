@@ -4,8 +4,6 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
-import jonaFelsHero from "@/assets/jona-fels-hero.jpg";
-
 const UeberMich = () => {
   const { t } = useLanguage();
 
@@ -14,21 +12,12 @@ const UeberMich = () => {
       <Header />
       <PageBackground>
         <div className="container mx-auto px-4 max-w-4xl">
-          {/* Hero Section with Photo */}
-          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-lg flex-shrink-0">
-              <img 
-                src={jonaFelsHero} 
-                alt="Jona Fels" 
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div className="text-center md:text-left">
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
-                {t("about.title")}
-              </h1>
-              <p className="text-lg text-muted-foreground">{t("about.subtitle")}</p>
-            </div>
+          {/* Hero Section */}
+          <div className="text-center mb-12">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
+              {t("about.title")}
+            </h1>
+            <p className="text-lg text-muted-foreground">{t("about.subtitle")}</p>
           </div>
 
           {/* Intro Section */}
