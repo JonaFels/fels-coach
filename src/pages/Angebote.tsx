@@ -12,13 +12,13 @@ const offerings = [
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
     price: 20,
-    href: "https://cal.com/systemisches-coaching/systemisches-coaching-erstes-coaching",
+    href: "https://cal.com/systemisches-coaching/coaching-kennenlernen",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
     price: 50,
-    href: "https://cal.com/systemisches-coaching/systemisches-coaching",
+    href: "https://cal.com/systemisches-coaching/coaching-termin",
   },
 ];
 
