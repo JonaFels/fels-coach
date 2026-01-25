@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { key: "nav.coaching", href: "/" },
   { key: "nav.familienaufstellung", href: "/familienaufstellung" },
   { key: "nav.ebook", href: "/ebook" },
+  { key: "nav.blog", href: "/blog" },
   { key: "nav.kontakt", href: "/kontakt" },
   { key: "nav.ueber", href: "/ueber-mich" },
 ];

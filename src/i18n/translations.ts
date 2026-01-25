@@ -45,6 +45,23 @@ export const translations: Translations = {
     en: "Offers",
     fr: "Offres",
   },
+  "nav.blog": {
+    de: "Blog",
+    en: "Blog",
+    fr: "Blog",
+  },
+
+  // Blog
+  "blog.title": {
+    de: "Blog",
+    en: "Blog",
+    fr: "Blog",
+  },
+  "blog.backToList": {
+    de: "Zurück zur Übersicht",
+    en: "Back to overview",
+    fr: "Retour à l'aperçu",
+  },
 
   // Hero Section
   "hero.title": {
