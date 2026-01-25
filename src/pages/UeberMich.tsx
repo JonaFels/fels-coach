@@ -19,7 +19,7 @@ const UeberMich = () => {
               <img 
                 src={profilBild} 
                 alt="Jona Fels - Coach" 
-                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-[center_20%] mx-auto shadow-lg border-4 border-secondary/30"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-[40%_center] mx-auto shadow-lg border-4 border-secondary/30"
               />
             </div>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
