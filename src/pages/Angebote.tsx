@@ -75,6 +75,19 @@ const Angebote = () => {
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <Button asChild variant="outline" size="lg">
+              <a
+                href="https://cal.com/systemisches-coaching"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("offerings.allDates")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </div>
         </div>
       </PageBackground>
       <Footer />

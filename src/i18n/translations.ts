@@ -178,6 +178,11 @@ export const translations: Translations = {
     en: "Book Session",
     fr: "Réserver",
   },
+  "offerings.allDates": {
+    de: "Alle verfügbaren Termine ansehen",
+    en: "View all available dates",
+    fr: "Voir toutes les dates disponibles",
+  },
   "offerings.duration": {
     de: "Dauer",
     en: "Duration",
