@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
+import profilBild from "@/assets/profil-bild-schwarz.png";
 const UeberMich = () => {
   const { t } = useLanguage();
 
@@ -14,6 +15,13 @@ const UeberMich = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
+            <div className="mb-8">
+              <img 
+                src={profilBild} 
+                alt="Jona Fels - Coach" 
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover mx-auto shadow-lg border-4 border-secondary/30"
+              />
+            </div>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
               {t("about.title")}
             </h1>
