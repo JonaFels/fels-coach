@@ -60,7 +60,7 @@ export const CoachingSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:400ms]">
             <Button asChild size="lg">
               <a
-                href="https://cal.com/systemisches-coaching"
+                href="https://cal.com/systemisches-coaching/coaching-termin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
