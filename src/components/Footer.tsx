@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
@@ -38,6 +38,15 @@ export const Footer = () => {
               aria-label="Instagram"
             >
               <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jona-fels-coach/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
             </a>
           </div>
 
