@@ -22,7 +22,6 @@ const Index = () => {
           <TrustBadges />
           <CoachingSection />
         </PageBackground>
-        <TestimonialsSection />
         <FAQSection />
       </main>
       <Footer />

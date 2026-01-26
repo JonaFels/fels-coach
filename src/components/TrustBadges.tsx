@@ -1,4 +1,4 @@
-import { Shield, Award, Clock, Video } from "lucide-react";
+import { Shield, Heart, Clock, Video } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const TrustBadges = () => {
@@ -21,7 +21,7 @@ export const TrustBadges = () => {
       descKey: "trust.flexibleDesc",
     },
     {
-      icon: Award,
+      icon: Heart,
       titleKey: "trust.experience",
       descKey: "trust.experienceDesc",
     },

@@ -46,8 +46,8 @@ export const JsonLd = () => {
       founder: {
         "@type": "Person",
         name: "Jona Fels",
-        jobTitle: "Systemischer Coach & Familienaufsteller",
-        description: "Zertifizierter Familienaufsteller mit Heilpraktiker-Ausbildung und langjähriger Meditationserfahrung.",
+        jobTitle: "Systemischer Coach & Familienaufsteller i.A.",
+        description: "Familienaufsteller in Ausbildung mit Heilpraktiker-Ausbildung.",
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -86,8 +86,8 @@ export const JsonLd = () => {
       "@type": "Person",
       "@id": "https://www.fels-coach.de/#person",
       name: "Jona Fels",
-      jobTitle: "Systemischer Coach & Familienaufsteller",
-      description: "Zertifizierter Familienaufsteller und Coach mit Fokus auf systemische Arbeit und Tiefenarbeit.",
+      jobTitle: "Systemischer Coach & Familienaufsteller i.A.",
+      description: "Familienaufsteller in Ausbildung und Coach mit Fokus auf systemische Arbeit und Tiefenarbeit.",
       url: "https://www.fels-coach.de/ueber-mich",
       image: "https://www.fels-coach.de/android-icon-192x192.png",
       sameAs: [

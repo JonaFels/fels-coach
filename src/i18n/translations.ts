@@ -579,9 +579,9 @@ export const translations: Translations = {
     fr: "Écrit par",
   },
   "author.title": {
-    de: "Systemischer Coach & Familienaufsteller",
-    en: "Systemic Coach & Family Constellation Facilitator",
-    fr: "Coach Systémique & Facilitateur de Constellations Familiales",
+    de: "Systemischer Coach & Familienaufsteller i.A.",
+    en: "Systemic Coach & Family Constellation Facilitator in Training",
+    fr: "Coach Systémique & Facilitateur de Constellations en Formation",
   },
   "author.bio": {
     de: "Ich begleite Menschen dabei, unbewusste Muster zu erkennen und aufzulösen. Mit Präzision und tiefem Mitgefühl unterstütze ich dich auf deinem Weg zu mehr Klarheit und innerem Frieden.",
@@ -589,9 +589,9 @@ export const translations: Translations = {
     fr: "J'accompagne les personnes à reconnaître et dissoudre les schémas inconscients. Avec précision et profonde compassion, je vous soutiens sur votre chemin vers plus de clarté.",
   },
   "author.credential1": {
-    de: "Zertifizierter Familienaufsteller",
-    en: "Certified Family Constellation Facilitator",
-    fr: "Facilitateur certifié",
+    de: "Familienaufsteller i.A.",
+    en: "Family Constellation Facilitator in Training",
+    fr: "Facilitateur en formation",
   },
   "author.credential2": {
     de: "Heilpraktiker-Ausbildung",
@@ -611,14 +611,14 @@ export const translations: Translations = {
     fr: "Caractéristiques de confiance",
   },
   "trust.certified": {
-    de: "Zertifiziert",
-    en: "Certified",
-    fr: "Certifié",
+    de: "In Ausbildung",
+    en: "In Training",
+    fr: "En Formation",
   },
   "trust.certifiedDesc": {
-    de: "Ausgebildeter Familienaufsteller",
-    en: "Trained family constellation facilitator",
-    fr: "Facilitateur formé",
+    de: "Familienaufsteller i.A.",
+    en: "Family constellation facilitator in training",
+    fr: "Facilitateur en formation",
   },
   "trust.online": {
     de: "Online & Flexibel",
@@ -641,14 +641,14 @@ export const translations: Translations = {
     fr: "Réservation en ligne",
   },
   "trust.experience": {
-    de: "Erfahrung",
-    en: "Experience",
-    fr: "Expérience",
+    de: "Empathisch",
+    en: "Empathetic",
+    fr: "Empathique",
   },
   "trust.experienceDesc": {
-    de: "Langjährige Meditationspraxis",
-    en: "Years of meditation practice",
-    fr: "Années de pratique de méditation",
+    de: "Achtsame Begleitung",
+    en: "Mindful guidance",
+    fr: "Accompagnement attentif",
   },
 
   // Micro CTAs
