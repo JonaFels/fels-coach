@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
+import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,6 +30,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <Header />
       <PageBackground>
         <div className="container mx-auto px-4 max-w-4xl">
@@ -45,8 +47,9 @@ const Blog = () => {
                       <div className="md:w-1/3 aspect-video md:aspect-square">
                         <img
                           src={post.image}
-                          alt={post.title[language]}
+                          alt={`Blogbeitrag: ${post.title[language]}`}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -66,6 +69,17 @@ const Blog = () => {
               </Link>
             ))}
           </div>
+
+          {/* Internal Links */}
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-12" aria-label="Verwandte Seiten">
+            <Link to="/familienaufstellung" className="hover:text-secondary underline underline-offset-4">
+              Was ist Familienaufstellung?
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">
+              Coaching buchen
+            </Link>
+          </nav>
         </div>
       </PageBackground>
       <Footer />
