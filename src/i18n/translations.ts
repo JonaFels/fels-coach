@@ -126,6 +126,11 @@ export const translations: Translations = {
     en: "Learn more about Family Constellations",
     fr: "En savoir plus sur les Constellations Familiales",
   },
+  "coaching.ebookLink": {
+    de: "Kostenloses E-Book lesen",
+    en: "Read Free E-Book",
+    fr: "Lire l'E-Book gratuit",
+  },
 
   // Offerings Section
   "offerings.title": {
