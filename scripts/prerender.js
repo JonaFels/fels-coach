@@ -6,43 +6,34 @@
  * (Nach npm run build ausführen)
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, copyFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Statische Routen
+// Statische Routen mit Dateinamen
 const staticRoutes = [
-  '/',
-  '/angebote',
-  '/familienaufstellung',
-  '/ebook',
-  '/kontakt',
-  '/ueber-mich',
-  '/datenschutz',
-  '/impressum',
-  '/agb',
-  '/blog',
+  { path: '/', filename: 'index.html' },
+  { path: '/angebote', filename: 'angebote.html' },
+  { path: '/familienaufstellung', filename: 'familienaufstellung.html' },
+  { path: '/ebook', filename: 'ebook.html' },
+  { path: '/kontakt', filename: 'kontakt.html' },
+  { path: '/ueber-mich', filename: 'ueber-mich.html' },
+  { path: '/datenschutz', filename: 'datenschutz.html' },
+  { path: '/impressum', filename: 'impressum.html' },
+  { path: '/agb', filename: 'agb.html' },
+  { path: '/blog', filename: 'blog.html' },
 ];
 
-// Dynamische Blog-Routen werden aus blogPosts.ts gelesen
-// Für jetzt: Leere Blog-Posts-Liste (kann manuell erweitert werden)
+// Blog-Artikel (falls vorhanden)
 const blogSlugs = [
-  // Hier Blog-Slugs hinzufügen wenn vorhanden, z.B.:
   // 'mein-erster-artikel',
 ];
 
 const distDir = join(__dirname, '..', 'dist');
 const templatePath = join(distDir, 'index.html');
-
-function ensureDirectoryExists(filePath) {
-  const dir = dirname(filePath);
-  if (!existsSync(dir)) {
-    mkdirSync(dir, { recursive: true });
-  }
-}
 
 function generateStaticPages() {
   console.log('🚀 Starte Static Site Generation...\n');
@@ -59,51 +50,44 @@ function generateStaticPages() {
   // Alle Routen sammeln
   const allRoutes = [
     ...staticRoutes,
-    ...blogSlugs.map(slug => `/blog/${slug}`),
+    ...blogSlugs.map(slug => ({ path: `/blog/${slug}`, filename: `blog-${slug}.html` })),
   ];
 
-  console.log(`📄 Generiere ${allRoutes.length} statische Seiten:\n`);
+  console.log(`📄 Generiere ${allRoutes.length} statische HTML-Dateien:\n`);
 
   allRoutes.forEach(route => {
-    let outputPath;
+    const outputPath = join(distDir, route.filename);
     
-    if (route === '/') {
-      // Root bleibt als index.html
-      outputPath = join(distDir, 'index.html');
-    } else {
-      // Andere Routen bekommen eigene Ordner mit index.html
-      // z.B. /angebote -> /angebote/index.html
-      outputPath = join(distDir, route, 'index.html');
-    }
-
-    ensureDirectoryExists(outputPath);
-
-    // Kopiere die Vorlage (bei SPA reicht die gleiche index.html)
-    // Der Router übernimmt das Rendering client-seitig
+    // Kopiere die Vorlage
     writeFileSync(outputPath, template, 'utf-8');
 
-    console.log(`   ✅ ${route} -> ${outputPath.replace(distDir, 'dist')}`);
+    console.log(`   ✅ ${route.path} -> ${route.filename}`);
   });
 
   console.log('\n✨ Static Site Generation abgeschlossen!');
-  console.log('\n📁 Verzeichnisstruktur:');
-  printDirectoryStructure(distDir, '   ', 2);
-}
-
-function printDirectoryStructure(dir, prefix = '', maxDepth = 2, currentDepth = 0) {
-  if (currentDepth >= maxDepth) return;
-
-  const items = readdirSync(dir, { withFileTypes: true });
-  const folders = items.filter(item => item.isDirectory());
-  const htmlFiles = items.filter(item => item.isFile() && item.name.endsWith('.html'));
-
-  // Zeige nur HTML-Dateien und Ordner
-  [...folders, ...htmlFiles].forEach(item => {
-    console.log(`${prefix}${item.isDirectory() ? '📁' : '📄'} ${item.name}`);
-    if (item.isDirectory()) {
-      printDirectoryStructure(join(dir, item.name), prefix + '   ', maxDepth, currentDepth + 1);
+  console.log('\n📁 Generierte Dateien im dist/ Ordner:');
+  
+  // Zeige alle wichtigen Dateien
+  console.log('\n   HTML-Seiten:');
+  allRoutes.forEach(route => {
+    console.log(`   📄 ${route.filename}`);
+  });
+  
+  console.log('\n   Assets:');
+  console.log('   📁 js/       (JavaScript)');
+  console.log('   📁 css/      (Stylesheets)');
+  console.log('   📁 images/   (Bilder)');
+  console.log('   📁 fonts/    (Schriftarten)');
+  
+  console.log('\n   Sonstige:');
+  const otherFiles = ['robots.txt', 'sitemap.xml', 'llms.txt', '.htaccess'];
+  otherFiles.forEach(file => {
+    if (existsSync(join(distDir, file))) {
+      console.log(`   📄 ${file}`);
     }
   });
+
+  console.log('\n🎉 Kopiere den gesamten dist/ Ordner auf deinen Server!');
 }
 
 generateStaticPages();
