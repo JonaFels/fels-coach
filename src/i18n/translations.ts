@@ -506,9 +506,9 @@ export const translations: Translations = {
     fr: "Votre noyau intact devient visible",
   },
   "about.core1": {
-    de: "Meine langjährige Meditationserfahrung bildet das Fundament unserer Arbeit. Sie ermöglicht uns die tiefe Ruhe während der Session, die essenziell ist, um dein Systems klar sehen zu können und Deinen unversehrten Kern freizulegen.",
-    en: "My many years of meditation experience forms the foundation of our work. It enables us to achieve the deep calm during the session that is essential to clearly see your system and uncover your intact core.",
-    fr: "Mes nombreuses années d'expérience de méditation forment le fondement de notre travail. Elles nous permettent d'atteindre le calme profond pendant la séance qui est essentiel pour voir clairement votre système et découvrir votre noyau intact.",
+    de: "Tiefe Präsenz und Achtsamkeit bilden das Fundament unserer Arbeit. Sie ermöglichen uns die Ruhe während der Session, die essenziell ist, um dein System klar sehen zu können und Deinen unversehrten Kern freizulegen.",
+    en: "Deep presence and mindfulness form the foundation of our work. They enable us to achieve the calm during the session that is essential to clearly see your system and uncover your intact core.",
+    fr: "La présence profonde et la pleine conscience forment le fondement de notre travail. Elles nous permettent d'atteindre le calme pendant la séance qui est essentiel pour voir clairement votre système et découvrir votre noyau intact.",
   },
   "about.core2": {
     de: "Ich bin zutiefst davon überzeugt: In Dir ist ein Kern unversehrter Kraft – rein und unerschütterlich. Und ich weiß, dass wir jeden Umstand in eine heilsame Erfahrung umwandeln können. Wir in der Lage sind unser Leben Schritt für Schritt wahrhaftiger selbst zu gestalten.",
@@ -599,9 +599,9 @@ export const translations: Translations = {
     fr: "Formation de Naturopathe",
   },
   "author.credential3": {
-    de: "Meditationserfahrung",
-    en: "Meditation Experience",
-    fr: "Expérience de méditation",
+    de: "Achtsame Begleitung",
+    en: "Mindful Guidance",
+    fr: "Accompagnement attentif",
   },
 
   // Trust Badges

@@ -46,9 +46,9 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     fr: { title: "E-Book Gratuit: Le Chemin vers la Plénitude", description: "Téléchargez l'e-book gratuit et commencez votre transformation personnelle." },
   },
   "/ueber-mich": {
-    de: { title: "Über Jona Fels | Systemischer Coach Freiburg", description: "Lerne Jona Fels kennen: Zertifizierter Familienaufsteller und Coach mit Meditationserfahrung. Präzise und mitfühlende Begleitung." },
-    en: { title: "About Jona Fels | Systemic Coach Freiburg", description: "Meet Jona Fels: Certified family constellation facilitator and coach with meditation experience." },
-    fr: { title: "À propos de Jona Fels | Coach Systémique", description: "Découvrez Jona Fels : Facilitateur certifié en constellations familiales avec expérience de méditation." },
+    de: { title: "Über Jona Fels | Systemischer Coach Freiburg", description: "Lerne Jona Fels kennen: Familienaufsteller i.A. und Coach. Präzise und mitfühlende Begleitung auf deinem Weg." },
+    en: { title: "About Jona Fels | Systemic Coach Freiburg", description: "Meet Jona Fels: Family constellation facilitator in training and coach. Precise and compassionate guidance." },
+    fr: { title: "À propos de Jona Fels | Coach Systémique", description: "Découvrez Jona Fels : Facilitateur en formation en constellations familiales. Accompagnement précis et bienveillant." },
   },
   "/kontakt": {
     de: { title: "Kontakt | Jona Fels Coach Freiburg", description: "Kontaktiere Jona Fels für ein kostenloses Erstgespräch. Erreichbar per E-Mail, WhatsApp oder Telegram." },

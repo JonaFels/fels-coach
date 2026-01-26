@@ -30,8 +30,8 @@ const faqData = {
       answer: "Die aktuellen Preise und Paketoptionen findest du auf der Angebote-Seite. Ich biete ein vergünstigtes Kennenlern-Coaching an, damit du die Arbeit kennenlernen kannst.",
     },
     {
-      question: "Bietest du auch Präsenz-Sessions an?",
-      answer: "Ja, nach Absprache sind auch persönliche Sessions in Freiburg möglich. Die Online-Arbeit ist jedoch ebenso wirksam und ermöglicht dir, in deiner vertrauten Umgebung zu arbeiten.",
+      question: "Warum nur Online-Sessions?",
+      answer: "Ich biete ausschließlich Online-Sessions an, da sie dir ermöglichen, in deiner vertrauten Umgebung zu arbeiten. Die Wirksamkeit ist dabei genauso hoch wie bei persönlichen Sessions – oft sogar höher, weil du dich sicherer fühlst.",
     },
   ],
   en: [
@@ -56,8 +56,8 @@ const faqData = {
       answer: "You can find current prices and package options on the Offers page. I offer a discounted introduction coaching so you can get to know the work.",
     },
     {
-      question: "Do you also offer in-person sessions?",
-      answer: "Yes, personal sessions in Freiburg are possible by arrangement. However, online work is equally effective and allows you to work in your familiar environment.",
+      question: "Why only online sessions?",
+      answer: "I exclusively offer online sessions because they allow you to work in your familiar environment. The effectiveness is just as high as in-person sessions – often even higher, because you feel safer.",
     },
   ],
   fr: [
@@ -82,8 +82,8 @@ const faqData = {
       answer: "Vous trouverez les prix actuels et les options de forfait sur la page Offres. Je propose un coaching découverte à prix réduit.",
     },
     {
-      question: "Proposez-vous également des séances en personne ?",
-      answer: "Oui, des séances en personne à Freiburg sont possibles sur rendez-vous. Cependant, le travail en ligne est tout aussi efficace.",
+      question: "Pourquoi uniquement des séances en ligne ?",
+      answer: "Je propose exclusivement des séances en ligne car elles vous permettent de travailler dans votre environnement familier. L'efficacité est tout aussi élevée – souvent même plus, car vous vous sentez plus en sécurité.",
     },
   ],
 };
