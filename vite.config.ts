@@ -35,8 +35,28 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    // Keine Minifizierung - lesbare Dateien
+    minify: false,
+    cssMinify: false,
+    // Sourcemaps für Debugging
+    sourcemap: true,
     rollupOptions: {
       output: {
+        // Lesbare Dateinamen ohne Hash
+        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'js/[name].js',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'css/[name][extname]';
+          }
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) {
+            return 'images/[name][extname]';
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) {
+            return 'fonts/[name][extname]';
+          }
+          return 'assets/[name][extname]';
+        },
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
         },

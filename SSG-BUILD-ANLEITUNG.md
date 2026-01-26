@@ -44,11 +44,26 @@ dist/
 │   └── index.html               (/agb)
 ├── blog/
 │   └── index.html               (/blog)
-├── assets/
-│   ├── index-[hash].js
-│   └── index-[hash].css
+├── js/
+│   ├── index.js                 (Haupt-JavaScript - LESBAR!)
+│   └── vendor.js                (React & Libraries)
+├── css/
+│   ├── index.css                (Kompiliertes CSS - LESBAR!)
+│   └── custom.css               (BEARBEITBAR auf Server!)
+├── images/
+│   └── [alle Bilder]
+├── fonts/
+│   └── [alle Schriftarten]
 └── ...
 ```
+
+### Bearbeitbare Dateien auf dem Server
+
+Nach dem Build können folgende Dateien direkt auf dem Server bearbeitet werden:
+
+1. **`css/custom.css`** - Eigene CSS-Anpassungen (wird nach dem Haupt-CSS geladen)
+2. **`js/index.js`** - Unminifiziertes JavaScript (lesbar, aber Vorsicht beim Bearbeiten!)
+3. **`css/index.css`** - Unminifiziertes CSS (lesbar, enthält alle Tailwind-Styles)
 
 ### Blog-Artikel hinzufügen
 
