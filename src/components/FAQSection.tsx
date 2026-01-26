@@ -14,8 +14,8 @@ const faqData = {
       answer: "Eine systemische Familienaufstellung ist eine therapeutische Methode, die unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems sichtbar macht. Mit Bodenankern werden Beziehungen räumlich dargestellt, um verborgene Muster zu erkennen und aufzulösen.",
     },
     {
-      question: "Wie läuft eine Online-Coaching-Session ab?",
-      answer: "Die Session findet per Videocall statt. Wir beginnen mit einem Vorgespräch zu deinem Anliegen, arbeiten dann mit systemischen Methoden und Bodenankern, die du zuhause platzierst, und entwickeln gemeinsam ein Lösungsbild. Die Sessions dauern 60 Minuten.",
+      question: "Wie läuft eine Coaching-Session ab?",
+      answer: "Die Session findet persönlich in Freiburg statt. Wir beginnen mit einem Vorgespräch zu deinem Anliegen, arbeiten dann mit systemischen Methoden und Bodenankern und entwickeln gemeinsam ein Lösungsbild. Die Sessions dauern 60 Minuten.",
     },
     {
       question: "Für wen ist systemisches Coaching geeignet?",
@@ -40,8 +40,8 @@ const faqData = {
       answer: "A systemic family constellation is a therapeutic method that reveals unconscious dynamics and entanglements within your family system. Floor anchors are used to spatially represent relationships to recognize and dissolve hidden patterns.",
     },
     {
-      question: "How does an online coaching session work?",
-      answer: "The session takes place via video call. We start with a preliminary discussion of your concern, then work with systemic methods and floor anchors that you place at home, and together develop a solution image. Sessions last 60 minutes.",
+      question: "How does a coaching session work?",
+      answer: "The session takes place in person in Freiburg. We start with a preliminary discussion of your concern, then work with systemic methods and floor anchors, and together develop a solution image. Sessions last 60 minutes.",
     },
     {
       question: "Who is systemic coaching suitable for?",
@@ -66,8 +66,8 @@ const faqData = {
       answer: "Une constellation familiale systémique est une méthode thérapeutique qui révèle les dynamiques inconscientes au sein de votre système familial. Des ancres au sol sont utilisées pour représenter spatialement les relations afin de reconnaître et dissoudre les schémas cachés.",
     },
     {
-      question: "Comment se déroule une séance de coaching en ligne ?",
-      answer: "La séance se déroule par appel vidéo. Nous commençons par un entretien préliminaire, puis travaillons avec des méthodes systémiques et des ancres au sol que vous placez chez vous. Les séances durent 60 minutes.",
+      question: "Comment se déroule une séance de coaching ?",
+      answer: "La séance se déroule en personne à Fribourg. Nous commençons par un entretien préliminaire, puis travaillons avec des méthodes systémiques et des ancres au sol. Les séances durent 60 minutes.",
     },
     {
       question: "Pour qui le coaching systémique est-il adapté ?",
