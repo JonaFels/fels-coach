@@ -2,11 +2,16 @@
   RewriteEngine On
   RewriteBase /
   
-  # Wenn die Anfrage keine existierende Datei ist
+  # URLs ohne .html-Endung ermöglichen
+  # z.B. /datenschutz -> datenschutz.html
   RewriteCond %{REQUEST_FILENAME} !-f
-  # Wenn die Anfrage kein existierendes Verzeichnis ist
   RewriteCond %{REQUEST_FILENAME} !-d
-  # Leite zur index.html weiter
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+  
+  # Fallback zur index.html für nicht gefundene Seiten
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
 

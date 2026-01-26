@@ -19,51 +19,48 @@ Oder in einem Befehl:
 npm run build && node scripts/prerender.js
 ```
 
-### Generierte Seiten
+### Generierte Dateien
 
-Nach dem SSG-Build enthält der `dist/`-Ordner:
+Nach dem SSG-Build enthält der `dist/`-Ordner alles, was du brauchst:
 
 ```
 dist/
-├── index.html                    (Startseite)
-├── angebote/
-│   └── index.html               (/angebote)
-├── familienaufstellung/
-│   └── index.html               (/familienaufstellung)
-├── ebook/
-│   └── index.html               (/ebook)
-├── kontakt/
-│   └── index.html               (/kontakt)
-├── ueber-mich/
-│   └── index.html               (/ueber-mich)
-├── datenschutz/
-│   └── index.html               (/datenschutz)
-├── impressum/
-│   └── index.html               (/impressum)
-├── agb/
-│   └── index.html               (/agb)
-├── blog/
-│   └── index.html               (/blog)
+├── index.html              ← Startseite
+├── angebote.html           ← /angebote
+├── familienaufstellung.html
+├── ebook.html
+├── kontakt.html
+├── ueber-mich.html
+├── datenschutz.html
+├── impressum.html
+├── agb.html
+├── blog.html
+│
 ├── js/
-│   ├── index.js                 (Haupt-JavaScript - LESBAR!)
-│   └── vendor.js                (React & Libraries)
+│   ├── index.js            ← Haupt-JavaScript (LESBAR!)
+│   └── vendor.js           ← React & Libraries
+│
 ├── css/
-│   ├── index.css                (Kompiliertes CSS - LESBAR!)
-│   └── custom.css               (BEARBEITBAR auf Server!)
-├── images/
-│   └── [alle Bilder]
-├── fonts/
-│   └── [alle Schriftarten]
-└── ...
+│   ├── index.css           ← Kompiliertes CSS (LESBAR!)
+│   └── custom.css          ← BEARBEITBAR auf Server!
+│
+├── images/                 ← Alle Bilder
+├── fonts/                  ← Alle Schriftarten
+│
+├── robots.txt
+├── sitemap.xml
+├── llms.txt
+├── .htaccess               ← Apache-Konfiguration
+└── [Favicon-Dateien]
 ```
 
-### Bearbeitbare Dateien auf dem Server
+### Deployment
 
-Nach dem Build können folgende Dateien direkt auf dem Server bearbeitet werden:
+**Einfach den gesamten `dist/`-Ordner per FTP auf deinen Server kopieren!**
 
-1. **`css/custom.css`** - Eigene CSS-Anpassungen (wird nach dem Haupt-CSS geladen)
-2. **`js/index.js`** - Unminifiziertes JavaScript (lesbar, aber Vorsicht beim Bearbeiten!)
-3. **`css/index.css`** - Unminifiziertes CSS (lesbar, enthält alle Tailwind-Styles)
+Die `.htaccess` sorgt dafür, dass URLs ohne `.html` funktionieren:
+- `www.deine-seite.de/datenschutz` → lädt `datenschutz.html`
+- `www.deine-seite.de/kontakt` → lädt `kontakt.html`
 
 ### Blog-Artikel hinzufügen
 
