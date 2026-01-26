@@ -1,0 +1,39 @@
+/**
+ * Custom CSS - Bearbeitbare Styles
+ * 
+ * Diese Datei wird NACH den generierten Styles geladen.
+ * Hier können Sie Anpassungen vornehmen, ohne neu zu builden.
+ * 
+ * Farben aus dem Design-System:
+ * - Primary (Slate/Navy): #2c3e50
+ * - Accent (Stone/Gold): #a0866a
+ * - Background (Cream): #fdfbf9
+ * - Text Dark: #333333
+ * - Text Medium: #4a5568
+ */
+
+/* === Beispiel-Anpassungen === */
+
+/* Überschriften anpassen */
+/*
+h1 {
+  color: #2c3e50;
+}
+*/
+
+/* Button-Farben ändern */
+/*
+.custom-button {
+  background-color: #a0866a;
+  color: white;
+}
+*/
+
+/* Abstände anpassen */
+/*
+.custom-section {
+  padding: 4rem 2rem;
+}
+*/
+
+/* === Ihre Anpassungen hier === */
