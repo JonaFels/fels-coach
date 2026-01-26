@@ -1,50 +1,69 @@
 # SSG Build-Anleitung für Apache/FTP-Server
 
-## Statische HTML-Generierung
+## Statische HTML-Generierung (SSG)
 
-Da das Projekt ein React SPA ist, benötigst du für echte statische HTML-Seiten einen zusätzlichen Build-Schritt. Hier sind zwei Optionen:
+Dieses Projekt generiert automatisch individuelle HTML-Dateien für jede Unterseite.
 
-### Option 1: Mit prerender-spa-plugin (Empfohlen für kleine Projekte)
-
-Nach dem regulären Build (`npm run build`) kannst du die Seiten mit einem Tool wie `prerender-spa-plugin` oder `react-snap` vorrendern:
+### Build mit SSG ausführen
 
 ```bash
-npm install react-snap --save-dev
+# 1. Normaler Build
+npm run build
+
+# 2. SSG Script ausführen (generiert individuelle HTML-Dateien)
+node scripts/prerender.js
 ```
 
-Füge in package.json hinzu:
-```json
-{
-  "scripts": {
-    "postbuild": "react-snap"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "destination": "dist",
-    "include": [
-      "/",
-      "/angebote",
-      "/familienaufstellung",
-      "/ebook",
-      "/kontakt",
-      "/ueber-mich",
-      "/datenschutz",
-      "/impressum",
-      "/agb",
-      "/blog"
-    ]
-  }
-}
+Oder in einem Befehl:
+```bash
+npm run build && node scripts/prerender.js
 ```
 
-### Option 2: .htaccess für Apache (Aktuell konfiguriert)
+### Generierte Seiten
 
-Die aktuelle Konfiguration nutzt eine `.htaccess`-Datei für Client-Side-Routing. Dies erfordert:
+Nach dem SSG-Build enthält der `dist/`-Ordner:
 
-1. **mod_rewrite aktiviert** auf dem Apache-Server
-2. Die `.htaccess`-Datei im Root-Verzeichnis (siehe unten)
+```
+dist/
+├── index.html                    (Startseite)
+├── angebote/
+│   └── index.html               (/angebote)
+├── familienaufstellung/
+│   └── index.html               (/familienaufstellung)
+├── ebook/
+│   └── index.html               (/ebook)
+├── kontakt/
+│   └── index.html               (/kontakt)
+├── ueber-mich/
+│   └── index.html               (/ueber-mich)
+├── datenschutz/
+│   └── index.html               (/datenschutz)
+├── impressum/
+│   └── index.html               (/impressum)
+├── agb/
+│   └── index.html               (/agb)
+├── blog/
+│   └── index.html               (/blog)
+├── assets/
+│   ├── index-[hash].js
+│   └── index-[hash].css
+└── ...
+```
 
-#### .htaccess Datei
+### Blog-Artikel hinzufügen
+
+Wenn du Blog-Artikel hast, füge die Slugs in `scripts/prerender.js` hinzu:
+
+```javascript
+const blogSlugs = [
+  'mein-erster-artikel',
+  'zweiter-artikel',
+];
+```
+
+## .htaccess für Apache (Empfohlen)
+
+Trotz der individuellen HTML-Dateien empfiehlt sich eine `.htaccess` als Fallback:
 
 ```apache
 <IfModule mod_rewrite.c>
@@ -81,24 +100,15 @@ Die aktuelle Konfiguration nutzt eine `.htaccess`-Datei für Client-Side-Routing
 ## Deployment-Schritte
 
 1. `npm run build` ausführen
-2. Inhalt des `dist/`-Ordners per FTP hochladen
-3. `.htaccess`-Datei in das Root-Verzeichnis kopieren
-4. Sicherstellen, dass `sitemap.xml`, `robots.txt` und `llms.txt` im Root liegen
+2. `node scripts/prerender.js` ausführen
+3. Inhalt des `dist/`-Ordners per FTP hochladen
+4. `.htaccess`-Datei in das Root-Verzeichnis kopieren
+5. Sicherstellen, dass `sitemap.xml`, `robots.txt` und `llms.txt` im Root liegen
 
-## Verzeichnisstruktur nach dem Upload
+## Vorteile der SSG-Lösung
 
-```
-/
-├── index.html
-├── .htaccess
-├── sitemap.xml
-├── robots.txt
-├── llms.txt
-├── assets/
-│   ├── index-[hash].js
-│   ├── index-[hash].css
-│   └── ...
-├── favicon.ico
-├── android-icon-192x192.png
-└── ...
+- ✅ **SEO-optimiert**: Suchmaschinen sehen sofort den vollständigen HTML-Inhalt
+- ✅ **Schnellere Ladezeit**: Keine Abhängigkeit von JavaScript für initiales Rendering
+- ✅ **Fallback-sicher**: Funktioniert auch wenn .htaccess-Regeln nicht greifen
+- ✅ **Crawlbar**: Jede Seite hat eine eigene URL mit vollständigem HTML
 ```
