@@ -21,12 +21,12 @@ npm run build && node scripts/prerender.js
 
 ### Generierte Dateien
 
-Nach dem SSG-Build enthält der `dist/`-Ordner alles, was du brauchst:
+Nach dem SSG-Build enthält der `dist/`-Ordner **alle Dateien flach** - einfach alles markieren und auf den Server kopieren:
 
 ```
 dist/
 ├── index.html              ← Startseite
-├── angebote.html           ← /angebote
+├── angebote.html
 ├── familienaufstellung.html
 ├── ebook.html
 ├── kontakt.html
@@ -36,31 +36,26 @@ dist/
 ├── agb.html
 ├── blog.html
 │
-├── js/
-│   ├── index.js            ← Haupt-JavaScript (LESBAR!)
-│   └── vendor.js           ← React & Libraries
+├── index.js                ← Haupt-JavaScript (LESBAR!)
+├── vendor.js               ← React & Libraries
+├── index.css               ← Kompiliertes CSS (LESBAR!)
+├── custom.css              ← BEARBEITBAR auf Server!
 │
-├── css/
-│   ├── index.css           ← Kompiliertes CSS (LESBAR!)
-│   └── custom.css          ← BEARBEITBAR auf Server!
-│
-├── images/                 ← Alle Bilder
-├── fonts/                  ← Alle Schriftarten
+├── [alle Bilder].png/jpg
+├── [alle Schriftarten].woff2
 │
 ├── robots.txt
 ├── sitemap.xml
 ├── llms.txt
-├── .htaccess               ← Apache-Konfiguration
-└── [Favicon-Dateien]
+└── .htaccess
 ```
 
 ### Deployment
 
-**Einfach den gesamten `dist/`-Ordner per FTP auf deinen Server kopieren!**
+**Alle Dateien im `dist/`-Ordner markieren → Kopieren → Auf Server einfügen. Fertig!**
 
 Die `.htaccess` sorgt dafür, dass URLs ohne `.html` funktionieren:
 - `www.deine-seite.de/datenschutz` → lädt `datenschutz.html`
-- `www.deine-seite.de/kontakt` → lädt `kontakt.html`
 
 ### Blog-Artikel hinzufügen
 
