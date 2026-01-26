@@ -40,9 +40,6 @@ export const AuthorBox = () => {
               <span className="px-2 py-1 text-xs bg-muted rounded-full text-muted-foreground">
                 {t("author.credential2")}
               </span>
-              <span className="px-2 py-1 text-xs bg-muted rounded-full text-muted-foreground">
-                {t("author.credential3")}
-              </span>
             </div>
           </div>
         </div>
