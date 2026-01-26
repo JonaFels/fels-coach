@@ -99,7 +99,6 @@ export const JsonLd = () => {
         "Systemische Familienaufstellungen",
         "Coaching",
         "Persönliche Entwicklung",
-        "Meditation",
         "Traumaheilung",
       ],
       worksFor: {

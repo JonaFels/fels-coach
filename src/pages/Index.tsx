@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { CoachingSection } from "@/components/CoachingSection";
 import { TrustBadges } from "@/components/TrustBadges";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
