@@ -73,6 +73,11 @@ export const CoachingSection = () => {
                 {t("coaching.learnMore")}
               </Link>
             </Button>
+            <Button asChild variant="ghost" size="lg">
+              <Link to="/ebook">
+                {t("coaching.ebookLink")}
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
