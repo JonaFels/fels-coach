@@ -1,25 +1,34 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
+import { SEOHead } from "@/components/SEOHead";
+import { AuthorBox } from "@/components/AuthorBox";
+import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/profil-bild-schwarz.png";
+
 const UeberMich = () => {
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <Header />
       <PageBackground>
-        <div className="container mx-auto px-4 max-w-4xl">
+        <article className="container mx-auto px-4 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
             <div className="mb-8">
               <img 
                 src={profilBild} 
-                alt="Jona Fels - Coach" 
+                alt="Jona Fels - Systemischer Coach und Familienaufsteller in Freiburg" 
                 className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-center mx-auto shadow-lg border-4 border-secondary/30"
+                loading="lazy"
+                width="224"
+                height="224"
               />
             </div>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
@@ -35,6 +44,8 @@ const UeberMich = () => {
               <p>{t("about.intro2")}</p>
             </CardContent>
           </Card>
+
+          <MicroCTA className="mb-8" />
 
           {/* Guidance Section */}
           <Card className="mb-8 bg-card/95 backdrop-blur-sm">
@@ -68,7 +79,7 @@ const UeberMich = () => {
             {t("about.cv.title")}
           </h2>
 
-          <Card className="bg-card/95 backdrop-blur-sm">
+          <Card className="bg-card/95 backdrop-blur-sm mb-8">
             <CardContent className="pt-6">
               <div className="space-y-4">
                 <div className="border-l-2 border-secondary pl-4 py-2">
@@ -83,7 +94,22 @@ const UeberMich = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+
+          {/* Internal Links */}
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8" aria-label="Verwandte Seiten">
+            <Link to="/familienaufstellung" className="hover:text-secondary underline underline-offset-4">
+              Was ist Familienaufstellung?
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">
+              Angebote & Termine
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/kontakt" className="hover:text-secondary underline underline-offset-4">
+              Kontakt
+            </Link>
+          </nav>
+        </article>
       </PageBackground>
       <Footer />
       <CookieBanner />

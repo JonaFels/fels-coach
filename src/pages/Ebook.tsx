@@ -1,15 +1,24 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, Loader2 } from "lucide-react";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
+import { SEOHead } from "@/components/SEOHead";
+import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
+
+const ebookSchema = z.object({
+  name: z.string().trim().min(1).max(100),
+  email: z.string().trim().email().max(255),
+});
 
 const Ebook = () => {
   const { t } = useLanguage();
@@ -17,11 +26,25 @@ const Ebook = () => {
   const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+
+    // Validate
+    const result = ebookSchema.safeParse({ name, email });
+    if (!result.success) {
+      const fieldErrors: { name?: string; email?: string } = {};
+      result.error.issues.forEach((issue) => {
+        const field = issue.path[0] as "name" | "email";
+        fieldErrors[field] = issue.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
     setIsSubmitting(true);
     
     toast({
@@ -53,7 +76,6 @@ const Ebook = () => {
         });
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
       toast({
         title: "Verbindungsfehler",
         description: "Bitte überprüfe deine Internetverbindung.",
@@ -66,6 +88,7 @@ const Ebook = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <Header />
       <PageBackground>
         <div className="container mx-auto px-4 max-w-4xl">
@@ -84,7 +107,7 @@ const Ebook = () => {
               <CardContent>
                 {submitted ? (
                   <div className="text-center py-8">
-                    <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                    <CheckCircle className="h-16 w-16 text-secondary mx-auto mb-4" aria-hidden="true" />
                     <p className="text-muted-foreground">
                       {t("ebook.success")}
                     </p>
@@ -99,20 +122,35 @@ const Ebook = () => {
                       .
                     </p>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                      <Input
-                        type="text"
-                        placeholder={t("ebook.name")}
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                      />
-                      <Input
-                        type="email"
-                        placeholder={t("ebook.email")}
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                      />
+                    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                      <div className="space-y-2">
+                        <Label htmlFor="ebook-name">{t("ebook.name")}</Label>
+                        <Input
+                          id="ebook-name"
+                          type="text"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          className={errors.name ? "border-destructive" : ""}
+                          aria-invalid={!!errors.name}
+                          autoComplete="name"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="ebook-email">{t("ebook.email")} *</Label>
+                        <Input
+                          id="ebook-email"
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          className={errors.email ? "border-destructive" : ""}
+                          aria-invalid={!!errors.email}
+                          autoComplete="email"
+                        />
+                        {errors.email && (
+                          <p className="text-sm text-destructive">{t("contactForm.invalidEmail")}</p>
+                        )}
+                      </div>
                       <p className="text-xs text-muted-foreground">
                         {t("ebook.privacyNote")}{" "}
                         <Link
@@ -123,10 +161,10 @@ const Ebook = () => {
                         </Link>
                         .
                       </p>
-                      <Button type="submit" className="w-full" disabled={isSubmitting}>
+                      <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting}>
                         {isSubmitting ? (
                           <>
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
                             E-Book wird gesendet...
                           </>
                         ) : (
@@ -147,23 +185,37 @@ const Ebook = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-4 text-muted-foreground">
+                <ul className="space-y-4 text-muted-foreground" role="list">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" aria-hidden="true" />
                     <span>{t("ebook.feature1")}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" aria-hidden="true" />
                     <span>{t("ebook.feature2")}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" aria-hidden="true" />
                     <span>{t("ebook.feature3")}</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
           </div>
+
+          {/* Internal Links */}
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-12" aria-label="Verwandte Seiten">
+            <Link to="/familienaufstellung" className="hover:text-secondary underline underline-offset-4">
+              Was ist Familienaufstellung?
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">
+              Coaching buchen
+            </Link>
+          </nav>
+
+          {/* Author Box */}
+          <AuthorBox />
         </div>
       </PageBackground>
       <Footer />

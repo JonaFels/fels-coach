@@ -552,4 +552,183 @@ export const translations: Translations = {
     en: "Booking and Cancellation Terms",
     fr: "Conditions de réservation et d'annulation",
   },
+
+  // FAQ Section
+  "faq.title": {
+    de: "Häufig gestellte Fragen",
+    en: "Frequently Asked Questions",
+    fr: "Questions fréquemment posées",
+  },
+
+  // Testimonials Section
+  "testimonials.title": {
+    de: "Das sagen meine Klienten",
+    en: "What my clients say",
+    fr: "Ce que disent mes clients",
+  },
+  "testimonials.subtitle": {
+    de: "Erfahrungen aus der Zusammenarbeit",
+    en: "Experiences from working together",
+    fr: "Expériences de collaboration",
+  },
+
+  // Author Box
+  "author.writtenBy": {
+    de: "Geschrieben von",
+    en: "Written by",
+    fr: "Écrit par",
+  },
+  "author.title": {
+    de: "Systemischer Coach & Familienaufsteller",
+    en: "Systemic Coach & Family Constellation Facilitator",
+    fr: "Coach Systémique & Facilitateur de Constellations Familiales",
+  },
+  "author.bio": {
+    de: "Ich begleite Menschen dabei, unbewusste Muster zu erkennen und aufzulösen. Mit Präzision und tiefem Mitgefühl unterstütze ich dich auf deinem Weg zu mehr Klarheit und innerem Frieden.",
+    en: "I accompany people in recognizing and dissolving unconscious patterns. With precision and deep compassion, I support you on your path to more clarity and inner peace.",
+    fr: "J'accompagne les personnes à reconnaître et dissoudre les schémas inconscients. Avec précision et profonde compassion, je vous soutiens sur votre chemin vers plus de clarté.",
+  },
+  "author.credential1": {
+    de: "Zertifizierter Familienaufsteller",
+    en: "Certified Family Constellation Facilitator",
+    fr: "Facilitateur certifié",
+  },
+  "author.credential2": {
+    de: "Heilpraktiker-Ausbildung",
+    en: "Naturopath Training",
+    fr: "Formation de Naturopathe",
+  },
+  "author.credential3": {
+    de: "Meditationserfahrung",
+    en: "Meditation Experience",
+    fr: "Expérience de méditation",
+  },
+
+  // Trust Badges
+  "trust.ariaLabel": {
+    de: "Vertrauensmerkmale",
+    en: "Trust features",
+    fr: "Caractéristiques de confiance",
+  },
+  "trust.certified": {
+    de: "Zertifiziert",
+    en: "Certified",
+    fr: "Certifié",
+  },
+  "trust.certifiedDesc": {
+    de: "Ausgebildeter Familienaufsteller",
+    en: "Trained family constellation facilitator",
+    fr: "Facilitateur formé",
+  },
+  "trust.online": {
+    de: "Online & Flexibel",
+    en: "Online & Flexible",
+    fr: "En ligne & Flexible",
+  },
+  "trust.onlineDesc": {
+    de: "Bequem von zuhause",
+    en: "Comfortable from home",
+    fr: "Confortablement de chez vous",
+  },
+  "trust.flexible": {
+    de: "Flexible Termine",
+    en: "Flexible Appointments",
+    fr: "Rendez-vous flexibles",
+  },
+  "trust.flexibleDesc": {
+    de: "Online buchbar",
+    en: "Book online",
+    fr: "Réservation en ligne",
+  },
+  "trust.experience": {
+    de: "Erfahrung",
+    en: "Experience",
+    fr: "Expérience",
+  },
+  "trust.experienceDesc": {
+    de: "Langjährige Meditationspraxis",
+    en: "Years of meditation practice",
+    fr: "Années de pratique de méditation",
+  },
+
+  // Micro CTAs
+  "cta.bookNow": {
+    de: "Jetzt Termin buchen",
+    en: "Book Appointment Now",
+    fr: "Réserver maintenant",
+  },
+  "cta.freeConsultation": {
+    de: "Kostenloses Erstgespräch möglich",
+    en: "Free initial consultation available",
+    fr: "Consultation initiale gratuite possible",
+  },
+  "cta.learnMore": {
+    de: "Mehr erfahren",
+    en: "Learn more",
+    fr: "En savoir plus",
+  },
+
+  // 404 Page
+  "notFound.title": {
+    de: "Seite nicht gefunden",
+    en: "Page not found",
+    fr: "Page non trouvée",
+  },
+  "notFound.text": {
+    de: "Die gesuchte Seite existiert leider nicht.",
+    en: "The page you are looking for does not exist.",
+    fr: "La page que vous recherchez n'existe pas.",
+  },
+  "notFound.backHome": {
+    de: "Zurück zur Startseite",
+    en: "Back to homepage",
+    fr: "Retour à l'accueil",
+  },
+
+  // Contact Form
+  "contactForm.title": {
+    de: "Nachricht senden",
+    en: "Send Message",
+    fr: "Envoyer un message",
+  },
+  "contactForm.name": {
+    de: "Name",
+    en: "Name",
+    fr: "Nom",
+  },
+  "contactForm.email": {
+    de: "E-Mail",
+    en: "Email",
+    fr: "E-mail",
+  },
+  "contactForm.message": {
+    de: "Nachricht",
+    en: "Message",
+    fr: "Message",
+  },
+  "contactForm.submit": {
+    de: "Absenden",
+    en: "Submit",
+    fr: "Envoyer",
+  },
+  "contactForm.success": {
+    de: "Vielen Dank! Deine Nachricht wurde gesendet.",
+    en: "Thank you! Your message has been sent.",
+    fr: "Merci ! Votre message a été envoyé.",
+  },
+  "contactForm.error": {
+    de: "Fehler beim Senden. Bitte versuche es erneut.",
+    en: "Error sending. Please try again.",
+    fr: "Erreur lors de l'envoi. Veuillez réessayer.",
+  },
+  "contactForm.required": {
+    de: "Pflichtfeld",
+    en: "Required",
+    fr: "Obligatoire",
+  },
+  "contactForm.invalidEmail": {
+    de: "Ungültige E-Mail-Adresse",
+    en: "Invalid email address",
+    fr: "Adresse e-mail invalide",
+  },
 };

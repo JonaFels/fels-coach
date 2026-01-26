@@ -1,10 +1,13 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
+import { SEOHead } from "@/components/SEOHead";
+import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const offerings = [
@@ -27,6 +30,7 @@ const Angebote = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <Header />
       <PageBackground>
         <div className="container mx-auto px-4">
@@ -60,7 +64,7 @@ const Angebote = () => {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full group/btn"
+                    className="w-full group/btn min-h-[44px]"
                   >
                     <a
                       href={offering.href}
@@ -68,7 +72,7 @@ const Angebote = () => {
                       rel="noopener noreferrer"
                     >
                       {t("offerings.book")}
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardFooter>
@@ -77,17 +81,32 @@ const Angebote = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="min-h-[44px]">
               <a
                 href="https://cal.com/systemisches-coaching"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {t("offerings.allDates")}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </a>
             </Button>
           </div>
+
+          {/* Internal Links */}
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-12" aria-label="Verwandte Seiten">
+            <Link to="/familienaufstellung" className="hover:text-secondary underline underline-offset-4">
+              Was ist Familienaufstellung?
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/ebook" className="hover:text-secondary underline underline-offset-4">
+              Kostenloses E-Book
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link to="/kontakt" className="hover:text-secondary underline underline-offset-4">
+              Fragen? Kontakt
+            </Link>
+          </nav>
         </div>
       </PageBackground>
       <Footer />

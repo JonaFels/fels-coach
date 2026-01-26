@@ -1,0 +1,178 @@
+import { useState } from "react";
+import { z } from "zod";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useToast } from "@/hooks/use-toast";
+import { CheckCircle, Loader2 } from "lucide-react";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "required").max(100),
+  email: z.string().trim().email("invalidEmail").max(255),
+  message: z.string().trim().min(1, "required").max(2000),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
+export const ContactForm = () => {
+  const { t } = useLanguage();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (field: keyof ContactFormData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    // Clear error on change
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+
+    // Validate
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
+      result.error.issues.forEach((issue) => {
+        const field = issue.path[0] as keyof ContactFormData;
+        fieldErrors[field] = issue.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // For now, we'll use mailto as fallback since there's no backend
+      const mailtoLink = `mailto:info@fels-coach.de?subject=Kontaktanfrage von ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`)}`;
+      window.location.href = mailtoLink;
+      
+      setIsSuccess(true);
+      toast({
+        title: t("contactForm.success"),
+        description: "",
+      });
+    } catch (error) {
+      toast({
+        title: t("contactForm.error"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSuccess) {
+    return (
+      <Card className="bg-card/95 backdrop-blur-sm">
+        <CardContent className="pt-8">
+          <div className="text-center py-8">
+            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" aria-hidden="true" />
+            <p className="text-foreground font-medium">{t("contactForm.success")}</p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  return (
+    <Card className="bg-card/95 backdrop-blur-sm">
+      <CardHeader>
+        <CardTitle className="font-serif text-xl">{t("contactForm.title")}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+          <div className="space-y-2">
+            <Label htmlFor="contact-name">
+              {t("contactForm.name")} <span className="text-destructive">*</span>
+            </Label>
+            <Input
+              id="contact-name"
+              type="text"
+              value={formData.name}
+              onChange={(e) => handleChange("name", e.target.value)}
+              className={errors.name ? "border-destructive" : ""}
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? "name-error" : undefined}
+              autoComplete="name"
+            />
+            {errors.name && (
+              <p id="name-error" className="text-sm text-destructive">
+                {t(`contactForm.${errors.name}`)}
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="contact-email">
+              {t("contactForm.email")} <span className="text-destructive">*</span>
+            </Label>
+            <Input
+              id="contact-email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => handleChange("email", e.target.value)}
+              className={errors.email ? "border-destructive" : ""}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? "email-error" : undefined}
+              autoComplete="email"
+            />
+            {errors.email && (
+              <p id="email-error" className="text-sm text-destructive">
+                {t(`contactForm.${errors.email}`)}
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="contact-message">
+              {t("contactForm.message")} <span className="text-destructive">*</span>
+            </Label>
+            <Textarea
+              id="contact-message"
+              rows={5}
+              value={formData.message}
+              onChange={(e) => handleChange("message", e.target.value)}
+              className={errors.message ? "border-destructive" : ""}
+              aria-invalid={!!errors.message}
+              aria-describedby={errors.message ? "message-error" : undefined}
+            />
+            {errors.message && (
+              <p id="message-error" className="text-sm text-destructive">
+                {t(`contactForm.${errors.message}`)}
+              </p>
+            )}
+          </div>
+
+          <Button 
+            type="submit" 
+            className="w-full min-h-[44px]" 
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+                {t("contactForm.submit")}...
+              </>
+            ) : (
+              t("contactForm.submit")
+            )}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
+  );
+};
