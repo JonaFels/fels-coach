@@ -30,8 +30,8 @@ const faqData = {
       answer: "Die aktuellen Preise und Paketoptionen findest du auf der Angebote-Seite. Ich biete ein vergünstigtes Kennenlern-Coaching an, damit du die Arbeit kennenlernen kannst.",
     },
     {
-      question: "Warum nur Online-Sessions?",
-      answer: "Ich biete ausschließlich Online-Sessions an, da sie dir ermöglichen, in deiner vertrauten Umgebung zu arbeiten. Die Wirksamkeit ist dabei genauso hoch wie bei persönlichen Sessions – oft sogar höher, weil du dich sicherer fühlst.",
+      question: "Wo finden die Sessions statt?",
+      answer: "Alle Coaching-Sessions finden persönlich in Freiburg statt. Die Arbeit vor Ort ermöglicht eine tiefere Verbindung und die Nutzung von Bodenankern für die Aufstellungsarbeit.",
     },
   ],
   en: [
@@ -56,8 +56,8 @@ const faqData = {
       answer: "You can find current prices and package options on the Offers page. I offer a discounted introduction coaching so you can get to know the work.",
     },
     {
-      question: "Why only online sessions?",
-      answer: "I exclusively offer online sessions because they allow you to work in your familiar environment. The effectiveness is just as high as in-person sessions – often even higher, because you feel safer.",
+      question: "Where do the sessions take place?",
+      answer: "All coaching sessions take place in person in Freiburg. Working on-site enables a deeper connection and the use of floor anchors for constellation work.",
     },
   ],
   fr: [
@@ -82,8 +82,8 @@ const faqData = {
       answer: "Vous trouverez les prix actuels et les options de forfait sur la page Offres. Je propose un coaching découverte à prix réduit.",
     },
     {
-      question: "Pourquoi uniquement des séances en ligne ?",
-      answer: "Je propose exclusivement des séances en ligne car elles vous permettent de travailler dans votre environnement familier. L'efficacité est tout aussi élevée – souvent même plus, car vous vous sentez plus en sécurité.",
+      question: "Où se déroulent les séances ?",
+      answer: "Toutes les séances de coaching se déroulent en personne à Fribourg. Le travail sur place permet une connexion plus profonde et l'utilisation d'ancres au sol pour le travail de constellation.",
     },
   ],
 };

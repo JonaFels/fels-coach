@@ -593,11 +593,6 @@ export const translations: Translations = {
     en: "Family Constellation Facilitator in Training",
     fr: "Facilitateur en formation",
   },
-  "author.credential2": {
-    de: "Heilpraktiker-Ausbildung",
-    en: "Naturopath Training",
-    fr: "Formation de Naturopathe",
-  },
   "author.credential3": {
     de: "Achtsame Begleitung",
     en: "Mindful Guidance",
@@ -620,15 +615,15 @@ export const translations: Translations = {
     en: "Family constellation facilitator in training",
     fr: "Facilitateur en formation",
   },
-  "trust.online": {
-    de: "Online & Flexibel",
-    en: "Online & Flexible",
-    fr: "En ligne & Flexible",
+  "trust.location": {
+    de: "Präsenz in Freiburg",
+    en: "In-Person in Freiburg",
+    fr: "En personne à Fribourg",
   },
-  "trust.onlineDesc": {
-    de: "Bequem von zuhause",
-    en: "Comfortable from home",
-    fr: "Confortablement de chez vous",
+  "trust.locationDesc": {
+    de: "Persönliche Sessions vor Ort",
+    en: "Personal sessions on-site",
+    fr: "Séances personnelles sur place",
   },
   "trust.flexible": {
     de: "Flexible Termine",
@@ -636,9 +631,9 @@ export const translations: Translations = {
     fr: "Rendez-vous flexibles",
   },
   "trust.flexibleDesc": {
-    de: "Online buchbar",
-    en: "Book online",
-    fr: "Réservation en ligne",
+    de: "Termine nach Absprache",
+    en: "Appointments by arrangement",
+    fr: "Rendez-vous sur accord",
   },
   "trust.experience": {
     de: "Empathisch",

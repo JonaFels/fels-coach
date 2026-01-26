@@ -1,4 +1,4 @@
-import { Shield, Heart, Clock, Video } from "lucide-react";
+import { Shield, Heart, Clock, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const TrustBadges = () => {
@@ -11,9 +11,9 @@ export const TrustBadges = () => {
       descKey: "trust.certifiedDesc",
     },
     {
-      icon: Video,
-      titleKey: "trust.online",
-      descKey: "trust.onlineDesc",
+      icon: MapPin,
+      titleKey: "trust.location",
+      descKey: "trust.locationDesc",
     },
     {
       icon: Clock,
