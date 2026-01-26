@@ -56,15 +56,28 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // For now, we'll use mailto as fallback since there's no backend
-      const mailtoLink = `mailto:info@fels-coach.de?subject=Kontaktanfrage von ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`)}`;
-      window.location.href = mailtoLink;
-      
-      setIsSuccess(true);
-      toast({
-        title: t("contactForm.success"),
-        description: "",
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("message", formData.message);
+
+      const response = await fetch("https://www.fels-coach.de/send_contact.php", {
+        method: "POST",
+        body: formDataToSend,
       });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        toast({
+          title: t("contactForm.success"),
+          description: "",
+        });
+      } else {
+        toast({
+          title: t("contactForm.error"),
+          variant: "destructive",
+        });
+      }
     } catch (error) {
       toast({
         title: t("contactForm.error"),
