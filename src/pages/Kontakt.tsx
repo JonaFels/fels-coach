@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, MessageCircle, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -45,23 +45,6 @@ const Kontakt = () => {
                       <span className="text-sm text-muted-foreground">info@fels-coach.de</span>
                     </div>
                   </a>
-
-                  <a
-                    href="https://wa.me/4917667608617"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors group"
-                    aria-label="WhatsApp öffnen"
-                  >
-                    <div className="p-3 rounded-full bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
-                      <MessageCircle className="h-6 w-6 text-green-500" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground block">WhatsApp</span>
-                      <span className="text-sm text-muted-foreground">+49 176 67608617</span>
-                    </div>
-                  </a>
-
                   <a
                     href="https://t.me/+4917667608617"
                     target="_blank"
