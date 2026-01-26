@@ -29,9 +29,12 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
           <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
         </a>
       </Button>
-      <span className="text-muted-foreground text-sm">
+      <Link
+        to="/kontakt"
+        className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
+      >
         {t("cta.freeConsultation")}
-      </span>
+      </Link>
     </div>
   );
 };
