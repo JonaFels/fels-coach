@@ -4,8 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+// GA4 Event Tracking Helper
+const trackEvent = (eventName: string, eventParams?: Record<string, string>) => {
+  if (typeof window !== "undefined" && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+    (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", eventName, eventParams);
+  }
+};
+
 export const CoachingSection = () => {
   const { t } = useLanguage();
+
+  const handleEbookClick = () => {
+    trackEvent("ebook_button_click", {
+      button_location: "homepage_coaching_section",
+    });
+  };
 
   return (
     <section className="py-16 md:py-24">
@@ -73,7 +86,7 @@ export const CoachingSection = () => {
                 {t("coaching.learnMore")}
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="lg">
+            <Button asChild variant="ghost" size="lg" onClick={handleEbookClick}>
               <Link to="/ebook">
                 {t("coaching.ebookLink")}
               </Link>
