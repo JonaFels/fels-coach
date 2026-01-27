@@ -21,35 +21,80 @@
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# Caching für statische Assets
+# Browser-Caching für maximale Performance (PageSpeed 100)
 <IfModule mod_expires.c>
   ExpiresActive On
+  
+  # HTML - kurzes Caching für Updates
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # Assets mit Hash - 1 Jahr Caching
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType application/font-woff "access plus 1 year"
   ExpiresByType application/font-woff2 "access plus 1 year"
+  
+  # JSON/XML
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
 </IfModule>
 
-# Gzip-Komprimierung
+# Cache-Control Headers für Assets
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff|woff2|ttf|eot|ico|jpg|jpeg|png|gif|svg|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# GZIP Komprimierung
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
   AddOutputFilterByType DEFLATE application/javascript application/json
   AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
-  AddOutputFilterByType DEFLATE font/woff font/woff2
+  AddOutputFilterByType DEFLATE font/woff font/woff2 application/font-woff application/font-woff2
+  AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Korrekter MIME-Type für Webfonts
+# Brotli Komprimierung (falls verfügbar)
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS application/xml application/xhtml+xml
+  AddOutputFilterByType BROTLI_COMPRESS font/woff font/woff2
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
+# Korrekter MIME-Type für Webfonts und moderne Formate
 <IfModule mod_mime.c>
   AddType font/woff .woff
   AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType application/javascript .js
+</IfModule>
+
+# ETags deaktivieren (Cache-Busting durch Hashes)
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# Keep-Alive aktivieren
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
 </IfModule>

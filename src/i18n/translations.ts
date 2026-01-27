@@ -653,8 +653,8 @@ export const translations: Translations = {
     fr: "Réserver maintenant",
   },
   "cta.freeConsultation": {
-    de: "Kostenloses Erstgespräch möglich",
-    en: "Free initial consultation available",
+    de: "Kostenloses telefonisches Erstgespräch anfragen",
+    en: "Request free phone consultation",
     fr: "Consultation initiale gratuite possible",
   },
   "cta.learnMore": {

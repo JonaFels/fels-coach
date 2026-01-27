@@ -1,16 +1,16 @@
-# SSG Build-Anleitung für Apache/FTP-Server
+# SSG Build-Anleitung für Apache/FTP-Server (High-Performance)
 
-## Statische HTML-Generierung (SSG)
+## Statische HTML-Generierung mit PageSpeed 100 Optimierungen
 
-Dieses Projekt generiert automatisch individuelle HTML-Dateien für jede Unterseite.
+Dieses Projekt generiert automatisch minifizierte HTML-Dateien mit Cache-Busting für maximale Performance.
 
 ### Build mit SSG ausführen
 
 ```bash
-# 1. Normaler Build
+# 1. Normaler Build (mit Minifizierung)
 npm run build
 
-# 2. SSG Script ausführen (generiert individuelle HTML-Dateien)
+# 2. SSG Script ausführen (generiert minifizierte HTML-Dateien)
 node scripts/prerender.js
 ```
 
@@ -19,14 +19,14 @@ Oder in einem Befehl:
 npm run build && node scripts/prerender.js
 ```
 
-### Generierte Dateien
+### Generierte Dateistruktur
 
-Nach dem SSG-Build enthält der `dist/`-Ordner **alle Dateien flach** - einfach alles markieren und auf den Server kopieren:
+Nach dem SSG-Build hat der `dist/`-Ordner diese Struktur:
 
 ```
 dist/
-├── index.html              ← Startseite
-├── angebote.html
+├── index.html              ← Startseite (minifiziert)
+├── angebote.html           ← Alle HTML-Seiten im Root
 ├── familienaufstellung.html
 ├── ebook.html
 ├── kontakt.html
@@ -36,26 +36,41 @@ dist/
 ├── agb.html
 ├── blog.html
 │
-├── index.js                ← Haupt-JavaScript (LESBAR!)
-├── vendor.js               ← React & Libraries
-├── index.css               ← Kompiliertes CSS (LESBAR!)
-├── custom.css              ← BEARBEITBAR auf Server!
-│
-├── [alle Bilder].png/jpg
-├── [alle Schriftarten].woff2
+├── assets/                 ← Alle Assets mit Cache-Busting Hashes
+│   ├── index.[hash].js     ← Minifiziertes JavaScript
+│   ├── vendor.[hash].js    ← React & Libraries (separater Cache)
+│   ├── ui.[hash].js        ← UI Components
+│   ├── index.[hash].css    ← Minifiziertes CSS
+│   ├── [bilder].[hash].png/jpg
+│   └── [fonts].[hash].woff2
 │
 ├── robots.txt
 ├── sitemap.xml
 ├── llms.txt
-└── .htaccess
+└── .htaccess               ← Caching, GZIP, Clean URLs
 ```
+
+### PageSpeed-Optimierungen
+
+| Optimierung | Status |
+|-------------|--------|
+| HTML Minifizierung | ✅ Kommentare & Leerzeichen entfernt |
+| JS Minifizierung (Terser) | ✅ Mit Tree-Shaking |
+| CSS Minifizierung | ✅ Aktiviert |
+| Cache-Busting Hashes | ✅ 1 Jahr Caching möglich |
+| Vendor Chunk Splitting | ✅ Besseres Browser-Caching |
+| GZIP/Brotli | ✅ Via .htaccess |
+| Sourcemaps | ❌ Deaktiviert für Production |
 
 ### Deployment
 
-**Alle Dateien im `dist/`-Ordner markieren → Kopieren → Auf Server einfügen. Fertig!**
+**Einfach den gesamten `dist/`-Ordner per FTP hochladen.**
 
-Die `.htaccess` sorgt dafür, dass URLs ohne `.html` funktionieren:
-- `www.deine-seite.de/datenschutz` → lädt `datenschutz.html`
+Die `.htaccess` sorgt für:
+- **Clean URLs**: `deinedomain.de/kontakt` → lädt `kontakt.html`
+- **1 Jahr Caching** für Assets in `/assets/` (durch Hashes sicher)
+- **GZIP/Brotli Komprimierung** für alle Textdateien
+- **Security Headers** (X-Frame-Options, CSP, etc.)
 
 ### Blog-Artikel hinzufügen
 
@@ -68,54 +83,21 @@ const blogSlugs = [
 ];
 ```
 
-## .htaccess für Apache (Empfohlen)
+## Vorteile dieser Konfiguration
 
-Trotz der individuellen HTML-Dateien empfiehlt sich eine `.htaccess` als Fallback:
-
-```apache
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  
-  # Wenn die Anfrage keine existierende Datei ist
-  RewriteCond %{REQUEST_FILENAME} !-f
-  # Wenn die Anfrage kein existierendes Verzeichnis ist
-  RewriteCond %{REQUEST_FILENAME} !-d
-  # Leite zur index.html weiter
-  RewriteRule ^ index.html [L]
-</IfModule>
-
-# Caching für statische Assets
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
-
-# Gzip-Komprimierung
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
-  AddOutputFilterByType DEFLATE application/javascript application/json
-</IfModule>
-```
-
-## Deployment-Schritte
-
-1. `npm run build` ausführen
-2. `node scripts/prerender.js` ausführen
-3. Inhalt des `dist/`-Ordners per FTP hochladen
-4. `.htaccess`-Datei in das Root-Verzeichnis kopieren
-5. Sicherstellen, dass `sitemap.xml`, `robots.txt` und `llms.txt` im Root liegen
-
-## Vorteile der SSG-Lösung
-
+- ✅ **PageSpeed 100**: Minifizierung + Caching + Komprimierung
 - ✅ **SEO-optimiert**: Suchmaschinen sehen sofort den vollständigen HTML-Inhalt
-- ✅ **Schnellere Ladezeit**: Keine Abhängigkeit von JavaScript für initiales Rendering
-- ✅ **Fallback-sicher**: Funktioniert auch wenn .htaccess-Regeln nicht greifen
-- ✅ **Crawlbar**: Jede Seite hat eine eigene URL mit vollständigem HTML
-```
+- ✅ **Schnellste Ladezeit**: Assets werden für 1 Jahr gecacht
+- ✅ **Cache-Busting**: Neue Deployments sind sofort sichtbar (Hash ändert sich)
+- ✅ **Apache-kompatibel**: Funktioniert auf jedem Shared Hosting
+
+## Unterschied zur vorherigen "lesbaren" Konfiguration
+
+Die vorherige Konfiguration war für **manuelle Server-Edits** optimiert (unminifiziert, keine Hashes).
+
+Diese neue Konfiguration ist für **maximale Performance** optimiert:
+- Code ist nicht mehr manuell editierbar auf dem Server
+- Dafür: Deutlich schnellere Ladezeiten und besseres Caching
+- Änderungen müssen über Lovable/Build gemacht werden
+
+Falls du die lesbare Ausgabe zurück möchtest, revertiere die vite.config.ts Änderungen.
