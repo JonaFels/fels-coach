@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -29,12 +28,12 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
           <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
         </a>
       </Button>
-      <Link
-        to="/kontakt"
+      <a
+        href="/kontakt"
         className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
       >
         {t("cta.freeConsultation")}
-      </Link>
+      </a>
     </div>
   );
 };
@@ -43,12 +42,12 @@ export const InlineCTA = () => {
   const { t } = useLanguage();
 
   return (
-    <Link
-      to="/angebote"
+    <a
+      href="/angebote"
       className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors group"
     >
       {t("cta.learnMore")}
       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-    </Link>
+    </a>
   );
 };
