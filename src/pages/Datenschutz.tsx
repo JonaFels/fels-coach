@@ -10,7 +10,7 @@ const Datenschutz = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-background">
+      <main id="main-content" className="flex-1 py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
             {t("privacy.title")}
