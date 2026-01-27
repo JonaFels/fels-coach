@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -169,6 +170,14 @@ export const ContactForm = () => {
               </p>
             )}
           </div>
+
+          {/* Privacy notice - DSGVO compliant */}
+          <p className="text-xs text-muted-foreground">
+            {t("contactForm.privacyNotice")}{" "}
+            <Link to="/datenschutz" className="underline hover:text-secondary">
+              {t("contactForm.privacyLink")}
+            </Link>
+          </p>
 
           <Button 
             type="submit" 

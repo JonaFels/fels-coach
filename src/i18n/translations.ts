@@ -726,4 +726,14 @@ export const translations: Translations = {
     en: "Invalid email address",
     fr: "Adresse e-mail invalide",
   },
+  "contactForm.privacyNotice": {
+    de: "Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer",
+    en: "By submitting, you agree to the processing of your data according to our",
+    fr: "En soumettant, vous acceptez le traitement de vos données conformément à notre",
+  },
+  "contactForm.privacyLink": {
+    de: "Datenschutzerklärung",
+    en: "Privacy Policy",
+    fr: "Politique de confidentialité",
+  },
 };
