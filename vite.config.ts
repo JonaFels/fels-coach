@@ -3,19 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// SSG Routes for prerendering (use with vite-ssg or manual prerender setup)
-// Routes to be generated as static HTML files:
-// - /
-// - /angebote
-// - /familienaufstellung
-// - /ebook
-// - /kontakt
-// - /ueber-mich
-// - /datenschutz
-// - /impressum
-// - /agb
-// - /blog
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -35,19 +22,29 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Keine Minifizierung - lesbare Dateien
-    minify: false,
-    cssMinify: false,
-    // Sourcemaps für Debugging
-    sourcemap: true,
+    // Maximale Performance - Minifizierung aktiviert
+    minify: 'terser',
+    cssMinify: true,
+    // Sourcemaps deaktiviert für Production
+    sourcemap: false,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
     rollupOptions: {
       output: {
-        // ALLES FLACH - keine Unterordner
-        entryFileNames: '[name].js',
-        chunkFileNames: '[name].js',
-        assetFileNames: '[name][extname]',
+        // Assets in /assets/ Unterordner
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash][extname]',
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
+          ui: ["@radix-ui/react-accordion", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
         },
       },
     },
