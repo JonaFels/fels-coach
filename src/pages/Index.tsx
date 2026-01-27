@@ -15,7 +15,7 @@ const Index = () => {
       <SEOHead />
       <JsonLd />
       <Header />
-      <main>
+      <main id="main-content">
         <PageBackground className="py-0">
           <Hero />
           <TrustBadges />

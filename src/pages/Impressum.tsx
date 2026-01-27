@@ -10,7 +10,7 @@ const Impressum = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-background">
+      <main id="main-content" className="flex-1 py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
             {t("imprint.title")}
@@ -18,7 +18,7 @@ const Impressum = () => {
 
           <Card>
             <CardContent className="pt-8 prose prose-slate dark:prose-invert max-w-none">
-              <h3>Angaben gemäß § 5 TMG</h3>
+              <h3>Angaben gemäß § 5 DDG</h3>
               <p>
                 Jona Fels<br />
                 Egonstraße 91<br />

@@ -8,6 +8,7 @@ interface PageBackgroundProps {
 export const PageBackground = ({ children, className = "" }: PageBackgroundProps) => {
   return (
     <main
+      id="main-content"
       className={`flex-1 py-16 md:py-24 relative ${className}`}
       style={{
         backgroundImage: `url(${hintergrundStruktur})`,
