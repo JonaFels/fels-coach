@@ -6,12 +6,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { key: "nav.coaching", href: "/index.html" },
-  { key: "nav.familienaufstellung", href: "/familienaufstellung.html" },
-  { key: "nav.ebook", href: "/ebook.html" },
-  { key: "nav.blog", href: "/blog.html" },
-  { key: "nav.kontakt", href: "/kontakt.html" },
-  { key: "nav.ueber", href: "/ueber-mich.html" },
+  { key: "nav.coaching", href: "/" },
+  { key: "nav.familienaufstellung", href: "/familienaufstellung" },
+  { key: "nav.ebook", href: "/ebook" },
+  { key: "nav.blog", href: "/blog" },
+  { key: "nav.kontakt", href: "/kontakt" },
+  { key: "nav.ueber", href: "/ueber-mich" },
 ];
 
 export const Header = () => {
@@ -22,7 +22,7 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/angebote.html" className="flex-shrink-0">
+          <a href="/angebote" className="flex-shrink-0">
             <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
               Systemische Familienaufstellungen
             </h1>
@@ -43,7 +43,7 @@ export const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Button asChild size="sm">
-              <a href="/angebote.html">{t("nav.termin")}</a>
+              <a href="/angebote">{t("nav.termin")}</a>
             </Button>
           </div>
 
@@ -76,7 +76,7 @@ export const Header = () => {
             <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
               <Button asChild size="sm">
-                <a href="/angebote.html" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="/angebote" onClick={() => setIsMobileMenuOpen(false)}>
                   {t("nav.termin")}
                 </a>
               </Button>
