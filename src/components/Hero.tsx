@@ -17,7 +17,7 @@ export const Hero = () => {
           <div className="mt-10 animate-fade-in-up [animation-delay:200ms]">
             <Button asChild size="lg" className="text-base px-8">
               <a
-                href="https://cal.com/systemisches-coaching"
+                href="https://cal.com/fels-coach"
                 target="_blank"
                 rel="noopener noreferrer"
               >
