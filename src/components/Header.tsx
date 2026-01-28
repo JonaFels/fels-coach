@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -7,12 +6,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { key: "nav.coaching", href: "/" },
-  { key: "nav.familienaufstellung", href: "/familienaufstellung" },
-  { key: "nav.ebook", href: "/ebook" },
-  { key: "nav.blog", href: "/blog" },
-  { key: "nav.kontakt", href: "/kontakt" },
-  { key: "nav.ueber", href: "/ueber-mich" },
+  { key: "nav.coaching", href: "/index.html" },
+  { key: "nav.familienaufstellung", href: "/familienaufstellung.html" },
+  { key: "nav.ebook", href: "/ebook.html" },
+  { key: "nav.blog", href: "/blog.html" },
+  { key: "nav.kontakt", href: "/kontakt.html" },
+  { key: "nav.ueber", href: "/ueber-mich.html" },
 ];
 
 export const Header = () => {
@@ -23,28 +22,28 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/angebote" className="flex-shrink-0">
+          <a href="/angebote.html" className="flex-shrink-0">
             <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
               Systemische Familienaufstellungen
             </h1>
-          </Link>
+          </a>
 
           <nav className="hidden lg:flex items-center gap-6">
             {NAV_ITEMS.map((item) => (
-              <Link
+              <a
                 key={item.key}
-                to={item.href}
+                href={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t(item.key)}
-              </Link>
+              </a>
             ))}
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Button asChild size="sm">
-              <Link to="/angebote">{t("nav.termin")}</Link>
+              <a href="/angebote.html">{t("nav.termin")}</a>
             </Button>
           </div>
 
@@ -65,21 +64,21 @@ export const Header = () => {
         >
           <nav className="flex flex-col gap-2 pt-2">
             {NAV_ITEMS.map((item) => (
-              <Link
+              <a
                 key={item.key}
-                to={item.href}
+                href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
               >
                 {t(item.key)}
-              </Link>
+              </a>
             ))}
             <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
               <Button asChild size="sm">
-                <Link to="/angebote" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="/angebote.html" onClick={() => setIsMobileMenuOpen(false)}>
                   {t("nav.termin")}
-                </Link>
+                </a>
               </Button>
             </div>
           </nav>
