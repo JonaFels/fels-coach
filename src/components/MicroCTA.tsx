@@ -29,7 +29,7 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
         </a>
       </Button>
       <a
-        href="/kontakt"
+        href="/kontakt.html"
         className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
       >
         {t("cta.freeConsultation")}
@@ -43,7 +43,7 @@ export const InlineCTA = () => {
 
   return (
     <a
-      href="/angebote"
+      href="/angebote.html"
       className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors group"
     >
       {t("cta.learnMore")}
