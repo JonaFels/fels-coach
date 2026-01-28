@@ -15,13 +15,13 @@ const offerings = [
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
     price: 20,
-    href: "https://cal.com/systemisches-coaching/coaching-kennenlernen",
+    href: "https://cal.com/fels-coach/coaching-kennenlernen",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
     price: 50,
-    href: "https://cal.com/systemisches-coaching/coaching-termin",
+    href: "https://cal.com/fels-coach/coaching-termin",
   },
 ];
 
@@ -83,7 +83,7 @@ const Angebote = () => {
           <div className="text-center mt-10">
             <Button asChild variant="outline" size="lg" className="min-h-[44px]">
               <a
-                href="https://cal.com/systemisches-coaching"
+                href="https://cal.com/fels-coach"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -20,7 +20,7 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
         className="min-h-[44px] min-w-[200px]"
       >
         <a
-          href="https://cal.com/systemisches-coaching"
+          href="https://cal.com/fels-coach"
           target="_blank"
           rel="noopener noreferrer"
         >
