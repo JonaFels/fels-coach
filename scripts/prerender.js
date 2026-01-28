@@ -1,31 +1,31 @@
 /**
  * Prerender Script für Static Site Generation (SSG)
- * Generiert individuelle HTML-Dateien für jede Route
- * Mit automatischer Hash-Injektion und HTML-Minifizierung
+ * Generiert Ordner-basierte HTML-Dateien für clean URLs
+ * z.B. /agb → dist/agb/index.html (funktioniert auf Vercel, Apache, etc.)
  * 
  * Verwendung: node scripts/prerender.js
  * (Nach npm run build ausführen)
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Statische Routen mit Dateinamen (flach im Root)
+// Statische Routen (path → Ordnername, "/" bleibt index.html im Root)
 const staticRoutes = [
-  { path: '/', filename: 'index.html' },
-  { path: '/angebote', filename: 'angebote.html' },
-  { path: '/familienaufstellung', filename: 'familienaufstellung.html' },
-  { path: '/ebook', filename: 'ebook.html' },
-  { path: '/kontakt', filename: 'kontakt.html' },
-  { path: '/ueber-mich', filename: 'ueber-mich.html' },
-  { path: '/datenschutz', filename: 'datenschutz.html' },
-  { path: '/impressum', filename: 'impressum.html' },
-  { path: '/agb', filename: 'agb.html' },
-  { path: '/blog', filename: 'blog.html' },
+  { path: '/', folder: null }, // Root bleibt index.html
+  { path: '/angebote', folder: 'angebote' },
+  { path: '/familienaufstellung', folder: 'familienaufstellung' },
+  { path: '/ebook', folder: 'ebook' },
+  { path: '/kontakt', folder: 'kontakt' },
+  { path: '/ueber-mich', folder: 'ueber-mich' },
+  { path: '/datenschutz', folder: 'datenschutz' },
+  { path: '/impressum', folder: 'impressum' },
+  { path: '/agb', folder: 'agb' },
+  { path: '/blog', folder: 'blog' },
 ];
 
 // Blog-Artikel (falls vorhanden)
@@ -76,8 +76,17 @@ function findAssets() {
   return { mainJs, vendorJs, uiJs, mainCss };
 }
 
+/**
+ * Erstellt einen Ordner falls nicht vorhanden
+ */
+function ensureDir(dirPath) {
+  if (!existsSync(dirPath)) {
+    mkdirSync(dirPath, { recursive: true });
+  }
+}
+
 function generateStaticPages() {
-  console.log('🚀 Starte High-Performance SSG Build...\n');
+  console.log('🚀 Starte High-Performance SSG Build (Clean-URL Ordnerstruktur)...\n');
 
   // Prüfe ob dist/index.html existiert
   if (!existsSync(templatePath)) {
@@ -103,7 +112,7 @@ function generateStaticPages() {
   // Alle Routen sammeln
   const allRoutes = [
     ...staticRoutes,
-    ...blogSlugs.map(slug => ({ path: `/blog/${slug}`, filename: `blog-${slug}.html` })),
+    ...blogSlugs.map(slug => ({ path: `/blog/${slug}`, folder: `blog/${slug}` })),
   ];
 
   console.log(`📄 Generiere ${allRoutes.length} minifizierte HTML-Dateien:\n`);
@@ -111,7 +120,20 @@ function generateStaticPages() {
   let totalSaved = 0;
 
   allRoutes.forEach(route => {
-    const outputPath = join(distDir, route.filename);
+    let outputPath;
+    let displayPath;
+
+    if (route.folder === null) {
+      // Root: dist/index.html
+      outputPath = join(distDir, 'index.html');
+      displayPath = '/index.html';
+    } else {
+      // Ordner erstellen: dist/agb/index.html
+      const folderPath = join(distDir, route.folder);
+      ensureDir(folderPath);
+      outputPath = join(folderPath, 'index.html');
+      displayPath = `/${route.folder}/index.html`;
+    }
     
     // Minifiziere HTML
     const minified = minifyHtml(template);
@@ -123,23 +145,23 @@ function generateStaticPages() {
     writeFileSync(outputPath, minified, 'utf-8');
 
     const savings = ((saved / originalSize) * 100).toFixed(1);
-    console.log(`   ✅ ${route.path.padEnd(20)} → ${route.filename.padEnd(25)} (${savings}% kleiner)`);
+    console.log(`   ✅ ${route.path.padEnd(22)} → ${displayPath.padEnd(30)} (${savings}% kleiner)`);
   });
 
   console.log('\n✨ High-Performance SSG Build abgeschlossen!');
   console.log(`\n📊 Gesamtersparnis durch HTML-Minifizierung: ${(totalSaved / 1024).toFixed(1)} KB`);
   
-  console.log('\n📁 Struktur im dist/ Ordner:');
-  console.log('   📄 *.html (alle Seiten im Root - minifiziert)');
+  console.log('\n📁 Clean-URL Struktur im dist/ Ordner:');
+  console.log('   📄 index.html (Homepage)');
+  console.log('   📁 agb/index.html → /agb funktioniert überall');
+  console.log('   📁 kontakt/index.html → /kontakt funktioniert überall');
   console.log('   📁 assets/ (JS, CSS, Bilder, Fonts mit Hashes)');
-  console.log('   📄 robots.txt, sitemap.xml, .htaccess');
 
   console.log('\n⚡ PageSpeed-Optimierungen:');
   console.log('   ✓ HTML minifiziert (Kommentare/Leerzeichen entfernt)');
-  console.log('   ✓ JS/CSS mit Terser minifiziert');
+  console.log('   ✓ Clean URLs funktionieren auf Vercel, Apache, Netlify, etc.');
   console.log('   ✓ Cache-Busting Hashes für 1-Jahr-Caching');
   console.log('   ✓ Vendor-Chunk für besseres Caching');
-  console.log('   ✓ .htaccess mit GZIP/Brotli & Caching-Headers');
 
   console.log('\n🎉 Kopiere den gesamten dist/ Ordner auf deinen Server!');
 }
