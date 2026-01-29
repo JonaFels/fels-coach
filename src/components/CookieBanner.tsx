@@ -22,7 +22,7 @@ export const CookieBanner = () => {
 
   // Load GA4 script when analytics is enabled
   const loadGoogleAnalytics = () => {
-    const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // TODO: Replace with your GA4 Measurement ID
+    const GA_MEASUREMENT_ID = "G-879GQ96R5G";
     
     // Check if already loaded
     if (document.querySelector(`script[src*="gtag/js?id=${GA_MEASUREMENT_ID}"]`)) {
