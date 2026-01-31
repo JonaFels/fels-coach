@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { ChatbaseWidget } from "@/components/ChatbaseWidget";
 import Index from "./pages/Index";
 import Angebote from "./pages/Angebote";
 import Familienaufstellung from "./pages/Familienaufstellung";
@@ -28,6 +29,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <ChatbaseWidget />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/angebote" element={<Angebote />} />
