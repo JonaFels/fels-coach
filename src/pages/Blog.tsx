@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
 import { format, parseISO } from "date-fns";
-import { de, enUS, fr } from "date-fns/locale";
+import { de, enUS } from "date-fns/locale";
 
 const Blog = () => {
   const { language, t } = useLanguage();
@@ -17,8 +17,6 @@ const Blog = () => {
     switch (language) {
       case "de":
         return de;
-      case "fr":
-        return fr;
       default:
         return enUS;
     }
