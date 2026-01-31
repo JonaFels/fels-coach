@@ -52,7 +52,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email via Resend
     const emailResponse = await resend.emails.send({
-      from: "Kontaktformular <onboarding@resend.dev>",
+      from: "Coach Anfrage <anfrage@send.fels-coach.de>",
       to: ["info@fels-coach.de"],
       subject: `Neue Anfrage-Coaching von ${name}`,
       reply_to: email,
@@ -125,7 +125,16 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email response:", emailResponse);
+
+    // Check if Resend returned an error
+    if (emailResponse.error) {
+      console.error("Resend error:", emailResponse.error);
+      return new Response(
+        JSON.stringify({ error: "E-Mail konnte nicht gesendet werden: " + emailResponse.error.message }),
+        { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
 
     return new Response(
       JSON.stringify({ success: true }),
