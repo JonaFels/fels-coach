@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "required").max(100),
@@ -57,29 +58,29 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("email", formData.email);
-      formDataToSend.append("message", formData.message);
-
-      const response = await fetch("https://www.fels-coach.de/send_contact.php", {
-        method: "POST",
-        body: formDataToSend,
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
       });
 
-      if (response.ok) {
+      if (error) {
+        console.error("Edge function error:", error);
+        toast({
+          title: t("contactForm.error"),
+          variant: "destructive",
+        });
+      } else {
         setIsSuccess(true);
         toast({
           title: t("contactForm.success"),
           description: "",
         });
-      } else {
-        toast({
-          title: t("contactForm.error"),
-          variant: "destructive",
-        });
       }
     } catch (error) {
+      console.error("Contact form error:", error);
       toast({
         title: t("contactForm.error"),
         variant: "destructive",
