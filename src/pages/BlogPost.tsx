@@ -10,7 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft } from "lucide-react";
 import { format, parseISO } from "date-fns";
-import { de, enUS, fr } from "date-fns/locale";
+import { de, enUS } from "date-fns/locale";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -26,8 +26,6 @@ const BlogPost = () => {
     switch (language) {
       case "de":
         return de;
-      case "fr":
-        return fr;
       default:
         return enUS;
     }
