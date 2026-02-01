@@ -14,6 +14,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ebookSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -53,29 +54,36 @@ const Ebook = () => {
     });
     
     try {
-      const formData = new FormData();
-      formData.append("name", name);
-      formData.append("email", email);
-      
-      const response = await fetch("https://www.fels-coach.de/send_ebook.php", {
-        method: "POST",
-        body: formData,
+      const { data, error } = await supabase.functions.invoke("send-ebook-email", {
+        body: { name, email },
       });
       
-      if (response.ok) {
-        setSubmitted(true);
-        toast({
-          title: "E-Book erfolgreich gesendet!",
-          description: "Prüfe dein E-Mail-Postfach für den Download-Link.",
-        });
-      } else {
+      if (error) {
+        console.error("Edge function error:", error);
         toast({
           title: "Fehler beim Senden",
           description: "Bitte versuche es später erneut.",
           variant: "destructive",
         });
+        return;
       }
+      
+      if (data?.error) {
+        toast({
+          title: "Fehler beim Senden",
+          description: data.error,
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      setSubmitted(true);
+      toast({
+        title: "E-Book erfolgreich gesendet!",
+        description: "Prüfe dein E-Mail-Postfach für den Download-Link.",
+      });
     } catch (error) {
+      console.error("Error:", error);
       toast({
         title: "Verbindungsfehler",
         description: "Bitte überprüfe deine Internetverbindung.",
