@@ -15,6 +15,7 @@ const contactSchema = z.object({
   name: z.string().trim().min(1, "required").max(100),
   email: z.string().trim().email("invalidEmail").max(255),
   message: z.string().trim().min(1, "required").max(2000),
+  website: z.string().max(0, "bot").optional(), // Honeypot field - must be empty
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -29,6 +30,7 @@ export const ContactForm = () => {
     name: "",
     email: "",
     message: "",
+    website: "", // Honeypot field
   });
 
   const handleChange = (field: keyof ContactFormData, value: string) => {
@@ -42,6 +44,13 @@ export const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
+
+    // Check honeypot - if filled, it's a bot
+    if (formData.website && formData.website.length > 0) {
+      // Silently pretend success for bots
+      setIsSuccess(true);
+      return;
+    }
 
     // Validate
     const result = contactSchema.safeParse(formData);
@@ -95,7 +104,7 @@ export const ContactForm = () => {
       <Card className="bg-card/95 backdrop-blur-sm">
         <CardContent className="pt-8">
           <div className="text-center py-8">
-            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" aria-hidden="true" />
+            <CheckCircle className="h-16 w-16 text-secondary mx-auto mb-4" aria-hidden="true" />
             <p className="text-foreground font-medium">{t("contactForm.success")}</p>
           </div>
         </CardContent>
@@ -172,7 +181,19 @@ export const ContactForm = () => {
             )}
           </div>
 
-          {/* Privacy notice - DSGVO compliant */}
+          {/* Honeypot field - hidden from humans, catches bots */}
+          <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+            <Label htmlFor="contact-website">Website (nicht ausfüllen)</Label>
+            <Input
+              id="contact-website"
+              type="text"
+              name="website"
+              value={formData.website || ""}
+              onChange={(e) => handleChange("website", e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
           <p className="text-xs text-muted-foreground">
             {t("contactForm.privacyNotice")}{" "}
             <Link to="/datenschutz" className="underline hover:text-secondary">

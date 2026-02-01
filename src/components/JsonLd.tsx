@@ -30,7 +30,7 @@ export const JsonLd = () => {
         latitude: 47.9990,
         longitude: 7.8421,
       },
-      image: "https://www.fels-coach.de/android-icon-192x192.png",
+      image: "https://www.fels-coach.de/web-app-manifest-512x512.png",
       priceRange: "€€",
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
@@ -60,6 +60,8 @@ export const JsonLd = () => {
               name: "Kennenlern-Coaching",
               description: "Erste vollwertige Coaching-Session zum Kennenlernen (60 Minuten)",
             },
+            price: "80",
+            priceCurrency: "EUR",
           },
           {
             "@type": "Offer",
@@ -68,6 +70,8 @@ export const JsonLd = () => {
               name: "Systemisches Coaching",
               description: "Tiefgreifende Coaching-Session mit Familienaufstellung (60 Minuten)",
             },
+            price: "120",
+            priceCurrency: "EUR",
           },
           {
             "@type": "Offer",
@@ -76,6 +80,8 @@ export const JsonLd = () => {
               name: "Kostenloses E-Book",
               description: "Der Weg zum Ganz-Sein - E-Book zum kostenlosen Download",
             },
+            price: "0",
+            priceCurrency: "EUR",
           },
         ],
       },
@@ -89,7 +95,7 @@ export const JsonLd = () => {
       jobTitle: "Systemischer Coach & Familienaufsteller i.A.",
       description: "Familienaufsteller in Ausbildung und Coach mit Fokus auf systemische Arbeit und Tiefenarbeit.",
       url: "https://www.fels-coach.de/ueber-mich",
-      image: "https://www.fels-coach.de/android-icon-192x192.png",
+      image: "https://www.fels-coach.de/web-app-manifest-512x512.png",
       sameAs: [
         "https://www.facebook.com/profile.php?id=61562014600393",
         "https://www.instagram.com/jona.fels/",

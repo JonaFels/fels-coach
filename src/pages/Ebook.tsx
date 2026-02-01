@@ -19,6 +19,7 @@ import { supabase } from "@/integrations/supabase/client";
 const ebookSchema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
+  website: z.string().max(0).optional(), // Honeypot field
 });
 
 const Ebook = () => {
@@ -27,6 +28,7 @@ const Ebook = () => {
   const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState(""); // Honeypot
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
@@ -34,8 +36,15 @@ const Ebook = () => {
     e.preventDefault();
     setErrors({});
 
+    // Check honeypot - if filled, it's a bot
+    if (website && website.length > 0) {
+      // Silently pretend success for bots
+      setSubmitted(true);
+      return;
+    }
+
     // Validate
-    const result = ebookSchema.safeParse({ name, email });
+    const result = ebookSchema.safeParse({ name, email, website });
     if (!result.success) {
       const fieldErrors: { name?: string; email?: string } = {};
       result.error.issues.forEach((issue) => {
@@ -159,6 +168,21 @@ const Ebook = () => {
                           <p className="text-sm text-destructive">{t("contactForm.invalidEmail")}</p>
                         )}
                       </div>
+                      
+                      {/* Honeypot field - hidden from humans, catches bots */}
+                      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                        <Label htmlFor="ebook-website">Website (nicht ausfüllen)</Label>
+                        <Input
+                          id="ebook-website"
+                          type="text"
+                          name="website"
+                          value={website}
+                          onChange={(e) => setWebsite(e.target.value)}
+                          tabIndex={-1}
+                          autoComplete="off"
+                        />
+                      </div>
+                      
                       <p className="text-xs text-muted-foreground">
                         {t("ebook.privacyNote")}{" "}
                         <Link
