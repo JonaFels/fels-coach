@@ -133,6 +133,18 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+
+  /* Hochkontrastreicher Fokus-Ring für alle interaktiven Elemente (BFSG/WCAG 2.1 AA) */
+  :focus-visible {
+    outline: 3px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Fokus nur bei Tastatur-Navigation anzeigen, nicht bei Mausklick */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 @layer utilities {

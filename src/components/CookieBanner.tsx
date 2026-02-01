@@ -43,6 +43,8 @@ export const CookieBanner = () => {
     gtag("js", new Date());
     gtag("config", GA_MEASUREMENT_ID, {
       anonymize_ip: true,
+      allow_google_signals: false, // Deaktiviert Cross-Device-Profiling
+      allow_ad_personalization_signals: false, // Keine Werbe-Personalisierung
     });
 
     // Make gtag available globally

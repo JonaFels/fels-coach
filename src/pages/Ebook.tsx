@@ -5,6 +5,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -30,6 +31,7 @@ const Ebook = () => {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // Honeypot
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -183,17 +185,27 @@ const Ebook = () => {
                         />
                       </div>
                       
-                      <p className="text-xs text-muted-foreground">
-                        {t("ebook.privacyNote")}{" "}
-                        <Link
-                          to="/datenschutz"
-                          className="text-secondary hover:underline"
-                        >
-                          {t("ebook.here")}
-                        </Link>
-                        .
-                      </p>
-                      <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting}>
+                      {/* Rechtssichere Datenschutz-Checkbox (Pflicht-Opt-in) */}
+                      <div className="flex items-start gap-3">
+                        <Checkbox
+                          id="ebook-privacy"
+                          checked={privacyAccepted}
+                          onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                          className="mt-0.5"
+                          aria-describedby="ebook-privacy-label"
+                        />
+                        <Label htmlFor="ebook-privacy" id="ebook-privacy-label" className="text-xs text-muted-foreground cursor-pointer leading-relaxed">
+                          {t("ebook.privacyNote")}{" "}
+                          <Link
+                            to="/datenschutz"
+                            className="text-secondary hover:underline"
+                          >
+                            {t("ebook.here")}
+                          </Link>
+                          {" "}<span className="text-destructive">*</span>
+                        </Label>
+                      </div>
+                      <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting || !privacyAccepted}>
                         {isSubmitting ? (
                           <>
                             <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
