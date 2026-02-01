@@ -19,16 +19,15 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      {/* Skip-Link: unsichtbar, erscheint nur bei Tastatur-Fokus */}
+    <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
+      {/* Skip-Link: komplett unsichtbar, erscheint NUR bei Tastatur-Fokus */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-background focus:text-foreground focus:px-4 focus:py-2 focus:rounded-md focus:ring-2 focus:ring-ring"
+        className="absolute -left-[9999px] -top-[9999px] focus:left-4 focus:top-4 focus:z-50 focus:bg-background focus:text-foreground focus:px-4 focus:py-2 focus:rounded-md focus:ring-2 focus:ring-ring focus:shadow-lg"
       >
         Zum Inhalt springen
       </a>
-      <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/angebote" className="flex-shrink-0">
             <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
@@ -93,6 +92,5 @@ export const Header = () => {
         </div>
       </div>
     </header>
-    </>
   );
 };
