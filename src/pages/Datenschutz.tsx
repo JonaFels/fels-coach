@@ -118,12 +118,28 @@ const Datenschutz = () => {
               <p><strong>IP-Anonymisierung:</strong> Deine IP-Adresse wird anonymisiert, bevor sie gespeichert wird.</p>
               <p>Mehr Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a></p>
 
-              <h3>E-Mail-Versand (Postmark)</h3>
-              <p>Für den Versand des E-Books sowie für sonstige transaktionale E-Mails nutze ich den externen Dienstleister Postmark.</p>
-              <p><strong>Anbieter:</strong> Acorn Technologies, Inc. (ActiveCampaign), USA</p>
+              <h3>E-Mail-Versand (Resend)</h3>
+              <p>Für den Versand des E-Books sowie für sonstige transaktionale E-Mails nutze ich den externen Dienstleister Resend.</p>
+              <p><strong>Anbieter:</strong> Resend, Inc., USA</p>
               <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).</p>
               <p><strong>Datenübermittlung in die USA:</strong> Die Übermittlung erfolgt auf Basis von EU-Standardvertragsklauseln.</p>
-              <p>Mehr Informationen: <a href="https://postmarkapp.com/privacy-policy" target="_blank" rel="noopener noreferrer">Postmark Datenschutzerklärung</a></p>
+              <p>Mehr Informationen: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Resend Datenschutzerklärung</a></p>
+
+              <h3>Datenbank und Backend (Supabase)</h3>
+              <p>Zur Speicherung von Kontaktanfragen und E-Book-Anmeldungen nutze ich den Dienst Supabase.</p>
+              <p><strong>Anbieter:</strong> Supabase, Inc., USA</p>
+              <p><strong>Verarbeitete Daten:</strong> Name, E-Mail-Adresse, Nachricht (bei Kontaktanfragen).</p>
+              <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+              <p><strong>Datenübermittlung in die USA:</strong> Die Übermittlung erfolgt auf Basis von EU-Standardvertragsklauseln.</p>
+              <p>Mehr Informationen: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Datenschutzerklärung</a></p>
+
+              <h3>KI-Chatbot (Chatbase)</h3>
+              <p>Auf meiner Webseite nutze ich einen KI-gestützten Chatbot von Chatbase, der dir bei Fragen zu meinen Angeboten behilflich sein kann.</p>
+              <p><strong>Anbieter:</strong> Chatbase, Inc., USA</p>
+              <p><strong>Verarbeitete Daten:</strong> Deine Chat-Nachrichten und ggf. weitere Informationen, die du im Chat teilst.</p>
+              <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (deine Einwilligung durch Nutzung des Chatbots).</p>
+              <p><strong>Datenübermittlung in die USA:</strong> Die Übermittlung erfolgt auf Basis von EU-Standardvertragsklauseln.</p>
+              <p>Mehr Informationen: <a href="https://www.chatbase.co/privacy-policy" target="_blank" rel="noopener noreferrer">Chatbase Datenschutzerklärung</a></p>
 
               <h3>Terminbuchungstool (Cal.com)</h3>
               <p>Zur Online-Terminbuchung nutze ich den Dienst Cal.com.</p>
