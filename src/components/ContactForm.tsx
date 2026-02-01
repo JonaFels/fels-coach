@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
@@ -25,6 +26,7 @@ export const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
@@ -118,6 +120,12 @@ export const ContactForm = () => {
         <CardTitle className="font-serif text-xl">{t("contactForm.title")}</CardTitle>
       </CardHeader>
       <CardContent>
+        {/* aria-live Region für Fehlermeldungen (Barrierefreiheit) */}
+        <div aria-live="polite" aria-atomic="true" className="sr-only">
+          {Object.keys(errors).length > 0 && (
+            <span>Es gibt Fehler im Formular. Bitte überprüfe deine Eingaben.</span>
+          )}
+        </div>
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
           <div className="space-y-2">
             <Label htmlFor="contact-name">
@@ -194,17 +202,29 @@ export const ContactForm = () => {
               autoComplete="off"
             />
           </div>
-          <p className="text-xs text-muted-foreground">
-            {t("contactForm.privacyNotice")}{" "}
-            <Link to="/datenschutz" className="underline hover:text-secondary">
-              {t("contactForm.privacyLink")}
-            </Link>
-          </p>
+
+          {/* Rechtssichere Datenschutz-Checkbox (Pflicht-Opt-in) */}
+          <div className="flex items-start gap-3">
+            <Checkbox
+              id="contact-privacy"
+              checked={privacyAccepted}
+              onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+              className="mt-0.5"
+              aria-describedby="privacy-label"
+            />
+            <Label htmlFor="contact-privacy" id="privacy-label" className="text-sm text-muted-foreground cursor-pointer leading-relaxed">
+              {t("contactForm.privacyNotice")}{" "}
+              <Link to="/datenschutz" className="underline hover:text-secondary">
+                {t("contactForm.privacyLink")}
+              </Link>{" "}
+              <span className="text-destructive">*</span>
+            </Label>
+          </div>
 
           <Button 
             type="submit" 
             className="w-full min-h-[44px]" 
-            disabled={isSubmitting}
+            disabled={isSubmitting || !privacyAccepted}
           >
             {isSubmitting ? (
               <>
