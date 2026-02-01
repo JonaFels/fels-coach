@@ -90,7 +90,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 12px 16px; background-color: #f9f9f9; border-radius: 6px;">
                     <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.5px;">E-Mail</p>
-                    <p style="margin: 0; font-size: 16px; color: #1a1a1a;"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></p>
+                    <p style="margin: 0; font-size: 16px; color: #1a1a1a;"><a href="mailto:${email}" style="color: #333; text-decoration: underline;">${email}</a></p>
                   </td>
                 </tr>
               </table>
@@ -101,7 +101,7 @@ const handler = async (req: Request): Promise<Response> => {
           <tr>
             <td style="padding: 0 40px 32px;">
               <p style="margin: 0 0 12px; font-size: 12px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.5px;">Nachricht</p>
-              <div style="padding: 20px; background-color: #fafafa; border-left: 4px solid #2563eb; border-radius: 0 6px 6px 0;">
+              <div style="padding: 20px; background-color: #fafafa; border-left: 4px solid #999; border-radius: 0 6px 6px 0;">
                 <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #333; white-space: pre-wrap;">${message}</p>
               </div>
             </td>
