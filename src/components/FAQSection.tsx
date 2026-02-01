@@ -122,18 +122,18 @@ export const FAQSection = () => {
   }, [faqs]);
 
   return (
-    <section className="py-16 md:py-24" aria-labelledby="faq-heading">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">
+    <section className="py-10 md:py-14" aria-labelledby="faq-heading">
+      <div className="container mx-auto px-4 max-w-2xl">
+        <h2 id="faq-heading" className="font-serif text-xl md:text-2xl font-semibold text-foreground text-center mb-6">
           {t("faq.title")}
         </h2>
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-medium hover:no-underline">
+            <AccordionItem key={index} value={`item-${index}`} className="border-b-muted">
+              <AccordionTrigger className="text-left text-sm md:text-base font-medium hover:no-underline py-3">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
+              <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-3">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
