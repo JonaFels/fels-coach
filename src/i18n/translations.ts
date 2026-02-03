@@ -80,8 +80,8 @@ export const translations: Translations = {
     en: "Do you know the rubber band effect? You work on yourself, make progress – yet get pulled back into old patterns again and again. You sabotage relationships that matter. Waste talents you have. Feel like a stranger in your own life while years disappear into invisible family dynamics.",
   },
   "coaching.text2": {
-    de: "Familienaufstellungen in Einzelsessions sind kein esoterischer Schnickschnack und keine endlose Gesprächstherapie. Es ist ein präzises Mapping deines inneren Systems – die Abkürzung zur Wurzel. Wir identifizieren die Stelle, an der deine innere Statik kippt, und korrigieren sie. Das Ergebnis: Du wirst vom inneren Zuschauer zur souveränen Autorität in deinem eigenen Leben.",
-    en: "Family constellations in individual sessions are neither esoteric fluff nor endless talk therapy. It's a precise mapping of your inner system – the shortcut to the root. We identify the point where your inner statics collapse and correct it. The result: You transform from inner bystander to sovereign authority in your own life.",
+    de: "Familienaufstellungen in Einzelsessions sind keine endlose Gesprächstherapie. Es ist ein präzises Mapping deines inneren Systems – die Abkürzung zur Wurzel. Wir identifizieren die Stelle, an der deine innere Statik kippt, und korrigieren sie. Das Ergebnis: Du wirst vom inneren Zuschauer zur souveränen Autorität in deinem eigenen Leben.",
+    en: "Family constellations in individual sessions are not endless talk therapy. It's a precise mapping of your inner system – the shortcut to the root. We identify the point where your inner statics collapse and correct it. The result: You transform from inner bystander to sovereign authority in your own life.",
   },
   "coaching.details.title": {
     de: "Dein System-Audit",
