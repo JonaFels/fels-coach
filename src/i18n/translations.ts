@@ -54,54 +54,54 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.title": {
-    de: "Systemische Familienaufstellungen",
-    en: "Systemic Family Constellations",
+    de: "Schluss mit der unbewussten Selbstsabotage",
+    en: "End the Unconscious Self-Sabotage",
   },
   "hero.subtitle": {
-    de: "Entdecke die verborgenen Dynamiken deiner Familie und finde deinen Weg zu innerem Frieden",
-    en: "Discover the hidden dynamics of your family and find your path to inner peace",
+    de: "Gib dir endlich selbst die Erlaubnis, deinen eigenen Stand einzunehmen – frei von lähmender Scham und den unsichtbaren Fesseln alter Familienmuster.",
+    en: "Finally give yourself permission to claim your own ground – free from paralyzing shame and the invisible chains of old family patterns.",
   },
   "hero.cta": {
-    de: "Jetzt Termin buchen",
-    en: "Book Now",
+    de: "System-Check buchen",
+    en: "Book System Check",
   },
 
   // Coaching Description (Homepage)
   "coaching.title": {
-    de: "Systemisches 1:1 Coaching",
-    en: "Systemic 1:1 Coaching",
+    de: "Der chirurgische Weg zur Ursache",
+    en: "The Surgical Path to the Root Cause",
   },
   "coaching.intro": {
-    de: "Individuelle Begleitung für Deine Transformation",
-    en: "Individual guidance for your transformation",
+    de: "Strukturelles System-Audit statt endloser Selbstoptimierung",
+    en: "Structural System Audit instead of endless self-optimization",
   },
   "coaching.text1": {
-    de: "Ich biete 1:1 Coachings mit einem systemischen Ansatz an, um die Wurzeln von Blockaden zu finden und festgefahrene Energie wieder in Fluss zu bringen. Gemeinsam nutzen wir die transformative Kraft von Familienaufstellungen, um dich weiter zu bringen, wo du weiter gehen möchtest.",
-    en: "I offer 1:1 coaching with a systemic approach to find the roots of blockages and get stagnant energy flowing again. Together we use the transformative power of family constellations to take you further where you want to go.",
+    de: "Kennst du den Gummiband-Effekt? Du arbeitest an dir, machst Fortschritte – und wirst trotzdem immer wieder in alte Muster zurückgezogen. Du sabotierst Beziehungen, die dir wichtig sind. Verschenkst Talente, die du hast. Fühlst dich wie ein Fremder im eigenen Leben, während Jahre in unsichtbaren Familiendynamiken verschwinden.",
+    en: "Do you know the rubber band effect? You work on yourself, make progress – yet get pulled back into old patterns again and again. You sabotage relationships that matter. Waste talents you have. Feel like a stranger in your own life while years disappear into invisible family dynamics.",
   },
   "coaching.text2": {
-    de: "Wenn du bereit bist innezuhalten und einen Veränderungsprozess zu starten, begleite ich dich dabei, deine inneren Ressourcen zu stärken und Klarheit für die nächsten Schritte zu finden.",
-    en: "If you are ready to pause and start a process of change, I will accompany you in strengthening your inner resources and finding clarity for the next steps.",
+    de: "Familienaufstellungen in Einzelsessions sind kein esoterischer Schnickschnack und keine endlose Gesprächstherapie. Es ist ein präzises Mapping deines inneren Systems – die Abkürzung zur Wurzel. Wir identifizieren die Stelle, an der deine innere Statik kippt, und korrigieren sie. Das Ergebnis: Du wirst vom inneren Zuschauer zur souveränen Autorität in deinem eigenen Leben.",
+    en: "Family constellations in individual sessions are neither esoteric fluff nor endless talk therapy. It's a precise mapping of your inner system – the shortcut to the root. We identify the point where your inner statics collapse and correct it. The result: You transform from inner bystander to sovereign authority in your own life.",
   },
   "coaching.details.title": {
-    de: "Termin-Details",
-    en: "Session Details",
+    de: "Dein System-Audit",
+    en: "Your System Audit",
   },
   "coaching.detail1": {
-    de: "60 min pro Termin",
-    en: "60 min per session",
+    de: "60 min präzise Ursachenarbeit",
+    en: "60 min precise root cause work",
   },
   "coaching.detail2": {
-    de: "Tiefgehende Selbsterkenntnis und Auflösung alter Muster",
-    en: "Deep self-awareness and dissolution of old patterns",
+    de: "Strukturelles Mapping deiner inneren Dynamik",
+    en: "Structural mapping of your inner dynamics",
   },
   "coaching.detail3": {
-    de: "Lösung tiefgreifender Konflikte",
-    en: "Resolution of deep-rooted conflicts",
+    de: "Korrektur der inneren Statik",
+    en: "Correction of inner statics",
   },
   "coaching.learnMore": {
-    de: "Mehr über Familienaufstellungen erfahren",
-    en: "Learn more about Family Constellations",
+    de: "Methode verstehen",
+    en: "Understand the Method",
   },
   "coaching.ebookLink": {
     de: "Kostenloses E-Book lesen",
@@ -146,8 +146,8 @@ export const translations: Translations = {
     en: "Ten sessions for comprehensive transformation: Accompany larger personal development processes and achieve profound, lasting clarity.",
   },
   "offerings.book": {
-    de: "Termin buchen",
-    en: "Book Session",
+    de: "System-Check buchen",
+    en: "Book System Check",
   },
   "offerings.allDates": {
     de: "Alle verfügbaren Termine ansehen",
@@ -526,16 +526,16 @@ export const translations: Translations = {
 
   // Micro CTAs
   "cta.bookNow": {
-    de: "Jetzt Termin buchen",
-    en: "Book Appointment Now",
+    de: "System-Check buchen",
+    en: "Book System Check",
   },
   "cta.freeConsultation": {
-    de: "Kostenloses telefonisches Erstgespräch anfragen",
-    en: "Request free phone consultation",
+    de: "Kostenlose Ursachen-Analyse anfragen",
+    en: "Request free root cause analysis",
   },
   "cta.learnMore": {
-    de: "Mehr erfahren",
-    en: "Learn more",
+    de: "Methode verstehen",
+    en: "Understand the method",
   },
 
   // 404 Page
