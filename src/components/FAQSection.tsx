@@ -10,80 +10,62 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const faqData = {
   de: [
     {
-      question: "Was ist eine systemische Familienaufstellung?",
-      answer: "Eine systemische Familienaufstellung ist eine therapeutische Methode, die unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems sichtbar macht. Mit Bodenankern werden Beziehungen räumlich dargestellt, um verborgene Muster zu erkennen und aufzulösen.",
+      question: "Wie finde ich heraus, ob systemisches Coaching das Richtige für mich ist?",
+      answer: "Systemisches Coaching ist für Sie geeignet, wenn Sie bereit sind, neue Perspektiven einzunehmen. Ob persönliche Krisen, berufliche Blockaden oder das Gefühl, 'festzustecken' – wir arbeiten gezielt an Lösungen, die in Ihrem individuellen Umfeld funktionieren. Das Kennenlern-Angebot bietet den idealen Rahmen, um dies unverbindlich zu prüfen.",
     },
     {
-      question: "Wie läuft eine Coaching-Session ab?",
-      answer: "Die Session findet persönlich in Freiburg statt. Wir beginnen mit einem Vorgespräch zu deinem Anliegen, arbeiten dann mit systemischen Methoden und Bodenankern und entwickeln gemeinsam ein Lösungsbild. Die Sessions dauern 60 Minuten.",
+      question: "Was ist der Unterschied zwischen Coaching und Familienaufstellung?",
+      answer: "Das Coaching konzentriert sich auf Ihre bewussten Ziele und Handlungsstrategien im Hier und Jetzt. Die Familienaufstellung macht tieferliegende, oft unbewusste Verstrickungen innerhalb Ihres Familiensystems sichtbar. Beide Methoden ergänzen sich perfekt, um sowohl emotionale Heilung als auch praktische Veränderung zu bewirken.",
     },
     {
-      question: "Für wen ist systemisches Coaching geeignet?",
-      answer: "Systemisches Coaching eignet sich für Menschen, die sich von wiederkehrenden Mustern befreien möchten, Beziehungsprobleme klären wollen, nach Orientierung suchen oder das Gefühl haben, Lasten zu tragen, die nicht ihnen gehören.",
+      question: "Findet das Coaching vor Ort oder online statt?",
+      answer: "Sie haben die Wahl: Ich empfange Sie in meinem zentralen Praxisraum in Freiburg (Egonstraße 91) für eine persönliche Sitzung. Alternativ biete ich ortsunabhängige Online-Termine an. Beide Formate sind auch in englischer Sprache verfügbar.",
     },
     {
-      question: "Wie viele Sessions brauche ich?",
-      answer: "Das ist individuell unterschiedlich. Manche Themen lassen sich in wenigen Sessions klären, andere benötigen längere Begleitung. Im Kennenlern-Coaching können wir gemeinsam einschätzen, was für dich sinnvoll ist.",
+      question: "Muss ich für eine Familienaufstellung meine Angehörigen mitbringen?",
+      answer: "Nein. Die Aufstellungsarbeit findet im Einzelsetting (1:1) statt. Wir nutzen Stellvertreter-Objekte oder Bodenanker, um Dynamiken im Raum sichtbar zu machen. Diese Form der Arbeit ist sehr intensiv und ermöglicht es Ihnen, sich vollkommen sicher und frei zu öffnen.",
     },
     {
-      question: "Was kostet ein Coaching bei dir?",
-      answer: "Die aktuellen Preise und Paketoptionen findest du auf der Angebote-Seite. Ich biete ein vergünstigtes Kennenlern-Coaching an, damit du die Arbeit kennenlernen kannst.",
+      question: "Wie transparent ist die Preisgestaltung?",
+      answer: "Integrität ist die Basis meiner Arbeit. Da ich mich in der fortgeschrittenen Ausbildung befinde, biete ich professionelle Begleitung zu Sonderkonditionen an: Das erste Kennenlern-Coaching kostet 20 €, reguläre Einzelsitzungen 50 €. Zudem stehen Ihnen preisvorteilhafte 5er- und 10er-Pakete zur Verfügung.",
     },
     {
-      question: "Wo finden die Sessions statt?",
-      answer: "Alle Coaching-Sessions finden persönlich in Freiburg statt. Die Arbeit vor Ort ermöglicht eine tiefere Verbindung und die Nutzung von Bodenankern für die Aufstellungsarbeit.",
+      question: "Wie buche ich einen Termin und wie wird bezahlt?",
+      answer: "Die Buchung erfolgt einfach und diskret über den Online-Kalender auf dieser Webseite. Sie wählen Ihre Option (Einzelstunde oder Paket) und Ihren Wunschtermin aus. Die Bezahlung wird direkt im Buchungsprozess sicher abgewickelt.",
+    },
+    {
+      question: "Ersetzt das Coaching eine Psychotherapie?",
+      answer: "Nein. Systemisches Coaching und Familienaufstellungen sind Formate der professionellen Beratung und Persönlichkeitsentwicklung. Sie sind keine Heilbehandlung und ersetzen bei psychischen Erkrankungen keine ärztliche oder psychotherapeutische Therapie. Sie dienen der Klärung und Stärkung gesunder Anteile und Ressourcen.",
     },
   ],
   en: [
     {
-      question: "What is a systemic family constellation?",
-      answer: "A systemic family constellation is a therapeutic method that reveals unconscious dynamics and entanglements within your family system. Floor anchors are used to spatially represent relationships to recognize and dissolve hidden patterns.",
+      question: "How do I find out if systemic coaching is right for me?",
+      answer: "Systemic coaching is suitable for you if you're ready to embrace new perspectives. Whether it's personal crises, professional blocks, or the feeling of being 'stuck' – we work specifically on solutions that function in your individual environment. The introductory offer provides the ideal framework to explore this without obligation.",
     },
     {
-      question: "How does a coaching session work?",
-      answer: "The session takes place in person in Freiburg. We start with a preliminary discussion of your concern, then work with systemic methods and floor anchors, and together develop a solution image. Sessions last 60 minutes.",
+      question: "What is the difference between coaching and family constellation?",
+      answer: "Coaching focuses on your conscious goals and action strategies in the here and now. Family constellation reveals deeper, often unconscious entanglements within your family system. Both methods complement each other perfectly to achieve both emotional healing and practical change.",
     },
     {
-      question: "Who is systemic coaching suitable for?",
-      answer: "Systemic coaching is suitable for people who want to free themselves from recurring patterns, clarify relationship issues, seek orientation, or feel they are carrying burdens that don't belong to them.",
+      question: "Does coaching take place on-site or online?",
+      answer: "You have the choice: I welcome you in my central practice room in Freiburg (Egonstraße 91) for a personal session. Alternatively, I offer location-independent online appointments. Both formats are also available in English.",
     },
     {
-      question: "How many sessions do I need?",
-      answer: "This varies individually. Some topics can be clarified in a few sessions, others require longer support. In the introduction coaching, we can assess together what makes sense for you.",
+      question: "Do I need to bring my relatives for a family constellation?",
+      answer: "No. The constellation work takes place in an individual setting (1:1). We use representative objects or floor anchors to make dynamics visible in the room. This form of work is very intensive and allows you to open up completely safely and freely.",
     },
     {
-      question: "What does coaching with you cost?",
-      answer: "You can find current prices and package options on the Offers page. I offer a discounted introduction coaching so you can get to know the work.",
+      question: "How transparent is the pricing?",
+      answer: "Integrity is the foundation of my work. Since I am in advanced training, I offer professional support at special rates: The first introductory coaching costs €20, regular individual sessions €50. Additionally, cost-effective 5- and 10-session packages are available.",
     },
     {
-      question: "Where do the sessions take place?",
-      answer: "All coaching sessions take place in person in Freiburg. Working on-site enables a deeper connection and the use of floor anchors for constellation work.",
-    },
-  ],
-  fr: [
-    {
-      question: "Qu'est-ce qu'une constellation familiale systémique ?",
-      answer: "Une constellation familiale systémique est une méthode thérapeutique qui révèle les dynamiques inconscientes au sein de votre système familial. Des ancres au sol sont utilisées pour représenter spatialement les relations afin de reconnaître et dissoudre les schémas cachés.",
+      question: "How do I book an appointment and how is payment handled?",
+      answer: "Booking is simple and discreet via the online calendar on this website. You select your option (single session or package) and your preferred appointment. Payment is processed securely directly in the booking process.",
     },
     {
-      question: "Comment se déroule une séance de coaching ?",
-      answer: "La séance se déroule en personne à Fribourg. Nous commençons par un entretien préliminaire, puis travaillons avec des méthodes systémiques et des ancres au sol. Les séances durent 60 minutes.",
-    },
-    {
-      question: "Pour qui le coaching systémique est-il adapté ?",
-      answer: "Le coaching systémique convient aux personnes qui veulent se libérer de schémas récurrents, clarifier des problèmes relationnels ou qui ont l'impression de porter des fardeaux qui ne leur appartiennent pas.",
-    },
-    {
-      question: "Combien de séances me faut-il ?",
-      answer: "Cela varie selon les personnes. Certains sujets peuvent être clarifiés en quelques séances, d'autres nécessitent un accompagnement plus long.",
-    },
-    {
-      question: "Combien coûte un coaching avec vous ?",
-      answer: "Vous trouverez les prix actuels et les options de forfait sur la page Offres. Je propose un coaching découverte à prix réduit.",
-    },
-    {
-      question: "Où se déroulent les séances ?",
-      answer: "Toutes les séances de coaching se déroulent en personne à Fribourg. Le travail sur place permet une connexion plus profonde et l'utilisation d'ancres au sol pour le travail de constellation.",
+      question: "Does coaching replace psychotherapy?",
+      answer: "No. Systemic coaching and family constellations are formats of professional counseling and personal development. They are not medical treatment and do not replace medical or psychotherapeutic therapy for mental illnesses. They serve to clarify and strengthen healthy aspects and resources.",
     },
   ],
 };
