@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle, Loader2, BookOpen } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
+import ebookCover from "@/assets/ebook-cover.jpg";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -129,24 +130,16 @@ const Ebook = () => {
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Left Column - Book Mockup & Form */}
             <div className="space-y-6">
-              {/* Book Mockup */}
+              {/* Book Cover */}
               <div className="flex justify-center">
-                <div 
-                  className="w-48 h-64 bg-gradient-to-br from-secondary/90 to-secondary rounded-r-lg shadow-xl flex flex-col justify-between p-5"
+                <img 
+                  src={ebookCover}
+                  alt="E-Book Cover: Der Weg zum Ganz-Sein von Jona Fels"
+                  className="w-48 h-auto rounded-lg shadow-xl"
                   style={{ 
                     boxShadow: '10px 10px 25px rgba(0,0,0,0.3), -2px 0 8px rgba(0,0,0,0.15)'
                   }}
-                >
-                  <div>
-                    <BookOpen className="h-8 w-8 text-secondary-foreground mb-3" aria-hidden="true" />
-                    <h3 className="font-serif text-lg font-semibold text-secondary-foreground leading-tight">
-                      Der Weg zum Ganzsein
-                    </h3>
-                  </div>
-                  <p className="text-secondary-foreground/80 text-sm">
-                    Jona Fels
-                  </p>
-                </div>
+                />
               </div>
 
               {/* Form Card */}
