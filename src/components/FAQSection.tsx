@@ -104,23 +104,28 @@ export const FAQSection = () => {
   }, [faqs]);
 
   return (
-    <section className="py-16 md:py-24" aria-labelledby="faq-heading">
+    <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">
+        <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
+          {language === 'de' ? 'Häufige Fragen' : 'Common Questions'}
+        </p>
+        <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground text-center mb-12">
           {t("faq.title")}
         </h2>
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-medium hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="bg-card rounded-lg border border-border/50 shadow-sm p-6 md:p-8">
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
