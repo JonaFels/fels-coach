@@ -310,16 +310,16 @@ export const translations: Translations = {
 
   // E-Book Page
   "ebook.title": {
-    de: "E-Book",
-    en: "E-Book",
+    de: "Der Weg zum Ganzsein",
+    en: "The Path to Wholeness",
   },
-  "ebook.subtitle": {
-    de: "Der Weg zum Ganz-Sein - zum kostenlosen Download",
-    en: "The Path to Wholeness - Free Download",
+  "ebook.headline": {
+    de: "Warum du dich unbewusst selbst sabotierst – und wie du die Erlaubnis findest, endlich ganz du selbst zu sein.",
+    en: "Why you unconsciously sabotage yourself – and how to find permission to finally be wholly yourself.",
   },
-  "ebook.intro": {
-    de: "Lade Dein kostenloses E-Book herunter und starte Deine Transformation. Wenn Du Dir auf diesem Weg persönliche Begleitung wünschst, findest Du alle Informationen hier.",
-    en: "Download your free e-book and start your transformation. If you would like personal support on this journey, you can find all information here.",
+  "ebook.subheadline": {
+    de: "Hol dir mein E-Book 'Der Weg zum Ganzsein' und verstehe die unsichtbare Architektur deiner inneren Blockaden.",
+    en: "Get my e-book 'The Path to Wholeness' and understand the invisible architecture of your inner blockages.",
   },
   "ebook.name": {
     de: "Name",
@@ -338,24 +338,44 @@ export const translations: Translations = {
     en: "here",
   },
   "ebook.download": {
-    de: "E-Book herunterladen",
-    en: "Download E-Book",
+    de: "Jetzt kostenlos anfordern & Klarheit gewinnen",
+    en: "Request for Free & Gain Clarity",
   },
   "ebook.infoTitle": {
-    de: "In diesem E-Book zeige ich dir:",
-    en: "In this e-book I show you:",
+    de: "Was du in diesem E-Book erfährst:",
+    en: "What you'll discover in this e-book:",
   },
-  "ebook.feature1": {
-    de: "Wie du das Skript deines Lebens neu schreibst.",
-    en: "How to rewrite the script of your life.",
+  "ebook.feature1.title": {
+    de: "Das Gummiband-Prinzip",
+    en: "The Rubber Band Principle",
   },
-  "ebook.feature2": {
-    de: "Warum deine größten Schätze oft tief vergraben sind.",
-    en: "Why your greatest treasures are often deeply buried.",
+  "ebook.feature1.text": {
+    de: "Warum du trotz Talent immer wieder in alte Muster zurückfällst und dich wertlos fühlst.",
+    en: "Why despite your talents you keep falling back into old patterns and feel worthless.",
   },
-  "ebook.feature3": {
-    de: "Wie du unbewusste Muster durchbrichst.",
-    en: "How to break through unconscious patterns.",
+  "ebook.feature2.title": {
+    de: "Die Eltern-Dynamik",
+    en: "The Parent Dynamic",
+  },
+  "ebook.feature2.text": {
+    de: "Wie ungelöste Vorwürfe an Vater oder Mutter deinen heutigen Erfolg und deine Beziehungen blockieren.",
+    en: "How unresolved grievances toward father or mother are blocking your current success and relationships.",
+  },
+  "ebook.feature3.title": {
+    de: "Die innere Erlaubnis",
+    en: "The Inner Permission",
+  },
+  "ebook.feature3.text": {
+    de: "Der Prozess, wie du aufhörst, ein Zuschauer deines Lebens zu sein, und zum stabilen Mittelpunkt deiner Existenz wirst.",
+    en: "The process of how to stop being a spectator of your life and become the stable center of your existence.",
+  },
+  "ebook.feature4.title": {
+    de: "Systemischer Quick-Check",
+    en: "Systemic Quick-Check",
+  },
+  "ebook.feature4.text": {
+    de: "Erste Schritte, um deine 'innere Statik' zu analysieren.",
+    en: "First steps to analyze your 'inner statics'.",
   },
   "ebook.success": {
     de: "Vielen Dank! Das E-Book wurde per E-Mail an dich gesendet. Bitte überprüfe auch deinen Spam-Ordner.",
