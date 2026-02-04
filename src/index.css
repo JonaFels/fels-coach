@@ -166,7 +166,7 @@
   border: 0;
 }
 
-.skip-link:focus {
+.skip-link:focus-visible {
   position: fixed;
   top: 0;
   left: 0;
@@ -222,12 +222,14 @@ button:not(:disabled):active,
   transform: translateY(0);
 }
 
-/* Link Hover-Effekt: Wachsende Unterstreichung von links nach rechts */
-a:not(.no-underline-effect) {
+/* Link Hover-Effekt: Wachsende Unterstreichung von links nach rechts
+   Skip-Link ausnehmen, damit er nicht durch `position: relative` sichtbar wird.
+*/
+a:not(.no-underline-effect):not(.skip-link) {
   position: relative;
 }
 
-a:not(.no-underline-effect)::after {
+a:not(.no-underline-effect):not(.skip-link)::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -238,7 +240,7 @@ a:not(.no-underline-effect)::after {
   transition: width 0.3s ease;
 }
 
-a:not(.no-underline-effect):hover::after {
+a:not(.no-underline-effect):not(.skip-link):hover::after {
   width: 100%;
 }
 
