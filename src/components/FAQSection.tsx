@@ -19,7 +19,7 @@ const faqData = {
     },
     {
       question: "Findet das Coaching vor Ort oder online statt?",
-      answer: "Sie haben die Wahl: Ich empfange Sie in meinem zentralen Praxisraum in Freiburg (Egonstraße 91) für eine persönliche Sitzung. Alternativ biete ich ortsunabhängige Online-Termine an. Beide Formate sind auch in englischer Sprache verfügbar.",
+      answer: "Sie haben die Wahl: Ich empfange Sie in meinem zentralen Praxisraum in Freiburg (Karlstraße 51, 79104 Freiburg im Breisgau) für eine persönliche Sitzung. Alternativ biete ich ortsunabhängige Online-Termine an. Beide Formate sind auch in englischer Sprache verfügbar.",
     },
     {
       question: "Muss ich für eine Familienaufstellung meine Angehörigen mitbringen?",
@@ -49,7 +49,7 @@ const faqData = {
     },
     {
       question: "Does coaching take place on-site or online?",
-      answer: "You have the choice: I welcome you in my central practice room in Freiburg (Egonstraße 91) for a personal session. Alternatively, I offer location-independent online appointments. Both formats are also available in English.",
+      answer: "You have the choice: I welcome you in my central practice room in Freiburg (Karlstraße 51, 79104 Freiburg im Breisgau) for a personal session. Alternatively, I offer location-independent online appointments. Both formats are also available in English.",
     },
     {
       question: "Do I need to bring my relatives for a family constellation?",
