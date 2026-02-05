@@ -1,4 +1,6 @@
 import { Mail, Send, Calendar } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -12,6 +14,20 @@ import { QuickRequestForm } from "@/components/QuickRequestForm";
 
 const Kontakt = () => {
   const { t } = useLanguage();
+  const location = useLocation();
+  const callbackRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to callback form if #rueckruf hash is present
+  useEffect(() => {
+    if (location.hash === "#rueckruf" && callbackRef.current) {
+      callbackRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      // Add highlight effect
+      callbackRef.current.classList.add("ring-2", "ring-secondary", "ring-offset-2");
+      setTimeout(() => {
+        callbackRef.current?.classList.remove("ring-2", "ring-secondary", "ring-offset-2");
+      }, 3000);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -30,7 +46,9 @@ const Kontakt = () => {
           <div className="mb-12">
             <div className="grid gap-6 md:grid-cols-2">
               {/* Option A: Quick Callback */}
-              <QuickRequestForm />
+              <div ref={callbackRef} className="transition-all duration-500 rounded-lg">
+                <QuickRequestForm />
+              </div>
 
               {/* Option B: Direct Booking */}
               <Card className="bg-card/95 backdrop-blur-sm border-secondary/20">
