@@ -72,11 +72,7 @@ export const CoachingSection = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:400ms]">
             <Button asChild size="lg">
-              <a
-                href="https://cal.com/fels-coach"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/angebote">
                 {t("hero.cta")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>

@@ -550,8 +550,8 @@ export const translations: Translations = {
     en: "Book Session Now",
   },
   "cta.freeConsultation": {
-    de: "Kostenlose Ursachen-Analyse anfragen",
-    en: "Request free root cause analysis",
+    de: "Kostenloses Vorgespräch anfragen",
+    en: "Request free consultation call",
   },
   "cta.learnMore": {
     de: "Methode verstehen",

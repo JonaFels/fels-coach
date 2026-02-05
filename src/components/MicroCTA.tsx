@@ -29,7 +29,7 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
         </a>
       </Button>
       <a
-        href="/kontakt"
+        href="/kontakt#rueckruf"
         className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
       >
         {t("cta.freeConsultation")}
