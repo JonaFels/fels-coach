@@ -102,7 +102,7 @@ const Datenschutz = () => {
               <hr />
 
               <h2>6. Kontaktaufnahme</h2>
-              <p>Wenn du mich per E-Mail oder über das Kontaktformular kontaktierst, werden deine Angaben (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet.</p>
+              <p>Wenn du mich per E-Mail, über das Kontaktformular oder das Rückruf-Formular kontaktierst, werden deine Angaben (Name, E-Mail-Adresse, Telefonnummer, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet.</p>
               <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
               <p><strong>Speicherdauer:</strong> Deine Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind, spätestens jedoch nach 3 Jahren, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
 
@@ -126,9 +126,9 @@ const Datenschutz = () => {
               <p>Mehr Informationen: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Resend Datenschutzerklärung</a></p>
 
               <h3>Datenbank und Backend (Supabase)</h3>
-              <p>Zur Speicherung von Kontaktanfragen und E-Book-Anmeldungen nutze ich den Dienst Supabase.</p>
+              <p>Zur Speicherung von Kontaktanfragen, Rückruf-Anfragen und E-Book-Anmeldungen nutze ich den Dienst Supabase.</p>
               <p><strong>Anbieter:</strong> Supabase, Inc., USA</p>
-              <p><strong>Verarbeitete Daten:</strong> Name, E-Mail-Adresse, Nachricht (bei Kontaktanfragen).</p>
+              <p><strong>Verarbeitete Daten:</strong> Name, E-Mail-Adresse, Telefonnummer, Nachricht (bei Kontakt- und Rückruf-Anfragen).</p>
               <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
               <p><strong>Datenübermittlung in die USA:</strong> Die Übermittlung erfolgt auf Basis von EU-Standardvertragsklauseln.</p>
               <p>Mehr Informationen: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Datenschutzerklärung</a></p>
@@ -180,6 +180,10 @@ const Datenschutz = () => {
                   </tr>
                   <tr>
                     <td style={{padding: '8px', borderBottom: '1px solid #eee'}}>Kontaktanfragen</td>
+                    <td style={{padding: '8px', borderBottom: '1px solid #eee'}}>Max. 3 Jahre</td>
+                  </tr>
+                  <tr>
+                    <td style={{padding: '8px', borderBottom: '1px solid #eee'}}>Rückruf-Anfragen</td>
                     <td style={{padding: '8px', borderBottom: '1px solid #eee'}}>Max. 3 Jahre</td>
                   </tr>
                   <tr>
