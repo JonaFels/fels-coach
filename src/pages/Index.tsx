@@ -8,6 +8,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
+ import { QuickContactCTA } from "@/components/QuickContactCTA";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
           <Hero />
           <TrustBadges />
           <CoachingSection />
+          <QuickContactCTA />
         </PageBackground>
         <FAQSection />
       </main>

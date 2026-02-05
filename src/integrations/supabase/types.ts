@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      callback_requests: {
+        Row: {
+          contact: string
+          contact_type: string
+          created_at: string
+          id: string
+        }
+        Insert: {
+          contact: string
+          contact_type?: string
+          created_at?: string
+          id?: string
+        }
+        Update: {
+          contact?: string
+          contact_type?: string
+          created_at?: string
+          id?: string
+        }
+        Relationships: []
+      }
       contacts: {
         Row: {
           created_at: string
