@@ -206,7 +206,8 @@ export const ContactForm = () => {
             {t("contactForm.privacyNotice")}{" "}
             <Link to="/datenschutz" className="underline hover:text-secondary">
               {t("contactForm.privacyLink")}
-            </Link>
+            </Link>{" "}
+            zu.
           </p>
 
           <Button 
