@@ -266,7 +266,7 @@ const Ebook = () => {
             </Link>
             <span aria-hidden="true">•</span>
             <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">
-              System-Check buchen
+              Erstgespräch buchen
             </Link>
           </nav>
 

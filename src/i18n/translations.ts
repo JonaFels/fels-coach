@@ -62,8 +62,8 @@ export const translations: Translations = {
     en: "Finally give yourself permission to claim your own ground – free from paralyzing shame and the invisible chains of old family patterns.",
   },
   "hero.cta": {
-    de: "System-Check buchen",
-    en: "Book System Check",
+    de: "Erstgespräch vereinbaren",
+    en: "Book Introduction Session",
   },
 
   // Coaching Description (Homepage)
@@ -146,8 +146,8 @@ export const translations: Translations = {
     en: "Ten regular coaching sessions for comprehensive transformation. Accompaniment of larger development processes with profound clarity.",
   },
   "offerings.book": {
-    de: "System-Check buchen",
-    en: "Book System Check",
+    de: "Termin buchen",
+    en: "Book Session",
   },
   "offerings.allDates": {
     de: "Alle verfügbaren Termine ansehen",
@@ -546,8 +546,8 @@ export const translations: Translations = {
 
   // Micro CTAs
   "cta.bookNow": {
-    de: "System-Check buchen",
-    en: "Book System Check",
+    de: "Jetzt Termin buchen",
+    en: "Book Session Now",
   },
   "cta.freeConsultation": {
     de: "Kostenlose Ursachen-Analyse anfragen",
