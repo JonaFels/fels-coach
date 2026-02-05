@@ -614,7 +614,7 @@ export const translations: Translations = {
     en: "By submitting, you agree to the processing of your data according to our",
   },
   "contactForm.privacyLink": {
-    de: "Datenschutzerklärung",
+    de: "Datenschutzerklärung zu",
     en: "Privacy Policy",
   },
 };
