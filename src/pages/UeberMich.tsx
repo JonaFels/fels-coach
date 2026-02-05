@@ -105,8 +105,8 @@ const UeberMich = () => {
               Angebote & Termine
             </Link>
             <span aria-hidden="true">•</span>
-            <Link to="/kontakt" className="hover:text-secondary underline underline-offset-4">
-              Kontakt
+            <Link to="/kontakt#rueckruf" className="hover:text-secondary underline underline-offset-4">
+              Kostenloses Vorgespräch anfragen
             </Link>
           </nav>
         </article>
