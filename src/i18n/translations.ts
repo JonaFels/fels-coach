@@ -62,8 +62,8 @@ export const translations: Translations = {
     en: "Finally give yourself permission to claim your own ground – free from paralyzing shame and the invisible chains of old family patterns.",
   },
   "hero.cta": {
-    de: "Erstgespräch vereinbaren",
-    en: "Book Introduction Session",
+    de: "Termin buchen",
+    en: "Book Session",
   },
 
   // Coaching Description (Homepage)
