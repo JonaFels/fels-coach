@@ -617,4 +617,70 @@ export const translations: Translations = {
     de: "Datenschutzerklärung",
     en: "Privacy Policy",
   },
+ 
+   // Quick Contact CTA (Landing Page)
+   "quickCTA.headline": {
+     de: "Lassen Sie uns kurz sprechen.",
+     en: "Let's have a quick chat.",
+   },
+   "quickCTA.subheadline": {
+     de: "Noch unsicher, ob Ihr Thema passt? Lassen Sie uns in einem kurzen Vorgespräch klären, ob mein Ansatz für Ihr Anliegen passt.",
+     en: "Still unsure if your topic fits? Let's clarify in a brief preliminary call whether my approach suits your concern.",
+   },
+   "quickCTA.button": {
+     de: "Kostenloses Telefon-Vorgespräch anfordern",
+     en: "Request Free Phone Consultation",
+   },
+ 
+   // Quick Request Form (Contact Page)
+   "quickRequest.title": {
+     de: "Schneller Rückruf",
+     en: "Quick Callback",
+   },
+   "quickRequest.description": {
+     de: "Hinterlassen Sie mir Ihre E-Mail oder Telefonnummer. Ich melde mich innerhalb von 24h für ein unverbindliches Vorgespräch per Telefon.",
+     en: "Leave your email or phone number. I'll get back to you within 24h for a non-binding preliminary phone call.",
+   },
+   "quickRequest.placeholder": {
+     de: "E-Mail oder Telefonnummer...",
+     en: "Email or phone number...",
+   },
+   "quickRequest.button": {
+     de: "Rückruf anfordern",
+     en: "Request Callback",
+   },
+   "quickRequest.success": {
+     de: "Vielen Dank! Ich melde mich schnellstmöglich bei Ihnen.",
+     en: "Thank you! I'll get back to you as soon as possible.",
+   },
+   "quickRequest.error.required": {
+     de: "Bitte geben Sie Ihre E-Mail oder Telefonnummer ein.",
+     en: "Please enter your email or phone number.",
+   },
+   "quickRequest.error.send": {
+     de: "Fehler beim Senden. Bitte versuchen Sie es erneut.",
+     en: "Error sending. Please try again.",
+   },
+ 
+   // Contact Page Redesign
+   "contact.headline": {
+     de: "Der direkte Weg zu Ihrem neuen Stand.",
+     en: "The direct path to your new ground.",
+   },
+   "contact.optionA.title": {
+     de: "Option A: Rückruf anfordern",
+     en: "Option A: Request Callback",
+   },
+   "contact.optionB.title": {
+     de: "Option B: Direkt buchen",
+     en: "Option B: Book Directly",
+   },
+   "contact.optionB.text": {
+     de: "Möchten Sie lieber direkt einen Termin vereinbaren?",
+     en: "Would you prefer to book an appointment directly?",
+   },
+   "contact.optionB.button": {
+     de: "Kennenlernen-Session buchen",
+     en: "Book Introduction Session",
+   },
 };
