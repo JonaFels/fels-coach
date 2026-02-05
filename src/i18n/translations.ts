@@ -637,10 +637,10 @@ export const translations: Translations = {
      de: "Schneller Rückruf",
      en: "Quick Callback",
    },
-   "quickRequest.description": {
-     de: "Hinterlassen Sie mir Ihre E-Mail oder Telefonnummer. Ich melde mich innerhalb von 24h für ein unverbindliches Vorgespräch per Telefon.",
-     en: "Leave your email or phone number. I'll get back to you within 24h for a non-binding preliminary phone call.",
-   },
+    "quickRequest.description": {
+      de: "Hinterlassen Sie mir Ihre E-Mail oder Telefonnummer. Ich melde mich in Kürze für ein unverbindliches Vorgespräch per Telefon.",
+      en: "Leave your email or phone number. I'll get back to you shortly for a non-binding preliminary phone call.",
+    },
    "quickRequest.placeholder": {
      de: "E-Mail oder Telefonnummer...",
      en: "Email or phone number...",
