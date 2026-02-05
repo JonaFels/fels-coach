@@ -114,36 +114,36 @@ export const translations: Translations = {
     en: "Booking Options",
   },
   "offerings.kennenlernen.title": {
-    de: "Kennenlernen Coaching",
+    de: "Kennenlernen-Coaching",
     en: "Introduction Coaching",
   },
   "offerings.kennenlernen.desc": {
-    de: "Diese erste Sitzung ist eine vollwertige Einheit. Wir steigen direkt in dein Anliegen ein, wobei die Gestaltung offen ist und sich nach deinem individuellen Tempo und Bedarf richtet.",
-    en: "This first session is a complete unit. We dive directly into your concern, with the design being open and tailored to your individual pace and needs.",
+    de: "Einmalig zum Einstieg: Deine erste vollwertige Sitzung zum vergünstigten Preis. Wir steigen direkt in dein Anliegen ein – danach buchst du reguläre Coaching-Termine. (Präsenz in Freiburg)",
+    en: "One-time introduction: Your first full session at a reduced rate. We dive directly into your concern – afterwards you book regular coaching sessions. (In-person in Freiburg)",
   },
   "offerings.coaching.title": {
-    de: "Systemisches Coaching",
-    en: "Systemic Coaching",
+    de: "Coaching-Termin",
+    en: "Coaching Session",
   },
   "offerings.coaching.desc": {
-    de: "Die tiefgreifende Arbeit beginnt: Wir fokussieren uns auf konkrete Herausforderungen, lösen Muster und erarbeiten systemische Lösungen für deine nachhaltige Veränderung.",
-    en: "The profound work begins: We focus on specific challenges, dissolve patterns, and develop systemic solutions for your lasting transformation.",
+    de: "Der reguläre Coaching-Termin: Tiefgreifende Arbeit an konkreten Herausforderungen, Musterlösung und systemische Lösungen für nachhaltige Veränderung. (Präsenz in Freiburg)",
+    en: "The regular coaching session: Profound work on specific challenges, pattern resolution and systemic solutions for lasting transformation. (In-person in Freiburg)",
   },
   "offerings.paket5.title": {
     de: "5er-Paket",
     en: "5-Session Package",
   },
   "offerings.paket5.desc": {
-    de: "Fünf Sitzungen, ideal für einen intensiven Prozess: Erziele konkrete, messbare Fortschritte und festige neue Verhaltens- und Denkmuster.",
-    en: "Five sessions, ideal for an intensive process: Achieve concrete, measurable progress and consolidate new behavioral and thought patterns.",
+    de: "Fünf reguläre Coaching-Termine zum Vorteilspreis. Ideal für einen intensiven Prozess mit messbaren Fortschritten.",
+    en: "Five regular coaching sessions at a discounted rate. Ideal for an intensive process with measurable progress.",
   },
   "offerings.paket10.title": {
     de: "10er-Paket",
     en: "10-Session Package",
   },
   "offerings.paket10.desc": {
-    de: "Zehn Sitzungen für eine umfassende Transformation: Begleite größere persönliche Entwicklungsprozesse und erreiche tiefgreifende, dauerhafte Klarheit.",
-    en: "Ten sessions for comprehensive transformation: Accompany larger personal development processes and achieve profound, lasting clarity.",
+    de: "Zehn reguläre Coaching-Termine für eine umfassende Transformation. Begleitung größerer Entwicklungsprozesse mit tiefgreifender Klarheit.",
+    en: "Ten regular coaching sessions for comprehensive transformation. Accompaniment of larger development processes with profound clarity.",
   },
   "offerings.book": {
     de: "System-Check buchen",
