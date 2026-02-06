@@ -434,7 +434,7 @@ export const translations: Translations = {
     en: "Deep presence and mindfulness form the foundation of our work. They enable us to achieve the calm during the session that is essential to clearly see your system and uncover your intact core.",
   },
   "about.core2": {
-    de: "Ich bin zutiefst davon überzeugt: In Dir ist ein Kern unversehrter Kraft – rein und unerschütterlich. Und ich weiß, dass wir jeden Umstand in eine heilsame Erfahrung umwandeln können. Wir in der Lage sind unser Leben Schritt für Schritt wahrhaftiger selbst zu gestalten.",
+    de: "Ich bin zutiefst davon überzeugt: In Dir ist ein Kern unversehrter Kraft – rein und unerschütterlich. Und ich weiß, dass wir jeden Umstand in eine heilsame Erfahrung umwandeln können. Dass wir in der Lage sind unser Leben Schritt für Schritt wahrhaftiger selbst zu gestalten.",
     en: "I am deeply convinced: Within you is a core of intact power - pure and unshakeable. And I know that we can transform every circumstance into a healing experience. We are able to shape our lives step by step more authentically.",
   },
   "about.cv.title": {
