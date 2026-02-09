@@ -272,8 +272,8 @@ export const JsonLd = () => {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Familienaufstellung",
-          item: "https://www.fels-coach.de/familienaufstellung",
+          name: "Aufstellungen",
+          item: "https://www.fels-coach.de/systemische-familienaufstellung-freiburg",
         },
         {
           "@type": "ListItem",

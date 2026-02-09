@@ -35,7 +35,7 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Coaching Offers & Appointments | Jona Fels", description: "Book your systemic coaching: Introduction session or deep family constellation. Online appointment booking." },
     fr: { title: "Offres de Coaching | Jona Fels", description: "Réservez votre coaching systémique : séance découverte ou constellation familiale approfondie." },
   },
-  "/familienaufstellung": {
+  "/systemische-familienaufstellung-freiburg": {
     de: { title: "Was ist Familienaufstellung? | Jona Fels", description: "Erfahre, wie Familienaufstellungen unbewusste Dynamiken aufdecken. Ablauf, Nutzen und Methodik erklärt." },
     en: { title: "What is Family Constellation? | Jona Fels", description: "Learn how family constellations uncover unconscious dynamics. Process, benefits and methodology explained." },
     fr: { title: "Qu'est-ce que la Constellation Familiale? | Jona Fels", description: "Découvrez comment les constellations révèlent les dynamiques inconscientes." },

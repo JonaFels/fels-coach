@@ -41,7 +41,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/angebote" element={<Angebote />} />
-            <Route path="/familienaufstellung" element={<Familienaufstellung />} />
+            <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
             <Route path="/ebook" element={<Ebook />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/ueber-mich" element={<UeberMich />} />
