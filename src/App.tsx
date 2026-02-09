@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ChatbaseWidget } from "@/components/ChatbaseWidget";
+import { useAppTracking } from "@/hooks/useTracking";
 import Index from "./pages/Index";
 import Angebote from "./pages/Angebote";
 import Familienaufstellung from "./pages/Familienaufstellung";
@@ -21,6 +22,12 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Separate component for tracking (needs Router context)
+const AppTracking = () => {
+  useAppTracking();
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
@@ -28,6 +35,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <AppTracking />
           <ScrollToTop />
           <ChatbaseWidget />
           <Routes>

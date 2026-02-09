@@ -1,12 +1,13 @@
- import { useState } from "react";
- import { z } from "zod";
- import { Card, CardContent } from "@/components/ui/card";
- import { Button } from "@/components/ui/button";
- import { Input } from "@/components/ui/input";
- import { useLanguage } from "@/contexts/LanguageContext";
- import { useToast } from "@/hooks/use-toast";
- import { CheckCircle, Loader2, Phone } from "lucide-react";
- import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
+import { z } from "zod";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useToast } from "@/hooks/use-toast";
+import { CheckCircle, Loader2, Phone } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { trackFormSubmit, trackCallbackRequest } from "@/lib/tracking";
  
  const contactSchema = z.object({
    contact: z.string().trim().min(3, "required").max(100),
@@ -46,18 +47,22 @@
          body: { contact },
        });
  
-       if (error) {
-         console.error("Edge function error:", error);
-         toast({
-           title: t("quickRequest.error.send"),
-           variant: "destructive",
-         });
-       } else {
-         setIsSuccess(true);
-         toast({
-           title: t("quickRequest.success"),
-         });
-       }
+        if (error) {
+          console.error("Edge function error:", error);
+          trackFormSubmit("callback_request", false);
+          toast({
+            title: t("quickRequest.error.send"),
+            variant: "destructive",
+          });
+        } else {
+          setIsSuccess(true);
+          const contactType = contact.includes("@") ? "email" : "phone";
+          trackFormSubmit("callback_request", true);
+          trackCallbackRequest(contactType);
+          toast({
+            title: t("quickRequest.success"),
+          });
+        }
      } catch (err) {
        console.error("Quick request error:", err);
        toast({
