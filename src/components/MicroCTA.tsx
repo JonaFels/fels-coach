@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
-import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
+import { trackCTAClick } from "@/lib/tracking";
+import { InlineQuickForm } from "@/components/InlineQuickForm";
 
 interface MicroCTAProps {
   variant?: "primary" | "secondary" | "ghost";
@@ -11,43 +13,31 @@ interface MicroCTAProps {
 
 export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
 
-  const handleBookClick = () => {
-    trackCalendarBookingStart("micro_cta", "https://cal.com/fels-coach");
-  };
-
-  const handleConsultClick = () => {
-    trackCTAClick("free_consultation", "micro_cta", "/kontakt#rueckruf");
+  const handleClick = () => {
+    trackCTAClick("micro_cta_vorgespraech", "micro_cta", "inline_form");
+    setShowForm(true);
   };
 
   return (
     <div className={cn("flex flex-col items-center justify-center py-8", className)}>
-      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-        <Button
-          asChild
-          size="lg"
-          variant={variant === "primary" ? "default" : variant === "secondary" ? "outline" : "ghost"}
-          className="min-h-[44px] min-w-[200px]"
-          onClick={handleBookClick}
-        >
-          <a
-            href="https://cal.com/fels-coach"
-            target="_blank"
-            rel="noopener noreferrer"
+      {showForm ? (
+        <InlineQuickForm onClose={() => setShowForm(false)} />
+      ) : (
+        <>
+          <Button
+            size="lg"
+            variant={variant === "primary" ? "default" : variant === "secondary" ? "outline" : "ghost"}
+            className="min-h-[44px] min-w-[200px]"
+            onClick={handleClick}
           >
             {t("cta.bookNow")}
             <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-          </a>
-        </Button>
-        <a
-          href="/kontakt#rueckruf"
-          onClick={handleConsultClick}
-          className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
-        >
-          {t("cta.freeConsultation")}
-        </a>
-      </div>
-      <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
+          </Button>
+          <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
+        </>
+      )}
     </div>
   );
 };

@@ -1,23 +1,19 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Clock, Sparkles, Heart } from "lucide-react";
+import { Clock, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackNavToOffers, trackCTAClick } from "@/lib/tracking";
+import { trackCTAClick } from "@/lib/tracking";
+import { InlineQuickForm } from "@/components/InlineQuickForm";
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
 
-  const handleAngeboteClick = () => {
-    trackNavToOffers("homepage_coaching_section");
-  };
-
-  const handleFamilienClick = () => {
-    trackCTAClick("familienaufstellung_button", "homepage_coaching_section", "/familienaufstellung");
-  };
-
-  const handleEbookClick = () => {
-    trackCTAClick("ebook_button", "homepage_coaching_section", "/ebook");
+  const handleVorgespraechClick = () => {
+    trackCTAClick("coaching_vorgespraech", "homepage_coaching_section", "inline_form");
+    setShowForm(true);
   };
 
   return (
@@ -69,27 +65,23 @@ export const CoachingSection = () => {
             </CardContent>
           </Card>
 
-          {/* CTAs */}
+          {/* CTAs - max 2 options */}
           <div className="flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:400ms]">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" onClick={handleAngeboteClick}>
-                <a href="/angebote">
+            {showForm ? (
+              <InlineQuickForm onClose={() => setShowForm(false)} />
+            ) : (
+              <>
+                <Button size="lg" onClick={handleVorgespraechClick}>
                   {t("hero.cta")}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" onClick={handleFamilienClick}>
-                <Link to="/familienaufstellung">
+                </Button>
+                <Link
+                  to="/familienaufstellung"
+                  className="text-sm text-muted-foreground hover:text-secondary underline underline-offset-4 transition-colors"
+                >
                   {t("coaching.learnMore")}
                 </Link>
-              </Button>
-              <Button asChild variant="ghost" size="lg" onClick={handleEbookClick}>
-                <Link to="/ebook">
-                  {t("coaching.ebookLink")}
-                </Link>
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground">{t("coaching.microcopy")}</p>
+              </>
+            )}
           </div>
         </div>
       </div>
