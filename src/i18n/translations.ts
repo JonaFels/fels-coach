@@ -69,6 +69,14 @@ export const translations: Translations = {
     de: "Völlig unverbindlich & persönlich – 15 Minuten, die Klarheit schaffen.",
     en: "Completely non-binding & personal – 15 minutes that create clarity.",
   },
+  "hero.ctaAngebote": {
+    de: "Meine Angebote entdecken",
+    en: "Discover My Offers",
+  },
+  "hero.ctaEbook": {
+    de: "Kostenloses E-Book",
+    en: "Free E-Book",
+  },
 
   // Coaching Description (Homepage)
   "coaching.title": {
