@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Clock, Sparkles, Heart, ArrowRight, BookOpen } from "lucide-react";
+import { Clock, Sparkles, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -57,28 +57,14 @@ export const CoachingSection = () => {
             </CardContent>
           </Card>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:400ms]">
-            <Button asChild size="lg" className="text-base" onClick={() => trackCTAClick("coaching_angebote", "homepage_coaching_section", "link")}>
-              <Link to="/angebote">
-                {t("hero.ctaAngebote")}
+          {/* CTA */}
+          <div className="text-center animate-fade-in-up [animation-delay:400ms]">
+            <Button asChild variant="outline" size="lg" className="text-base" onClick={() => trackCTAClick("coaching_methode", "homepage_coaching_section", "link")}>
+              <Link to="/systemische-familienaufstellung-freiburg">
+                {t("coaching.learnMore")}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base" onClick={() => trackCTAClick("coaching_ebook", "homepage_coaching_section", "link")}>
-              <Link to="/ebook">
-                <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
-                {t("hero.ctaEbook")}
-              </Link>
-            </Button>
-          </div>
-          <div className="text-center mt-4 animate-fade-in-up [animation-delay:500ms]">
-            <Link
-              to="/systemische-familienaufstellung-freiburg"
-              className="text-sm text-muted-foreground hover:text-secondary underline underline-offset-4 transition-colors"
-            >
-              {t("coaching.learnMore")}
-            </Link>
           </div>
         </div>
       </div>
