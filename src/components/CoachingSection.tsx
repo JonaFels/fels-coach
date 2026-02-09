@@ -1,20 +1,12 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Clock, Sparkles, Heart } from "lucide-react";
+import { Clock, Sparkles, Heart, ArrowRight, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import { InlineQuickForm } from "@/components/InlineQuickForm";
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
-  const [showForm, setShowForm] = useState(false);
-
-  const handleVorgespraechClick = () => {
-    trackCTAClick("coaching_vorgespraech", "homepage_coaching_section", "inline_form");
-    setShowForm(true);
-  };
 
   return (
     <section className="py-16 md:py-24">
@@ -65,23 +57,28 @@ export const CoachingSection = () => {
             </CardContent>
           </Card>
 
-          {/* CTAs - max 2 options */}
-          <div className="flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:400ms]">
-            {showForm ? (
-              <InlineQuickForm onClose={() => setShowForm(false)} />
-            ) : (
-              <>
-                <Button size="lg" onClick={handleVorgespraechClick}>
-                  {t("hero.cta")}
-                </Button>
-                <Link
-                  to="/familienaufstellung"
-                  className="text-sm text-muted-foreground hover:text-secondary underline underline-offset-4 transition-colors"
-                >
-                  {t("coaching.learnMore")}
-                </Link>
-              </>
-            )}
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:400ms]">
+            <Button asChild size="lg" className="text-base" onClick={() => trackCTAClick("coaching_angebote", "homepage_coaching_section", "link")}>
+              <Link to="/angebote">
+                {t("hero.ctaAngebote")}
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-base" onClick={() => trackCTAClick("coaching_ebook", "homepage_coaching_section", "link")}>
+              <Link to="/ebook">
+                <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
+                {t("hero.ctaEbook")}
+              </Link>
+            </Button>
+          </div>
+          <div className="text-center mt-4 animate-fade-in-up [animation-delay:500ms]">
+            <Link
+              to="/familienaufstellung"
+              className="text-sm text-muted-foreground hover:text-secondary underline underline-offset-4 transition-colors"
+            >
+              {t("coaching.learnMore")}
+            </Link>
           </div>
         </div>
       </div>
