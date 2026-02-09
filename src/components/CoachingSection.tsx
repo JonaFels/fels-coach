@@ -70,23 +70,26 @@ export const CoachingSection = () => {
           </Card>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:400ms]">
-            <Button asChild size="lg" onClick={handleAngeboteClick}>
-              <a href="/angebote">
-                {t("hero.cta")}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg" onClick={handleFamilienClick}>
-              <Link to="/familienaufstellung">
-                {t("coaching.learnMore")}
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="lg" onClick={handleEbookClick}>
-              <Link to="/ebook">
-                {t("coaching.ebookLink")}
-              </Link>
-            </Button>
+          <div className="flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:400ms]">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" onClick={handleAngeboteClick}>
+                <a href="/angebote">
+                  {t("hero.cta")}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" onClick={handleFamilienClick}>
+                <Link to="/familienaufstellung">
+                  {t("coaching.learnMore")}
+                </Link>
+              </Button>
+              <Button asChild variant="ghost" size="lg" onClick={handleEbookClick}>
+                <Link to="/ebook">
+                  {t("coaching.ebookLink")}
+                </Link>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground">{t("coaching.microcopy")}</p>
           </div>
         </div>
       </div>

@@ -21,30 +21,33 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
   };
 
   return (
-    <div className={cn("flex flex-col sm:flex-row gap-4 items-center justify-center py-8", className)}>
-      <Button
-        asChild
-        size="lg"
-        variant={variant === "primary" ? "default" : variant === "secondary" ? "outline" : "ghost"}
-        className="min-h-[44px] min-w-[200px]"
-        onClick={handleBookClick}
-      >
-        <a
-          href="https://cal.com/fels-coach"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className={cn("flex flex-col items-center justify-center py-8", className)}>
+      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <Button
+          asChild
+          size="lg"
+          variant={variant === "primary" ? "default" : variant === "secondary" ? "outline" : "ghost"}
+          className="min-h-[44px] min-w-[200px]"
+          onClick={handleBookClick}
         >
-          {t("cta.bookNow")}
-          <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+          <a
+            href="https://cal.com/fels-coach"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("cta.bookNow")}
+            <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+          </a>
+        </Button>
+        <a
+          href="/kontakt#rueckruf"
+          onClick={handleConsultClick}
+          className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
+        >
+          {t("cta.freeConsultation")}
         </a>
-      </Button>
-      <a
-        href="/kontakt#rueckruf"
-        onClick={handleConsultClick}
-        className="text-muted-foreground text-sm hover:text-secondary underline underline-offset-4 transition-colors"
-      >
-        {t("cta.freeConsultation")}
-      </a>
+      </div>
+      <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
     </div>
   );
 };

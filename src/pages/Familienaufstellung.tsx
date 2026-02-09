@@ -124,10 +124,11 @@ const Familienaufstellung = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {t("offerings.book")}
+                {t("cta.bookNow")}
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </a>
             </Button>
+            <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
           </div>
 
           {/* Internal Links */}

@@ -30,7 +30,7 @@ export const translations: Translations = {
     en: "About me",
   },
   "nav.termin": {
-    de: "Termin ausmachen",
+    de: "Termin buchen",
     en: "Book Appointment",
   },
   "nav.angebote": {
@@ -62,8 +62,12 @@ export const translations: Translations = {
     en: "Finally give yourself permission to claim your own ground – free from paralyzing shame and the invisible chains of old family patterns.",
   },
   "hero.cta": {
-    de: "Termin buchen",
-    en: "Book Session",
+    de: "Kostenloses Vorgespräch vereinbaren",
+    en: "Schedule Free Consultation",
+  },
+  "hero.microcopy": {
+    de: "Völlig unverbindlich & persönlich – 15 Minuten, die Klarheit schaffen.",
+    en: "Completely non-binding & personal – 15 minutes that create clarity.",
   },
 
   // Coaching Description (Homepage)
@@ -102,6 +106,10 @@ export const translations: Translations = {
   "coaching.learnMore": {
     de: "Methode verstehen",
     en: "Understand the Method",
+  },
+  "coaching.microcopy": {
+    de: "Völlig unverbindlich & persönlich",
+    en: "Completely non-binding & personal",
   },
   "coaching.ebookLink": {
     de: "Kostenloses E-Book lesen",
@@ -146,8 +154,8 @@ export const translations: Translations = {
     en: "Ten regular coaching sessions for comprehensive transformation. Accompaniment of larger development processes with profound clarity.",
   },
   "offerings.book": {
-    de: "Termin buchen",
-    en: "Book Session",
+    de: "Jetzt Termin anfragen",
+    en: "Request Appointment",
   },
   "offerings.allDates": {
     de: "Alle verfügbaren Termine ansehen",
@@ -546,12 +554,16 @@ export const translations: Translations = {
 
   // Micro CTAs
   "cta.bookNow": {
-    de: "Jetzt Termin buchen",
-    en: "Book Session Now",
+    de: "Kostenloses 15-Min. Vorgespräch",
+    en: "Free 15-Min. Consultation",
+  },
+  "cta.bookNowMicrocopy": {
+    de: "Lass uns schauen, ob die Chemie stimmt.",
+    en: "Let's see if we're a good fit.",
   },
   "cta.freeConsultation": {
-    de: "Kostenloses Vorgespräch anfragen",
-    en: "Request free consultation call",
+    de: "Oder: Rückruf anfordern",
+    en: "Or: Request a callback",
   },
   "cta.learnMore": {
     de: "Methode verstehen",
@@ -627,10 +639,14 @@ export const translations: Translations = {
      de: "Noch unsicher, ob dein Thema passt? Lass uns in einem kurzen Vorgespräch klären, ob mein Ansatz für dein Anliegen passt.",
      en: "Still unsure if your topic fits? Let's clarify in a brief preliminary call whether my approach suits your concern.",
    },
-   "quickCTA.button": {
-     de: "Kostenloses Telefon-Vorgespräch anfordern",
-     en: "Request Free Phone Consultation",
-   },
+    "quickCTA.button": {
+      de: "Kostenloses 15-Min. Vorgespräch anfragen",
+      en: "Request Free 15-Min. Consultation",
+    },
+    "quickCTA.microcopy": {
+      de: "Völlig unverbindlich – lass uns schauen, ob die Chemie stimmt.",
+      en: "Completely non-binding – let's see if we're a good fit.",
+    },
  
    // Quick Request Form (Contact Page)
    "quickRequest.title": {
