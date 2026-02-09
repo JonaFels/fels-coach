@@ -8,6 +8,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
+import { trackCalendarBookingStart } from "@/lib/tracking";
 import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -112,7 +113,12 @@ const Familienaufstellung = () => {
 
           {/* CTA */}
           <div className="text-center mb-8">
-            <Button asChild size="lg" className="min-h-[44px]">
+            <Button
+              asChild
+              size="lg"
+              className="min-h-[44px]"
+              onClick={() => trackCalendarBookingStart("familienaufstellung_cta", "https://cal.com/fels-coach")}
+            >
               <a
                 href="https://cal.com/fels-coach"
                 target="_blank"

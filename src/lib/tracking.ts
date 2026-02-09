@@ -18,37 +18,45 @@ declare global {
   }
 }
 
+// ==========================================
+// LANGUAGE HELPER
+// ==========================================
+
 /**
- * Initialisiert den dataLayer für GTM
+ * Returns current page language from the LanguageProvider state stored in DOM.
+ * Falls back to 'de'.
  */
+let _currentLanguage: "de" | "en" = "de";
+
+export const setTrackingLanguage = (lang: "de" | "en"): void => {
+  _currentLanguage = lang;
+};
+
+const getPageLanguage = (): string => _currentLanguage;
+
+// ==========================================
+// INITIALIZATION
+// ==========================================
+
 export const initDataLayer = (): void => {
   window.dataLayer = window.dataLayer || [];
 };
 
-/**
- * Lädt Google Tag Manager (Container)
- * GTM lädt dann GA4 basierend auf Consent-Status
- */
 export const loadGTM = (): void => {
-  if (document.querySelector(`script[src*="gtm.js?id=${GTM_ID}"]`)) {
-    return; // Already loaded
-  }
+  if (document.querySelector(`script[src*="gtm.js?id=${GTM_ID}"]`)) return;
 
   initDataLayer();
 
-  // GTM Script
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
   document.head.appendChild(script);
 
-  // GTM dataLayer push
   window.dataLayer.push({
     "gtm.start": new Date().getTime(),
     event: "gtm.js",
   });
 
-  // GTM noscript fallback (iframe)
   const noscript = document.createElement("noscript");
   const iframe = document.createElement("iframe");
   iframe.src = `https://www.googletagmanager.com/ns.html?id=${GTM_ID}`;
@@ -60,23 +68,16 @@ export const loadGTM = (): void => {
   document.body.insertBefore(noscript, document.body.firstChild);
 };
 
-/**
- * Lädt GA4 direkt (Fallback wenn GTM nicht genutzt)
- */
 export const loadGA4 = (): void => {
-  if (document.querySelector(`script[src*="gtag/js?id=${GA_MEASUREMENT_ID}"]`)) {
-    return;
-  }
+  if (document.querySelector(`script[src*="gtag/js?id=${GA_MEASUREMENT_ID}"]`)) return;
 
   initDataLayer();
 
-  // gtag.js Script
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
   document.head.appendChild(script);
 
-  // gtag function
   window.gtag = function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
   };
@@ -89,12 +90,12 @@ export const loadGA4 = (): void => {
   });
 };
 
-/**
- * Sendet Consent-Update an GTM/GA4
- */
+// ==========================================
+// CONSENT
+// ==========================================
+
 export const updateConsent = (granted: boolean): void => {
   if (!window.gtag) return;
-
   window.gtag("consent", "update", {
     analytics_storage: granted ? "granted" : "denied",
     ad_storage: "denied",
@@ -103,16 +104,11 @@ export const updateConsent = (granted: boolean): void => {
   });
 };
 
-/**
- * Setzt initialen Consent-Status (vor dem Laden)
- */
 export const setDefaultConsent = (): void => {
   initDataLayer();
-
   window.gtag = function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
   };
-
   window.gtag("consent", "default", {
     analytics_storage: "denied",
     ad_storage: "denied",
@@ -123,93 +119,36 @@ export const setDefaultConsent = (): void => {
 };
 
 // ==========================================
-// EVENT TRACKING
+// CORE EVENT TRACKING
 // ==========================================
 
 type EventParams = Record<string, string | number | boolean>;
 
 /**
- * Generisches Event-Tracking
+ * Generisches Event-Tracking – fügt automatisch page_language hinzu.
+ * Events werden nur gefeuert wenn gtag vorhanden (= Consent erteilt).
  */
 export const trackEvent = (eventName: string, params?: EventParams): void => {
   if (!window.gtag) return;
-  window.gtag("event", eventName, params);
-};
-
-/**
- * Button-Click Tracking
- */
-export const trackButtonClick = (
-  buttonName: string,
-  location: string,
-  additionalParams?: EventParams
-): void => {
-  trackEvent("button_click", {
-    button_name: buttonName,
-    button_location: location,
-    ...additionalParams,
+  window.gtag("event", eventName, {
+    page_language: getPageLanguage(),
+    ...params,
   });
 };
 
-/**
- * Link-Click Tracking
- */
-export const trackLinkClick = (
-  linkText: string,
-  linkUrl: string,
-  location: string
-): void => {
-  trackEvent("link_click", {
-    link_text: linkText,
-    link_url: linkUrl,
-    link_location: location,
-  });
-};
+// ==========================================
+// PAGE & SCROLL TRACKING
+// ==========================================
 
-/**
- * Form Submission Tracking
- */
-export const trackFormSubmit = (
-  formName: string,
-  success: boolean,
-  additionalParams?: EventParams
-): void => {
-  trackEvent("form_submit", {
-    form_name: formName,
-    form_success: success,
-    ...additionalParams,
-  });
-};
-
-/**
- * Form Field Interaction Tracking
- */
-export const trackFormInteraction = (
-  formName: string,
-  fieldName: string,
-  interactionType: "focus" | "blur" | "change"
-): void => {
-  trackEvent("form_interaction", {
-    form_name: formName,
-    field_name: fieldName,
-    interaction_type: interactionType,
-  });
-};
-
-/**
- * Page View Tracking (SPA-Navigation)
- */
 export const trackPageView = (pagePath: string, pageTitle: string): void => {
   if (!window.gtag) return;
   window.gtag("config", GA_MEASUREMENT_ID, {
     page_path: pagePath,
     page_title: pageTitle,
+    page_language: getPageLanguage(),
   });
 };
 
-/**
- * Scroll Tracking (25%, 50%, 75%, 100%)
- */
 export const trackScrollDepth = (depth: number, pagePath: string): void => {
   trackEvent("scroll_depth", {
     scroll_depth: depth,
@@ -217,9 +156,32 @@ export const trackScrollDepth = (depth: number, pagePath: string): void => {
   });
 };
 
+// ==========================================
+// NAVIGATION & CTA TRACKING
+// ==========================================
+
 /**
- * CTA Click Tracking
+ * Internes Navigations-Event (z.B. Button führt zu /angebote)
  */
+export const trackNavToOffers = (buttonLocation: string): void => {
+  trackEvent("nav_to_offers", {
+    button_location: buttonLocation,
+  });
+};
+
+/**
+ * Externes Buchungs-Event (Button führt zu cal.com)
+ */
+export const trackCalendarBookingStart = (
+  buttonLocation: string,
+  destinationUrl: string
+): void => {
+  trackEvent("calendar_booking_start", {
+    button_location: buttonLocation,
+    destination_url: destinationUrl,
+  });
+};
+
 export const trackCTAClick = (
   ctaName: string,
   ctaLocation: string,
@@ -232,27 +194,134 @@ export const trackCTAClick = (
   });
 };
 
+export const trackButtonClick = (
+  buttonName: string,
+  location: string,
+  additionalParams?: EventParams
+): void => {
+  trackEvent("button_click", {
+    button_name: buttonName,
+    button_location: location,
+    ...additionalParams,
+  });
+};
+
+// ==========================================
+// LINK TRACKING
+// ==========================================
+
+export const trackLinkClick = (
+  linkText: string,
+  linkUrl: string,
+  location: string
+): void => {
+  trackEvent("link_click", {
+    link_text: linkText,
+    link_url: linkUrl,
+    link_location: location,
+  });
+};
+
+// ==========================================
+// SOCIAL MEDIA TRACKING
+// ==========================================
+
+type SocialPlatform = "facebook" | "instagram" | "linkedin" | "telegram";
+
+const SOCIAL_PATTERNS: Record<SocialPlatform, RegExp> = {
+  facebook: /facebook\.com/i,
+  instagram: /instagram\.com/i,
+  linkedin: /linkedin\.com/i,
+  telegram: /t\.me/i,
+};
+
 /**
- * Ebook Download Tracking
+ * Erkennt die Social-Media-Plattform anhand der URL.
  */
+export const detectSocialPlatform = (url: string): SocialPlatform | null => {
+  for (const [platform, regex] of Object.entries(SOCIAL_PATTERNS)) {
+    if (regex.test(url)) return platform as SocialPlatform;
+  }
+  return null;
+};
+
+/**
+ * Feuert plattformspezifische Events: click_facebook, click_instagram, etc.
+ */
+export const trackSocialClick = (
+  platform: SocialPlatform,
+  destinationUrl: string
+): void => {
+  trackEvent(`click_${platform}`, {
+    destination_url: destinationUrl,
+  });
+};
+
+// ==========================================
+// FORM TRACKING
+// ==========================================
+
+/**
+ * Kontaktformular – nur bei erfolgreicher Validierung feuern!
+ */
+export const trackContactFormSubmit = (success: boolean): void => {
+  if (!success) return; // Nur bei Erfolg feuern
+  trackEvent("contact_form_submit", {
+    form_name: "main_contact_form",
+  });
+};
+
+/**
+ * Rückruf-Anfrage – nur bei erfolgreicher Validierung feuern!
+ */
+export const trackCallbackRequestSubmit = (
+  contactType: string,
+  success: boolean
+): void => {
+  if (!success) return;
+  trackEvent("callback_request_submit", {
+    contact_type: contactType,
+  });
+};
+
+/** @deprecated Use trackContactFormSubmit or trackCallbackRequestSubmit */
+export const trackFormSubmit = (
+  formName: string,
+  success: boolean,
+  additionalParams?: EventParams
+): void => {
+  trackEvent("form_submit", {
+    form_name: formName,
+    form_success: success,
+    ...additionalParams,
+  });
+};
+
+export const trackFormInteraction = (
+  formName: string,
+  fieldName: string,
+  interactionType: "focus" | "blur" | "change"
+): void => {
+  trackEvent("form_interaction", {
+    form_name: formName,
+    field_name: fieldName,
+    interaction_type: interactionType,
+  });
+};
+
 export const trackEbookDownload = (email: string): void => {
   trackEvent("ebook_download", {
     method: "email_form",
   });
 };
 
-/**
- * Contact Form Start Tracking
- */
 export const trackContactFormStart = (): void => {
   trackEvent("contact_form_start", {
     form_name: "main_contact_form",
   });
 };
 
-/**
- * Callback Request Tracking
- */
+/** @deprecated Use trackCallbackRequestSubmit */
 export const trackCallbackRequest = (contactType: string): void => {
   trackEvent("callback_request", {
     contact_type: contactType,

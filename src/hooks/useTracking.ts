@@ -1,11 +1,15 @@
 import { useEffect, useRef, useCallback } from "react";
 import { useLocation } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   trackPageView,
   trackScrollDepth,
   trackButtonClick,
   trackLinkClick,
   trackCTAClick,
+  detectSocialPlatform,
+  trackSocialClick,
+  setTrackingLanguage,
 } from "@/lib/tracking";
 
 /**
@@ -15,7 +19,6 @@ export const usePageTracking = (): void => {
   const location = useLocation();
 
   useEffect(() => {
-    // Track page view on route change
     trackPageView(location.pathname, document.title);
   }, [location.pathname]);
 };
@@ -28,7 +31,6 @@ export const useScrollTracking = (): void => {
   const trackedDepths = useRef<Set<number>>(new Set());
 
   useEffect(() => {
-    // Reset tracked depths on page change
     trackedDepths.current.clear();
 
     const handleScroll = () => {
@@ -85,7 +87,8 @@ export const useCTATracking = (
 };
 
 /**
- * Hook für automatisches Link-Tracking via Event Delegation
+ * Hook für automatisches Link-Tracking via Event Delegation.
+ * Social-Media-Links bekommen plattformspezifische Events.
  */
 export const useAutoLinkTracking = (): void => {
   useEffect(() => {
@@ -97,7 +100,14 @@ export const useAutoLinkTracking = (): void => {
         const href = link.getAttribute("href") || "";
         const text = link.textContent?.trim() || "";
 
-        // Track external links
+        // Check for social media links first
+        const socialPlatform = detectSocialPlatform(href);
+        if (socialPlatform) {
+          trackSocialClick(socialPlatform, href);
+          return; // Don't double-track as generic link
+        }
+
+        // Track external links (non-social)
         if (href.startsWith("http") && !href.includes(window.location.hostname)) {
           trackLinkClick(text, href, "external");
         }
@@ -123,9 +133,21 @@ export const useAutoLinkTracking = (): void => {
 };
 
 /**
+ * Hook that syncs current language to the tracking module.
+ */
+const useTrackingLanguageSync = (): void => {
+  const { language } = useLanguage();
+
+  useEffect(() => {
+    setTrackingLanguage(language);
+  }, [language]);
+};
+
+/**
  * Combined tracking hook for App component
  */
 export const useAppTracking = (): void => {
+  useTrackingLanguageSync();
   usePageTracking();
   useScrollTracking();
   useAutoLinkTracking();

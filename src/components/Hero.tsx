@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackCTAClick } from "@/lib/tracking";
+import { trackNavToOffers } from "@/lib/tracking";
 
 export const Hero = () => {
   const { t } = useLanguage();
 
   const handleCTAClick = () => {
-    trackCTAClick("hero_cta", "homepage_hero", "/angebote");
+    trackNavToOffers("homepage_hero");
   };
 
   return (

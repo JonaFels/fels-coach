@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackCalendarBookingStart } from "@/lib/tracking";
 
 const offerings = [
   {
@@ -87,6 +88,7 @@ export const Offerings = () => {
                   asChild
                   variant={offering.highlight ? "default" : "outline"}
                   className="w-full group/btn"
+                  onClick={() => trackCalendarBookingStart("offerings_card", offering.href)}
                 >
                   <a
                     href={offering.href}
