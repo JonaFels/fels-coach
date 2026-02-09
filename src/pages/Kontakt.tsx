@@ -1,4 +1,5 @@
 import { Mail, Send, Calendar } from "lucide-react";
+import { trackCalendarBookingStart } from "@/lib/tracking";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
@@ -62,7 +63,12 @@ const Kontakt = () => {
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                     {t("contact.optionB.text")}
                   </p>
-                  <Button asChild variant="outline" className="w-full min-h-[44px]">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full min-h-[44px]"
+                    onClick={() => trackCalendarBookingStart("kontakt_direct_booking", "https://cal.com/fels-coach/coaching-kennenlernen")}
+                  >
                     <a 
                       href="https://cal.com/fels-coach/coaching-kennenlernen" 
                       target="_blank" 

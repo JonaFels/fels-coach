@@ -3,13 +3,13 @@ import { ArrowRight, Clock, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackCTAClick } from "@/lib/tracking";
+import { trackNavToOffers, trackCTAClick } from "@/lib/tracking";
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
 
   const handleAngeboteClick = () => {
-    trackCTAClick("angebote_button", "homepage_coaching_section", "/angebote");
+    trackNavToOffers("homepage_coaching_section");
   };
 
   const handleFamilienClick = () => {

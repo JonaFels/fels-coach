@@ -9,6 +9,7 @@ import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackCalendarBookingStart } from "@/lib/tracking";
 
 const offerings = [
   {
@@ -65,6 +66,7 @@ const Angebote = () => {
                     asChild
                     variant="outline"
                     className="w-full group/btn min-h-[44px]"
+                    onClick={() => trackCalendarBookingStart("angebote_card", offering.href)}
                   >
                     <a
                       href={offering.href}
@@ -81,7 +83,13 @@ const Angebote = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Button asChild variant="outline" size="lg" className="min-h-[44px]">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="min-h-[44px]"
+              onClick={() => trackCalendarBookingStart("angebote_all_dates", "https://cal.com/fels-coach")}
+            >
               <a
                 href="https://cal.com/fels-coach"
                 target="_blank"

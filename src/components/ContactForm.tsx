@@ -10,13 +10,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { trackFormSubmit, trackFormInteraction } from "@/lib/tracking";
+import { trackContactFormSubmit, trackFormInteraction } from "@/lib/tracking";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "required").max(100),
   email: z.string().trim().email("invalidEmail").max(255),
   message: z.string().trim().min(1, "required").max(2000),
-  website: z.string().max(0, "bot").optional(), // Honeypot field - must be empty
+  website: z.string().max(0, "bot").optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -31,12 +31,11 @@ export const ContactForm = () => {
     name: "",
     email: "",
     message: "",
-    website: "", // Honeypot field
+    website: "",
   });
 
   const handleChange = (field: keyof ContactFormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error on change
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
@@ -46,9 +45,8 @@ export const ContactForm = () => {
     e.preventDefault();
     setErrors({});
 
-    // Check honeypot - if filled, it's a bot
+    // Honeypot
     if (formData.website && formData.website.length > 0) {
-      // Silently pretend success for bots
       setIsSuccess(true);
       return;
     }
@@ -62,6 +60,7 @@ export const ContactForm = () => {
         fieldErrors[field] = issue.message;
       });
       setErrors(fieldErrors);
+      // NOT tracking here – only on success
       return;
     }
 
@@ -78,14 +77,14 @@ export const ContactForm = () => {
 
       if (error) {
         console.error("Edge function error:", error);
-        trackFormSubmit("contact_form", false, { error: "edge_function_error" });
+        // Do NOT fire contact_form_submit on failure
         toast({
           title: t("contactForm.error"),
           variant: "destructive",
         });
       } else {
         setIsSuccess(true);
-        trackFormSubmit("contact_form", true);
+        trackContactFormSubmit(true);
         toast({
           title: t("contactForm.success"),
           description: "",
@@ -93,7 +92,6 @@ export const ContactForm = () => {
       }
     } catch (error) {
       console.error("Contact form error:", error);
-      trackFormSubmit("contact_form", false, { error: "network_error" });
       toast({
         title: t("contactForm.error"),
         variant: "destructive",
@@ -122,7 +120,6 @@ export const ContactForm = () => {
         <CardTitle className="font-serif text-xl">{t("contactForm.title")}</CardTitle>
       </CardHeader>
       <CardContent>
-        {/* aria-live Region für Fehlermeldungen (Barrierefreiheit) */}
         <div aria-live="polite" aria-atomic="true" className="sr-only">
           {Object.keys(errors).length > 0 && (
             <span>Es gibt Fehler im Formular. Bitte überprüfe deine Eingaben.</span>
@@ -194,7 +191,7 @@ export const ContactForm = () => {
             )}
           </div>
 
-          {/* Honeypot field - hidden from humans, catches bots */}
+          {/* Honeypot */}
           <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
             <Label htmlFor="contact-website">Website (nicht ausfüllen)</Label>
             <Input
@@ -208,7 +205,6 @@ export const ContactForm = () => {
             />
           </div>
 
-          {/* Datenschutz-Hinweis */}
           <p className="text-sm text-muted-foreground leading-relaxed">
             {t("contactForm.privacyNotice")}{" "}
             <Link to="/datenschutz" className="underline hover:text-secondary">

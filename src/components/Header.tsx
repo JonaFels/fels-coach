@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
-import { trackLinkClick, trackCTAClick } from "@/lib/tracking";
+import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
 
 const NAV_ITEMS = [
   { key: "nav.coaching", href: "/" },
@@ -24,7 +24,7 @@ export const Header = () => {
   };
 
   const handleTerminClick = () => {
-    trackCTAClick("termin_button", "header", "/angebote");
+    trackNavToOffers("header");
   };
 
   return (
