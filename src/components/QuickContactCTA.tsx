@@ -26,6 +26,7 @@ export const QuickContactCTA = () => {
             {t("quickCTA.button")}
           </Link>
         </Button>
+        <p className="mt-3 text-sm text-muted-foreground">{t("quickCTA.microcopy")}</p>
       </div>
     </section>
   );

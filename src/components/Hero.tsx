@@ -25,6 +25,7 @@ export const Hero = () => {
                 {t("hero.cta")}
               </a>
             </Button>
+            <p className="mt-3 text-sm text-muted-foreground">{t("hero.microcopy")}</p>
           </div>
         </div>
       </div>
