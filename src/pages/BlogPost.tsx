@@ -11,6 +11,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { de, enUS } from "date-fns/locale";
+import DOMPurify from "dompurify";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -48,7 +49,7 @@ const BlogPost = () => {
         elements.push(
           <ol key={`list-${elements.length}`} className="list-decimal list-inside space-y-2 my-4 text-muted-foreground" role="list">
             {listItems.map((item, i) => (
-              <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+              <li key={i} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
             ))}
           </ol>
         );
@@ -114,7 +115,7 @@ const BlogPost = () => {
           <p
             key={index}
             className="text-muted-foreground leading-relaxed my-4"
-            dangerouslySetInnerHTML={{ __html: processedLine }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }}
           />
         );
       }
