@@ -1,5 +1,5 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
@@ -8,12 +8,19 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
-import { trackCalendarBookingStart } from "@/lib/tracking";
+import { trackCTAClick } from "@/lib/tracking";
 import { MicroCTA } from "@/components/MicroCTA";
+import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
+
+  const handleCTAClick = () => {
+    trackCTAClick("familienaufstellung_vorgespraech", "familienaufstellung_cta", "inline_form");
+    setShowForm(true);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,7 +32,7 @@ const Familienaufstellung = () => {
             {t("family.title")}
           </h1>
 
-          {/* Intro Section - Inverted Pyramid Style */}
+          {/* Intro Section */}
           <Card className="mb-8 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
@@ -81,31 +88,18 @@ const Familienaufstellung = () => {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 {t("family.process.intro")}
               </p>
-
               <div className="grid gap-6 md:grid-cols-3">
                 <div className="p-4 bg-muted/50 rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {t("family.step1.title")}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("family.step1.text")}
-                  </p>
+                  <h3 className="font-semibold text-foreground mb-2">{t("family.step1.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("family.step1.text")}</p>
                 </div>
                 <div className="p-4 bg-muted/50 rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {t("family.step2.title")}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("family.step2.text")}
-                  </p>
+                  <h3 className="font-semibold text-foreground mb-2">{t("family.step2.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("family.step2.text")}</p>
                 </div>
                 <div className="p-4 bg-muted/50 rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {t("family.step3.title")}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("family.step3.text")}
-                  </p>
+                  <h3 className="font-semibold text-foreground mb-2">{t("family.step3.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("family.step3.text")}</p>
                 </div>
               </div>
             </CardContent>
@@ -113,22 +107,16 @@ const Familienaufstellung = () => {
 
           {/* CTA */}
           <div className="text-center mb-8">
-            <Button
-              asChild
-              size="lg"
-              className="min-h-[44px]"
-              onClick={() => trackCalendarBookingStart("familienaufstellung_cta", "https://cal.com/fels-coach")}
-            >
-              <a
-                href="https://cal.com/fels-coach"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("cta.bookNow")}
-                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-              </a>
-            </Button>
-            <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
+            {showForm ? (
+              <InlineQuickForm onClose={() => setShowForm(false)} />
+            ) : (
+              <>
+                <Button size="lg" className="min-h-[44px]" onClick={handleCTAClick}>
+                  {t("cta.bookNow")}
+                </Button>
+                <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
+              </>
+            )}
           </div>
 
           {/* Internal Links */}
@@ -146,7 +134,6 @@ const Familienaufstellung = () => {
             </Link>
           </nav>
 
-          {/* Author Box */}
           <AuthorBox />
         </article>
       </PageBackground>

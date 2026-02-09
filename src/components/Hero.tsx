@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackNavToOffers } from "@/lib/tracking";
+import { trackCTAClick } from "@/lib/tracking";
+import { InlineQuickForm } from "@/components/InlineQuickForm";
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
 
   const handleCTAClick = () => {
-    trackNavToOffers("homepage_hero");
+    trackCTAClick("hero_vorgespraech", "homepage_hero", "inline_form");
+    setShowForm(true);
   };
 
   return (
@@ -20,12 +24,16 @@ export const Hero = () => {
             {t("hero.subtitle")}
           </p>
           <div className="mt-10 animate-fade-in-up [animation-delay:200ms]">
-            <Button asChild size="lg" className="text-base px-8" onClick={handleCTAClick}>
-              <a href="/angebote">
-                {t("hero.cta")}
-              </a>
-            </Button>
-            <p className="mt-3 text-sm text-muted-foreground">{t("hero.microcopy")}</p>
+            {showForm ? (
+              <InlineQuickForm onClose={() => setShowForm(false)} />
+            ) : (
+              <>
+                <Button size="lg" className="text-base px-8" onClick={handleCTAClick}>
+                  {t("hero.cta")}
+                </Button>
+                <p className="mt-3 text-sm text-muted-foreground">{t("hero.microcopy")}</p>
+              </>
+            )}
           </div>
         </div>
       </div>
