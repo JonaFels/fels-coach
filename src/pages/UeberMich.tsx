@@ -97,7 +97,7 @@ const UeberMich = () => {
 
           {/* Internal Links */}
           <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8" aria-label="Verwandte Seiten">
-            <Link to="/familienaufstellung" className="hover:text-secondary underline underline-offset-4">
+            <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
               Was ist Familienaufstellung?
             </Link>
             <span aria-hidden="true">•</span>

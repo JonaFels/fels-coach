@@ -74,7 +74,7 @@ export const CoachingSection = () => {
           </div>
           <div className="text-center mt-4 animate-fade-in-up [animation-delay:500ms]">
             <Link
-              to="/familienaufstellung"
+              to="/systemische-familienaufstellung-freiburg"
               className="text-sm text-muted-foreground hover:text-secondary underline underline-offset-4 transition-colors"
             >
               {t("coaching.learnMore")}

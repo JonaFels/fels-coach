@@ -14,8 +14,8 @@ export const translations: Translations = {
     en: "Coaching",
   },
   "nav.familienaufstellung": {
-    de: "Familienaufstellung",
-    en: "Family Constellation",
+    de: "Aufstellungen",
+    en: "Constellations",
   },
   "nav.ebook": {
     de: "E-Book",
@@ -260,8 +260,8 @@ export const translations: Translations = {
 
   // Familienaufstellung Page
   "family.title": {
-    de: "Familienaufstellung",
-    en: "Family Constellation",
+    de: "Systemische Aufstellung & Familienaufstellung in Freiburg",
+    en: "Systemic Constellation & Family Constellation in Freiburg",
   },
   "family.intro.title": {
     de: "Was ist eine Familienaufstellung?",

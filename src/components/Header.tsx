@@ -8,7 +8,7 @@ import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
 
 const NAV_ITEMS = [
   { key: "nav.coaching", href: "/" },
-  { key: "nav.familienaufstellung", href: "/familienaufstellung" },
+  { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
   { key: "nav.ebook", href: "/ebook" },
   { key: "nav.blog", href: "/blog" },
   { key: "nav.kontakt", href: "/kontakt" },
@@ -33,7 +33,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/angebote" className="flex-shrink-0">
             <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
-              Systemische Familienaufstellungen
+              Systemisches Coaching
             </h1>
           </a>
 
