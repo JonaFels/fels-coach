@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
+import { trackLinkClick, trackCTAClick } from "@/lib/tracking";
 
 const NAV_ITEMS = [
   { key: "nav.coaching", href: "/" },
@@ -17,6 +18,14 @@ const NAV_ITEMS = [
 export const Header = () => {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleNavClick = (key: string, href: string) => {
+    trackLinkClick(t(key), href, "header_navigation");
+  };
+
+  const handleTerminClick = () => {
+    trackCTAClick("termin_button", "header", "/angebote");
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
@@ -33,6 +42,7 @@ export const Header = () => {
               <a
                 key={item.key}
                 href={item.href}
+                onClick={() => handleNavClick(item.key, item.href)}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t(item.key)}
@@ -42,7 +52,7 @@ export const Header = () => {
 
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <Button asChild size="sm">
+            <Button asChild size="sm" onClick={handleTerminClick}>
               <a href="/angebote">{t("nav.termin")}</a>
             </Button>
           </div>
@@ -67,7 +77,10 @@ export const Header = () => {
               <a
                 key={item.key}
                 href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  handleNavClick(item.key, item.href);
+                  setIsMobileMenuOpen(false);
+                }}
                 className="px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
               >
                 {t(item.key)}
@@ -75,8 +88,11 @@ export const Header = () => {
             ))}
             <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
-              <Button asChild size="sm">
-                <a href="/angebote" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button asChild size="sm" onClick={() => {
+                handleTerminClick();
+                setIsMobileMenuOpen(false);
+              }}>
+                <a href="/angebote">
                   {t("nav.termin")}
                 </a>
               </Button>

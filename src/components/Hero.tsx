@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackCTAClick } from "@/lib/tracking";
 
 export const Hero = () => {
   const { t } = useLanguage();
+
+  const handleCTAClick = () => {
+    trackCTAClick("hero_cta", "homepage_hero", "/angebote");
+  };
 
   return (
     <section className="relative py-20 md:py-32">
@@ -15,7 +20,7 @@ export const Hero = () => {
             {t("hero.subtitle")}
           </p>
           <div className="mt-10 animate-fade-in-up [animation-delay:200ms]">
-            <Button asChild size="lg" className="text-base px-8">
+            <Button asChild size="lg" className="text-base px-8" onClick={handleCTAClick}>
               <a href="/angebote">
                 {t("hero.cta")}
               </a>

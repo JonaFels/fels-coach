@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { trackFormSubmit, trackFormInteraction } from "@/lib/tracking";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "required").max(100),
@@ -77,12 +78,14 @@ export const ContactForm = () => {
 
       if (error) {
         console.error("Edge function error:", error);
+        trackFormSubmit("contact_form", false, { error: "edge_function_error" });
         toast({
           title: t("contactForm.error"),
           variant: "destructive",
         });
       } else {
         setIsSuccess(true);
+        trackFormSubmit("contact_form", true);
         toast({
           title: t("contactForm.success"),
           description: "",
@@ -90,6 +93,7 @@ export const ContactForm = () => {
       }
     } catch (error) {
       console.error("Contact form error:", error);
+      trackFormSubmit("contact_form", false, { error: "network_error" });
       toast({
         title: t("contactForm.error"),
         variant: "destructive",
@@ -134,6 +138,7 @@ export const ContactForm = () => {
               type="text"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
+              onFocus={() => trackFormInteraction("contact_form", "name", "focus")}
               className={errors.name ? "border-destructive" : ""}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
@@ -155,6 +160,7 @@ export const ContactForm = () => {
               type="email"
               value={formData.email}
               onChange={(e) => handleChange("email", e.target.value)}
+              onFocus={() => trackFormInteraction("contact_form", "email", "focus")}
               className={errors.email ? "border-destructive" : ""}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
@@ -176,6 +182,7 @@ export const ContactForm = () => {
               rows={5}
               value={formData.message}
               onChange={(e) => handleChange("message", e.target.value)}
+              onFocus={() => trackFormInteraction("contact_form", "message", "focus")}
               className={errors.message ? "border-destructive" : ""}
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}

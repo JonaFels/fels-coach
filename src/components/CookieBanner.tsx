@@ -3,6 +3,13 @@ import { Cookie, Settings, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  setDefaultConsent,
+  loadGTM,
+  loadGA4,
+  updateConsent,
+  trackEvent,
+} from "@/lib/tracking";
 
 type CookiePreferences = {
   necessary: boolean;
@@ -20,36 +27,10 @@ export const CookieBanner = () => {
     analytics: false,
   });
 
-  // Load GA4 script when analytics is enabled
-  const loadGoogleAnalytics = () => {
-    const GA_MEASUREMENT_ID = "G-879GQ96R5G";
-    
-    // Check if already loaded
-    if (document.querySelector(`script[src*="gtag/js?id=${GA_MEASUREMENT_ID}"]`)) {
-      return;
-    }
-
-    // Load gtag.js script
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    // Initialize gtag
-    (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-    function gtag(...args: unknown[]) {
-      (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
-    }
-    gtag("js", new Date());
-    gtag("config", GA_MEASUREMENT_ID, {
-      anonymize_ip: true,
-      allow_google_signals: false, // Deaktiviert Cross-Device-Profiling
-      allow_ad_personalization_signals: false, // Keine Werbe-Personalisierung
-    });
-
-    // Make gtag available globally
-    (window as unknown as { gtag: typeof gtag }).gtag = gtag;
-  };
+  // Set default consent on mount (before any tracking loads)
+  useEffect(() => {
+    setDefaultConsent();
+  }, []);
 
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
@@ -58,9 +39,11 @@ export const CookieBanner = () => {
     } else {
       const savedPrefs = JSON.parse(consent);
       setPreferences(savedPrefs);
-      // Load GA if user previously consented
+      // Load tracking if user previously consented
       if (savedPrefs.analytics) {
-        loadGoogleAnalytics();
+        loadGTM();
+        loadGA4();
+        updateConsent(true);
       }
     }
   }, []);
@@ -70,10 +53,15 @@ export const CookieBanner = () => {
     setPreferences(prefs);
     setIsVisible(false);
     setShowPreferences(false);
-    
-    // Load or disable analytics based on preference
+
     if (prefs.analytics) {
-      loadGoogleAnalytics();
+      loadGTM();
+      loadGA4();
+      updateConsent(true);
+      trackEvent("consent_granted", { consent_type: "analytics" });
+    } else {
+      updateConsent(false);
+      trackEvent("consent_denied", { consent_type: "analytics" });
     }
   };
 

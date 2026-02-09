@@ -3,21 +3,21 @@ import { ArrowRight, Clock, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-// GA4 Event Tracking Helper
-const trackEvent = (eventName: string, eventParams?: Record<string, string>) => {
-  if (typeof window !== "undefined" && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-    (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", eventName, eventParams);
-  }
-};
+import { trackCTAClick } from "@/lib/tracking";
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
 
+  const handleAngeboteClick = () => {
+    trackCTAClick("angebote_button", "homepage_coaching_section", "/angebote");
+  };
+
+  const handleFamilienClick = () => {
+    trackCTAClick("familienaufstellung_button", "homepage_coaching_section", "/familienaufstellung");
+  };
+
   const handleEbookClick = () => {
-    trackEvent("ebook_button_click", {
-      button_location: "homepage_coaching_section",
-    });
+    trackCTAClick("ebook_button", "homepage_coaching_section", "/ebook");
   };
 
   return (
@@ -71,13 +71,13 @@ export const CoachingSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:400ms]">
-            <Button asChild size="lg">
+            <Button asChild size="lg" onClick={handleAngeboteClick}>
               <a href="/angebote">
                 {t("hero.cta")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" onClick={handleFamilienClick}>
               <Link to="/familienaufstellung">
                 {t("coaching.learnMore")}
               </Link>
