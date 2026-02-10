@@ -20,7 +20,8 @@ const Impressum = () => {
             <CardContent className="pt-8 prose prose-slate dark:prose-invert max-w-none">
               <h3>Angaben gemäß § 5 DDG</h3>
               <p>
-                Jona Fels<br />
+                Jona Fels – Systemisches Coaching & Familienaufstellungen<br />
+                Inhaber: Jona Fels<br />
                 Egonstraße 91<br />
                 79106 Freiburg
               </p>
@@ -49,6 +50,7 @@ const Impressum = () => {
 
               <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
               <p>
+                Jona Fels – Systemisches Coaching & Familienaufstellungen<br />
                 Jona Fels<br />
                 Egonstraße 91<br />
                 79106 Freiburg
