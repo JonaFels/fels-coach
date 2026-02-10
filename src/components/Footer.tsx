@@ -12,7 +12,7 @@ export const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <p className="font-serif text-lg font-semibold">
-              Jona Fels
+              Jona Fels – Systemisches Coaching & Familienaufstellungen
             </p>
             <p className="text-sm text-primary-foreground/70 mt-1">
               © {currentYear} {t("footer.rights")}

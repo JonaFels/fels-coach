@@ -26,7 +26,8 @@ const Datenschutz = () => {
               <h2>1. Verantwortlicher</h2>
               <p>Verantwortlich für die Datenverarbeitung auf dieser Webseite ist:</p>
               <p>
-                Jona Fels<br />
+                Jona Fels – Systemisches Coaching & Familienaufstellungen<br />
+                Inhaber: Jona Fels<br />
                 Egonstraße 91<br />
                 79106 Freiburg<br />
                 E-Mail: <a href="mailto:info@fels-coach.de">info@fels-coach.de</a>
