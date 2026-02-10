@@ -18,7 +18,7 @@ const __dirname = dirname(__filename);
 const staticRoutes = [
   { path: '/', folder: null }, // Root bleibt index.html
   { path: '/angebote', folder: 'angebote' },
-  { path: '/familienaufstellung', folder: 'familienaufstellung' },
+  { path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg' },
   { path: '/ebook', folder: 'ebook' },
   { path: '/kontakt', folder: 'kontakt' },
   { path: '/ueber-mich', folder: 'ueber-mich' },
