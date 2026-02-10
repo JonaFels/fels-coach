@@ -100,8 +100,8 @@ export const translations: Translations = {
     en: "Your System Audit",
   },
   "coaching.detail1": {
-    de: "60 min präzise Ursachenarbeit",
-    en: "60 min precise root cause work",
+    de: "80 min präzise Ursachenarbeit",
+    en: "80 min precise root cause work",
   },
   "coaching.detail2": {
     de: "Strukturelles Mapping deiner inneren Dynamik",

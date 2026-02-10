@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -10,38 +9,46 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const faqData = {
   de: [
     {
-      question: "Was genau passiert bei einer systemischen Familienaufstellung?",
-      answer: "In einer Aufstellung machen wir unbewusste Dynamiken innerhalb deines Familiensystems sichtbar. In meiner Praxis in Freiburg arbeiten wir im 1:1 Setting mit sogenannten Bodenankern oder Figuren. So kannst du Verstrickungen von außen betrachten und neue, lösende Bilder für dein System entwickeln.",
+      question: "Was ist eine systemische Familienaufstellung und wie läuft sie bei Jona Fels in Freiburg ab?",
+      answer: "Eine systemische Familienaufstellung macht verborgene Dynamiken in Systemen sichtbar. In meiner Praxis in der Karlstraße 51 (Freiburg) schauen wir uns in geschützter Atmosphäre an, was im Argen liegt, und erarbeiten gemeinsam nachhaltige Lösungswege für Ihre Blockaden.",
     },
     {
-      question: "Für wen ist ein Coaching bei dir geeignet?",
-      answer: "Mein Coaching richtet sich an Menschen, die immer wieder vor den gleichen emotionalen oder beruflichen Blockaden stehen. Wenn du das Gefühl hast, dass dich alte Muster oder familiäre Lasten zurückhalten, bietet die systemische Arbeit schnelle und tiefgreifende Klarheit.",
+      question: "Was kostet ein Coaching oder eine Familienaufstellung?",
+      answer: "Transparenz ist mir wichtig: Eine Sitzung (Coaching oder Aufstellung) kostet 80 € pro Stunde. Mein Ziel ist es, Ihnen effiziente und wirkungsvolle Impulse zu geben, die Sie wirklich weiterbringen.",
     },
     {
-      question: "Wo findet das Coaching in Freiburg statt?",
-      answer: "Die Sitzungen finden in einem ruhigen und geschützten Rahmen in der Egonstraße 91, 79106 Freiburg im Breisgau statt. Die Praxis ist zentral gelegen und gut erreichbar.",
+      question: "Bietest du auch Termine am Wochenende an?",
+      answer: "Ja, absolut. Da viele meiner Klienten berufstätig sind, biete ich meine Sitzungen spezialisiert am Samstag zwischen 14:00 und 20:00 Uhr an. So haben Sie die nötige Ruhe, um sich ohne Alltagsstress auf den Prozess einzulassen.",
     },
     {
-      question: "Wie viele Termine sind notwendig?",
-      answer: "Das Schöne an der systemischen Aufstellung ist ihre Effizienz. Oft bringt bereits eine einzige Sitzung (ca. 90 Minuten) den entscheidenden Durchbruch. Wir entscheiden nach dem ersten Kennenlernen gemeinsam, ob weitere Begleitung sinnvoll ist.",
+      question: "Wo findet das Coaching statt und gibt es auch Online-Optionen?",
+      answer: "Sie finden mich zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Für Klienten, die nicht aus der Region kommen oder Flexibilität bevorzugen, biete ich alle Coaching-Sitzungen auch per Video-Call (Online-Coaching) an.",
+    },
+    {
+      question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
+      answer: "Der erste Schritt ist ganz einfach: Fragen Sie über den Button auf der Webseite ein kostenloses 15-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich Sie am besten unterstützen kann – völlig unverbindlich.",
     },
   ],
   en: [
     {
-      question: "What exactly happens during a systemic family constellation?",
-      answer: "In a constellation, we make unconscious dynamics within your family system visible. In my practice in Freiburg, we work in a 1:1 setting with so-called floor anchors or figures. This allows you to observe entanglements from the outside and develop new, resolving images for your system.",
+      question: "What is a systemic family constellation and how does it work with Jona Fels in Freiburg?",
+      answer: "A systemic family constellation makes hidden dynamics in systems visible. In my practice at Karlstraße 51 (Freiburg), we explore what needs attention in a safe atmosphere and develop sustainable solutions for your blockages together.",
     },
     {
-      question: "Who is your coaching suitable for?",
-      answer: "My coaching is aimed at people who repeatedly face the same emotional or professional blocks. If you feel that old patterns or family burdens are holding you back, systemic work offers quick and profound clarity.",
+      question: "What does a coaching session or family constellation cost?",
+      answer: "Transparency is important to me: A session (coaching or constellation) costs €80 per hour. My goal is to give you efficient and effective impulses that truly move you forward.",
     },
     {
-      question: "Where does coaching take place in Freiburg?",
-      answer: "Sessions take place in a quiet and protected setting at Egonstraße 91, 79106 Freiburg im Breisgau. The practice is centrally located and easily accessible.",
+      question: "Do you also offer appointments on weekends?",
+      answer: "Yes, absolutely. Since many of my clients work during the week, I specialize in offering sessions on Saturdays between 2:00 PM and 8:00 PM. This gives you the peace needed to engage in the process without everyday stress.",
     },
     {
-      question: "How many sessions are necessary?",
-      answer: "The beauty of systemic constellation is its efficiency. Often a single session (approx. 90 minutes) brings the decisive breakthrough. After the initial meeting, we decide together whether further support makes sense.",
+      question: "Where does coaching take place and are there online options?",
+      answer: "You can find me centrally located at Karlstraße 51, 79104 Freiburg im Breisgau. For clients who are not from the region or prefer flexibility, I offer all coaching sessions via video call (online coaching) as well.",
+    },
+    {
+      question: "How can I get started and is a preliminary consultation possible?",
+      answer: "The first step is simple: Request a free 15-minute preliminary consultation via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
     },
   ],
 };
@@ -49,35 +56,6 @@ const faqData = {
 export const FAQSection = () => {
   const { language, t } = useLanguage();
   const faqs = faqData[language];
-
-  useEffect(() => {
-    // Add FAQ structured data
-    const existing = document.querySelector('script[data-faq="true"]');
-    if (existing) existing.remove();
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-faq", "true");
-    script.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
-  }, [faqs]);
 
   return (
     <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="faq-heading">
