@@ -33,6 +33,10 @@ export const translations: Translations = {
     de: "Termin buchen",
     en: "Book Appointment",
   },
+  "nav.contact": {
+    de: "Kostenlos anfragen",
+    en: "Contact Us Free",
+  },
   "nav.angebote": {
     de: "Angebote",
     en: "Offers",
@@ -68,6 +72,14 @@ export const translations: Translations = {
   "hero.microcopy": {
     de: "Völlig unverbindlich & persönlich – 15 Minuten, die Klarheit schaffen.",
     en: "Completely non-binding & personal – 15 minutes that create clarity.",
+  },
+  "hero.ctaConsultation": {
+    de: "Kostenloses Erstgespräch vereinbaren",
+    en: "Schedule Free Initial Consultation",
+  },
+  "hero.ctaMicrocopy": {
+    de: "Unverbindlich & persönlich – 15 Min., die Klarheit schaffen.",
+    en: "Non-binding & personal – 15 min. that create clarity.",
   },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
