@@ -9,6 +9,7 @@ import { AuthorBox } from "@/components/AuthorBox";
 import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/profil-bild-schwarz.png";
+import pflanzeDeko from "@/assets/pflanze-deko.jpg";
 
 const UeberMich = () => {
   const { t } = useLanguage();
@@ -17,7 +18,19 @@ const UeberMich = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PageBackground>
+
+      {/* Hero Banner with visible plant image */}
+      <div className="relative h-48 md:h-64 overflow-hidden">
+        <img 
+          src={pflanzeDeko} 
+          alt="Grüne Pflanze – Wachstum und Begleitung" 
+          className="w-full h-full object-cover no-fade"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+      </div>
+
+      <PageBackground className="!pt-8">
         <article className="container mx-auto px-4 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">

@@ -4,7 +4,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { ArrowRight, BookOpen, Phone } from "lucide-react";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
-import pflanzeDeko from "@/assets/pflanze-deko.jpg";
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -17,10 +16,6 @@ export const Hero = () => {
 
   return (
     <section className="relative py-24 md:py-36 overflow-hidden">
-      {/* Decorative plant */}
-      <div className="absolute right-0 top-0 h-full w-1/3 opacity-[0.07] pointer-events-none hidden md:block">
-        <img src={pflanzeDeko} alt="" aria-hidden="true" className="h-full w-full object-cover no-fade" loading="eager" />
-      </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight animate-fade-in-up">

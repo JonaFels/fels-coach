@@ -4,18 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import pflanzeDeko from "@/assets/pflanze-deko.jpg";
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
-      {/* Decorative plant – left side */}
-      <div className="absolute left-0 top-0 h-full w-1/4 opacity-[0.05] pointer-events-none hidden lg:block">
-        <img src={pflanzeDeko} alt="" aria-hidden="true" className="h-full w-full object-cover no-fade" />
-      </div>
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 md:py-28">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Intro */}
           <p className="text-center text-secondary font-medium mb-4 animate-fade-in-up">

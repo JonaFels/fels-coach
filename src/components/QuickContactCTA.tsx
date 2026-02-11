@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
-import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 export const QuickContactCTA = () => {
   const { t } = useLanguage();
@@ -16,12 +15,8 @@ export const QuickContactCTA = () => {
   };
 
   return (
-    <section className="relative py-20 md:py-28 bg-transparent overflow-hidden">
-      {/* Decorative leaves */}
-      <div className="absolute left-0 bottom-0 h-full w-1/3 opacity-[0.06] pointer-events-none hidden md:block">
-        <img src={blaetterDeko} alt="" aria-hidden="true" className="h-full w-full object-cover no-fade" />
-      </div>
-      <div className="container mx-auto px-4 max-w-3xl text-center relative z-10">
+    <section className="py-20 md:py-28 bg-muted/30">
+      <div className="container mx-auto px-4 max-w-3xl text-center">
         <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
           {t("quickCTA.headline")}
         </h2>

@@ -17,13 +17,9 @@ const Index = () => {
       <Header />
       <main id="main-content">
         <Hero />
-        <div className="bg-muted py-4">
-          <TrustBadges />
-        </div>
+        <TrustBadges />
         <CoachingSection />
-        <div className="bg-accent py-4">
-          <QuickContactCTA />
-        </div>
+        <QuickContactCTA />
         <FAQSection />
       </main>
       <Footer />
