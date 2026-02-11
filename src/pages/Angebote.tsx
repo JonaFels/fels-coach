@@ -75,8 +75,8 @@ const Angebote = () => {
           <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
             {t("offerings.ablaufTitle")}
           </h2>
-          <p className="text-sm text-muted-foreground text-center mb-10">
-            Kein starres Programm – sondern ein Weg, der sich nach dir richtet.
+          <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
+            Kein starres Programm – sondern ein Weg, der sich ganz nach dir richtet.
           </p>
           <ol className="space-y-6">
             {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (
