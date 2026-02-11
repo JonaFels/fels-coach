@@ -24,7 +24,7 @@ const UeberMich = () => {
         <img 
           src={pflanzeDeko} 
           alt="Grüne Pflanze – Wachstum und Begleitung" 
-          className="w-full h-full object-cover object-[center_70%] no-fade"
+          className="w-full h-full object-cover object-[center_40%] no-fade"
           loading="eager"
         />
         
