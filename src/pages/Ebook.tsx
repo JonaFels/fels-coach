@@ -16,6 +16,7 @@ import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const ebookSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -112,7 +113,19 @@ const Ebook = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PageBackground>
+
+      {/* Hero Banner with visible leaves image */}
+      <div className="relative h-48 md:h-64 overflow-hidden">
+        <img 
+          src={blaetterDeko} 
+          alt="Grüne Blätter – Wissen und Wachstum" 
+          className="w-full h-full object-cover no-fade"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+      </div>
+
+      <PageBackground className="!pt-8">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -270,7 +283,6 @@ const Ebook = () => {
             </Link>
           </nav>
 
-          {/* Author Box */}
           <AuthorBox />
         </div>
       </PageBackground>

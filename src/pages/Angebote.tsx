@@ -11,7 +11,6 @@ import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import pflanzeDeko from "@/assets/pflanze-deko.jpg";
-import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const offerings = [
   {
@@ -37,18 +36,20 @@ const Angebote = () => {
       <SEOHead />
       <Header />
 
-      {/* Hero – warm & einladend mit dekorativem Bild */}
-      <section className="relative bg-background py-24 md:py-36 overflow-hidden">
-        {/* Decorative plant image */}
-        <div className="absolute right-0 top-0 h-full w-1/3 opacity-[0.08] pointer-events-none hidden md:block">
-          <img
-            src={pflanzeDeko}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full object-cover no-fade"
-          />
-        </div>
-        <div className="container mx-auto px-4 text-center max-w-[700px] relative z-10">
+      {/* Hero Banner with visible plant image */}
+      <div className="relative h-48 md:h-64 overflow-hidden">
+        <img 
+          src={pflanzeDeko} 
+          alt="Grüne Pflanze – Wachstum und Veränderung" 
+          className="w-full h-full object-cover no-fade"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+      </div>
+
+      {/* Hero Text */}
+      <section className="bg-background py-16 md:py-20">
+        <div className="container mx-auto px-4 text-center max-w-[700px]">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8">
             {t("offerings.title")}
           </h1>
@@ -101,18 +102,9 @@ const Angebote = () => {
         </div>
       </section>
 
-      {/* Einladung zum Erstgespräch – mit Blätter-Bild */}
-      <section className="relative bg-accent py-20 md:py-28 overflow-hidden">
-        {/* Decorative leaves image */}
-        <div className="absolute left-0 bottom-0 h-full w-1/3 opacity-[0.06] pointer-events-none hidden md:block">
-          <img
-            src={blaetterDeko}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full object-cover no-fade"
-          />
-        </div>
-        <div className="container mx-auto px-4 text-center max-w-lg relative z-10">
+      {/* Einladung zum Erstgespräch */}
+      <section className="bg-accent py-20 md:py-28">
+        <div className="container mx-auto px-4 text-center max-w-lg">
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
             Der erste Schritt ist ein Gespräch
           </h2>

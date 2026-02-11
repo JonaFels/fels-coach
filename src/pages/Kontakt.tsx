@@ -12,6 +12,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
 import { QuickRequestForm } from "@/components/QuickRequestForm";
+import pflanzeDeko from "@/assets/pflanze-deko.jpg";
 
 const Kontakt = () => {
   const { t } = useLanguage();
@@ -22,7 +23,6 @@ const Kontakt = () => {
   useEffect(() => {
     if (location.hash === "#rueckruf" && callbackRef.current) {
       callbackRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
-      // Add highlight effect
       callbackRef.current.classList.add("ring-2", "ring-secondary", "ring-offset-2");
       setTimeout(() => {
         callbackRef.current?.classList.remove("ring-2", "ring-secondary", "ring-offset-2");
@@ -34,7 +34,19 @@ const Kontakt = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PageBackground>
+
+      {/* Hero Banner with visible plant image */}
+      <div className="relative h-48 md:h-64 overflow-hidden">
+        <img 
+          src={pflanzeDeko} 
+          alt="Grüne Pflanze – Kontakt und Verbindung" 
+          className="w-full h-full object-cover no-fade"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+      </div>
+
+      <PageBackground className="!pt-8">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-4">
             {t("contact.headline")}
@@ -43,15 +55,12 @@ const Kontakt = () => {
             {t("contact.text")}
           </p>
 
-          {/* Quick Request Section - Most Prominent */}
+          {/* Quick Request Section */}
           <div className="mb-12">
             <div className="grid gap-6 md:grid-cols-2">
-              {/* Option A: Quick Callback */}
               <div ref={callbackRef} className="transition-all duration-500 rounded-lg">
                 <QuickRequestForm />
               </div>
-
-              {/* Option B: Direct Booking */}
               <Card className="bg-card/95 backdrop-blur-sm border-secondary/20">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-2 mb-3">
@@ -84,10 +93,7 @@ const Kontakt = () => {
 
           {/* Alternative Contact Options */}
           <div className="grid gap-8 md:grid-cols-2 mb-8">
-            {/* Full Contact Form */}
             <ContactForm />
-
-            {/* Direct Contact Methods */}
             <Card className="bg-card/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <h3 className="font-serif text-lg font-medium text-foreground mb-4">
