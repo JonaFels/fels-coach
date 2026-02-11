@@ -16,19 +16,14 @@ const Index = () => {
       <JsonLd />
       <Header />
       <main id="main-content">
-        {/* Hero: warm off-white background (default) */}
         <Hero />
-        {/* Trust: sand section */}
-        <div className="bg-muted">
+        <div className="bg-muted py-4">
           <TrustBadges />
         </div>
-        {/* Coaching: default background */}
         <CoachingSection />
-        {/* CTA: sage-gray section */}
-        <div className="bg-accent">
+        <div className="bg-accent py-4">
           <QuickContactCTA />
         </div>
-        {/* FAQ: default background */}
         <FAQSection />
       </main>
       <Footer />
