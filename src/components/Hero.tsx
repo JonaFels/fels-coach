@@ -18,7 +18,7 @@ export const Hero = () => {
   return (
     <>
       {/* Hero Banner */}
-      <div className="relative h-48 md:h-64 overflow-hidden">
+      <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
         <img 
           src={pflanzeDeko} 
           alt="Grüne Pflanze – Wachstum und Veränderung" 
