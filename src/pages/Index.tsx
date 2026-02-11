@@ -5,10 +5,9 @@ import { TrustBadges } from "@/components/TrustBadges";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
-import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
- import { QuickContactCTA } from "@/components/QuickContactCTA";
+import { QuickContactCTA } from "@/components/QuickContactCTA";
 
 const Index = () => {
   return (
@@ -17,12 +16,19 @@ const Index = () => {
       <JsonLd />
       <Header />
       <main id="main-content">
-        <PageBackground className="py-0">
-          <Hero />
+        {/* Hero: warm off-white background (default) */}
+        <Hero />
+        {/* Trust: sand section */}
+        <div className="bg-muted">
           <TrustBadges />
-          <CoachingSection />
+        </div>
+        {/* Coaching: default background */}
+        <CoachingSection />
+        {/* CTA: sage-gray section */}
+        <div className="bg-accent">
           <QuickContactCTA />
-        </PageBackground>
+        </div>
+        {/* FAQ: default background */}
         <FAQSection />
       </main>
       <Footer />

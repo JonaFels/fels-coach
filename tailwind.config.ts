@@ -53,9 +53,10 @@ export default {
         },
         fels: {
           charcoal: "hsl(var(--fels-charcoal))",
-          slate: "hsl(var(--fels-slate))",
-          stone: "hsl(var(--fels-stone))",
+          sage: "hsl(var(--fels-sage))",
+          sand: "hsl(var(--fels-sand))",
           cream: "hsl(var(--fels-cream))",
+          "sage-gray": "hsl(var(--fels-sage-gray))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
