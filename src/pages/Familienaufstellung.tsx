@@ -33,7 +33,7 @@ const Familienaufstellung = () => {
         <img 
           src={blaetterDeko} 
           alt="Grüne Blätter – Natur und Wachstum" 
-          className="w-full h-full object-cover no-fade"
+          className="w-full h-full object-cover object-[center_60%] no-fade"
           loading="eager"
         />
         
