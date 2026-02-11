@@ -154,8 +154,8 @@ export const translations: Translations = {
     en: "In a brief preliminary talk (15 min, free) we clarify your concern together and see if my approach fits your situation.",
   },
   "offerings.step2": {
-    de: "In der ersten Sitzung arbeiten wir direkt an deinem Thema – mit systemischem Blick und konkreten Impulsen, die du mitnehmen kannst.",
-    en: "In the first session we work directly on your topic – with a systemic perspective and concrete impulses you can take with you.",
+    de: "In der ersten Sitzung entscheidest du, wie tief wir gehen: Wir können direkt loslegen und an deinem Thema arbeiten – oder es bleibt ein offenes Kennenlernen, in dem wir schauen, was dran ist. Beides ist genau richtig.",
+    en: "In the first session you decide how deep we go: We can start working on your topic right away – or it stays an open get-to-know, where we explore what's present. Either way is perfectly fine.",
   },
   "offerings.step3": {
     de: "Wie es weitergeht, besprechen wir offen. Ich gebe dir meine ehrliche Einschätzung – die Entscheidung liegt bei dir.",
