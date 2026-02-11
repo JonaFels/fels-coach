@@ -29,7 +29,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-40 w-full bg-muted/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" className="flex-shrink-0 flex items-center gap-3">
