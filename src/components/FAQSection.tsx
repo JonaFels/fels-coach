@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const faqData = {
   de: [
     {
-      question: "Was ist eine systemische Familienaufstellung und wie läuft sie bei Jona Fels in Freiburg ab?",
+      question: "Was ist eine systemische Familienaufstellung und wie läuft sie bei mir in Freiburg ab?",
       answer: "Eine systemische Familienaufstellung macht verborgene Dynamiken in Systemen sichtbar. In meiner Praxis in der Karlstraße 51 (Freiburg) schauen wir uns in geschützter Atmosphäre an, was im Argen liegt, und erarbeiten gemeinsam nachhaltige Lösungswege für Ihre Blockaden.",
     },
     {
@@ -31,7 +31,7 @@ const faqData = {
   ],
   en: [
     {
-      question: "What is a systemic family constellation and how does it work with Jona Fels in Freiburg?",
+      question: "What is a systemic family constellation and how does it work with me in Freiburg?",
       answer: "A systemic family constellation makes hidden dynamics in systems visible. In my practice at Karlstraße 51 (Freiburg), we explore what needs attention in a safe atmosphere and develop sustainable solutions for your blockages together.",
     },
     {

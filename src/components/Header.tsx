@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
 
 const NAV_ITEMS = [
-  { key: "nav.coaching", href: "/" },
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
   { key: "nav.ebook", href: "/ebook" },
   { key: "nav.blog", href: "/blog" },
@@ -31,9 +30,9 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/angebote" className="flex-shrink-0">
-            <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground tracking-tight">
-              Systemisches Coaching
+          <a href="/" className="flex-shrink-0">
+            <h1 className="font-serif text-sm md:text-lg font-semibold text-foreground tracking-tight leading-tight">
+              Jona Fels – Systemisches Coaching
             </h1>
           </a>
 
