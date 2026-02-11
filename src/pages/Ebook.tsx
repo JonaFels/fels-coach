@@ -122,7 +122,7 @@ const Ebook = () => {
           className="w-full h-full object-cover no-fade"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+        
       </div>
 
       <PageBackground className="!pt-8">
