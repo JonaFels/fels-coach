@@ -6,11 +6,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
-import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
+import pflanzeDeko from "@/assets/pflanze-deko.jpg";
+import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const offerings = [
   {
@@ -36,10 +37,19 @@ const Angebote = () => {
       <SEOHead />
       <Header />
 
-      {/* Hero – warm & einladend */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+      {/* Hero – warm & einladend mit dekorativem Bild */}
+      <section className="relative bg-background py-24 md:py-36 overflow-hidden">
+        {/* Decorative plant image */}
+        <div className="absolute right-0 top-0 h-full w-1/3 opacity-[0.08] pointer-events-none hidden md:block">
+          <img
+            src={pflanzeDeko}
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover no-fade"
+          />
+        </div>
+        <div className="container mx-auto px-4 text-center max-w-[700px] relative z-10">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8">
             {t("offerings.title")}
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -49,17 +59,17 @@ const Angebote = () => {
       </section>
 
       {/* Werte – was dich hier erwartet */}
-      <section className="bg-muted/60 py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="grid gap-8 md:grid-cols-3 text-center">
+      <section className="bg-muted py-20 md:py-28">
+        <div className="container mx-auto px-4 max-w-[700px]">
+          <div className="grid gap-10 md:grid-cols-3 text-center">
             {[
               { icon: Heart, label: "Einfühlsam", desc: "Ich höre dir zu – ohne Bewertung, mit echtem Interesse." },
               { icon: Shield, label: "Geschützter Rahmen", desc: "Alles bleibt vertraulich. Dein Tempo bestimmt den Weg." },
               { icon: Sparkles, label: "Nachhaltig", desc: "Wir arbeiten an Lösungen, die in deinem Alltag wirken." },
             ].map((val) => (
-              <div key={val.label} className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <val.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+              <div key={val.label} className="flex flex-col items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                  <val.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="font-serif text-base font-semibold text-foreground">{val.label}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{val.desc}</p>
@@ -70,34 +80,43 @@ const Angebote = () => {
       </section>
 
       {/* Ablauf – sanfte Schritte */}
-      <section className="bg-background py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-2xl">
+      <section className="bg-background py-20 md:py-28">
+        <div className="container mx-auto px-4 max-w-[700px]">
           <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
             {t("offerings.ablaufTitle")}
           </h2>
-          <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
+          <p className="text-sm text-muted-foreground text-center mb-12 leading-relaxed">
             Kein starres Programm – sondern ein Weg, der sich ganz nach dir richtet.
           </p>
-          <ol className="space-y-6">
+          <ol className="space-y-8">
             {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (
-              <li key={key} className="flex items-start gap-5">
-                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold mt-0.5">
+              <li key={key} className="flex items-start gap-6">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold mt-0.5">
                   {i + 1}
                 </span>
-                <p className="text-muted-foreground leading-relaxed pt-1">{t(key)}</p>
+                <p className="text-muted-foreground leading-relaxed pt-2">{t(key)}</p>
               </li>
             ))}
           </ol>
         </div>
       </section>
 
-      {/* Einladung zum Erstgespräch */}
-      <section className="bg-accent/40 py-16 md:py-20">
-        <div className="container mx-auto px-4 text-center max-w-lg">
-          <h2 className="font-serif text-2xl font-semibold text-foreground mb-3">
+      {/* Einladung zum Erstgespräch – mit Blätter-Bild */}
+      <section className="relative bg-accent py-20 md:py-28 overflow-hidden">
+        {/* Decorative leaves image */}
+        <div className="absolute left-0 bottom-0 h-full w-1/3 opacity-[0.06] pointer-events-none hidden md:block">
+          <img
+            src={blaetterDeko}
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover no-fade"
+          />
+        </div>
+        <div className="container mx-auto px-4 text-center max-w-lg relative z-10">
+          <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
             Der erste Schritt ist ein Gespräch
           </h2>
-          <p className="text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-muted-foreground mb-10 leading-relaxed">
             In einem kurzen, kostenlosen Vorgespräch klären wir gemeinsam, ob und wie ich dich unterstützen kann. Ganz ohne Verpflichtung.
           </p>
           {showForm ? (
@@ -117,27 +136,27 @@ const Angebote = () => {
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("hero.ctaConsultation")}
               </Button>
-              <p className="mt-3 text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
+              <p className="mt-4 text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
             </>
           )}
         </div>
       </section>
 
-      {/* Preise – transparent, aber sanft */}
-      <section className="bg-background py-16 md:py-20">
+      {/* Preise – transparent */}
+      <section className="bg-muted py-20 md:py-28">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
+          <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
             {t("offerings.preiseTitle")}
           </h2>
-          <p className="text-sm text-muted-foreground text-center mb-10 max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm text-muted-foreground text-center mb-12 max-w-[600px] mx-auto leading-relaxed">
             {t("offerings.preiseIntro")}
           </p>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             {offerings.map((offering, index) => (
               <Card
                 key={offering.titleKey}
-                className="relative group transition-all duration-300 hover:shadow-md bg-card/95 backdrop-blur-sm border-border/60"
+                className="relative group transition-all duration-300 hover:shadow-md bg-card border-border/60"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader className="pb-4">
@@ -177,7 +196,7 @@ const Angebote = () => {
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <Button
               asChild
               variant="ghost"
@@ -199,7 +218,7 @@ const Angebote = () => {
       </section>
 
       {/* Sanfte interne Links */}
-      <section className="bg-muted/40 py-12">
+      <section className="bg-background py-14">
         <nav className="container mx-auto px-4 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground" aria-label="Verwandte Seiten">
           <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
             Was ist Familienaufstellung?
