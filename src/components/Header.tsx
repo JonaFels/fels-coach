@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
-import profilBild from "@/assets/profil-bild-schwarz.png";
+import logoIcon from "/favicon-96x96.png";
 
 const NAV_ITEMS = [
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
@@ -34,9 +34,9 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" className="flex-shrink-0 flex items-center gap-3">
             <img
-              src={profilBild}
+              src={logoIcon}
               alt="Jona Fels"
-              className="h-9 w-9 md:h-10 md:w-10 rounded-full object-cover"
+              className="h-8 w-8 md:h-9 md:w-9 object-contain"
             />
             <h1 className="font-serif text-sm md:text-lg font-semibold text-foreground tracking-tight leading-tight">
               Jona Fels – Systemisches Coaching

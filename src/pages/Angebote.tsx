@@ -22,7 +22,7 @@ const offerings = [
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
-    price: 80,
+    price: 50,
     href: "https://cal.com/fels-coach/coaching-termin",
   },
 ];
@@ -115,7 +115,7 @@ const Angebote = () => {
                       <span className="text-xl font-semibold text-foreground">
                         {offering.price}€
                       </span>
-                      <span className="text-sm text-muted-foreground">/ Stunde</span>
+                      <span className="text-sm text-muted-foreground">/ 80 Min.</span>
                     </div>
                   </CardContent>
                   <CardFooter>
