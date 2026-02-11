@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const faqData = {
   de: [
@@ -58,8 +59,12 @@ export const FAQSection = () => {
   const faqs = faqData[language];
 
   return (
-    <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="faq-heading">
-      <div className="container mx-auto px-4 max-w-3xl">
+    <section className="relative py-20 md:py-28 bg-muted/30 overflow-hidden" aria-labelledby="faq-heading">
+      {/* Decorative leaves – right side */}
+      <div className="absolute right-0 bottom-0 h-full w-1/4 opacity-[0.05] pointer-events-none hidden lg:block">
+        <img src={blaetterDeko} alt="" aria-hidden="true" className="h-full w-full object-cover no-fade" />
+      </div>
+      <div className="container mx-auto px-4 max-w-3xl relative z-10">
         <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
           {language === 'de' ? 'Häufige Fragen' : 'Common Questions'}
         </p>
