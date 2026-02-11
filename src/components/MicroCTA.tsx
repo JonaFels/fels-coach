@@ -47,7 +47,7 @@ export const InlineCTA = () => {
 
   return (
     <a
-      href="/angebote"
+      href="/kontakt#rueckruf"
       className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors group"
     >
       {t("cta.learnMore")}

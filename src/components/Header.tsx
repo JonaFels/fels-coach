@@ -52,7 +52,7 @@ export const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Button asChild size="sm" onClick={handleTerminClick}>
-              <a href="/angebote">{t("nav.termin")}</a>
+              <a href="/kontakt#rueckruf">{t("nav.contact")}</a>
             </Button>
           </div>
 
@@ -91,8 +91,8 @@ export const Header = () => {
                 handleTerminClick();
                 setIsMobileMenuOpen(false);
               }}>
-                <a href="/angebote">
-                  {t("nav.termin")}
+                <a href="/kontakt#rueckruf">
+                  {t("nav.contact")}
                 </a>
               </Button>
             </div>
