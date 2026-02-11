@@ -25,10 +25,10 @@ const UeberMich = () => {
               <img 
                 src={profilBild} 
                 alt="Jona Fels - Systemischer Coach und Familienaufsteller in Freiburg" 
-                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-center mx-auto shadow-lg border-4 border-secondary/30"
+                className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-center mx-auto shadow-lg border-4 border-secondary/30"
                 loading="lazy"
-                width="224"
-                height="224"
+                width="320"
+                height="320"
               />
             </div>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
