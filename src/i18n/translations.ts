@@ -142,48 +142,48 @@ export const translations: Translations = {
     en: "How We Work Together",
   },
   "offerings.pageIntro": {
-    de: "Veränderung beginnt damit, sich gesehen zu fühlen. Hier erfährst du, wie unsere gemeinsame Arbeit aussehen kann – in deinem Tempo, in einem geschützten Rahmen.",
-    en: "Change begins with feeling seen. Here you'll learn what our work together can look like – at your pace, in a safe space.",
+    de: "Gute Veränderung braucht einen klaren Rahmen und echtes Vertrauen. Hier siehst du, wie unsere Zusammenarbeit aufgebaut ist – strukturiert, persönlich und auf Augenhöhe.",
+    en: "Meaningful change needs a clear framework and genuine trust. Here you can see how our collaboration is structured – organized, personal, and on equal footing.",
   },
   "offerings.ablaufTitle": {
-    de: "Wie unser gemeinsamer Weg beginnt",
-    en: "How Our Journey Together Begins",
+    de: "So starten wir",
+    en: "How We Get Started",
   },
   "offerings.step1": {
-    de: "Wir sprechen uns kurz (15 Min., kostenlos) – damit du ein Gefühl bekommst, ob die Chemie stimmt und ich der richtige Begleiter für dich bin.",
-    en: "We have a brief chat (15 min, free) – so you can feel whether the connection is right and I'm the right companion for you.",
+    de: "In einem kurzen Vorgespräch (15 Min., kostenlos) klären wir gemeinsam dein Anliegen und schauen, ob mein Ansatz zu deiner Situation passt.",
+    en: "In a brief preliminary talk (15 min, free) we clarify your concern together and see if my approach fits your situation.",
   },
   "offerings.step2": {
-    de: "In deiner ersten Sitzung steigen wir behutsam in dein Thema ein. Du bestimmst, wie tief wir gehen – ich halte den Raum.",
-    en: "In your first session, we gently explore your topic. You set the depth – I hold the space.",
+    de: "In der ersten Sitzung arbeiten wir direkt an deinem Thema – mit systemischem Blick und konkreten Impulsen, die du mitnehmen kannst.",
+    en: "In the first session we work directly on your topic – with a systemic perspective and concrete impulses you can take with you.",
   },
   "offerings.step3": {
-    de: "Danach entscheidest du frei, ob und wie es weitergeht. Kein Abo, kein Druck – nur das, was sich für dich stimmig anfühlt.",
-    en: "Afterwards you freely decide if and how to continue. No subscription, no pressure – only what feels right for you.",
+    de: "Wie es weitergeht, besprechen wir offen. Ich gebe dir meine ehrliche Einschätzung – die Entscheidung liegt bei dir.",
+    en: "We openly discuss how to continue. I give you my honest assessment – the decision is yours.",
   },
   "offerings.preiseTitle": {
-    de: "Investition in dich",
-    en: "An Investment in Yourself",
+    de: "Klare Konditionen",
+    en: "Clear Conditions",
   },
   "offerings.preiseIntro": {
-    de: "Meine Preise sind fair und transparent. Jede Sitzung dauert 80 Minuten – genug Zeit, um wirklich anzukommen. Präsenz in Freiburg oder als Online-Video-Call.",
-    en: "My prices are fair and transparent. Each session lasts 80 minutes – enough time to truly arrive. In-person in Freiburg or as an online video call.",
+    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg oder Online-Video-Call, faire Preise ohne Verstecktes.",
+    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg or online video call, fair prices with nothing hidden.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
     en: "Getting-to-Know Session",
   },
   "offerings.kennenlernen.desc": {
-    de: "Dein sanfter Einstieg: Eine vollwertige erste Sitzung zum reduzierten Preis. Wir schauen gemeinsam auf das, was dich bewegt – ohne Eile, mit voller Aufmerksamkeit.",
-    en: "Your gentle start: A full first session at a reduced price. Together we look at what moves you – without rush, with full attention.",
+    de: "Dein Einstieg zum reduzierten Preis: Eine vollwertige Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten.",
+    en: "Your start at a reduced price: A full session where we place your concern in a systemic context and develop initial approaches.",
   },
   "offerings.coaching.title": {
     de: "Coaching-Sitzung",
     en: "Coaching Session",
   },
   "offerings.coaching.desc": {
-    de: "Dein Raum für Klarheit: In 80 Minuten arbeiten wir an dem, was gerade dran ist – mit systemischem Blick, einfühlsam und lösungsorientiert. Präsenz oder Online.",
-    en: "Your space for clarity: In 80 minutes we work on what matters most right now – with a systemic perspective, empathetically and solution-oriented. In-person or online.",
+    de: "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten. Präsenz oder Online.",
+    en: "80 minutes of focused work on what matters most right now – systemic, solution-oriented, and with concrete next steps. In-person or online.",
   },
   "offerings.paket5.title": {
     de: "5er-Paket",
