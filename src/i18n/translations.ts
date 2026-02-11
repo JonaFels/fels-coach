@@ -38,8 +38,8 @@ export const translations: Translations = {
     en: "Contact Us Free",
   },
   "nav.angebote": {
-    de: "Angebote",
-    en: "Offers",
+    de: "Ablauf & Preise",
+    en: "Process & Pricing",
   },
   "nav.blog": {
     de: "Blog",
@@ -138,8 +138,36 @@ export const translations: Translations = {
 
   // Offerings Section
   "offerings.title": {
-    de: "Buchungsoptionen",
-    en: "Booking Options",
+    de: "So arbeiten wir zusammen",
+    en: "How We Work Together",
+  },
+  "offerings.pageIntro": {
+    de: "Jeder Weg beginnt mit einem ersten Schritt. Hier findest du einen transparenten Überblick über den Ablauf und die Konditionen – ohne Kleingedrucktes, ohne Überraschungen.",
+    en: "Every journey begins with a first step. Here you'll find a transparent overview of the process and conditions – no fine print, no surprises.",
+  },
+  "offerings.ablaufTitle": {
+    de: "Dein Weg zu mir",
+    en: "Your Path to Me",
+  },
+  "offerings.step1": {
+    de: "Kostenloses Vorgespräch (15 Min.) – Wir lernen uns kennen und klären dein Anliegen.",
+    en: "Free preliminary talk (15 min.) – We get to know each other and clarify your concern.",
+  },
+  "offerings.step2": {
+    de: "Kennenlernen-Coaching – Deine erste vollwertige Sitzung zum Einstiegspreis.",
+    en: "Introduction Coaching – Your first full session at an introductory price.",
+  },
+  "offerings.step3": {
+    de: "Reguläre Sitzungen – Du entscheidest, wie es weitergeht. Ohne Vertrag, ohne Verpflichtung.",
+    en: "Regular Sessions – You decide how to continue. No contract, no obligation.",
+  },
+  "offerings.preiseTitle": {
+    de: "Transparente Konditionen",
+    en: "Transparent Conditions",
+  },
+  "offerings.preiseIntro": {
+    de: "Alle Preise sind fair kalkuliert und gelten für Präsenz-Termine in Freiburg sowie Online-Sessions.",
+    en: "All prices are fairly calculated and apply to in-person sessions in Freiburg as well as online sessions.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Coaching",
