@@ -41,7 +41,7 @@ const Angebote = () => {
         <img 
           src={pflanzeDeko} 
           alt="Grüne Pflanze – Wachstum und Veränderung" 
-          className="w-full h-full object-cover object-[center_40%] no-fade"
+          className="w-full h-full object-cover object-[center_70%] no-fade"
           loading="eager"
         />
         

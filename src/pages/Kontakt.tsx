@@ -40,7 +40,7 @@ const Kontakt = () => {
         <img 
           src={pflanzeDeko} 
           alt="Grüne Pflanze – Kontakt und Verbindung" 
-          className="w-full h-full object-cover object-[center_40%] no-fade"
+          className="w-full h-full object-cover object-[center_70%] no-fade"
           loading="eager"
         />
         
