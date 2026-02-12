@@ -18,42 +18,53 @@ const AGB = () => {
 
           <Card>
             <CardContent className="pt-8 prose prose-slate dark:prose-invert max-w-none">
-              <p>Die folgenden Regeln regeln die Buchung, Bezahlung und Absage von Coaching-Terminen bei Jona Fels - systemisches Coaching. Mit der Buchung eines Termins akzeptieren Sie diese Bedingungen.</p>
+              <h2>Allgemeine Geschäftsbedingungen (AGB) & Klienteninformation</h2>
 
-              <h3>1. Terminvereinbarung und Bezahlung</h3>
+              <h3>1. Geltungsbereich</h3>
+              <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Jona Fels – Fels-Coach (nachfolgend „Coach") und seinen Klienten (nachfolgend „Klient"), sofern nichts anderes schriftlich vereinbart wurde. Mit der Buchung einer Leistung (online, telefonisch oder per E-Mail) erkennt der Klient diese AGB an.</p>
+
+              <h3>2. Leistungsangebot & Abgrenzung zur Therapie</h3>
+              <p>Der Coach bietet psychologische Beratung, systemisches Coaching und Familienaufstellungen an.</p>
+              <p><strong>Wichtiger Hinweis:</strong> Das Coaching ist keine Psychotherapie und ersetzt keine medizinische oder psychiatrische Behandlung. Der Coach stellt keine Diagnosen und gibt keine Heilversprechen ab.</p>
+              <p>Die Teilnahme setzt eine normale psychische und physische Belastbarkeit voraus. Klienten, die sich in psychiatrischer Behandlung befinden, sind verpflichtet, dies vorab mitzuteilen.</p>
+
+              <h3>3. Vertragsschluss & Terminbuchung</h3>
+              <p>Ein Vertrag kommt durch die Buchung eines Termins über das Online-Tool (z.&nbsp;B. Orbnet/Cal.com), per E-Mail oder durch schriftliche Bestätigung eines Angebots zustande.</p>
+              <p>Bei Buchungen über externe Tools gelten ergänzend deren Nutzungsbedingungen, wobei diese AGB im Verhältnis zwischen Coach und Klient vorrangig sind.</p>
+
+              <h3>4. Vergütung & Zahlungsbedingungen</h3>
               <ul>
-                <li><strong>Zustandekommen des Vertrags:</strong> Die Buchung eines Termins über unser System (Acuity Scheduling) stellt ein verbindliches Vertragsangebot dar. Der Vertrag kommt mit der Terminbestätigung zustande.</li>
-                <li><strong>Bezahlung:</strong> Die vereinbarte Gebühr wird in der Regel sofort bei der Buchung fällig und ist für die Bestätigung des Termins erforderlich.</li>
+                <li>Es gelten die zum Zeitpunkt der Buchung auf der Webseite <a href="https://www.fels-coach.de" target="_blank" rel="noopener noreferrer">fels-coach.de</a> veröffentlichten Preise.</li>
+                <li>Das Honorar ist, sofern nicht anders vereinbart, innerhalb von 14 Tagen nach Rechnungsstellung ohne Abzug fällig.</li>
+                <li><strong>Kleinunternehmerstatus:</strong> Gemäß § 19 UStG wird keine Umsatzsteuer erhoben und folglich auch nicht auf der Rechnung ausgewiesen.</li>
               </ul>
 
-              <h3>2. Stornierung und Umbuchung</h3>
-              <p>Um eine effiziente Terminplanung zu gewährleisten und die Zeit für andere Klienten freigeben zu können, gelten folgende Regelungen für Stornierungen und Umbuchungen:</p>
+              <h3>5. Stornierungsbedingungen (Absagen durch den Klienten)</h3>
               <ul>
-                <li><strong>Kostenfreie Absage/Umbuchung:</strong> Eine Stornierung oder Umbuchung des Termins ist bis spätestens 48 Stunden vor dem vereinbarten Termin kostenfrei möglich. In diesem Fall wird der volle Betrag zurückerstattet bzw. für die Umbuchung gutgeschrieben.</li>
-                <li><strong>Kurzfristige Absage (weniger als 48 Stunden):</strong> Erfolgt eine Stornierung oder Umbuchung nach Ablauf der 48-Stunden-Frist bis zum Terminbeginn, wird das volle vereinbarte Honorar fällig. Eine Rückerstattung des bereits gezahlten Betrags erfolgt in diesem Fall nicht.</li>
+                <li>Ein vereinbarter Termin kann bis zu <strong>24 Stunden</strong> vor Beginn kostenfrei abgesagt oder verschoben werden.</li>
+                <li>Bei Absagen weniger als 24 Stunden vor dem Termin oder bei Nichterscheinen wird das Honorar in voller Höhe (100 %) als Ausfallentschädigung fällig, da der Termin kurzfristig nicht neu belegt werden kann.</li>
+                <li>Die Absage muss schriftlich (E-Mail) oder über das Buchungssystem erfolgen.</li>
               </ul>
 
-              <h3>3. Verschiebung aus wichtigem Grund</h3>
+              <h3>6. Absage durch den Coach</h3>
+              <p>Sollte der Coach einen Termin aus wichtigem Grund (z.&nbsp;B. Krankheit, höhere Gewalt) absagen müssen, wird der Klient schnellstmöglich informiert. In diesem Fall wird ein Ersatztermin vereinbart. Weitergehende Ansprüche (z.&nbsp;B. Reisekosten) sind ausgeschlossen.</p>
+
+              <h3>7. Eigenverantwortung & Haftung</h3>
               <ul>
-                <li>Bei einer Absage aufgrund plötzlich auftretender schwerer und unvorhersehbarer Umstände (z.B. schwere akute Krankheit, Familienunglück, o.ä.) kann der Termin in Absprache und gegen entsprechenden Nachweis (z.B. ärztliches Attest) kostenlos auf einen späteren Zeitpunkt verschoben werden.</li>
-                <li>Die bereits geleistete Zahlung wird in diesem Fall für den Ersatztermin gutgeschrieben.</li>
+                <li>Das Coaching basiert auf Kooperation und gegenseitigem Vertrauen. Der Erfolg hängt maßgeblich von der Mitarbeit des Klienten ab.</li>
+                <li>Der Klient trägt die volle Verantwortung für seine Handlungen und Entscheidungen während und nach den Sitzungen.</li>
+                <li>Die Haftung des Coaches für leichte Fahrlässigkeit wird ausgeschlossen. Die Haftung für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit bleibt unberührt.</li>
               </ul>
 
-              <h3>4. Nichterscheinen</h3>
+              <h3>8. Verschwiegenheit & Datenschutz</h3>
               <ul>
-                <li>Erscheint der Klient ohne vorherige Absage zum vereinbarten Termin nicht, wird das volle vereinbarte Honorar fällig. Eine Rückerstattung des bereits gezahlten Betrags erfolgt in diesem Fall nicht.</li>
+                <li>Der Coach verpflichtet sich zur absoluten Verschwiegenheit über alle im Rahmen des Coachings besprochenen Inhalte.</li>
+                <li>Personenbezogene Daten werden ausschließlich zur Vertragserfüllung gespeichert und verarbeitet. Details regelt die <a href="/datenschutz">Datenschutzerklärung</a>.</li>
               </ul>
 
-              <h3>5. Verspätungen</h3>
-              <ul>
-                <li>Bei einer Verspätung des Klienten verkürzt sich die Dauer der Coachingsitzung entsprechend. Die vereinbarte Gebühr bleibt davon unberührt.</li>
-              </ul>
-
-              <h3>6. Haftungsausschluss</h3>
-              <ul>
-                <li>Das Coaching ersetzt keine Therapie oder ärztliche Behandlung. Die Teilnahme erfolgt in voller Eigenverantwortung und setzt eine normale psychische und physische Belastbarkeit voraus. Bei psychischen Erkrankungen oder Beschwerden ist vorab zwingend ein Arzt oder Therapeut zu konsultieren.</li>
-                <li>Jona Fels - systemisches Coaching übernimmt keine Haftung für Schäden oder Verletzungen, die durch die Nichtbeachtung der Hinweise oder die Selbstüberschätzung des Klienten entstehen.</li>
-              </ul>
+              <h3>9. Widerrufsrecht für Verbraucher</h3>
+              <p>Klienten, die Verbraucher sind, steht ein gesetzliches 14-tägiges Widerrufsrecht zu.</p>
+              <p><strong>Besonderer Hinweis:</strong> Wenn der Klient wünscht, dass die Dienstleistung bereits innerhalb der 14-tägigen Widerrufsfrist beginnt (z.&nbsp;B. bei kurzfristigen Terminen), verzichtet er bei vollständiger Erbringung der Leistung auf sein Widerrufsrecht.</p>
             </CardContent>
           </Card>
         </div>
