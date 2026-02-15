@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import profilBild from "@/assets/profil-bild-schwarz.png";
+import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 export const AuthorBox = () => {
   const { t } = useLanguage();
@@ -13,7 +13,7 @@ export const AuthorBox = () => {
           <Link to="/ueber-mich" className="flex-shrink-0">
             <img
               src={profilBild}
-              alt="Jona Fels - Systemischer Coach und Familienaufsteller"
+              alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
               className="w-24 h-24 rounded-full object-cover object-center border-2 border-secondary/30 hover:border-secondary transition-colors"
               loading="lazy"
             />
