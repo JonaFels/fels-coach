@@ -18,7 +18,7 @@ export const LanguageSwitcher = () => {
           className={cn(
             "text-xs font-medium px-2.5 py-1 rounded-full transition-all duration-200",
             language === lang.code
-              ? "bg-secondary text-secondary-foreground shadow-sm"
+              ? "bg-secondary/40 text-foreground shadow-sm"
               : "text-muted-foreground hover:text-foreground"
           )}
         >
