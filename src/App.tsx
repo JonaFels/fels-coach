@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ChatbaseWidget } from "@/components/ChatbaseWidget";
+import { OrbnetFAB } from "@/components/OrbnetBooking";
 import { useAppTracking } from "@/hooks/useTracking";
 import Index from "./pages/Index";
 import Angebote from "./pages/Angebote";
@@ -38,6 +39,7 @@ const App = () => (
           <AppTracking />
           <ScrollToTop />
           <ChatbaseWidget />
+          <OrbnetFAB />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/angebote" element={<Angebote />} />
