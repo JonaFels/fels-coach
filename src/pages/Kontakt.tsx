@@ -20,6 +20,15 @@ const Kontakt = () => {
   const { t } = useLanguage();
   const location = useLocation();
   const { openBooking, BookingDialog } = useOrbnetBooking();
+  const erstgespraechRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (location.hash === "#erstgespraech" && erstgespraechRef.current) {
+      setTimeout(() => {
+        erstgespraechRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -45,7 +54,7 @@ const Kontakt = () => {
           </p>
 
           {/* Erstgespräch Section */}
-          <div className="mb-12">
+          <div id="erstgespraech" ref={erstgespraechRef} className="mb-12 scroll-mt-24">
             <Card className="bg-card/95 backdrop-blur-sm border-secondary/20 max-w-lg mx-auto">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-2 mb-3">
