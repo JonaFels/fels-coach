@@ -141,21 +141,7 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Use signed URL instead of public URL
-    const { data: signedUrlData, error: urlError } = await supabase
-      .storage
-      .from("ebook-automation")
-      .createSignedUrl("ebook.pdf", 604800); // 7 days
-
-    if (urlError || !signedUrlData) {
-      console.error("Error generating signed URL:", urlError);
-      return new Response(
-        JSON.stringify({ error: "Ein Fehler ist aufgetreten. Bitte versuche es später erneut." }),
-        { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
-      );
-    }
-
-    const downloadUrl = signedUrlData.signedUrl;
+    const downloadUrl = "https://fels-coach.de/der-weg-zum-ganzsein.pdf";
     const safeName = name ? escapeHtml(name) : null;
 
     const emailResponse = await resend.emails.send({
