@@ -1,4 +1,4 @@
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
@@ -100,42 +100,97 @@ const Kontakt = () => {
           </div>
 
           {/* Anfahrt & Ankommen */}
-          <div className="mb-8">
-            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-6 text-center">
+          <div className="mb-12">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="h-px flex-1 max-w-16 bg-border" />
+              <MapPin className="h-5 w-5 text-secondary" />
+              <div className="h-px flex-1 max-w-16 bg-border" />
+            </div>
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3 text-center">
               Anfahrt &amp; Ankommen
             </h2>
-            <div className="prose prose-neutral max-w-none mb-8 text-muted-foreground space-y-6">
-              <p>
-                Meine Praxis befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg. Damit du ganz in Ruhe bei mir ankommen kannst, habe ich dir hier die wichtigsten Infos zusammengestellt:
-              </p>
+            <p className="text-muted-foreground text-center mb-8 max-w-lg mx-auto text-sm leading-relaxed">
+              Meine Praxis befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg. Damit du ganz in Ruhe bei mir ankommen kannst, habe ich dir hier die wichtigsten Infos zusammengestellt.
+            </p>
 
-              <div>
-                <h3 className="font-serif text-lg font-medium text-foreground mb-2">Mit der Straßenbahn (ÖPNV)</h3>
-                <p>Die Praxis ist hervorragend angebunden:</p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Nutze die <strong className="text-foreground">Linie 4</strong> (Richtung Zähringen oder Messe).</li>
-                  <li>Steige an der Haltestelle <strong className="text-foreground">Okenstraße</strong> oder <strong className="text-foreground">Tennenbacher Straße</strong> aus.</li>
-                  <li>Von beiden Haltestellen sind es nur etwa 3–5 Minuten zu Fuß.</li>
-                </ul>
-              </div>
+            <div className="grid gap-5 md:grid-cols-3 mb-8">
+              {/* ÖPNV */}
+              <Card className="bg-card/95 backdrop-blur-sm border-border/60">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2.5 rounded-full bg-secondary/10">
+                      <TrainFront className="h-5 w-5 text-secondary" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-serif text-base font-medium text-foreground">Straßenbahn</h3>
+                  </div>
+                  <ul className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2">
+                      <span className="text-secondary mt-1 shrink-0">•</span>
+                      <span><strong className="text-foreground font-medium">Linie 4</strong> Richtung Zähringen oder Messe</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-secondary mt-1 shrink-0">•</span>
+                      <span>Haltestelle <strong className="text-foreground font-medium">Okenstraße</strong> oder <strong className="text-foreground font-medium">Tennenbacher Straße</strong></span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-secondary mt-1 shrink-0">•</span>
+                      <span>Nur 3–5 Minuten zu Fuß</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
 
-              <div>
-                <h3 className="font-serif text-lg font-medium text-foreground mb-2">Mit dem Auto &amp; Parken</h3>
-                <p>In der Karlstraße und den Seitenstraßen findest du öffentliche Parkplätze mit Parkscheinautomaten.</p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li><strong className="text-foreground">Mein Tipp:</strong> Da das Viertel sehr beliebt ist, empfehle ich dir, etwa 10 Minuten zusätzlich für die Parkplatzsuche einzuplanen. So kannst du stressfrei bei mir eintreffen.</li>
-                  <li>Alternativ gibt es größere Parkhäuser (z.&nbsp;B. das Karlsbau-Parkhaus), die etwa 10–15 Gehminuten entfernt liegen.</li>
-                </ul>
-              </div>
+              {/* Auto */}
+              <Card className="bg-card/95 backdrop-blur-sm border-border/60">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2.5 rounded-full bg-primary/10">
+                      <Car className="h-5 w-5 text-primary" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-serif text-base font-medium text-foreground">Auto &amp; Parken</h3>
+                  </div>
+                  <ul className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2">
+                      <span className="text-primary mt-1 shrink-0">•</span>
+                      <span>Öffentliche Parkplätze mit Automaten in der Karlstraße</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-primary mt-1 shrink-0">•</span>
+                      <span><strong className="text-foreground font-medium">Tipp:</strong> Plane ~10 Min. extra für die Parkplatzsuche ein</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-primary mt-1 shrink-0">•</span>
+                      <span>Karlsbau-Parkhaus ca. 10–15 Gehminuten entfernt</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
 
-              <div>
-                <h3 className="font-serif text-lg font-medium text-foreground mb-2">Der Weg in die Praxis</h3>
-                <p>Du findest mich im Erdgeschoss. Bitte beachte: Unmittelbar nach dem Hauseingang führt eine mehrstufige Treppe zu den Praxisräumen.</p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Bitte klingele einfach bei <strong className="text-foreground">„Praxis"</strong>.</li>
-                  <li>Ich hole dich dann direkt an der Tür ab, sodass du ganz entspannt ankommen kannst.</li>
-                </ul>
-              </div>
+              {/* Vor Ort */}
+              <Card className="bg-card/95 backdrop-blur-sm border-border/60">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2.5 rounded-full bg-accent/60">
+                      <DoorOpen className="h-5 w-5 text-accent-foreground" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-serif text-base font-medium text-foreground">Vor Ort</h3>
+                  </div>
+                  <ul className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2">
+                      <span className="text-accent-foreground mt-1 shrink-0">•</span>
+                      <span>Praxis im <strong className="text-foreground font-medium">Erdgeschoss</strong> (Treppe nach Hauseingang)</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-accent-foreground mt-1 shrink-0">•</span>
+                      <span>Klingele bei <strong className="text-foreground font-medium">„Praxis"</strong></span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-accent-foreground mt-1 shrink-0">•</span>
+                      <span>Ich hole dich direkt an der Tür ab</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
             <div className="rounded-lg overflow-hidden border border-border shadow-sm">
               <iframe
