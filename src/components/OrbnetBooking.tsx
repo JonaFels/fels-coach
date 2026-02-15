@@ -14,7 +14,10 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
   useEffect(() => {
     if (!open || !containerRef.current) return;
 
-    containerRef.current.innerHTML = "";
+    // Clear previous widget content safely
+    while (containerRef.current.firstChild) {
+      containerRef.current.removeChild(containerRef.current.firstChild);
+    }
 
     const mask = document.createElement("div");
     mask.className = "orbnet-booking-mask";
