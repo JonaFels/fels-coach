@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { ArrowRight, BookOpen, Phone } from "lucide-react";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
-import heroBanner from "@/assets/hero-banner.webp";
+import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -20,8 +20,8 @@ export const Hero = () => {
       {/* Hero Banner */}
       <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
         <img 
-          src={heroBanner} 
-          alt="Berglandschaft – Klarheit und Weite" 
+          src={blaetterDeko} 
+          alt="Blätter – Wachstum und Veränderung" 
           className="w-full h-full object-cover object-center no-fade"
           loading="eager"
         />
