@@ -10,21 +10,21 @@ const offerings = [
     descKey: "offerings.kennenlernen.desc",
     price: 30,
     duration: 30,
-    href: "https://cal.com",
+    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
     price: 50,
     duration: 60,
-    href: "https://cal.com",
+    href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung/plain/",
   },
   {
     titleKey: "offerings.paket5.title",
     descKey: "offerings.paket5.desc",
     price: 220,
     duration: 300,
-    href: "https://cal.com",
+    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/",
     highlight: true,
   },
   {
@@ -32,7 +32,7 @@ const offerings = [
     descKey: "offerings.paket10.desc",
     price: 420,
     duration: 600,
-    href: "https://cal.com",
+    href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung/plain/",
   },
 ];
 
