@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
+import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import pflanzeDeko from "@/assets/pflanze-deko.jpg";
 
 const offerings = [
@@ -18,19 +19,20 @@ const offerings = [
     descKey: "offerings.kennenlernen.desc",
     price: 30,
     badge: "Einstieg",
-    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/",
+    semuid: "55df32ef-b5d1-468e-a4ba-f7f892398327",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
     price: 50,
-    href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung/plain/",
+    semuid: "609d5e7a-e208-4715-b073-e99206aebbf7",
   },
 ];
 
 const Angebote = () => {
   const { t } = useLanguage();
   const [showForm, setShowForm] = useState(false);
+  const { openBooking, BookingDialog } = useOrbnetBooking();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -155,42 +157,19 @@ const Angebote = () => {
                   </CardContent>
                   <CardFooter>
                     <Button
-                      asChild
                       variant={offering.badge ? "default" : "outline"}
                       className="w-full group/btn min-h-[44px]"
-                      onClick={() => trackCalendarBookingStart("angebote_card", offering.href)}
+                      onClick={() => {
+                        trackCalendarBookingStart("angebote_card", offering.semuid);
+                        openBooking(offering.semuid);
+                      }}
                     >
-                      <a
-                        href={offering.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {t("offerings.book")}
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
-                      </a>
+                      {t("offerings.book")}
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
                     </Button>
                   </CardFooter>
                 </Card>
               ))}
-            </div>
-
-            <div className="text-center mt-10">
-              <Button
-                asChild
-                variant="ghost"
-                size="lg"
-                className="min-h-[44px] text-muted-foreground"
-                onClick={() => trackCalendarBookingStart("angebote_all_dates", "https://www.orbnet.de/p/fels-coach/")}
-              >
-                <a
-                  href="https://www.orbnet.de/p/fels-coach/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("offerings.allDates")}
-                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                </a>
-              </Button>
             </div>
           </div>
         </section>
@@ -245,6 +224,7 @@ const Angebote = () => {
         </section>
       </main>
 
+      <BookingDialog />
       <Footer />
       <CookieBanner />
     </div>
