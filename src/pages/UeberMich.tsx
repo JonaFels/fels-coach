@@ -38,7 +38,7 @@ const UeberMich = () => {
               <img 
                 src={profilBild} 
                 alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg" 
-                className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-center mx-auto shadow-lg border-4 border-secondary/30"
+                className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover object-center mx-auto shadow-lg border-4 border-secondary/30"
                 loading="lazy"
                 width="320"
                 height="320"
