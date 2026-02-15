@@ -144,15 +144,15 @@ const Kontakt = () => {
                   <ul className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
                     <li className="flex gap-2">
                       <span className="text-secondary mt-1 shrink-0">•</span>
-                      <span><strong className="text-foreground font-medium">Linie 4</strong> Richtung Zähringen oder Messe</span>
+                      <span><strong className="text-foreground font-medium">Linie 3</strong> Richtung Zähringen</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-secondary mt-1 shrink-0">•</span>
-                      <span>Haltestelle <strong className="text-foreground font-medium">Okenstraße</strong> oder <strong className="text-foreground font-medium">Tennenbacher Straße</strong></span>
+                      <span>Haltestelle <strong className="text-foreground font-medium">Tennenbacher Straße</strong></span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-secondary mt-1 shrink-0">•</span>
-                      <span>Nur 3–5 Minuten zu Fuß</span>
+                      <span>Nur 4 Minuten zu Fuß</span>
                     </li>
                   </ul>
                 </CardContent>
