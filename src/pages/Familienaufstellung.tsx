@@ -120,16 +120,12 @@ const Familienaufstellung = () => {
 
           {/* CTA */}
           <div className="text-center mb-8">
-            {showForm ? (
-              <InlineQuickForm onClose={() => setShowForm(false)} />
-            ) : (
-              <>
-                <Button size="lg" className="min-h-[44px]" onClick={handleCTAClick}>
-                  {t("cta.bookNow")}
-                </Button>
-                <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
-              </>
-            )}
+            <Button asChild size="lg" className="min-h-[44px]">
+              <a href="/kontakt#erstgespraech">
+                {t("cta.bookNow")}
+              </a>
+            </Button>
+            <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
           </div>
 
           {/* Internal Links */}
