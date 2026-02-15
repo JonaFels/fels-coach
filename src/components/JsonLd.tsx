@@ -134,7 +134,7 @@ export const JsonLd = () => {
           description:
             "Familienaufsteller in Ausbildung und Coach mit Spezialisierung auf systemische Familienaufstellungen und lösungsorientiertes Coaching.",
           url: "https://fels-coach.de/ueber-mich",
-          image: "https://fels-coach.de/assets/profil-bild-schwarz.png",
+          image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           email: "info@fels-coach.de",
           telephone: "+4917667608617",
           address: {

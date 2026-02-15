@@ -8,7 +8,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
-import profilBild from "@/assets/profil-bild-schwarz.png";
+import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import pflanzeDeko from "@/assets/pflanze-deko.jpg";
 
 const UeberMich = () => {
@@ -37,7 +37,7 @@ const UeberMich = () => {
             <div className="mb-8">
               <img 
                 src={profilBild} 
-                alt="Jona Fels - Systemischer Coach und Familienaufsteller in Freiburg" 
+                alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg" 
                 className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-center mx-auto shadow-lg border-4 border-secondary/30"
                 loading="lazy"
                 width="320"

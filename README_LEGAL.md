@@ -38,7 +38,7 @@
 | Datei | Lizenz | Quelle |
 |-------|--------|--------|
 | `src/assets/jona-fels-hero.jpg` | Eigennutzung | Eigenes Foto |
-| `src/assets/profil-bild-schwarz.png` | Eigennutzung | Eigenes Foto |
+| `src/assets/jona-fels-systemisches-coaching.webp` | Eigennutzung | Eigenes Foto |
 | `src/assets/hintergrund-struktur.jpg` | Eigennutzung | Eigenes Foto |
 
 ### Icons & Fonts
