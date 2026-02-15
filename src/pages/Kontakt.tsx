@@ -176,10 +176,6 @@ const Kontakt = () => {
                       <span className="text-primary mt-1 shrink-0">•</span>
                       <span><strong className="text-foreground font-medium">Tipp:</strong> Plane ~10 Min. extra für die Parkplatzsuche ein</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary mt-1 shrink-0">•</span>
-                      <span>Karlsbau-Parkhaus ca. 10–15 Gehminuten entfernt</span>
-                    </li>
                   </ul>
                 </CardContent>
               </Card>
