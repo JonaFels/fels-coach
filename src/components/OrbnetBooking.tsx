@@ -14,10 +14,8 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
   useEffect(() => {
     if (!open || !containerRef.current) return;
 
-    // Clear previous content
     containerRef.current.innerHTML = "";
 
-    // Create embed mask
     const mask = document.createElement("div");
     mask.className = "orbnet-booking-mask";
     mask.dataset.semuid = semuid;
@@ -25,12 +23,8 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
     mask.dataset.type = "embed";
     containerRef.current.appendChild(mask);
 
-    // Load or re-init the script
     const existingScript = document.getElementById("orbnet-booking-script");
-    if (existingScript) {
-      // Script already loaded — re-trigger init by dispatching a custom event or re-appending
-      existingScript.remove();
-    }
+    if (existingScript) existingScript.remove();
 
     const script = document.createElement("script");
     script.id = "orbnet-booking-script";
@@ -40,12 +34,8 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
     script.referrerPolicy = "origin";
     document.body.appendChild(script);
 
-    // Prevent body scroll
     document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [open, semuid]);
 
   if (!open) return null;
@@ -53,26 +43,55 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-border bg-background rounded-t-2xl">
-          <h3 className="font-serif text-lg font-semibold text-foreground">
-            Termin wählen
-          </h3>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onClose}
-            className="rounded-full"
-            aria-label="Schließen"
-          >
+          <h3 className="font-serif text-lg font-semibold text-foreground">Termin wählen</h3>
+          <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full" aria-label="Schließen">
             <X className="h-5 w-5" />
           </Button>
         </div>
         <div ref={containerRef} className="min-h-[400px] p-4" />
+      </div>
+    </div>
+  );
+};
+
+// Iframe-based dialog for the Orbnet selection page
+interface OrbnetIframeDialogProps {
+  url: string;
+  open: boolean;
+  onClose: () => void;
+}
+
+const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => {
+  useEffect(() => {
+    if (!open) return;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl h-[90vh] flex flex-col">
+        <div className="flex items-center justify-between p-4 border-b border-border rounded-t-2xl">
+          <h3 className="font-serif text-lg font-semibold text-foreground">Termin buchen</h3>
+          <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full" aria-label="Schließen">
+            <X className="h-5 w-5" />
+          </Button>
+        </div>
+        <iframe
+          src={url}
+          className="flex-1 w-full rounded-b-2xl"
+          title="Orbnet Terminbuchung"
+          allow="payment"
+        />
       </div>
     </div>
   );
@@ -95,8 +114,8 @@ export const OrbnetFAB = () => {
           <span className="hidden md:inline">Termin buchen</span>
         </Button>
       </div>
-      <OrbnetDialog
-        semuid="609d5e7a-e208-4715-b073-e99206aebbf7"
+      <OrbnetIframeDialog
+        url="https://www.orbnet.de/p/fels-coach/"
         open={open}
         onClose={() => setOpen(false)}
       />
