@@ -1,26 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-interface OrbnetBookingProps {
-  semuid: string;
-  title: string;
-}
-
-export const OrbnetBooking = ({ semuid, title }: OrbnetBookingProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const scriptLoaded = useRef(false);
-
+export const OrbnetFAB = () => {
   useEffect(() => {
-    if (!containerRef.current) return;
-
-    // Create the booking mask div
+    // Create the FAB booking mask
     const mask = document.createElement("div");
     mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = semuid;
+    mask.dataset.semuid = "609d5e7a-e208-4715-b073-e99206aebbf7";
     mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    containerRef.current.appendChild(mask);
+    mask.dataset.type = "fab";
+    mask.dataset.vertical = "bottom";
+    mask.dataset.horizontal = "end";
+    document.body.appendChild(mask);
 
-    // Load script only once globally
+    // Load script
     const scriptId = "orbnet-booking-script";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
@@ -33,23 +25,9 @@ export const OrbnetBooking = ({ semuid, title }: OrbnetBookingProps) => {
     }
 
     return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = "";
-      }
+      mask.remove();
     };
-  }, [semuid]);
+  }, []);
 
-  return (
-    <div>
-      <h3 className="font-serif text-xl font-semibold text-foreground text-center mb-6">
-        {title}
-      </h3>
-      <div ref={containerRef} className="min-h-[400px]" />
-      <noscript>
-        <p className="text-center text-muted-foreground">
-          Dieser Kalender benötigt aktiviertes Javascript.
-        </p>
-      </noscript>
-    </div>
-  );
+  return null;
 };
