@@ -16,7 +16,7 @@ export const QuickContactCTA = () => {
           {t("quickCTA.subheadline")}
         </p>
         <Button asChild size="lg" className="min-h-[48px] px-8" onClick={() => trackCTAClick("quick_contact_cta", "homepage_quick_contact", "link")}>
-          <a href="/kontakt">
+          <a href="/kontakt#erstgespraech">
             <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
             {t("quickCTA.button")}
           </a>
