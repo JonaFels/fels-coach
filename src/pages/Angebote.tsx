@@ -11,6 +11,7 @@ import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import pflanzeDeko from "@/assets/pflanze-deko.jpg";
+import { OrbnetBooking } from "@/components/OrbnetBooking";
 
 const offerings = [
   {
@@ -209,8 +210,30 @@ const Angebote = () => {
         </div>
       </section>
 
+      {/* Eingebettete Buchungskalender */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
+            Termin direkt buchen
+          </h2>
+          <p className="text-sm text-muted-foreground text-center mb-12 max-w-[600px] mx-auto leading-relaxed">
+            Wähle einen passenden Termin – ganz einfach und unverbindlich.
+          </p>
+          <div className="grid gap-12 md:grid-cols-2">
+            <OrbnetBooking
+              semuid="55df32ef-b5d1-468e-a4ba-f7f892398327"
+              title="Kennenlernen-Sitzung"
+            />
+            <OrbnetBooking
+              semuid="609d5e7a-e208-4715-b073-e99206aebbf7"
+              title="Coaching-Sitzung"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Sanfte interne Links */}
-      <section className="bg-background py-14">
+      <section className="bg-muted py-14">
         <nav className="container mx-auto px-4 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground" aria-label="Verwandte Seiten">
           <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
             Was ist Familienaufstellung?
