@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
-import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
@@ -31,7 +29,6 @@ const offerings = [
 
 const Angebote = () => {
   const { t } = useLanguage();
-  const [showForm, setShowForm] = useState(false);
   const { openBooking, BookingDialog } = useOrbnetBooking();
 
   return (
@@ -186,27 +183,19 @@ const Angebote = () => {
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 15-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.
             </p>
-            {showForm ? (
-              <div className="max-w-md mx-auto">
-                <InlineQuickForm onClose={() => setShowForm(false)} />
-              </div>
-            ) : (
-              <>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="text-base px-8 min-h-[44px]"
-                  onClick={() => {
-                    trackCTAClick("angebote_consultation", "angebote_page", "inline_form");
-                    setShowForm(true);
-                  }}
-                >
-                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Vorgespräch vereinbaren
-                </Button>
-                <p className="mt-4 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
-              </>
-            )}
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-base px-8 min-h-[44px]"
+              onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}
+            >
+              <a href="/kontakt">
+                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                Erstgespräch vereinbaren
+              </a>
+            </Button>
+            <p className="mt-4 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
           </div>
         </section>
 
