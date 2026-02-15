@@ -13,13 +13,6 @@ const COOKIE_CONSENT_KEY = "fels-cookie-consent";
  */
 export const ChatbaseWidget = () => {
   useEffect(() => {
-    // Check consent before loading
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!consent) return;
-
-    const prefs = JSON.parse(consent);
-    if (!prefs.analytics) return;
-
     // Initialize chatbase
     if (!window.chatbase || window.chatbase("getState") !== "initialized") {
       window.chatbase = (...args: any[]) => {
