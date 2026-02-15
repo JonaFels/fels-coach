@@ -174,14 +174,17 @@ const Angebote = () => {
           </div>
         </section>
 
-        {/* Einladung zum Erstgespräch */}
-        <section className="bg-accent py-20 md:py-28">
+        {/* Noch unsicher? – sanfter Fallback */}
+        <section className="bg-accent py-16 md:py-20">
           <div className="container mx-auto px-4 text-center max-w-lg">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+              Noch unsicher?
+            </p>
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
-              Der erste Schritt ist ein Gespräch
+              Lass uns kurz sprechen
             </h2>
-            <p className="text-muted-foreground mb-10 leading-relaxed">
-              In einem kurzen, kostenlosen Vorgespräch klären wir gemeinsam, ob und wie ich dich unterstützen kann. Ganz ohne Verpflichtung.
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 15-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.
             </p>
             {showForm ? (
               <div className="max-w-md mx-auto">
@@ -190,6 +193,7 @@ const Angebote = () => {
             ) : (
               <>
                 <Button
+                  variant="outline"
                   size="lg"
                   className="text-base px-8 min-h-[44px]"
                   onClick={() => {
@@ -198,9 +202,9 @@ const Angebote = () => {
                   }}
                 >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                  {t("hero.ctaConsultation")}
+                  Vorgespräch vereinbaren
                 </Button>
-                <p className="mt-4 text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
+                <p className="mt-4 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
               </>
             )}
           </div>
