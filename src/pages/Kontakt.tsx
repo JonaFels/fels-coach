@@ -76,10 +76,10 @@ const Kontakt = () => {
                     asChild
                     variant="outline"
                     className="w-full min-h-[44px]"
-                    onClick={() => trackCalendarBookingStart("kontakt_direct_booking", "https://cal.com/fels-coach/coaching-kennenlernen")}
+                    onClick={() => trackCalendarBookingStart("kontakt_direct_booking", "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/")}
                   >
                     <a 
-                      href="https://cal.com/fels-coach/coaching-kennenlernen" 
+                      href="https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/"
                       target="_blank" 
                       rel="noopener noreferrer"
                     >

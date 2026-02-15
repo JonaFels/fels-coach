@@ -17,13 +17,13 @@ const offerings = [
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
     price: 30,
-    href: "https://cal.com/fels-coach/coaching-kennenlernen",
+    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
     price: 50,
-    href: "https://cal.com/fels-coach/coaching-termin",
+    href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung/plain/",
   },
 ];
 
@@ -194,10 +194,10 @@ const Angebote = () => {
               variant="ghost"
               size="lg"
               className="min-h-[44px] text-muted-foreground"
-              onClick={() => trackCalendarBookingStart("angebote_all_dates", "https://cal.com/fels-coach")}
+              onClick={() => trackCalendarBookingStart("angebote_all_dates", "https://www.orbnet.de/p/fels-coach/")}
             >
               <a
-                href="https://cal.com/fels-coach"
+                href="https://www.orbnet.de/p/fels-coach/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
