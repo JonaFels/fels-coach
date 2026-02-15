@@ -1,9 +1,7 @@
-import { Mail, Send, Calendar } from "lucide-react";
-import { trackCalendarBookingStart } from "@/lib/tracking";
+import { Mail, Send } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -19,7 +17,6 @@ const Kontakt = () => {
   const location = useLocation();
   const callbackRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to callback form if #rueckruf hash is present
   useEffect(() => {
     if (location.hash === "#rueckruf" && callbackRef.current) {
       callbackRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -35,7 +32,6 @@ const Kontakt = () => {
       <SEOHead />
       <Header />
 
-      {/* Hero Banner with visible plant image */}
       <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
         <img 
           src={pflanzeDeko} 
@@ -43,7 +39,6 @@ const Kontakt = () => {
           className="w-full h-full object-cover object-[center_70%] no-fade"
           loading="eager"
         />
-        
       </div>
 
       <PageBackground className="!pt-8">
@@ -57,37 +52,8 @@ const Kontakt = () => {
 
           {/* Quick Request Section */}
           <div className="mb-12">
-            <div className="grid gap-6 md:grid-cols-2">
-              <div ref={callbackRef} className="transition-all duration-500 rounded-lg">
-                <QuickRequestForm />
-              </div>
-              <Card className="bg-card/95 backdrop-blur-sm border-secondary/20">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Calendar className="h-5 w-5 text-secondary" aria-hidden="true" />
-                    <h3 className="font-serif text-lg font-medium text-foreground">
-                      {t("contact.optionB.title")}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                    {t("contact.optionB.text")}
-                  </p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full min-h-[44px]"
-                    onClick={() => trackCalendarBookingStart("kontakt_direct_booking", "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/")}
-                  >
-                    <a 
-                      href="https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      {t("contact.optionB.button")}
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+            <div ref={callbackRef} className="transition-all duration-500 rounded-lg max-w-lg mx-auto">
+              <QuickRequestForm />
             </div>
           </div>
 
