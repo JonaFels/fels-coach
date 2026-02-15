@@ -1,7 +1,9 @@
-import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
+import { useState } from "react";
+import { Mail, Send, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -9,23 +11,15 @@ import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
-import { QuickRequestForm } from "@/components/QuickRequestForm";
+import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import heroBanner from "@/assets/hero-banner.webp";
+
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
   const location = useLocation();
-  const callbackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (location.hash === "#rueckruf" && callbackRef.current) {
-      callbackRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
-      callbackRef.current.classList.add("ring-2", "ring-secondary", "ring-offset-2");
-      setTimeout(() => {
-        callbackRef.current?.classList.remove("ring-2", "ring-secondary", "ring-offset-2");
-      }, 3000);
-    }
-  }, [location.hash]);
+  const { openBooking, BookingDialog } = useOrbnetBooking();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -50,11 +44,28 @@ const Kontakt = () => {
             {t("contact.text")}
           </p>
 
-          {/* Quick Request Section */}
+          {/* Erstgespräch Section */}
           <div className="mb-12">
-            <div ref={callbackRef} className="transition-all duration-500 rounded-lg max-w-lg mx-auto">
-              <QuickRequestForm />
-            </div>
+            <Card className="bg-card/95 backdrop-blur-sm border-secondary/20 max-w-lg mx-auto">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Calendar className="h-5 w-5 text-secondary" aria-hidden="true" />
+                  <h3 className="font-serif text-lg font-medium text-foreground">
+                    Kostenloses Erstgespräch
+                  </h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                  Du suchst nach Klarheit, neuer Energie oder einem festen Fels in der Brandung? In diesem 15-minütigen Kennenlerngespräch finden wir gemeinsam heraus, wo du gerade stehst und wie ich dich als Coach optimal unterstützen kann.
+                </p>
+                <Button
+                  className="w-full min-h-[44px]"
+                  onClick={() => openBooking(ERSTGESPRAECH_SEMUID)}
+                >
+                  <Calendar className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Termin wählen
+                </Button>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Alternative Contact Options */}
@@ -210,6 +221,7 @@ const Kontakt = () => {
           </div>
         </div>
       </PageBackground>
+      <BookingDialog />
       <Footer />
       <CookieBanner />
     </div>

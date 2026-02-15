@@ -1,19 +1,11 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import { ArrowRight, BookOpen, Phone } from "lucide-react";
-import { InlineQuickForm } from "@/components/InlineQuickForm";
+import { BookOpen, Phone } from "lucide-react";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 export const Hero = () => {
   const { t } = useLanguage();
-  const [showForm, setShowForm] = useState(false);
-
-  const handleConsultationClick = () => {
-    trackCTAClick("hero_consultation", "homepage_hero", "inline_form");
-    setShowForm(true);
-  };
 
   return (
     <>
@@ -36,23 +28,19 @@ export const Hero = () => {
             {t("hero.subtitle")}
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:200ms]">
-            {showForm ? (
-              <InlineQuickForm onClose={() => setShowForm(false)} />
-            ) : (
-              <>
-                <Button size="lg" className="text-base px-8" onClick={handleConsultationClick}>
-                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                  {t("hero.ctaConsultation")}
-                </Button>
-                <p className="text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
-                <Button asChild variant="outline" size="lg" className="text-base px-8" onClick={() => trackCTAClick("hero_ebook", "homepage_hero", "link")}>
-                  <a href="/ebook">
-                    <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
-                    {t("hero.ctaEbook")}
-                  </a>
-                </Button>
-              </>
-            )}
+            <Button asChild size="lg" className="text-base px-8" onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}>
+              <a href="/kontakt">
+                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                {t("hero.ctaConsultation")}
+              </a>
+            </Button>
+            <p className="text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
+            <Button asChild variant="outline" size="lg" className="text-base px-8" onClick={() => trackCTAClick("hero_ebook", "homepage_hero", "link")}>
+              <a href="/ebook">
+                <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
+                {t("hero.ctaEbook")}
+              </a>
+            </Button>
           </div>
         </div>
       </div>
