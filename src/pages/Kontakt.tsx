@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
@@ -22,11 +22,9 @@ const Kontakt = () => {
   const { openBooking, BookingDialog } = useOrbnetBooking();
   const erstgespraechRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (location.hash === "#erstgespraech" && erstgespraechRef.current) {
-      setTimeout(() => {
-        erstgespraechRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
+      erstgespraechRef.current.scrollIntoView({ behavior: "instant", block: "start" });
     }
   }, [location.hash]);
 

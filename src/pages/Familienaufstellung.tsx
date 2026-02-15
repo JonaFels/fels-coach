@@ -142,9 +142,9 @@ const Familienaufstellung = () => {
               Über Jona Fels
             </Link>
             <span aria-hidden="true">•</span>
-            <Link to="/kontakt" className="hover:text-secondary underline underline-offset-4">
+            <a href="/kontakt#erstgespraech" className="hover:text-secondary underline underline-offset-4">
               Kontakt
-            </Link>
+            </a>
           </nav>
 
           <AuthorBox />
