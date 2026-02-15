@@ -10,7 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
 import { QuickRequestForm } from "@/components/QuickRequestForm";
-import pflanzeDeko from "@/assets/pflanze-deko.jpg";
+import heroBanner from "@/assets/hero-banner.webp";
 
 const Kontakt = () => {
   const { t } = useLanguage();
@@ -34,9 +34,9 @@ const Kontakt = () => {
 
       <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
         <img 
-          src={pflanzeDeko} 
-          alt="Grüne Pflanze – Kontakt und Verbindung" 
-          className="w-full h-full object-cover object-[center_70%] no-fade"
+          src={heroBanner} 
+          alt="Berglandschaft – Kontakt und Verbindung" 
+          className="w-full h-full object-cover object-center no-fade"
           loading="eager"
         />
       </div>
