@@ -11,7 +11,7 @@ import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
-import pflanzeDeko from "@/assets/pflanze-deko.jpg";
+import heroBanner from "@/assets/hero-banner.webp";
 
 const offerings = [
   {
@@ -42,9 +42,9 @@ const Angebote = () => {
       {/* Hero Banner */}
       <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
         <img
-          src={pflanzeDeko}
-          alt="Grüne Pflanze – Wachstum und Veränderung"
-          className="w-full h-full object-cover object-[center_70%] no-fade"
+          src={heroBanner}
+          alt="Berglandschaft – Angebote und Preise"
+          className="w-full h-full object-cover object-center no-fade"
           loading="eager"
         />
       </div>

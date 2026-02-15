@@ -9,7 +9,7 @@ import { AuthorBox } from "@/components/AuthorBox";
 import { MicroCTA } from "@/components/MicroCTA";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
-import pflanzeDeko from "@/assets/pflanze-deko.jpg";
+import heroBanner from "@/assets/hero-banner.webp";
 
 const UeberMich = () => {
   const { t } = useLanguage();
@@ -22,9 +22,9 @@ const UeberMich = () => {
       {/* Hero Banner with visible plant image */}
       <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
         <img 
-          src={pflanzeDeko} 
-          alt="Grüne Pflanze – Wachstum und Begleitung" 
-          className="w-full h-full object-cover object-[center_70%] no-fade"
+          src={heroBanner} 
+          alt="Berglandschaft – Wachstum und Begleitung" 
+          className="w-full h-full object-cover object-center no-fade"
           loading="eager"
         />
         
