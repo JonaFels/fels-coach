@@ -62,7 +62,7 @@ const Kontakt = () => {
                   </h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-                  Du suchst nach Klarheit, neuer Energie oder einem festen Fels in der Brandung? In diesem 15-minütigen Kennenlerngespräch finden wir gemeinsam heraus, wo du gerade stehst und wie ich dich als Coach optimal unterstützen kann.
+                  Du suchst nach Klarheit, neuer Energie oder einem festen Fels in der Brandung? In diesem kostenlosen 15-minütigen Telefonat finden wir gemeinsam heraus, wo du gerade stehst und wie ich dich als Coach optimal unterstützen kann.
                 </p>
                 <Button
                   className="w-full min-h-[44px]"
