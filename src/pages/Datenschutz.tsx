@@ -142,13 +142,12 @@ const Datenschutz = () => {
               <p><strong>Datenübermittlung in die USA:</strong> Die Übermittlung erfolgt auf Basis von EU-Standardvertragsklauseln.</p>
               <p>Mehr Informationen: <a href="https://www.chatbase.co/privacy-policy" target="_blank" rel="noopener noreferrer">Chatbase Datenschutzerklärung</a></p>
 
-              <h3>Terminbuchungstool (Cal.com)</h3>
-              <p>Zur Online-Terminbuchung nutze ich den Dienst Cal.com.</p>
-              <p><strong>Anbieter:</strong> Cal.com, Inc., USA</p>
+              <h3>Terminbuchung (Orbnet)</h3>
+              <p>Zur Online-Terminbuchung (Erstgespräch und Coaching-Sitzungen) nutze ich den Dienst Orbnet.</p>
+              <p><strong>Anbieter:</strong> orbnet GmbH, Deutschland</p>
               <p><strong>Verarbeitete Daten:</strong> Name, E-Mail-Adresse, gewählter Termin, ggf. Telefonnummer und Nachricht.</p>
               <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen).</p>
-              <p><strong>Datenübermittlung in die USA:</strong> Die Übermittlung erfolgt auf Basis von EU-Standardvertragsklauseln.</p>
-              <p>Mehr Informationen: <a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer">Cal.com Datenschutzerklärung</a></p>
+              <p>Mehr Informationen: <a href="https://www.orbnet.de/datenschutz" target="_blank" rel="noopener noreferrer">Orbnet Datenschutzerklärung</a></p>
 
               <hr />
 
@@ -202,7 +201,7 @@ const Datenschutz = () => {
 
               <h2>10. Aktualität der Datenschutzerklärung</h2>
               <p>Diese Datenschutzerklärung ist aktuell gültig. Ich behalte mir vor, diese Erklärung bei Bedarf anzupassen. Die neueste Version findest du immer auf dieser Webseite.</p>
-              <p><strong>Stand: Januar 2025</strong></p>
+              <p><strong>Stand: Februar 2026</strong></p>
             </CardContent>
           </Card>
         </div>
