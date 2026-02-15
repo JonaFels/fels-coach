@@ -99,11 +99,44 @@ const Kontakt = () => {
             </Card>
           </div>
 
-          {/* Google Maps */}
+          {/* Anfahrt & Ankommen */}
           <div className="mb-8">
-            <h2 className="font-serif text-xl font-medium text-foreground mb-4 text-center">
-              Anfahrt zur Praxis
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-6 text-center">
+              Anfahrt &amp; Ankommen
             </h2>
+            <div className="prose prose-neutral max-w-none mb-8 text-muted-foreground space-y-6">
+              <p>
+                Meine Praxis befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg. Damit du ganz in Ruhe bei mir ankommen kannst, habe ich dir hier die wichtigsten Infos zusammengestellt:
+              </p>
+
+              <div>
+                <h3 className="font-serif text-lg font-medium text-foreground mb-2">Mit der Straßenbahn (ÖPNV)</h3>
+                <p>Die Praxis ist hervorragend angebunden:</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li>Nutze die <strong className="text-foreground">Linie 4</strong> (Richtung Zähringen oder Messe).</li>
+                  <li>Steige an der Haltestelle <strong className="text-foreground">Okenstraße</strong> oder <strong className="text-foreground">Tennenbacher Straße</strong> aus.</li>
+                  <li>Von beiden Haltestellen sind es nur etwa 3–5 Minuten zu Fuß.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-lg font-medium text-foreground mb-2">Mit dem Auto &amp; Parken</h3>
+                <p>In der Karlstraße und den Seitenstraßen findest du öffentliche Parkplätze mit Parkscheinautomaten.</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li><strong className="text-foreground">Mein Tipp:</strong> Da das Viertel sehr beliebt ist, empfehle ich dir, etwa 10 Minuten zusätzlich für die Parkplatzsuche einzuplanen. So kannst du stressfrei bei mir eintreffen.</li>
+                  <li>Alternativ gibt es größere Parkhäuser (z.&nbsp;B. das Karlsbau-Parkhaus), die etwa 10–15 Gehminuten entfernt liegen.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-lg font-medium text-foreground mb-2">Der Weg in die Praxis</h3>
+                <p>Du findest mich im Erdgeschoss. Bitte beachte: Unmittelbar nach dem Hauseingang führt eine mehrstufige Treppe zu den Praxisräumen.</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li>Bitte klingele einfach bei <strong className="text-foreground">„Praxis"</strong>.</li>
+                  <li>Ich hole dich dann direkt an der Tür ab, sodass du ganz entspannt ankommen kannst.</li>
+                </ul>
+              </div>
+            </div>
             <div className="rounded-lg overflow-hidden border border-border shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.8!2d7.8384!3d47.9990!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911c9f3e1f3b3d%3A0x0!2sKarlstra%C3%9Fe%2051%2C%2079104%20Freiburg%20im%20Breisgau!5e0!3m2!1sde!2sde!4v1"
