@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import { BookOpen, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 export const Hero = () => {
@@ -35,12 +35,6 @@ export const Hero = () => {
               </a>
             </Button>
             <p className="text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
-            <Button asChild variant="outline" size="lg" className="text-base px-8" onClick={() => trackCTAClick("hero_ebook", "homepage_hero", "link")}>
-              <a href="/ebook">
-                <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
-                {t("hero.ctaEbook")}
-              </a>
-            </Button>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
-import { MicroCTA } from "@/components/MicroCTA";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import heroBanner from "@/assets/hero-banner.webp";
@@ -58,7 +58,7 @@ const UeberMich = () => {
             </CardContent>
           </Card>
 
-          <MicroCTA className="mb-8" />
+          
 
           {/* Guidance Section */}
           <Card className="mb-8 bg-card/95 backdrop-blur-sm">
