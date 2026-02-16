@@ -154,8 +154,8 @@ export const translations: Translations = {
     en: "Arriving & clarifying your concern – We start with a brief check-in: What's on your mind? What would you like to take away today? Together we find the focus for the session.",
   },
   "offerings.step2": {
-    de: "Vertiefung & Arbeit am Thema – Mit systemischen Methoden gehen wir deinem Anliegen auf den Grund. Das kann durch Aufstellungsarbeit, gezielte Fragen oder praktische Übungen geschehen – je nachdem, was sich zeigt.",
-    en: "Deepening & working on your topic – Using systemic methods, we get to the root of your concern. This can happen through constellation work, targeted questions, or practical exercises – depending on what emerges.",
+    de: "Vertiefung & Arbeit am Thema – Mit systemischen Methoden gehen wir deinem Anliegen auf den Grund – durch Aufstellungsarbeit oder gezielte Fragen, je nachdem, was sich zeigt.",
+    en: "Deepening & working on your topic – Using systemic methods, we get to the root of your concern – through constellation work or targeted questions, depending on what emerges.",
   },
   "offerings.step3": {
     de: "Integration & Abschluss – Wir nehmen uns Zeit, das Erlebte einzuordnen. Du bekommst konkrete Impulse für deinen Alltag mit – und wir besprechen offen, ob und wie es weitergehen kann.",
