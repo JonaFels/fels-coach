@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
-import { QuickContactCTA } from "@/components/QuickContactCTA";
+
 
 const Index = () => {
   return (
@@ -19,7 +19,7 @@ const Index = () => {
         <Hero />
         <TrustBadges />
         <CoachingSection />
-        <QuickContactCTA />
+        
         <FAQSection />
       </main>
       <Footer />

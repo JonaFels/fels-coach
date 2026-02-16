@@ -9,7 +9,7 @@ import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { trackCTAClick } from "@/lib/tracking";
-import { MicroCTA } from "@/components/MicroCTA";
+
 import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
@@ -59,7 +59,7 @@ const Familienaufstellung = () => {
             </CardContent>
           </Card>
 
-          <MicroCTA variant="secondary" className="mb-8" />
+          
 
           {/* Benefits Section */}
           <Card className="mb-8 bg-card/95 backdrop-blur-sm">

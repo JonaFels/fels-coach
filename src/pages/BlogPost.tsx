@@ -5,7 +5,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
-import { MicroCTA } from "@/components/MicroCTA";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft } from "lucide-react";
@@ -168,7 +168,7 @@ const BlogPost = () => {
             {renderContent(post.content[language])}
           </div>
 
-          <MicroCTA className="my-12" />
+          
 
           {/* Internal Links */}
           <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8" aria-label="Verwandte Seiten">
