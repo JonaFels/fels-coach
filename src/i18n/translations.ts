@@ -158,8 +158,8 @@ export const translations: Translations = {
     en: "Deepening & working on your topic – Using systemic methods, we get to the root of your concern – through constellation work or targeted questions, depending on what emerges.",
   },
   "offerings.step3": {
-    de: "Integration & Abschluss – Wir nehmen uns Zeit, das Erlebte einzuordnen. Du bekommst konkrete Impulse für deinen Alltag mit – und wir besprechen offen, ob und wie es weitergehen kann.",
-    en: "Integration & closing – We take time to process what emerged. You receive concrete impulses for your everyday life – and we openly discuss if and how to continue.",
+    de: "Integration & Abschluss – Wir nehmen uns Zeit, das Erlebte einzuordnen, damit du es gut in deinen Alltag mitnehmen kannst. Gemeinsam besprechen wir offen, ob und wie es weitergehen kann.",
+    en: "Integration & closing – We take time to process what emerged so you can carry it into your everyday life. Together we openly discuss if and how to continue.",
   },
   "offerings.preiseTitle": {
     de: "Klare Konditionen",
