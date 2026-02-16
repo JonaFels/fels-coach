@@ -87,7 +87,7 @@ const Angebote = () => {
               {t("offerings.ablaufTitle")}
             </h2>
             <p className="text-sm text-muted-foreground text-center mb-12 leading-relaxed">
-              Kein starres Programm – sondern ein Weg, der sich ganz nach dir richtet.
+              Jede Sitzung dauert 80 Minuten und folgt einem klaren, aber flexiblen Rahmen – damit du dich voll auf dein Thema einlassen kannst.
             </p>
             <ol className="space-y-8">
               {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (

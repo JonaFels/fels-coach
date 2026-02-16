@@ -146,20 +146,20 @@ export const translations: Translations = {
     en: "Meaningful change needs a clear framework and genuine trust. Here you can see how our collaboration is structured – organized, personal, and on equal footing.",
   },
   "offerings.ablaufTitle": {
-    de: "So starten wir",
-    en: "How We Get Started",
+    de: "So läuft eine Sitzung ab",
+    en: "How a Session Works",
   },
   "offerings.step1": {
-    de: "In einem kurzen Vorgespräch (15 Min., kostenlos) klären wir gemeinsam dein Anliegen und schauen, ob mein Ansatz zu deiner Situation passt.",
-    en: "In a brief preliminary talk (15 min, free) we clarify your concern together and see if my approach fits your situation.",
+    de: "Ankommen & Anliegen klären – Wir starten mit einem kurzen Check-in: Was beschäftigt dich gerade? Was möchtest du heute mitnehmen? So finden wir gemeinsam den Fokus für die Sitzung.",
+    en: "Arriving & clarifying your concern – We start with a brief check-in: What's on your mind? What would you like to take away today? Together we find the focus for the session.",
   },
   "offerings.step2": {
-    de: "In der ersten Sitzung entscheidest du, wie tief wir gehen: Wir können direkt loslegen und an deinem Thema arbeiten – oder es bleibt ein offenes Kennenlernen, in dem wir schauen, was dran ist. Beides ist genau richtig.",
-    en: "In the first session you decide how deep we go: We can start working on your topic right away – or it stays an open get-to-know, where we explore what's present. Either way is perfectly fine.",
+    de: "Vertiefung & Arbeit am Thema – Mit systemischen Methoden gehen wir deinem Anliegen auf den Grund. Das kann durch Aufstellungsarbeit, gezielte Fragen oder körperorientierte Übungen geschehen – je nachdem, was sich zeigt.",
+    en: "Deepening & working on your topic – Using systemic methods, we get to the root of your concern. This can happen through constellation work, targeted questions, or body-oriented exercises – depending on what emerges.",
   },
   "offerings.step3": {
-    de: "Wie es weitergeht, besprechen wir offen. Ich gebe dir meine ehrliche Einschätzung – die Entscheidung liegt bei dir.",
-    en: "We openly discuss how to continue. I give you my honest assessment – the decision is yours.",
+    de: "Integration & Abschluss – Wir nehmen uns Zeit, das Erlebte einzuordnen. Du bekommst konkrete Impulse für deinen Alltag mit – und wir besprechen offen, ob und wie es weitergehen kann.",
+    en: "Integration & closing – We take time to process what emerged. You receive concrete impulses for your everyday life – and we openly discuss if and how to continue.",
   },
   "offerings.preiseTitle": {
     de: "Klare Konditionen",
