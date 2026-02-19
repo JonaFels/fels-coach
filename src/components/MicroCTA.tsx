@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
@@ -21,9 +21,9 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
         className="min-h-[44px] min-w-[200px]"
         onClick={() => trackCTAClick("micro_cta_vorgespraech", "micro_cta", "link")}
       >
-        <a href="/kontakt#erstgespraech">
+        <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
+          <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
           {t("cta.bookNow")}
-          <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
         </a>
       </Button>
       <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
@@ -36,7 +36,7 @@ export const InlineCTA = () => {
 
   return (
     <a
-      href="/kontakt#erstgespraech"
+      href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer"
       className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors group"
     >
       {t("cta.learnMore")}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -121,7 +122,8 @@ const Familienaufstellung = () => {
           {/* CTA */}
           <div className="text-center mb-8">
             <Button asChild size="lg" className="min-h-[44px]">
-              <a href="/kontakt#erstgespraech">
+              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
+                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("cta.bookNow")}
               </a>
             </Button>
@@ -138,7 +140,7 @@ const Familienaufstellung = () => {
               Über Jona Fels
             </Link>
             <span aria-hidden="true">•</span>
-            <a href="/kontakt#erstgespraech" className="hover:text-secondary underline underline-offset-4">
+            <a href="/kontakt" className="hover:text-secondary underline underline-offset-4">
               Kontakt
             </a>
           </nav>

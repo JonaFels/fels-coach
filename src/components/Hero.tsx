@@ -29,7 +29,7 @@ export const Hero = () => {
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:200ms]">
             <Button asChild size="lg" className="text-base px-8" onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}>
-              <a href="/kontakt#erstgespraech">
+              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("hero.ctaConsultation")}
               </a>

@@ -22,7 +22,7 @@ export const FinalCTA = () => {
             className="text-base px-8"
             onClick={() => trackCTAClick("final_cta", "homepage_final", "link")}
           >
-            <a href="/kontakt#erstgespraech">
+            <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("finalCta.button")}
             </a>

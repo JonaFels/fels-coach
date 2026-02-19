@@ -190,7 +190,7 @@ const Angebote = () => {
               className="text-base px-8 min-h-[44px]"
               onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}
             >
-              <a href="/kontakt#erstgespraech">
+              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 Erstgespräch vereinbaren
               </a>
