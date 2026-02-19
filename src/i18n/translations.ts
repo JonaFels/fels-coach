@@ -474,7 +474,7 @@ export const translations: Translations = {
     en: "I desperately wanted to integrate that liberated feeling from abroad back into my everyday life and searched intensively for ways. Ultimately, it was family constellation work that inspired me to understand precisely what was really happening inside me. I learned to recognize: It is thoughts and emotional patterns transferred to us in early childhood that control us.",
   },
   "about.guidance2": {
-    de: "In den Aufstellungen durfte ich erleben, wie heilsam es ist, wenn das Unterbewusste klar werden kann und sich der Raum öffnet, in dem das Muster durchbrochen wird. Dadurch konnte ich meine Erfahrungen loslassen und ein unbeschwerteres Leben beginnen. Heute lebe ich zu über 95 Prozent als mein wahres Ich – und das nicht nur für Momente, sondern die ganze Zeit.",
+    de: "In den Aufstellungen durfte ich erleben, wie heilsam es ist, wenn das Unterbewusste klar werden kann und sich der Raum öffnet, in dem das Muster durchbrochen wird. Dadurch konnte ich meine Erfahrungen loslassen und ein unbeschwerteres Leben beginnen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – und das nicht nur für Momente, sondern die ganze Zeit.",
     en: "In the constellations, I was able to experience how healing it is when the subconscious can become clear and the space opens in which the pattern is broken. Through this, I was able to let go of my experiences and begin a more carefree life. Today, I live over 95 percent as my true self – and not just for moments, but all the time.",
   },
   "about.guidance3": {
@@ -486,7 +486,7 @@ export const translations: Translations = {
     en: "My mission today",
   },
   "about.core1": {
-    de: "Heute ist es meine Aufgabe, Räume zu schaffen, in denen wir das Bewusstsein für unsere Tiefe eröffnen und innere Heilung finden können.",
+    de: "Heute ist es eine Aufgabe für mich, Räume zu schaffen, in denen wir das Bewusstsein für unsere Tiefe eröffnen und innere Heilung finden können.",
     en: "Today, my mission is to create spaces where we can open awareness for our depth and find inner healing.",
   },
   "about.core2": {
