@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
-import { Clock, Sparkles, Heart, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Repeat, Lock, UserX } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackCTAClick } from "@/lib/tracking";
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Intro */}
@@ -26,8 +23,8 @@ export const CoachingSection = () => {
             <p>{t("coaching.text2")}</p>
           </div>
 
-          {/* Details Card */}
-          <Card className="mb-10 bg-card/95 backdrop-blur-sm animate-fade-in-up [animation-delay:300ms]">
+          {/* Pain Point Cards */}
+          <Card className="bg-card/95 backdrop-blur-sm animate-fade-in-up [animation-delay:300ms]">
             <CardHeader>
               <CardTitle className="font-serif text-xl text-center">
                 {t("coaching.details.title")}
@@ -37,35 +34,25 @@ export const CoachingSection = () => {
               <ul className="grid gap-4 md:grid-cols-3">
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <div className="p-2 rounded-full bg-secondary/10">
-                    <Clock className="h-5 w-5 text-secondary" />
+                    <Repeat className="h-5 w-5 text-secondary" />
                   </div>
                   <span>{t("coaching.detail1")}</span>
                 </li>
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <div className="p-2 rounded-full bg-secondary/10">
-                    <Sparkles className="h-5 w-5 text-secondary" />
+                    <Lock className="h-5 w-5 text-secondary" />
                   </div>
                   <span>{t("coaching.detail2")}</span>
                 </li>
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <div className="p-2 rounded-full bg-secondary/10">
-                    <Heart className="h-5 w-5 text-secondary" />
+                    <UserX className="h-5 w-5 text-secondary" />
                   </div>
                   <span>{t("coaching.detail3")}</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
-
-          {/* CTA */}
-          <div className="text-center animate-fade-in-up [animation-delay:400ms]">
-            <Button asChild variant="outline" size="lg" className="text-base" onClick={() => trackCTAClick("coaching_methode", "homepage_coaching_section", "link")}>
-              <Link to="/systemische-familienaufstellung-freiburg">
-                {t("coaching.learnMore")}
-                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </div>
     </section>

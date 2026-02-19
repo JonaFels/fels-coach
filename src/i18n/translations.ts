@@ -90,38 +90,38 @@ export const translations: Translations = {
     en: "Free E-Book",
   },
 
-  // Coaching Description (Homepage)
+  // Coaching Description (Homepage) – Pain Point
   "coaching.title": {
-    de: "Der chirurgische Weg zur Ursache",
-    en: "The Surgical Path to the Root Cause",
+    de: "Der Gummiband-Effekt",
+    en: "The Rubber Band Effect",
   },
   "coaching.intro": {
-    de: "Strukturelles System-Audit statt endloser Selbstoptimierung",
-    en: "Structural System Audit instead of endless self-optimization",
+    de: "Kennst du das?",
+    en: "Does this sound familiar?",
   },
   "coaching.text1": {
-    de: "Kennst du den Gummiband-Effekt? Du arbeitest an dir, machst Fortschritte – und wirst trotzdem immer wieder in alte Muster zurückgezogen. Du sabotierst Beziehungen, die dir wichtig sind. Verschenkst Talente, die du hast. Fühlst dich wie ein Fremder im eigenen Leben, während Jahre in unsichtbaren Familiendynamiken verschwinden.",
-    en: "Do you know the rubber band effect? You work on yourself, make progress – yet get pulled back into old patterns again and again. You sabotage relationships that matter. Waste talents you have. Feel like a stranger in your own life while years disappear into invisible family dynamics.",
+    de: "Du arbeitest an dir, machst Fortschritte – und wirst trotzdem immer wieder in alte Muster zurückgezogen. Du sabotierst Beziehungen, die dir wichtig sind. Verschenkst Talente, die du hast. Fühlst dich wie ein Fremder im eigenen Leben, während alte Familienmuster dich unbewusst steuern.",
+    en: "You work on yourself, make progress – yet get pulled back into old patterns again and again. You sabotage relationships that matter. Waste talents you have. Feel like a stranger in your own life while old family patterns unconsciously control you.",
   },
   "coaching.text2": {
-    de: "Familienaufstellungen in Einzelsessions sind keine endlose Gesprächstherapie. Es ist ein präzises Mapping deines inneren Systems – die Abkürzung zur Wurzel. Wir identifizieren die Stelle, an der deine innere Statik kippt, und korrigieren sie. Das Ergebnis: Du wirst vom inneren Zuschauer zur souveränen Autorität in deinem eigenen Leben.",
-    en: "Family constellations in individual sessions are not endless talk therapy. It's a precise mapping of your inner system – the shortcut to the root. We identify the point where your inner statics collapse and correct it. The result: You transform from inner bystander to sovereign authority in your own life.",
+    de: "Das ist kein Zufall. Es sind Gedanken und emotionale Muster, die in der frühen Kindheit auf uns übertragen wurden. Sie halten uns in einer Überlebensanpassung gefangen, die uns daran hindert, unser wahres Selbst zu leben.",
+    en: "This is no coincidence. These are thoughts and emotional patterns transferred to us in early childhood. They keep us trapped in a survival adaptation that prevents us from living our true self.",
   },
   "coaching.details.title": {
-    de: "Dein System-Audit",
-    en: "Your System Audit",
+    de: "Das Muster erkennen",
+    en: "Recognizing the pattern",
   },
   "coaching.detail1": {
-    de: "80 min präzise Ursachenarbeit",
-    en: "80 min precise root cause work",
+    de: "Immer wieder die gleichen Konflikte",
+    en: "The same conflicts over and over",
   },
   "coaching.detail2": {
-    de: "Strukturelles Mapping deiner inneren Dynamik",
-    en: "Structural mapping of your inner dynamics",
+    de: "Innere Blockaden trotz Wissen",
+    en: "Inner blockages despite knowledge",
   },
   "coaching.detail3": {
-    de: "Korrektur der inneren Statik",
-    en: "Correction of inner statics",
+    de: "Gefühl der Fremdbestimmung",
+    en: "Feeling of being externally controlled",
   },
   "coaching.learnMore": {
     de: "Methode verstehen",
@@ -558,7 +558,66 @@ export const translations: Translations = {
     en: "Read more about my journey",
   },
 
-  // Author Box
+  // Method Section (Homepage)
+  "method.intro": {
+    de: "Wie machen wir das konkret?",
+    en: "How do we do this concretely?",
+  },
+  "method.title": {
+    de: "Familienaufstellung – dein System-Audit",
+    en: "Family Constellation – Your System Audit",
+  },
+  "method.description": {
+    de: "In Einzelsessions schauen wir uns an, welche unsichtbaren Dynamiken dich steuern. Keine endlose Gesprächstherapie – sondern ein präziser Blick auf die Wurzel deiner Muster.",
+    en: "In individual sessions, we look at which invisible dynamics are controlling you. No endless talk therapy – but a precise look at the root of your patterns.",
+  },
+  "method.step1.title": {
+    de: "Ankommen & Fokus finden",
+    en: "Arrive & Find Focus",
+  },
+  "method.step1.desc": {
+    de: "Was beschäftigt dich? Gemeinsam finden wir das Thema, das gerade am meisten Energie bindet.",
+    en: "What's on your mind? Together we find the theme that currently binds the most energy.",
+  },
+  "method.step2.title": {
+    de: "Muster sichtbar machen",
+    en: "Making Patterns Visible",
+  },
+  "method.step2.desc": {
+    de: "Durch Aufstellungsarbeit wird sichtbar, was im Unterbewussten wirkt – die unsichtbare Architektur deiner inneren Blockaden.",
+    en: "Through constellation work, what operates in the subconscious becomes visible – the invisible architecture of your inner blockages.",
+  },
+  "method.step3.title": {
+    de: "Integration & Lösung",
+    en: "Integration & Resolution",
+  },
+  "method.step3.desc": {
+    de: "Du erlebst, wie heilsam es ist, wenn sich der Raum öffnet, in dem alte Muster durchbrochen werden – für nachhaltige Gelassenheit.",
+    en: "You experience how healing it is when the space opens in which old patterns are broken – for lasting serenity.",
+  },
+  "method.cta": {
+    de: "Mehr über die Methode erfahren",
+    en: "Learn more about the method",
+  },
+
+  // Final CTA (Homepage)
+  "finalCta.title": {
+    de: "Bereit für den ersten Schritt?",
+    en: "Ready for the first step?",
+  },
+  "finalCta.description": {
+    de: "In einem kostenlosen 15-minütigen Erstgespräch klären wir, ob die Chemie stimmt und wie ich dich am besten begleiten kann. Kein Druck, kein Verkaufsgespräch – einfach ein ehrliches Kennenlernen.",
+    en: "In a free 15-minute initial conversation, we'll see if the chemistry is right and how I can best accompany you. No pressure, no sales pitch – just an honest introduction.",
+  },
+  "finalCta.button": {
+    de: "Sichere dir jetzt deinen Termin",
+    en: "Secure your appointment now",
+  },
+  "finalCta.microcopy": {
+    de: "Kostenlos · 15 Minuten · Unverbindlich",
+    en: "Free · 15 minutes · Non-binding",
+  },
+
   "author.writtenBy": {
     de: "Geschrieben von",
     en: "Written by",
