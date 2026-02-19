@@ -540,6 +540,24 @@ export const translations: Translations = {
     en: "Experiences from working together",
   },
 
+  // About Preview (Landing Page)
+  "aboutPreview.title": {
+    de: "\u201EIch kenne das System von innen.\u201C",
+    en: '"I know the system from the inside."',
+  },
+  "aboutPreview.text1": {
+    de: "Lange Zeit fühlte ich mich wie ein Fremder im eigenen Leben. Nach meiner Rückkehr aus dem Ausland 2017 realisierte ich: Ich war zu weniger als 5\u00A0% ich selbst – der Rest war reine Überlebensanpassung an alte Familienmuster.",
+    en: "For a long time, I felt like a stranger in my own life. After returning from abroad in 2017, I realized: I was less than 5% myself – the rest was pure survival adaptation to old family patterns.",
+  },
+  "aboutPreview.text2": {
+    de: "Erst durch systemische Aufstellungen konnte ich diese unsichtbare Statik korrigieren. Heute begleite ich Menschen dabei, diese Fremdbestimmung abzulegen und ihre eigene, souveräne Autorität zurückzugewinnen.",
+    en: "Only through systemic constellations was I able to correct this invisible structure. Today, I help people shed this external determination and reclaim their own sovereign authority.",
+  },
+  "aboutPreview.cta": {
+    de: "Mehr über meinen Weg lesen",
+    en: "Read more about my journey",
+  },
+
   // Author Box
   "author.writtenBy": {
     de: "Geschrieben von",
