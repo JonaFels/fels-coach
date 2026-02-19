@@ -22,7 +22,7 @@ export const Hero = () => {
           loading="eager"
         />
       </div>
-    <section className="relative py-16 md:py-24 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight animate-fade-in-up">

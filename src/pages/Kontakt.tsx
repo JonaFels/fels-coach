@@ -42,17 +42,17 @@ const Kontakt = () => {
         />
       </div>
 
-      <PageBackground className="!pt-8">
+      <PageBackground className="!pt-12">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-4">
             {t("contact.headline")}
           </h1>
-          <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+          <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
             {t("contact.text")}
           </p>
 
           {/* Erstgespräch Section */}
-          <div id="erstgespraech" ref={erstgespraechRef} className="mb-12 scroll-mt-24">
+          <div id="erstgespraech" ref={erstgespraechRef} className="mb-16 scroll-mt-24">
             <Card className="bg-card/95 backdrop-blur-sm border-secondary/20 max-w-lg mx-auto">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-2 mb-3">
@@ -76,7 +76,7 @@ const Kontakt = () => {
           </div>
 
           {/* Alternative Contact Options */}
-          <div className="grid gap-8 md:grid-cols-2 mb-8">
+          <div className="grid gap-8 md:grid-cols-2 mb-12">
             <ContactForm />
             <Card className="bg-card/95 backdrop-blur-sm">
               <CardContent className="pt-6">
@@ -118,7 +118,7 @@ const Kontakt = () => {
           </div>
 
           {/* Anfahrt & Ankommen */}
-          <div className="mb-12">
+          <div className="mb-16">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px flex-1 max-w-16 bg-border" />
               <MapPin className="h-5 w-5 text-secondary" />

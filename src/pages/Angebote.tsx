@@ -50,7 +50,7 @@ const Angebote = () => {
 
       <main>
         {/* Intro */}
-        <section className="bg-background py-16 md:py-20">
+        <section className="bg-background py-20 md:py-28">
           <div className="container mx-auto px-4 text-center max-w-[700px]">
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8">
               {t("offerings.title")}
@@ -62,7 +62,7 @@ const Angebote = () => {
         </section>
 
         {/* Was dich erwartet – Werte */}
-        <section className="bg-muted py-16 md:py-20">
+        <section className="bg-muted py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-[700px]">
             <div className="grid gap-10 md:grid-cols-3 text-center">
               {[
@@ -83,7 +83,7 @@ const Angebote = () => {
         </section>
 
         {/* Ablauf – Drei Schritte */}
-        <section className="bg-background py-20 md:py-28">
+        <section className="bg-background py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-[700px]">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.ablaufTitle")}
@@ -105,7 +105,7 @@ const Angebote = () => {
         </section>
 
         {/* Preise & Buchung */}
-        <section className="bg-muted py-20 md:py-28">
+        <section className="bg-muted py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.preiseTitle")}
@@ -174,7 +174,7 @@ const Angebote = () => {
         </section>
 
         {/* Noch unsicher? – sanfter Fallback */}
-        <section className="bg-accent py-16 md:py-20">
+        <section className="bg-accent py-20 md:py-28">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
               Noch unsicher?
@@ -202,7 +202,7 @@ const Angebote = () => {
         </section>
 
         {/* Interne Links */}
-        <section className="bg-background py-14">
+        <section className="bg-background py-16">
           <nav className="container mx-auto px-4 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground" aria-label="Verwandte Seiten">
             <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
               Was ist Familienaufstellung?
