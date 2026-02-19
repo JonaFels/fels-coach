@@ -10,14 +10,17 @@ import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { trackCTAClick } from "@/lib/tracking";
-
+import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
   const [showForm, setShowForm] = useState(false);
+  const { openBooking, BookingDialog } = useOrbnetBooking();
 
   const handleCTAClick = () => {
     trackCTAClick("familienaufstellung_vorgespraech", "familienaufstellung_cta", "inline_form");
@@ -121,11 +124,9 @@ const Familienaufstellung = () => {
 
           {/* CTA */}
           <div className="text-center mb-8">
-            <Button asChild size="lg" className="min-h-[44px]">
-              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
-                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                {t("cta.bookNow")}
-              </a>
+            <Button size="lg" className="min-h-[44px]" onClick={() => openBooking(ERSTGESPRAECH_SEMUID)}>
+              <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+              {t("cta.bookNow")}
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
           </div>
@@ -148,6 +149,7 @@ const Familienaufstellung = () => {
           <AuthorBox />
         </article>
       </PageBackground>
+      <BookingDialog />
       <Footer />
       <CookieBanner />
     </div>

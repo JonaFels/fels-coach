@@ -3,9 +3,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { Phone } from "lucide-react";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
+import { useOrbnetBooking } from "@/components/OrbnetBooking";
+
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const { openBooking, BookingDialog } = useOrbnetBooking();
 
   return (
     <>
@@ -28,17 +32,23 @@ export const Hero = () => {
             {t("hero.subtitle")}
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:200ms]">
-            <Button asChild size="lg" className="text-base px-8" onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}>
-              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
-                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                {t("hero.ctaConsultation")}
-              </a>
+            <Button
+              size="lg"
+              className="text-base px-8"
+              onClick={() => {
+                trackCTAClick("hero_consultation", "homepage_hero", "link");
+                openBooking(ERSTGESPRAECH_SEMUID);
+              }}
+            >
+              <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+              {t("hero.ctaConsultation")}
             </Button>
             <p className="text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
           </div>
         </div>
       </div>
     </section>
+    <BookingDialog />
     </>
   );
 };

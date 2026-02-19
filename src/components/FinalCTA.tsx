@@ -2,9 +2,13 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
+import { useOrbnetBooking } from "@/components/OrbnetBooking";
+
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 export const FinalCTA = () => {
   const { t } = useLanguage();
+  const { openBooking, BookingDialog } = useOrbnetBooking();
 
   return (
     <section className="py-20 md:py-28 bg-muted/40">
@@ -17,21 +21,22 @@ export const FinalCTA = () => {
             {t("finalCta.description")}
           </p>
           <Button
-            asChild
             size="lg"
             className="text-base px-8"
-            onClick={() => trackCTAClick("final_cta", "homepage_final", "link")}
+            onClick={() => {
+              trackCTAClick("final_cta", "homepage_final", "link");
+              openBooking(ERSTGESPRAECH_SEMUID);
+            }}
           >
-            <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
-              <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-              {t("finalCta.button")}
-            </a>
+            <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+            {t("finalCta.button")}
           </Button>
           <p className="text-sm text-muted-foreground mt-4">
             {t("finalCta.microcopy")}
           </p>
         </div>
       </div>
+      <BookingDialog />
     </section>
   );
 };
