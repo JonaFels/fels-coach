@@ -59,7 +59,7 @@ export const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Button asChild size="sm" onClick={handleTerminClick}>
-              <a href="/kontakt#erstgespraech">{t("nav.contact")}</a>
+              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">{t("nav.contact")}</a>
             </Button>
           </div>
 
@@ -98,7 +98,7 @@ export const Header = () => {
                 handleTerminClick();
                 setIsMobileMenuOpen(false);
               }}>
-                <a href="/kontakt#erstgespraech">
+                <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
                   {t("nav.contact")}
                 </a>
               </Button>
