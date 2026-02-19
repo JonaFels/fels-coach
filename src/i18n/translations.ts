@@ -166,8 +166,8 @@ export const translations: Translations = {
     en: "Clear Conditions",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg oder Online-Video-Call, faire Preise ohne Verstecktes.",
-    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg or online video call, fair prices with nothing hidden.",
+    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg oder Online-Video-Call.",
+    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg or online video call.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
