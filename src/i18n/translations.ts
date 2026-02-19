@@ -454,44 +454,44 @@ export const translations: Translations = {
     en: "About me",
   },
   "about.subtitle": {
-    de: "Vom Überlebensmodus zur systemischen Freiheit.",
-    en: "From survival mode to systemic freedom.",
+    de: "Wie ich mein eigenes Muster durchbrochen habe",
+    en: "How I broke through my own pattern",
   },
   "about.intro1": {
-    de: "Mein Weg zum Systemischen Coaching war kein Zufall, sondern eine Notwendigkeit. 2017 kehrte ich nach einem fluchtartigen Auslandsjahr zurück und erlebte den Gummiband-Effekt in seiner extremsten Form. Trotz der räumlichen Weite zuvor, prallte ich zu Hause ungebremst gegen die unsichtbare Wand meiner Herkunftsdynamiken.",
-    en: "My path to systemic coaching was no coincidence, but a necessity. In 2017, I returned from a year abroad that felt like an escape and experienced the rubber band effect in its most extreme form. Despite the spatial distance before, I crashed head-on into the invisible wall of my family dynamics back home.",
+    de: "Meine eigene Erfahrung hat mich dorthin gebracht, wo ich heute bin und warum ich behaupte, dass jeder im Kern ganz ist.",
+    en: "My own experience brought me to where I am today and why I believe that everyone is whole at their core.",
   },
   "about.intro2": {
-    de: "In diesem Moment wurde mir klar: Ich war zu weniger als fünf Prozent ich selbst. Der Rest war eine hochgradig effiziente, aber fremdbestimmte Überlebensanpassung an ein System, das mich in alten Rollen gefangen hielt.",
-    en: "In that moment, I realized: I was less than five percent myself. The rest was a highly efficient but externally determined survival adaptation to a system that kept me trapped in old roles.",
+    de: "2017 kehrte ich aus einem fluchtartigen Auslandsjahr zurück. In der Ferne hatte ich ein unglaubliches Hoch erlebt, doch kaum war ich wieder in der Heimat, spürte ich den Rückschlag: Alte Umgebungen drängten mich unweigerlich wieder in alte Verhaltensweisen. In dieser Zeit fühlte ich mich, als bestünde ich zu weniger als fünf Prozent aus meinem wahren Selbst. Alles andere war reine Überlebensanpassung. Mir wurde bewusst, dass ich mir Charaktereigenschaften angeeignet hatte, nur um bestimmte Phasen meiner Kindheit zu überstehen.",
+    en: "In 2017, I returned from a year abroad that felt like an escape. In the distance, I had experienced an incredible high, but as soon as I was back home, I felt the backlash: Old environments inevitably pushed me back into old behaviors. During this time, I felt as if less than five percent of me was my true self. Everything else was pure survival adaptation. I realized that I had adopted character traits just to survive certain phases of my childhood.",
   },
   "about.guidance.title": {
-    de: "Warum ich tue, was ich tue",
-    en: "Why I do what I do",
+    de: "Der Wendepunkt",
+    en: "The turning point",
   },
   "about.guidance1": {
-    de: "Erst durch die tiefgreifend präzise Arbeit der Familienaufstellung gelang es mir, die inneren Fesseln zu identifizieren und zu lösen. Ich habe die Werkzeuge gesucht und gefunden, um die innere Statik dauerhaft zu korrigieren.",
-    en: "Only through the profoundly precise work of family constellation did I manage to identify and release my inner bonds. I searched for and found the tools to permanently correct my inner structure.",
+    de: "Ich wollte dieses befreite Gefühl aus dem Ausland unbedingt wieder in meinen Alltag integrieren und suchte intensiv nach Wegen. Zuletzt war es das Familienstellen, das mich inspirierte, ganz genau zu verstehen, was in mir wirklich passierte. Ich lernte zu erkennen: Es sind Gedanken und emotionale Muster, die in der frühen Kindheit auf uns übertragen wurden, die uns steuern.",
+    en: "I desperately wanted to integrate that liberated feeling from abroad back into my everyday life and searched intensively for ways. Ultimately, it was family constellation work that inspired me to understand precisely what was really happening inside me. I learned to recognize: It is thoughts and emotional patterns transferred to us in early childhood that control us.",
   },
   "about.guidance2": {
-    de: "Heute lebe ich zu 95 Prozent meine eigene Identität – nicht als flüchtiger Zustand, sondern als stabiles Fundament. Diese Klarheit ist kein Glück, sondern das Ergebnis einer bewussten System-Korrektur, die ich heute an meine Klienten weitergebe.",
-    en: "Today, I live 95 percent of my own identity – not as a fleeting state, but as a stable foundation. This clarity is not luck, but the result of a conscious system correction that I now pass on to my clients.",
+    de: "In den Aufstellungen durfte ich erleben, wie heilsam es ist, wenn das Unterbewusste klar werden kann und sich der Raum öffnet, in dem das Muster durchbrochen wird. Dadurch konnte ich meine Erfahrungen loslassen und ein unbeschwerteres Leben beginnen. Heute lebe ich zu über 95 Prozent als mein wahres Ich – und das nicht nur für Momente, sondern die ganze Zeit.",
+    en: "In the constellations, I was able to experience how healing it is when the subconscious can become clear and the space opens in which the pattern is broken. Through this, I was able to let go of my experiences and begin a more carefree life. Today, I live over 95 percent as my true self – and not just for moments, but all the time.",
   },
   "about.guidance3": {
-    de: "Ich bringe eine geschulte Wahrnehmung mit, um die unsichtbaren Fäden und Verstrickungen in deinem System aufzuspüren. Mein tiefstes Mitgefühl ist dabei deine sichere Basis.",
-    en: "I bring a trained perception to track down the invisible threads and entanglements in your system. My deepest compassion is your safe foundation.",
+    de: "Wir alle haben die Wahl: Du kannst entscheiden, ob du deine inneren Muster löst oder ob dein Leben passiert, wie es deine Eltern und dein Umfeld dir gesagt haben. Ich habe mich für das innere Wachstum entschieden.",
+    en: "We all have a choice: You can decide whether to resolve your inner patterns or whether your life happens as your parents and environment told you. I chose inner growth.",
   },
   "about.core.title": {
-    de: "Dein unversehrter Kern wird sichtbar",
-    en: "Your intact core becomes visible",
+    de: "Meine Aufgabe heute",
+    en: "My mission today",
   },
   "about.core1": {
-    de: "Tiefe Präsenz und Achtsamkeit bilden das Fundament unserer Arbeit. Sie ermöglichen uns die Ruhe während der Session, die essenziell ist, um dein System klar sehen zu können und deinen unversehrten Kern freizulegen.",
-    en: "Deep presence and mindfulness form the foundation of our work. They enable us to achieve the calm during the session that is essential to clearly see your system and uncover your intact core.",
+    de: "Heute ist es meine Aufgabe, Räume zu schaffen, in denen wir das Bewusstsein für unsere Tiefe eröffnen und innere Heilung finden können.",
+    en: "Today, my mission is to create spaces where we can open awareness for our depth and find inner healing.",
   },
   "about.core2": {
-    de: "Ich bin zutiefst davon überzeugt: In dir ist ein Kern unversehrter Kraft – rein und unerschütterlich. Und ich weiß, dass wir jeden Umstand in eine heilsame Erfahrung umwandeln können.",
-    en: "I am deeply convinced: Within you is a core of intact power – pure and unshakeable. And I know that we can transform every circumstance into a healing experience.",
+    de: "Gemeinsam schauen wir uns an, wo deine größten Schätze vergraben sind, damit du Frieden mit deiner Vergangenheit schließen kannst und nachhaltig Gelassenheit entsteht.",
+    en: "Together, we look at where your greatest treasures are buried, so that you can make peace with your past and lasting serenity arises.",
   },
   "about.cv.title": {
     de: "Lebenslauf",
@@ -542,16 +542,16 @@ export const translations: Translations = {
 
   // About Preview (Landing Page)
   "aboutPreview.title": {
-    de: "\u201EIch kenne das System von innen.\u201C",
-    en: '"I know the system from the inside."',
+    de: "Der Weg zum eigenen Ganz-Sein",
+    en: "The path to your own wholeness",
   },
   "aboutPreview.text1": {
-    de: "Lange Zeit fühlte ich mich wie ein Fremder im eigenen Leben. Nach meiner Rückkehr aus dem Ausland 2017 realisierte ich: Ich war zu weniger als 5\u00A0% ich selbst – der Rest war reine Überlebensanpassung an alte Familienmuster.",
-    en: "For a long time, I felt like a stranger in my own life. After returning from abroad in 2017, I realized: I was less than 5% myself – the rest was pure survival adaptation to old family patterns.",
+    de: "Ich habe selbst erfahren, wie wir unbewusst in alten Dynamiken gefangen sein können. Als ich 2017 aus einem fluchtartigen Auslandsjahr zurückkehrte, brachten mich alte Umgebungen sofort wieder in meine alten Verhaltensweisen zurück. Ich erkannte schmerzhaft: Ich war zu weniger als fünf Prozent ich selbst – alles andere war reine Überlebensanpassung. Es waren Gedanken und emotionale Muster, die früh auf mich übertragen wurden.",
+    en: "I have experienced firsthand how we can be unconsciously trapped in old dynamics. When I returned from a year abroad in 2017, old environments immediately pulled me back into old behaviors. I painfully realized: I was less than five percent myself – everything else was pure survival adaptation. These were thoughts and emotional patterns that were transferred to me early on.",
   },
   "aboutPreview.text2": {
-    de: "Erst durch systemische Aufstellungen konnte ich diese unsichtbare Statik korrigieren. Heute begleite ich Menschen dabei, diese Fremdbestimmung abzulegen und ihre eigene, souveräne Autorität zurückzugewinnen.",
-    en: "Only through systemic constellations was I able to correct this invisible structure. Today, I help people shed this external determination and reclaim their own sovereign authority.",
+    de: "Das Familienstellen hat mich schließlich inspiriert, ganz genau zu verstehen, was in mir wirklich passiert. In Momenten, wo Unterbewusstes klar werden kann, konnte ich diese Muster durchbrechen. Heute lebe ich zu über 95 Prozent mein wahres Selbst. Ich begleite dich dabei, die Tiefe deiner immer wieder kehrenden Muster aus dem Alltag zu finden und zu lösen, damit in deinem Leben nachhaltig Gelassenheit entsteht.",
+    en: "Family constellation work ultimately inspired me to understand precisely what was really happening inside me. In moments where the subconscious can become clear, I was able to break through these patterns. Today, I live over 95 percent as my true self. I accompany you in finding and resolving the depth of your recurring everyday patterns, so that lasting serenity arises in your life.",
   },
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
