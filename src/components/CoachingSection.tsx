@@ -6,7 +6,7 @@ export const CoachingSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-muted/40">
+    <section className="py-24 md:py-36 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Intro */}
@@ -18,7 +18,7 @@ export const CoachingSection = () => {
           </h2>
 
           {/* Description */}
-          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed text-center mb-12 animate-fade-in-up [animation-delay:200ms]">
+          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed text-center mb-16 animate-fade-in-up [animation-delay:200ms]">
             <p>{t("coaching.text1")}</p>
             <p>{t("coaching.text2")}</p>
           </div>

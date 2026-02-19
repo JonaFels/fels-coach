@@ -58,12 +58,12 @@ export const FAQSection = () => {
   const faqs = faqData[language];
 
   return (
-    <section className="py-20 md:py-28" aria-labelledby="faq-heading">
+    <section className="py-24 md:py-36" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
         <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
           {language === 'de' ? 'Häufige Fragen' : 'Common Questions'}
         </p>
-        <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground text-center mb-12">
+        <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground text-center mb-16">
           {t("faq.title")}
         </h2>
         <div className="bg-card rounded-lg border border-border/50 shadow-sm p-6 md:p-8">

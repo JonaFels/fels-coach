@@ -32,7 +32,7 @@ const Blog = () => {
       <Header />
       <PageBackground>
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-16">
             {t("blog.title")}
           </h1>
 
@@ -69,7 +69,7 @@ const Blog = () => {
           </div>
 
           {/* Internal Links */}
-          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-12" aria-label="Verwandte Seiten">
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-16" aria-label="Verwandte Seiten">
             <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
               Was ist Familienaufstellung?
             </Link>

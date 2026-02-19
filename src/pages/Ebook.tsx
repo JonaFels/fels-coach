@@ -128,7 +128,7 @@ const Ebook = () => {
       <PageBackground className="!pt-8">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Header Section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-4">
               Kostenloses E-Book
             </p>
@@ -140,7 +140,7 @@ const Ebook = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2">
             {/* Left Column - Book Mockup & Form */}
             <div className="space-y-6">
               {/* Book Cover */}
@@ -273,7 +273,7 @@ const Ebook = () => {
           </div>
 
           {/* Internal Links */}
-          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-12" aria-label="Verwandte Seiten">
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-16" aria-label="Verwandte Seiten">
             <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
               Was ist Familienaufstellung?
             </Link>

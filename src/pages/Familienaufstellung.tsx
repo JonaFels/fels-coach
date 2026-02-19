@@ -50,7 +50,7 @@ const Familienaufstellung = () => {
           </h1>
 
           {/* Intro Section */}
-          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
+          <Card className="mb-12 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
                 {t("family.intro.title")}
@@ -66,7 +66,7 @@ const Familienaufstellung = () => {
           
 
           {/* Benefits Section */}
-          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
+          <Card className="mb-12 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
                 {t("family.benefits.title")}
@@ -95,7 +95,7 @@ const Familienaufstellung = () => {
           </Card>
 
           {/* Process Section */}
-          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
+          <Card className="mb-12 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl">
                 {t("family.process.title")}
@@ -123,7 +123,7 @@ const Familienaufstellung = () => {
           </Card>
 
           {/* CTA */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <Button size="lg" className="min-h-[44px]" onClick={() => openBooking(ERSTGESPRAECH_SEMUID)}>
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("cta.bookNow")}

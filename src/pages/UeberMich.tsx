@@ -33,7 +33,7 @@ const UeberMich = () => {
       <PageBackground className="!pt-8">
         <article className="container mx-auto px-4 max-w-4xl">
           {/* Hero Section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <div className="mb-8">
               <img 
                 src={profilBild} 
@@ -51,7 +51,7 @@ const UeberMich = () => {
           </div>
 
           {/* Intro Section */}
-          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
+          <Card className="mb-12 bg-card/95 backdrop-blur-sm">
             <CardContent className="pt-6 space-y-4 text-muted-foreground leading-relaxed">
               <p>{t("about.intro1")}</p>
               <p>{t("about.intro2")}</p>
@@ -61,7 +61,7 @@ const UeberMich = () => {
           
 
           {/* Guidance Section */}
-          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
+          <Card className="mb-12 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl border-l-4 border-secondary pl-4">
                 {t("about.guidance.title")}
@@ -75,7 +75,7 @@ const UeberMich = () => {
           </Card>
 
           {/* Core Section */}
-          <Card className="mb-8 bg-card/95 backdrop-blur-sm">
+          <Card className="mb-12 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="font-serif text-xl border-l-4 border-secondary pl-4">
                 {t("about.core.title")}
@@ -88,11 +88,11 @@ const UeberMich = () => {
           </Card>
 
           {/* CV Section */}
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center my-12">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center my-16">
             {t("about.cv.title")}
           </h2>
 
-          <Card className="bg-card/95 backdrop-blur-sm mb-8">
+          <Card className="bg-card/95 backdrop-blur-sm mb-12">
             <CardContent className="pt-6">
               <div className="space-y-4">
                 <div className="border-l-2 border-secondary pl-4 py-2">
