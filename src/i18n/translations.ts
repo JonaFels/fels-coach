@@ -374,8 +374,8 @@ export const translations: Translations = {
     en: "Why you unconsciously sabotage yourself – and how to find permission to finally be wholly yourself.",
   },
   "ebook.subheadline": {
-    de: "Hol dir mein E-Book 'Der Weg zum Ganzsein' und verstehe die unsichtbare Architektur deiner inneren Blockaden.",
-    en: "Get my e-book 'The Path to Wholeness' and understand the invisible architecture of your inner blockages.",
+    de: "Auf 6 kompakten Seiten erfährst du, wie die unsichtbare Architektur deiner inneren Blockaden funktioniert – und wie du den Weg zum Ganzsein findest.",
+    en: "In 6 concise pages, discover how the invisible architecture of your inner blockages works – and how to find the path to wholeness.",
   },
   "ebook.name": {
     de: "Name",
