@@ -130,7 +130,7 @@ export const JsonLd = () => {
           name: "Jona Fels",
           givenName: "Jona",
           familyName: "Fels",
-          jobTitle: "Systemischer Coach & Familienaufsteller i.A.",
+          jobTitle: "Systemischer Coach & Familienaufsteller",
           description:
             "Familienaufsteller in Ausbildung und Coach mit Spezialisierung auf systemische Familienaufstellungen und lösungsorientiertes Coaching.",
           url: "https://fels-coach.de/ueber-mich",

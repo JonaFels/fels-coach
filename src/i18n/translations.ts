@@ -454,44 +454,44 @@ export const translations: Translations = {
     en: "About me",
   },
   "about.subtitle": {
-    de: "Ich führe dich in die Tiefe.",
-    en: "I guide you into the depths.",
+    de: "Vom Überlebensmodus zur systemischen Freiheit.",
+    en: "From survival mode to systemic freedom.",
   },
   "about.intro1": {
-    de: "Fühlst du Dich manchmal, als würdest Du eine Last tragen, die nicht Dir gehört? Kämpfst Du mit dem tiefsitzenden Gefühl, dass unbewusste Erwartungen Dein Leben beeinflussen oder Du Dich nicht vollständig von den Mustern, die dich immer in deinem Leben begleiten, lösen kannst?",
-    en: "Do you sometimes feel like you are carrying a burden that does not belong to you? Are you struggling with the deep-seated feeling that unconscious expectations are influencing your life or that you cannot fully detach from the patterns that always accompany you in life?",
+    de: "Mein Weg zum Systemischen Coaching war kein Zufall, sondern eine Notwendigkeit. 2017 kehrte ich nach einem fluchtartigen Auslandsjahr zurück und erlebte den Gummiband-Effekt in seiner extremsten Form. Trotz der räumlichen Weite zuvor, prallte ich zu Hause ungebremst gegen die unsichtbare Wand meiner Herkunftsdynamiken.",
+    en: "My path to systemic coaching was no coincidence, but a necessity. In 2017, I returned from a year abroad that felt like an escape and experienced the rubber band effect in its most extreme form. Despite the spatial distance before, I crashed head-on into the invisible wall of my family dynamics back home.",
   },
   "about.intro2": {
-    de: 'Genau diese übernommenen Strukturen sind es, die uns oft daran hindern, unser eigenes Sein vollständig zu leben – selbst dort, wo wir bereits Erfolge erreicht haben. Mein eigener Weg der Tiefenarbeit und des Familienstellen war der "Komplett-Check", um diese fremden Muster zu erkennen und abzulösen.',
-    en: 'It is precisely these inherited structures that often prevent us from fully living our own being - even where we have already achieved success. My own path of deep work and family constellation was the "complete check" to recognize and detach from these foreign patterns.',
+    de: "In diesem Moment wurde mir klar: Ich war zu weniger als fünf Prozent ich selbst. Der Rest war eine hochgradig effiziente, aber fremdbestimmte Überlebensanpassung an ein System, das mich in alten Rollen gefangen hielt.",
+    en: "In that moment, I realized: I was less than five percent myself. The rest was a highly efficient but externally determined survival adaptation to a system that kept me trapped in old roles.",
   },
   "about.guidance.title": {
-    de: "Deine Begleitung in die Tiefe – Präzision und Mitgefühl",
-    en: "Your guidance into the depths – Precision and Compassion",
+    de: "Warum ich tue, was ich tue",
+    en: "Why I do what I do",
   },
   "about.guidance1": {
-    de: "Meine Arbeit ist präzise und zutiefst mitfühlend, aber immer zielorientiert.",
-    en: "My work is precise and deeply compassionate, but always goal-oriented.",
+    de: "Erst durch die tiefgreifend präzise Arbeit der Familienaufstellung gelang es mir, die inneren Fesseln zu identifizieren und zu lösen. Ich habe die Werkzeuge gesucht und gefunden, um die innere Statik dauerhaft zu korrigieren.",
+    en: "Only through the profoundly precise work of family constellation did I manage to identify and release my inner bonds. I searched for and found the tools to permanently correct my inner structure.",
   },
   "about.guidance2": {
-    de: "Ich bringe eine geschulte Wahrnehmung mit, um die unsichtbaren Fäden und Verstrickungen in Deinem System aufzuspüren. Ich erkenne die tiefsten Wunden und begleite Dich achtsam dorthin, wo die Ursache beleuchtet werden muss, damit Deine Entscheidungen wieder ganz von Dir bestimmt werden. Mein tiefstes Mitgefühl ist dabei Deine sichere Basis.",
-    en: "I bring a trained perception to track down the invisible threads and entanglements in your system. I recognize the deepest wounds and accompany you mindfully to where the cause needs to be illuminated, so that your decisions are again completely determined by you. My deepest compassion is your safe foundation.",
+    de: "Heute lebe ich zu 95 Prozent meine eigene Identität – nicht als flüchtiger Zustand, sondern als stabiles Fundament. Diese Klarheit ist kein Glück, sondern das Ergebnis einer bewussten System-Korrektur, die ich heute an meine Klienten weitergebe.",
+    en: "Today, I live 95 percent of my own identity – not as a fleeting state, but as a stable foundation. This clarity is not luck, but the result of a conscious system correction that I now pass on to my clients.",
   },
   "about.guidance3": {
-    de: "Wir arbeiten schnell und klar strukturiert, um Dein Ziel zu erreichen: Klarheit und die eigene Lebensrichtung zu finden, indem Du Dich von übernommenen Mustern abgrenzt und zu Deinem wahrhaftigen, eigenen Ja findest.",
-    en: "We work quickly and clearly structured to achieve your goal: Finding clarity and your own direction in life by distancing yourself from inherited patterns and finding your true, own yes.",
+    de: "Ich bringe eine geschulte Wahrnehmung mit, um die unsichtbaren Fäden und Verstrickungen in deinem System aufzuspüren. Mein tiefstes Mitgefühl ist dabei deine sichere Basis.",
+    en: "I bring a trained perception to track down the invisible threads and entanglements in your system. My deepest compassion is your safe foundation.",
   },
   "about.core.title": {
     de: "Dein unversehrter Kern wird sichtbar",
     en: "Your intact core becomes visible",
   },
   "about.core1": {
-    de: "Tiefe Präsenz und Achtsamkeit bilden das Fundament unserer Arbeit. Sie ermöglichen uns die Ruhe während der Session, die essenziell ist, um dein System klar sehen zu können und Deinen unversehrten Kern freizulegen.",
+    de: "Tiefe Präsenz und Achtsamkeit bilden das Fundament unserer Arbeit. Sie ermöglichen uns die Ruhe während der Session, die essenziell ist, um dein System klar sehen zu können und deinen unversehrten Kern freizulegen.",
     en: "Deep presence and mindfulness form the foundation of our work. They enable us to achieve the calm during the session that is essential to clearly see your system and uncover your intact core.",
   },
   "about.core2": {
-    de: "Ich bin zutiefst davon überzeugt: In Dir ist ein Kern unversehrter Kraft – rein und unerschütterlich. Und ich weiß, dass wir jeden Umstand in eine heilsame Erfahrung umwandeln können. Dass wir in der Lage sind unser Leben Schritt für Schritt wahrhaftiger selbst zu gestalten.",
-    en: "I am deeply convinced: Within you is a core of intact power - pure and unshakeable. And I know that we can transform every circumstance into a healing experience. We are able to shape our lives step by step more authentically.",
+    de: "Ich bin zutiefst davon überzeugt: In dir ist ein Kern unversehrter Kraft – rein und unerschütterlich. Und ich weiß, dass wir jeden Umstand in eine heilsame Erfahrung umwandeln können.",
+    en: "I am deeply convinced: Within you is a core of intact power – pure and unshakeable. And I know that we can transform every circumstance into a healing experience.",
   },
   "about.cv.title": {
     de: "Lebenslauf",
@@ -506,8 +506,8 @@ export const translations: Translations = {
     en: "2022 - 2023 | General Naturopath: Studies at the Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
   },
   "about.cv3": {
-    de: "2016 - 2017 | Auslandsjahr: Auslandsjahr in Neuseeland.",
-    en: "2016 - 2017 | Year abroad: Year abroad in New Zealand.",
+    de: "2016 - 2017 | Auslandsjahr in Neuseeland – der Wendepunkt meiner persönlichen Transformation.",
+    en: "2016 - 2017 | Year abroad in New Zealand – the turning point of my personal transformation.",
   },
 
   // Legal Pages
@@ -546,8 +546,8 @@ export const translations: Translations = {
     en: "Written by",
   },
   "author.title": {
-    de: "Systemischer Coach & Familienaufsteller i.A.",
-    en: "Systemic Coach & Family Constellation Facilitator in Training",
+    de: "Systemischer Coach & Familienaufsteller",
+    en: "Systemic Coach & Family Constellation Facilitator",
   },
   "author.bio": {
     de: "Ich begleite Menschen dabei, unbewusste Muster zu erkennen und aufzulösen. Mit Präzision und tiefem Mitgefühl unterstütze ich dich auf deinem Weg zu mehr Klarheit und innerem Frieden.",
