@@ -11,6 +11,8 @@ import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import heroBanner from "@/assets/hero-banner.webp";
 
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+
 const offerings = [
   {
     titleKey: "offerings.kennenlernen.title",
@@ -184,16 +186,16 @@ const Angebote = () => {
               Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 15-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.
             </p>
             <Button
-              asChild
               variant="outline"
               size="lg"
               className="text-base px-8 min-h-[44px]"
-              onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}
+              onClick={() => {
+                trackCTAClick("angebote_consultation", "angebote_page", "link");
+                openBooking(ERSTGESPRAECH_SEMUID);
+              }}
             >
-              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
-                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                Erstgespräch vereinbaren
-              </a>
+              <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+              Erstgespräch vereinbaren
             </Button>
             <p className="mt-4 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
           </div>

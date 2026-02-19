@@ -606,8 +606,8 @@ export const translations: Translations = {
     en: "Ready for the first step?",
   },
   "finalCta.description": {
-    de: "In einem kostenlosen 15-minütigen Erstgespräch klären wir, ob die Chemie stimmt und wie ich dich am besten begleiten kann. Kein Druck, kein Verkaufsgespräch – einfach ein ehrliches Kennenlernen.",
-    en: "In a free 15-minute initial conversation, we'll see if the chemistry is right and how I can best accompany you. No pressure, no sales pitch – just an honest introduction.",
+    de: "In einem kostenlosen 15-minütigen Erstgespräch klären wir, ob die Chemie stimmt und wie ich dich am besten begleiten kann.",
+    en: "In a free 15-minute initial conversation, we'll see if the chemistry is right and how I can best accompany you.",
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",

@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
+import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import logoIcon from "/favicon-96x96.png";
+
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const NAV_ITEMS = [
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
@@ -19,6 +22,7 @@ const NAV_ITEMS = [
 export const Header = () => {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openBooking, BookingDialog } = useOrbnetBooking();
 
   const handleNavClick = (key: string, href: string) => {
     trackLinkClick(t(key), href, "header_navigation");
@@ -58,8 +62,9 @@ export const Header = () => {
 
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <Button asChild size="sm" onClick={handleTerminClick}>
-              <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">{t("nav.contact")}</a>
+            <Button size="sm" onClick={() => { handleTerminClick(); openBooking(ERSTGESPRAECH_SEMUID); }}>
+              <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+              {t("nav.contact")}
             </Button>
           </div>
 
@@ -94,18 +99,19 @@ export const Header = () => {
             ))}
             <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
-              <Button asChild size="sm" onClick={() => {
+              <Button size="sm" onClick={() => {
                 handleTerminClick();
                 setIsMobileMenuOpen(false);
+                openBooking(ERSTGESPRAECH_SEMUID);
               }}>
-                <a href="https://www.orbnet.de/p/fels-coach/" target="_blank" rel="noopener noreferrer">
-                  {t("nav.contact")}
-                </a>
+                <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+                {t("nav.contact")}
               </Button>
             </div>
           </nav>
         </div>
       </div>
+      <BookingDialog />
     </header>
   );
 };
