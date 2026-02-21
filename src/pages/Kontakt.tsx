@@ -23,8 +23,11 @@ const Kontakt = () => {
   const erstgespraechRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    if (location.hash === "#erstgespraech" && erstgespraechRef.current) {
-      erstgespraechRef.current.scrollIntoView({ behavior: "instant", block: "start" });
+    if (location.hash === "#erstgespraech") {
+      if (erstgespraechRef.current) {
+        erstgespraechRef.current.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+      openBooking(ERSTGESPRAECH_SEMUID);
     }
   }, [location.hash]);
 
