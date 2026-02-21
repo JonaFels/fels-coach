@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ChatbaseWidget } from "@/components/ChatbaseWidget";
+import { HashBookingTrigger } from "@/components/HashBookingTrigger";
 
 import { useAppTracking } from "@/hooks/useTracking";
 import Index from "./pages/Index";
@@ -39,6 +40,7 @@ const App = () => (
           <AppTracking />
           <ScrollToTop />
           <ChatbaseWidget />
+          <HashBookingTrigger />
           
           <Routes>
             <Route path="/" element={<Index />} />
