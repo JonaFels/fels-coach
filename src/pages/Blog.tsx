@@ -31,8 +31,8 @@ const Blog = () => {
       <SEOHead />
       <Header />
       <PageBackground>
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-16">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-20">
             {t("blog.title")}
           </h1>
 

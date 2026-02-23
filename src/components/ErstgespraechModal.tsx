@@ -74,7 +74,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
         <div className="flex-1 overflow-y-auto">
           {/* Portrait + Text */}
-          <div className="p-6 md:p-8 flex flex-col items-center text-center bg-muted/40">
+          <div className="p-8 md:p-10 lg:p-12 flex flex-col items-center text-center bg-muted/40">
             <img
               src={profilBild}
               alt="Jona Fels – Systemischer Coach in Freiburg"
@@ -90,7 +90,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           </div>
 
           {/* Orbnet Kalender via Script-Injection */}
-          <div ref={containerRef} className="min-h-[400px] p-4" />
+          <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
         </div>
       </div>
     </div>

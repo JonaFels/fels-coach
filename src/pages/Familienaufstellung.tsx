@@ -42,8 +42,8 @@ const Familienaufstellung = () => {
       </div>
 
       <PageBackground className="!pt-8">
-        <article className="container mx-auto px-4 max-w-4xl">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-12">
+        <article className="container mx-auto px-4 max-w-3xl">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-16">
             {t("family.title")}
           </h1>
 

@@ -49,13 +49,13 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-border bg-background rounded-t-2xl">
+        <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-5 md:px-8 md:py-6 border-b border-border bg-background rounded-t-2xl">
           <h3 className="font-serif text-lg font-semibold text-foreground">Termin wählen</h3>
           <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full" aria-label="Schließen">
             <X className="h-5 w-5" />
           </Button>
         </div>
-        <div ref={containerRef} className="min-h-[400px] p-4" />
+        <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
       </div>
     </div>
   );
@@ -83,7 +83,7 @@ const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => 
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl h-[90vh] flex flex-col">
-        <div className="flex items-center justify-between p-4 border-b border-border rounded-t-2xl">
+        <div className="flex items-center justify-between px-6 py-5 md:px-8 md:py-6 border-b border-border rounded-t-2xl">
           <h3 className="font-serif text-lg font-semibold text-foreground">Termin buchen</h3>
           <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full" aria-label="Schließen">
             <X className="h-5 w-5" />

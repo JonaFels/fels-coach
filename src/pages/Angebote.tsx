@@ -51,9 +51,9 @@ const Angebote = () => {
 
       <main>
         {/* Intro */}
-        <section className="bg-background py-20 md:py-28">
-          <div className="container mx-auto px-4 text-center max-w-[700px]">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8">
+        <section className="bg-background py-24 md:py-36">
+          <div className="container mx-auto px-4 text-center max-w-3xl">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-10">
               {t("offerings.title")}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -63,8 +63,8 @@ const Angebote = () => {
         </section>
 
         {/* Was dich erwartet – Werte */}
-        <section className="bg-muted py-20 md:py-28">
-          <div className="container mx-auto px-4 max-w-[700px]">
+        <section className="bg-muted py-24 md:py-36">
+          <div className="container mx-auto px-4 max-w-3xl">
             <div className="grid gap-10 md:grid-cols-3 text-center">
               {[
                 { icon: Heart, label: "Einfühlsam", desc: "Ich höre dir zu – ohne Bewertung, mit echtem Interesse." },
@@ -84,9 +84,9 @@ const Angebote = () => {
         </section>
 
         {/* Ablauf – Drei Schritte */}
-        <section className="bg-background py-24 md:py-36">
-          <div className="container mx-auto px-4 max-w-[700px]">
-            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
+        <section className="bg-background py-28 md:py-40">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-6">
               {t("offerings.ablaufTitle")}
             </h2>
             <p className="text-sm text-muted-foreground text-center mb-12 leading-relaxed">
@@ -175,7 +175,7 @@ const Angebote = () => {
         </section>
 
         {/* Noch unsicher? – sanfter Fallback */}
-        <section className="bg-accent py-20 md:py-28">
+        <section className="bg-accent py-28 md:py-40">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
               Noch unsicher?
