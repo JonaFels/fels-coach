@@ -27,9 +27,12 @@ export const AboutPreview = () => {
 
             {/* Right: Text */}
             <div className="text-center md:text-left">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-2">
                 {t("aboutPreview.title")}
               </h2>
+              <h3 className="font-serif text-lg md:text-xl text-muted-foreground mb-6">
+                Systemischer Coach in Freiburg
+              </h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>{t("aboutPreview.text1")}</p>
                 <p>{t("aboutPreview.text2")}</p>

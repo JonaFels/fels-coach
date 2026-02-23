@@ -1,15 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { Phone } from "lucide-react";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
-import { useOrbnetBooking } from "@/components/OrbnetBooking";
-
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 
 export const Hero = () => {
   const { t } = useLanguage();
-  const { openBooking, BookingDialog } = useOrbnetBooking();
+  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
     <>
@@ -37,7 +36,7 @@ export const Hero = () => {
               className="text-base px-8"
               onClick={() => {
                 trackCTAClick("hero_consultation", "homepage_hero", "link");
-                openBooking(ERSTGESPRAECH_SEMUID);
+                setErstgespraechOpen(true);
               }}
             >
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -48,7 +47,7 @@ export const Hero = () => {
         </div>
       </div>
     </section>
-    <BookingDialog />
+    <ErstgespraechModal open={erstgespraechOpen} onClose={() => setErstgespraechOpen(false)} />
     </>
   );
 };
