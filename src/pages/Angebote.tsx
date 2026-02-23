@@ -24,7 +24,7 @@ const offerings = [
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
-    price: 50,
+    price: 70,
     semuid: "609d5e7a-e208-4715-b073-e99206aebbf7",
   },
 ];
