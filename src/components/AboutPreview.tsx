@@ -9,10 +9,10 @@ export const AboutPreview = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-36 bg-muted/40">
+    <section className="py-32 md:py-44 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Left: Image */}
             <div className="flex justify-center md:justify-end">
               <img
@@ -27,17 +27,17 @@ export const AboutPreview = () => {
 
             {/* Right: Text */}
             <div className="text-center md:text-left">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-2">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-3">
                 {t("aboutPreview.title")}
               </h2>
-              <h3 className="font-serif text-lg md:text-xl text-muted-foreground mb-6">
+              <h3 className="font-serif text-lg md:text-xl text-muted-foreground mb-8">
                 Systemischer Coach in Freiburg
               </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>{t("aboutPreview.text1")}</p>
                 <p>{t("aboutPreview.text2")}</p>
               </div>
-              <div className="mt-8">
+              <div className="mt-10">
                 <Button
                   asChild
                   variant="outline"
