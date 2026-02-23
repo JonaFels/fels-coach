@@ -46,11 +46,11 @@ const Kontakt = () => {
       </div>
 
       <PageBackground className="!pt-12">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-4">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-6">
             {t("contact.headline")}
           </h1>
-          <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
+          <p className="text-muted-foreground text-center mb-20 max-w-xl mx-auto leading-relaxed">
             {t("contact.text")}
           </p>
 

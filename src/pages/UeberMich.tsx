@@ -31,7 +31,7 @@ const UeberMich = () => {
       </div>
 
       <PageBackground className="!pt-8">
-        <article className="container mx-auto px-4 max-w-4xl">
+        <article className="container mx-auto px-4 max-w-3xl">
           {/* Hero Section */}
           <div className="text-center mb-16">
             <div className="mb-8">
@@ -88,7 +88,7 @@ const UeberMich = () => {
           </Card>
 
           {/* CV Section */}
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center my-16">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mt-20 mb-12">
             {t("about.cv.title")}
           </h2>
 

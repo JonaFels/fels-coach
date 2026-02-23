@@ -126,7 +126,7 @@ const Ebook = () => {
       </div>
 
       <PageBackground className="!pt-8">
-        <div className="mx-auto px-4 sm:px-6 max-w-4xl overflow-hidden">
+        <div className="mx-auto px-4 sm:px-6 max-w-3xl overflow-hidden">
           {/* Header Section */}
           <div className="text-center mb-16">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-4">
