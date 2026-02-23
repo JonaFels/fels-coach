@@ -110,7 +110,7 @@ const Ebook = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <SEOHead />
       <Header />
 
@@ -126,7 +126,7 @@ const Ebook = () => {
       </div>
 
       <PageBackground className="!pt-8">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="mx-auto px-4 sm:px-6 max-w-4xl overflow-hidden">
           {/* Header Section */}
           <div className="text-center mb-16">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-4">
@@ -140,9 +140,9 @@ const Ebook = () => {
             </p>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2 min-w-0">
             {/* Left Column - Book Mockup & Form */}
-            <div className="space-y-6">
+            <div className="space-y-6 min-w-0">
               {/* Book Cover */}
               <div className="flex justify-center">
                 <img 
@@ -227,7 +227,7 @@ const Ebook = () => {
                       
                       <Button 
                         type="submit" 
-                        className="w-full min-h-[44px]" 
+                        className="w-full min-h-[44px] whitespace-normal text-sm sm:text-base" 
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? (
