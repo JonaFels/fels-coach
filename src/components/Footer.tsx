@@ -50,26 +50,37 @@ export const Footer = () => {
             </a>
           </div>
 
-          {/* Legal Links */}
-          <div className="flex items-center gap-4 text-sm">
-            <a
-              href="/datenschutz"
-              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-            >
-              {t("footer.privacy")}
-            </a>
-            <a
-              href="/impressum"
-              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-            >
-              {t("footer.imprint")}
-            </a>
-            <a
-              href="/agb"
-              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-            >
-              {t("footer.terms")}
-            </a>
+          {/* Address, Anfahrt & Legal */}
+          <div className="flex flex-col items-center md:items-end gap-3 text-sm">
+            <span className="text-primary-foreground/70">
+              Karlstraße 51, 79104 Freiburg
+            </span>
+            <div className="flex items-center gap-4">
+              <a
+                href="/kontakt#anfahrt"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                Anfahrt &amp; Parken
+              </a>
+              <a
+                href="/datenschutz"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                {t("footer.privacy")}
+              </a>
+              <a
+                href="/impressum"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                {t("footer.imprint")}
+              </a>
+              <a
+                href="/agb"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                {t("footer.terms")}
+              </a>
+            </div>
           </div>
         </div>
       </div>
