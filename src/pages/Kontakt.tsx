@@ -121,7 +121,7 @@ const Kontakt = () => {
           </div>
 
           {/* Anfahrt & Ankommen */}
-          <div className="mb-16">
+          <div id="anfahrt" className="mb-16 scroll-mt-24">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px flex-1 max-w-16 bg-border" />
               <MapPin className="h-5 w-5 text-secondary" />
