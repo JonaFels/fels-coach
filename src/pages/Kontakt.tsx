@@ -131,7 +131,7 @@ const Kontakt = () => {
               Anfahrt &amp; Ankommen
             </h2>
             <p className="text-muted-foreground text-center mb-8 max-w-lg mx-auto text-sm leading-relaxed">
-              Meine Praxis befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg. Damit du ganz in Ruhe bei mir ankommen kannst, habe ich dir hier die wichtigsten Infos zusammengestellt.
+              Mein Praxisraum befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg. Damit du ganz in Ruhe bei mir ankommen kannst, habe ich dir hier die wichtigsten Infos zusammengestellt.
             </p>
 
             <div className="grid gap-5 md:grid-cols-3 mb-8">
@@ -195,7 +195,7 @@ const Kontakt = () => {
                   <ul className="space-y-2.5 text-sm text-muted-foreground leading-relaxed">
                     <li className="flex gap-2">
                       <span className="text-accent-foreground mt-1 shrink-0">•</span>
-                      <span>Praxis im <strong className="text-foreground font-medium">Erdgeschoss</strong> (Treppe nach Hauseingang)</span>
+                      <span>Praxisraum im <strong className="text-foreground font-medium">Erdgeschoss</strong> (Treppe nach Hauseingang)</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-accent-foreground mt-1 shrink-0">•</span>
@@ -218,7 +218,7 @@ const Kontakt = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Praxis Jona Fels – Karlstraße 51, 79104 Freiburg im Breisgau"
+                title="Praxisraum Jona – Karlstraße 51, 79104 Freiburg im Breisgau"
               />
             </div>
             <p className="text-sm text-muted-foreground text-center mt-2">

@@ -226,7 +226,7 @@ export const JsonLd = () => {
               name: "Was ist eine systemische Familienaufstellung und wie läuft sie bei Jona Fels in Freiburg ab?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Eine systemische Familienaufstellung macht verborgene Dynamiken sichtbar. In meiner Praxis in der Karlstraße 51, Freiburg, arbeiten wir in geschützter Atmosphäre an nachhaltigen Lösungswegen für Ihre persönlichen Blockaden.",
+                text: "Eine systemische Familienaufstellung macht verborgene Dynamiken sichtbar. In meinem Praxisraum in der Karlstraße 51, Freiburg, arbeiten wir in geschützter Atmosphäre an nachhaltigen Lösungswegen für Ihre persönlichen Blockaden.",
               },
             },
             {
@@ -234,7 +234,7 @@ export const JsonLd = () => {
               name: "Was kostet ein Coaching oder eine Familienaufstellung bei Jona Fels?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Der reguläre Preis für eine Coaching-Stunde beträgt 80 €. Aktuell biete ich zur Praxiseröffnung in Freiburg ein begrenztes Kontingent an Kennenlern-Sitzungen für nur 50 € pro Stunde an.",
+                text: "Der reguläre Preis für eine Coaching-Stunde beträgt 80 €. Aktuell biete ich zum Start in Freiburg ein begrenztes Kontingent an Kennenlern-Sitzungen für nur 50 € pro Stunde an.",
               },
             },
             {
@@ -250,7 +250,7 @@ export const JsonLd = () => {
               name: "Wo genau in Freiburg findet das Coaching statt und gibt es Online-Optionen?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Meine Praxis liegt zentral in der Karlstraße 51, 79104 Freiburg. Ergänzend biete ich alle Sitzungen ortsunabhängig als Online-Coaching per Video-Call an.",
+                text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg. Ergänzend biete ich alle Sitzungen ortsunabhängig als Online-Coaching per Video-Call an.",
               },
             },
             {

@@ -10,7 +10,7 @@ const faqData = {
   de: [
     {
       question: "Was ist eine systemische Familienaufstellung und wie läuft sie bei mir in Freiburg ab?",
-      answer: "Eine systemische Familienaufstellung macht verborgene Dynamiken in Systemen sichtbar. In meiner Praxis in der Karlstraße 51 (Freiburg) schauen wir uns in geschützter Atmosphäre an, was im Argen liegt, und erarbeiten gemeinsam nachhaltige Lösungswege für Ihre Blockaden.",
+      answer: "Eine systemische Familienaufstellung macht verborgene Dynamiken in Systemen sichtbar. In meinem Praxisraum in der Karlstraße 51 (Freiburg) schauen wir uns in geschützter Atmosphäre an, was im Argen liegt, und erarbeiten gemeinsam nachhaltige Lösungswege für Ihre Blockaden.",
     },
     {
       question: "Was kostet ein Coaching oder eine Familienaufstellung?",
