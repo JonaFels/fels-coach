@@ -26,7 +26,7 @@ const faqData = {
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
-      answer: "Der erste Schritt ist ganz einfach: Fragen Sie über den Button auf der Webseite ein kostenloses 15-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich Sie am besten unterstützen kann – völlig unverbindlich.",
+      answer: "Der erste Schritt ist ganz einfach: Fragen Sie über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich Sie am besten unterstützen kann – völlig unverbindlich.",
     },
   ],
   en: [
@@ -48,7 +48,7 @@ const faqData = {
     },
     {
       question: "How can I get started and is a preliminary consultation possible?",
-      answer: "The first step is simple: Request a free 15-minute preliminary consultation via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
+      answer: "The first step is simple: Request a free 30-minute preliminary consultation via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
     },
   ],
 };

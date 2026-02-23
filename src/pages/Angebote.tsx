@@ -184,7 +184,7 @@ const Angebote = () => {
               Lass uns kurz sprechen
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 15-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.
+              Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 30-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.
             </p>
             <Button
               variant="outline"

@@ -258,7 +258,7 @@ export const JsonLd = () => {
               name: "Wie kann ich ein Coaching starten und gibt es ein Vorgespräch?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sie können direkt über die Website ein kostenloses, 15-minütiges Vorgespräch anfragen. So klären wir unverbindlich Ihr Anliegen und schauen, ob die Chemie für eine Zusammenarbeit stimmt.",
+                text: "Sie können direkt über die Website ein kostenloses, 30-minütiges Vorgespräch anfragen. So klären wir unverbindlich Ihr Anliegen und schauen, ob die Chemie für eine Zusammenarbeit stimmt.",
               },
             },
           ],
