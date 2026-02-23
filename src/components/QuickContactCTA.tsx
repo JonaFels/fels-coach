@@ -1,14 +1,13 @@
+import { useState } from "react";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import { useOrbnetBooking } from "@/components/OrbnetBooking";
-
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 
 export const QuickContactCTA = () => {
   const { t } = useLanguage();
-  const { openBooking, BookingDialog } = useOrbnetBooking();
+  const [open, setOpen] = useState(false);
 
   return (
     <section className="py-20 md:py-28 bg-muted/30">
@@ -24,7 +23,7 @@ export const QuickContactCTA = () => {
           className="min-h-[48px] px-8"
           onClick={() => {
             trackCTAClick("quick_contact_cta", "homepage_quick_contact", "link");
-            openBooking(ERSTGESPRAECH_SEMUID);
+            setOpen(true);
           }}
         >
           <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
@@ -32,7 +31,7 @@ export const QuickContactCTA = () => {
         </Button>
         <p className="mt-3 text-sm text-muted-foreground">{t("quickCTA.microcopy")}</p>
       </div>
-      <BookingDialog />
+      <ErstgespraechModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 };

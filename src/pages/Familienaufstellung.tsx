@@ -10,17 +10,15 @@ import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { trackCTAClick } from "@/lib/tracking";
-import { useOrbnetBooking } from "@/components/OrbnetBooking";
+import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import { InlineQuickForm } from "@/components/InlineQuickForm";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
   const [showForm, setShowForm] = useState(false);
-  const { openBooking, BookingDialog } = useOrbnetBooking();
+  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   const handleCTAClick = () => {
     trackCTAClick("familienaufstellung_vorgespraech", "familienaufstellung_cta", "inline_form");
@@ -124,7 +122,7 @@ const Familienaufstellung = () => {
 
           {/* CTA */}
           <div className="text-center mb-12">
-            <Button size="lg" className="min-h-[44px]" onClick={() => openBooking(ERSTGESPRAECH_SEMUID)}>
+            <Button size="lg" className="min-h-[44px]" onClick={() => setErstgespraechOpen(true)}>
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("cta.bookNow")}
             </Button>
@@ -149,7 +147,7 @@ const Familienaufstellung = () => {
           <AuthorBox />
         </article>
       </PageBackground>
-      <BookingDialog />
+      <ErstgespraechModal open={erstgespraechOpen} onClose={() => setErstgespraechOpen(false)} />
       <Footer />
       <CookieBanner />
     </div>
