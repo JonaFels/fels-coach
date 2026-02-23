@@ -14,12 +14,12 @@ export const translations: Translations = {
     en: "Coaching",
   },
   "nav.familienaufstellung": {
-    de: "Aufstellungen",
-    en: "Constellations",
+    de: "Coaching & Aufstellungen",
+    en: "Coaching & Constellations",
   },
   "nav.ebook": {
-    de: "E-Book",
-    en: "E-Book",
+    de: "Gratis E-Book",
+    en: "Free E-Book",
   },
   "nav.kontakt": {
     de: "Kontakt",
@@ -62,8 +62,8 @@ export const translations: Translations = {
     en: "End the Unconscious Self-Sabotage",
   },
   "hero.subtitle": {
-    de: "Gib dir endlich selbst die Erlaubnis, deinen eigenen Stand einzunehmen – frei von lähmender Scham und den unsichtbaren Fesseln alter Familienmuster.",
-    en: "Finally give yourself permission to claim your own ground – free from paralyzing shame and the invisible chains of old family patterns.",
+    de: "Gib dir endlich selbst die Erlaubnis für ein freies, selbstbestimmtes Leben.",
+    en: "Finally give yourself permission for a free, self-determined life.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
