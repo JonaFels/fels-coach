@@ -70,16 +70,16 @@ export const translations: Translations = {
     en: "Schedule Free Consultation",
   },
   "hero.microcopy": {
-    de: "Völlig unverbindlich & persönlich – 15 Minuten, die Klarheit schaffen.",
-    en: "Completely non-binding & personal – 15 minutes that create clarity.",
+    de: "Völlig unverbindlich & persönlich – 30 Minuten, die Klarheit schaffen.",
+    en: "Completely non-binding & personal – 30 minutes that create clarity.",
   },
   "hero.ctaConsultation": {
     de: "Kostenloses Erstgespräch vereinbaren",
     en: "Schedule Free Initial Consultation",
   },
   "hero.ctaMicrocopy": {
-    de: "Unverbindlich & persönlich – 15 Min., die Klarheit schaffen.",
-    en: "Non-binding & personal – 15 min. that create clarity.",
+    de: "Unverbindlich & persönlich – 30 Min., die Klarheit schaffen.",
+    en: "Non-binding & personal – 30 min. that create clarity.",
   },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
@@ -614,8 +614,8 @@ export const translations: Translations = {
     en: "Secure your appointment now",
   },
   "finalCta.microcopy": {
-    de: "Kostenlos · 15 Minuten · Unverbindlich",
-    en: "Free · 15 minutes · Non-binding",
+    de: "Kostenlos · 30 Minuten · Unverbindlich",
+    en: "Free · 30 minutes · Non-binding",
   },
 
   "author.writtenBy": {
@@ -679,8 +679,8 @@ export const translations: Translations = {
 
   // Micro CTAs
   "cta.bookNow": {
-    de: "Kostenloses 15-Min. Vorgespräch",
-    en: "Free 15-Min. Consultation",
+    de: "Kostenloses 30-Min. Vorgespräch",
+    en: "Free 30-Min. Consultation",
   },
   "cta.bookNowMicrocopy": {
     de: "Lass uns schauen, ob die Chemie stimmt.",
@@ -765,8 +765,8 @@ export const translations: Translations = {
      en: "Still unsure if your topic fits? Let's clarify in a brief preliminary call whether my approach suits your concern.",
    },
     "quickCTA.button": {
-      de: "Kostenloses 15-Min. Vorgespräch anfragen",
-      en: "Request Free 15-Min. Consultation",
+      de: "Kostenloses 30-Min. Vorgespräch anfragen",
+      en: "Request Free 30-Min. Consultation",
     },
     "quickCTA.microcopy": {
       de: "Völlig unverbindlich – lass uns schauen, ob die Chemie stimmt.",
