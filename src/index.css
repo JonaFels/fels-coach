@@ -130,10 +130,17 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.8;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    line-height: 1.85;
   }
 
   /* Hochkontrastreicher Fokus-Ring für alle interaktiven Elemente (BFSG/WCAG 2.1 AA) */

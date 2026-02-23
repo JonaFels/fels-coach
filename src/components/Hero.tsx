@@ -21,19 +21,19 @@ export const Hero = () => {
           loading="eager"
         />
       </div>
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative py-28 md:py-40 lg:py-48 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight animate-fade-in-up">
             {t("hero.title")}
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up [animation-delay:100ms]">
+          <p className="mt-8 md:mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up [animation-delay:100ms]">
             {t("hero.subtitle")}
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in-up [animation-delay:200ms]">
+          <div className="mt-12 md:mt-14 flex flex-col items-center gap-5 animate-fade-in-up [animation-delay:200ms]">
             <Button
               size="lg"
-              className="text-base px-8"
+              className="text-base px-10 py-6"
               onClick={() => {
                 trackCTAClick("hero_consultation", "homepage_hero", "link");
                 setErstgespraechOpen(true);
@@ -42,7 +42,7 @@ export const Hero = () => {
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("hero.ctaConsultation")}
             </Button>
-            <p className="text-sm text-muted-foreground">{t("hero.ctaMicrocopy")}</p>
+            <p className="text-sm text-muted-foreground mt-2">{t("hero.ctaMicrocopy")}</p>
           </div>
         </div>
       </div>
