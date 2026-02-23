@@ -14,7 +14,7 @@ const faqData = {
     },
     {
       question: "Was kostet ein Coaching oder eine Familienaufstellung?",
-      answer: "Transparenz ist mir wichtig: Eine Sitzung (Coaching oder Aufstellung) kostet 80 € pro Stunde. Mein Ziel ist es, Ihnen effiziente und wirkungsvolle Impulse zu geben, die Sie wirklich weiterbringen.",
+      answer: "Transparenz ist mir wichtig: Eine Sitzung (Coaching oder Aufstellung) kostet 50 € pro Einheit (80 Minuten). Mein Ziel ist es, Ihnen effiziente und wirkungsvolle Impulse zu geben, die Sie wirklich weiterbringen.",
     },
     {
       question: "Bietest du auch Termine am Wochenende an?",
@@ -36,7 +36,7 @@ const faqData = {
     },
     {
       question: "What does a coaching session or family constellation cost?",
-      answer: "Transparency is important to me: A session (coaching or constellation) costs €80 per hour. My goal is to give you efficient and effective impulses that truly move you forward.",
+      answer: "Transparency is important to me: A session (coaching or constellation) costs €50 per unit (80 minutes). My goal is to give you efficient and effective impulses that truly move you forward.",
     },
     {
       question: "Do you also offer appointments on weekends?",

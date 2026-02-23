@@ -234,7 +234,7 @@ export const JsonLd = () => {
               name: "Was kostet ein Coaching oder eine Familienaufstellung bei Jona Fels?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Der reguläre Preis für eine Coaching-Stunde beträgt 80 €. Aktuell biete ich zum Start in Freiburg ein begrenztes Kontingent an Kennenlern-Sitzungen für nur 50 € pro Stunde an.",
+                text: "Eine Sitzung (Coaching oder Familienaufstellung) kostet 50 € pro Einheit (80 Minuten). Aktuell biete ich zum Start in Freiburg ein begrenztes Kontingent an Kennenlern-Sitzungen an.",
               },
             },
             {
