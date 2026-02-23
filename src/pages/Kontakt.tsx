@@ -61,7 +61,7 @@ const Kontakt = () => {
                 <div className="flex items-center gap-2 mb-3">
                   <Calendar className="h-5 w-5 text-secondary" aria-hidden="true" />
                   <h3 className="font-serif text-lg font-medium text-foreground">
-                    Kostenloses Erstgespräch
+                    Kostenloses Erstgespräch mit Jona
                   </h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">

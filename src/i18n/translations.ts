@@ -444,8 +444,8 @@ export const translations: Translations = {
     en: "Contact",
   },
   "contact.text": {
-    de: "Hast du Fragen oder möchtest ein kostenloses, telefonisches Erstgespräch ausmachen? Dann kannst du mich per Email, WhatsApp oder Telegram erreichen. Ich freue mich auf Deine Nachricht!",
-    en: "Do you have questions or would you like to arrange a free initial phone consultation? You can reach me via email, WhatsApp or Telegram. I look forward to your message!",
+    de: "Buche dir weiter unten direkt einen kostenlosen Telefontermin mit mir – oder schreib mir eine Nachricht. Ich freue mich, von dir zu hören!",
+    en: "Book a free phone call with me below – or send me a message. I look forward to hearing from you!",
   },
 
   // Über mich Page
@@ -804,9 +804,9 @@ export const translations: Translations = {
    },
  
    // Contact Page Redesign
-   "contact.headline": {
-     de: "Der direkte Weg zu deinem neuen Stand.",
-     en: "The direct path to your new ground.",
+    "contact.headline": {
+      de: "Lass uns sprechen.",
+      en: "Let's talk.",
    },
    "contact.optionA.title": {
      de: "Option A: Rückruf anfordern",
