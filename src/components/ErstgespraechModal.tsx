@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
@@ -8,11 +8,49 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
+const SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open || !containerRef.current) return;
+
+    // Clear previous widget content
+    while (containerRef.current.firstChild) {
+      containerRef.current.removeChild(containerRef.current.firstChild);
+    }
+
+    // Create the Orbnet mask element
+    const mask = document.createElement("div");
+    mask.className = "orbnet-booking-mask";
+    mask.dataset.semuid = SEMUID;
+    mask.dataset.source = "my.orbnet.de";
+    mask.dataset.type = "embed";
+    containerRef.current.appendChild(mask);
+
+    // Remove any existing orbnet script to force re-init
+    const existingScript = document.getElementById("orbnet-booking-script-modal");
+    if (existingScript) existingScript.remove();
+
+    const script = document.createElement("script");
+    script.id = "orbnet-booking-script-modal";
+    script.src =
+      "https://static.orbnet.de/3.0/dist/booking.js?ver=7643f23565c4865f828a0e810e468eab35cf22e2";
+    script.crossOrigin = "anonymous";
+    script.referrerPolicy = "origin";
+    document.body.appendChild(script);
+
+    return () => {
+      const s = document.getElementById("orbnet-booking-script-modal");
+      if (s) s.remove();
+    };
   }, [open]);
 
   if (!open) return null;
@@ -34,9 +72,9 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           <X className="h-5 w-5" />
         </Button>
 
-        <div className="flex flex-col md:flex-row flex-1 overflow-y-auto">
-          {/* Left: Portrait + Text */}
-          <div className="md:w-2/5 p-6 md:p-8 flex flex-col items-center md:items-start text-center md:text-left bg-muted/40">
+        <div className="flex-1 overflow-y-auto">
+          {/* Portrait + Text */}
+          <div className="p-6 md:p-8 flex flex-col items-center text-center bg-muted/40">
             <img
               src={profilBild}
               alt="Jona Fels – Systemischer Coach in Freiburg"
@@ -46,20 +84,13 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
             <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
               Lass uns unverbindlich sprechen
             </h3>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-              In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach rechts deinen Wunschtermin aus. Ich freue mich auf dich!
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl">
+              In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus. Ich freue mich auf dich!
             </p>
           </div>
 
-          {/* Right: Orbnet Iframe */}
-          <div className="md:w-3/5 flex-1 min-h-[400px] md:min-h-0">
-            <iframe
-              src="https://www.orbnet.de/on/8ed15a55-6bf4-46cd-9de5-cef914d992b1?lang=de"
-              className="w-full h-full min-h-[500px] md:min-h-[600px] rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl"
-              title="Erstgespräch buchen"
-              allow="payment"
-            />
-          </div>
+          {/* Orbnet Kalender via Script-Injection */}
+          <div ref={containerRef} className="min-h-[400px] p-4" />
         </div>
       </div>
     </div>

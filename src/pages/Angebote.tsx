@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,9 +10,8 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
+import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import heroBanner from "@/assets/hero-banner.webp";
-
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const offerings = [
   {
@@ -32,6 +32,7 @@ const offerings = [
 const Angebote = () => {
   const { t } = useLanguage();
   const { openBooking, BookingDialog } = useOrbnetBooking();
+  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -191,7 +192,7 @@ const Angebote = () => {
               className="text-base px-8 min-h-[44px]"
               onClick={() => {
                 trackCTAClick("angebote_consultation", "angebote_page", "link");
-                openBooking(ERSTGESPRAECH_SEMUID);
+                setErstgespraechOpen(true);
               }}
             >
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -220,6 +221,7 @@ const Angebote = () => {
       </main>
 
       <BookingDialog />
+      <ErstgespraechModal open={erstgespraechOpen} onClose={() => setErstgespraechOpen(false)} />
       <Footer />
       <CookieBanner />
     </div>
