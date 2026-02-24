@@ -1,58 +1,49 @@
 import { Repeat, Lock, UserX } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const painPoints = [
+  { icon: Repeat, titleKey: "coaching.detail1" },
+  { icon: Lock, titleKey: "coaching.detail2" },
+  { icon: UserX, titleKey: "coaching.detail3" },
+];
 
 export const CoachingSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-32 md:py-44 bg-muted/40">
+    <section className="py-24 md:py-36 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Intro */}
-          <p className="text-center text-secondary font-medium mb-5 animate-fade-in-up">
+          <p className="text-center text-primary font-medium mb-4 animate-fade-in-up">
             {t("coaching.intro")}
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-10 animate-fade-in-up [animation-delay:100ms]">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-6 animate-fade-in-up [animation-delay:100ms]">
             {t("coaching.title")}
           </h2>
 
           {/* Description */}
-          <div className="space-y-5 text-muted-foreground text-lg leading-relaxed text-center mb-20 animate-fade-in-up [animation-delay:200ms]">
+          <div className="space-y-5 text-muted-foreground text-lg leading-relaxed text-center mb-16 max-w-2xl mx-auto animate-fade-in-up [animation-delay:200ms]">
             <p>{t("coaching.text1")}</p>
             <p>{t("coaching.text2")}</p>
           </div>
 
-          {/* Pain Point Cards */}
-          <Card className="bg-card/95 backdrop-blur-sm animate-fade-in-up [animation-delay:300ms]">
-            <CardHeader>
-              <CardTitle className="font-serif text-xl text-center">
-                {t("coaching.details.title")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="grid gap-4 md:grid-cols-3">
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <div className="p-2 rounded-full bg-secondary/10">
-                    <Repeat className="h-5 w-5 text-secondary" />
-                  </div>
-                  <span>{t("coaching.detail1")}</span>
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <div className="p-2 rounded-full bg-secondary/10">
-                    <Lock className="h-5 w-5 text-secondary" />
-                  </div>
-                  <span>{t("coaching.detail2")}</span>
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <div className="p-2 rounded-full bg-secondary/10">
-                    <UserX className="h-5 w-5 text-secondary" />
-                  </div>
-                  <span>{t("coaching.detail3")}</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+          {/* 3 Pain Point Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:300ms]">
+            {painPoints.map(({ icon: Icon, titleKey }) => (
+              <div
+                key={titleKey}
+                className="text-center p-8 rounded-lg"
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-5">
+                  <Icon className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-foreground font-medium text-lg">
+                  {t(titleKey)}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

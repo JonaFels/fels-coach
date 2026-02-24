@@ -10,17 +10,18 @@ export const FinalCTA = () => {
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
-    <section className="py-32 md:py-44 bg-muted/40">
+    <section className="py-28 md:py-40 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-8">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
             {t("finalCta.title")}
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-10">
             {t("finalCta.description")}
           </p>
           <Button
             size="lg"
+            variant="secondary"
             className="text-base px-10 py-6"
             onClick={() => {
               trackCTAClick("final_cta", "homepage_final", "link");
@@ -30,7 +31,7 @@ export const FinalCTA = () => {
             <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
             {t("finalCta.button")}
           </Button>
-          <p className="text-sm text-muted-foreground mt-6">
+          <p className="text-sm text-primary-foreground/60 mt-6">
             {t("finalCta.microcopy")}
           </p>
         </div>
