@@ -118,8 +118,8 @@ const Angebote = () => {
               {offerings.map((offering, index) => (
                 <Card
                   key={offering.titleKey}
-                  className={`relative group transition-all duration-300 hover:shadow-md bg-card border-border/60 ${
-                    offering.badge ? "ring-1 ring-secondary/40" : ""
+                  className={`relative group transition-all duration-300 hover:shadow-md hover:-translate-y-1 bg-card border-border/50 rounded-2xl ${
+                    offering.badge ? "ring-1 ring-primary/30" : ""
                   }`}
                 >
                   {offering.badge && (

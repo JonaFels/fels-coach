@@ -27,9 +27,9 @@ export const MethodSection = () => {
             {t("method.description")}
           </p>
 
-          <div className="grid md:grid-cols-3 gap-10 md:gap-12 mb-14">
+          <div className="grid md:grid-cols-3 gap-5 mb-14">
             {steps.map((step, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center p-8 rounded-2xl bg-card border border-border/50 hover:border-border transition-colors duration-300">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary/10 mb-5">
                   <step.icon className="h-6 w-6 text-secondary" aria-hidden="true" />
                 </div>

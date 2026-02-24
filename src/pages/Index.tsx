@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
+import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 
 
 const Index = () => {
@@ -18,17 +19,19 @@ const Index = () => {
       <JsonLd />
       <Header />
       <main id="main-content">
-        {/* 1. Hero: Was bietest du an? */}
         <Hero />
-        {/* 2. Pain Point: Gummiband-Effekt */}
-        <CoachingSection />
-        {/* 3. Die Story: Warum du das verstehst */}
-        <AboutPreview />
-        {/* 4. Die Methode: System-Audit / Aufstellung */}
-        <MethodSection />
-        {/* 5. FAQ: Ablauf, Preise, Standort */}
-        <FAQSection />
-        {/* 6. Final CTA */}
+        <ScrollFadeIn>
+          <CoachingSection />
+        </ScrollFadeIn>
+        <ScrollFadeIn>
+          <AboutPreview />
+        </ScrollFadeIn>
+        <ScrollFadeIn>
+          <MethodSection />
+        </ScrollFadeIn>
+        <ScrollFadeIn>
+          <FAQSection />
+        </ScrollFadeIn>
         <FinalCTA />
       </main>
       <Footer />
