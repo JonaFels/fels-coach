@@ -21,9 +21,6 @@ const Index = () => {
       <main id="main-content">
         <Hero />
         <ScrollFadeIn>
-          <CoachingSection />
-        </ScrollFadeIn>
-        <ScrollFadeIn>
           <AboutPreview />
         </ScrollFadeIn>
         <ScrollFadeIn>
