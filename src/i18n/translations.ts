@@ -92,20 +92,20 @@ export const translations: Translations = {
 
   // Coaching Description (Homepage) – Pain Point
   "coaching.title": {
-    de: "Die Sehnsucht nach dir selbst ernst nehmen.",
-    en: "Taking the longing for yourself seriously.",
+    de: "Endlich ankommen, wo der Sturm aufhört.",
+    en: "Finally arriving where the storm ends.",
   },
   "coaching.intro": {
     de: "",
     en: "",
   },
   "coaching.text1": {
-    de: "Du spürst, dass da mehr ist als nur Funktionieren, aber der Weg dorthin wirkt verbaut?",
-    en: "You sense there's more than just functioning, but the path feels blocked?",
+    de: "Du sehnst dich danach, das ‚Müssen' hinter dir zu lassen?",
+    en: "Do you long to leave the 'having to' behind?",
   },
   "coaching.text2": {
-    de: "In meiner Praxis schaffen wir den Raum, den du brauchst, um endlich bei dir selbst anzukommen. Stabil, einfühlsam und mit dem klaren Fokus auf das, was dir wirklich guttut.",
-    en: "In my practice, we create the space you need to finally arrive at yourself. Stable, empathetic, and with a clear focus on what truly serves you.",
+    de: "In meinem Coaching schaffst du den Raum, um endlich bei dir selbst anzukommen. Ein sicherer Ort und eine Begleitung, die dir mit Aufrichtigkeit zur Seite steht.",
+    en: "In my coaching, you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
   },
   "coaching.details.title": {
     de: "Das Muster erkennen",
