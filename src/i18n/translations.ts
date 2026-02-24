@@ -92,20 +92,20 @@ export const translations: Translations = {
 
   // Coaching Description (Homepage) – Pain Point
   "coaching.title": {
-    de: "Der Gummiband-Effekt",
-    en: "The Rubber Band Effect",
+    de: "Die Sehnsucht nach dir selbst ernst nehmen.",
+    en: "Taking the longing for yourself seriously.",
   },
   "coaching.intro": {
-    de: "Kennst du das?",
-    en: "Does this sound familiar?",
+    de: "",
+    en: "",
   },
   "coaching.text1": {
-    de: "Du arbeitest an dir, machst Fortschritte – und wirst trotzdem immer wieder in alte Muster zurückgezogen. Du sabotierst Beziehungen, die dir wichtig sind. Verschenkst Talente, die du hast. Fühlst dich wie ein Fremder im eigenen Leben, während alte Familienmuster dich unbewusst steuern.",
-    en: "You work on yourself, make progress – yet get pulled back into old patterns again and again. You sabotage relationships that matter. Waste talents you have. Feel like a stranger in your own life while old family patterns unconsciously control you.",
+    de: "Du spürst, dass da mehr ist als nur Funktionieren, aber der Weg dorthin wirkt verbaut?",
+    en: "You sense there's more than just functioning, but the path feels blocked?",
   },
   "coaching.text2": {
-    de: "Das ist kein Zufall. Es sind Gedanken und emotionale Muster, die in der frühen Kindheit auf uns übertragen wurden. Sie halten uns in einer Überlebensanpassung gefangen, die uns daran hindert, unser wahres Selbst zu leben.",
-    en: "This is no coincidence. These are thoughts and emotional patterns transferred to us in early childhood. They keep us trapped in a survival adaptation that prevents us from living our true self.",
+    de: "In meiner Praxis schaffen wir den Raum, den du brauchst, um endlich bei dir selbst anzukommen. Stabil, einfühlsam und mit dem klaren Fokus auf das, was dir wirklich guttut.",
+    en: "In my practice, we create the space you need to finally arrive at yourself. Stable, empathetic, and with a clear focus on what truly serves you.",
   },
   "coaching.details.title": {
     de: "Das Muster erkennen",

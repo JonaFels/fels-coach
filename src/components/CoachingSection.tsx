@@ -13,13 +13,10 @@ export const CoachingSection = () => {
     <section className="py-20 md:py-28 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <p className="text-center text-primary font-medium mb-3">
-            {t("coaching.intro")}
-          </p>
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-5">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-6">
             {t("coaching.title")}
           </h2>
-          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed text-center mb-12 max-w-2xl mx-auto">
+          <div className="space-y-4 text-muted-foreground text-lg leading-[1.9] text-center mb-12 max-w-2xl mx-auto">
             <p>{t("coaching.text1")}</p>
             <p>{t("coaching.text2")}</p>
           </div>
