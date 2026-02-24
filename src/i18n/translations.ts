@@ -58,12 +58,12 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.title": {
-    de: "Schluss mit der unbewussten Selbstsabotage",
-    en: "End the Unconscious Self-Sabotage",
+    de: "Wenn die Welt stürmt, sei der Fels.",
+    en: "When the world storms, be the rock.",
   },
   "hero.subtitle": {
-    de: "Gib dir endlich selbst die Erlaubnis für ein freies, selbstbestimmtes Leben.",
-    en: "Finally give yourself permission for a free, self-determined life.",
+    de: "Gemeinsam finden wir deine innere Standfestigkeit zurück. Professionelles Coaching für mehr Halt und Klarheit.",
+    en: "Together we rediscover your inner steadfastness. Professional coaching for more stability and clarity.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
