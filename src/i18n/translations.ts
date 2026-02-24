@@ -58,12 +58,12 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.title": {
-    de: "Endlich bei dir selbst ankommen.",
-    en: "Finally arrive at yourself.",
+    de: "Endlich ankommen, wo der Sturm aufhört.",
+    en: "Finally arriving where the storm ends.",
   },
   "hero.subtitle": {
-    de: "Wenn du dich danach sehnst, den Sturm im Außen hinter dir zu lassen: Hier ist der Ort, an dem du sicher landen kannst. Ich meine es ernsthaft gut mit deinem Weg.",
-    en: "If you long to leave the outer storm behind: This is the place where you can land safely. I am genuinely committed to your path.",
+    de: "Du sehnst dich danach, das ‚Müssen' hinter dir zu lassen? In meinem Coaching schaffst du den Raum, um endlich bei dir selbst anzukommen. Ein sicherer Ort und eine Begleitung, die dir mit Aufrichtigkeit zur Seite steht.",
+    en: "Do you long to leave the 'having to' behind? In my coaching, you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
