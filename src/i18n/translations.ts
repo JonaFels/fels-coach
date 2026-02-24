@@ -394,7 +394,7 @@ export const translations: Translations = {
     en: "here",
   },
   "ebook.download": {
-    de: "Jetzt kostenlos anfordern & Klarheit gewinnen",
+    de: "Kostenlos anfordern",
     en: "Request for Free & Gain Clarity",
   },
   "ebook.infoTitle": {
