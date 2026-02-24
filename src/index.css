@@ -16,8 +16,8 @@
 
 @layer base {
   :root {
-    /* Background: Warm Stone-White */
-    --background: 40 20% 98%;
+    /* Background: Warm Linen (#F9F7F2) */
+    --background: 40 33% 96%;
     /* Foreground: Dark Slate (#2D3748 equivalent) */
     --foreground: 213 23% 24%;
 

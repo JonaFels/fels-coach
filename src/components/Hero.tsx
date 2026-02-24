@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
-import { Link } from "react-router-dom";
+
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -44,19 +44,16 @@ export const Hero = () => {
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Left: Text */}
             <div className="text-center md:text-left order-2 md:order-1">
-              <span className="inline-block text-sm font-medium tracking-widest uppercase text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up">
-                Systemisches Coaching & Aufstellungen
-              </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-[1.15] animate-fade-in-up [animation-delay:100ms]">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-[1.15] animate-fade-in-up">
                 {t("hero.title")}
               </h1>
-              <p className="mt-6 md:mt-8 text-lg tracking-wide text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
+              <p className="mt-6 md:mt-8 text-lg md:text-xl tracking-wide text-muted-foreground max-w-xl leading-[1.9] animate-fade-in-up [animation-delay:100ms]">
                 {t("hero.subtitle")}
               </p>
-              <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center md:items-start gap-4 animate-fade-in-up [animation-delay:300ms]">
+              <div className="mt-10 md:mt-12 flex flex-col items-center md:items-start gap-4 animate-fade-in-up [animation-delay:200ms]">
                 <Button
                   size="lg"
-                  className="text-base px-8 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   onClick={() => {
                     trackCTAClick("hero_consultation", "homepage_hero", "link");
                     setErstgespraechOpen(true);
@@ -65,28 +62,25 @@ export const Hero = () => {
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t("hero.ctaConsultation")}
                 </Button>
-                <Link
-                  to="/systemische-familienaufstellung-freiburg"
-                  className="text-sm font-medium tracking-wide text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 no-underline-effect"
-                >
-                  Mehr über meine Methode
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
+                <p className="text-sm text-muted-foreground md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
               </div>
-              <p className="text-sm text-muted-foreground mt-4 md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
+              {/* Handwritten-style trust signature */}
+              <p className="mt-8 text-base italic text-muted-foreground/80 animate-fade-in-up [animation-delay:300ms]" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                „Ehrlich. Auf Augenhöhe. Dein Fels."
+              </p>
             </div>
 
             {/* Right: Image – 4:5 portrait with frosted vignette */}
             <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
-              <div className="relative overflow-hidden rounded-3xl">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-foreground/10">
                 <img
                   ref={imageRef}
                   src={profilBild}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
-                  className="w-56 md:w-72 lg:w-80 aspect-[4/5] rounded-3xl object-cover object-center shadow-lg will-change-transform"
+                  className="w-64 md:w-80 lg:w-96 aspect-[4/5] rounded-3xl object-cover object-center will-change-transform"
                   loading="eager"
-                  width="320"
-                  height="400"
+                  width="384"
+                  height="480"
                 />
                 {/* Frosted vignette overlay */}
                 <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
