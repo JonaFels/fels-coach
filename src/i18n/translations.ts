@@ -58,12 +58,12 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.title": {
-    de: "Wenn die Welt stürmt, sei der Fels.",
-    en: "When the world storms, be the rock.",
+    de: "Endlich bei dir selbst ankommen.",
+    en: "Finally arrive at yourself.",
   },
   "hero.subtitle": {
-    de: "Gemeinsam finden wir deine innere Standfestigkeit zurück. Professionelles Coaching für mehr Halt und Klarheit.",
-    en: "Together we rediscover your inner steadfastness. Professional coaching for more stability and clarity.",
+    de: "Wenn du dich danach sehnst, den Sturm im Außen hinter dir zu lassen: Hier ist der Ort, an dem du sicher landen kannst. Ich meine es ernsthaft gut mit deinem Weg.",
+    en: "If you long to leave the outer storm behind: This is the place where you can land safely. I am genuinely committed to your path.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -74,8 +74,8 @@ export const translations: Translations = {
     en: "Completely non-binding & personal – 30 minutes that create clarity.",
   },
   "hero.ctaConsultation": {
-    de: "Kostenloses Erstgespräch vereinbaren",
-    en: "Schedule Free Initial Consultation",
+    de: "Lass uns einfach mal reden",
+    en: "Let's just talk",
   },
   "hero.ctaMicrocopy": {
     de: "Unverbindlich & persönlich – 30 Min., die Klarheit schaffen.",
