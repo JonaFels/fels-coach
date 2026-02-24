@@ -10,7 +10,7 @@ export const FinalCTA = () => {
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
-    <section className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
       {/* Abstract stone shape */}
       <svg
         className="absolute -left-20 -bottom-20 w-[400px] h-[400px] opacity-[0.05] pointer-events-none"
@@ -36,7 +36,7 @@ export const FinalCTA = () => {
           <Button
             size="lg"
             variant="secondary"
-            className="text-base px-10 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             onClick={() => {
               trackCTAClick("final_cta", "homepage_final", "link");
               setErstgespraechOpen(true);

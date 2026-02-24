@@ -25,7 +25,7 @@ export const Hero = () => {
 
   return (
     <>
-      <section className="py-20 md:py-28 lg:py-36 overflow-hidden relative">
+      <section className="py-24 md:py-32 lg:py-40 overflow-hidden relative">
         {/* Abstract stone shape background */}
         <svg
           className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-[0.035] pointer-events-none"
@@ -41,22 +41,22 @@ export const Hero = () => {
         </svg>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Left: Text */}
             <div className="text-center md:text-left order-2 md:order-1">
-              <span className="inline-block text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up">
+              <span className="inline-block text-sm font-medium tracking-widest uppercase text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up">
                 Systemisches Coaching & Aufstellungen
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight leading-tight animate-fade-in-up [animation-delay:100ms]">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-[1.15] animate-fade-in-up [animation-delay:100ms]">
                 {t("hero.title")}
               </h1>
-              <p className="mt-5 md:mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
+              <p className="mt-6 md:mt-8 text-lg tracking-wide text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
                 {t("hero.subtitle")}
               </p>
-              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center md:items-start gap-4 animate-fade-in-up [animation-delay:300ms]">
+              <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center md:items-start gap-4 animate-fade-in-up [animation-delay:300ms]">
                 <Button
                   size="lg"
-                  className="text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="text-base px-8 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   onClick={() => {
                     trackCTAClick("hero_consultation", "homepage_hero", "link");
                     setErstgespraechOpen(true);
@@ -67,7 +67,7 @@ export const Hero = () => {
                 </Button>
                 <Link
                   to="/systemische-familienaufstellung-freiburg"
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 no-underline-effect"
+                  className="text-sm font-medium tracking-wide text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 no-underline-effect"
                 >
                   Mehr über meine Methode
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -76,17 +76,24 @@ export const Hero = () => {
               <p className="text-sm text-muted-foreground mt-4 md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
             </div>
 
-            {/* Right: Image – 4:5 portrait aspect */}
-            <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms] overflow-hidden rounded-2xl">
-              <img
-                ref={imageRef}
-                src={profilBild}
-                alt="Jona Fels – Systemischer Coach in Freiburg"
-                className="w-56 md:w-72 lg:w-80 aspect-[4/5] rounded-2xl object-cover object-center shadow-lg will-change-transform"
-                loading="eager"
-                width="320"
-                height="400"
-              />
+            {/* Right: Image – 4:5 portrait with frosted vignette */}
+            <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
+              <div className="relative overflow-hidden rounded-3xl">
+                <img
+                  ref={imageRef}
+                  src={profilBild}
+                  alt="Jona Fels – Systemischer Coach in Freiburg"
+                  className="w-56 md:w-72 lg:w-80 aspect-[4/5] rounded-3xl object-cover object-center shadow-lg will-change-transform"
+                  loading="eager"
+                  width="320"
+                  height="400"
+                />
+                {/* Frosted vignette overlay */}
+                <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
+                  background: 'radial-gradient(ellipse at center, transparent 50%, hsl(var(--background) / 0.3) 100%)',
+                  boxShadow: 'inset 0 0 60px 20px hsl(var(--background) / 0.15)',
+                }} />
+              </div>
             </div>
           </div>
         </div>

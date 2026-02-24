@@ -14,7 +14,7 @@ export const MethodSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-muted/40">
+    <section className="py-20 md:py-28 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-secondary font-medium mb-4">
@@ -29,7 +29,7 @@ export const MethodSection = () => {
 
           <div className="grid md:grid-cols-3 gap-5 mb-14">
             {steps.map((step, index) => (
-              <div key={index} className="text-center p-8 rounded-2xl bg-card border border-border/50 hover:border-border transition-colors duration-300">
+              <div key={index} className="text-center p-8 rounded-3xl bg-card border border-border/50 hover:border-border hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary/10 mb-5">
                   <step.icon className="h-6 w-6 text-secondary" aria-hidden="true" />
                 </div>

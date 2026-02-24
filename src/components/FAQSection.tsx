@@ -58,7 +58,7 @@ export const FAQSection = () => {
   const faqs = faqData[language];
 
   return (
-    <section className="py-16 md:py-24" aria-labelledby="faq-heading">
+    <section className="py-20 md:py-28" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
         <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
           {language === 'de' ? 'Häufige Fragen' : 'Common Questions'}
@@ -66,7 +66,7 @@ export const FAQSection = () => {
         <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-12">
           {t("faq.title")}
         </h2>
-        <div className="bg-card rounded-2xl border border-border/50 shadow-sm p-6 md:p-8">
+        <div className="bg-card rounded-3xl border border-border/50 shadow-sm p-6 md:p-8">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
