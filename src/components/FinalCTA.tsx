@@ -10,13 +10,13 @@ export const FinalCTA = () => {
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
-    <section className="py-28 md:py-40 bg-primary text-primary-foreground">
+    <section className="py-20 md:py-28 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-5">
             {t("finalCta.title")}
           </h2>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-10">
+          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
             {t("finalCta.description")}
           </p>
           <Button
@@ -31,7 +31,7 @@ export const FinalCTA = () => {
             <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
             {t("finalCta.button")}
           </Button>
-          <p className="text-sm text-primary-foreground/60 mt-6">
+          <p className="text-sm text-primary-foreground/60 mt-5">
             {t("finalCta.microcopy")}
           </p>
         </div>

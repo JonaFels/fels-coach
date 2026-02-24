@@ -13,21 +13,21 @@ export const Hero = () => {
 
   return (
     <>
-      <section className="py-20 md:py-32 lg:py-40 overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Left: Text */}
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left order-2 md:order-1">
               <span className="inline-block text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up">
                 Systemisches Coaching & Aufstellungen
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight animate-fade-in-up [animation-delay:100ms]">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight animate-fade-in-up [animation-delay:100ms]">
                 {t("hero.title")}
               </h1>
-              <p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
+              <p className="mt-5 md:mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
                 {t("hero.subtitle")}
               </p>
-              <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center md:items-start gap-4 animate-fade-in-up [animation-delay:300ms]">
+              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center md:items-start gap-4 animate-fade-in-up [animation-delay:300ms]">
                 <Button
                   size="lg"
                   className="text-base px-8 py-6"
@@ -51,14 +51,14 @@ export const Hero = () => {
             </div>
 
             {/* Right: Image */}
-            <div className="flex justify-center md:justify-end animate-fade-in-up [animation-delay:200ms]">
+            <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
               <img
                 src={profilBild}
                 alt="Jona Fels – Systemischer Coach in Freiburg"
-                className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl object-cover object-center shadow-lg"
+                className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl object-cover object-center shadow-lg"
                 loading="eager"
-                width="384"
-                height="384"
+                width="320"
+                height="320"
               />
             </div>
           </div>

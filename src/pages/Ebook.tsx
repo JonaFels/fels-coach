@@ -10,13 +10,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
-import { PageBackground } from "@/components/PageBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import blaetterDeko from "@/assets/blaetter-deko.jpg";
 
 const ebookSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -68,35 +66,20 @@ const Ebook = () => {
       
       if (error) {
         console.error("Edge function error:", error);
-        toast({
-          title: "Fehler beim Senden",
-          description: "Bitte versuche es später erneut.",
-          variant: "destructive",
-        });
+        toast({ title: "Fehler beim Senden", description: "Bitte versuche es später erneut.", variant: "destructive" });
         return;
       }
       
       if (data?.error) {
-        toast({
-          title: "Fehler beim Senden",
-          description: data.error,
-          variant: "destructive",
-        });
+        toast({ title: "Fehler beim Senden", description: data.error, variant: "destructive" });
         return;
       }
       
       setSubmitted(true);
-      toast({
-        title: "E-Book erfolgreich gesendet!",
-        description: "Prüfe dein E-Mail-Postfach für den Download-Link.",
-      });
+      toast({ title: "E-Book erfolgreich gesendet!", description: "Prüfe dein E-Mail-Postfach für den Download-Link." });
     } catch (error) {
       console.error("Error:", error);
-      toast({
-        title: "Verbindungsfehler",
-        description: "Bitte überprüfe deine Internetverbindung.",
-        variant: "destructive",
-      });
+      toast({ title: "Verbindungsfehler", description: "Bitte überprüfe deine Internetverbindung.", variant: "destructive" });
     } finally {
       setIsSubmitting(false);
     }
@@ -110,182 +93,119 @@ const Ebook = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden">
+    <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
 
-      {/* Hero Banner with visible leaves image */}
-      <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
-        <img 
-          src={blaetterDeko} 
-          alt="Grüne Blätter – Wissen und Wachstum" 
-          className="w-full h-full object-cover object-[center_60%] no-fade"
-          loading="eager"
-        />
-        
-      </div>
-
-      <PageBackground className="!pt-8">
-        <div className="mx-auto px-4 sm:px-6 max-w-3xl overflow-hidden">
-          {/* Header Section */}
-          <div className="text-center mb-16">
+      <main id="main-content" className="flex-1">
+        {/* Header */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-4">
               Kostenloses E-Book
             </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
+            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground leading-tight mb-5">
               {t("ebook.headline")}
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
               {t("ebook.subheadline")}
             </p>
           </div>
+        </section>
 
-          <div className="grid gap-10 lg:grid-cols-2 min-w-0">
-            {/* Left Column - Book Mockup & Form */}
-            <div className="space-y-6 min-w-0">
-              {/* Book Cover */}
-              <div className="flex justify-center">
-                <img 
-                  src={ebookCover}
-                  alt="E-Book Cover: Der Weg zum Ganz-Sein von Jona Fels"
-                  className="w-48 h-auto rounded-lg shadow-xl"
-                  style={{ 
-                    boxShadow: '10px 10px 25px rgba(0,0,0,0.3), -2px 0 8px rgba(0,0,0,0.15)'
-                  }}
-                />
+        {/* Content */}
+        <section className="py-12 md:py-16 bg-muted/40">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="grid gap-10 lg:grid-cols-2 min-w-0">
+              {/* Left Column */}
+              <div className="space-y-6 min-w-0">
+                <div className="flex justify-center">
+                  <img
+                    src={ebookCover}
+                    alt="E-Book Cover: Der Weg zum Ganz-Sein von Jona Fels"
+                    className="w-44 h-auto rounded-lg shadow-xl"
+                    style={{ boxShadow: '10px 10px 25px rgba(0,0,0,0.3), -2px 0 8px rgba(0,0,0,0.15)' }}
+                  />
+                </div>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="font-serif text-xl">{t("ebook.title")}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {submitted ? (
+                      <div className="text-center py-8">
+                        <CheckCircle className="h-14 w-14 text-secondary mx-auto mb-4" aria-hidden="true" />
+                        <p className="text-foreground font-medium mb-2">Geschafft!</p>
+                        <p className="text-muted-foreground">{t("ebook.success")}</p>
+                      </div>
+                    ) : (
+                      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                        <div className="space-y-2">
+                          <Label htmlFor="ebook-name">{t("ebook.name")}</Label>
+                          <Input id="ebook-name" type="text" value={name} onChange={(e) => setName(e.target.value)} className={errors.name ? "border-destructive" : ""} aria-invalid={!!errors.name} autoComplete="name" placeholder="Dein Vorname" />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="ebook-email">{t("ebook.email")} *</Label>
+                          <Input id="ebook-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className={errors.email ? "border-destructive" : ""} aria-invalid={!!errors.email} autoComplete="email" placeholder="deine@email.de" />
+                          {errors.email && <p className="text-sm text-destructive">Bitte gib eine gültige E-Mail-Adresse ein.</p>}
+                        </div>
+                        <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                          <Label htmlFor="ebook-website">Website (nicht ausfüllen)</Label>
+                          <Input id="ebook-website" type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} tabIndex={-1} autoComplete="off" />
+                        </div>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          {t("ebook.privacyNote")}{" "}
+                          <Link to="/datenschutz" className="text-secondary hover:underline">{t("ebook.here")}</Link>
+                        </p>
+                        <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting}>
+                          {isSubmitting ? (
+                            <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />E-Book wird gesendet...</>
+                          ) : (
+                            t("ebook.download")
+                          )}
+                        </Button>
+                      </form>
+                    )}
+                  </CardContent>
+                </Card>
               </div>
 
-              {/* Form Card */}
-              <Card className="bg-card/95 backdrop-blur-sm">
+              {/* Right Column */}
+              <Card>
                 <CardHeader>
-                  <CardTitle className="font-serif text-xl">
-                    {t("ebook.title")}
-                  </CardTitle>
+                  <CardTitle className="font-serif text-xl">{t("ebook.infoTitle")}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {submitted ? (
-                    <div className="text-center py-8">
-                      <CheckCircle className="h-16 w-16 text-secondary mx-auto mb-4" aria-hidden="true" />
-                      <p className="text-foreground font-medium mb-2">Geschafft!</p>
-                      <p className="text-muted-foreground">
-                        {t("ebook.success")}
-                      </p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-                      <div className="space-y-2">
-                        <Label htmlFor="ebook-name">{t("ebook.name")}</Label>
-                        <Input
-                          id="ebook-name"
-                          type="text"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          className={errors.name ? "border-destructive" : ""}
-                          aria-invalid={!!errors.name}
-                          autoComplete="name"
-                          placeholder="Dein Vorname"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="ebook-email">{t("ebook.email")} *</Label>
-                        <Input
-                          id="ebook-email"
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          required
-                          className={errors.email ? "border-destructive" : ""}
-                          aria-invalid={!!errors.email}
-                          autoComplete="email"
-                          placeholder="deine@email.de"
-                        />
-                        {errors.email && (
-                          <p className="text-sm text-destructive">Bitte gib eine gültige E-Mail-Adresse ein.</p>
-                        )}
-                      </div>
-                      
-                      {/* Honeypot */}
-                      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
-                        <Label htmlFor="ebook-website">Website (nicht ausfüllen)</Label>
-                        <Input
-                          id="ebook-website"
-                          type="text"
-                          name="website"
-                          value={website}
-                          onChange={(e) => setWebsite(e.target.value)}
-                          tabIndex={-1}
-                          autoComplete="off"
-                        />
-                      </div>
-                      
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {t("ebook.privacyNote")}{" "}
-                        <Link to="/datenschutz" className="text-secondary hover:underline">
-                          {t("ebook.here")}
-                        </Link>
-                      </p>
-                      
-                      <Button 
-                        type="submit" 
-                        className="w-full min-h-[44px] whitespace-normal text-sm sm:text-base" 
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
-                            E-Book wird gesendet...
-                          </>
-                        ) : (
-                          t("ebook.download")
-                        )}
-                      </Button>
-                    </form>
-                  )}
+                  <ul className="space-y-5" role="list">
+                    {features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" aria-hidden="true" />
+                        <div>
+                          <p className="font-medium text-foreground">{t(feature.titleKey)}</p>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{t(feature.textKey)}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             </div>
-
-            {/* Right Column - Features */}
-            <Card className="bg-card/95 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="font-serif text-xl">
-                  {t("ebook.infoTitle")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-5" role="list">
-                  {features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" aria-hidden="true" />
-                      <div>
-                        <p className="font-medium text-foreground">
-                          {t(feature.titleKey)}
-                        </p>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {t(feature.textKey)}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
           </div>
+        </section>
 
-          {/* Internal Links */}
-          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-16" aria-label="Verwandte Seiten">
-            <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
-              Was ist Familienaufstellung?
-            </Link>
-            <span aria-hidden="true">•</span>
-            <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">
-              Angebote & Termine
-            </Link>
-          </nav>
-
-          <AuthorBox />
-        </div>
-      </PageBackground>
+        {/* Links & Author */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-10" aria-label="Verwandte Seiten">
+              <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">Was ist Familienaufstellung?</Link>
+              <span aria-hidden="true">•</span>
+              <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">Angebote & Termine</Link>
+            </nav>
+            <AuthorBox />
+          </div>
+        </section>
+      </main>
       <Footer />
       <CookieBanner />
     </div>

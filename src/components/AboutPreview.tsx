@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 
@@ -8,20 +8,20 @@ export const AboutPreview = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-36">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
             {t("aboutPreview.title")}
           </h2>
-          <h3 className="font-serif text-lg md:text-xl text-muted-foreground mb-10">
+          <h3 className="font-serif text-lg text-muted-foreground mb-8">
             Systemischer Coach in Freiburg
           </h3>
-          <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
+          <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
             <p>{t("aboutPreview.text1")}</p>
             <p>{t("aboutPreview.text2")}</p>
           </div>
-          <div className="mt-12">
+          <div className="mt-10">
             <Button
               asChild
               variant="outline"
