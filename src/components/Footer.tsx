@@ -25,13 +25,13 @@ export const Footer = () => {
               </a>
             </nav>
             <div className="flex items-center gap-3">
-              <a href="https://www.instagram.com/jonafels_coaching" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-foreground transition-colors">
+              <a href="https://www.instagram.com/jona.fels" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-foreground transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61575071498991" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-foreground transition-colors">
+              <a href="https://m.facebook.com/profile.php?id=61562014600393" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-foreground transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://www.linkedin.com/in/jona-fels" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-foreground transition-colors">
+              <a href="https://de.linkedin.com/in/jona-fels-coach" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-foreground transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
             </div>
