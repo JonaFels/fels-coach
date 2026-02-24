@@ -10,8 +10,22 @@ export const FinalCTA = () => {
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
-    <section className="py-20 md:py-28 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Abstract stone shape */}
+      <svg
+        className="absolute -left-20 -bottom-20 w-[400px] h-[400px] opacity-[0.05] pointer-events-none"
+        viewBox="0 0 800 800"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M400 50C550 50 700 150 730 300C760 450 700 550 650 620C600 690 500 750 400 750C300 750 200 690 150 620C100 550 40 450 70 300C100 150 250 50 400 50Z"
+          fill="currentColor"
+          className="text-primary-foreground"
+        />
+      </svg>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-5">
             {t("finalCta.title")}
@@ -22,7 +36,7 @@ export const FinalCTA = () => {
           <Button
             size="lg"
             variant="secondary"
-            className="text-base px-10 py-6"
+            className="text-base px-10 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             onClick={() => {
               trackCTAClick("final_cta", "homepage_final", "link");
               setErstgespraechOpen(true);

@@ -14,23 +14,27 @@ export const CoachingSection = () => {
     <section className="py-16 md:py-24 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <p className="text-center text-primary font-medium mb-3 animate-fade-in-up">
+          <p className="text-center text-primary font-medium mb-3">
             {t("coaching.intro")}
           </p>
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-5 animate-fade-in-up [animation-delay:100ms]">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-5">
             {t("coaching.title")}
           </h2>
-          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed text-center mb-12 max-w-2xl mx-auto animate-fade-in-up [animation-delay:200ms]">
+          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed text-center mb-12 max-w-2xl mx-auto">
             <p>{t("coaching.text1")}</p>
             <p>{t("coaching.text2")}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up [animation-delay:300ms]">
+          {/* Bento Grid Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {painPoints.map(({ icon: Icon, titleKey }) => (
-              <div key={titleKey} className="text-center p-6 rounded-lg">
+              <div
+                key={titleKey}
+                className="text-center p-8 rounded-2xl bg-card border border-border/50 hover:border-border transition-colors duration-300"
+              >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
                   <Icon className="h-5 w-5 text-primary" />
                 </div>
-                <p className="text-foreground font-medium">{t(titleKey)}</p>
+                <p className="text-foreground font-medium leading-relaxed">{t(titleKey)}</p>
               </div>
             ))}
           </div>

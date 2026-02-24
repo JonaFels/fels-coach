@@ -13,15 +13,29 @@ export const Hero = () => {
 
   return (
     <>
-      <section className="py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="py-20 md:py-28 lg:py-36 overflow-hidden relative">
+        {/* Abstract stone shape background */}
+        <svg
+          className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-[0.035] pointer-events-none"
+          viewBox="0 0 800 800"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M400 50C550 50 700 150 730 300C760 450 700 550 650 620C600 690 500 750 400 750C300 750 200 690 150 620C100 550 40 450 70 300C100 150 250 50 400 50Z"
+            fill="currentColor"
+            className="text-foreground"
+          />
+        </svg>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Left: Text */}
             <div className="text-center md:text-left order-2 md:order-1">
               <span className="inline-block text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-6 animate-fade-in-up">
                 Systemisches Coaching & Aufstellungen
               </span>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight animate-fade-in-up [animation-delay:100ms]">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight leading-tight animate-fade-in-up [animation-delay:100ms]">
                 {t("hero.title")}
               </h1>
               <p className="mt-5 md:mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
@@ -30,7 +44,7 @@ export const Hero = () => {
               <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center md:items-start gap-4 animate-fade-in-up [animation-delay:300ms]">
                 <Button
                   size="lg"
-                  className="text-base px-8 py-6"
+                  className="text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   onClick={() => {
                     trackCTAClick("hero_consultation", "homepage_hero", "link");
                     setErstgespraechOpen(true);
@@ -50,15 +64,15 @@ export const Hero = () => {
               <p className="text-sm text-muted-foreground mt-4 md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
             </div>
 
-            {/* Right: Image */}
+            {/* Right: Image – 4:5 portrait aspect */}
             <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
               <img
                 src={profilBild}
                 alt="Jona Fels – Systemischer Coach in Freiburg"
-                className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl object-cover object-center shadow-lg"
+                className="w-56 md:w-72 lg:w-80 aspect-[4/5] rounded-2xl object-cover object-center shadow-lg"
                 loading="eager"
                 width="320"
-                height="320"
+                height="400"
               />
             </div>
           </div>
