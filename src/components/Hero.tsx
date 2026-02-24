@@ -64,10 +64,6 @@ export const Hero = () => {
                 </Button>
                 <p className="text-sm text-muted-foreground md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
               </div>
-              {/* Handwritten-style trust signature */}
-              <p className="mt-8 text-base italic text-muted-foreground/80 animate-fade-in-up [animation-delay:300ms]" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                „Ehrlich. Auf Augenhöhe. Dein Fels."
-              </p>
             </div>
 
             {/* Right: Image – 4:5 portrait with frosted vignette */}
