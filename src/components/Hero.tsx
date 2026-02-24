@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
@@ -10,6 +10,18 @@ import { Link } from "react-router-dom";
 export const Hero = () => {
   const { t } = useLanguage();
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (imageRef.current) {
+        const offset = window.scrollY * 0.15;
+        imageRef.current.style.transform = `translateY(${offset}px)`;
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -65,11 +77,12 @@ export const Hero = () => {
             </div>
 
             {/* Right: Image – 4:5 portrait aspect */}
-            <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
+            <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms] overflow-hidden rounded-2xl">
               <img
+                ref={imageRef}
                 src={profilBild}
                 alt="Jona Fels – Systemischer Coach in Freiburg"
-                className="w-56 md:w-72 lg:w-80 aspect-[4/5] rounded-2xl object-cover object-center shadow-lg"
+                className="w-56 md:w-72 lg:w-80 aspect-[4/5] rounded-2xl object-cover object-center shadow-lg will-change-transform"
                 loading="eager"
                 width="320"
                 height="400"

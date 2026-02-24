@@ -29,7 +29,7 @@ export const CoachingSection = () => {
             {painPoints.map(({ icon: Icon, titleKey }) => (
               <div
                 key={titleKey}
-                className="text-center p-8 rounded-2xl bg-card border border-border/50 hover:border-border transition-colors duration-300"
+                className="text-center p-8 rounded-2xl bg-card border border-border/50 hover:border-border hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
                   <Icon className="h-5 w-5 text-primary" />
