@@ -11,7 +11,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
-import heroBanner from "@/assets/hero-banner.webp";
 
 const offerings = [
   {
@@ -39,21 +38,11 @@ const Angebote = () => {
       <SEOHead />
       <Header />
 
-      {/* Hero Banner */}
-      <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
-        <img
-          src={heroBanner}
-          alt="Berglandschaft – Angebote und Preise"
-          className="w-full h-full object-cover object-center no-fade"
-          loading="eager"
-        />
-      </div>
-
-      <main>
+      <main id="main-content">
         {/* Intro */}
-        <section className="bg-background py-24 md:py-36">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-10">
+            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
               {t("offerings.title")}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -62,18 +51,18 @@ const Angebote = () => {
           </div>
         </section>
 
-        {/* Was dich erwartet – Werte */}
-        <section className="bg-muted py-24 md:py-36">
+        {/* Was dich erwartet */}
+        <section className="py-16 md:py-24 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="grid gap-10 md:grid-cols-3 text-center">
+            <div className="grid gap-8 md:grid-cols-3 text-center">
               {[
                 { icon: Heart, label: "Einfühlsam", desc: "Ich höre dir zu – ohne Bewertung, mit echtem Interesse." },
                 { icon: Shield, label: "Geschützter Rahmen", desc: "Alles bleibt vertraulich. Dein Tempo bestimmt den Weg." },
                 { icon: Sparkles, label: "Nachhaltig", desc: "Wir arbeiten an Lösungen, die in deinem Alltag wirken." },
               ].map((val) => (
-                <div key={val.label} className="flex flex-col items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                    <val.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                <div key={val.label} className="flex flex-col items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <val.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="font-serif text-base font-semibold text-foreground">{val.label}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{val.desc}</p>
@@ -83,22 +72,22 @@ const Angebote = () => {
           </div>
         </section>
 
-        {/* Ablauf – Drei Schritte */}
-        <section className="bg-background py-28 md:py-40">
+        {/* Ablauf */}
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-6">
+            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.ablaufTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-12 leading-relaxed">
+            <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
               Jede Sitzung dauert 80 Minuten und folgt einem klaren, aber flexiblen Rahmen – damit du dich voll auf dein Thema einlassen kannst.
             </p>
-            <ol className="space-y-8">
+            <ol className="space-y-6">
               {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (
-                <li key={key} className="flex items-start gap-6">
-                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold mt-0.5">
+                <li key={key} className="flex items-start gap-5">
+                  <span className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold mt-0.5">
                     {i + 1}
                   </span>
-                  <p className="text-muted-foreground leading-relaxed pt-2">{t(key)}</p>
+                  <p className="text-muted-foreground leading-relaxed pt-1.5">{t(key)}</p>
                 </li>
               ))}
             </ol>
@@ -106,15 +95,15 @@ const Angebote = () => {
         </section>
 
         {/* Preise & Buchung */}
-        <section className="bg-muted py-24 md:py-36">
+        <section className="py-16 md:py-24 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
+            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
               {t("offerings.preiseTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-4 max-w-[600px] mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground text-center mb-3 max-w-[600px] mx-auto leading-relaxed">
               {t("offerings.preiseIntro")}
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-12">
+            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-10">
               <span className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 Präsenz in Freiburg
@@ -132,7 +121,6 @@ const Angebote = () => {
                   className={`relative group transition-all duration-300 hover:shadow-md bg-card border-border/60 ${
                     offering.badge ? "ring-1 ring-secondary/40" : ""
                   }`}
-                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {offering.badge && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-medium px-3 py-1 rounded-full">
@@ -140,18 +128,12 @@ const Angebote = () => {
                     </div>
                   )}
                   <CardHeader className="pb-4">
-                    <CardTitle className="font-serif text-xl">
-                      {t(offering.titleKey)}
-                    </CardTitle>
-                    <CardDescription className="text-sm mt-2 leading-relaxed">
-                      {t(offering.descKey)}
-                    </CardDescription>
+                    <CardTitle className="font-serif text-xl">{t(offering.titleKey)}</CardTitle>
+                    <CardDescription className="text-sm mt-2 leading-relaxed">{t(offering.descKey)}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-semibold text-foreground">
-                        {offering.price}€
-                      </span>
+                      <span className="text-2xl font-semibold text-foreground">{offering.price}€</span>
                       <span className="text-sm text-muted-foreground">/ 80 Min.</span>
                     </div>
                   </CardContent>
@@ -174,8 +156,8 @@ const Angebote = () => {
           </div>
         </section>
 
-        {/* Noch unsicher? – sanfter Fallback */}
-        <section className="bg-accent py-28 md:py-40">
+        {/* Noch unsicher? */}
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
               Noch unsicher?
@@ -198,12 +180,12 @@ const Angebote = () => {
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               Erstgespräch vereinbaren
             </Button>
-            <p className="mt-4 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
+            <p className="mt-3 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
           </div>
         </section>
 
         {/* Interne Links */}
-        <section className="bg-background py-16">
+        <section className="py-10 border-t border-border">
           <nav className="container mx-auto px-4 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground" aria-label="Verwandte Seiten">
             <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
               Was ist Familienaufstellung?
