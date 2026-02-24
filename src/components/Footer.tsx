@@ -8,12 +8,12 @@ export const Footer = () => {
   return (
     <footer className="border-t border-border py-8">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>
+        <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground">
+          <p className="text-center">
             © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
           </p>
-          <div className="flex items-center gap-6">
-            <nav className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <nav className="flex flex-wrap items-center justify-center gap-4">
               <a href="/datenschutz" className="hover:text-foreground transition-colors">
                 {t("footer.privacy")}
               </a>
