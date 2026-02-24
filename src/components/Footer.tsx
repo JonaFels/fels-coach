@@ -1,4 +1,3 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
@@ -6,82 +5,32 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer className="border-t border-border py-8">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo & Copyright */}
-          <div className="text-center md:text-left">
-            <p className="font-serif text-lg font-semibold">
-              Jona Fels – Systemisches Coaching & Familienaufstellungen
-            </p>
-            <p className="text-sm text-primary-foreground/70 mt-1">
-              © {currentYear} {t("footer.rights")}
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <p>
+            © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
+          </p>
+          <nav className="flex items-center gap-6">
             <a
-              href="https://www.facebook.com/profile.php?id=61562014600393"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-              aria-label="Facebook"
+              href="/datenschutz"
+              className="hover:text-foreground transition-colors"
             >
-              <Facebook className="h-5 w-5" />
+              {t("footer.privacy")}
             </a>
             <a
-              href="https://www.instagram.com/jona.fels/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-              aria-label="Instagram"
+              href="/impressum"
+              className="hover:text-foreground transition-colors"
             >
-              <Instagram className="h-5 w-5" />
+              {t("footer.imprint")}
             </a>
             <a
-              href="https://www.linkedin.com/in/jona-fels-coach/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-              aria-label="LinkedIn"
+              href="/agb"
+              className="hover:text-foreground transition-colors"
             >
-              <Linkedin className="h-5 w-5" />
+              {t("footer.terms")}
             </a>
-          </div>
-
-          {/* Address, Anfahrt & Legal */}
-          <div className="flex flex-col items-center md:items-end gap-3 text-sm">
-            <span className="text-primary-foreground/70">
-              Karlstraße 51, 79104 Freiburg
-            </span>
-            <div className="flex items-center gap-4">
-              <a
-                href="/kontakt#anfahrt"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
-                Anfahrt &amp; Parken
-              </a>
-              <a
-                href="/datenschutz"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
-                {t("footer.privacy")}
-              </a>
-              <a
-                href="/impressum"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
-                {t("footer.imprint")}
-              </a>
-              <a
-                href="/agb"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
-                {t("footer.terms")}
-              </a>
-            </div>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>
