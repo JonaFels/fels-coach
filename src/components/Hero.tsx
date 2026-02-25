@@ -76,10 +76,6 @@ export const Hero = () => {
                 width="384"
                 height="480"
               />
-              <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center, transparent 50%, hsl(var(--background) / 0.3) 100%)',
-                boxShadow: 'inset 0 0 60px 20px hsl(var(--background) / 0.15)',
-              }} />
             </div>
           </div>
         </div>
