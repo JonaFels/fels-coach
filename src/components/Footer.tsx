@@ -11,10 +11,7 @@ export const Footer = () => {
         {/* Top: Brand centered */}
         <div className="text-center mb-8">
           <p className="font-serif text-lg font-semibold text-foreground tracking-tight">
-            Jona Fels
-          </p>
-          <p className="text-xs text-muted-foreground/70 mt-1">
-            Systemisches Coaching & Familienaufstellungen
+            Jona Fels – Systemisches Coaching & Familienaufstellungen
           </p>
         </div>
 
