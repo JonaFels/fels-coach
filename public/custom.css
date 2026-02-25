@@ -37,3 +37,10 @@ h1 {
 */
 
 /* === Ihre Anpassungen hier === */
+
+/* Orbnet "Lade Termine" Overlay ausblenden */
+.orbnet-booking-mask .orbnet-loading,
+.orbnet-booking-mask > div[style*="position: fixed"],
+div[class*="orbnet"] > div[style*="z-index"] {
+  display: none !important;
+}

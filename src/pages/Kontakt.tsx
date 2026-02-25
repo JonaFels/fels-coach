@@ -91,15 +91,12 @@ const Kontakt = () => {
           className="py-12 md:py-16 bg-muted/40 scroll-mt-24"
         >
           <div className="container mx-auto px-4 max-w-2xl">
-            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-2 text-center">
-              Kostenloses Erstgespräch buchen
-            </h2>
-            <p className="text-sm text-muted-foreground text-center mb-8">
-              30 Minuten · telefonisch · völlig unverbindlich
-            </p>
             <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
-              <p className="text-sm text-muted-foreground text-center pt-6 pb-4 italic animate-pulse">
-                Einen Moment Geduld, ich schaue kurz in meinen Kalender für dich&nbsp;…
+              <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-2 text-center">
+                Kostenloses Erstgespräch buchen
+              </h2>
+              <p className="text-sm text-muted-foreground text-center mb-4">
+                30 Minuten · telefonisch · völlig unverbindlich
               </p>
               <div ref={containerRef} />
             </div>
