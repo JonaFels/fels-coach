@@ -9,7 +9,7 @@ const Impressum = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main id="main-content" className="flex-1 py-24 md:py-36">
+      <main id="main-content" className="flex-1 py-24 md:py-28">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
             {t("imprint.title")}

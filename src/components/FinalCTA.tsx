@@ -7,7 +7,7 @@ export const FinalCTA = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-28 md:py-40 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-28 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
       <svg
         className="absolute -left-20 -bottom-20 w-[400px] h-[400px] opacity-[0.05] pointer-events-none"
         viewBox="0 0 800 800"

@@ -6,7 +6,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-muted/30 mt-16 md:mt-24 py-10 md:py-14" style={{ contentVisibility: "auto" }}>
+    <footer className="border-t border-border bg-muted/30 mt-16 md:mt-16 py-10 md:py-12" style={{ contentVisibility: "auto" }}>
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Top row: Brand + Links + Social inline */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">

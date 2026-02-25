@@ -85,7 +85,7 @@ const Kontakt = () => {
 
       <main id="main-content" className="flex-1">
         {/* 1. Empathische Einladung */}
-        <section className="py-24 md:py-36">
+        <section className="py-24 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="flex-shrink-0">
@@ -114,7 +114,7 @@ const Kontakt = () => {
         <section
           id="erstgespraech"
           ref={kalenderRef}
-          className="py-24 md:py-36 bg-muted/40 scroll-mt-24"
+          className="py-24 md:py-28 bg-muted/40 scroll-mt-24"
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
@@ -130,7 +130,7 @@ const Kontakt = () => {
         </section>
 
         {/* 3. Alternative Kontaktwege */}
-        <section className="py-24 md:py-36">
+        <section className="py-24 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-8 text-center">
               Oder schreib mir direkt
@@ -179,7 +179,7 @@ const Kontakt = () => {
         </section>
 
         {/* Anfahrt */}
-        <section id="anfahrt" className="py-24 md:py-36 bg-muted/40 scroll-mt-24">
+        <section id="anfahrt" className="py-24 md:py-28 bg-muted/40 scroll-mt-24">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px flex-1 max-w-16 bg-border" />

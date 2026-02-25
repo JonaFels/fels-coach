@@ -99,7 +99,7 @@ const Ebook = () => {
 
       <main id="main-content" className="flex-1">
         {/* Header */}
-        <section className="py-24 md:py-36">
+        <section className="py-24 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-4">
               Kostenloses E-Book
@@ -114,7 +114,7 @@ const Ebook = () => {
         </section>
 
         {/* Content */}
-        <section className="py-24 md:py-36 bg-muted/40">
+        <section className="py-24 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="grid gap-10 lg:grid-cols-2 min-w-0">
               {/* Left Column */}
