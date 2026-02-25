@@ -99,8 +99,12 @@ const Kontakt = () => {
             </p>
             <div
               ref={containerRef}
-              className="min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6"
-            />
+              className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6"
+            >
+              <p className="text-sm text-muted-foreground text-center pt-16 italic animate-pulse">
+                Einen Moment Geduld, ich schaue kurz in meinen Kalender für dich&nbsp;…
+              </p>
+            </div>
           </div>
         </section>
 
