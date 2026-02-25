@@ -6,38 +6,77 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-muted/30 mt-16 md:mt-16 py-10 md:py-12" style={{ contentVisibility: "auto" }}>
-      <div className="container mx-auto px-4 max-w-4xl">
-        {/* Top row: Brand + Links + Social inline */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
-          <p className="font-serif text-sm font-semibold text-foreground whitespace-nowrap">
+    <footer className="border-t border-border/60 bg-primary/[0.03] mt-12 md:mt-16" style={{ contentVisibility: "auto" }}>
+      <div className="container mx-auto px-4 max-w-5xl py-10 md:py-14">
+        {/* Top: Brand centered */}
+        <div className="text-center mb-8">
+          <p className="font-serif text-lg font-semibold text-foreground tracking-tight">
             Jona Fels
           </p>
-
-          <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground" aria-label="Footer-Navigation">
-            <a href="/kontakt" className="hover:text-foreground transition-colors">Kontakt</a>
-            <a href="/datenschutz" className="hover:text-foreground transition-colors">{t("footer.privacy")}</a>
-            <a href="/impressum" className="hover:text-foreground transition-colors">{t("footer.imprint")}</a>
-            <a href="/agb" className="hover:text-foreground transition-colors">{t("footer.terms")}</a>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <a href="https://www.instagram.com/jona.fels" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Instagram className="h-4 w-4" />
-            </a>
-            <a href="https://m.facebook.com/profile.php?id=61562014600393" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Facebook className="h-4 w-4" />
-            </a>
-            <a href="https://de.linkedin.com/in/jona-fels-coach" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Linkedin className="h-4 w-4" />
-            </a>
-          </div>
+          <p className="text-xs text-muted-foreground/70 mt-1">
+            Systemisches Coaching & Familienaufstellungen
+          </p>
         </div>
 
-        {/* Copyright */}
-        <p className="mt-4 pt-4 border-t border-border/40 text-center text-[11px] text-muted-foreground/60">
-          © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
-        </p>
+        {/* Middle: Nav links */}
+        <nav
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-8"
+          aria-label="Footer-Navigation"
+        >
+          <a href="/kontakt" className="hover:text-foreground transition-colors no-underline-effect">
+            Kontakt
+          </a>
+          <span className="hidden md:inline text-border">·</span>
+          <a href="/datenschutz" className="hover:text-foreground transition-colors no-underline-effect">
+            {t("footer.privacy")}
+          </a>
+          <span className="hidden md:inline text-border">·</span>
+          <a href="/impressum" className="hover:text-foreground transition-colors no-underline-effect">
+            {t("footer.imprint")}
+          </a>
+          <span className="hidden md:inline text-border">·</span>
+          <a href="/agb" className="hover:text-foreground transition-colors no-underline-effect">
+            {t("footer.terms")}
+          </a>
+        </nav>
+
+        {/* Social icons */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <a
+            href="https://www.instagram.com/jona.fels"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="w-9 h-9 rounded-full bg-muted/60 flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 no-underline-effect"
+          >
+            <Instagram className="h-4 w-4" />
+          </a>
+          <a
+            href="https://m.facebook.com/profile.php?id=61562014600393"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="w-9 h-9 rounded-full bg-muted/60 flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 no-underline-effect"
+          >
+            <Facebook className="h-4 w-4" />
+          </a>
+          <a
+            href="https://de.linkedin.com/in/jona-fels-coach"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="w-9 h-9 rounded-full bg-muted/60 flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 no-underline-effect"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+        </div>
+
+        {/* Divider + Copyright */}
+        <div className="border-t border-border/40 pt-5">
+          <p className="text-center text-[11px] text-muted-foreground/50 tracking-wide">
+            © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
+          </p>
+        </div>
       </div>
     </footer>
   );
