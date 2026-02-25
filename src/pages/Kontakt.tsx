@@ -25,7 +25,7 @@ const Kontakt = () => {
     }
   }, [location.hash]);
 
-  // Embed Orbnet booking widget
+  // Embed Orbnet booking widget & suppress its fullscreen loading overlay
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -40,6 +40,25 @@ const Kontakt = () => {
     mask.dataset.type = "embed";
     containerRef.current.appendChild(mask);
 
+    // Observer: remove any fixed-position loading overlay Orbnet injects into body
+    const removeOrbnetOverlay = () => {
+      document.querySelectorAll('body > div[style*="position: fixed"]').forEach((el) => {
+        const html = el.innerHTML || "";
+        if (html.includes("Lade") || html.includes("loading") || html.includes("spinner")) {
+          (el as HTMLElement).style.display = "none";
+        }
+      });
+    };
+
+    const observer = new MutationObserver(removeOrbnetOverlay);
+    observer.observe(document.body, { childList: true, subtree: false });
+
+    // Also run immediately and after short delays
+    removeOrbnetOverlay();
+    const t1 = setTimeout(removeOrbnetOverlay, 300);
+    const t2 = setTimeout(removeOrbnetOverlay, 800);
+    const t3 = setTimeout(removeOrbnetOverlay, 1500);
+
     const existingScript = document.getElementById("orbnet-booking-script");
     if (existingScript) existingScript.remove();
 
@@ -50,6 +69,13 @@ const Kontakt = () => {
     script.crossOrigin = "anonymous";
     script.referrerPolicy = "origin";
     document.body.appendChild(script);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
   }, []);
 
   return (
