@@ -11,7 +11,7 @@ export const Footer = () => {
         {/* Top row: Brand + Links + Social inline */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
           <p className="font-serif text-sm font-semibold text-foreground whitespace-nowrap">
-            Jona Fels <span className="font-sans font-normal text-muted-foreground">· Systemisches Coaching</span>
+            Jona Fels
           </p>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground" aria-label="Footer-Navigation">
