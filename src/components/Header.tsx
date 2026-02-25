@@ -34,7 +34,7 @@ export const Header = () => {
               alt="Jona Fels"
               className="h-8 w-8 md:h-9 md:w-9 object-contain"
             />
-            <span className="font-serif text-sm md:text-lg font-semibold text-foreground tracking-tight leading-none">
+            <span className="font-serif text-base md:text-xl font-normal text-foreground tracking-tight leading-none">
               Jona Fels – Systemisches Coaching
             </span>
           </a>
