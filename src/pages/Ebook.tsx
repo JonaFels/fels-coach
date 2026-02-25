@@ -11,7 +11,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
-import { AuthorBox } from "@/components/AuthorBox";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -195,11 +195,6 @@ const Ebook = () => {
         </section>
 
         {/* Links & Author */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <AuthorBox />
-          </div>
-        </section>
       </main>
       <Footer />
       <CookieBanner />

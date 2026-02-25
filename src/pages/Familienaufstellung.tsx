@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
-import { AuthorBox } from "@/components/AuthorBox";
+
 import { trackCTAClick } from "@/lib/tracking";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -90,11 +90,6 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Links */}
-        <section className="py-10 border-t border-border">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <AuthorBox />
-          </div>
-        </section>
       </main>
       <Footer />
       <CookieBanner />
