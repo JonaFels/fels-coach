@@ -97,13 +97,11 @@ const Kontakt = () => {
             <p className="text-sm text-muted-foreground text-center mb-8">
               30 Minuten · telefonisch · völlig unverbindlich
             </p>
-            <div
-              ref={containerRef}
-              className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6"
-            >
-              <p className="text-sm text-muted-foreground text-center pt-16 italic animate-pulse">
+            <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
+              <p className="text-sm text-muted-foreground text-center pt-6 pb-4 italic animate-pulse">
                 Einen Moment Geduld, ich schaue kurz in meinen Kalender für dich&nbsp;…
               </p>
+              <div ref={containerRef} />
             </div>
           </div>
         </section>
