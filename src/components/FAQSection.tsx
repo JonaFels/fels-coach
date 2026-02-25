@@ -58,7 +58,7 @@ export const FAQSection = () => {
   const faqs = faqData[language];
 
   return (
-    <section className="py-24 md:py-28" aria-labelledby="faq-heading">
+    <section className="py-16 md:py-20" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
         <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
           {language === 'de' ? 'Häufige Fragen' : 'Common Questions'}

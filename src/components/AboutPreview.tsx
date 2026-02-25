@@ -8,7 +8,7 @@ export const AboutPreview = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 md:py-28">
+    <section className="py-16 md:py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-8 text-center">
