@@ -27,36 +27,39 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-40 w-full bg-muted/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" className="flex-shrink-0 flex items-center gap-3 no-underline-effect">
+        <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
+          {/* Brand */}
+          <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
             <img
               src={logoIcon}
               alt="Jona Fels"
-              className="h-8 w-8 md:h-9 md:w-9 object-contain"
+              className="h-8 w-8 object-contain"
             />
-            <span className="font-serif text-lg md:text-[1.35rem] font-normal text-foreground tracking-tight leading-none">
+            <span className="font-serif text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-none whitespace-nowrap">
               Jona Fels – Systemisches Coaching
             </span>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-6">
+          {/* Desktop Nav */}
+          <nav className="hidden xl:flex items-center gap-5 ml-8">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
                 onClick={() => handleNavClick(item.key, item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-[0.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {t(item.key)}
               </a>
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Desktop Right */}
+          <div className="hidden xl:flex items-center gap-3 ml-6">
             <LanguageSwitcher />
             <Button
               size="sm"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md text-[0.8rem] px-4"
               asChild
             >
               <a
@@ -69,22 +72,24 @@ export const Header = () => {
             </Button>
           </div>
 
+          {/* Mobile hamburger */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 -mr-2 text-foreground"
+            className="xl:hidden p-2 -mr-2 text-foreground"
             aria-label="Menu"
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
+        {/* Mobile menu */}
         <div
           className={cn(
-            "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
+            "xl:hidden overflow-hidden transition-all duration-300 ease-in-out",
             isMobileMenuOpen ? "max-h-96 pb-4" : "max-h-0"
           )}
         >
-          <nav className="flex flex-col gap-2 pt-2">
+          <nav className="flex flex-col gap-1 pt-2">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.key}
@@ -93,12 +98,12 @@ export const Header = () => {
                   handleNavClick(item.key, item.href);
                   setIsMobileMenuOpen(false);
                 }}
-                className="px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                className="px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
               >
                 {t(item.key)}
               </a>
             ))}
-            <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
+            <div className="flex items-center justify-between px-3 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
               <Button
                 size="sm"
