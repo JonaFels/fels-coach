@@ -10,7 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
-import { ErstgespraechModal } from "@/components/ErstgespraechModal";
+
 
 const offerings = [
   {
@@ -31,7 +31,7 @@ const offerings = [
 const Angebote = () => {
   const { t } = useLanguage();
   const { openBooking, BookingDialog } = useOrbnetBooking();
-  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
+  
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -172,13 +172,12 @@ const Angebote = () => {
               variant="outline"
               size="lg"
               className="text-base px-8 min-h-[44px]"
-              onClick={() => {
-                trackCTAClick("angebote_consultation", "angebote_page", "link");
-                setErstgespraechOpen(true);
-              }}
+              asChild
             >
-              <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-              Erstgespräch vereinbaren
+              <a href="/kontakt#erstgespraech" onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}>
+                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                Erstgespräch vereinbaren
+              </a>
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
           </div>
@@ -203,7 +202,7 @@ const Angebote = () => {
       </main>
 
       <BookingDialog />
-      <ErstgespraechModal open={erstgespraechOpen} onClose={() => setErstgespraechOpen(false)} />
+      
       <Footer />
       <CookieBanner />
     </div>
