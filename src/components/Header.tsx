@@ -5,7 +5,6 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
-import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import logoIcon from "/favicon-96x96.png";
 
 const NAV_ITEMS = [
@@ -20,19 +19,12 @@ const NAV_ITEMS = [
 export const Header = () => {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   const handleNavClick = (key: string, href: string) => {
     trackLinkClick(t(key), href, "header_navigation");
   };
 
-  const handleTerminClick = () => {
-    trackNavToOffers("header");
-    setErstgespraechOpen(true);
-  };
-
   return (
-    <>
     <header className="sticky top-0 z-40 w-full bg-muted/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -62,9 +54,18 @@ export const Header = () => {
 
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md" onClick={handleTerminClick}>
-              <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
-              {t("nav.contact")}
+            <Button
+              size="sm"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md"
+              asChild
+            >
+              <a
+                href="/kontakt#erstgespraech"
+                onClick={() => trackNavToOffers("header")}
+              >
+                <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+                {t("nav.contact")}
+              </a>
             </Button>
           </div>
 
@@ -99,19 +100,26 @@ export const Header = () => {
             ))}
             <div className="flex items-center justify-between px-2 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
-              <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md" onClick={() => {
-                handleTerminClick();
-                setIsMobileMenuOpen(false);
-              }}>
-                <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
-                {t("nav.contact")}
+              <Button
+                size="sm"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md"
+                asChild
+              >
+                <a
+                  href="/kontakt#erstgespraech"
+                  onClick={() => {
+                    trackNavToOffers("header");
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+                  {t("nav.contact")}
+                </a>
               </Button>
             </div>
           </nav>
         </div>
       </div>
     </header>
-    <ErstgespraechModal open={erstgespraechOpen} onClose={() => setErstgespraechOpen(false)} />
-    </>
   );
 };

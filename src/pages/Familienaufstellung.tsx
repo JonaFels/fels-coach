@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,12 +7,10 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { trackCTAClick } from "@/lib/tracking";
-import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
-  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -82,9 +79,11 @@ const Familienaufstellung = () => {
         {/* CTA */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <Button size="lg" className="min-h-[44px]" onClick={() => setErstgespraechOpen(true)}>
-              <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-              {t("cta.bookNow")}
+            <Button size="lg" className="min-h-[44px]" asChild>
+              <a href="/kontakt#erstgespraech" onClick={() => trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")}>
+                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                {t("cta.bookNow")}
+              </a>
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">{t("cta.bookNowMicrocopy")}</p>
           </div>
@@ -104,7 +103,6 @@ const Familienaufstellung = () => {
           </div>
         </section>
       </main>
-      <ErstgespraechModal open={erstgespraechOpen} onClose={() => setErstgespraechOpen(false)} />
       <Footer />
       <CookieBanner />
     </div>

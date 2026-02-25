@@ -1,33 +1,56 @@
-import { useState, useLayoutEffect } from "react";
-import { Mail, Send, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
-import { useOrbnetBooking } from "@/components/OrbnetBooking";
+import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
   const location = useLocation();
-  const { openBooking, BookingDialog } = useOrbnetBooking();
-  const erstgespraechRef = useRef<HTMLDivElement>(null);
+  const kalenderRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    if (location.hash === "#erstgespraech") {
-      if (erstgespraechRef.current) {
-        erstgespraechRef.current.scrollIntoView({ behavior: "instant", block: "start" });
-      }
-      openBooking(ERSTGESPRAECH_SEMUID);
+  // Scroll to calendar when #erstgespraech hash is present
+  useEffect(() => {
+    if (location.hash === "#erstgespraech" && kalenderRef.current) {
+      kalenderRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [location.hash]);
+
+  // Embed Orbnet booking widget
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    while (containerRef.current.firstChild) {
+      containerRef.current.removeChild(containerRef.current.firstChild);
+    }
+
+    const mask = document.createElement("div");
+    mask.className = "orbnet-booking-mask";
+    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
+    mask.dataset.source = "my.orbnet.de";
+    mask.dataset.type = "embed";
+    containerRef.current.appendChild(mask);
+
+    const existingScript = document.getElementById("orbnet-booking-script");
+    if (existingScript) existingScript.remove();
+
+    const script = document.createElement("script");
+    script.id = "orbnet-booking-script";
+    script.src =
+      "https://static.orbnet.de/3.0/dist/booking.js?ver=7643f23565c4865f828a0e810e468eab35cf22e2";
+    script.crossOrigin = "anonymous";
+    script.referrerPolicy = "origin";
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -35,47 +58,58 @@ const Kontakt = () => {
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* Header */}
+        {/* 1. Empathische Einladung */}
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
-              {t("contact.headline")}
-            </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              {t("contact.text")}
-            </p>
-          </div>
-        </section>
-
-        {/* Erstgespräch */}
-        <section className="py-12 md:py-16 bg-muted/40">
-          <div id="erstgespraech" ref={erstgespraechRef} className="container mx-auto px-4 max-w-lg scroll-mt-24">
-            <Card className="border-secondary/20">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Calendar className="h-5 w-5 text-secondary" aria-hidden="true" />
-                  <h2 className="font-serif text-lg font-medium text-foreground">
-                    Kostenloses Erstgespräch mit Jona
-                  </h2>
-                </div>
-                <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-                  Du suchst nach Klarheit, neuer Energie oder einem festen Fels in der Brandung? In diesem kostenlosen 30-minütigen Telefonat finden wir gemeinsam heraus, wo du gerade stehst und wie ich dich als Coach optimal unterstützen kann.
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="flex-shrink-0">
+                <img
+                  src={profilBild}
+                  alt="Jona Fels – Systemischer Coach"
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-center shadow-lg"
+                  loading="eager"
+                  width="160"
+                  height="160"
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <h1 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
+                  {t("contact.headline")}
+                </h1>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  Du möchtest etwas verändern? Lass uns gemeinsam schauen, wo du stehst. Ich freue mich darauf, dich kennenzulernen.
                 </p>
-                <Button
-                  className="w-full min-h-[44px]"
-                  onClick={() => openBooking(ERSTGESPRAECH_SEMUID)}
-                >
-                  <Calendar className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Termin wählen
-                </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Contact Options */}
+        {/* 2. Orbnet-Kalender direkt eingebettet */}
+        <section
+          id="erstgespraech"
+          ref={kalenderRef}
+          className="py-12 md:py-16 bg-muted/40 scroll-mt-24"
+        >
+          <div className="container mx-auto px-4 max-w-2xl">
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-2 text-center">
+              Kostenloses Erstgespräch buchen
+            </h2>
+            <p className="text-sm text-muted-foreground text-center mb-8">
+              30 Minuten · telefonisch · völlig unverbindlich
+            </p>
+            <div
+              ref={containerRef}
+              className="min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6"
+            />
+          </div>
+        </section>
+
+        {/* 3. Alternative Kontaktwege */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-8 text-center">
+              Oder schreib mir direkt
+            </h2>
             <div className="grid gap-8 md:grid-cols-2">
               <ContactForm />
               <Card>
@@ -198,7 +232,6 @@ const Kontakt = () => {
           </div>
         </section>
       </main>
-      <BookingDialog />
       <Footer />
       <CookieBanner />
     </div>
