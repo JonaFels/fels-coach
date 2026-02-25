@@ -28,7 +28,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Intro */}
-        <section className="py-12 md:py-16 bg-muted/40">
+        <section className="py-24 md:py-36 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
               {t("family.intro.title")}
@@ -40,7 +40,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Benefits */}
-        <section className="py-12 md:py-16">
+        <section className="py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-5">
               {t("family.benefits.title")}
@@ -57,7 +57,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Process */}
-        <section className="py-12 md:py-16 bg-muted/40">
+        <section className="py-24 md:py-36 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
               {t("family.process.title")}
@@ -77,7 +77,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-24">
+        <section className="py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <Button size="lg" className="min-h-[44px]" asChild>
               <a href="/kontakt" onClick={() => trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")}>

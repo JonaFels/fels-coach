@@ -18,7 +18,7 @@ const UeberMich = () => {
 
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24">
+        <section className="py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mb-8">
               <img
@@ -38,7 +38,7 @@ const UeberMich = () => {
         </section>
 
         {/* Intro */}
-        <section className="py-12 md:py-16 bg-muted/40">
+        <section className="py-24 md:py-36 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
               <p>{t("about.intro1")}</p>
@@ -48,7 +48,7 @@ const UeberMich = () => {
         </section>
 
         {/* Guidance */}
-        <section className="py-12 md:py-16">
+        <section className="py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-6 border-l-4 border-secondary pl-4">
               {t("about.guidance.title")}
@@ -62,7 +62,7 @@ const UeberMich = () => {
         </section>
 
         {/* Core */}
-        <section className="py-12 md:py-16 bg-muted/40">
+        <section className="py-24 md:py-36 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-6 border-l-4 border-secondary pl-4">
               {t("about.core.title")}
@@ -75,7 +75,7 @@ const UeberMich = () => {
         </section>
 
         {/* CV */}
-        <section className="py-16 md:py-24">
+        <section className="py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
               {t("about.cv.title")}
