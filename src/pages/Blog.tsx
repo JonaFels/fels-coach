@@ -23,7 +23,7 @@ const Blog = () => {
       <SEOHead />
       <Header />
       <main id="main-content" className="flex-1">
-        <section className="py-16 md:py-24">
+        <section className="py-24 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl">
             <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
               {t("blog.title")}
