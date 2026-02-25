@@ -182,23 +182,6 @@ const Angebote = () => {
             <p className="mt-3 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
           </div>
         </section>
-
-        {/* Interne Links */}
-        <section className="py-10 border-t border-border">
-          <nav className="container mx-auto px-4 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground" aria-label="Verwandte Seiten">
-            <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">
-              Was ist Familienaufstellung?
-            </Link>
-            <span aria-hidden="true">·</span>
-            <Link to="/ebook" className="hover:text-secondary underline underline-offset-4">
-              Kostenloses E-Book
-            </Link>
-            <span aria-hidden="true">·</span>
-            <Link to="/kontakt" className="hover:text-secondary underline underline-offset-4">
-              Fragen? Kontakt
-            </Link>
-          </nav>
-        </section>
       </main>
 
       <BookingDialog />

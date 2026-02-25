@@ -92,13 +92,6 @@ const Familienaufstellung = () => {
         {/* Links */}
         <section className="py-10 border-t border-border">
           <div className="container mx-auto px-4 max-w-3xl">
-            <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8" aria-label="Verwandte Seiten">
-              <Link to="/ebook" className="hover:text-secondary underline underline-offset-4">Kostenloses E-Book</Link>
-              <span aria-hidden="true">•</span>
-              <Link to="/ueber-mich" className="hover:text-secondary underline underline-offset-4">Über Jona Fels</Link>
-              <span aria-hidden="true">•</span>
-              <a href="/kontakt" className="hover:text-secondary underline underline-offset-4">Kontakt</a>
-            </nav>
             <AuthorBox />
           </div>
         </section>

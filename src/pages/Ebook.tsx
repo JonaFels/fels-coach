@@ -197,11 +197,6 @@ const Ebook = () => {
         {/* Links & Author */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-3xl">
-            <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-10" aria-label="Verwandte Seiten">
-              <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">Was ist Familienaufstellung?</Link>
-              <span aria-hidden="true">•</span>
-              <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">Angebote & Termine</Link>
-            </nav>
             <AuthorBox />
           </div>
         </section>

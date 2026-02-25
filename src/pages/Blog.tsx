@@ -57,11 +57,6 @@ const Blog = () => {
               ))}
             </div>
 
-            <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-12" aria-label="Verwandte Seiten">
-              <Link to="/systemische-familienaufstellung-freiburg" className="hover:text-secondary underline underline-offset-4">Was ist Familienaufstellung?</Link>
-              <span aria-hidden="true">•</span>
-              <Link to="/angebote" className="hover:text-secondary underline underline-offset-4">Coaching buchen</Link>
-            </nav>
           </div>
         </section>
       </main>
