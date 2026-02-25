@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
-import { AuthorBox } from "@/components/AuthorBox";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft } from "lucide-react";
@@ -109,7 +109,7 @@ const BlogPost = () => {
           <div className="prose prose-lg max-w-none">{renderContent(post.content[language])}</div>
 
 
-          <AuthorBox />
+          
         </article>
       </main>
       <Footer />
