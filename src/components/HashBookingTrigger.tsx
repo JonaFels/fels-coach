@@ -21,7 +21,7 @@ export const HashBookingTrigger = () => {
     if (hash === "#erstgespraech") {
       // Redirect to Kontakt page where calendar is embedded
       if (location.pathname !== "/kontakt") {
-        window.location.href = "/kontakt#erstgespraech";
+        window.location.href = "/kontakt";
       }
     } else {
       const semuid = HASH_TO_SEMUID[hash];

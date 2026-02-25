@@ -21,7 +21,7 @@ export const QuickContactCTA = () => {
           asChild
         >
           <a
-            href="/kontakt#erstgespraech"
+            href="/kontakt"
             onClick={() => trackCTAClick("quick_contact_cta", "homepage_quick_contact", "link")}
           >
             <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
