@@ -53,7 +53,7 @@ export const Hero = () => {
                 asChild
               >
                 <a
-                  href="/kontakt#erstgespraech"
+                  href="/kontakt"
                   onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}
                 >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
