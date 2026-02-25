@@ -14,7 +14,7 @@ export const MethodSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-28 bg-muted/40">
+    <section className="py-16 md:py-20 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-secondary font-medium mb-4">

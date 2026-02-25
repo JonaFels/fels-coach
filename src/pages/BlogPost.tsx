@@ -88,7 +88,7 @@ const BlogPost = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead title={`${post.title[language]} | Jona Fels`} description={post.excerpt[language]} image={post.image} type="article" />
       <Header />
-      <main id="main-content" className="flex-1 py-24 md:py-28">
+      <main id="main-content" className="flex-1 py-16 md:py-20">
         <article className="container mx-auto px-4 max-w-3xl">
           <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px]">
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
