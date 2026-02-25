@@ -7,17 +7,17 @@ export const Footer = () => {
 
   return (
     <footer className="border-t border-border/60 bg-primary/[0.03] mt-12 md:mt-16" style={{ contentVisibility: "auto" }}>
-      <div className="container mx-auto px-4 max-w-5xl py-10 md:py-14">
+      <div className="container mx-auto px-4 max-w-5xl py-8 md:py-10">
         {/* Top: Brand centered */}
-        <div className="text-center mb-8">
-          <p className="font-serif text-lg font-semibold text-foreground tracking-tight">
+        <div className="text-center mb-5">
+          <p className="font-serif text-base text-foreground tracking-tight">
             Jona Fels – Systemisches Coaching & Familienaufstellungen
           </p>
         </div>
 
         {/* Middle: Nav links */}
         <nav
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-8"
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-5"
           aria-label="Footer-Navigation"
         >
           <a href="/kontakt" className="hover:text-foreground transition-colors no-underline-effect">
@@ -38,7 +38,7 @@ export const Footer = () => {
         </nav>
 
         {/* Social icons */}
-        <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="flex items-center justify-center gap-4 mb-5">
           <a
             href="https://www.instagram.com/jona.fels"
             target="_blank"
@@ -69,7 +69,7 @@ export const Footer = () => {
         </div>
 
         {/* Divider + Copyright */}
-        <div className="border-t border-border/40 pt-5">
+        <div className="border-t border-border/40 pt-4">
           <p className="text-center text-[11px] text-muted-foreground/50 tracking-wide">
             © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
           </p>
