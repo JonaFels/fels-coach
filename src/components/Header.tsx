@@ -28,15 +28,15 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full bg-muted/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" className="flex-shrink-0 flex items-center gap-3">
+          <a href="/" className="flex-shrink-0 flex items-center gap-3 no-underline-effect">
             <img
               src={logoIcon}
               alt="Jona Fels"
               className="h-8 w-8 md:h-9 md:w-9 object-contain"
             />
-            <h1 className="font-serif text-sm md:text-lg font-semibold text-foreground tracking-tight leading-tight">
+            <span className="font-serif text-sm md:text-lg font-semibold text-foreground tracking-tight leading-none">
               Jona Fels – Systemisches Coaching
-            </h1>
+            </span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-6">
