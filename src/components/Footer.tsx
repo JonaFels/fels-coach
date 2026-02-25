@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4 max-w-5xl py-8 md:py-10">
         {/* Top: Brand centered */}
         <div className="text-center mb-5">
-          <p className="font-serif text-base text-foreground tracking-tight">
+          <p className="font-serif text-sm text-muted-foreground tracking-tight">
             Jona Fels – Systemisches Coaching & Familienaufstellungen
           </p>
         </div>
