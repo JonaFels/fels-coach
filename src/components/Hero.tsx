@@ -21,7 +21,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 overflow-hidden relative">
+    <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
       {/* Abstract stone shape background */}
       <svg
         className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-[0.035] pointer-events-none"
