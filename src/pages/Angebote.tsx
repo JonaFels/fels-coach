@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
+import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -107,10 +107,6 @@ const Angebote = () => {
               <span className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 Präsenz in Freiburg
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Video className="h-4 w-4" aria-hidden="true" />
-                Online per Video
               </span>
             </div>
 
