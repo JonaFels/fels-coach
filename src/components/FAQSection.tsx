@@ -21,8 +21,8 @@ const faqData = {
       answer: "Ja, absolut. Da viele meiner Klienten berufstätig sind, biete ich meine Sitzungen spezialisiert am Samstag zwischen 14:00 und 20:00 Uhr an. So haben Sie die nötige Ruhe, um sich ohne Alltagsstress auf den Prozess einzulassen.",
     },
     {
-      question: "Wo findet das Coaching statt und gibt es auch Online-Optionen?",
-      answer: "Sie finden mich zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Für Klienten, die nicht aus der Region kommen oder Flexibilität bevorzugen, biete ich alle Coaching-Sitzungen auch per Video-Call (Online-Coaching) an.",
+      question: "Wo findet das Coaching statt?",
+      answer: "Sie finden mich zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Mein Praxisraum bietet eine ruhige, geschützte Atmosphäre für Ihre Coaching-Sitzungen.",
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
@@ -43,8 +43,8 @@ const faqData = {
       answer: "Yes, absolutely. Since many of my clients work during the week, I specialize in offering sessions on Saturdays between 2:00 PM and 8:00 PM. This gives you the peace needed to engage in the process without everyday stress.",
     },
     {
-      question: "Where does coaching take place and are there online options?",
-      answer: "You can find me centrally located at Karlstraße 51, 79104 Freiburg im Breisgau. For clients who are not from the region or prefer flexibility, I offer all coaching sessions via video call (online coaching) as well.",
+      question: "Where does coaching take place?",
+      answer: "You can find me centrally located at Karlstraße 51, 79104 Freiburg im Breisgau. My practice offers a calm, safe atmosphere for your coaching sessions.",
     },
     {
       question: "How can I get started and is a preliminary consultation possible?",

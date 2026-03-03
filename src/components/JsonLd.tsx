@@ -247,10 +247,10 @@ export const JsonLd = () => {
             },
             {
               "@type": "Question",
-              name: "Wo genau in Freiburg findet das Coaching statt und gibt es Online-Optionen?",
+              name: "Wo genau in Freiburg findet das Coaching statt?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg. Ergänzend biete ich alle Sitzungen ortsunabhängig als Online-Coaching per Video-Call an.",
+                text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Er bietet eine ruhige, geschützte Atmosphäre für Ihre Coaching-Sitzungen.",
               },
             },
             {

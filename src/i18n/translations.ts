@@ -166,8 +166,8 @@ export const translations: Translations = {
     en: "Clear Conditions",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg oder Online-Video-Call.",
-    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg or online video call.",
+    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg.",
+    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
@@ -182,8 +182,8 @@ export const translations: Translations = {
     en: "Coaching Session",
   },
   "offerings.coaching.desc": {
-    de: "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten. Präsenz oder Online.",
-    en: "80 minutes of focused work on what matters most right now – systemic, solution-oriented, and with concrete next steps. In-person or online.",
+    de: "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten.",
+    en: "80 minutes of focused work on what matters most right now – systemic, solution-oriented, and with concrete next steps.",
   },
   "offerings.paket5.title": {
     de: "5er-Paket",

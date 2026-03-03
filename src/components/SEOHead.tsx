@@ -31,8 +31,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     fr: { title: "Jona Fels | Coaching Systémique", description: "Découvrez les dynamiques familiales cachées. Coaching 1:1 avec approche systémique à Freiburg." },
   },
   "/angebote": {
-    de: { title: "Jona Fels | Angebote & Termine", description: "Buche dein systemisches Coaching: Kennenlern-Session oder tiefgreifende Familienaufstellung. Online-Terminbuchung." },
-    en: { title: "Jona Fels | Offers & Appointments", description: "Book your systemic coaching: Introduction session or deep family constellation. Online appointment booking." },
+    de: { title: "Jona Fels | Angebote & Termine", description: "Buche dein systemisches Coaching: Kennenlern-Session oder tiefgreifende Familienaufstellung in Freiburg." },
+    en: { title: "Jona Fels | Offers & Appointments", description: "Book your systemic coaching: Introduction session or deep family constellation in Freiburg." },
     fr: { title: "Jona Fels | Offres de Coaching", description: "Réservez votre coaching systémique : séance découverte ou constellation familiale approfondie." },
   },
   "/systemische-familienaufstellung-freiburg": {
