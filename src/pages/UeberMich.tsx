@@ -17,30 +17,23 @@ const UeberMich = () => {
       <SEOHead />
       <Header />
       <main id="main-content" className="flex-1">
-        {/* Hero Section – Bild und Text nebeneinander */}
-        <section className="py-12 md:py-20">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-              {/* Profilbild */}
-              <div className="flex justify-center md:justify-end order-1 md:order-2">
-                <img
-                  src={profilBild}
-                  alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
-                  className="w-52 md:w-72 lg:w-80 aspect-[4/5] rounded-3xl object-cover object-center shadow-2xl shadow-foreground/10"
-                  loading="eager"
-                  width="320"
-                  height="400"
-                />
-              </div>
-              {/* Text */}
-              <div className="text-center md:text-left order-2 md:order-1">
-                <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-3">
-                  {t("about.title")}
-                </h1>
-                <p className="text-lg text-muted-foreground mb-6">{t("about.subtitle")}</p>
-                <p className="text-muted-foreground leading-relaxed">{t("about.intro1")}</p>
-              </div>
+        {/* Hero Section */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <div className="mb-8">
+              <img
+                src={profilBild}
+                alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
+                className="w-48 h-auto md:w-64 aspect-[4/5] rounded-2xl object-cover object-center mx-auto shadow-md"
+                loading="eager"
+                width="256"
+                height="256"
+              />
             </div>
+            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-3">
+              {t("about.title")}
+            </h1>
+            <p className="text-lg text-muted-foreground">{t("about.subtitle")}</p>
           </div>
         </section>
 
@@ -48,6 +41,7 @@ const UeberMich = () => {
         <section className="py-16 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <p>{t("about.intro1")}</p>
               <p>{t("about.intro2")}</p>
             </div>
           </div>
