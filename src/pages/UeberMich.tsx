@@ -18,17 +18,17 @@ const UeberMich = () => {
       <Header />
       <PraxisHeroBanner variant="lounge" />
       <main id="main-content" className="flex-1">
-        {/* Hero Section */}
-        <section className="py-12 md:py-16">
+        {/* Hero Section – Profilbild überlappt das Banner */}
+        <section className="relative -mt-20 pb-12 md:pb-16">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <div className="mb-8">
+            <div className="mb-6">
               <img
                 src={profilBild}
                 alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
-                className="w-48 h-auto md:w-64 aspect-[4/5] rounded-2xl object-cover object-center mx-auto shadow-md"
+                className="w-36 h-auto md:w-48 aspect-[4/5] rounded-2xl object-cover object-center mx-auto shadow-xl ring-4 ring-background"
                 loading="eager"
-                width="256"
-                height="256"
+                width="192"
+                height="240"
               />
             </div>
             <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-3">
