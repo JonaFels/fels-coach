@@ -8,6 +8,8 @@ import { SEOHead } from "@/components/SEOHead";
 
 import { trackCTAClick } from "@/lib/tracking";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
@@ -16,6 +18,7 @@ const Familienaufstellung = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
+      <PraxisHeroBanner variant="sitzbereich" />
 
       <main id="main-content" className="flex-1">
         {/* Title */}
@@ -65,6 +68,20 @@ const Familienaufstellung = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               {t("family.process.intro")}
             </p>
+
+            {/* Aufstellungsbild mit Bodenankern */}
+            <div className="mb-10 rounded-2xl overflow-hidden shadow-md">
+              <img
+                src={praxisAufstellung}
+                alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+              <p className="text-sm text-muted-foreground italic px-4 py-3 bg-muted/60">
+                Die farbigen Bodenanker markieren die Positionen der Familienmitglieder im Raum – sie machen innere Dynamiken sichtbar und erlebbar.
+              </p>
+            </div>
+
             <div className="grid gap-5 md:grid-cols-3">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="p-5 bg-background rounded-lg">

@@ -7,6 +7,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 const UeberMich = () => {
   const { t } = useLanguage();
@@ -15,7 +16,7 @@ const UeberMich = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-
+      <PraxisHeroBanner variant="lounge" />
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="py-12 md:py-16">

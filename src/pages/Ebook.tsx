@@ -11,6 +11,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
@@ -96,6 +97,7 @@ const Ebook = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
+      <PraxisHeroBanner variant="lounge" />
 
       <main id="main-content" className="flex-1">
         {/* Header */}
