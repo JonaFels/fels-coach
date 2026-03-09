@@ -6,6 +6,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { format, parseISO } from "date-fns";
 import { de, enUS } from "date-fns/locale";
 
