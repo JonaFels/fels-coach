@@ -7,7 +7,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
-
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 const UeberMich = () => {
   const { t } = useLanguage();
