@@ -61,25 +61,30 @@ const Familienaufstellung = () => {
 
         {/* Process */}
         <section className="py-16 md:py-20 bg-muted/40">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
-              {t("family.process.title")}
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              {t("family.process.intro")}
-            </p>
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-10">
+              {/* Text */}
+              <div>
+                <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
+                  {t("family.process.title")}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t("family.process.intro")}
+                </p>
+              </div>
 
-            {/* Aufstellungsbild mit Bodenankern */}
-            <div className="mb-10 rounded-2xl overflow-hidden shadow-md">
-              <img
-                src={praxisAufstellung}
-                alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-              <p className="text-sm text-muted-foreground italic px-4 py-3 bg-muted/60">
-                Die farbigen Bodenanker markieren die Positionen der Familienmitglieder im Raum – sie machen innere Dynamiken sichtbar und erlebbar.
-              </p>
+              {/* Aufstellungsbild mit Bodenankern */}
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={praxisAufstellung}
+                  alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+                <p className="text-sm text-muted-foreground italic px-4 py-3 bg-muted/60">
+                  Die farbigen Bodenanker markieren die Positionen der Familienmitglieder im Raum – sie machen innere Dynamiken sichtbar und erlebbar.
+                </p>
+              </div>
             </div>
 
             <div className="grid gap-5 md:grid-cols-3">
