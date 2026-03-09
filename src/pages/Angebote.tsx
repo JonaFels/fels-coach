@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 
 const offerings = [

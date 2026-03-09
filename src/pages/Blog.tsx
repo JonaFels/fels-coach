@@ -23,6 +23,7 @@ const Blog = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
+      <PraxisHeroBanner variant="sitzbereich" />
       <main id="main-content" className="flex-1">
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
