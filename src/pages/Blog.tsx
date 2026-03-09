@@ -6,7 +6,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
-import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+
 import { format, parseISO } from "date-fns";
 import { de, enUS } from "date-fns/locale";
 
@@ -23,7 +23,7 @@ const Blog = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="sitzbereich" />
+      
       <main id="main-content" className="flex-1">
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
