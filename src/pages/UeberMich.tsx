@@ -41,6 +41,7 @@ const UeberMich = () => {
         <section className="py-16 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <p>{t("about.intro1")}</p>
               <p>{t("about.intro2")}</p>
             </div>
           </div>
