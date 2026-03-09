@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
