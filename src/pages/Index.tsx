@@ -10,6 +10,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       <JsonLd />
       <Header />
       <main id="main-content">
+        <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
         <ScrollFadeIn>
           <AboutPreview />

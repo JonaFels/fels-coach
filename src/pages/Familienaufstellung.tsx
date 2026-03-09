@@ -8,6 +8,8 @@ import { SEOHead } from "@/components/SEOHead";
 
 import { trackCTAClick } from "@/lib/tracking";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
@@ -16,6 +18,7 @@ const Familienaufstellung = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
+      <PraxisHeroBanner variant="sitzbereich" />
 
       <main id="main-content" className="flex-1">
         {/* Title */}
