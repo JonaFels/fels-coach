@@ -37,6 +37,7 @@ const Angebote = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
+      <PraxisHeroBanner variant="lounge" />
 
       <main id="main-content">
         {/* Intro */}
