@@ -17,7 +17,7 @@ const offerings = [
   {
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
-    price: 30,
+    price: 40,
     badge: "Einstieg",
     semuid: "55df32ef-b5d1-468e-a4ba-f7f892398327",
   },
