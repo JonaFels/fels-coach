@@ -24,7 +24,7 @@ const offerings = [
     descKey: "offerings.paket5.desc",
     price: 220,
     duration: 300,
-    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/",
+    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung",
     highlight: true,
   },
   {
