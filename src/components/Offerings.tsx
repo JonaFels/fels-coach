@@ -17,7 +17,7 @@ const offerings = [
     descKey: "offerings.coaching.desc",
     price: 70,
     duration: 80,
-    href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung/plain/",
+    href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung",
   },
   {
     titleKey: "offerings.paket5.title",
