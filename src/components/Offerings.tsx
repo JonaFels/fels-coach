@@ -10,7 +10,7 @@ const offerings = [
     descKey: "offerings.kennenlernen.desc",
     price: 40,
     duration: 30,
-    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung/plain/",
+    href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung",
   },
   {
     titleKey: "offerings.coaching.title",
