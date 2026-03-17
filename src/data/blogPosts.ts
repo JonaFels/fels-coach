@@ -27,9 +27,9 @@ export const blogPosts: BlogPost[] = [
     id: "1",
     slug: "familienstellen-in-einer-einzelsitzung",
     title: {
-      de: "Familienstellen in einer Einzelsitzung",
-      en: "Family Constellations in an Individual Session",
-      fr: "Constellations familiales en séance individuelle",
+      de: "Keine Gruppe nötig: Wie du Klarheit für dein Familiensystem im 1:1 Coaching findest",
+      en: "No Group Needed: How to Find Clarity for Your Family System in 1:1 Coaching",
+      fr: "Pas besoin de groupe : Comment trouver la clarté pour ton système familial en coaching individuel",
     },
     excerpt: {
       de: "Wie funktionieren Familienaufstellungen im 1:1 Format? Erfahre, welche Vorteile Bodenanker und der Perspektivwechsel in Einzelsitzungen bieten.",
