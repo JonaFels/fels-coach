@@ -42,9 +42,7 @@ h1 {
 #orbnet-booking-loading,
 .orbnet-booking-loading,
 div[id*="orbnet"][style*="position: fixed"],
-div[class*="orbnet"][style*="position: fixed"],
-div[style*="position: fixed"][style*="z-index"] > div[style*="Lade"],
-body > div[style*="position: fixed"][style*="background"] {
+div[class*="orbnet"][style*="position: fixed"] {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
