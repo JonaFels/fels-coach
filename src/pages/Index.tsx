@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { CoachingSection } from "@/components/CoachingSection";
 import { AboutPreview } from "@/components/AboutPreview";
 import { MethodSection } from "@/components/MethodSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -27,6 +28,9 @@ const Index = () => {
         </ScrollFadeIn>
         <ScrollFadeIn>
           <MethodSection />
+        </ScrollFadeIn>
+        <ScrollFadeIn>
+          <TestimonialsSection />
         </ScrollFadeIn>
         <ScrollFadeIn>
           <FAQSection />
