@@ -486,7 +486,7 @@ export const translations: Translations = {
     en: "My mission today",
   },
   "about.core1": {
-    de: "Heute ist es eine Aufgabe für mich, Räume zu schaffen, in denen wir das Bewusstsein für unsere Tiefe eröffnen und innere Wachstumsprozesse anstoßen können.",
+    de: "Heute ist es eine Aufgabe für mich, Räume zu schaffen, in denen wir das Bewusstsein für unsere Tiefe eröffnen und innere Wachstumsprozesse anstoßen.",
     en: "Today, my mission is to create spaces where we can open awareness for our depth and initiate inner growth processes.",
   },
   "about.core2": {
