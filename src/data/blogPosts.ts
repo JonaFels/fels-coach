@@ -1,4 +1,5 @@
 import blogEinzelaufstellung from "@/assets/blog-einzelaufstellung.jpg";
+import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.jpg";
 
 export interface BlogPost {
   id: string;
