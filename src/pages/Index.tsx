@@ -30,6 +30,9 @@ const Index = () => {
           <MethodSection />
         </ScrollFadeIn>
         <ScrollFadeIn>
+          <TestimonialsSection />
+        </ScrollFadeIn>
+        <ScrollFadeIn>
           <FAQSection />
         </ScrollFadeIn>
         <FinalCTA />
