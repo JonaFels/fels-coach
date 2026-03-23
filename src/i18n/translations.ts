@@ -81,6 +81,10 @@ export const translations: Translations = {
     de: "Unverbindlich & persönlich – 30 Min., die Klarheit schaffen.",
     en: "Non-binding & personal – 30 min. that create clarity.",
   },
+  "hero.socialProof": {
+    de: "Über 100 begleitete Klienten auf dem Weg zu sich selbst.",
+    en: "Over 100 clients guided on their path to themselves.",
+  },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
     en: "Discover My Offers",
