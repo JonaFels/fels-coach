@@ -61,7 +61,7 @@ export const Hero = () => {
                 </a>
               </Button>
               <p className="text-sm text-muted-foreground md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
-              <p className="mt-4 text-sm text-muted-foreground/80 md:text-left text-center italic">{t("hero.socialProof")}</p>
+              
             </div>
           </div>
 
