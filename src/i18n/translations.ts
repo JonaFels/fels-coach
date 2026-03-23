@@ -158,12 +158,12 @@ export const translations: Translations = {
     en: "Arriving & clarifying your concern – We start with a brief check-in: What's on your mind? What would you like to take away today? Together we find the focus for the session.",
   },
   "offerings.step2": {
-    de: "Vertiefung & Arbeit am Thema – Mit systemischen Methoden gehen wir deinem Anliegen auf den Grund – durch Aufstellungsarbeit oder gezielte Fragen, je nachdem, was sich zeigt.",
-    en: "Deepening & working on your topic – Using systemic methods, we get to the root of your concern – through constellation work or targeted questions, depending on what emerges.",
+    de: "Die Aufstellung – Mithilfe von Bodenankern stellen wir dein System auf und machen sichtbar, was im Verborgenen wirkt. Dabei zeigen sich oft überraschende Zusammenhänge und tiefe Einsichten, die allein durch Gespräche nicht erreichbar wären.",
+    en: "The constellation – Using floor anchors, we set up your system and make visible what has been working beneath the surface. Often surprising connections and deep insights emerge that wouldn't be reachable through conversation alone.",
   },
   "offerings.step3": {
-    de: "Integration & Abschluss – Wir nehmen uns Zeit, das Erlebte einzuordnen, damit du es gut in deinen Alltag mitnehmen kannst. Gemeinsam besprechen wir offen, ob und wie es weitergehen kann.",
-    en: "Integration & closing – We take time to process what emerged so you can carry it into your everyday life. Together we openly discuss if and how to continue.",
+    de: "Kurze Integration & Nachwirkung – Wir schließen die Sitzung mit einer kurzen Einordnung ab. Die eigentliche Wirkung entfaltet sich danach – eine Aufstellung arbeitet in den Tagen und Wochen nach der Sitzung in dir weiter.",
+    en: "Brief integration & aftereffect – We close the session with a short reflection. The real effect unfolds afterwards – a constellation continues to work within you in the days and weeks following the session.",
   },
   "offerings.preiseTitle": {
     de: "Klare Konditionen",
