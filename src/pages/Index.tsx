@@ -27,10 +27,10 @@ const Index = () => {
           <AboutPreview />
         </ScrollFadeIn>
         <ScrollFadeIn>
-          <MethodSection />
+          <TestimonialsSection />
         </ScrollFadeIn>
         <ScrollFadeIn>
-          <TestimonialsSection />
+          <MethodSection />
         </ScrollFadeIn>
         <ScrollFadeIn>
           <FAQSection />
