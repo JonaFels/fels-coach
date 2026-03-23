@@ -111,7 +111,7 @@ export const Header = () => {
                 asChild
               >
                 <a
-                  href="/kontakt"
+                  href="/kontakt#willkommen"
                   onClick={() => {
                     trackNavToOffers("header");
                     setIsMobileMenuOpen(false);

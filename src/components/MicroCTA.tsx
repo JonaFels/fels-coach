@@ -38,7 +38,7 @@ export const InlineCTA = () => {
 
   return (
     <a
-      href="/kontakt"
+      href="/kontakt#willkommen"
       className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors group"
     >
       {t("cta.learnMore")}
