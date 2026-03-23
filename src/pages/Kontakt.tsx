@@ -87,7 +87,7 @@ const Kontakt = () => {
 
       <main id="main-content" className="flex-1">
         {/* 1. Empathische Einladung */}
-        <section id="willkommen" className="py-12 md:py-16 scroll-mt-20">
+        <section id="willkommen" className="py-12 md:py-16 scroll-mt-16">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="flex-shrink-0">
