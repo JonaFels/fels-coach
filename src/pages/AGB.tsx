@@ -17,48 +17,43 @@ const AGB = () => {
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <h2>Allgemeine Geschäftsbedingungen (AGB) & Klienteninformation</h2>
+            <p>Mir ist es wichtig, dass du dich von Anfang an gut informiert fühlst – auch was die Rahmenbedingungen unserer Zusammenarbeit betrifft. Deshalb findest du hier alles Wesentliche übersichtlich zusammengefasst.</p>
 
             <h3>1. Geltungsbereich</h3>
-            <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Jona Fels – Fels-Coach (nachfolgend „Coach") und seinen Klienten (nachfolgend „Klient"), sofern nichts anderes schriftlich vereinbart wurde.</p>
+            <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Vereinbarungen zwischen Jona Fels – Fels-Coach (nachfolgend „Coach") und dir als Klient:in. Sie bilden die Grundlage unserer Zusammenarbeit, sofern wir nicht individuell etwas anderes schriftlich vereinbaren.</p>
 
             <h3>2. Leistungsangebot & Abgrenzung zur Therapie</h3>
-            <p>Der Coach bietet psychologische Beratung, systemisches Coaching und Familienaufstellungen an.</p>
-            <p><strong>Wichtiger Hinweis:</strong> Das Coaching ist keine Psychotherapie und ersetzt keine medizinische oder psychiatrische Behandlung.</p>
+            <p>Ich biete systemisches Coaching und Familienaufstellungen an. Dabei geht es darum, dir einen geschützten Raum zu geben, in dem du Klarheit über deine Themen gewinnen kannst – sei es in familiären Zusammenhängen, persönlichen Entscheidungen oder inneren Prozessen.</p>
+            <p><strong>Wichtiger Hinweis:</strong> Mein Coaching ist keine Psychotherapie und ersetzt keine ärztliche oder psychiatrische Behandlung. Wenn du dich aktuell in einer psychischen Krise befindest oder in therapeutischer Behandlung bist, sprich mich bitte offen darauf an – gemeinsam schauen wir, ob und wie eine Zusammenarbeit für dich sinnvoll ist.</p>
 
             <h3>3. Vertragsschluss & Terminbuchung</h3>
-            <p>Ein Vertrag kommt durch die Buchung eines Termins über das Online-Tool, per E-Mail oder durch schriftliche Bestätigung eines Angebots zustande.</p>
+            <p>Unsere Zusammenarbeit beginnt ganz unkompliziert: Du buchst einen Termin über mein Online-Buchungssystem, per E-Mail oder über Telegram. Mit der Buchung bzw. meiner Bestätigung kommt der Vertrag zustande. Vor der ersten Sitzung hast du die Möglichkeit, in einem kostenlosen 30-minütigen Erstgespräch herauszufinden, ob die Chemie stimmt.</p>
 
             <h3>4. Vergütung & Zahlungsbedingungen</h3>
-            <ul>
-              <li>Es gelten die zum Zeitpunkt der Buchung veröffentlichten Preise.</li>
-              <li>Honorar ist innerhalb von 14 Tagen nach Rechnungsstellung fällig.</li>
-              <li><strong>Kleinunternehmerstatus:</strong> Gemäß § 19 UStG wird keine Umsatzsteuer erhoben.</li>
-            </ul>
+            <p>Es gelten die Preise, die zum Zeitpunkt deiner Buchung auf meiner Webseite veröffentlicht sind. Nach der Sitzung erhältst du eine Rechnung, die innerhalb von 14 Tagen zu begleichen ist.</p>
+            <p><strong>Hinweis zum Kleinunternehmerstatus:</strong> Gemäß § 19 UStG bin ich als Kleinunternehmer tätig und weise daher keine Umsatzsteuer aus. Die genannten Preise sind Endpreise.</p>
 
             <h3>5. Stornierungsbedingungen</h3>
+            <p>Ich verstehe, dass sich Pläne ändern können. Bitte beachte dabei folgende Regelung:</p>
             <ul>
-              <li>Kostenfreie Absage bis <strong>24 Stunden</strong> vor Beginn.</li>
-              <li>Bei späterer Absage oder Nichterscheinen: 100 % Ausfallentschädigung.</li>
-              <li>Absage per E-Mail oder Buchungssystem.</li>
+              <li>Bis <strong>24 Stunden vor dem Termin</strong> kannst du kostenfrei absagen oder verschieben.</li>
+              <li>Bei späterer Absage oder Nichterscheinen berechne ich das volle Honorar als Ausfallentschädigung, da ich den Termin für dich freigehalten habe.</li>
+              <li>Die Absage kann per E-Mail oder über das Buchungssystem erfolgen.</li>
             </ul>
 
             <h3>6. Absage durch den Coach</h3>
-            <p>Bei Absage aus wichtigem Grund wird ein Ersatztermin vereinbart. Weitergehende Ansprüche sind ausgeschlossen.</p>
+            <p>Sollte ich einen Termin aus wichtigem Grund (z.&nbsp;B. Krankheit) absagen müssen, biete ich dir selbstverständlich einen zeitnahen Ersatztermin an. Darüber hinausgehende Ansprüche sind ausgeschlossen.</p>
 
             <h3>7. Eigenverantwortung & Haftung</h3>
-            <ul>
-              <li>Der Klient trägt die volle Verantwortung für seine Handlungen und Entscheidungen.</li>
-              <li>Haftung für leichte Fahrlässigkeit wird ausgeschlossen.</li>
-            </ul>
+            <p>Im Coaching begleite ich dich mit Methoden und Impulsen – die Verantwortung für deine Entscheidungen und Handlungen liegt aber bei dir. Das ist ein wichtiger Grundsatz systemischer Arbeit: Du bist Expert:in für dein eigenes Leben.</p>
+            <p>Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, sofern keine wesentlichen Vertragspflichten betroffen sind.</p>
 
             <h3>8. Verschwiegenheit & Datenschutz</h3>
-            <ul>
-              <li>Der Coach verpflichtet sich zur absoluten Verschwiegenheit.</li>
-              <li>Details regelt die <a href="/datenschutz">Datenschutzerklärung</a>.</li>
-            </ul>
+            <p>Alles, was du mir in unseren Sitzungen anvertraust, bleibt vertraulich. Ich verpflichte mich zur absoluten Verschwiegenheit über alle Inhalte unserer Zusammenarbeit. Das ist für mich selbstverständlich und die Grundlage für einen sicheren Rahmen.</p>
+            <p>Wie ich mit deinen personenbezogenen Daten auf dieser Webseite umgehe, erfährst du ausführlich in meiner <a href="/datenschutz">Datenschutzerklärung</a>.</p>
 
             <h3>9. Widerrufsrecht für Verbraucher</h3>
-            <p>Klienten, die Verbraucher sind, steht ein gesetzliches 14-tägiges Widerrufsrecht zu.</p>
+            <p>Als Verbraucher:in steht dir ein gesetzliches Widerrufsrecht von 14 Tagen zu. Das bedeutet, du kannst den Vertrag innerhalb von 14 Tagen nach Vertragsschluss ohne Angabe von Gründen widerrufen. Der Widerruf kann formlos per E-Mail an <a href="mailto:info@fels-coach.de">info@fels-coach.de</a> erfolgen. Bitte beachte, dass das Widerrufsrecht erlischt, wenn die Sitzung vor Ablauf der Frist stattgefunden hat und du dem ausdrücklich zugestimmt hast.</p>
           </div>
         </div>
       </main>
