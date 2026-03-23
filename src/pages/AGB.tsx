@@ -16,7 +16,7 @@ const AGB = () => {
           </h1>
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
-            <h2>Allgemeine Geschäftsbedingungen (AGB) & Klienteninformation</h2>
+            <h2>Klienteninformation</h2>
             <p>Mir ist es wichtig, dass du dich von Anfang an gut informiert fühlst – auch was die Rahmenbedingungen unserer Zusammenarbeit betrifft. Deshalb findest du hier alles Wesentliche übersichtlich zusammengefasst.</p>
 
             <h3>1. Geltungsbereich</h3>
