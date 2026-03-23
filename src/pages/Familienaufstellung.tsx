@@ -87,14 +87,6 @@ const Familienaufstellung = () => {
               </div>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="p-5 bg-background rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">{t(`family.step${i}.title`)}</h3>
-                  <p className="text-sm text-muted-foreground">{t(`family.step${i}.text`)}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
