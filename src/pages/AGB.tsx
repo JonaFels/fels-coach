@@ -27,7 +27,7 @@ const AGB = () => {
             <p><strong>Wichtiger Hinweis:</strong> Mein Coaching ist keine Psychotherapie und ersetzt keine ärztliche oder psychiatrische Behandlung. Wenn du dich aktuell in einer psychischen Krise befindest oder in therapeutischer Behandlung bist, sprich mich bitte offen darauf an – gemeinsam schauen wir, ob und wie eine Zusammenarbeit für dich sinnvoll ist.</p>
 
             <h3>3. Vertragsschluss & Terminbuchung</h3>
-            <p>Unsere Zusammenarbeit beginnt ganz unkompliziert: Du buchst einen Termin über mein Online-Buchungssystem, per E-Mail oder über Telegram. Mit der Buchung bzw. meiner Bestätigung kommt der Vertrag zustande. Vor der ersten Sitzung hast du die Möglichkeit, in einem kostenlosen 30-minütigen Erstgespräch herauszufinden, ob die Chemie stimmt.</p>
+            <p>Unsere Zusammenarbeit beginnt ganz unkompliziert: Du buchst einen Termin über mein Online-Buchungssystem, per E-Mail oder über Telegram. Mit der Buchung bzw. meiner Bestätigung kommt der Vertrag zustande.</p>
 
             <h3>4. Vergütung & Zahlungsbedingungen</h3>
             <p>Es gelten die Preise, die zum Zeitpunkt deiner Buchung auf meiner Webseite veröffentlicht sind. Nach der Sitzung erhältst du eine Rechnung, die innerhalb von 14 Tagen zu begleichen ist.</p>
