@@ -50,7 +50,7 @@ const AGB = () => {
 
             <h3>8. Verschwiegenheit & Datenschutz</h3>
             <p>Alles, was du mir in unseren Sitzungen anvertraust, bleibt vertraulich. Ich verpflichte mich zur absoluten Verschwiegenheit über alle Inhalte unserer Zusammenarbeit. Das ist für mich selbstverständlich und die Grundlage für einen sicheren Rahmen.</p>
-            <p>Wie ich mit deinen personenbezogenen Daten auf dieser Webseite umgehe, erfährst du ausführlich in meiner <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+            
 
             <h3>9. Widerrufsrecht für Verbraucher</h3>
             <p>Als Verbraucher:in steht dir ein gesetzliches Widerrufsrecht von 14 Tagen zu. Das bedeutet, du kannst den Vertrag innerhalb von 14 Tagen nach Vertragsschluss ohne Angabe von Gründen widerrufen. Der Widerruf kann formlos per E-Mail an <a href="mailto:info@fels-coach.de">info@fels-coach.de</a> erfolgen. Bitte beachte, dass das Widerrufsrecht erlischt, wenn die Sitzung vor Ablauf der Frist stattgefunden hat und du dem ausdrücklich zugestimmt hast.</p>
