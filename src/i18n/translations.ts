@@ -340,8 +340,8 @@ export const translations: Translations = {
     en: "The process of an individual constellation with floor anchors",
   },
   "family.process.intro": {
-    de: "In der Einzelarbeit nutzen wir Bodenanker, die für Familienmitglieder, relevante Personen oder innere Aspekte Deines Themen stehen. Diese Anker werden auf dem Boden platziert und repräsentieren die räumliche und energetische Beziehung im System.",
-    en: "In individual work, we use floor anchors that represent family members, relevant persons or inner aspects of your topic. These anchors are placed on the floor and represent the spatial and energetic relationship in the system.",
+    de: "In der Einzelarbeit nutzen wir Bodenanker, die für Familienmitglieder, relevante Personen oder innere Aspekte Deines Themas stehen. Diese Anker werden auf dem Boden platziert und repräsentieren die räumliche und energetische Beziehung im System. Gemeinsam ergründen wir die Dynamiken, die sich zeigen, und verschieben die Bodenanker im Raum, bis ein stimmiges Endbild entsteht.",
+    en: "In individual work, we use floor anchors that represent family members, relevant persons, or inner aspects of your topic. These anchors are placed on the floor and represent the spatial and energetic relationship in the system. Together we explore the dynamics that emerge and rearrange the floor anchors in the room until a coherent final image is reached.",
   },
   "family.step1.title": {
     de: "1. Vorgespräch & Anliegen klären",
