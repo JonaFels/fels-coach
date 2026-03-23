@@ -112,10 +112,6 @@ const Datenschutz = () => {
             <h2>8. Datenübermittlung in Drittländer</h2>
             <p>Einige der genannten Dienstleister haben ihren Sitz in den USA. Die Datenübermittlung erfolgt auf Grundlage von EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO, die ein angemessenes Datenschutzniveau sicherstellen.</p>
 
-            <hr />
-
-            <h2>9. Aktualität</h2>
-            <p><strong>Stand: Februar 2026</strong></p>
           </div>
         </div>
       </main>
