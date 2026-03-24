@@ -60,7 +60,7 @@ Im Gegensatz zum Aufstellen in Gruppen repräsentieren die Bodenanker die aufges
 
 > Die neuen Möglichkeiten, die Rollen zu besetzen und zu erfahren, bringen dem Klienten Vorteile – auf der anderen Seite gibt es Variationen, die vom Coach vermieden werden sollten.
 
-Gerade wenn es um **verletzte Anteile** geht und der Coach z.B. als Frau sich auf die Position der Mutter stellt und diese verletzend ist, kann es sein, dass der Coach von der Klientin – auch nach dem Herausgehen aus der Rolle – so wahrgenommen wird. Es gibt sehr wahrscheinlich einen inneren Anteil in dem Klienten, der zu einem Coaching bei einer Frau gegangen ist, weil er Unterstützung von seiner Mutter sucht. Genauso ist es natürlich auch, wenn der Coach ein Mann ist und in die Vaterrolle geht.
+Zum einen das Phänomen der **„repräsentierenden Wahrnehmung"** also dass Person in der Aufstellung die Positionen der Familienmitglieder einnehmen und der eisernen Ordnung und Rollen, also der Hierarchie und dass nach Hellinger die Frau dem Mann folgt.
 
 Der Coach hat bei Aufstellungen im 1:1 also noch ein bisschen mehr die Aufgabe, **in seiner Position in der Sitzung zu bleiben**.
 
