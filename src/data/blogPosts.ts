@@ -143,7 +143,7 @@ Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **
 
 Alle heute vorhandenen Therapien kommen quasi aus der Wende von geistiger Seelensorge und dem Beginn der modernen, damals nicht ernst genommenen, Psychologie mit der **Psychoanalyse**. Die um die Wende zu 1900 langsam beginnende Einsicht, das Unbewusste aufzunehmen in die wissenschaftlichen Theorien, führte zu vielen verschiedenen Strömungen bis heute. Es wurde unterteilt in drei Kräfte der Psychologie.
 
-Zuerst die 1920 publik gewordene **Tiefenpsychologie nach Freud**. Darauf folgte die **Verhaltenspsychologie**, die durch die wissenschaftliche Anerkennung als Kassenleistung ab Mitte der 1960er Jahre bis heute angeboten wird. Und die dritte Kraft, die **humanistische Psychologie**, Zuerst die 1920 publik gewordene **Tiefenpsychologie nach Freud**. Darauf folgte die **Verhaltenspsychologie**, die durch die wissenschaftliche Anerkennung als Kassenleistung ab Mitte der 1960er Jahre bis heute angeboten wird. Und die dritte Kraft, die **humanistische Psychologie**, die ihre Hochzeit in den 1970er Jahren bis zur Mitte der 1980er Jahre hatte.
+Zuerst die 1920 publik gewordene **Tiefenpsychologie nach Freud**. Darauf folgte die **Verhaltenspsychologie**, die durch die wissenschaftliche Anerkennung als Kassenleistung ab Mitte der 1960er Jahre bis heute angeboten wird. Und die dritte Kraft, die **humanistische Psychologie**, die sich als Abgrenzung zur Tiefenpsychologie nicht mit der Vergangenheit beschäftigt, sondern den Klienten im Hier und Jetzt sieht, und die ihre Hochzeit in den 1970er Jahren bis zur Mitte der 1980er Jahre hatte.
 
 ### Bert Hellinger und die Familienaufstellung
 
