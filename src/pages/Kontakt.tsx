@@ -121,10 +121,10 @@ const Kontakt = () => {
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
               <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-2 text-center">
-                Kostenloses Erstgespräch buchen
+                Lass uns in Ruhe sprechen
               </h2>
               <p className="text-sm text-muted-foreground text-center mb-4">
-                30 Minuten · telefonisch · völlig unverbindlich
+                30 Minuten · kostenfrei · völlig unverbindlich
               </p>
               <div ref={containerRef} />
             </div>
@@ -235,8 +235,8 @@ const Kontakt = () => {
                   </div>
                   <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
                     <li>Praxisraum im Erdgeschoss</li>
-                    <li>Klingele bei „Praxis"</li>
-                    <li>Ich hole dich an der Tür ab</li>
+                    <li>Es gibt einen kleinen Wartebereich</li>
+                    <li>Ich komme direkt zur Tür</li>
                   </ul>
                 </CardContent>
               </Card>

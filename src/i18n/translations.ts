@@ -34,8 +34,8 @@ export const translations: Translations = {
     en: "Book Appointment",
   },
   "nav.contact": {
-    de: "Kostenloses Erstgespräch",
-    en: "Free Initial Consultation",
+    de: "Lass uns sprechen",
+    en: "Let's Talk",
   },
   "nav.angebote": {
     de: "Ablauf & Preise",
