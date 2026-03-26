@@ -9,16 +9,20 @@ export const JsonLd = () => {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "ProfessionalService",
+          "@type": ["ProfessionalService", "LocalBusiness"],
           "@id": "https://fels-coach.de/#service",
-          name: "Jona Fels - Systemisches Coaching & Familienaufstellungen",
+          name: "Jona Fels – Systemisches Coaching & Familienaufstellung Freiburg",
+          alternateName: "Familienaufstellung Freiburg",
           url: "https://fels-coach.de",
           telephone: "+4917667608617",
           email: "info@fels-coach.de",
+          description:
+            "Systemische Familienaufstellung und Coaching in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Karlstraße 51",
             addressLocality: "Freiburg im Breisgau",
+            addressRegion: "Baden-Württemberg",
             postalCode: "79104",
             addressCountry: "DE",
           },
@@ -29,7 +33,7 @@ export const JsonLd = () => {
           },
           image: "https://fels-coach.de/web-app-manifest-512x512.png",
           logo: "https://fels-coach.de/web-app-manifest-512x512.png",
-          priceRange: "110€",
+          priceRange: "40 €–70 €",
           currenciesAccepted: "EUR",
           paymentAccepted: "Cash, Bank Transfer",
           openingHoursSpecification: [
@@ -40,19 +44,35 @@ export const JsonLd = () => {
               closes: "20:00",
             },
           ],
-          areaServed: {
-            "@type": "GeoCircle",
-            geoMidpoint: {
-              "@type": "GeoCoordinates",
-              latitude: 47.9977,
-              longitude: 7.8581,
+          areaServed: [
+            {
+              "@type": "City",
+              name: "Freiburg im Breisgau",
             },
-            geoRadius: "50000",
-          },
+            {
+              "@type": "GeoCircle",
+              geoMidpoint: {
+                "@type": "GeoCoordinates",
+                latitude: 47.9977,
+                longitude: 7.8581,
+              },
+              geoRadius: "50000",
+            },
+          ],
           sameAs: [
             "https://www.facebook.com/profile.php?id=61562014600393",
             "https://www.instagram.com/jona.fels/",
             "https://www.linkedin.com/in/jona-fels-coach/",
+          ],
+          keywords: [
+            "Familienaufstellung Freiburg",
+            "systemische Aufstellung Freiburg",
+            "systemisches Coaching Freiburg",
+            "Coaching Freiburg",
+            "Familientherapie Freiburg",
+            "innere Blockaden lösen",
+            "unbewusste Muster auflösen",
+            "persönliche Entwicklung Coaching",
           ],
           founder: {
             "@id": "https://fels-coach.de/#person",
@@ -65,21 +85,21 @@ export const JsonLd = () => {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  "@id": "https://fels-coach.de/#service-familienaufstellung",
-                  name: "Systemische Familienaufstellung",
+                  "@id": "https://fels-coach.de/#service-kennenlernen",
+                  name: "Kennenlernen – Systemisches Coaching",
                   description:
-                    "Tiefgreifende Aufstellungsarbeit zur Auflösung unbewusster Familienmuster und Verstrickungen.",
+                    "Erstes Kennenlernen und Einstieg in die systemische Arbeit. Wir klären Ihr Anliegen und schauen, ob die Chemie stimmt.",
                   provider: { "@id": "https://fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
-                  serviceType: "Systemische Familienaufstellung",
+                  serviceType: "Systemisches Coaching",
                 },
-                price: "110.00",
+                price: "40.00",
                 priceCurrency: "EUR",
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: "110.00",
+                  price: "40.00",
                   priceCurrency: "EUR",
-                  unitText: "80 Minuten",
+                  unitText: "Sitzung",
                 },
                 availability: "https://schema.org/InStock",
               },
@@ -87,19 +107,19 @@ export const JsonLd = () => {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  "@id": "https://fels-coach.de/#service-einzelcoaching",
-                  name: "Systemisches Einzelcoaching",
+                  "@id": "https://fels-coach.de/#service-familienaufstellung",
+                  name: "Systemisches Coaching mit Familienaufstellung",
                   description:
-                    "Intensive 1:1 Coaching-Session mit systemischen Methoden.",
+                    "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster und Blockaden erkennen und nachhaltig lösen.",
                   provider: { "@id": "https://fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
-                  serviceType: "Lösungsorientiertes Coaching",
+                  serviceType: "Systemische Familienaufstellung",
                 },
-                price: "110.00",
+                price: "70.00",
                 priceCurrency: "EUR",
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: "110.00",
+                  price: "70.00",
                   priceCurrency: "EUR",
                   unitText: "80 Minuten",
                 },
@@ -112,7 +132,7 @@ export const JsonLd = () => {
                   "@id": "https://fels-coach.de/#ebook",
                   name: "Der Weg zum Ganz-Sein",
                   description:
-                    "Kostenloses E-Book über systemische Familienaufstellungen.",
+                    "Kostenloses E-Book über systemische Familienaufstellungen und persönliche Transformation.",
                   author: { "@id": "https://fels-coach.de/#person" },
                   inLanguage: "de",
                   bookFormat: "https://schema.org/EBook",
@@ -132,7 +152,7 @@ export const JsonLd = () => {
           familyName: "Fels",
           jobTitle: "Systemischer Coach & Familienaufsteller",
           description:
-            "Familienaufsteller in Ausbildung und Coach mit Spezialisierung auf systemische Familienaufstellungen und lösungsorientiertes Coaching.",
+            "Systemischer Coach und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           email: "info@fels-coach.de",
@@ -151,12 +171,13 @@ export const JsonLd = () => {
             "https://www.linkedin.com/in/jona-fels-coach/",
           ],
           knowsAbout: [
-            "Systemische Familienaufstellungen",
+            "Systemische Familienaufstellung",
+            "Familienaufstellung mit Bodenankern",
+            "Systemisches Coaching",
             "Lösungsorientiertes Coaching",
-            "Systemische Therapie",
             "Persönlichkeitsentwicklung",
-            "Familiendynamiken",
-            "Innere Kind Arbeit",
+            "Unbewusste Familienmuster",
+            "Innere Blockaden lösen",
           ],
           hasCredential: [
             {
@@ -175,11 +196,11 @@ export const JsonLd = () => {
         {
           "@type": "WebSite",
           "@id": "https://fels-coach.de/#website",
-          name: "Fels-Coach",
-          alternateName: "Jona Fels - Systemisches Coaching & Familienaufstellungen",
+          name: "Jona Fels – Systemisches Coaching & Familienaufstellung Freiburg",
+          alternateName: "Familienaufstellung Freiburg – Jona Fels",
           url: "https://fels-coach.de",
           description:
-            "Systemische Familienaufstellungen und Coaching in Freiburg",
+            "Systemische Familienaufstellungen und Coaching in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
           publisher: { "@id": "https://fels-coach.de/#service" },
           inLanguage: ["de", "en"],
         },
@@ -201,7 +222,7 @@ export const JsonLd = () => {
             {
               "@type": "ListItem",
               position: 3,
-              name: "Aufstellungen",
+              name: "Familienaufstellung Freiburg",
               item: "https://fels-coach.de/systemische-familienaufstellung-freiburg",
             },
             {
@@ -223,42 +244,42 @@ export const JsonLd = () => {
           mainEntity: [
             {
               "@type": "Question",
-              name: "Was ist eine systemische Familienaufstellung und wie läuft sie bei Jona Fels in Freiburg ab?",
+              name: "Was ist eine systemische Familienaufstellung und wie läuft sie bei mir in Freiburg ab?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Eine systemische Familienaufstellung macht verborgene Dynamiken sichtbar. In meinem Praxisraum in der Karlstraße 51, Freiburg, arbeiten wir in geschützter Atmosphäre an nachhaltigen Lösungswegen für Ihre persönlichen Blockaden.",
+                text: "Eine systemische Familienaufstellung macht verborgene Dynamiken in Systemen sichtbar. In meinem Praxisraum in der Karlstraße 51 (Freiburg) schauen wir uns in geschützter Atmosphäre an, was im Argen liegt, und erarbeiten gemeinsam nachhaltige Lösungswege für Ihre Blockaden.",
               },
             },
             {
               "@type": "Question",
-              name: "Was kostet ein Coaching oder eine Familienaufstellung bei Jona Fels?",
+              name: "Was kostet ein Coaching oder eine Familienaufstellung?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Eine Sitzung (Coaching oder Familienaufstellung) kostet 110 € pro Einheit (80 Minuten). Aktuell biete ich zum Start in Freiburg ein begrenztes Kontingent an Kennenlern-Sitzungen an.",
+                text: "Transparenz ist mir wichtig: Eine reguläre Coaching-Sitzung kostet 70 € pro Einheit (80 Minuten). Mein Ziel ist es, Ihnen effiziente und wirkungsvolle Impulse zu geben, die Sie wirklich weiterbringen.",
               },
             },
             {
               "@type": "Question",
-              name: "Bietest du auch Coaching-Termine am Wochenende in Freiburg an?",
+              name: "Bietest du auch Termine am Wochenende an?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Ja, ich biete meine Sitzungen spezialisiert am Samstag zwischen 14:00 und 20:00 Uhr an. Dies ermöglicht Berufstätigen eine entspannte Atmosphäre ohne Zeitdruck unter der Woche.",
+                text: "Ja, absolut. Da viele meiner Klienten berufstätig sind, biete ich meine Sitzungen spezialisiert am Samstag zwischen 14:00 und 20:00 Uhr an. So haben Sie die nötige Ruhe, um sich ohne Alltagsstress auf den Prozess einzulassen.",
               },
             },
             {
               "@type": "Question",
-              name: "Wo genau in Freiburg findet das Coaching statt?",
+              name: "Wo findet das Coaching statt?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Er bietet eine ruhige, geschützte Atmosphäre für Ihre Coaching-Sitzungen.",
+                text: "Sie finden mich zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Mein Praxisraum bietet eine ruhige, geschützte Atmosphäre für Ihre Coaching-Sitzungen.",
               },
             },
             {
               "@type": "Question",
-              name: "Wie kann ich ein Coaching starten und gibt es ein Vorgespräch?",
+              name: "Wie kann ich starten und ist ein Vorgespräch möglich?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sie können direkt über die Website ein kostenloses, 30-minütiges Vorgespräch anfragen. So klären wir unverbindlich Ihr Anliegen und schauen, ob die Chemie für eine Zusammenarbeit stimmt.",
+                text: "Der erste Schritt ist ganz einfach: Fragen Sie über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich Sie am besten unterstützen kann – völlig unverbindlich.",
               },
             },
           ],
