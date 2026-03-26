@@ -80,6 +80,7 @@ const Datenschutz = () => {
 
             <h2>6. Kontaktaufnahme</h2>
             <p>Wenn du mich über das Kontaktformular, per E-Mail oder über Telegram kontaktierst, werden die von dir mitgeteilten Daten (Name, E-Mail-Adresse, Nachrichteninhalt) gespeichert, um deine Anfrage zu bearbeiten und bei Rückfragen antworten zu können. Die Daten werden nicht ohne deine Einwilligung an Dritte weitergegeben und nach Abschluss der Kommunikation bzw. spätestens nach 3 Jahren gelöscht – es sei denn, gesetzliche Aufbewahrungspflichten stehen dem entgegen.</p>
+            <p>Bitte beachte, dass bei der Nutzung von Telegram Daten an Server des Anbieters (auch außerhalb der EU) übertragen werden können. Die Nutzung von Telegram erfolgt auf freiwilliger Basis.</p>
             <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
 
             <hr />
@@ -95,9 +96,9 @@ const Datenschutz = () => {
             <p>Für den Versand von E-Mails (z.&nbsp;B. E-Book-Zustellung, Kontaktformular-Bestätigungen) nutze ich den Dienst Resend. Dabei werden dein Name und deine E-Mail-Adresse an Resend übermittelt, soweit dies zur Vertragserfüllung erforderlich ist.</p>
             <p>Anbieter: Resend, Inc., USA. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
 
-            <h3>Datenbank und Backend</h3>
-            <p>Kontaktanfragen und Formulardaten werden in einer sicheren Datenbank gespeichert, um deine Anfragen zuverlässig bearbeiten zu können. Die Daten werden verschlüsselt übertragen und nur für den angegebenen Zweck verwendet.</p>
-            <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b/f DSGVO.</p>
+            <h3>Hosting und Backend</h3>
+            <p>Diese Webseite wird über Vercel, Inc. (USA) gehostet. Kontaktanfragen und Formulardaten werden in einer sicheren Datenbank bei Supabase, Inc. (USA) gespeichert, um deine Anfragen zuverlässig bearbeiten zu können. Die Daten werden verschlüsselt übertragen und nur für den angegebenen Zweck verwendet.</p>
+            <p>Anbieter: Vercel, Inc., USA (Hosting); Supabase, Inc., USA (Datenbank). Rechtsgrundlage: Art. 6 Abs. 1 lit. b/f DSGVO.</p>
 
             <h3>KI-Chatbot (Chatbase)</h3>
             <p>Auf meiner Webseite steht dir ein KI-gestützter Chatbot zur Verfügung, der häufig gestellte Fragen beantwortet. Der Chatbot wird nur geladen, wenn du ihn aktiv öffnest. Dabei können eingegebene Nachrichten an den Anbieter übermittelt werden.</p>
@@ -110,7 +111,7 @@ const Datenschutz = () => {
             <hr />
 
             <h2>8. Datenübermittlung in Drittländer</h2>
-            <p>Einige der genannten Dienstleister haben ihren Sitz in den USA. Die Datenübermittlung erfolgt auf Grundlage von EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO, die ein angemessenes Datenschutzniveau sicherstellen.</p>
+            <p>Einige der genannten Dienstleister (Google, Resend, Chatbase, Vercel, Supabase) haben ihren Sitz in den USA. Für Datenübermittlungen in die USA stützen wir uns auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Anbieter sowie hilfsweise auf EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO.</p>
 
           </div>
         </div>
