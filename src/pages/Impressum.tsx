@@ -43,7 +43,7 @@ const Impressum = () => {
             </p>
             <p>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
-            <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+            <h3>Verantwortlich für redaktionelle Inhalte nach § 18 Abs. 2 MStV</h3>
             <p>
               Jona Fels<br />
               Egonstraße 91<br />
