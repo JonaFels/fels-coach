@@ -45,10 +45,14 @@ export const JsonLd = () => {
             },
           ],
           areaServed: [
-            {
-              "@type": "City",
-              name: "Freiburg im Breisgau",
-            },
+            { "@type": "City", name: "Freiburg im Breisgau" },
+            { "@type": "City", name: "Emmendingen" },
+            { "@type": "City", name: "Bad Krozingen" },
+            { "@type": "City", name: "Breisach am Rhein" },
+            { "@type": "City", name: "Müllheim" },
+            { "@type": "City", name: "Waldkirch" },
+            { "@type": "City", name: "Lörrach" },
+            { "@type": "City", name: "Offenburg" },
             {
               "@type": "GeoCircle",
               geoMidpoint: {
