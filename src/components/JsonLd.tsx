@@ -10,10 +10,10 @@ export const JsonLd = () => {
       "@graph": [
         {
           "@type": ["ProfessionalService", "LocalBusiness"],
-          "@id": "https://fels-coach.de/#service",
+          "@id": "https://www.fels-coach.de/#service",
           name: "Jona Fels – Systemisches Coaching & Familienaufstellung Freiburg",
           alternateName: "Familienaufstellung Freiburg",
-          url: "https://fels-coach.de",
+          url: "https://www.fels-coach.de",
           telephone: "+4917667608617",
           email: "info@fels-coach.de",
           description:
@@ -31,8 +31,8 @@ export const JsonLd = () => {
             latitude: 47.9977,
             longitude: 7.8581,
           },
-          image: "https://fels-coach.de/web-app-manifest-512x512.png",
-          logo: "https://fels-coach.de/web-app-manifest-512x512.png",
+          image: "https://www.fels-coach.de/web-app-manifest-512x512.png",
+          logo: "https://www.fels-coach.de/web-app-manifest-512x512.png",
           priceRange: "40 €–70 €",
           currenciesAccepted: "EUR",
           paymentAccepted: "Cash, Bank Transfer",
@@ -79,7 +79,7 @@ export const JsonLd = () => {
             "persönliche Entwicklung Coaching",
           ],
           founder: {
-            "@id": "https://fels-coach.de/#person",
+            "@id": "https://www.fels-coach.de/#person",
           },
           hasOfferCatalog: {
             "@type": "OfferCatalog",
@@ -89,11 +89,11 @@ export const JsonLd = () => {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  "@id": "https://fels-coach.de/#service-kennenlernen",
+                  "@id": "https://www.fels-coach.de/#service-kennenlernen",
                   name: "Kennenlernen – Systemisches Coaching",
                   description:
                     "Erstes Kennenlernen und Einstieg in die systemische Arbeit. Wir klären Ihr Anliegen und schauen, ob die Chemie stimmt.",
-                  provider: { "@id": "https://fels-coach.de/#service" },
+                  provider: { "@id": "https://www.fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
                   serviceType: "Systemisches Coaching",
                 },
@@ -111,11 +111,11 @@ export const JsonLd = () => {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  "@id": "https://fels-coach.de/#service-familienaufstellung",
+                  "@id": "https://www.fels-coach.de/#service-familienaufstellung",
                   name: "Systemisches Coaching mit Familienaufstellung",
                   description:
                     "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster und Blockaden erkennen und nachhaltig lösen.",
-                  provider: { "@id": "https://fels-coach.de/#service" },
+                  provider: { "@id": "https://www.fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
                   serviceType: "Systemische Familienaufstellung",
                 },
@@ -133,11 +133,11 @@ export const JsonLd = () => {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Book",
-                  "@id": "https://fels-coach.de/#ebook",
+                  "@id": "https://www.fels-coach.de/#ebook",
                   name: "Der Weg zum Ganz-Sein",
                   description:
                     "Kostenloses E-Book über systemische Familienaufstellungen und persönliche Transformation.",
-                  author: { "@id": "https://fels-coach.de/#person" },
+                  author: { "@id": "https://www.fels-coach.de/#person" },
                   inLanguage: "de",
                   bookFormat: "https://schema.org/EBook",
                 },
@@ -150,15 +150,15 @@ export const JsonLd = () => {
         },
         {
           "@type": "Person",
-          "@id": "https://fels-coach.de/#person",
+          "@id": "https://www.fels-coach.de/#person",
           name: "Jona Fels",
           givenName: "Jona",
           familyName: "Fels",
           jobTitle: "Systemischer Coach & Familienaufsteller",
           description:
             "Systemischer Coach und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
-          url: "https://fels-coach.de/ueber-mich",
-          image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
+          url: "https://www.fels-coach.de/ueber-mich",
+          image: "https://www.fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           email: "info@fels-coach.de",
           telephone: "+4917667608617",
           address: {
@@ -195,17 +195,17 @@ export const JsonLd = () => {
               name: "Heilpraktiker-Ausbildung",
             },
           ],
-          worksFor: { "@id": "https://fels-coach.de/#service" },
+          worksFor: { "@id": "https://www.fels-coach.de/#service" },
         },
         {
           "@type": "WebSite",
-          "@id": "https://fels-coach.de/#website",
+          "@id": "https://www.fels-coach.de/#website",
           name: "Jona Fels – Systemisches Coaching & Familienaufstellung Freiburg",
           alternateName: "Familienaufstellung Freiburg – Jona Fels",
-          url: "https://fels-coach.de",
+          url: "https://www.fels-coach.de",
           description:
             "Systemische Familienaufstellungen und Coaching in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
-          publisher: { "@id": "https://fels-coach.de/#service" },
+          publisher: { "@id": "https://www.fels-coach.de/#service" },
           inLanguage: ["de", "en"],
         },
         {
@@ -215,31 +215,31 @@ export const JsonLd = () => {
               "@type": "ListItem",
               position: 1,
               name: "Start",
-              item: "https://fels-coach.de",
+              item: "https://www.fels-coach.de",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Angebote",
-              item: "https://fels-coach.de/angebote",
+              item: "https://www.fels-coach.de/angebote",
             },
             {
               "@type": "ListItem",
               position: 3,
               name: "Familienaufstellung Freiburg",
-              item: "https://fels-coach.de/systemische-familienaufstellung-freiburg",
+              item: "https://www.fels-coach.de/systemische-familienaufstellung-freiburg",
             },
             {
               "@type": "ListItem",
               position: 4,
               name: "Über mich",
-              item: "https://fels-coach.de/ueber-mich",
+              item: "https://www.fels-coach.de/ueber-mich",
             },
             {
               "@type": "ListItem",
               position: 5,
               name: "Kontakt",
-              item: "https://fels-coach.de/kontakt",
+              item: "https://www.fels-coach.de/kontakt",
             },
           ],
         },
