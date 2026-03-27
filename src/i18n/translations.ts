@@ -22,8 +22,8 @@ export const translations: Translations = {
     en: "Free E-Book",
   },
   "nav.kontakt": {
-    de: "Kontakt",
-    en: "Contact",
+    de: "Kontakt & Anfahrt",
+    en: "Contact & Directions",
   },
   "nav.ueber": {
     de: "Über mich",
