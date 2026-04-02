@@ -17,9 +17,10 @@ const UeberMich = () => {
       <SEOHead />
       <Header />
       <PraxisHeroBanner variant="sitzbereich" />
+      <div id="portrait" className="scroll-mt-[4.5rem]" />
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section id="portrait" className="relative -mt-12 pb-12 md:pb-16 scroll-mt-16">
+        <section className="relative -mt-12 pb-12 md:pb-16">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mb-6">
               <img
