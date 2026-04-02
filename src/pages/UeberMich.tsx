@@ -46,7 +46,7 @@ const UeberMich = () => {
         </section>
 
         {/* Intro */}
-        <section className="py-10 md:py-14 bg-muted/40">
+        <section className="py-6 md:py-10 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
               <p>{t("about.intro1")}</p>
