@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 export const AboutPreview = () => {
   const { t } = useLanguage();
