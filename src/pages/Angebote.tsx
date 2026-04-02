@@ -42,7 +42,7 @@ const Angebote = () => {
 
       <main id="main-content">
         {/* Intro */}
-        <section className="py-12 md:py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
               {t("offerings.title")}
@@ -54,7 +54,7 @@ const Angebote = () => {
         </section>
 
         {/* Was dich erwartet */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="grid gap-8 md:grid-cols-3 text-center">
               {[
@@ -75,7 +75,7 @@ const Angebote = () => {
         </section>
 
         {/* Ablauf */}
-        <section className="py-16 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.ablaufTitle")}
@@ -97,7 +97,7 @@ const Angebote = () => {
         </section>
 
         {/* Preise & Buchung */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
               {t("offerings.preiseTitle")}
@@ -155,7 +155,7 @@ const Angebote = () => {
         </section>
 
         {/* Noch unsicher? */}
-        <section className="py-16 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
               Noch unsicher?
