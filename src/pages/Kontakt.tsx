@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
-import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
-import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -12,20 +10,6 @@ import { ContactForm } from "@/components/ContactForm";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
-
-const Kontakt = () => {
-  const { t } = useLanguage();
-  const location = useLocation();
-  const kalenderRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // Scroll to calendar when #erstgespraech hash is present
-  useEffect(() => {
-    if (location.hash === "#erstgespraech" && kalenderRef.current) {
-      // Use instant scroll so user lands directly at the calendar
-      kalenderRef.current.scrollIntoView({ behavior: "instant", block: "start" });
-    }
-  }, [location.hash]);
 
   // Embed Orbnet booking widget & suppress its fullscreen loading overlay
   useEffect(() => {
