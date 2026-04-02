@@ -19,7 +19,7 @@ const UeberMich = () => {
       <PraxisHeroBanner variant="sitzbereich" />
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section id="portrait" className="relative -mt-12 pb-12 md:pb-16 scroll-mt-16">
+        <section id="portrait" className="relative -mt-12 pb-12 md:pb-16 scroll-mt-[4.5rem]">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mb-6">
               <img
