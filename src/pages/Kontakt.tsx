@@ -22,7 +22,8 @@ const Kontakt = () => {
   // Scroll to calendar when #erstgespraech hash is present
   useEffect(() => {
     if (location.hash === "#erstgespraech" && kalenderRef.current) {
-      kalenderRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Use instant scroll so user lands directly at the calendar
+      kalenderRef.current.scrollIntoView({ behavior: "instant", block: "start" });
     }
   }, [location.hash]);
 
