@@ -26,7 +26,7 @@ const faqData = {
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
-      answer: "Der erste Schritt ist ganz einfach: Fragen Sie über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich Sie am besten unterstützen kann – völlig unverbindlich.",
+      answer: "Der erste Schritt ist ganz einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
     },
   ],
   en: [
