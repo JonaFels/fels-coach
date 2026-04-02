@@ -86,8 +86,27 @@ const Kontakt = () => {
       <PraxisHeroBanner variant="sitzbereich" />
 
       <main id="main-content" className="flex-1">
-        {/* 1. Empathische Einladung */}
-        <section id="willkommen" className="py-12 md:py-16 scroll-mt-16">
+        {/* 1. Orbnet-Kalender direkt oben */}
+        <section
+          id="erstgespraech"
+          ref={kalenderRef}
+          className="py-12 md:py-16 scroll-mt-16"
+        >
+          <div className="container mx-auto px-4 max-w-2xl">
+            <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
+              <h1 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2 text-center">
+                {t("contact.headline")}
+              </h1>
+              <p className="text-sm text-muted-foreground text-center mb-4">
+                30 Minuten · kostenfrei · völlig unverbindlich
+              </p>
+              <div ref={containerRef} />
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Empathische Einladung */}
+        <section id="willkommen" className="py-12 md:py-16 bg-muted/40 scroll-mt-16">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="flex-shrink-0">
@@ -101,32 +120,13 @@ const Kontakt = () => {
                 />
               </div>
               <div className="text-center md:text-left">
-                <h1 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                  {t("contact.headline")}
-                </h1>
+                <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-4">
+                  Lass uns in Ruhe sprechen
+                </h2>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   Du möchtest etwas verändern? Lass uns gemeinsam schauen, wo du stehst. Ich freue mich darauf, dich kennenzulernen.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 2. Orbnet-Kalender direkt eingebettet */}
-        <section
-          id="erstgespraech"
-          ref={kalenderRef}
-          className="py-16 md:py-20 bg-muted/40 scroll-mt-24"
-        >
-          <div className="container mx-auto px-4 max-w-2xl">
-            <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
-              <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-2 text-center">
-                Lass uns in Ruhe sprechen
-              </h2>
-              <p className="text-sm text-muted-foreground text-center mb-4">
-                30 Minuten · kostenfrei · völlig unverbindlich
-              </p>
-              <div ref={containerRef} />
             </div>
           </div>
         </section>
