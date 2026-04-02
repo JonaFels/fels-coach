@@ -107,7 +107,7 @@ const Ebook = () => {
               {t("ebook.headline")}
             </h1>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Lade dir diesen kompakten 6-seitigen Guide herunter und lerne systemische Fragen kennen, die du sofort im Alltag anwenden kannst.
+              {t("ebook.subheadline")}
             </p>
           </div>
         </section>
