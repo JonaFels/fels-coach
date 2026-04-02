@@ -97,7 +97,7 @@ const Angebote = () => {
         </section>
 
         {/* Preise & Buchung */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
               {t("offerings.preiseTitle")}
