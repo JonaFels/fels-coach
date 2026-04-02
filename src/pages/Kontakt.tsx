@@ -95,10 +95,10 @@ const Kontakt = () => {
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
-              <h1 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2 text-center">
-                {t("contact.headline")}
+              <h1 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-1 text-center">
+                Erzähl mir von deinem Anliegen.
               </h1>
-              <p className="text-sm text-muted-foreground text-center mb-4">
+              <p className="text-xs text-muted-foreground text-center mb-3">
                 30 Minuten · kostenfrei · völlig unverbindlich
               </p>
               <div ref={containerRef} />
