@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, Loader2, Check } from "lucide-react";
-import ebookCover from "@/assets/ebook-cover.jpg";
+import ebookMockup from "@/assets/ebook-tablet-mockup.jpg";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,9 +22,10 @@ const ebookSchema = z.object({
 });
 
 const benefits = [
-  "Verstehe die wahren Ursachen deiner Gedankenkreisläufe.",
-  "Nutze 3 systemische Fragen, um sofortige Perspektivenwechsel zu ermöglichen.",
-  "Inklusive praktischem Workbook-Teil für deine Reflexion.",
+  "Das Gummiband-Prinzip: Warum du trotz Talent immer wieder in alte Muster zurückfällst.",
+  "Die Eltern-Dynamik: Wie ungelöste Vorwürfe deine Beziehungen und deinen Erfolg blockieren.",
+  "Die innere Erlaubnis: Wie du aufhörst, Zuschauer deines Lebens zu sein.",
+  "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
 ];
 
 const Ebook = () => {
@@ -114,49 +115,14 @@ const Ebook = () => {
                 </div>
 
                 {/* 3D Book mockup */}
-                <div className="relative w-full max-w-xs mx-auto md:mx-0">
-                  <div
-                    className="relative"
-                    style={{
-                      perspective: "1200px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        transform: "rotateY(-12deg) rotateX(2deg)",
-                        transformStyle: "preserve-3d",
-                      }}
-                    >
-                      <img
-                        src={ebookCover}
-                        alt="E-Book Cover: Der Weg zum Ganz-Sein von Jona Fels"
-                        className="w-full h-auto rounded-lg"
-                        style={{
-                          boxShadow:
-                            "12px 16px 35px rgba(0,0,0,0.25), -2px 0 10px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05)",
-                        }}
-                        loading="eager"
-                        width="300"
-                        height="424"
-                      />
-                      {/* Spine edge effect */}
-                      <div
-                        className="absolute top-0 left-0 h-full w-3 rounded-l-lg"
-                        style={{
-                          background:
-                            "linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0.03))",
-                          transform: "translateX(-6px) rotateY(30deg)",
-                          transformOrigin: "right center",
-                        }}
-                      />
-                    </div>
-                  </div>
-                  {/* Subtle reflection */}
-                  <div
-                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-6 rounded-full"
-                    style={{
-                      background: "radial-gradient(ellipse, rgba(0,0,0,0.08) 0%, transparent 70%)",
-                    }}
+                <div className="relative w-full max-w-sm mx-auto md:mx-0">
+                  <img
+                    src={ebookMockup}
+                    alt="E-Book 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
+                    className="w-full h-auto rounded-lg shadow-xl"
+                    loading="eager"
+                    width="400"
+                    height="300"
                   />
                 </div>
               </div>
