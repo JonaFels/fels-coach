@@ -153,11 +153,11 @@ const Kontakt = () => {
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3 text-center">
               Anfahrt &amp; Ankommen
             </h2>
-            <p className="text-muted-foreground text-center mb-8 max-w-lg mx-auto text-sm leading-relaxed">
+            <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto text-sm leading-relaxed">
               Mein Praxisraum befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg.
             </p>
 
-            <div className="grid gap-5 md:grid-cols-3 mb-8">
+            <div className="grid gap-6 md:gap-8 md:grid-cols-3 mb-10">
               <Card className="border-border/60">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-3">
