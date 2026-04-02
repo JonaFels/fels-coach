@@ -77,16 +77,16 @@ const Kontakt = () => {
         {/* 1. Orbnet-Kalender direkt oben */}
         <section
           id="erstgespraech"
-          className="pt-6 pb-12 md:pt-8 md:pb-16"
+          className="pt-2 pb-8 md:pt-4 md:pb-12"
         >
           <div className="container mx-auto px-4 max-w-2xl">
-            <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
-              <h1 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-1 text-center">
-                Erzähl mir von deinem Anliegen.
-              </h1>
-              <p className="text-xs text-muted-foreground text-center mb-3">
-                30 Minuten · kostenfrei · völlig unverbindlich
-              </p>
+            <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-0.5 text-center">
+              Erzähl mir von deinem Anliegen.
+            </p>
+            <p className="text-[11px] text-muted-foreground text-center mb-2">
+              30 Minuten · kostenfrei · völlig unverbindlich
+            </p>
+            <div className="relative min-h-[420px] bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
               <div ref={containerRef} />
             </div>
           </div>
