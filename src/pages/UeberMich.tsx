@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
@@ -8,19 +9,24 @@ import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
 
 const UeberMich = () => {
   const { t } = useLanguage();
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useHalfHeroHashScroll("#portrait", heroRef);
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="sitzbereich" />
-      <div id="portrait" className="scroll-mt-[14rem]" />
+      <div ref={heroRef}>
+        <PraxisHeroBanner variant="sitzbereich" />
+      </div>
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="relative -mt-12 pb-12 md:pb-16">
+        <section id="portrait" className="relative -mt-12 pb-12 md:pb-16">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mb-6">
               <img
