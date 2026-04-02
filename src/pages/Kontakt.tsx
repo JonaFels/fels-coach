@@ -72,14 +72,12 @@ const Kontakt = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="sitzbereich" />
 
       <main id="main-content" className="flex-1">
         {/* 1. Orbnet-Kalender direkt oben */}
         <section
           id="erstgespraech"
-          ref={kalenderRef}
-          className="py-12 md:py-16 scroll-mt-16"
+          className="pt-6 pb-12 md:pt-8 md:pb-16"
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
