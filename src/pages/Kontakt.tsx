@@ -157,7 +157,7 @@ const Kontakt = () => {
               Mein Praxisraum befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg.
             </p>
 
-            <div className="grid gap-6 md:gap-8 md:grid-cols-3 mb-10">
+            <div className="grid gap-8 md:gap-12 md:grid-cols-3 mb-10">
               <Card className="border-border/60">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-3">
