@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,20 +11,25 @@ import { trackCTAClick } from "@/lib/tracking";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
+import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
 
 const Familienaufstellung = () => {
   const { t } = useLanguage();
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useHalfHeroHashScroll("#methode", heroRef);
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="sitzbereich" />
-      <div id="methode" className="scroll-mt-[14rem]" />
+      <div ref={heroRef}>
+        <PraxisHeroBanner variant="sitzbereich" />
+      </div>
 
       <main id="main-content" className="flex-1">
         {/* Title */}
-        <section className="py-12 md:py-16">
+        <section id="methode" className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">
               {t("family.title")}
