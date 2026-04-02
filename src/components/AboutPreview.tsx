@@ -11,16 +11,6 @@ export const AboutPreview = () => {
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <div className="flex justify-center mb-8">
-            <img
-              src={profilBild}
-              alt="Jona Fels – Systemischer Coach in Freiburg"
-              className="w-36 h-auto md:w-44 aspect-[4/5] rounded-2xl object-cover object-center shadow-lg ring-2 ring-border"
-              loading="lazy"
-              width="176"
-              height="220"
-            />
-          </div>
           <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-8 text-center">
             {t("aboutPreview.title")}
           </h2>
