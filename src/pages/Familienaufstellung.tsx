@@ -94,7 +94,7 @@ const Familienaufstellung = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <Button size="lg" className="min-h-[44px]" asChild>
-              <a href="/kontakt#willkommen" onClick={() => trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")}>
+              <a href="/kontakt#erstgespraech" onClick={() => trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")}>
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("cta.bookNow")}
               </a>
