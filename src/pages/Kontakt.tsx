@@ -7,7 +7,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+
 
 const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
@@ -92,31 +92,6 @@ const Kontakt = () => {
           </div>
         </section>
 
-        {/* 2. Empathische Einladung */}
-        <section id="willkommen" className="py-12 md:py-16 bg-muted/40 scroll-mt-16">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="flex-shrink-0">
-                <img
-                  src={profilBild}
-                  alt="Jona Fels – Systemischer Coach"
-                  className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-center shadow-lg"
-                  loading="eager"
-                  width="160"
-                  height="160"
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-4">
-                  Lass uns in Ruhe sprechen
-                </h2>
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  Du möchtest etwas verändern? Lass uns gemeinsam schauen, wo du stehst. Ich freue mich darauf, dich kennenzulernen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 3. Alternative Kontaktwege */}
         <section className="py-16 md:py-20">
