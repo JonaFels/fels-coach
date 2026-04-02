@@ -54,7 +54,7 @@ const Angebote = () => {
         </section>
 
         {/* Was dich erwartet */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="grid gap-8 md:grid-cols-3 text-center">
               {[
