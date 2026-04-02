@@ -7,7 +7,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+
 
 const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
