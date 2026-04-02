@@ -124,25 +124,6 @@ const Ebook = () => {
                     width="400"
                     height="300"
                   />
-                      {/* Spine edge effect */}
-                      <div
-                        className="absolute top-0 left-0 h-full w-3 rounded-l-lg"
-                        style={{
-                          background:
-                            "linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0.03))",
-                          transform: "translateX(-6px) rotateY(30deg)",
-                          transformOrigin: "right center",
-                        }}
-                      />
-                    </div>
-                  </div>
-                  {/* Subtle reflection */}
-                  <div
-                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-6 rounded-full"
-                    style={{
-                      background: "radial-gradient(ellipse, rgba(0,0,0,0.08) 0%, transparent 70%)",
-                    }}
-                  />
                 </div>
               </div>
 
