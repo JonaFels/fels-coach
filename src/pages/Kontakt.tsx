@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
-import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
-import { useLocation } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -15,17 +13,7 @@ const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
-  const location = useLocation();
-  const kalenderRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // Scroll to calendar when #erstgespraech hash is present
-  useEffect(() => {
-    if (location.hash === "#erstgespraech" && kalenderRef.current) {
-      // Use instant scroll so user lands directly at the calendar
-      kalenderRef.current.scrollIntoView({ behavior: "instant", block: "start" });
-    }
-  }, [location.hash]);
 
   // Embed Orbnet booking widget & suppress its fullscreen loading overlay
   useEffect(() => {
@@ -84,14 +72,12 @@ const Kontakt = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="sitzbereich" />
 
       <main id="main-content" className="flex-1">
         {/* 1. Orbnet-Kalender direkt oben */}
         <section
           id="erstgespraech"
-          ref={kalenderRef}
-          className="py-12 md:py-16 scroll-mt-16"
+          className="pt-6 pb-12 md:pt-8 md:pb-16"
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="relative min-h-[400px] bg-background rounded-2xl border border-border shadow-sm p-4 md:p-6">
