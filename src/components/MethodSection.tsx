@@ -51,7 +51,7 @@ export const MethodSection = () => {
               className="text-base"
               onClick={() => trackCTAClick("method_learn_more", "homepage_method", "link")}
             >
-              <Link to="/systemische-familienaufstellung-freiburg">
+              <Link to="/systemische-familienaufstellung-freiburg#methode">
                 {t("method.cta")}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
