@@ -63,7 +63,7 @@ export const Header = () => {
               asChild
             >
               <a
-                href="/kontakt#willkommen"
+                href="/kontakt#erstgespraech"
                 onClick={() => trackNavToOffers("header")}
               >
                 <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
