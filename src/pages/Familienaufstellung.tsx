@@ -18,8 +18,8 @@ const Familienaufstellung = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="sitzbereich" />
       <div id="methode" className="scroll-mt-[4.5rem]" />
+      <PraxisHeroBanner variant="sitzbereich" />
 
       <main id="main-content" className="flex-1">
         {/* Title */}
