@@ -115,31 +115,15 @@ const Ebook = () => {
                 </div>
 
                 {/* 3D Book mockup */}
-                <div className="relative w-full max-w-xs mx-auto md:mx-0">
-                  <div
-                    className="relative"
-                    style={{
-                      perspective: "1200px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        transform: "rotateY(-12deg) rotateX(2deg)",
-                        transformStyle: "preserve-3d",
-                      }}
-                    >
-                      <img
-                        src={ebookCover}
-                        alt="E-Book Cover: Der Weg zum Ganz-Sein von Jona Fels"
-                        className="w-full h-auto rounded-lg"
-                        style={{
-                          boxShadow:
-                            "12px 16px 35px rgba(0,0,0,0.25), -2px 0 10px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05)",
-                        }}
-                        loading="eager"
-                        width="300"
-                        height="424"
-                      />
+                <div className="relative w-full max-w-sm mx-auto md:mx-0">
+                  <img
+                    src={ebookMockup}
+                    alt="E-Book 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
+                    className="w-full h-auto rounded-lg shadow-xl"
+                    loading="eager"
+                    width="400"
+                    height="300"
+                  />
                       {/* Spine edge effect */}
                       <div
                         className="absolute top-0 left-0 h-full w-3 rounded-l-lg"
