@@ -11,6 +11,10 @@ import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
+const Kontakt = () => {
+  const { t } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+
   // Embed Orbnet booking widget & suppress its fullscreen loading overlay
   useEffect(() => {
     if (!containerRef.current) return;
