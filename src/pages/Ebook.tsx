@@ -22,9 +22,10 @@ const ebookSchema = z.object({
 });
 
 const benefits = [
-  "Verstehe die wahren Ursachen deiner Gedankenkreisläufe.",
-  "Nutze 3 systemische Fragen, um sofortige Perspektivenwechsel zu ermöglichen.",
-  "Inklusive praktischem Workbook-Teil für deine Reflexion.",
+  "Das Gummiband-Prinzip: Warum du trotz Talent immer wieder in alte Muster zurückfällst.",
+  "Die Eltern-Dynamik: Wie ungelöste Vorwürfe deine Beziehungen und deinen Erfolg blockieren.",
+  "Die innere Erlaubnis: Wie du aufhörst, Zuschauer deines Lebens zu sein.",
+  "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
 ];
 
 const Ebook = () => {
