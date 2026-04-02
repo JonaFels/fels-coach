@@ -143,7 +143,7 @@ const Kontakt = () => {
         </section>
 
         {/* Anfahrt */}
-        <section id="anfahrt" className="py-16 md:py-20 bg-muted/40 scroll-mt-24">
+        <section id="anfahrt" className="py-20 md:py-28 bg-muted/40 scroll-mt-24">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px flex-1 max-w-16 bg-border" />
