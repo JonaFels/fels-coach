@@ -21,7 +21,7 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
         asChild
       >
         <a
-          href="/kontakt#willkommen"
+          href="/kontakt#erstgespraech"
           onClick={() => trackCTAClick("micro_cta_vorgespraech", "micro_cta", "link")}
         >
           <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
