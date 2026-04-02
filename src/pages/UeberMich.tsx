@@ -16,8 +16,8 @@ const UeberMich = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <div id="portrait" className="scroll-mt-[4.5rem]" />
       <PraxisHeroBanner variant="sitzbereich" />
+      <div id="portrait" className="scroll-mt-[14rem]" />
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative -mt-12 pb-12 md:pb-16">
