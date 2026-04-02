@@ -26,7 +26,7 @@ export const AboutPreview = () => {
               className="text-base"
               onClick={() => trackCTAClick("about_preview_more", "homepage_about", "link")}
             >
-              <Link to="/ueber-mich">
+              <Link to="/ueber-mich#portrait">
                 {t("aboutPreview.cta")}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
