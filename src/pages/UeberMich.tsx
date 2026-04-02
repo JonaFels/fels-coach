@@ -16,7 +16,7 @@ const UeberMich = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
-      <PraxisHeroBanner variant="lounge" />
+      <PraxisHeroBanner variant="sitzbereich" />
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative -mt-12 pb-12 md:pb-16">
