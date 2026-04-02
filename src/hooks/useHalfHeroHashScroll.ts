@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 export const useHalfHeroHashScroll = (
   expectedHash: string,
   heroRef: RefObject<HTMLElement>,
+  fraction = 0.5,
 ) => {
   const { hash } = useLocation();
 
@@ -12,7 +13,7 @@ export const useHalfHeroHashScroll = (
 
     const scrollToHalfHero = () => {
       const heroHeight = heroRef.current?.offsetHeight ?? 0;
-      const targetTop = Math.max(0, Math.round(heroHeight / 2));
+      const targetTop = Math.max(0, Math.round(heroHeight * fraction));
       window.scrollTo({ top: targetTop, left: 0 });
     };
 
