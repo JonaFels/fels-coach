@@ -15,7 +15,7 @@ const UeberMich = () => {
   const { t } = useLanguage();
   const heroRef = useRef<HTMLDivElement>(null);
 
-  useHalfHeroHashScroll("#portrait", heroRef);
+  useHalfHeroHashScroll("#portrait", heroRef, 0.65);
 
   return (
     <div className="min-h-screen flex flex-col">
