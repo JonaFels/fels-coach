@@ -155,7 +155,7 @@ const Angebote = () => {
         </section>
 
         {/* Noch unsicher? */}
-        <section className="py-16 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
               Noch unsicher?
