@@ -75,7 +75,7 @@ const Angebote = () => {
         </section>
 
         {/* Ablauf */}
-        <section className="py-16 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.ablaufTitle")}
