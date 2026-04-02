@@ -97,51 +97,38 @@ const Ebook = () => {
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* Hero – Above the fold, split layout */}
-        <section className="bg-muted/40">
-          <div className="container mx-auto px-4 py-12 md:py-20 max-w-5xl">
-            <div className="grid gap-10 md:gap-16 md:grid-cols-2 items-center">
+        {/* Header */}
+        <section className="pt-10 pb-6 md:pt-16 md:pb-8">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
+              Kostenloses E-Book
+            </p>
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-tight mb-4">
+              {t("ebook.headline")}
+            </h1>
+            <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Lade dir diesen kompakten 6-seitigen Guide herunter und lerne systemische Fragen kennen, die du sofort im Alltag anwenden kannst.
+            </p>
+          </div>
+        </section>
 
-              {/* Left: Headline (mobile first) + E-Book mockup */}
-              <div className="flex flex-col items-center md:items-start order-1">
-                {/* Headline – shown first on mobile */}
-                <div className="md:hidden text-center mb-8">
-                  <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-                    Kostenloses E-Book
-                  </p>
-                  <h1 className="font-serif text-2xl font-semibold text-foreground leading-tight">
-                    {t("ebook.headline")}
-                  </h1>
-                </div>
+        {/* Content – Bild + Benefits/Form nebeneinander */}
+        <section className="pb-16 md:pb-20 bg-muted/40">
+          <div className="container mx-auto px-4 py-10 md:py-14 max-w-4xl">
+            <div className="grid gap-10 md:gap-12 md:grid-cols-2 items-start">
 
-                {/* 3D Book mockup */}
-                <div className="relative w-full max-w-sm mx-auto md:mx-0">
+              {/* Left: Mockup + Benefits */}
+              <div className="space-y-8">
+                <div className="flex justify-center">
                   <img
                     src={ebookMockup}
                     alt="E-Book 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
-                    className="w-full h-auto rounded-lg shadow-xl"
+                    className="w-full max-w-sm h-auto rounded-lg shadow-xl"
                     loading="eager"
                     width="400"
                     height="300"
                   />
                 </div>
-              </div>
-
-              {/* Right: Text + Form */}
-              <div className="order-2 space-y-6">
-                {/* Desktop headline */}
-                <div className="hidden md:block">
-                  <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-                    Kostenloses E-Book
-                  </p>
-                  <h1 className="font-serif text-3xl lg:text-4xl font-semibold text-foreground leading-tight">
-                    {t("ebook.headline")}
-                  </h1>
-                </div>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  Lade dir diesen kompakten 6-seitigen Guide herunter und lerne systemische Fragen kennen, die du sofort im Alltag anwenden kannst.
-                </p>
 
                 {/* Benefits */}
                 <ul className="space-y-3" role="list">
@@ -154,79 +141,82 @@ const Ebook = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
 
-                {/* Form */}
-                <div className="bg-background rounded-xl border border-border p-5 shadow-sm">
-                  {submitted ? (
-                    <div className="text-center py-6">
-                      <CheckCircle className="h-12 w-12 text-secondary mx-auto mb-3" aria-hidden="true" />
-                      <p className="text-foreground font-medium mb-1">Geschafft!</p>
-                      <p className="text-muted-foreground text-sm">{t("ebook.success")}</p>
+              {/* Right: Form */}
+              <div className="bg-background rounded-xl border border-border p-6 shadow-sm">
+                <h2 className="font-serif text-lg font-medium text-foreground mb-4">
+                  {t("ebook.title")}
+                </h2>
+                {submitted ? (
+                  <div className="text-center py-6">
+                    <CheckCircle className="h-12 w-12 text-secondary mx-auto mb-3" aria-hidden="true" />
+                    <p className="text-foreground font-medium mb-1">Geschafft!</p>
+                    <p className="text-muted-foreground text-sm">{t("ebook.success")}</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="ebook-name" className="text-sm">{t("ebook.name")}</Label>
+                      <Input
+                        id="ebook-name"
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className={errors.name ? "border-destructive" : ""}
+                        aria-invalid={!!errors.name}
+                        autoComplete="name"
+                        placeholder="Dein Vorname"
+                      />
                     </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-3" noValidate>
-                      <div className="space-y-1.5">
-                        <Label htmlFor="ebook-name" className="text-sm">{t("ebook.name")}</Label>
-                        <Input
-                          id="ebook-name"
-                          type="text"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          className={errors.name ? "border-destructive" : ""}
-                          aria-invalid={!!errors.name}
-                          autoComplete="name"
-                          placeholder="Dein Vorname"
-                        />
-                      </div>
-                      <div className="space-y-1.5">
-                        <Label htmlFor="ebook-email" className="text-sm">{t("ebook.email")} *</Label>
-                        <Input
-                          id="ebook-email"
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          required
-                          className={errors.email ? "border-destructive" : ""}
-                          aria-invalid={!!errors.email}
-                          autoComplete="email"
-                          placeholder="deine@email.de"
-                        />
-                        {errors.email && (
-                          <p className="text-sm text-destructive">Bitte gib eine gültige E-Mail-Adresse ein.</p>
-                        )}
-                      </div>
-                      {/* Honeypot */}
-                      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
-                        <Label htmlFor="ebook-website">Website (nicht ausfüllen)</Label>
-                        <Input
-                          id="ebook-website"
-                          type="text"
-                          name="website"
-                          value={website}
-                          onChange={(e) => setWebsite(e.target.value)}
-                          tabIndex={-1}
-                          autoComplete="off"
-                        />
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {t("ebook.privacyNote")}{" "}
-                        <Link to="/datenschutz" className="text-secondary hover:underline">
-                          {t("ebook.here")}
-                        </Link>
-                      </p>
-                      <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting}>
-                        {isSubmitting ? (
-                          <>
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
-                            E-Book wird gesendet...
-                          </>
-                        ) : (
-                          t("ebook.download")
-                        )}
-                      </Button>
-                    </form>
-                  )}
-                </div>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="ebook-email" className="text-sm">{t("ebook.email")} *</Label>
+                      <Input
+                        id="ebook-email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className={errors.email ? "border-destructive" : ""}
+                        aria-invalid={!!errors.email}
+                        autoComplete="email"
+                        placeholder="deine@email.de"
+                      />
+                      {errors.email && (
+                        <p className="text-sm text-destructive">Bitte gib eine gültige E-Mail-Adresse ein.</p>
+                      )}
+                    </div>
+                    {/* Honeypot */}
+                    <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                      <Label htmlFor="ebook-website">Website (nicht ausfüllen)</Label>
+                      <Input
+                        id="ebook-website"
+                        type="text"
+                        name="website"
+                        value={website}
+                        onChange={(e) => setWebsite(e.target.value)}
+                        tabIndex={-1}
+                        autoComplete="off"
+                      />
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {t("ebook.privacyNote")}{" "}
+                      <Link to="/datenschutz" className="text-secondary hover:underline">
+                        {t("ebook.here")}
+                      </Link>
+                    </p>
+                    <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting}>
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+                          E-Book wird gesendet...
+                        </>
+                      ) : (
+                        t("ebook.download")
+                      )}
+                    </Button>
+                  </form>
+                )}
               </div>
             </div>
           </div>
