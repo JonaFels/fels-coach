@@ -136,7 +136,13 @@ export const useAutoLinkTracking = (): void => {
  * Hook that syncs current language to the tracking module.
  */
 const useTrackingLanguageSync = (): void => {
-  const { language } = useLanguage();
+  let language: string = "de";
+  try {
+    const ctx = useLanguage();
+    language = ctx.language;
+  } catch {
+    // During HMR, provider may not be ready yet
+  }
 
   useEffect(() => {
     setTrackingLanguage(language);
