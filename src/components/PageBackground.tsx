@@ -1,4 +1,4 @@
-import hintergrundStruktur from "@/assets/hintergrund-struktur.jpg";
+import hintergrundStruktur from "@/assets/hintergrund-struktur.webp";
 
 interface PageBackgroundProps {
   children: React.ReactNode;

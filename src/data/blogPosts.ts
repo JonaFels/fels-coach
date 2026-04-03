@@ -1,5 +1,5 @@
-import blogEinzelaufstellung from "@/assets/blog-einzelaufstellung.jpg";
-import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.jpg";
+import blogEinzelaufstellung from "@/assets/blog-einzelaufstellung.webp";
+import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.webp";
 
 export interface BlogPost {
   id: string;

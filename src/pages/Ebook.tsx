@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, Loader2, Check } from "lucide-react";
-import ebookMockup from "@/assets/ebook-tablet-mockup.jpg";
+import ebookMockup from "@/assets/ebook-tablet-mockup.webp";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
