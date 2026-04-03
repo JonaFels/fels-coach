@@ -112,7 +112,7 @@ export const JsonLd = () => {
                 itemOffered: {
                   "@type": "Service",
                   "@id": "https://www.fels-coach.de/#service-familienaufstellung",
-                  name: "Systemisches Coaching mit Familienaufstellung",
+                  name: "Coaching mit Einzelaufstellung",
                   description:
                     "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster und Blockaden erkennen und nachhaltig lösen.",
                   provider: { "@id": "https://www.fels-coach.de/#service" },

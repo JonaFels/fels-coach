@@ -182,8 +182,8 @@ export const translations: Translations = {
     en: "Your start at a reduced price: A full session where we place your concern in a systemic context and develop initial approaches.",
   },
   "offerings.coaching.title": {
-    de: "Systemisches Coaching mit Familienaufstellung",
-    en: "Systemic Coaching with Family Constellation",
+    de: "Coaching mit Einzelaufstellung",
+    en: "Coaching with Individual Constellation",
   },
   "offerings.coaching.desc": {
     de: "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten.",
