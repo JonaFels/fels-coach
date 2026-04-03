@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage, type Language } from "@/contexts/LanguageContext";
 import {
   trackPageView,
   trackScrollDepth,
@@ -136,7 +136,13 @@ export const useAutoLinkTracking = (): void => {
  * Hook that syncs current language to the tracking module.
  */
 const useTrackingLanguageSync = (): void => {
-  const { language } = useLanguage();
+  let language: Language = "de";
+  try {
+    const ctx = useLanguage();
+    language = ctx.language;
+  } catch {
+    // During HMR, provider may not be ready yet
+  }
 
   useEffect(() => {
     setTrackingLanguage(language);
