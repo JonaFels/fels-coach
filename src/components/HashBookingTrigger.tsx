@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
+import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 
 const HASH_TO_SEMUID: Record<string, string> = {
   "#kennenlernen": "609d5e7a-e208-4715-b073-e99206aebbf7",
@@ -9,20 +10,19 @@ const HASH_TO_SEMUID: Record<string, string> = {
 
 /**
  * Globaler Trigger: Öffnet das Booking-Overlay basierend auf dem URL-Hash.
- * #erstgespraech wird jetzt auf /kontakt behandelt (direkter Kalender).
+ * #erstgespraech öffnet das Erstgespräch-Modal mit Kalender.
  * #kennenlernen und #coaching öffnen den normalen Orbnet-Kalender.
  */
 export const HashBookingTrigger = () => {
   const location = useLocation();
   const { openBooking, BookingDialog } = useOrbnetBooking();
+  const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
 
   useEffect(() => {
     const hash = location.hash;
     if (hash === "#erstgespraech") {
-      // Redirect to Kontakt page where calendar is embedded
-      if (location.pathname !== "/kontakt") {
-        window.location.href = "/kontakt";
-      }
+      setErstgespraechOpen(true);
+      window.history.replaceState(null, "", location.pathname + location.search);
     } else {
       const semuid = HASH_TO_SEMUID[hash];
       if (semuid) {
@@ -32,5 +32,13 @@ export const HashBookingTrigger = () => {
     }
   }, [location.hash]);
 
-  return <BookingDialog />;
+  return (
+    <>
+      <BookingDialog />
+      <ErstgespraechModal
+        open={erstgespraechOpen}
+        onClose={() => setErstgespraechOpen(false)}
+      />
+    </>
+  );
 };
