@@ -1,5 +1,6 @@
 import blogEinzelaufstellung from "@/assets/blog-einzelaufstellung.webp";
 import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.webp";
+import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
 
 export interface BlogPost {
   id: string;
