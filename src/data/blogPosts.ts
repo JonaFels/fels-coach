@@ -1,5 +1,6 @@
 import blogEinzelaufstellung from "@/assets/blog-einzelaufstellung.webp";
 import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.webp";
+import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
 
 export interface BlogPost {
   id: string;
@@ -215,5 +216,88 @@ Même si la vision systémique est désormais répandue, la méthode des constel
     },
     image: blogFamilienstellenGeschichte,
     publishedAt: "2026-03-22",
+  },
+  {
+    id: "3",
+    slug: "das-wissende-feld-wahrnehmung-beim-familienstellen",
+    title: {
+      de: "Das wissende Feld: Wie funktioniert eigentlich die Wahrnehmung beim Familienstellen?",
+      en: "The Knowing Field: How Does Perception Actually Work in Family Constellations?",
+      fr: "Le champ sachant : Comment fonctionne la perception dans les constellations familiales ?",
+    },
+    excerpt: {
+      de: "Wie kann es sein, dass fremde Menschen das Familiensystem eines anderen Menschen nachbilden können? Ein Blick auf das Phänomen der stellvertretenden Wahrnehmung und die Brücke zur Quantenphysik.",
+      en: "How is it possible that strangers can replicate another person's family system? A look at the phenomenon of representative perception and the bridge to quantum physics.",
+      fr: "Comment est-il possible que des étrangers puissent reproduire le système familial d'une autre personne ? Un regard sur le phénomène de la perception représentative et le lien avec la physique quantique.",
+    },
+    content: {
+      de: `## Das wissende Feld: Wie funktioniert eigentlich die Wahrnehmung beim Familienstellen?
+
+Wie kann es sein, dass fremde Menschen das Familiensystem eines anderen Menschen nachbilden können? Darauf gibt es auf jeden Fall keine Antwort, die alle sofort zu einem "Aha-Erlebnis" führen wird. Man kann Erklärungen versuchen über **Körpersprache** und darauf, dass Menschen, die in einer Aufstellung stehen, wissen, wie sie sich verhalten müssen, aufgrund **sozial gelerntem Verhalten**. So dass alle zusammen wie die gewohnten Familiensituationen – wie überall – die gewohnten Familiensituationen nachahmen und die körperlichen Signale, den Blick, die Haltung, intuitiv deuten und darauf reagieren, so dass alle Aufgestellten Personen zusammen ein eingestimmtes Bild erzeugen. Aber die Berichte von Teilnehmenden zeigen, dass **viel mehr Informationen** durch die stellvertretende Wahrnehmung der aufgestellten Personen offenbart werden. Informationen die dem Menschen, für den die Aufstellung ist, gar nicht bekannt sind.
+
+## Spiegelung oder Intuition? Erklärungsversuche eines Phänomens
+
+Man könnte vermuten, dass nicht Bekannte wäre zufällig oder von denen, die dort stellvertretend für die Familie eines anderen stehen, einfach so gespielt. Aber der Umstand, dass Familienstellen so lange, **seit ca. 1980**, und von so vielen Aufstellern praktiziert wird, zeigt, dass es funktioniert. Wenn man einen Teilnehmer fragt, wie es geht, wird die Antwort meistens auf die Erfahrung, **es selbst auszuprobieren**, verweisen. Denn das Stellvertreten ist auch möglich ohne seine eigene Familie aufstellen zu lassen. Und man kann genau beobachten ob jemand in der Rolle der Aufstellung ist oder nachdenkt. Denn die Bewegungen und auch Worte passieren **spontan ohne Denken**.
+
+## Im Flow der Stellvertretung: Wenn Bewegungen spontan entstehen
+
+Modern ausgedrückt **im Flow**. Man kann sogar – in dem Fall das man sonst auch das eigene Denken beobachten kann – wahrnehmen wie sich in dem Zeitraum in der Rolle als Stellvertreter auch je nach Rolle ganz andere Gedanken im Kopf abspielen. Alles das, was sich in einer Aufstellung zeigt, kommt aus einem **spontanen Flow**, einer Intuition. Jetzt liegt es nahe, es könnte von demjenigen ausgehen, der die Aufstellung leitet, aber da man verschiedene Aufstellungsleiter ausprobieren kann und die stellvertretenden Person die gleichen Situationen oder sogar auch Positionen räumlich (Abstände, Richtung) einnehmen, ist es durch die Beobachtung festgestellt, dass es sich um eine **andere Quelle** handelt, aus der die Bewegungen und Worte der Stellvertreter hervorgehen.
+
+## Die Evolution der Methode: Von der Skulptur zur freien Bewegung
+
+Diese Quelle wurde im Kontext der Weiterentwicklung des Familienstellens zum ersten Mal erkennbar. In dem Schritt der **Skulptur-Methode von Virginia Satir**, bei welcher der Klient selbst die stellvertretenden Personen hinstellte und sogar die Mimik und auch die Körperhaltung angesagt hat, zur Methode von **Thea Schönfelder**, die nun die Personen sich bewegen und sprechen ließ – und zwar nicht durch die Anordnung des Klienten, sondern durch eben diese Intuition.
+
+## Das wissende Feld und die Brücke zur Quantenphysik
+
+**Bert Hellinger**, der die Methode Familienstellen in der modernen Form entwickelte, und erstmals bei Thea Schönfelder damit in Kontakt gekommen war, beschrieb die stellvertretende oder **repräsentierende Wahrnehmung** als **„das wissende Feld"**. Das wissende Feld soll ein nicht sichtbares Feld sein, das all das Wissen zu einer Familie hat und mit dem jedes Mitglied verbunden ist. So lässt sich erklären, warum die stellvertretenden Personen auf einmal eine andere Person "spielen" die sie nicht kennen, aber der Klient schreibt die Worte und Verhalten zu, die durch die fremde Person dargestellt wird.
+
+> Interessanterweise gibt es in der modernen Physik in der Quantenmechanik die Quantenverschränkung, was aussagt, dass sich quasi unendlich voneinander entfernte Photonen gleichzeitig miteinander verändern.
+
+Sie verhalten sich also zu einander und reagieren auf das jeweils andere Photon egal wie weit sie von einander getrennt sind. Es erklärt also die grundsätzliche Möglichkeit, dass **Information** oder in der Physik hier der Zustand **unabhängig von Zeit** in identischer Weise an zwei Orten sein kann. Auch wenn die Physik das noch nicht bei größeren Systemen bestätigen kann.`,
+      en: `## The Knowing Field: How Does Perception Actually Work in Family Constellations?
+
+How is it possible that strangers can replicate another person's family system? There is certainly no answer that will immediately lead everyone to an "aha moment." One can attempt explanations through **body language** and the idea that people standing in a constellation know how to behave based on **socially learned behavior**. So that together they imitate the familiar family situations – as everywhere – and intuitively interpret and react to the physical signals, the gaze, the posture, so that all the representatives together create a coherent picture. But reports from participants show that **much more information** is revealed through the representative perception of the positioned people. Information that the person for whom the constellation is being done doesn't even know.
+
+## Mirroring or Intuition? Attempts to Explain a Phenomenon
+
+One might assume that unknown details are random or simply acted out by those standing in as representatives for another's family. But the fact that family constellations have been practiced for so long, **since around 1980**, and by so many practitioners, shows that it works. When you ask a participant how it works, the answer usually refers to the experience of **trying it yourself**. Because acting as a representative is also possible without having your own family constellation done. And you can precisely observe whether someone is in the role of the constellation or thinking. Because the movements and words happen **spontaneously without thinking**.
+
+## In the Flow of Representation: When Movements Arise Spontaneously
+
+In modern terms, **in the flow**. You can even perceive – if you can otherwise observe your own thinking – how completely different thoughts play out in your head during the time in the role as representative, depending on the role. Everything that shows itself in a constellation comes from a **spontaneous flow**, an intuition. Now one might assume it could come from the person leading the constellation, but since you can try different constellation leaders and the representative people take the same situations or even the same spatial positions (distances, direction), observation has established that there is a **different source** from which the movements and words of the representatives emerge.
+
+## The Evolution of the Method: From Sculpture to Free Movement
+
+This source became recognizable for the first time in the context of the further development of family constellations. In the step from **Virginia Satir's Sculpture Method**, in which the client placed the representative people and even dictated the facial expressions and body posture, to the method of **Thea Schönfelder**, who now let the people move and speak – not through the client's arrangement, but through this very intuition.
+
+## The Knowing Field and the Bridge to Quantum Physics
+
+**Bert Hellinger**, who developed the modern form of family constellations and first encountered it through Thea Schönfelder, described the representative or **representative perception** as **"the knowing field."** The knowing field is said to be an invisible field that holds all the knowledge about a family and to which every member is connected. This explains why the representative people suddenly "play" another person they don't know, yet the client attributes the words and behavior displayed by the stranger.
+
+> Interestingly, in modern physics, quantum mechanics describes quantum entanglement, which states that photons separated by virtually infinite distances change simultaneously with each other.
+
+They behave in relation to each other and react to the other photon no matter how far apart they are. It therefore explains the fundamental possibility that **information** – or in physics, the state – can exist **independent of time** in an identical way in two places. Even if physics cannot yet confirm this in larger systems.`,
+      fr: `## Le champ sachant : Comment fonctionne la perception dans les constellations familiales ?
+
+Comment est-il possible que des étrangers puissent reproduire le système familial d'une autre personne ? Il n'y a certainement pas de réponse qui mènera tout le monde à un moment de révélation. On peut tenter des explications par le **langage corporel** et l'idée que les personnes dans une constellation savent comment se comporter grâce à un **comportement socialement appris**. Les rapports des participants montrent cependant que **beaucoup plus d'informations** sont révélées par la perception représentative.
+
+## Miroir ou intuition ? Tentatives d'explication d'un phénomène
+
+Le fait que les constellations familiales soient pratiquées depuis si longtemps, **depuis environ 1980**, montre que cela fonctionne. Les mouvements et les mots se produisent **spontanément, sans réflexion**.
+
+## Dans le flow de la représentation
+
+En termes modernes, **dans le flow**. Tout ce qui se montre dans une constellation provient d'un **flow spontané**, d'une intuition. L'observation a établi qu'il existe une **source différente** d'où émergent les mouvements et les paroles des représentants.
+
+## L'évolution de la méthode
+
+Cette source est devenue reconnaissable dans le passage de la **méthode de sculpture de Virginia Satir** à la méthode de **Thea Schönfelder**, qui a laissé les personnes bouger et parler librement.
+
+## Le champ sachant et le pont vers la physique quantique
+
+**Bert Hellinger** a décrit la perception représentative comme **« le champ sachant »**. Ce champ invisible contiendrait toute la connaissance d'une famille. La **mécanique quantique** avec l'intrication quantique offre une analogie fascinante : l'**information** peut exister **indépendamment du temps** de manière identique en deux endroits.`,
+    },
+    image: blogWissendesFeld,
+    publishedAt: "2026-04-03",
   },
 ];
