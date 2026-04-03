@@ -119,7 +119,7 @@ Contrairement aux constellations en groupe, les ancres au sol représentent les 
 
 Avec les constellations individuelles, les **dynamiques du système familial** peuvent être montrées et vécues en détail, pour ensuite être résolues.`,
     },
-    image: blogEinzelaufstellung,
+    image: praxisAufstellung,
     publishedAt: "2026-03-11",
   },
   {
