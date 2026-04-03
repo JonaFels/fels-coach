@@ -36,7 +36,7 @@ export const FinalCTA = () => {
             asChild
           >
             <a
-              href="/kontakt#erstgespraech"
+              href="/kontakt"
               onClick={() => trackCTAClick("final_cta", "homepage_final", "link")}
             >
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
