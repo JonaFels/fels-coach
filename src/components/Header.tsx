@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
-import logoIcon from "@/assets/coaching-logo-new.jpeg";
+import logoIcon from "@/assets/coaching-logo-new.png";
 
 const NAV_ITEMS = [
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
