@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { Phone } from "lucide-react";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import profilFreigestellt from "@/assets/jona-fels-freigestellt.png";
 
 export const Hero = () => {
   const { t } = useLanguage();
