@@ -149,7 +149,7 @@ Zuerst die 1920 publik gewordene **Tiefenpsychologie nach Freud**. Darauf folgte
 
 ### Bert Hellinger und die Familienaufstellung
 
-**Bert Hellinger** (geb. Anton Hellinger 1925 in Leimen) hat die heute als Familienaufstellung bekannte Methode entwickelt, die heute ca. **50.000 aktive Familienaufsteller** in über **35 Ländern** (wie z.B. Brasilien, China, Deutschland, Mexiko und Russland) hervorgebracht hat.
+**Bert Hellinger** (geb. Anton Hellinger 1925 in Leimen) hat die heute als [Familienaufstellung](/systemische-familienaufstellung-freiburg) bekannte Methode entwickelt, die heute ca. **50.000 aktive Familienaufsteller** in über **35 Ländern** (wie z.B. Brasilien, China, Deutschland, Mexiko und Russland) hervorgebracht hat.
 
 1993 hatte er seinen großen Durchbruch mit seinem Buch **„Ordnung der Liebe"**. Und ungefähr zehn Jahre zuvor entwickelte er seine Methode. Faszinierenderweise durchlief er in seinem Leben quasi alle Schritte der psychologischen Entwicklung. Im Alter von 26 Jahren wurde er im Mariannhill Orden zum Priester geweiht, nachdem er Philosophie und Theologie studierte. Wurde danach als Missionar in eine Gemeinschaft in Südafrika entsandt und begann 16 Jahre später nach seiner Rückkehr seinen Weg, Therapeut zu werden mit einer **Psychoanalyse-Ausbildung in Wien**. Er reiste in die USA und machte in den folgenden sieben Jahren 4 Ausbildungen in dem Bereich der **Humanistischen Psychologie** (Ur-Schrei Therapie bei Arthur Janov, Gestalttherapie bei Ruth Cohen u. H. Petzold, Transaktionsanalyse bei Fanita English und Hypnotherapie & Familienskulptur bei Milton Erickson u. Virginia Satir).
 
