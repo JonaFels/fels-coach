@@ -333,7 +333,7 @@ Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methode
 
 Was hält den Menschen davon ab glücklich zu sein? Gedanken, ja und der Glaube an das selbstgemachte Weltbild, ja. Aber ganz greifbar, die direkte Umwelt, Freunde, Familie und alle anderen, die uns begleiten oder begleitet haben.
 
-Und natürlich machen sie uns auch glücklich. Doch liegt der jetzige Zustand an den Kontakte und Erfahrungen, die wir bis heute erlebt haben. Und wie sieht es mit diesen Kontakten aus? Im Kontakt, wo Glück oder Unglück erfahrbar wird und auch mit sich selbst? Wir wollen Kontakt und suchen ihn. Es gibt den Begriff Bindungsliebe, der beschreibt, dass wir den Kontakt nicht nur wollen, sondern brauchen und vor allem als Kinder dafür Opfer bringen. Also opfern wir z.B. Bedürfnisse, Glück oder Freiheiten für Liebe.
+Und natürlich machen sie uns auch glücklich. Doch liegt der jetzige Zustand an den Kontakte und Erfahrungen, die wir bis heute erlebt haben. Und wie sieht es mit diesen Kontakten aus? Im Kontakt, wo Glück oder Unglück erfahrbar wird und auch mit sich selbst? Wir wollen Kontakt und suchen ihn. Es gibt den Begriff **Bindungsliebe**, der beschreibt, dass wir den Kontakt nicht nur wollen, sondern brauchen und vor allem als Kinder dafür Opfer bringen. Also opfern wir z.B. Bedürfnisse, Glück oder Freiheiten für [Liebe](/blog/das-wissende-feld-wahrnehmung-beim-familienstellen).
 
 ## Die Neuentscheidung: Das alte Skript umschreiben
 
