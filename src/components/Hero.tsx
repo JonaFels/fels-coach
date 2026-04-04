@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
@@ -7,18 +7,6 @@ import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 export const Hero = () => {
   const { t } = useLanguage();
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (imageRef.current) {
-        const offset = window.scrollY * 0.15;
-        imageRef.current.style.transform = `translateY(${offset}px)`;
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
@@ -72,7 +60,6 @@ export const Hero = () => {
               <div className="absolute inset-0 scale-105 rounded-full bg-secondary/10 blur-2xl" />
               <div className="relative w-64 md:w-80 lg:w-96 aspect-square rounded-full overflow-hidden ring-2 ring-border/20 shadow-xl">
                 <img
-                  ref={imageRef}
                   src={profilBild}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
                   className="w-full h-full rounded-full object-cover object-top will-change-transform"
