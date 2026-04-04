@@ -62,7 +62,7 @@ Im Gegensatz zum Aufstellen in Gruppen repräsentieren die Bodenanker die aufges
 
 > Die neuen Möglichkeiten, die Rollen zu besetzen und zu erfahren, bringen dem Klienten Vorteile – auf der anderen Seite gibt es Variationen, die vom Coach vermieden werden sollten.
 
-Zum einen das Phänomen der **„repräsentierenden Wahrnehmung"** also dass Person in der Aufstellung die Positionen der Familienmitglieder einnehmen und der eisernen Ordnung und Rollenbild, also der Hierarchie und dass nach Hellinger die Frau dem Mann folgt.
+Zum einen das Phänomen der **[„repräsentierenden Wahrnehmung"](/blog/das-wissende-feld-wahrnehmung-beim-familienstellen)** also dass Person in der Aufstellung die Positionen der Familienmitglieder einnehmen und der eisernen Ordnung und Rollenbild, also der Hierarchie und dass nach Hellinger die Frau dem Mann folgt.
 
 Der Coach hat bei Aufstellungen im 1:1 also noch ein bisschen mehr die Aufgabe, **in seiner Position in der Sitzung zu bleiben**.
 
