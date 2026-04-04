@@ -49,7 +49,7 @@ export const Hero = () => {
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
             <div className="relative w-60 md:w-72 lg:w-80">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5" />
-              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-muted/40 shadow-lg shadow-foreground/5 ring-1 ring-border/10">
+              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-muted/40 shadow-md shadow-foreground/5 ring-1 ring-border/10">
                 <img
                   src={profilBild}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
