@@ -1,4 +1,3 @@
-import { } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
@@ -49,25 +48,20 @@ export const Hero = () => {
                 </a>
               </Button>
               <p className="text-sm text-muted-foreground md:text-left text-center">{t("hero.ctaMicrocopy")}</p>
-              
             </div>
           </div>
 
           {/* Right: Image */}
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
-            <div className="relative">
-              {/* Subtle decorative glow */}
-              <div className="absolute inset-0 scale-105 rounded-[2rem] bg-secondary/8 blur-2xl" />
-              <div className="relative w-56 md:w-72 lg:w-80 aspect-[3/4] rounded-[2rem] overflow-hidden ring-1 ring-border/10 shadow-xl">
-                <img
-                  src={profilBild}
-                  alt="Jona Fels – Systemischer Coach in Freiburg"
-                  className="w-full h-full object-cover object-center"
-                  loading="eager"
-                  width="320"
-                  height="427"
-                />
-              </div>
+            <div className="relative w-60 md:w-72 lg:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-foreground/8">
+              <img
+                src={profilBild}
+                alt="Jona Fels – Systemischer Coach in Freiburg"
+                className="w-full h-full object-cover object-center"
+                loading="eager"
+                width="320"
+                height="427"
+              />
             </div>
           </div>
         </div>
