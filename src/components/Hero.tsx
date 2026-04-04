@@ -60,7 +60,6 @@ export const Hero = () => {
               <div className="absolute inset-0 scale-105 rounded-full bg-secondary/10 blur-2xl" />
               <div className="relative w-64 md:w-80 lg:w-96 aspect-square rounded-full overflow-hidden ring-2 ring-border/20 shadow-xl">
                 <img
-                  ref={imageRef}
                   src={profilBild}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
                   className="w-full h-full rounded-full object-cover object-top will-change-transform"
