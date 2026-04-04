@@ -57,15 +57,15 @@ export const Hero = () => {
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
             <div className="relative">
               {/* Subtle decorative glow */}
-              <div className="absolute inset-0 scale-105 rounded-full bg-secondary/10 blur-2xl" />
-              <div className="relative w-64 md:w-80 lg:w-96 aspect-square rounded-full overflow-hidden ring-2 ring-border/20 shadow-xl">
+              <div className="absolute inset-0 scale-105 rounded-[2rem] bg-secondary/8 blur-2xl" />
+              <div className="relative w-56 md:w-72 lg:w-80 aspect-[3/4] rounded-[2rem] overflow-hidden ring-1 ring-border/10 shadow-xl">
                 <img
                   src={profilBild}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
-                  className="w-full h-full rounded-full object-cover object-[center_15%]"
+                  className="w-full h-full object-cover object-center"
                   loading="eager"
-                  width="384"
-                  height="384"
+                  width="320"
+                  height="427"
                 />
               </div>
             </div>
