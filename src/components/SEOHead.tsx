@@ -86,7 +86,7 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     const meta = pageMeta[pathname]?.[language] || defaultMeta[language];
     const pageTitle = title || meta.title;
     const pageDescription = description || meta.description;
-    const pageImage = image || "https://www.fels-coach.de/assets/og-image.jpg";
+    const pageImage = image || "https://www.fels-coach.de/og-image.png";
     const pageUrl = `https://www.fels-coach.de${pathname}`;
 
     // Update document title
