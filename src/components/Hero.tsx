@@ -56,7 +56,7 @@ export const Hero = () => {
             <div className="relative w-60 md:w-72 lg:w-80">
               {/* Soft colored background shape */}
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5" />
-              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden">
+              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-muted/50">
                 <img
                   src={profilFreigestellt}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
