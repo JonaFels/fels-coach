@@ -70,13 +70,13 @@ export const Hero = () => {
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
             <div className="relative">
               {/* Decorative background circle */}
-              <div className="absolute inset-0 scale-110 rounded-full bg-gradient-to-br from-secondary/20 via-primary/10 to-accent/20 blur-xl" />
-              <div className="relative w-64 md:w-80 lg:w-96 aspect-square rounded-full overflow-hidden shadow-2xl shadow-foreground/10 ring-4 ring-background">
+              <div className="absolute inset-0 scale-[1.15] rounded-full bg-gradient-to-br from-secondary/25 via-muted/40 to-primary/15" />
+              <div className="relative w-64 md:w-80 lg:w-96 aspect-square rounded-full overflow-hidden ring-4 ring-background shadow-2xl">
                 <img
                   ref={imageRef}
-                  src={profilBild}
+                  src={profilFreigestellt}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
-                  className="w-full h-full rounded-full object-cover object-top will-change-transform"
+                  className="w-full h-full rounded-full object-cover object-top will-change-transform scale-110"
                   loading="eager"
                   width="384"
                   height="384"
