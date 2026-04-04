@@ -329,7 +329,7 @@ Man stellt sich vor, dass all diese Gedanken zu einer quasi inneren Welt führen
 
 ## Der Einfluss unseres Umfelds: Warum wir unser Glück opfern
 
-Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die Kategorie Coaching fällt.
+Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [Kategorie Coaching](/angebote) fällt.
 
 Was hält den Menschen davon ab glücklich zu sein? Gedanken, ja und der Glaube an das selbstgemachte Weltbild, ja. Aber ganz greifbar, die direkte Umwelt, Freunde, Familie und alle anderen, die uns begleiten oder begleitet haben.
 
@@ -339,7 +339,7 @@ Und natürlich machen sie uns auch glücklich. Doch liegt der jetzige Zustand an
 
 Und jetzt die goldene Frage, wie hören wir auf, Glück zu opfern?
 
-Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des „Skripts des Lebens" erklärt wird.
+Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des [„Skripts des Lebens"](/ebook) erklärt wird. Lies in meinem E-Book mehr darüber, wie du alte Muster durchbrichst.
 
 Wir finden einen Moment wie: „Wenn ich mich einlasse, werde ich zurück gelassen.". Und merken dort ist ein Schmerz und können sogar den Moment finden, als es mit soundso vielen Jahren mit Person soundso war, und wir nehmen ein Gefühl wahr und lassen es zu. Was vor vielleicht ein paar Tagen noch gar nicht möglich war. Und der Satz verschwindet, die nicht beendete Situation wurde beendet.
 
