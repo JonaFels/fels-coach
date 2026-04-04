@@ -1,6 +1,7 @@
 import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.webp";
 import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
+import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
 
 export interface BlogPost {
   id: string;
@@ -299,5 +300,138 @@ Cette source est devenue reconnaissable dans le passage de la **méthode de scul
     },
     image: blogWissendesFeld,
     publishedAt: "2026-04-03",
+  },
+  {
+    id: "4",
+    slug: "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
+    title: {
+      de: "Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.",
+      en: "Trapped in an Old Script? The Real Reason Happiness Often Stays Away.",
+      fr: "Prisonnier d'un vieux scénario ? La vraie raison pour laquelle le bonheur reste souvent absent.",
+    },
+    excerpt: {
+      de: "Was ist Glück an sich überhaupt? Psychologisch betrachtet macht nicht die Situation unglücklich, sondern die Bewertung der Situation. Wie wir aufhören, Glück zu opfern.",
+      en: "What is happiness, really? Psychology tells us it's not the situation that makes us unhappy, but our evaluation of it. How we stop sacrificing happiness.",
+      fr: "Qu'est-ce que le bonheur, au fond ? La psychologie nous dit que ce n'est pas la situation qui nous rend malheureux, mais notre évaluation. Comment arrêter de sacrifier le bonheur.",
+    },
+    content: {
+      de: `## Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.
+
+Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
+
+## Der Blick der Psychologie: Unsere Bewertung entscheidet
+
+Psychologisch betrachtet gibt es dazu z.B. das Grundprinzip der Kognitiven Verhaltenstherapie, das aussagt, nicht die Situation macht unglücklich, sondern die Bewertung der Situation. Also die Gedanken und das Bild, das wir von der Welt haben, machen unglücklich oder eben glücklich.
+
+Fast schon in diesem Sinne hat sich die moderne Positive Psychologie begründet und fragt danach, was das Leben eigentlich lebenswert macht. Dort gibt es das PERMA-Modell, wo es auch um eine höhere Bedeutung im Leben geht, also einen Sinn oder Aufgabe im Leben. Und auch die ACT (Akzeptanz- und Commitment-Therapie) sagt aus, dass Werte im Leben und deren Umsetzung eine positive Grundstimmung ins Leben bringen. Dazu gehört auch die Akzeptanz der negativen Zustände.
+
+Mit all dem Wissen im Gepäck, was jetzt tun? Der schnellste Weg ist bestimmt sich jemanden zu suchen, der sich mit all dem auskennt, einen Psychologe, Therapeuten oder Coach. Oder Retreats zu Themen, die dazu passen. Viele machen das, aber mit all den Theorien und dem Wissen, wer blickt da durch?
+
+## Die spirituelle Sicht: Der Schleier der Gedanken
+
+Daneben gibt es auch noch die spirituelle Sicht auf die Dinge. Hier geht es um den Weg von der Ego-Identifikation zum Selbst. Wo die Gedanken, die zu einer negativen Weltsicht führen, dem Ego entsprechen. Also der Identität, die durch unser Denken entsteht.
+
+Man stellt sich vor, dass all diese Gedanken zu einer quasi inneren Welt führen, die nicht der Wirklichkeit entspricht. Es wird auch Schleier oder Maya genannt, was quasi zwischen dem Blick oder Bild eines Menschen und der Wirklichkeit liegt.
+
+## Der Einfluss unseres Umfelds: Warum wir unser Glück opfern
+
+Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die Kategorie Coaching fällt.
+
+Was hält den Menschen davon ab glücklich zu sein? Gedanken, ja und der Glaube an das selbstgemachte Weltbild, ja. Aber ganz greifbar, die direkte Umwelt, Freunde, Familie und alle anderen, die uns begleiten oder begleitet haben.
+
+Und natürlich machen sie uns auch glücklich. Doch liegt der jetzige Zustand an den Kontakte und Erfahrungen, die wir bis heute erlebt haben. Und wie sieht es mit diesen Kontakten aus? Im Kontakt, wo Glück oder Unglück erfahrbar wird und auch mit sich selbst? Wir wollen Kontakt und suchen ihn. Es gibt den Begriff Bindungsliebe, der beschreibt, dass wir den Kontakt nicht nur wollen, sondern brauchen und vor allem als Kinder dafür Opfer bringen. Also opfern wir z.B. Bedürfnisse, Glück oder Freiheiten für Liebe.
+
+## Die Neuentscheidung: Das alte Skript umschreiben
+
+Und jetzt die goldene Frage, wie hören wir auf, Glück zu opfern?
+
+Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des „Skripts des Lebens" erklärt wird.
+
+Wir finden einen Moment wie: „Wenn ich mich einlasse, werde ich zurück gelassen.". Und merken dort ist ein Schmerz und können sogar den Moment finden, als es mit soundso vielen Jahren mit Person soundso war, und wir nehmen ein Gefühl wahr und lassen es zu. Was vor vielleicht ein paar Tagen noch gar nicht möglich war. Und der Satz verschwindet, die nicht beendete Situation wurde beendet.
+
+Die Gedanken um diesen Satz vom Anfang sind nicht mehr da und auch die Anhaftung an das Erlebnis ist nicht mehr da. Und auch die Verbindung zu dieser Person soundso ist um genau diesen Teil kleiner geworden. Diesen meist kindlichen Anteil, der sagt, oder sagte: „Ich brauche dich um zu leben".
+
+## Fazit: Den Raum für sich selbst wieder öffnen
+
+Alle Theorien und Methoden kommen letztlich darin zusammen, dass es um ein Gefühl geht, das noch in der Gegenwart ist, obwohl die Situation in der Vergangenheit ist. Es sorgt für bestimmte Gedanken, die sogar zu Konzepten zusammengeführt werden können.
+
+Ob über die Gedanken oder das Gefühl, das Verarbeiten der nicht beendeten Situationen sorgt für Raum, sich selbst wieder mehr zu erkennen. Die Gefühle wieder zuzulassen, die Gedanken mit erwachsenem Bewusstsein neu einzuordnen und die Grundstimmung im Leben zu verändern.`,
+      en: `## Trapped in an Old Script? The Real Reason Happiness Often Stays Away.
+
+What is happiness in itself, really? Some think of achieving goals or certain things they enjoy doing. But actually, happiness only exists in the present, in the here and now. Many speak of flow.
+
+## The Psychological Perspective: Our Evaluation Decides
+
+From a psychological perspective, there is, for example, the basic principle of Cognitive Behavioral Therapy, which states that it is not the situation that makes us unhappy, but the evaluation of the situation. So the thoughts and the image we have of the world make us unhappy or indeed happy.
+
+Almost in this very spirit, modern Positive Psychology was founded and asks what actually makes life worth living. There is the PERMA model, which also addresses a higher meaning in life, a purpose or mission. And ACT (Acceptance and Commitment Therapy) also states that values in life and their implementation bring a positive basic mood to life. This also includes the acceptance of negative states.
+
+With all this knowledge in tow, what to do now? The fastest way is certainly to find someone who knows all about it — a psychologist, therapist, or coach. Or retreats on relevant topics. Many do this, but with all the theories and knowledge, who can see through it all?
+
+## The Spiritual View: The Veil of Thoughts
+
+Besides this, there is also the spiritual view of things. Here it is about the path from ego-identification to the Self. Where the thoughts that lead to a negative worldview correspond to the ego — the identity that arises through our thinking.
+
+One imagines that all these thoughts lead to a kind of inner world that does not correspond to reality. It is also called the veil or Maya, which lies between a person's view or image and reality.
+
+## The Influence of Our Environment: Why We Sacrifice Our Happiness
+
+Now, alongside the purely psychotherapeutic or spiritual view and methods like classical behavioral therapy or the practice of meditation, let us turn to a more concrete approach — one that in this case is a mixture of both and falls under the category of coaching.
+
+What keeps people from being happy? Thoughts, yes, and the belief in a self-made worldview, yes. But very tangibly, the immediate environment — friends, family, and everyone else who accompanies or has accompanied us.
+
+And of course, they also make us happy. Yet the current state is due to the contacts and experiences we have had up to today. And how do these contacts look? In contact, where happiness or unhappiness becomes experienceable — and also with oneself? We want contact and seek it. There is the concept of bonding love, which describes that we not only want contact but need it, and especially as children, we make sacrifices for it. So we sacrifice, for example, needs, happiness, or freedoms for love.
+
+## The New Decision: Rewriting the Old Script
+
+And now the golden question: how do we stop sacrificing happiness?
+
+First, the realization that we do it, and then looking at why and when we do it. Where the feelings emerge? And ultimately making a new decision. As explained in Transactional Analysis through the theory of the "Life Script."
+
+We find a moment like: "If I open up, I will be abandoned." And we notice there is a pain, and we can even find the moment when it was at such-and-such an age with person such-and-such, and we perceive a feeling and allow it. Something that perhaps a few days ago was not even possible. And the sentence disappears — the unfinished situation was completed.
+
+The thoughts around this initial sentence are no longer there, and the attachment to the experience is gone too. And the connection to that person has become smaller by exactly that part — this mostly childlike part that says, or said: "I need you to live."
+
+## Conclusion: Reopening the Space for Yourself
+
+All theories and methods ultimately come together in the fact that it is about a feeling that is still in the present, even though the situation is in the past. It creates certain thoughts that can even be combined into concepts.
+
+Whether through thoughts or feelings, processing the unfinished situations creates space to recognize oneself again. To allow the feelings again, to reclassify the thoughts with adult awareness, and to change the basic mood in life.`,
+      fr: `## Prisonnier d'un vieux scénario ? La vraie raison pour laquelle le bonheur reste souvent absent.
+
+Qu'est-ce que le bonheur en soi ? Certains pensent à l'atteinte d'objectifs ou à certaines choses qu'ils aiment faire. Mais en réalité, le bonheur n'existe que dans le présent, dans l'ici et maintenant. Beaucoup parlent de flow.
+
+## Le regard de la psychologie : Notre évaluation décide
+
+D'un point de vue psychologique, il existe par exemple le principe fondamental de la thérapie cognitivo-comportementale, qui affirme que ce n'est pas la situation qui rend malheureux, mais l'évaluation de la situation. Ce sont donc les pensées et l'image que nous avons du monde qui nous rendent malheureux ou heureux.
+
+C'est presque dans cet esprit que la psychologie positive moderne s'est fondée et pose la question de ce qui rend la vie digne d'être vécue. Il y a le modèle PERMA, qui traite aussi d'un sens plus élevé dans la vie. Et l'ACT (thérapie d'acceptation et d'engagement) affirme que les valeurs dans la vie et leur mise en œuvre apportent une humeur de base positive. Cela inclut aussi l'acceptation des états négatifs.
+
+## La vue spirituelle : Le voile des pensées
+
+Il y a aussi la vision spirituelle des choses. Ici, il s'agit du chemin de l'identification à l'ego vers le Soi. Les pensées qui mènent à une vision négative du monde correspondent à l'ego — l'identité qui naît de notre pensée.
+
+On imagine que toutes ces pensées mènent à une sorte de monde intérieur qui ne correspond pas à la réalité. On l'appelle aussi le voile ou Maya.
+
+## L'influence de notre environnement : Pourquoi nous sacrifions notre bonheur
+
+Qu'est-ce qui empêche les gens d'être heureux ? Les pensées, oui, et la croyance en une vision du monde auto-construite, oui. Mais très concrètement, l'environnement direct — amis, famille et tous ceux qui nous accompagnent.
+
+Il y a le concept de l'amour d'attachement, qui décrit que nous ne voulons pas seulement le contact mais en avons besoin, et surtout en tant qu'enfants, nous faisons des sacrifices pour cela. Nous sacrifions par exemple des besoins, du bonheur ou des libertés pour l'amour.
+
+## La nouvelle décision : Réécrire l'ancien scénario
+
+Et maintenant la question en or : comment arrêtons-nous de sacrifier le bonheur ?
+
+D'abord la prise de conscience que nous le faisons, puis regarder pourquoi et quand nous le faisons. Comme l'explique l'analyse transactionnelle à travers la théorie du « scénario de vie ».
+
+Nous trouvons un moment comme : « Si je m'ouvre, je serai abandonné. » Et nous remarquons qu'il y a une douleur, et la phrase disparaît — la situation inachevée a été terminée.
+
+## Conclusion : Rouvrir l'espace pour soi-même
+
+Toutes les théories et méthodes convergent finalement vers le fait qu'il s'agit d'un sentiment encore présent, bien que la situation soit dans le passé. Que ce soit par les pensées ou le sentiment, le traitement des situations inachevées crée de l'espace pour se reconnaître à nouveau.`,
+    },
+    image: blogAltesDrehbuch,
+    publishedAt: "2026-04-04",
   },
 ];

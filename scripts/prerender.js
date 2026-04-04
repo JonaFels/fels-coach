@@ -30,7 +30,7 @@ const staticRoutes = [
 
 // Blog-Artikel (falls vorhanden)
 const blogSlugs = [
-  // 'mein-erster-artikel',
+  'gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt',
 ];
 
 const distDir = join(__dirname, '..', 'dist');
