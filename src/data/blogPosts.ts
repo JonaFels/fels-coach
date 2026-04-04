@@ -329,7 +329,7 @@ Man stellt sich vor, dass all diese Gedanken zu einer quasi inneren Welt führen
 
 ## Der Einfluss unseres Umfelds: Warum wir unser Glück opfern
 
-Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [Kategorie Coaching](/angebote) fällt.
+Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [Kategorie Coaching](/systemische-familienaufstellung-freiburg) fällt.
 
 Was hält den Menschen davon ab glücklich zu sein? Gedanken, ja und der Glaube an das selbstgemachte Weltbild, ja. Aber ganz greifbar, die direkte Umwelt, Freunde, Familie und alle anderen, die uns begleiten oder begleitet haben.
 
