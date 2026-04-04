@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { Phone } from "lucide-react";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import profilFreigestellt from "@/assets/jona-fels-freigestellt.png";
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -53,15 +53,19 @@ export const Hero = () => {
 
           {/* Right: Image */}
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
-            <div className="relative w-60 md:w-72 lg:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-foreground/8">
-              <img
-                src={profilBild}
-                alt="Jona Fels – Systemischer Coach in Freiburg"
-                className="w-full h-full object-cover object-center"
-                loading="eager"
-                width="320"
-                height="427"
-              />
+            <div className="relative w-60 md:w-72 lg:w-80">
+              {/* Soft colored background shape */}
+              <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5" />
+              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden">
+                <img
+                  src={profilFreigestellt}
+                  alt="Jona Fels – Systemischer Coach in Freiburg"
+                  className="w-full h-full object-cover object-[center_20%]"
+                  loading="eager"
+                  width="320"
+                  height="427"
+                />
+              </div>
             </div>
           </div>
         </div>
