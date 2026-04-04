@@ -68,7 +68,7 @@ Der Coach hat bei Aufstellungen im 1:1 also noch ein bisschen mehr die Aufgabe, 
 
 ### Fazit
 
-Mit den Einzelaufstellungen lassen sich die **Dynamiken im Familiensystem** sehr detailliert aufzeigen und erleben lassen, um dann gelöst zu werden. Die Perspektiven können getauscht werden für mehr **Klarheit und Verständnis des Ganzen**.`,
+Mit den Einzelaufstellungen lassen sich die **[Dynamiken im Familiensystem](/blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt)** sehr detailliert aufzeigen und erleben lassen, um dann gelöst zu werden. Die Perspektiven können getauscht werden für mehr **Klarheit und Verständnis des Ganzen**.`,
       en: `## Family Constellations in an Individual Session
 
 Many people know family constellations from group constellation evenings. But how does it work in an individual format, with just two people?
