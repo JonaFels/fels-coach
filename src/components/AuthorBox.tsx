@@ -33,10 +33,16 @@ export const AuthorBox = () => {
             <p className="text-muted-foreground text-sm mt-3 leading-relaxed max-w-lg">
               {t("author.bio")}
             </p>
-            <div className="flex flex-wrap gap-2 mt-4 justify-center sm:justify-start">
+            <div className="flex flex-wrap gap-2 mt-4 justify-center sm:justify-start items-center">
               <span className="px-2 py-1 text-xs bg-muted rounded-full text-muted-foreground">
                 {t("author.credential1")}
               </span>
+              <Link
+                to="/ebook"
+                className="inline-flex items-center px-4 py-1.5 text-xs font-medium rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
+              >
+                📘 Mein Gratis E-Book sichern
+              </Link>
             </div>
           </div>
         </div>
