@@ -319,7 +319,7 @@ Psychologisch betrachtet gibt es dazu z.B. das Grundprinzip der Kognitiven Verha
 
 Fast schon in diesem Sinne hat sich die moderne Positive Psychologie begründet und fragt danach, was das Leben eigentlich lebenswert macht. Dort gibt es das PERMA-Modell, wo es auch um eine höhere Bedeutung im Leben geht, also einen Sinn oder Aufgabe im Leben. Und auch die ACT (Akzeptanz- und Commitment-Therapie) sagt aus, dass Werte im Leben und deren Umsetzung eine positive Grundstimmung ins Leben bringen. Dazu gehört auch die Akzeptanz der negativen Zustände.
 
-Mit all dem Wissen im Gepäck, was jetzt tun? Der schnellste Weg ist bestimmt sich jemanden zu suchen, der sich mit all dem auskennt, einen Psychologe, Therapeuten oder Coach. Oder Retreats zu Themen, die dazu passen. Viele machen das, aber mit all den Theorien und dem Wissen, wer blickt da durch?
+Mit all dem Wissen im Gepäck, was jetzt tun? Der schnellste Weg ist bestimmt sich jemanden zu suchen, der sich mit all dem auskennt, einen Psychologe, Therapeuten oder [Coach](/angebote). Oder Retreats zu Themen, die dazu passen. Viele machen das, aber mit all den Theorien und dem Wissen, wer blickt da durch?
 
 ## Die spirituelle Sicht: Der Schleier der Gedanken
 
