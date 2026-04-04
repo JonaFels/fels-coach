@@ -66,21 +66,21 @@ const Datenschutz = () => {
 
             <hr />
 
-            <h2>6. Kontaktaufnahme, Kontaktformular & Datenbank</h2>
+            <h2>6. Kontaktaufnahme, Kontaktformular &amp; Datenbank (Lovable)</h2>
             <p>Wenn du mich über das Kontaktformular, per E-Mail oder über Telegram kontaktierst, speichere ich deine Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht), um deine Anfrage zu beantworten.</p>
-            <p>Die Daten aus dem Kontaktformular werden verschlüsselt in einer sicheren Datenbank bei Supabase, Inc. (USA) gespeichert und für den E-Mail-Versand über den Dienst Resend, Inc. (USA) verarbeitet. Bei der Nutzung von Telegram weise ich darauf hin, dass Daten auf den Servern des Anbieters (ggf. außerhalb der EU) verarbeitet werden.</p>
+            <p>Die Daten aus dem Kontaktformular werden über die Plattform Lovable (Lovable AB, Schweden) verarbeitet, die als technische Infrastruktur für die Datenbank Supabase, Inc. (USA) einsetzt. Für den eigentlichen E-Mail-Versand nutze ich den Dienst Resend, Inc. (USA). Bei der Nutzung von Telegram weise ich darauf hin, dass Daten auf den Servern des Anbieters (ggf. außerhalb der EU) verarbeitet werden.</p>
             <p>Rechtsgrundlage: Anbahnung oder Erfüllung eines Vertrages (Art. 6 Abs. 1 lit. b DSGVO) sowie berechtigtes Interesse an der Kommunikation (Art. 6 Abs. 1 lit. f DSGVO).</p>
 
             <hr />
 
             <h2>7. KI-Chatbot (Chatbase)</h2>
-            <p>Für schnelle Antworten auf häufige Fragen biete ich einen KI-gestützten Chatbot von Chatbase, Inc. (USA) an. Der Chatbot wird erst aktiv, wenn du ihn nutzt. Bitte gib in den Chat keine sensiblen persönlichen Daten (wie z.&nbsp;B. gesundheitliche Details) ein. Deine Eingaben werden zur Verarbeitung der Antwort an den Anbieter übermittelt.</p>
+            <p>Für schnelle Antworten auf häufige Fragen biete ich einen KI-gestützter Chatbot von Chatbase, Inc. (USA) an. Der Chatbot wird erst aktiv, wenn du ihn nutzt. Bitte gib in den Chat keine sensiblen persönlichen Daten (wie z.&nbsp;B. gesundheitliche Details) ein. Deine Eingaben werden zur Verarbeitung der Antwort an den Anbieter übermittelt.</p>
             <p>Rechtsgrundlage: Deine Einwilligung durch Nutzung des Chats (Art. 6 Abs. 1 lit. a DSGVO).</p>
 
             <hr />
 
             <h2>8. Kostenloses E-Book</h2>
-            <p>Wenn du mein kostenloses E-Book anforderst, speichere ich deinen Namen und deine E-Mail-Adresse in meiner Datenbank (Supabase) und nutze den Dienst Resend für den Versand. Die Daten werden ausschließlich für die Zustellung des E-Books verwendet. Wenn du keinen weiteren Kontakt wünschst, werden die Daten nach dem Versand gelöscht und nicht für Werbezwecke missbraucht.</p>
+            <p>Wenn du mein kostenloses E-Book anforderst, speichere ich deinen Namen und deine E-Mail-Adresse über die Plattform Lovable (Lovable AB, Schweden) und nutze den Dienst Resend, um dir das E-Book zuzusenden. Die Daten werden ausschließlich für diese Zustellung verwendet. Wenn du keinen weiteren Kontakt wünschst, werden die Daten nach dem Versand gelöscht und nicht für Werbezwecke missbraucht.</p>
             <p>Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
             <hr />
@@ -93,13 +93,13 @@ const Datenschutz = () => {
             <hr />
 
             <h2>10. Buchhaltung und Finanzen (Lexoffice)</h2>
-            <p>Um meine steuerlichen und buchhalterischen Pflichten zu erfüllen, nutze ich die Software lexoffice (Haufe-Lexware GmbH & Co. KG, Deutschland). Wenn es zu einer kostenpflichtigen Coaching-Zusammenarbeit kommt, werden deine rechnungsrelevanten Daten (Name, Adresse, Betrag) dort verarbeitet und entsprechend der gesetzlichen Aufbewahrungsfristen (in der Regel 10 Jahre) gespeichert.</p>
+            <p>Um meine steuerlichen und buchhalterischen Pflichten zu erfüllen, nutze ich die Software lexoffice (Haufe-Lexware GmbH &amp; Co. KG, Deutschland). Wenn es zu einer kostenpflichtigen Coaching-Zusammenarbeit kommt, werden deine rechnungsrelevanten Daten (Name, Adresse, Betrag) dort verarbeitet und entsprechend der gesetzlichen Aufbewahrungsfristen (in der Regel 10 Jahre) gespeichert.</p>
             <p>Rechtsgrundlage: Erfüllung rechtlicher Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO).</p>
 
             <hr />
 
             <h2>11. Datenübermittlung in Drittländer (USA)</h2>
-            <p>Einige der von mir eingesetzten Dienstleister (Google, Vercel, Supabase, Resend, Chatbase) haben ihren Hauptsitz in den USA. Wenn Daten in die USA übertragen werden, stütze ich mich auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Unternehmen. Sollte ein Unternehmen nicht zertifiziert sein, nutze ich hilfsweise EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, um ein Datenschutzniveau zu gewährleisten, das dem europäischen Standard entspricht.</p>
+            <p>Einige der von mir eingesetzten Dienstleister (oder deren Unterauftragnehmer wie bei Supabase) haben ihren Hauptsitz in den USA (z.&nbsp;B. Google, Vercel, Resend, Chatbase). Wenn Daten in die USA übertragen werden, stütze ich mich auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Unternehmen. Sollte ein Unternehmen nicht zertifiziert sein, nutze ich hilfsweise EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, um ein Datenschutzniveau zu gewährleisten, das dem europäischen Standard entspricht. Die Plattform Lovable (Lovable AB) hat ihren Sitz in Schweden und unterliegt somit direkt der europäischen DSGVO.</p>
 
           </div>
         </div>
