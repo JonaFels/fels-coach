@@ -274,9 +274,7 @@ This source became recognizable for the first time in the context of the further
 > Interestingly, in modern physics, quantum mechanics describes quantum entanglement, which states that photons separated by virtually infinite distances change simultaneously with each other.
 
 They behave in relation to each other and react to the other photon no matter how far apart they are. It therefore explains the fundamental possibility that **information** – or in physics, the state – can exist **independent of time** in an identical way in two places. Even if physics cannot yet confirm this in larger systems.`,
-      fr: `## Le champ sachant : Comment fonctionne la perception dans les constellations familiales ?
-
-Comment est-il possible que des étrangers puissent reproduire le système familial d'une autre personne ? Il n'y a certainement pas de réponse qui mènera tout le monde à un moment de révélation. On peut tenter des explications par le **langage corporel** et l'idée que les personnes dans une constellation savent comment se comporter grâce à un **comportement socialement appris**. Les rapports des participants montrent cependant que **beaucoup plus d'informations** sont révélées par la perception représentative.
+      fr: `Comment est-il possible que des étrangers puissent reproduire le système familial d'une autre personne ? Il n'y a certainement pas de réponse qui mènera tout le monde à un moment de révélation. On peut tenter des explications par le **langage corporel** et l'idée que les personnes dans une constellation savent comment se comporter grâce à un **comportement socialement appris**. Les rapports des participants montrent cependant que **beaucoup plus d'informations** sont révélées par la perception représentative.
 
 ## Miroir ou intuition ? Tentatives d'explication d'un phénomène
 
