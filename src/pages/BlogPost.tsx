@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { AuthorBox } from "@/components/AuthorBox";
+import { BlogSidebarTestimonials } from "@/components/BlogSidebarTestimonials";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
@@ -89,28 +91,39 @@ const BlogPost = () => {
       <SEOHead title={`${post.title[language]} | Jona Fels`} description={post.excerpt[language]} image={post.image} type="article" />
       <Header />
       <main id="main-content" className="flex-1 py-16 md:py-20">
-        <article className="container mx-auto px-4 max-w-3xl">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px]">
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            {t("blog.backToList")}
-          </Link>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="flex flex-col lg:flex-row gap-10">
+            {/* Main article */}
+            <article className="flex-1 max-w-3xl">
+              <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px]">
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                {t("blog.backToList")}
+              </Link>
 
-          {post.image && (
-            <div className="aspect-video rounded-xl overflow-hidden mb-8">
-              <img src={post.image} alt={`Titelbild: ${post.title[language]}`} className="w-full h-full object-cover" loading="eager" />
-            </div>
-          )}
+              {post.image && (
+                <div className="aspect-video rounded-xl overflow-hidden mb-8">
+                  <img src={post.image} alt={`Titelbild: ${post.title[language]}`} className="w-full h-full object-cover" loading="eager" />
+                </div>
+              )}
 
-          <header className="mb-8">
-            <p className="text-sm text-muted-foreground mb-3">{formatDate(post.publishedAt)}</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">{post.title[language]}</h1>
-          </header>
+              <header className="mb-8">
+                <p className="text-sm text-muted-foreground mb-3">{formatDate(post.publishedAt)}</p>
+                <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">{post.title[language]}</h1>
+              </header>
 
-          <div className="prose prose-lg max-w-none">{renderContent(post.content[language])}</div>
+              <div className="prose prose-lg max-w-none">{renderContent(post.content[language])}</div>
 
+              <AuthorBox />
+            </article>
 
-          
-        </article>
+            {/* Sidebar */}
+            <aside className="lg:w-72 flex-shrink-0">
+              <div className="lg:sticky lg:top-24">
+                <BlogSidebarTestimonials />
+              </div>
+            </aside>
+          </div>
+        </div>
       </main>
       <Footer />
       <CookieBanner />
