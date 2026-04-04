@@ -16,8 +16,7 @@ const Datenschutz = () => {
           </h1>
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
-            <p>Willkommen bei meiner Datenschutzerklärung. Der Schutz deiner persönlichen Daten liegt mir sehr am Herzen, und ich möchte, dass du dich beim Besuch meiner Webseite fels-coach.de sicher fühlst.</p>
-            <p>Deshalb erkläre ich hier transparent, welche Daten ich erhebe und wofür ich sie nutze.</p>
+            <p>Willkommen bei meiner Datenschutzerklärung. Der Schutz deiner persönlichen Daten liegt mir sehr am Herzen. Ich möchte, dass du dich beim Besuch meiner Webseite fels-coach.de absolut sicher fühlst. Deshalb erkläre ich dir hier transparent, verständlich und ohne kompliziertes Fachchinesisch, welche Daten ich erhebe, wofür ich sie nutze und welche Rechte du hast.</p>
 
             <hr />
 
@@ -34,84 +33,73 @@ const Datenschutz = () => {
             <hr />
 
             <h2>2. Allgemeine Informationen zur Datenverarbeitung</h2>
-            <p>Ich behandle deine Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO). Personenbezogene Daten sind alle Informationen, die sich auf dich als Person beziehen, wie Name, Adresse oder deine E-Mail-Adresse.</p>
-            <p>Meine Webseite nutzt eine SSL- bzw. TLS-Verschlüsselung, die man am "https://" in der Adresszeile erkennt.</p>
+            <p>Ich behandle deine Daten streng vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften, insbesondere der europäischen Datenschutz-Grundverordnung (DSGVO). Personenbezogene Daten sind alle Informationen, die sich auf dich als Person beziehen lassen (z.&nbsp;B. Name, E-Mail-Adresse oder IP-Adresse).</p>
+            <p>Um deine Daten bei der Übertragung zu schützen, nutzt diese Webseite eine SSL- bzw. TLS-Verschlüsselung. Du erkennst dies an dem "https://" und dem Schloss-Symbol in der Adresszeile deines Browsers. Mit allen externen Dienstleistern, die Daten in meinem Auftrag verarbeiten, habe ich sogenannte Auftragsverarbeitungsverträge (AVV) geschlossen, um den Schutz deiner Daten gesetzlich abzusichern.</p>
 
             <hr />
 
             <h2>3. Deine Rechte als Betroffener</h2>
-            <p>Du hast jederzeit folgende Rechte bezüglich deiner personenbezogenen Daten:</p>
+            <p>Du hast jederzeit das Recht, die Kontrolle über deine Daten zu behalten. Deine Rechte umfassen:</p>
             <ul>
-              <li><strong>Auskunftsrecht (Art. 15 DSGVO)</strong></li>
-              <li><strong>Berichtigungsrecht (Art. 16 DSGVO)</strong></li>
-              <li><strong>Löschungsrecht (Art. 17 DSGVO)</strong></li>
-              <li><strong>Einschränkung der Verarbeitung (Art. 18 DSGVO)</strong></li>
-              <li><strong>Datenübertragbarkeit (Art. 20 DSGVO)</strong></li>
-              <li><strong>Widerspruchsrecht (Art. 21 DSGVO)</strong></li>
+              <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Du kannst erfragen, welche Daten ich von dir verarbeite.</li>
+              <li><strong>Berichtigungsrecht (Art. 16 DSGVO):</strong> Du kannst die Korrektur falscher Daten verlangen.</li>
+              <li><strong>Löschungsrecht (Art. 17 DSGVO):</strong> Du kannst die Löschung deiner Daten verlangen, sofern keine gesetzlichen Aufbewahrungsfristen dagegen sprechen.</li>
+              <li><strong>Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Du kannst die Sperrung deiner Daten verlangen.</li>
+              <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Du kannst deine Daten in einem gängigen Format anfordern.</li>
+              <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Du kannst der Verarbeitung deiner Daten widersprechen.</li>
             </ul>
-            <p>Kontaktiere mich unter <a href="mailto:info@fels-coach.de">info@fels-coach.de</a>.</p>
-
-            <h3>Beschwerderecht bei der Aufsichtsbehörde</h3>
-            <p>
-              Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg<br />
-              Lautenschlagerstraße 20, 70173 Stuttgart<br />
-              <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer">www.baden-wuerttemberg.datenschutz.de</a>
-            </p>
+            <p>Um eines dieser Rechte auszuüben, schreib mir einfach eine E-Mail an <a href="mailto:info@fels-coach.de">info@fels-coach.de</a>. Zudem hast du das Recht, dich bei einer Aufsichtsbehörde zu beschweren, zum Beispiel beim Landesbeauftragten für den Datenschutz Baden-Württemberg.</p>
 
             <hr />
 
-            <h2>4. Datenverarbeitung auf meiner Webseite</h2>
-
-            <h3>Server-Logfiles</h3>
-            <p>Beim Besuch meiner Webseite werden automatisch technische Daten erhoben, die dein Browser übermittelt – z.&nbsp;B. IP-Adresse, Browsertyp, Betriebssystem, die aufgerufene Seite und der Zeitpunkt des Zugriffs. Diese Daten sind notwendig, um die Webseite technisch bereitzustellen und die Sicherheit zu gewährleisten. Sie werden nicht mit anderen Daten zusammengeführt.</p>
-            <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Speicherdauer: 7 Tage.</p>
-
-            <h3>Cookies</h3>
-            <p>Meine Webseite verwendet technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind (z.&nbsp;B. für die Sprachauswahl oder den Cookie-Banner-Status). Analyse-Cookies, die dein Nutzungsverhalten auswerten, werden nur gesetzt, wenn du dem über den Cookie-Banner ausdrücklich zustimmst. Du kannst deine Einwilligung jederzeit widerrufen.</p>
-            <p>Rechtsgrundlage: Notwendige Cookies – Art. 6 Abs. 1 lit. f DSGVO; Analyse-Cookies – Art. 6 Abs. 1 lit. a DSGVO.</p>
+            <h2>4. Hosting und Server-Logfiles</h2>
+            <p>Meine Webseite wird von dem Anbieter Vercel, Inc. (USA) gehostet. Bei jedem Aufruf der Webseite erfasst das System automatisch Daten, die dein Browser übermittelt (Server-Logfiles). Dazu gehören: IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs sowie die aufgerufene Seite.</p>
+            <p>Diese Daten sind technisch zwingend notwendig, um dir die Webseite fehlerfrei anzuzeigen und die Sicherheit der Systeme zu gewährleisten. Sie werden nicht mit anderen Datenquellen zusammengeführt.</p>
+            <p>Rechtsgrundlage: Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO). Speicherdauer: In der Regel 7 Tage.</p>
 
             <hr />
 
-            <h2>5. E-Book Download</h2>
-            <p>Wenn du mein kostenloses E-Book herunterlädst, gibst du deinen Namen und deine E-Mail-Adresse an. Diese Daten verwende ich ausschließlich, um dir das E-Book per E-Mail zuzusenden. Nach dem erfolgreichen Versand werden die Daten gelöscht und nicht für weitere Zwecke wie Newsletter oder Marketing verwendet.</p>
-            <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+            <h2>5. Cookies und Webanalyse (Google Analytics 4)</h2>
+            <p>Meine Webseite verwendet technisch notwendige Cookies, die für den Betrieb der Seite unerlässlich sind (z.&nbsp;B. für das Speichern deiner Cookie-Einstellungen).</p>
+            <p>Zur Verbesserung meines Angebots nutze ich zudem Google Analytics 4 (Anbieter: Google Ireland Limited). Hierbei werden pseudonymisierte Nutzungsdaten (z.&nbsp;B. besuchte Seiten, Verweildauer) erhoben. Analyse-Cookies werden nur gesetzt, wenn du dem über den Cookie-Banner ausdrücklich zustimmst. Du kannst deine Einwilligung jederzeit über die Einstellungen widerrufen.</p>
+            <p>Rechtsgrundlage: Notwendige Cookies über berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO); Analytics über deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
 
             <hr />
 
-            <h2>6. Kontaktaufnahme</h2>
-            <p>Wenn du mich über das Kontaktformular, per E-Mail oder über Telegram kontaktierst, werden die von dir mitgeteilten Daten (Name, E-Mail-Adresse, Nachrichteninhalt) gespeichert, um deine Anfrage zu bearbeiten und bei Rückfragen antworten zu können. Die Daten werden nicht ohne deine Einwilligung an Dritte weitergegeben und nach Abschluss der Kommunikation bzw. spätestens nach 3 Jahren gelöscht – es sei denn, gesetzliche Aufbewahrungspflichten stehen dem entgegen.</p>
-            <p>Bitte beachte, dass bei der Nutzung von Telegram Daten an Server des Anbieters (auch außerhalb der EU) übertragen werden können. Die Nutzung von Telegram erfolgt auf freiwilliger Basis.</p>
-            <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+            <h2>6. Kontaktaufnahme, Kontaktformular & Datenbank</h2>
+            <p>Wenn du mich über das Kontaktformular, per E-Mail oder über Telegram kontaktierst, speichere ich deine Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht), um deine Anfrage zu beantworten.</p>
+            <p>Die Daten aus dem Kontaktformular werden verschlüsselt in einer sicheren Datenbank bei Supabase, Inc. (USA) gespeichert und für den E-Mail-Versand über den Dienst Resend, Inc. (USA) verarbeitet. Bei der Nutzung von Telegram weise ich darauf hin, dass Daten auf den Servern des Anbieters (ggf. außerhalb der EU) verarbeitet werden.</p>
+            <p>Rechtsgrundlage: Anbahnung oder Erfüllung eines Vertrages (Art. 6 Abs. 1 lit. b DSGVO) sowie berechtigtes Interesse an der Kommunikation (Art. 6 Abs. 1 lit. f DSGVO).</p>
 
             <hr />
 
-            <h2>7. Externe Dienste</h2>
-            <p>Für bestimmte Funktionen meiner Webseite nutze ich externe Dienstleister. Im Folgenden erkläre ich, welche Dienste eingesetzt werden, wozu sie dienen und auf welcher Rechtsgrundlage die Datenverarbeitung erfolgt.</p>
-
-            <h3>Google Analytics 4</h3>
-            <p>Zur Auswertung der Webseitennutzung verwende ich Google Analytics 4. Dabei werden pseudonymisierte Nutzungsdaten (z.&nbsp;B. besuchte Seiten, Verweildauer, Gerätetyp) erhoben, um mein Angebot zu verbessern. Die Datenverarbeitung erfolgt ausschließlich nach deiner Einwilligung über den Cookie-Banner. Du kannst die Einwilligung jederzeit widerrufen.</p>
-            <p>Anbieter: Google Ireland Limited. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO.</p>
-
-            <h3>E-Mail-Versand (Resend)</h3>
-            <p>Für den Versand von E-Mails (z.&nbsp;B. E-Book-Zustellung, Kontaktformular-Bestätigungen) nutze ich den Dienst Resend. Dabei werden dein Name und deine E-Mail-Adresse an Resend übermittelt, soweit dies zur Vertragserfüllung erforderlich ist.</p>
-            <p>Anbieter: Resend, Inc., USA. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
-
-            <h3>Hosting und Backend</h3>
-            <p>Diese Webseite wird über Vercel, Inc. (USA) gehostet. Kontaktanfragen und Formulardaten werden in einer sicheren Datenbank bei Supabase, Inc. (USA) gespeichert, um deine Anfragen zuverlässig bearbeiten zu können. Die Daten werden verschlüsselt übertragen und nur für den angegebenen Zweck verwendet.</p>
-            <p>Anbieter: Vercel, Inc., USA (Hosting); Supabase, Inc., USA (Datenbank). Rechtsgrundlage: Art. 6 Abs. 1 lit. b/f DSGVO.</p>
-
-            <h3>KI-Chatbot (Chatbase)</h3>
-            <p>Auf meiner Webseite steht dir ein KI-gestützter Chatbot zur Verfügung, der häufig gestellte Fragen beantwortet. Der Chatbot wird nur geladen, wenn du ihn aktiv öffnest. Dabei können eingegebene Nachrichten an den Anbieter übermittelt werden.</p>
-            <p>Anbieter: Chatbase, Inc., USA. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO.</p>
-
-            <h3>Terminbuchung (Orbnet)</h3>
-            <p>Für die Online-Terminbuchung nutze ich den deutschen Anbieter Orbnet. Wenn du einen Termin buchst, werden die von dir eingegebenen Daten (Name, E-Mail, gewünschter Termin) an Orbnet übermittelt und dort verarbeitet.</p>
-            <p>Anbieter: orbnet GmbH, Deutschland. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+            <h2>7. KI-Chatbot (Chatbase)</h2>
+            <p>Für schnelle Antworten auf häufige Fragen biete ich einen KI-gestützten Chatbot von Chatbase, Inc. (USA) an. Der Chatbot wird erst aktiv, wenn du ihn nutzt. Bitte gib in den Chat keine sensiblen persönlichen Daten (wie z.&nbsp;B. gesundheitliche Details) ein. Deine Eingaben werden zur Verarbeitung der Antwort an den Anbieter übermittelt.</p>
+            <p>Rechtsgrundlage: Deine Einwilligung durch Nutzung des Chats (Art. 6 Abs. 1 lit. a DSGVO).</p>
 
             <hr />
 
-            <h2>8. Datenübermittlung in Drittländer</h2>
-            <p>Einige der genannten Dienstleister (Google, Resend, Chatbase, Vercel, Supabase) haben ihren Sitz in den USA. Für Datenübermittlungen in die USA stützen wir uns auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Anbieter sowie hilfsweise auf EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO.</p>
+            <h2>8. Kostenloses E-Book</h2>
+            <p>Wenn du mein kostenloses E-Book anforderst, speichere ich deinen Namen und deine E-Mail-Adresse in meiner Datenbank (Supabase) und nutze den Dienst Resend für den Versand. Die Daten werden ausschließlich für die Zustellung des E-Books verwendet. Wenn du keinen weiteren Kontakt wünschst, werden die Daten nach dem Versand gelöscht und nicht für Werbezwecke missbraucht.</p>
+            <p>Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
+            <hr />
+
+            <h2>9. Terminbuchung und Anamnese (Orbnet)</h2>
+            <p>Für die einfache Online-Terminbuchung nutze ich den deutschen Anbieter orbnet GmbH. Wenn du einen Termin buchst, werden deine angegebenen Kontaktdaten an Orbnet übermittelt.</p>
+            <p><strong>Besonderer Schutz von Gesundheitsdaten:</strong> Wenn du bei der Terminbuchung im Formular vorab Anamnesefragen beantwortest, die deine psychische oder physische Gesundheit betreffen, handelt es sich um besonders schützenswerte Daten. Diese verarbeite ich streng vertraulich und ausschließlich zur optimalen Vorbereitung auf unser Coaching.</p>
+            <p>Rechtsgrundlage: Für die Buchung: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Für die Anamnesedaten: Deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO), die du bei der Eingabe der Daten erteilst.</p>
+
+            <hr />
+
+            <h2>10. Buchhaltung und Finanzen (Lexoffice)</h2>
+            <p>Um meine steuerlichen und buchhalterischen Pflichten zu erfüllen, nutze ich die Software lexoffice (Haufe-Lexware GmbH & Co. KG, Deutschland). Wenn es zu einer kostenpflichtigen Coaching-Zusammenarbeit kommt, werden deine rechnungsrelevanten Daten (Name, Adresse, Betrag) dort verarbeitet und entsprechend der gesetzlichen Aufbewahrungsfristen (in der Regel 10 Jahre) gespeichert.</p>
+            <p>Rechtsgrundlage: Erfüllung rechtlicher Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO).</p>
+
+            <hr />
+
+            <h2>11. Datenübermittlung in Drittländer (USA)</h2>
+            <p>Einige der von mir eingesetzten Dienstleister (Google, Vercel, Supabase, Resend, Chatbase) haben ihren Hauptsitz in den USA. Wenn Daten in die USA übertragen werden, stütze ich mich auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Unternehmen. Sollte ein Unternehmen nicht zertifiziert sein, nutze ich hilfsweise EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, um ein Datenschutzniveau zu gewährleisten, das dem europäischen Standard entspricht.</p>
 
           </div>
         </div>
