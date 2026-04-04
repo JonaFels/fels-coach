@@ -62,7 +62,7 @@ export const Hero = () => {
                 <img
                   src={profilBild}
                   alt="Jona Fels – Systemischer Coach in Freiburg"
-                  className="w-full h-full rounded-full object-cover object-top will-change-transform"
+                  className="w-full h-full rounded-full object-cover object-[center_15%]"
                   loading="eager"
                   width="384"
                   height="384"
