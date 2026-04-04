@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
-import { BlogSidebarTestimonials } from "@/components/BlogSidebarTestimonials";
+
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
@@ -91,10 +91,8 @@ const BlogPost = () => {
       <SEOHead title={`${post.title[language]} | Jona Fels`} description={post.excerpt[language]} image={post.image} type="article" />
       <Header />
       <main id="main-content" className="flex-1 py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col lg:flex-row gap-10">
-            {/* Main article */}
-            <article className="flex-1 max-w-3xl">
+        <div className="max-w-3xl mx-auto">
+            <article>
               <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px]">
                 <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                 {t("blog.backToList")}
@@ -115,14 +113,6 @@ const BlogPost = () => {
 
               <AuthorBox />
             </article>
-
-            {/* Sidebar */}
-            <aside className="lg:w-72 flex-shrink-0">
-              <div className="lg:sticky lg:top-24">
-                <BlogSidebarTestimonials />
-              </div>
-            </aside>
-          </div>
         </div>
       </main>
       <Footer />
