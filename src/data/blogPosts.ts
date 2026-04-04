@@ -248,7 +248,7 @@ Diese Quelle wurde im Kontext der Weiterentwicklung des Familienstellens zum ers
 
 ## Das wissende Feld und die Brücke zur Quantenphysik
 
-**Bert Hellinger**, der die Methode Familienstellen in der modernen Form entwickelte, und erstmals bei Thea Schönfelder damit in Kontakt gekommen war, beschrieb die stellvertretende oder **repräsentierende Wahrnehmung** als **„das wissende Feld"**. Das wissende Feld soll ein nicht sichtbares Feld sein, das all das Wissen zu einer Familie hat und mit dem jedes Mitglied verbunden ist. So lässt sich erklären, warum die stellvertretenden Personen auf einmal eine andere Person "spielen" die sie nicht kennen, aber der Klient schreibt die Worte und Verhalten zu, die durch die fremde Person dargestellt wird.
+**[Bert Hellinger](/blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt)**, der die Methode Familienstellen in der modernen Form entwickelte, und erstmals bei Thea Schönfelder damit in Kontakt gekommen war, beschrieb die stellvertretende oder **repräsentierende Wahrnehmung** als **„das wissende Feld"**. Das wissende Feld soll ein nicht sichtbares Feld sein, das all das Wissen zu einer Familie hat und mit dem jedes Mitglied verbunden ist. So lässt sich erklären, warum die stellvertretenden Personen auf einmal eine andere Person "spielen" die sie nicht kennen, aber der Klient schreibt die Worte und Verhalten zu, die durch die fremde Person dargestellt wird.
 
 > Interessanterweise gibt es in der modernen Physik in der Quantenmechanik die Quantenverschränkung, was aussagt, dass sich quasi unendlich voneinander entfernte Photonen gleichzeitig miteinander verändern.
 
