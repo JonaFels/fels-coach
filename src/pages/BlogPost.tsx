@@ -75,7 +75,9 @@ const BlogPost = () => {
         flushList();
       } else if (!trimmedLine.startsWith("#")) {
         flushList();
-        const processedLine = trimmedLine.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+        const processedLine = trimmedLine
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-secondary hover:underline">$1</a>');
         elements.push(
           <p key={index} className="text-muted-foreground leading-relaxed my-4" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }} />
         );
