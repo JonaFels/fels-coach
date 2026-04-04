@@ -51,7 +51,9 @@ const BlogPost = () => {
       const trimmedLine = line.trim();
       const listMatch = trimmedLine.match(/^\d+\.\s+(.+)/);
       if (listMatch) {
-        const processedItem = listMatch[1].replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+        const processedItem = listMatch[1]
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-secondary hover:underline">$1</a>');
         listItems.push(processedItem);
         return;
       } else if (listItems.length > 0 && trimmedLine !== "") {
@@ -75,7 +77,9 @@ const BlogPost = () => {
         flushList();
       } else if (!trimmedLine.startsWith("#")) {
         flushList();
-        const processedLine = trimmedLine.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+        const processedLine = trimmedLine
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-secondary hover:underline">$1</a>');
         elements.push(
           <p key={index} className="text-muted-foreground leading-relaxed my-4" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }} />
         );
