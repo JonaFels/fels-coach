@@ -7,18 +7,6 @@ import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 export const Hero = () => {
   const { t } = useLanguage();
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (imageRef.current) {
-        const offset = window.scrollY * 0.15;
-        imageRef.current.style.transform = `translateY(${offset}px)`;
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
