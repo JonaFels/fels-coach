@@ -1,7 +1,8 @@
 /**
  * Prerender Script für Static Site Generation (SSG)
  * Generiert Ordner-basierte HTML-Dateien für clean URLs
- * z.B. /agb → dist/agb/index.html (funktioniert auf Vercel, Apache, etc.)
+ * Injiziert pro Seite korrekte Meta-Tags (Title, Description, Canonical, OG)
+ * damit Crawler (Google, Medium, etc.) sofort die richtigen Infos im HTML finden.
  * 
  * Verwendung: node scripts/prerender.js
  * (Nach npm run build ausführen)
@@ -14,71 +15,141 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Statische Routen (path → Ordnername, "/" bleibt index.html im Root)
-const staticRoutes = [
-  { path: '/', folder: null }, // Root bleibt index.html
-  { path: '/angebote', folder: 'angebote' },
-  { path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg' },
-  { path: '/ebook', folder: 'ebook' },
-  { path: '/kontakt', folder: 'kontakt' },
-  { path: '/ueber-mich', folder: 'ueber-mich' },
-  { path: '/datenschutz', folder: 'datenschutz' },
-  { path: '/impressum', folder: 'impressum' },
-  { path: '/agb', folder: 'agb' },
-  { path: '/blog', folder: 'blog' },
-];
+const SITE_URL = 'https://www.fels-coach.de';
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
-// Blog-Artikel (falls vorhanden)
-const blogSlugs = [
-  'gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt',
+// Alle Routen mit SEO-Meta-Daten
+const routes = [
+  {
+    path: '/', folder: null,
+    title: 'Systemische Familienaufstellungen | Jona Fels',
+    description: 'Systemische Familienaufstellung & Coaching in Freiburg ✓ Unbewusste Muster lösen ✓ Einzelsitzungen mit Bodenankern ✓ Samstags 14–20 Uhr ✓ Jona Fels',
+  },
+  {
+    path: '/angebote', folder: 'angebote',
+    title: 'Jona Fels | Angebote & Termine',
+    description: 'Buche dein systemisches Coaching: Kennenlern-Session oder tiefgreifende Familienaufstellung in Freiburg.',
+  },
+  {
+    path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg',
+    title: 'Jona Fels | Familienaufstellung',
+    description: 'Erfahre, wie Familienaufstellungen unbewusste Dynamiken aufdecken. Ablauf, Nutzen und Methodik erklärt.',
+  },
+  {
+    path: '/ebook', folder: 'ebook',
+    title: 'Jona Fels | Kostenloses E-Book',
+    description: 'Lade das kostenlose E-Book herunter und starte deine persönliche Transformation. Lerne unbewusste Muster zu durchbrechen.',
+  },
+  {
+    path: '/kontakt', folder: 'kontakt',
+    title: 'Jona Fels | Kontakt',
+    description: 'Kontaktiere Jona Fels für ein kostenloses Erstgespräch. Erreichbar per E-Mail, WhatsApp oder Telegram.',
+  },
+  {
+    path: '/ueber-mich', folder: 'ueber-mich',
+    title: 'Jona Fels | Über mich',
+    description: 'Lerne Jona Fels kennen: Familienaufsteller i.A. und Coach. Präzise und mitfühlende Begleitung auf deinem Weg.',
+  },
+  {
+    path: '/datenschutz', folder: 'datenschutz',
+    title: 'Jona Fels | Datenschutz',
+    description: 'Datenschutzerklärung gemäß DSGVO für die Website von Jona Fels Coaching.',
+  },
+  {
+    path: '/impressum', folder: 'impressum',
+    title: 'Jona Fels | Impressum',
+    description: 'Impressum und rechtliche Angaben gemäß § 5 TMG für Jona Fels Coaching.',
+  },
+  {
+    path: '/agb', folder: 'agb',
+    title: 'Jona Fels | AGB',
+    description: 'Buchungs- und Stornierungsregeln für Coaching-Sessions bei Jona Fels.',
+  },
+  {
+    path: '/blog', folder: 'blog',
+    title: 'Jona Fels | Blog',
+    description: 'Artikel und Insights zu Familienaufstellungen, systemischem Coaching und persönlicher Entwicklung.',
+  },
+  // Blog-Artikel
+  {
+    path: '/blog/familienstellen-in-einer-einzelsitzung', folder: 'blog/familienstellen-in-einer-einzelsitzung',
+    title: 'Keine Gruppe nötig: Familienstellen in einer Einzelsitzung | Jona Fels',
+    description: 'Erfahre, wie Familienaufstellungen auch ohne Gruppe funktionieren – in der Einzelsitzung mit Bodenankern.',
+  },
+  {
+    path: '/blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt', folder: 'blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt',
+    title: 'Von Freud bis Hellinger: Woher das Familienstellen kommt | Jona Fels',
+    description: 'Die Geschichte der Familienaufstellung – von Sigmund Freud über Virginia Satir bis zu Bert Hellinger.',
+  },
+  {
+    path: '/blog/das-wissende-feld-wahrnehmung-beim-familienstellen', folder: 'blog/das-wissende-feld-wahrnehmung-beim-familienstellen',
+    title: 'Das wissende Feld: Wahrnehmung beim Familienstellen | Jona Fels',
+    description: 'Was ist das wissende Feld? Wie funktioniert die repräsentierende Wahrnehmung in Familienaufstellungen?',
+  },
+  {
+    path: '/blog/gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt', folder: 'blog/gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt',
+    title: 'Gefangen im alten Drehbuch: Warum das Glück oft ausbleibt | Jona Fels',
+    description: 'Warum wiederholen wir immer die gleichen Muster? Wie unbewusste Lebensskripte dein Glück blockieren.',
+  },
 ];
 
 const distDir = join(__dirname, '..', 'dist');
 const templatePath = join(distDir, 'index.html');
 
 /**
- * HTML minifizieren (Kommentare und überflüssige Leerzeichen entfernen)
+ * Injiziert seitenspezifische Meta-Tags in das HTML-Template
+ */
+function injectMeta(html, route) {
+  const url = `${SITE_URL}${route.path}`;
+  const title = route.title;
+  const description = route.description;
+  const image = route.image || DEFAULT_IMAGE;
+  const type = route.path.startsWith('/blog/') && route.path !== '/blog' ? 'article' : 'website';
+
+  // Title ersetzen
+  html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+
+  // Meta description ersetzen
+  html = html.replace(
+    /<meta name="description" content="[^"]*"\s*\/?>/,
+    `<meta name="description" content="${description}" />`
+  );
+
+  // OG Tags ersetzen
+  html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/?>/, `<meta property="og:title" content="${title}" />`);
+  html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${description}" />`);
+  html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${url}" />`);
+  html = html.replace(/<meta property="og:type" content="[^"]*"\s*\/?>/, `<meta property="og:type" content="${type}" />`);
+  html = html.replace(/<meta property="og:image" content="[^"]*"\s*\/?>/, `<meta property="og:image" content="${image}" />`);
+
+  // Twitter Tags ersetzen
+  html = html.replace(/<meta name="twitter:title" content="[^"]*"\s*\/?>/, `<meta name="twitter:title" content="${title}" />`);
+  html = html.replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
+  html = html.replace(/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${image}" />`);
+
+  // Canonical Link einfügen (vor </head>)
+  if (!html.includes('rel="canonical"')) {
+    html = html.replace('</head>', `  <link rel="canonical" href="${url}" />\n  </head>`);
+  } else {
+    html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`);
+  }
+
+  return html;
+}
+
+/**
+ * HTML minifizieren
  */
 function minifyHtml(html) {
   return html
-    // HTML-Kommentare entfernen (außer IE conditionals)
     .replace(/<!--(?!\[if)[\s\S]*?-->/g, '')
-    // Mehrfache Leerzeichen/Zeilenumbrüche reduzieren
     .replace(/\s{2,}/g, ' ')
-    // Leerzeichen zwischen Tags entfernen
     .replace(/>\s+</g, '><')
-    // Leerzeichen am Zeilenanfang/Ende entfernen
     .replace(/^\s+|\s+$/gm, '')
-    // Leere Zeilen entfernen
     .replace(/\n\s*\n/g, '\n')
     .trim();
 }
 
-/**
- * Finde die generierten Asset-Dateien mit Hashes
- */
-function findAssets() {
-  const assetsDir = join(distDir, 'assets');
-  
-  if (!existsSync(assetsDir)) {
-    console.error('❌ Fehler: dist/assets/ nicht gefunden!');
-    return null;
-  }
-
-  const files = readdirSync(assetsDir);
-  
-  // Finde Haupt-JS und CSS mit Hashes
-  const mainJs = files.find(f => f.startsWith('index.') && f.endsWith('.js'));
-  const vendorJs = files.find(f => f.startsWith('vendor.') && f.endsWith('.js'));
-  const uiJs = files.find(f => f.startsWith('ui.') && f.endsWith('.js'));
-  const mainCss = files.find(f => f.endsWith('.css'));
-
-  return { mainJs, vendorJs, uiJs, mainCss };
-}
-
-/**
- * Erstellt einen Ordner falls nicht vorhanden
- */
 function ensureDir(dirPath) {
   if (!existsSync(dirPath)) {
     mkdirSync(dirPath, { recursive: true });
@@ -86,84 +157,40 @@ function ensureDir(dirPath) {
 }
 
 function generateStaticPages() {
-  console.log('🚀 Starte High-Performance SSG Build (Clean-URL Ordnerstruktur)...\n');
+  console.log('🚀 Starte SEO-optimiertes SSG Build...\n');
 
-  // Prüfe ob dist/index.html existiert
   if (!existsSync(templatePath)) {
     console.error('❌ Fehler: dist/index.html nicht gefunden!');
-    console.error('   Bitte zuerst "npm run build" ausführen.');
     process.exit(1);
   }
 
-  let template = readFileSync(templatePath, 'utf-8');
+  const template = readFileSync(templatePath, 'utf-8');
 
-  // Assets mit Hashes finden
-  const assets = findAssets();
-  if (!assets) {
-    console.error('❌ Konnte Assets nicht finden. Build abgebrochen.');
-    process.exit(1);
-  }
+  console.log(`📄 Generiere ${routes.length} HTML-Dateien mit individuellen Meta-Tags:\n`);
 
-  console.log('📦 Gefundene Assets mit Cache-Busting Hashes:');
-  console.log(`   JS:  ${assets.mainJs || 'nicht gefunden'}`);
-  console.log(`   Vendor: ${assets.vendorJs || 'nicht gefunden'}`);
-  console.log(`   CSS: ${assets.mainCss || 'nicht gefunden'}\n`);
-
-  // Alle Routen sammeln
-  const allRoutes = [
-    ...staticRoutes,
-    ...blogSlugs.map(slug => ({ path: `/blog/${slug}`, folder: `blog/${slug}` })),
-  ];
-
-  console.log(`📄 Generiere ${allRoutes.length} minifizierte HTML-Dateien:\n`);
-
-  let totalSaved = 0;
-
-  allRoutes.forEach(route => {
+  routes.forEach(route => {
     let outputPath;
-    let displayPath;
-
     if (route.folder === null) {
-      // Root: dist/index.html
       outputPath = join(distDir, 'index.html');
-      displayPath = '/index.html';
     } else {
-      // Ordner erstellen: dist/agb/index.html
       const folderPath = join(distDir, route.folder);
       ensureDir(folderPath);
       outputPath = join(folderPath, 'index.html');
-      displayPath = `/${route.folder}/index.html`;
     }
-    
-    // Minifiziere HTML
-    const minified = minifyHtml(template);
-    const originalSize = template.length;
-    const minifiedSize = minified.length;
-    const saved = originalSize - minifiedSize;
-    totalSaved += saved;
-    
-    writeFileSync(outputPath, minified, 'utf-8');
 
-    const savings = ((saved / originalSize) * 100).toFixed(1);
-    console.log(`   ✅ ${route.path.padEnd(22)} → ${displayPath.padEnd(30)} (${savings}% kleiner)`);
+    // Meta-Tags injizieren, dann minifizieren
+    const withMeta = injectMeta(template, route);
+    const minified = minifyHtml(withMeta);
+
+    writeFileSync(outputPath, minified, 'utf-8');
+    console.log(`   ✅ ${route.path.padEnd(60)} → title: "${route.title}"`);
   });
 
-  console.log('\n✨ High-Performance SSG Build abgeschlossen!');
-  console.log(`\n📊 Gesamtersparnis durch HTML-Minifizierung: ${(totalSaved / 1024).toFixed(1)} KB`);
-  
-  console.log('\n📁 Clean-URL Struktur im dist/ Ordner:');
-  console.log('   📄 index.html (Homepage)');
-  console.log('   📁 agb/index.html → /agb funktioniert überall');
-  console.log('   📁 kontakt/index.html → /kontakt funktioniert überall');
-  console.log('   📁 assets/ (JS, CSS, Bilder, Fonts mit Hashes)');
-
-  console.log('\n⚡ PageSpeed-Optimierungen:');
-  console.log('   ✓ HTML minifiziert (Kommentare/Leerzeichen entfernt)');
-  console.log('   ✓ Clean URLs funktionieren auf Vercel, Apache, Netlify, etc.');
-  console.log('   ✓ Cache-Busting Hashes für 1-Jahr-Caching');
-  console.log('   ✓ Vendor-Chunk für besseres Caching');
-
-  console.log('\n🎉 Kopiere den gesamten dist/ Ordner auf deinen Server!');
+  console.log('\n✨ SEO-optimiertes SSG Build abgeschlossen!');
+  console.log('   ✓ Individuelle <title>, <meta description>, <link canonical> pro Seite');
+  console.log('   ✓ Open Graph Tags (og:title, og:description, og:url, og:type)');
+  console.log('   ✓ Twitter Card Tags');
+  console.log('   ✓ HTML minifiziert');
 }
 
 generateStaticPages();
