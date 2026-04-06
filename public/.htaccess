@@ -25,6 +25,14 @@
   RewriteRule ^buchen\.html$ / [L,R=301]
   RewriteRule ^termine/index\.php$ / [L,R=301]
   RewriteRule ^index\.html$ / [L,R=301]
+  RewriteRule ^en/contact\.html$ / [L,R=301]
+  RewriteRule ^datenschutz\.html$ /datenschutz [L,R=301]
+
+  # Query-Parameter-Redirects
+  RewriteCond %{QUERY_STRING} ^lang=en$ [NC]
+  RewriteRule ^$ /? [L,R=301]
+  RewriteCond %{QUERY_STRING} ^s= [NC]
+  RewriteRule ^$ /? [L,R=301]
   
   # Clean URLs: Verzeichnisse laden automatisch index.html
   # z.B. /kontakt/ -> /kontakt/index.html
