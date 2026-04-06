@@ -15,6 +15,15 @@
   RewriteRule ^coaching\.html$ / [L,R=301]
   RewriteRule ^en/offers\.html$ /angebote [L,R=301]
   RewriteRule ^fr/offres\.html$ /angebote [L,R=301]
+
+  # 301-Redirects für alte 404-URLs aus Google Search Console
+  RewriteRule ^en/?$ / [L,R=301]
+  RewriteRule ^fr/?$ / [L,R=301]
+  RewriteRule ^en/privacy\.html$ / [L,R=301]
+  RewriteRule ^angebote\.html$ / [L,R=301]
+  RewriteRule ^ebook\.html$ / [L,R=301]
+  RewriteRule ^buchen\.html$ / [L,R=301]
+  RewriteRule ^termine/index\.php$ / [L,R=301]
   
   # Clean URLs: Verzeichnisse laden automatisch index.html
   # z.B. /kontakt/ -> /kontakt/index.html
