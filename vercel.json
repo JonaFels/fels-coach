@@ -11,7 +11,9 @@
     { "source": "/ebook.html", "destination": "https://www.fels-coach.de/", "statusCode": 301 },
     { "source": "/buchen.html", "destination": "https://www.fels-coach.de/", "statusCode": 301 },
     { "source": "/termine/index.php", "destination": "https://www.fels-coach.de/", "statusCode": 301 },
-    { "source": "/index.html", "destination": "https://www.fels-coach.de/", "statusCode": 301 }
+    { "source": "/index.html", "destination": "https://www.fels-coach.de/", "statusCode": 301 },
+    { "source": "/en/contact.html", "destination": "https://www.fels-coach.de/", "statusCode": 301 },
+    { "source": "/datenschutz.html", "destination": "https://www.fels-coach.de/datenschutz", "statusCode": 301 }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
