@@ -89,7 +89,7 @@ const Familienaufstellung = () => {
                   loading="lazy"
                 />
                 <p className="text-sm text-muted-foreground italic px-4 py-3 bg-muted/60">
-                  Die farbigen Bodenanker markieren die Positionen von Familienmitgliedern, relevanten Personen oder inneren Anteilen im Raum – sie machen Dynamiken sichtbar und erlebbar.
+                  {t("family.imageCaption")}
                 </p>
               </div>
             </div>
