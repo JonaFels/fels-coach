@@ -21,13 +21,6 @@ const ebookSchema = z.object({
   website: z.string().max(0).optional(),
 });
 
-const benefits = [
-  "Das Gummiband-Prinzip: Warum du trotz Talent immer wieder in alte Muster zurückfällst.",
-  "Die Eltern-Dynamik: Wie ungelöste Vorwürfe deine Beziehungen und deinen Erfolg blockieren.",
-  "Die innere Erlaubnis: Wie du aufhörst, Zuschauer deines Lebens zu sein.",
-  "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
-];
-
 const Ebook = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
@@ -37,6 +30,13 @@ const Ebook = () => {
   const [website, setWebsite] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
+
+  const benefits = [
+    t("ebook.benefit1"),
+    t("ebook.benefit2"),
+    t("ebook.benefit3"),
+    t("ebook.benefit4"),
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,8 +61,8 @@ const Ebook = () => {
     setIsSubmitting(true);
 
     toast({
-      title: "E-Book wird gesendet...",
-      description: "Bitte warte einen Moment, dein E-Book ist unterwegs!",
+      title: t("ebook.toastSendingTitle"),
+      description: t("ebook.toastSendingDesc"),
     });
 
     try {
@@ -72,20 +72,20 @@ const Ebook = () => {
 
       if (error) {
         console.error("Edge function error:", error);
-        toast({ title: "Fehler beim Senden", description: "Bitte versuche es später erneut.", variant: "destructive" });
+        toast({ title: t("ebook.toastErrorTitle"), description: t("ebook.toastErrorDesc"), variant: "destructive" });
         return;
       }
 
       if (data?.error) {
-        toast({ title: "Fehler beim Senden", description: data.error, variant: "destructive" });
+        toast({ title: t("ebook.toastErrorTitle"), description: data.error, variant: "destructive" });
         return;
       }
 
       setSubmitted(true);
-      toast({ title: "E-Book erfolgreich gesendet!", description: "Prüfe dein E-Mail-Postfach für den Download-Link." });
+      toast({ title: t("ebook.toastSuccessTitle"), description: t("ebook.toastSuccessDesc") });
     } catch (error) {
       console.error("Error:", error);
-      toast({ title: "Verbindungsfehler", description: "Bitte überprüfe deine Internetverbindung.", variant: "destructive" });
+      toast({ title: t("ebook.toastConnectionTitle"), description: t("ebook.toastConnectionDesc"), variant: "destructive" });
     } finally {
       setIsSubmitting(false);
     }
@@ -101,7 +101,7 @@ const Ebook = () => {
         <section className="pt-10 pb-6 md:pt-16 md:pb-8">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-              Kostenloses E-Book
+              {t("ebook.freeEbook")}
             </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-tight mb-4">
               {t("ebook.headline")}
@@ -151,7 +151,7 @@ const Ebook = () => {
                 {submitted ? (
                   <div className="text-center py-6">
                     <CheckCircle className="h-12 w-12 text-secondary mx-auto mb-3" aria-hidden="true" />
-                    <p className="text-foreground font-medium mb-1">Geschafft!</p>
+                    <p className="text-foreground font-medium mb-1">{t("ebook.done")}</p>
                     <p className="text-muted-foreground text-sm">{t("ebook.success")}</p>
                   </div>
                 ) : (
@@ -166,7 +166,7 @@ const Ebook = () => {
                         className={errors.name ? "border-destructive" : ""}
                         aria-invalid={!!errors.name}
                         autoComplete="name"
-                        placeholder="Dein Vorname"
+                        placeholder={t("ebook.namePlaceholder")}
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -180,10 +180,10 @@ const Ebook = () => {
                         className={errors.email ? "border-destructive" : ""}
                         aria-invalid={!!errors.email}
                         autoComplete="email"
-                        placeholder="deine@email.de"
+                        placeholder={t("ebook.emailPlaceholder")}
                       />
                       {errors.email && (
-                        <p className="text-sm text-destructive">Bitte gib eine gültige E-Mail-Adresse ein.</p>
+                        <p className="text-sm text-destructive">{t("ebook.emailError")}</p>
                       )}
                     </div>
                     {/* Honeypot */}
@@ -209,7 +209,7 @@ const Ebook = () => {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
-                          E-Book wird gesendet...
+                          {t("ebook.sending")}
                         </>
                       ) : (
                         t("ebook.download")

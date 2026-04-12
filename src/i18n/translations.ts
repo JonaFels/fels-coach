@@ -441,6 +441,78 @@ export const translations: Translations = {
     de: "Vielen Dank! Das E-Book wurde per E-Mail an dich gesendet. Bitte überprüfe auch deinen Spam-Ordner.",
     en: "Thank you! The e-book has been sent to your email. Please also check your spam folder.",
   },
+  "ebook.freeEbook": {
+    de: "Kostenloses E-Book",
+    en: "Free E-Book",
+  },
+  "ebook.done": {
+    de: "Geschafft!",
+    en: "Done!",
+  },
+  "ebook.namePlaceholder": {
+    de: "Dein Vorname",
+    en: "Your first name",
+  },
+  "ebook.emailPlaceholder": {
+    de: "deine@email.de",
+    en: "your@email.com",
+  },
+  "ebook.emailError": {
+    de: "Bitte gib eine gültige E-Mail-Adresse ein.",
+    en: "Please enter a valid email address.",
+  },
+  "ebook.sending": {
+    de: "E-Book wird gesendet...",
+    en: "Sending e-book...",
+  },
+  "ebook.toastSendingTitle": {
+    de: "E-Book wird gesendet...",
+    en: "Sending e-book...",
+  },
+  "ebook.toastSendingDesc": {
+    de: "Bitte warte einen Moment, dein E-Book ist unterwegs!",
+    en: "Please wait a moment, your e-book is on its way!",
+  },
+  "ebook.toastSuccessTitle": {
+    de: "E-Book erfolgreich gesendet!",
+    en: "E-book sent successfully!",
+  },
+  "ebook.toastSuccessDesc": {
+    de: "Prüfe dein E-Mail-Postfach für den Download-Link.",
+    en: "Check your inbox for the download link.",
+  },
+  "ebook.toastErrorTitle": {
+    de: "Fehler beim Senden",
+    en: "Error sending",
+  },
+  "ebook.toastErrorDesc": {
+    de: "Bitte versuche es später erneut.",
+    en: "Please try again later.",
+  },
+  "ebook.toastConnectionTitle": {
+    de: "Verbindungsfehler",
+    en: "Connection error",
+  },
+  "ebook.toastConnectionDesc": {
+    de: "Bitte überprüfe deine Internetverbindung.",
+    en: "Please check your internet connection.",
+  },
+  "ebook.benefit1": {
+    de: "Das Gummiband-Prinzip: Warum du trotz Talent immer wieder in alte Muster zurückfällst.",
+    en: "The Rubber Band Principle: Why despite your talents you keep falling back into old patterns.",
+  },
+  "ebook.benefit2": {
+    de: "Die Eltern-Dynamik: Wie ungelöste Vorwürfe deine Beziehungen und deinen Erfolg blockieren.",
+    en: "The Parent Dynamic: How unresolved grievances block your relationships and success.",
+  },
+  "ebook.benefit3": {
+    de: "Die innere Erlaubnis: Wie du aufhörst, Zuschauer deines Lebens zu sein.",
+    en: "The Inner Permission: How to stop being a spectator of your own life.",
+  },
+  "ebook.benefit4": {
+    de: "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
+    en: "Systemic Quick-Check: First steps to analyze your inner statics.",
+  },
 
   // Kontakt Page
   "contact.title": {
