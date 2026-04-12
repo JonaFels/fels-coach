@@ -1062,7 +1062,6 @@ export const translations: Translations = {
     de: "Häufige Fragen",
     en: "Common Questions",
   },
-  },
 
   // ── Impressum ──
   "imprint.according": { de: "Angaben gemäß § 5 DDG", en: "Information pursuant to § 5 DDG" },
