@@ -15,7 +15,7 @@ export const Footer = () => {
           aria-label="Footer-Navigation"
         >
           <a href="/kontakt" className="hover:text-foreground transition-colors no-underline-effect">
-            Kontakt
+            {t("footer.contact")}
           </a>
           <span className="hidden md:inline text-border">·</span>
           <a href="/datenschutz" className="hover:text-foreground transition-colors no-underline-effect">
