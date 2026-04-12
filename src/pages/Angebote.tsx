@@ -18,7 +18,7 @@ const offerings = [
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
     price: 40,
-    badge: "Einstieg",
+    badgeKey: "offerings.badge.einstieg",
     semuid: "609d5e7a-e208-4715-b073-e99206aebbf7",
   },
   {
@@ -33,6 +33,12 @@ const Angebote = () => {
   const { t } = useLanguage();
   const { openBooking, BookingDialog } = useOrbnetBooking();
   
+
+  const values = [
+    { icon: Heart, labelKey: "offerings.value.empathetic", descKey: "offerings.value.empatheticDesc" },
+    { icon: Shield, labelKey: "offerings.value.safe", descKey: "offerings.value.safeDesc" },
+    { icon: Sparkles, labelKey: "offerings.value.lasting", descKey: "offerings.value.lastingDesc" },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -57,17 +63,13 @@ const Angebote = () => {
         <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="grid gap-8 md:grid-cols-3 text-center">
-              {[
-                { icon: Heart, label: "Einfühlsam", desc: "Ich höre dir zu – ohne Bewertung, mit echtem Interesse." },
-                { icon: Shield, label: "Geschützter Rahmen", desc: "Alles bleibt vertraulich. Dein Tempo bestimmt den Weg." },
-                { icon: Sparkles, label: "Nachhaltig", desc: "Wir arbeiten an Lösungen, die in deinem Alltag wirken." },
-              ].map((val) => (
-                <div key={val.label} className="flex flex-col items-center gap-3">
+              {values.map((val) => (
+                <div key={val.labelKey} className="flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <val.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   </div>
-                  <h3 className="font-serif text-base font-semibold text-foreground">{val.label}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{val.desc}</p>
+                  <h3 className="font-serif text-base font-semibold text-foreground">{t(val.labelKey)}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t(val.descKey)}</p>
                 </div>
               ))}
             </div>
@@ -81,7 +83,7 @@ const Angebote = () => {
               {t("offerings.ablaufTitle")}
             </h2>
             <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
-              Jede Sitzung dauert 80 Minuten und folgt einem klaren, aber flexiblen Rahmen – damit du dich voll auf dein Thema einlassen kannst.
+              {t("offerings.ablaufIntro")}
             </p>
             <ol className="space-y-6">
               {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (
@@ -108,7 +110,7 @@ const Angebote = () => {
             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-10">
               <span className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
-                Präsenz in Freiburg
+                {t("offerings.location")}
               </span>
             </div>
 
@@ -117,12 +119,12 @@ const Angebote = () => {
                 <Card
                   key={offering.titleKey}
                   className={`relative group transition-all duration-300 hover:shadow-md hover:-translate-y-1 bg-card border-border/50 rounded-2xl ${
-                    offering.badge ? "ring-1 ring-primary/30" : ""
+                    offering.badgeKey ? "ring-1 ring-primary/30" : ""
                   }`}
                 >
-                  {offering.badge && (
+                  {offering.badgeKey && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-medium px-3 py-1 rounded-full">
-                      {offering.badge}
+                      {t(offering.badgeKey)}
                     </div>
                   )}
                   <CardHeader className="pb-4">
@@ -132,12 +134,12 @@ const Angebote = () => {
                   <CardContent>
                     <div className="flex items-baseline gap-2">
                       <span className="text-2xl font-semibold text-foreground">{offering.price}€</span>
-                      <span className="text-sm text-muted-foreground">/ 80 Min.</span>
+                      <span className="text-sm text-muted-foreground">{t("offerings.perUnit")}</span>
                     </div>
                   </CardContent>
                   <CardFooter>
                     <Button
-                      variant={offering.badge ? "default" : "outline"}
+                      variant={offering.badgeKey ? "default" : "outline"}
                       className="w-full group/btn min-h-[44px]"
                       onClick={() => {
                         trackCalendarBookingStart("angebote_card", offering.semuid);
@@ -158,13 +160,13 @@ const Angebote = () => {
         <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-              Noch unsicher?
+              {t("offerings.unsure")}
             </p>
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
-              Lass uns kurz sprechen
+              {t("offerings.unsureTitle")}
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 30-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.
+              {t("offerings.unsureText")}
             </p>
             <Button
               variant="outline"
@@ -174,10 +176,10 @@ const Angebote = () => {
             >
               <a href="/kontakt" onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}>
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                Erstgespräch vereinbaren
+                {t("offerings.unsureCta")}
               </a>
             </Button>
-            <p className="mt-3 text-sm text-muted-foreground">völlig unverbindlich & persönlich</p>
+            <p className="mt-3 text-sm text-muted-foreground">{t("offerings.unsureMicrocopy")}</p>
           </div>
         </section>
       </main>

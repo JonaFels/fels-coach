@@ -61,7 +61,7 @@ export const FAQSection = () => {
     <section className="py-16 md:py-20" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
         <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
-          {language === 'de' ? 'Häufige Fragen' : 'Common Questions'}
+          {t("faq.subtitle")}
         </p>
         <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-12">
           {t("faq.title")}

@@ -81,10 +81,10 @@ const Kontakt = () => {
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-0.5 text-center">
-              Erzähl mir von deinem Anliegen.
+              {t("contact.calendarHeadline")}
             </p>
             <p className="text-[11px] text-muted-foreground text-center mb-2">
-              30 Minuten · kostenfrei · völlig unverbindlich
+              {t("contact.calendarMicrocopy")}
             </p>
             <div className="relative min-h-[420px] bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
               <div ref={containerRef} />
@@ -97,14 +97,14 @@ const Kontakt = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-8 text-center">
-              Oder schreib mir direkt
+              {t("contact.altTitle")}
             </h2>
             <div className="grid gap-8 md:grid-cols-2">
               <ContactForm />
               <Card>
                 <CardContent className="pt-6">
                   <h3 className="font-serif text-lg font-medium text-foreground mb-4">
-                    Direkter Kontakt
+                    {t("contact.directTitle")}
                   </h3>
                   <div className="flex flex-col gap-4">
                     <a
@@ -116,7 +116,7 @@ const Kontakt = () => {
                         <Mail className="h-5 w-5 text-secondary" aria-hidden="true" />
                       </div>
                       <div>
-                        <span className="font-medium text-foreground block">E-Mail</span>
+                        <span className="font-medium text-foreground block">{t("contact.emailLabel")}</span>
                         <span className="text-sm text-muted-foreground">info@fels-coach.de</span>
                       </div>
                     </a>
@@ -131,7 +131,7 @@ const Kontakt = () => {
                         <Send className="h-5 w-5 text-primary" aria-hidden="true" />
                       </div>
                       <div>
-                        <span className="font-medium text-foreground block">Telegram</span>
+                        <span className="font-medium text-foreground block">{t("contact.telegramLabel")}</span>
                         <span className="text-sm text-muted-foreground">+49 176 67608617</span>
                       </div>
                     </a>
@@ -151,10 +151,10 @@ const Kontakt = () => {
               <div className="h-px flex-1 max-w-16 bg-border" />
             </div>
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3 text-center">
-              Anfahrt &amp; Ankommen
+              {t("contact.directions.title")}
             </h2>
             <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto text-sm leading-relaxed">
-              Mein Praxisraum befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg.
+              {t("contact.directions.intro")}
             </p>
 
             <div className="grid gap-6 md:gap-8 md:grid-cols-3 mt-16 mb-20">
@@ -164,12 +164,12 @@ const Kontakt = () => {
                     <div className="p-2 rounded-full bg-secondary/10">
                       <TrainFront className="h-4 w-4 text-secondary" aria-hidden="true" />
                     </div>
-                    <h3 className="font-serif text-sm font-medium text-foreground">Straßenbahn</h3>
+                    <h3 className="font-serif text-sm font-medium text-foreground">{t("contact.directions.tram")}</h3>
                   </div>
                   <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-                    <li>Linie 3 Richtung Zähringen</li>
-                    <li>Haltestelle Tennenbacher Straße</li>
-                    <li>4 Minuten zu Fuß</li>
+                    <li>{t("contact.directions.tramLine")}</li>
+                    <li>{t("contact.directions.tramStop")}</li>
+                    <li>{t("contact.directions.tramWalk")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -179,11 +179,11 @@ const Kontakt = () => {
                     <div className="p-2 rounded-full bg-primary/10">
                       <Car className="h-4 w-4 text-primary" aria-hidden="true" />
                     </div>
-                    <h3 className="font-serif text-sm font-medium text-foreground">Auto & Parken</h3>
+                    <h3 className="font-serif text-sm font-medium text-foreground">{t("contact.directions.car")}</h3>
                   </div>
                   <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-                    <li>Parkplätze mit Automaten in der Karlstraße</li>
-                    <li>Tipp: ~10 Min. extra einplanen</li>
+                    <li>{t("contact.directions.carParking")}</li>
+                    <li>{t("contact.directions.carTip")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -193,12 +193,12 @@ const Kontakt = () => {
                     <div className="p-2 rounded-full bg-accent/60">
                       <DoorOpen className="h-4 w-4 text-accent-foreground" aria-hidden="true" />
                     </div>
-                    <h3 className="font-serif text-sm font-medium text-foreground">Vor Ort</h3>
+                    <h3 className="font-serif text-sm font-medium text-foreground">{t("contact.directions.onSite")}</h3>
                   </div>
                   <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-                    <li>Praxisraum im Erdgeschoss</li>
-                    <li>Es gibt einen kleinen Wartebereich</li>
-                    <li>Ich komme direkt zur Tür</li>
+                    <li>{t("contact.directions.onSite1")}</li>
+                    <li>{t("contact.directions.onSite2")}</li>
+                    <li>{t("contact.directions.onSite3")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -216,7 +216,7 @@ const Kontakt = () => {
               />
             </div>
             <p className="text-sm text-muted-foreground text-center mt-2">
-              Karlstraße 51, 79104 Freiburg im Breisgau
+              {t("contact.directions.address")}
             </p>
           </div>
         </section>

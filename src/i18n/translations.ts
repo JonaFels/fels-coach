@@ -904,4 +904,162 @@ export const translations: Translations = {
      de: "Kennenlernen-Session buchen",
      en: "Book Introduction Session",
    },
+
+  // Kontakt Page – Kalender
+  "contact.calendarHeadline": {
+    de: "Erzähl mir von deinem Anliegen.",
+    en: "Tell me about your concern.",
+  },
+  "contact.calendarMicrocopy": {
+    de: "30 Minuten · kostenfrei · völlig unverbindlich",
+    en: "30 minutes · free · completely non-binding",
+  },
+  "contact.altTitle": {
+    de: "Oder schreib mir direkt",
+    en: "Or write to me directly",
+  },
+  "contact.directTitle": {
+    de: "Direkter Kontakt",
+    en: "Direct Contact",
+  },
+  "contact.emailLabel": {
+    de: "E-Mail",
+    en: "Email",
+  },
+  "contact.telegramLabel": {
+    de: "Telegram",
+    en: "Telegram",
+  },
+
+  // Kontakt Page – Anfahrt
+  "contact.directions.title": {
+    de: "Anfahrt & Ankommen",
+    en: "Directions & Arriving",
+  },
+  "contact.directions.intro": {
+    de: "Mein Praxisraum befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg.",
+    en: "My practice is located at Karlstraße 51 in the Herdern/Neuburg district.",
+  },
+  "contact.directions.tram": {
+    de: "Straßenbahn",
+    en: "Tram",
+  },
+  "contact.directions.tramLine": {
+    de: "Linie 3 Richtung Zähringen",
+    en: "Line 3 towards Zähringen",
+  },
+  "contact.directions.tramStop": {
+    de: "Haltestelle Tennenbacher Straße",
+    en: "Stop: Tennenbacher Straße",
+  },
+  "contact.directions.tramWalk": {
+    de: "4 Minuten zu Fuß",
+    en: "4 minutes on foot",
+  },
+  "contact.directions.car": {
+    de: "Auto & Parken",
+    en: "Car & Parking",
+  },
+  "contact.directions.carParking": {
+    de: "Parkplätze mit Automaten in der Karlstraße",
+    en: "Metered parking on Karlstraße",
+  },
+  "contact.directions.carTip": {
+    de: "Tipp: ~10 Min. extra einplanen",
+    en: "Tip: plan ~10 min. extra",
+  },
+  "contact.directions.onSite": {
+    de: "Vor Ort",
+    en: "On Site",
+  },
+  "contact.directions.onSite1": {
+    de: "Praxisraum im Erdgeschoss",
+    en: "Practice room on the ground floor",
+  },
+  "contact.directions.onSite2": {
+    de: "Es gibt einen kleinen Wartebereich",
+    en: "There is a small waiting area",
+  },
+  "contact.directions.onSite3": {
+    de: "Ich komme direkt zur Tür",
+    en: "I come directly to the door",
+  },
+  "contact.directions.address": {
+    de: "Karlstraße 51, 79104 Freiburg im Breisgau",
+    en: "Karlstraße 51, 79104 Freiburg im Breisgau",
+  },
+
+  // Angebote Page – hardcoded texts
+  "offerings.badge.einstieg": {
+    de: "Einstieg",
+    en: "Intro",
+  },
+  "offerings.value.empathetic": {
+    de: "Einfühlsam",
+    en: "Empathetic",
+  },
+  "offerings.value.empatheticDesc": {
+    de: "Ich höre dir zu – ohne Bewertung, mit echtem Interesse.",
+    en: "I listen to you – without judgment, with genuine interest.",
+  },
+  "offerings.value.safe": {
+    de: "Geschützter Rahmen",
+    en: "Safe Space",
+  },
+  "offerings.value.safeDesc": {
+    de: "Alles bleibt vertraulich. Dein Tempo bestimmt den Weg.",
+    en: "Everything stays confidential. Your pace sets the path.",
+  },
+  "offerings.value.lasting": {
+    de: "Nachhaltig",
+    en: "Lasting",
+  },
+  "offerings.value.lastingDesc": {
+    de: "Wir arbeiten an Lösungen, die in deinem Alltag wirken.",
+    en: "We work on solutions that make a difference in your daily life.",
+  },
+  "offerings.ablaufIntro": {
+    de: "Jede Sitzung dauert 80 Minuten und folgt einem klaren, aber flexiblen Rahmen – damit du dich voll auf dein Thema einlassen kannst.",
+    en: "Each session lasts 80 minutes and follows a clear but flexible structure – so you can fully engage with your topic.",
+  },
+  "offerings.perUnit": {
+    de: "/ 80 Min.",
+    en: "/ 80 min.",
+  },
+  "offerings.location": {
+    de: "Präsenz in Freiburg",
+    en: "In-person in Freiburg",
+  },
+  "offerings.unsure": {
+    de: "Noch unsicher?",
+    en: "Still unsure?",
+  },
+  "offerings.unsureTitle": {
+    de: "Lass uns kurz sprechen",
+    en: "Let's have a quick chat",
+  },
+  "offerings.unsureText": {
+    de: "Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 30-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.",
+    en: "Not sure which offer suits you? In a free 30-minute preliminary talk, we'll figure it out together – no obligation at all.",
+  },
+  "offerings.unsureCta": {
+    de: "Erstgespräch vereinbaren",
+    en: "Schedule Consultation",
+  },
+  "offerings.unsureMicrocopy": {
+    de: "völlig unverbindlich & persönlich",
+    en: "completely non-binding & personal",
+  },
+
+  // Footer
+  "footer.contact": {
+    de: "Kontakt",
+    en: "Contact",
+  },
+
+  // FAQ subtitle
+  "faq.subtitle": {
+    de: "Häufige Fragen",
+    en: "Common Questions",
+  },
 };
