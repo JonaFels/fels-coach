@@ -16,56 +16,56 @@ const Impressum = () => {
           </h1>
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
-            <h3>Angaben gemäß § 5 DDG</h3>
+            <h3>{t("imprint.according")}</h3>
             <p>
               Jona Fels<br />
-              Systemisches Coaching & Familienaufstellungen<br />
+              {t("imprint.address")}<br />
               Egonstraße 91<br />
               79106 Freiburg
             </p>
 
-            <h3>Kontakt</h3>
+            <h3>{t("imprint.contactHeading")}</h3>
             <p>
-              Telefon: 0176 67608617<br />
+              {t("imprint.phone")}: 0176 67608617<br />
               E-Mail: <a href="mailto:info@fels-coach.de">info@fels-coach.de</a>
             </p>
 
-            <h3>Umsatzsteuer-ID</h3>
+            <h3>{t("imprint.vatHeading")}</h3>
             <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
+              {t("imprint.vatText")}<br />
               DE460965814
             </p>
 
-            <h3>Angaben zur Berufshaftpflichtversicherung</h3>
+            <h3>{t("imprint.insuranceHeading")}</h3>
             <p>
-              Name und Sitz des Versicherers:<br />
+              {t("imprint.insuranceName")}<br />
               Continentale Sachversicherung AG<br />
               Sitz der Gesellschaft: Dortmund<br />
-              Räumlicher Geltungsbereich: Deutschland und europäisches Ausland
+              {t("imprint.insuranceScope")}
             </p>
 
-            <h3>Verantwortlich für redaktionelle Inhalte (gem. § 18 Abs. 2 MStV)</h3>
+            <h3>{t("imprint.editorialHeading")}</h3>
             <p>
               Jona Fels<br />
               Egonstraße 91<br />
               79106 Freiburg
             </p>
 
-            <h3>EU-Streitschlichtung</h3>
+            <h3>{t("imprint.disputeHeading")}</h3>
             <p>
-              Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br />
+              {t("imprint.disputeText")}<br />
               <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a><br />
-              Meine E-Mail-Adresse findest du oben im Impressum.
+              {t("imprint.disputeEmail")}
             </p>
 
-            <h3>Verbraucher­streit­beilegung / Universal­schlichtungs­stelle</h3>
-            <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            <h3>{t("imprint.arbitrationHeading")}</h3>
+            <p>{t("imprint.arbitrationText")}</p>
 
-            <h3>Berufsrechtlicher Hinweis zum Coaching</h3>
-            <p>Mein Angebot im Rahmen des Systemischen Coachings und der Familienaufstellungen dient der Persönlichkeitsentwicklung, der Gesundheitsprävention und der Lösungsfindung. Es stellt keine Heilbehandlung dar und ist kein Ersatz für eine medizinische, psychiatrische oder psychotherapeutische Diagnose oder Behandlung. Bei gesundheitlichen oder psychischen Beschwerden wende dich bitte an einen Arzt oder Psychotherapeuten.</p>
+            <h3>{t("imprint.coachingHeading")}</h3>
+            <p>{t("imprint.coachingText")}</p>
 
-            <h3>Geltungsbereich</h3>
-            <p>Dieses Impressum gilt auch für meine Social-Media-Präsenzen und Profile auf Drittplattformen (z.&nbsp;B. Instagram, LinkedIn).</p>
+            <h3>{t("imprint.scopeHeading")}</h3>
+            <p>{t("imprint.scopeText")}</p>
           </div>
         </div>
       </main>
