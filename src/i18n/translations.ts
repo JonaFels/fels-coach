@@ -343,6 +343,10 @@ export const translations: Translations = {
     de: "In der Einzelarbeit nutzen wir Bodenanker, die für Familienmitglieder, relevante Personen oder innere Aspekte Deines Themas stehen. Diese Anker werden auf dem Boden platziert und repräsentieren die räumliche und energetische Beziehung im System. Gemeinsam ergründen wir die Dynamiken, die sich zeigen, und verschieben die Bodenanker im Raum. Dabei gehe ich als Coach in die verschiedenen Rollen und spüre nach, was sich auf den einzelnen Positionen zeigt – und auch Du darfst in Rollen gehen und so Dein System aus verschiedenen Perspektiven erleben. So entsteht Schritt für Schritt mehr Klarheit über die verborgenen Zusammenhänge.",
     en: "In individual work, we use floor anchors that represent family members, relevant persons, or inner aspects of your topic. These anchors are placed on the floor and represent the spatial and energetic relationship in the system. Together we explore the dynamics that emerge and rearrange the floor anchors in the room. As the therapist, I step into the different roles and sense what reveals itself at each position – and you are also welcome to step into roles and experience your system from different perspectives. Step by step, more clarity about hidden connections emerges.",
   },
+  "family.imageCaption": {
+    de: "Die farbigen Bodenanker markieren die Positionen von Familienmitgliedern, relevanten Personen oder inneren Anteilen im Raum – sie machen Dynamiken sichtbar und erlebbar.",
+    en: "The colored floor anchors mark the positions of family members, relevant persons, or inner parts in the room – they make dynamics visible and tangible.",
+  },
   "family.step1.title": {
     de: "1. Vorgespräch & Anliegen klären",
     en: "1. Preliminary talk & clarify concerns",
