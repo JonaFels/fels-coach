@@ -8,15 +8,13 @@ import { blogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
 
 import { format, parseISO } from "date-fns";
-import { de, enUS } from "date-fns/locale";
+import { de } from "date-fns/locale";
 
 const Blog = () => {
-  const { language, t } = useLanguage();
-
-  const getLocale = () => language === "de" ? de : enUS;
+  const { t } = useLanguage();
 
   const formatDate = (dateString: string) => {
-    return format(parseISO(dateString), "d. MMMM yyyy", { locale: getLocale() });
+    return format(parseISO(dateString), "d. MMMM yyyy", { locale: de });
   };
 
   return (
@@ -40,7 +38,7 @@ const Blog = () => {
                         <div className="md:w-1/3 aspect-video md:aspect-square">
                           <img
                             src={post.image}
-                            alt={`Blogbeitrag: ${post.title[language]}`}
+                            alt={`Blogbeitrag: ${post.title.de}`}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             loading="lazy"
                           />
@@ -49,9 +47,9 @@ const Blog = () => {
                       <CardContent className="flex-1 p-6 flex flex-col justify-center">
                         <p className="text-sm text-muted-foreground mb-2">{formatDate(post.publishedAt)}</p>
                         <h2 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-secondary transition-colors">
-                          {post.title[language]}
+                          {post.title.de}
                         </h2>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt[language]}</p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt.de}</p>
                       </CardContent>
                     </div>
                   </Card>

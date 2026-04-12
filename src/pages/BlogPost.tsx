@@ -10,12 +10,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft } from "lucide-react";
 import { format, parseISO } from "date-fns";
-import { de, enUS } from "date-fns/locale";
+import { de } from "date-fns/locale";
 import DOMPurify from "dompurify";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
 
   const post = blogPosts.find((p) => p.slug === slug);
 
@@ -23,10 +23,8 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const getLocale = () => language === "de" ? de : enUS;
-
   const formatDate = (dateString: string) => {
-    return format(parseISO(dateString), "d. MMMM yyyy", { locale: getLocale() });
+    return format(parseISO(dateString), "d. MMMM yyyy", { locale: de });
   };
 
   const renderContent = (content: string) => {
@@ -92,7 +90,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead title={`${post.title[language]} | Jona Fels`} description={post.excerpt[language]} image={post.image} type="article" />
+      <SEOHead title={`${post.title.de} | Jona Fels`} description={post.excerpt.de} image={post.image} type="article" />
       <Header />
       <main id="main-content" className="flex-1 py-16 md:py-20">
         <div className="max-w-3xl mx-auto">
@@ -104,16 +102,16 @@ const BlogPost = () => {
 
               {post.image && (
                 <div className="aspect-video rounded-xl overflow-hidden mb-8">
-                  <img src={post.image} alt={`Titelbild: ${post.title[language]}`} className="w-full h-full object-cover" loading="eager" />
+                  <img src={post.image} alt={`Titelbild: ${post.title.de}`} className="w-full h-full object-cover" loading="eager" />
                 </div>
               )}
 
               <header className="mb-8">
                 <p className="text-sm text-muted-foreground mb-3">{formatDate(post.publishedAt)}</p>
-                <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">{post.title[language]}</h1>
+                <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">{post.title.de}</h1>
               </header>
 
-              <div className="prose prose-lg max-w-none">{renderContent(post.content[language])}</div>
+              <div className="prose prose-lg max-w-none">{renderContent(post.content.de)}</div>
 
               <AuthorBox />
             </article>
