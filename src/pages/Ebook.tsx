@@ -66,6 +66,23 @@ const Ebook = () => {
     });
 
     try {
+      // Submit to Netlify Forms via AJAX
+      const netlifyBody = new URLSearchParams();
+      netlifyBody.append("form-name", "ebook-download");
+      netlifyBody.append("name", name);
+      netlifyBody.append("email", email);
+
+      const netlifyRes = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: netlifyBody.toString(),
+      });
+
+      if (!netlifyRes.ok) {
+        console.error("Netlify form error:", netlifyRes.statusText);
+      }
+
+      // Also send via Edge Function (email with PDF)
       const { data, error } = await supabase.functions.invoke("send-ebook-email", {
         body: { name, email },
       });
@@ -155,7 +172,7 @@ const Ebook = () => {
                     <p className="text-muted-foreground text-sm">{t("ebook.success")}</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+                  <form onSubmit={handleSubmit} className="space-y-3" noValidate name="ebook-download" data-netlify="true">
                     <div className="space-y-1.5">
                       <Label htmlFor="ebook-name" className="text-sm">{t("ebook.name")}</Label>
                       <Input
