@@ -13,7 +13,6 @@ import { SEOHead } from "@/components/SEOHead";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const ebookSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -66,9 +65,9 @@ const Ebook = () => {
     });
 
     try {
-      // Submit to Netlify Forms via AJAX
+      // Submit to Netlify Forms
       const netlifyBody = new URLSearchParams();
-      netlifyBody.append("form-name", "ebook-download");
+      netlifyBody.append("form-name", "ebook");
       netlifyBody.append("name", name);
       netlifyBody.append("email", email);
 
@@ -79,23 +78,7 @@ const Ebook = () => {
       });
 
       if (!netlifyRes.ok) {
-        console.error("Netlify form error:", netlifyRes.statusText);
-      }
-
-      // Also send via Edge Function (email with PDF)
-      const { data, error } = await supabase.functions.invoke("send-ebook-email", {
-        body: { name, email },
-      });
-
-      if (error) {
-        console.error("Edge function error:", error);
-        toast({ title: t("ebook.toastErrorTitle"), description: t("ebook.toastErrorDesc"), variant: "destructive" });
-        return;
-      }
-
-      if (data?.error) {
-        toast({ title: t("ebook.toastErrorTitle"), description: data.error, variant: "destructive" });
-        return;
+        throw new Error(`Netlify form error: ${netlifyRes.statusText}`);
       }
 
       setSubmitted(true);
@@ -172,7 +155,16 @@ const Ebook = () => {
                     <p className="text-muted-foreground text-sm">{t("ebook.success")}</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-3" noValidate name="ebook-download" data-netlify="true">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-3"
+                    noValidate
+                    name="ebook"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="website"
+                  >
+                    <input type="hidden" name="form-name" value="ebook" />
                     <div className="space-y-1.5">
                       <Label htmlFor="ebook-name" className="text-sm">{t("ebook.name")}</Label>
                       <Input
