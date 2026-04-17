@@ -44,7 +44,26 @@
   <body>
     <!-- Skip-Link für Barrierefreiheit (BFSG/WCAG 2.1 AA) -->
     <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
-    
+
+    <!--
+      Statische Form-Definitionen für Netlify Forms.
+      Netlify scannt nur statisches HTML beim Build, nicht React.
+      Diese Forms werden NICHT angezeigt (hidden), dienen nur der Erkennung.
+      Die echten Formulare in React posten per AJAX an "/" mit form-name.
+    -->
+    <form name="contact" netlify netlify-honeypot="website" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input type="text" name="website" />
+    </form>
+
+    <form name="ebook-download" netlify netlify-honeypot="website" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="website" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
