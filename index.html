@@ -45,8 +45,8 @@
     <!-- Skip-Link für Barrierefreiheit (BFSG/WCAG 2.1 AA) -->
     <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
 
-    <!-- Netlify Forms: statische Hints für die Build-Erkennung -->
-    <form name="contact" netlify>
+    <!-- Netlify Forms: statische Hints für die Build-Erkennung (unsichtbar) -->
+    <form name="contact" netlify hidden>
       <p>
         <label>Name <input type="text" name="name" /></label>
       </p>
@@ -61,7 +61,7 @@
       </p>
     </form>
 
-    <form name="ebook-download" netlify>
+    <form name="ebook-download" netlify hidden>
       <p>
         <label>Name <input type="text" name="name" /></label>
       </p>
