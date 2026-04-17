@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { trackContactFormSubmit, trackFormInteraction } from "@/lib/tracking";
 
 const contactSchema = z.object({
@@ -67,7 +66,7 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit to Netlify Forms via AJAX
+      // Submit to Netlify Forms
       const netlifyBody = new URLSearchParams();
       netlifyBody.append("form-name", "contact");
       netlifyBody.append("name", formData.name);
@@ -81,20 +80,7 @@ export const ContactForm = () => {
       });
 
       if (!netlifyRes.ok) {
-        console.error("Netlify form error:", netlifyRes.statusText);
-      }
-
-      // Also send via Edge Function (email notification)
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-      });
-
-      if (error) {
-        console.error("Edge function error:", error);
+        throw new Error(`Netlify form error: ${netlifyRes.statusText}`);
       }
 
       setIsSuccess(true);
@@ -138,7 +124,16 @@ export const ContactForm = () => {
             <span>Es gibt Fehler im Formular. Bitte überprüfe deine Eingaben.</span>
           )}
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4" noValidate name="contact" data-netlify="true">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4"
+          noValidate
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="website"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="space-y-2">
             <Label htmlFor="contact-name">
               {t("contactForm.name")} <span className="text-destructive">*</span>
