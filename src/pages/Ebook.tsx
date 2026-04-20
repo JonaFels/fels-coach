@@ -124,7 +124,8 @@ const Ebook = () => {
                     src={ebookMockup}
                     alt="E-Book 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
                     className="w-full max-w-sm h-auto rounded-lg shadow-xl"
-                    loading="eager"
+                    loading="lazy"
+                    decoding="async"
                     width="400"
                     height="300"
                   />
