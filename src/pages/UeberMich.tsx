@@ -88,15 +88,57 @@ const UeberMich = () => {
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
               {t("about.cv.title")}
             </h2>
-            <div className="space-y-4">
-              <div className="border-l-2 border-secondary pl-4 py-2">
-                <p className="text-muted-foreground">{t("about.cv1")}</p>
+            <div className="relative space-y-6 before:content-[''] before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-px before:bg-border">
+              {/* Highlighted current entry */}
+              <div className="relative pl-8">
+                <span className="absolute left-0 top-2 w-4 h-4 rounded-full bg-secondary ring-4 ring-secondary/20" />
+                <div className="rounded-xl border border-secondary/30 bg-secondary/5 p-5 shadow-sm">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="text-sm font-semibold text-secondary tracking-wide">
+                      {t("about.cv1.year")}
+                    </span>
+                    <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full bg-secondary text-secondary-foreground">
+                      ✓ {t("about.cv1.badge")}
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2">
+                    {t("about.cv1.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                    {t("about.cv1.desc")}
+                  </p>
+                </div>
               </div>
-              <div className="border-l-2 border-border pl-4 py-2">
-                <p className="text-muted-foreground">{t("about.cv2")}</p>
+
+              {/* Secondary entries */}
+              <div className="relative pl-8">
+                <span className="absolute left-1 top-3 w-3 h-3 rounded-full bg-background border-2 border-border" />
+                <div className="py-2">
+                  <p className="text-sm font-semibold text-muted-foreground tracking-wide mb-1">
+                    {t("about.cv2.year")}
+                  </p>
+                  <h3 className="font-serif text-base md:text-lg font-medium text-foreground mb-1">
+                    {t("about.cv2.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {t("about.cv2.desc")}
+                  </p>
+                </div>
               </div>
-              <div className="border-l-2 border-border pl-4 py-2">
-                <p className="text-muted-foreground">{t("about.cv3")}</p>
+
+              <div className="relative pl-8">
+                <span className="absolute left-1 top-3 w-3 h-3 rounded-full bg-background border-2 border-border" />
+                <div className="py-2">
+                  <p className="text-sm font-semibold text-muted-foreground tracking-wide mb-1">
+                    {t("about.cv3.year")}
+                  </p>
+                  <h3 className="font-serif text-base md:text-lg font-medium text-foreground mb-1">
+                    {t("about.cv3.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {t("about.cv3.desc")}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
