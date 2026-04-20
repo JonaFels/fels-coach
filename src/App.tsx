@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,18 +10,21 @@ import { ChatbaseWidget } from "@/components/ChatbaseWidget";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
 
 import { useAppTracking } from "@/hooks/useTracking";
+// Eager: Startseite (LCP-kritisch) + 404
 import Index from "./pages/Index";
-import Angebote from "./pages/Angebote";
-import Familienaufstellung from "./pages/Familienaufstellung";
-import Ebook from "./pages/Ebook";
-import Kontakt from "./pages/Kontakt";
-import UeberMich from "./pages/UeberMich";
-import Datenschutz from "./pages/Datenschutz";
-import Impressum from "./pages/Impressum";
-import AGB from "./pages/AGB";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+
+// Lazy: alle übrigen Routen → kleinerer initialer Bundle, ~50 KiB Einsparung
+const Angebote = lazy(() => import("./pages/Angebote"));
+const Familienaufstellung = lazy(() => import("./pages/Familienaufstellung"));
+const Ebook = lazy(() => import("./pages/Ebook"));
+const Kontakt = lazy(() => import("./pages/Kontakt"));
+const UeberMich = lazy(() => import("./pages/UeberMich"));
+const Datenschutz = lazy(() => import("./pages/Datenschutz"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const AGB = lazy(() => import("./pages/AGB"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 const queryClient = new QueryClient();
 
@@ -29,6 +33,11 @@ const AppTracking = () => {
   useAppTracking();
   return null;
 };
+
+// Minimaler Fallback (kein Layout-Shift, schnell sichtbar)
+const RouteFallback = () => (
+  <div className="min-h-screen bg-background" aria-hidden="true" />
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -41,22 +50,24 @@ const App = () => (
           <ScrollToTop />
           <ChatbaseWidget />
           <HashBookingTrigger />
-          
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/angebote" element={<Angebote />} />
-            <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
-            <Route path="/ebook" element={<Ebook />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            <Route path="/ueber-mich" element={<UeberMich />} />
-            <Route path="/datenschutz" element={<Datenschutz />} />
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/agb" element={<AGB />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+
+          <Suspense fallback={<RouteFallback />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/angebote" element={<Angebote />} />
+              <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
+              <Route path="/ebook" element={<Ebook />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/ueber-mich" element={<UeberMich />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/agb" element={<AGB />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </LanguageProvider>
