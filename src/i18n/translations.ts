@@ -577,17 +577,45 @@ export const translations: Translations = {
     de: "Lebenslauf",
     en: "Resume",
   },
-  "about.cv1": {
-    de: "2025 – 2026 | Zertifizierter Familiensteller (Wolfgang Bracht): Abschluss mit der Note „sehr gut“. Umfassende Ausbildung in systemischer Aufstellungsarbeit, Trauma-Therapie, NLP, Transaktionsanalyse und Pesso-Arbeit (203 Stunden).",
-    en: "2025 – 2026 | Certified Family Constellation Facilitator (Wolfgang Bracht): Completed with grade „very good“. Comprehensive training in systemic constellation work, trauma therapy, NLP, transactional analysis, and Pesso work (203 hours).",
+  "about.cv1.year": {
+    de: "2025 – 2026",
+    en: "2025 – 2026",
   },
-  "about.cv2": {
-    de: "2022 - 2023 | Allgemeiner Heilpraktiker: Studium an der Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
-    en: "2022 - 2023 | General Naturopath: Studies at the Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
+  "about.cv1.title": {
+    de: "Zertifizierter Familiensteller (Wolfgang Bracht)",
+    en: "Certified Family Constellation Facilitator (Wolfgang Bracht)",
   },
-  "about.cv3": {
-    de: "2016 - 2017 | Auslandsjahr in Neuseeland – der Wendepunkt meiner persönlichen Transformation.",
-    en: "2016 - 2017 | Year abroad in New Zealand – the turning point of my personal transformation.",
+  "about.cv1.desc": {
+    de: "Umfassende Ausbildung in systemischer Aufstellungsarbeit, Trauma-Therapie, NLP, Transaktionsanalyse und Pesso-Arbeit (203 Stunden).",
+    en: "Comprehensive training in systemic constellation work, trauma therapy, NLP, transactional analysis, and Pesso work (203 hours).",
+  },
+  "about.cv1.badge": {
+    de: "Abschluss: sehr gut",
+    en: "Graduated: very good",
+  },
+  "about.cv2.year": {
+    de: "2022 – 2023",
+    en: "2022 – 2023",
+  },
+  "about.cv2.title": {
+    de: "Allgemeiner Heilpraktiker",
+    en: "General Naturopath",
+  },
+  "about.cv2.desc": {
+    de: "Studium an der Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
+    en: "Studies at the Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
+  },
+  "about.cv3.year": {
+    de: "2016 – 2017",
+    en: "2016 – 2017",
+  },
+  "about.cv3.title": {
+    de: "Auslandsjahr in Neuseeland",
+    en: "Year abroad in New Zealand",
+  },
+  "about.cv3.desc": {
+    de: "Der Wendepunkt meiner persönlichen Transformation.",
+    en: "The turning point of my personal transformation.",
   },
 
   // Legal Pages
