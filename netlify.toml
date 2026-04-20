@@ -18,6 +18,13 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# www -> non-www (301) - Konsistente Canonical-Domain
+[[redirects]]
+  from = "https://www.fels-coach.de/*"
+  to = "https://fels-coach.de/:splat"
+  status = 301
+  force = true
+
 # 301 redirects (alte Pfade -> neue URLs)
 [[redirects]]
   from = "/en"
