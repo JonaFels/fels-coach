@@ -86,8 +86,10 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     const meta = pageMeta[pathname]?.[language] || defaultMeta[language];
     const pageTitle = title || meta.title;
     const pageDescription = description || meta.description;
-    const pageImage = image || "https://www.fels-coach.de/og-image.webp";
-    const pageUrl = `https://www.fels-coach.de${pathname}`;
+    const pageImage = image || "https://fels-coach.de/og-image.webp";
+    // Canonical IMMER ohne www, ohne Query-String, ohne Trailing-Slash (außer Root)
+    const cleanPath = pathname === "/" ? "/" : pathname.replace(/\/$/, "");
+    const pageUrl = `https://fels-coach.de${cleanPath}`;
 
     // Update document title
     document.title = pageTitle;
