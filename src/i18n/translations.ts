@@ -602,8 +602,8 @@ export const translations: Translations = {
     en: "General Naturopath",
   },
   "about.cv2.desc": {
-    de: "Studium an der Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
-    en: "Studies at the Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
+    de: "Studium an der Paracelsus Heilpraktikerschule Freiburg im Breisgau (700 Stunden).",
+    en: "Studies at the Paracelsus Heilpraktikerschule Freiburg im Breisgau (700 hours).",
   },
   "about.cv3.year": {
     de: "2016 – 2017",
