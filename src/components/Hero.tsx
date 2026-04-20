@@ -3,6 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { Phone } from "lucide-react";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp";
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -12,6 +13,8 @@ export const Hero = () => {
       <svg
         className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-[0.035] pointer-events-none"
         viewBox="0 0 800 800"
+        width="800"
+        height="800"
         fill="none"
         aria-hidden="true"
       >
@@ -51,7 +54,9 @@ export const Hero = () => {
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5" />
               <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-muted/40 shadow-md shadow-foreground/5 ring-1 ring-border/10">
                 <img
-                  src={profilBild}
+                  src={profilBildMobile}
+                  srcSet={`${profilBildMobile} 450w, ${profilBild} 853w`}
+                  sizes="(max-width: 768px) 240px, 320px"
                   alt="Jona Fels – Systemischer Coach in Freiburg"
                   className="w-full h-full object-cover object-[center_18%]"
                   loading="eager"

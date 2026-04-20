@@ -38,7 +38,8 @@
 
     /* Muted: Sand (#F5F5DC inspired) */
     --muted: 48 30% 93%;
-    --muted-foreground: 213 14% 38%;
+    /* Darkened to ensure WCAG AA contrast (>= 4.5:1) on linen background */
+    --muted-foreground: 213 16% 32%;
 
     /* Accent: Light sand-sage */
     --accent: 48 20% 93%;

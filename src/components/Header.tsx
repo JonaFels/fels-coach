@@ -34,6 +34,10 @@ export const Header = () => {
               src={logoIcon}
               alt="Jona Fels"
               className="h-8 w-8 object-contain"
+              width={32}
+              height={32}
+              loading="eager"
+              decoding="async"
             />
             <span className="font-serif text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-none whitespace-nowrap">
               Jona Fels – Systemisches Coaching
