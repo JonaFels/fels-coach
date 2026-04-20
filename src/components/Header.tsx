@@ -51,7 +51,7 @@ export const Header = () => {
                 key={item.key}
                 href={item.href}
                 onClick={() => handleNavClick(item.key, item.href)}
-                className="text-[0.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+                className="text-[0.8rem] font-medium text-foreground/80 hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {t(item.key)}
               </a>
@@ -102,7 +102,7 @@ export const Header = () => {
                   handleNavClick(item.key, item.href);
                   setIsMobileMenuOpen(false);
                 }}
-                className="px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+                className="px-3 py-2.5 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
               >
                 {t(item.key)}
               </a>
