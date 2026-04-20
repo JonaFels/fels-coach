@@ -37,8 +37,9 @@
     <meta name="twitter:description" content="Familienaufstellung & systemisches Coaching in Freiburg. Unbewusste Muster lösen, innere Blockaden überwinden." />
     <meta name="twitter:image" content="https://www.fels-coach.de/assets/og-image.webp" />
 
-    <!-- Custom CSS - Bearbeitbar auf dem Server -->
-    <link rel="stylesheet" href="/custom.css" />
+    <!-- Custom CSS - Bearbeitbar auf dem Server (non-blocking) -->
+    <link rel="preload" href="/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/custom.css" /></noscript>
   </head>
 
   <body>
