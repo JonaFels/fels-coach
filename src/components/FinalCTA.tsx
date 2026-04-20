@@ -11,6 +11,8 @@ export const FinalCTA = () => {
       <svg
         className="absolute -left-20 -bottom-20 w-[400px] h-[400px] opacity-[0.05] pointer-events-none"
         viewBox="0 0 800 800"
+        width="400"
+        height="400"
         fill="none"
         aria-hidden="true"
       >
