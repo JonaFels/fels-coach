@@ -15,8 +15,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const SITE_URL = 'https://www.fels-coach.de';
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
+const SITE_URL = 'https://fels-coach.de';
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.webp`;
 
 // Alle Routen mit SEO-Meta-Daten
 const routes = [
@@ -127,12 +127,19 @@ function injectMeta(html, route) {
   html = html.replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
   html = html.replace(/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${image}" />`);
 
-  // Canonical Link einfügen (vor </head>)
+  // Canonical Link einfügen / ersetzen (vor </head>)
   if (!html.includes('rel="canonical"')) {
     html = html.replace('</head>', `  <link rel="canonical" href="${url}" />\n  </head>`);
   } else {
     html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`);
   }
+
+  // Hreflang-Tags: Self-Reference + x-default (nur DE, EN nur als Toggle, nicht eigenständig indexierbar)
+  html = html.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/?>\s*/g, '');
+  const hreflangTags =
+    `<link rel="alternate" hreflang="de" href="${url}" />` +
+    `<link rel="alternate" hreflang="x-default" href="${url}" />`;
+  html = html.replace('</head>', `${hreflangTags}\n  </head>`);
 
   return html;
 }

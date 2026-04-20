@@ -21,61 +21,61 @@
 # 301 redirects (alte Pfade -> neue URLs)
 [[redirects]]
   from = "/en"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/*"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/fr"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/fr/*"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/angebote.html"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ebook.html"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/buchen.html"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/termine/index.php"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/index.html"
-  to = "https://www.fels-coach.de/"
+  to = "https://fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/datenschutz.html"
-  to = "https://www.fels-coach.de/datenschutz"
+  to = "https://fels-coach.de/datenschutz"
   status = 301
   force = true
 
