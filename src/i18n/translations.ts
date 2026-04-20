@@ -578,8 +578,8 @@ export const translations: Translations = {
     en: "Resume",
   },
   "about.cv1": {
-    de: "Seit April 2024 | Ausbildung zum Familiensteller: Ausbildung im Bereich Familienaufstellungen.",
-    en: "Since April 2024 | Family Constellation Training: Training in family constellations.",
+    de: "2025 – 2026 | Zertifizierter Familiensteller (Wolfgang Bracht): Abschluss mit der Note „sehr gut“. Umfassende Ausbildung in systemischer Aufstellungsarbeit, Trauma-Therapie, NLP, Transaktionsanalyse und Pesso-Arbeit (203 Stunden).",
+    en: "2025 – 2026 | Certified Family Constellation Facilitator (Wolfgang Bracht): Completed with grade „very good“. Comprehensive training in systemic constellation work, trauma therapy, NLP, transactional analysis, and Pesso work (203 hours).",
   },
   "about.cv2": {
     de: "2022 - 2023 | Allgemeiner Heilpraktiker: Studium an der Paracelsus Heilpraktikerschule Freiburg im Breisgau.",
