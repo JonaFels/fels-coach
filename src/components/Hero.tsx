@@ -55,6 +55,8 @@ export const Hero = () => {
                   alt="Jona Fels – Systemischer Coach in Freiburg"
                   className="w-full h-full object-cover object-[center_18%]"
                   loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   width="320"
                   height="427"
                 />
