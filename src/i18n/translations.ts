@@ -57,6 +57,10 @@ export const translations: Translations = {
   },
 
   // Hero Section
+  "hero.eyebrow": {
+    de: "Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels",
+    en: "Systemic Coaching & Family Constellation in Freiburg – Jona Fels",
+  },
   "hero.title": {
     de: "Endlich ankommen, wo der Sturm aufhört.",
     en: "Finally arriving where the storm ends.",
