@@ -64,7 +64,7 @@ export const Footer = () => {
 
         {/* Divider + Copyright */}
         <div className="border-t border-border/40 pt-4">
-          <p className="text-center text-[11px] text-muted-foreground/50 tracking-wide">
+          <p className="text-center text-xs text-muted-foreground tracking-wide">
             © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
           </p>
         </div>
