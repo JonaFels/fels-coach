@@ -24,9 +24,9 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#6B2E2E" />
 
-    <!-- Font Preload (kritische Schriften, latin subset) -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-latin-400-normal.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin-400-normal.woff2" crossorigin />
+    <!-- Font Preload entfernt: Vite hasht Asset-URLs (/assets/...woff2), 
+         feste /fonts/-Pfade liefen ins Leere. Fontsource-CSS lädt fonts direkt mit. -->
+
 
     <!-- Critical CSS (Above-the-fold) - inlined to eliminate render-blocking -->
     <style>
