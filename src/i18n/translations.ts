@@ -534,8 +534,8 @@ export const translations: Translations = {
 
   // Über mich Page
   "about.title": {
-    de: "Über mich: Dein systemischer Coach in Freiburg",
-    en: "About me: Your systemic coach in Freiburg",
+    de: "Dein systemischer Coach in Freiburg",
+    en: "Your systemic coach in Freiburg",
   },
   "about.subtitle": {
     de: "Wie ich mein eigenes Muster durchbrochen habe",
