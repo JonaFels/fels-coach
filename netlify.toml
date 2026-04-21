@@ -10,7 +10,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; upgrade-insecure-requests;"
+  Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; upgrade-insecure-requests;"
 
 # Cache hashed assets aggressively
 [[headers]]
@@ -18,71 +18,84 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# www -> non-www (301) - Konsistente Canonical-Domain
+# non-www -> www (301) - Konsistente Canonical-Domain auf www.fels-coach.de
 [[redirects]]
-  from = "https://www.fels-coach.de/*"
-  to = "https://fels-coach.de/:splat"
+  from = "https://fels-coach.de/*"
+  to = "https://www.fels-coach.de/:splat"
+  status = 301
+  force = true
+
+# http -> https (zusätzlich zu upgrade-insecure-requests, für Direktaufrufe)
+[[redirects]]
+  from = "http://fels-coach.de/*"
+  to = "https://www.fels-coach.de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.fels-coach.de/*"
+  to = "https://www.fels-coach.de/:splat"
   status = 301
   force = true
 
 # 301 redirects (alte Pfade -> neue URLs)
 [[redirects]]
   from = "/en"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/*"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/fr"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/fr/*"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/angebote.html"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ebook.html"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/buchen.html"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/termine/index.php"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/index.html"
-  to = "https://fels-coach.de/"
+  to = "https://www.fels-coach.de/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/datenschutz.html"
-  to = "https://fels-coach.de/datenschutz"
+  to = "https://www.fels-coach.de/datenschutz"
   status = 301
   force = true
 

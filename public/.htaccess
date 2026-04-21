@@ -2,13 +2,13 @@
   RewriteEngine On
   RewriteBase /
   
-  # HTTPS-Zwang: Alle Anfragen auf HTTPS umleiten
+  # non-www zu www Redirect (Canonical-Domain: www.fels-coach.de)
+  RewriteCond %{HTTP_HOST} ^fels-coach\.de$ [NC]
+  RewriteRule ^(.*)$ https://www.fels-coach.de/$1 [L,R=301]
+
+  # HTTPS-Zwang: Alle http-Anfragen auf https umleiten (mit www)
   RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  
-  # www zu non-www Redirect (optional, für Konsistenz)
-  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-  RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+  RewriteRule ^(.*)$ https://www.fels-coach.de/$1 [L,R=301]
 
   # 301-Redirects: Alte URLs auf neue clean URLs umleiten
   RewriteRule ^en/index\.html$ / [L,R=301]
