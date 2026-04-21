@@ -1097,7 +1097,7 @@ export const translations: Translations = {
 
   // ── Impressum ──
   "imprint.according": { de: "Angaben gemäß § 5 DDG", en: "Information pursuant to § 5 DDG" },
-  "imprint.address": { de: "Systemisches Coaching & Familienaufstellungen", en: "Systemisches Coaching & Familienaufstellungen" },
+  "imprint.address": { de: "Systemisches Coaching & Familienaufstellung in Freiburg", en: "Systemic Coaching & Family Constellation in Freiburg" },
   "imprint.contactHeading": { de: "Kontakt", en: "Contact" },
   "imprint.phone": { de: "Telefon", en: "Phone" },
   "imprint.vatHeading": { de: "Umsatzsteuer-ID", en: "VAT ID" },

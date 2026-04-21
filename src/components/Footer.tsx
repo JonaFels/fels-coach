@@ -65,7 +65,7 @@ export const Footer = () => {
         {/* Divider + Copyright */}
         <div className="border-t border-border/40 pt-4">
           <p className="text-center text-xs text-muted-foreground tracking-wide">
-            © {currentYear} Jona Fels – Systemisches Coaching. {t("footer.rights")}
+            © {currentYear} Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels. {t("footer.rights")}
           </p>
         </div>
       </div>
