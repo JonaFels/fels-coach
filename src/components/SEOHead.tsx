@@ -26,9 +26,9 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string }>> = {
   "/": {
-    de: { title: "Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels", description: "Entdecke verborgene Familiendynamiken und finde inneren Frieden. 1:1 Coaching mit systemischem Ansatz in Freiburg." },
-    en: { title: "Systemic Coaching & Family Constellation in Freiburg – Jona Fels", description: "Discover hidden family dynamics and find inner peace. 1:1 coaching with systemic approach in Freiburg." },
-    fr: { title: "Coaching Systémique & Constellation Familiale à Freiburg – Jona Fels", description: "Découvrez les dynamiques familiales cachées. Coaching 1:1 avec approche systémique à Freiburg." },
+    de: { title: "Systemische Familienaufstellung & Coaching Freiburg | Jona Fels", description: "Systemische Familienaufstellung in Freiburg. ✓ Unbewusste Blockaden lösen ✓ Klarheit gewinnen ✓ Diskrete Einzelsitzungen mit Jona Fels." },
+    en: { title: "Systemic Family Constellation & Coaching Freiburg | Jona Fels", description: "Systemic family constellation in Freiburg. ✓ Dissolve unconscious blockages ✓ Gain clarity ✓ Discreet 1:1 sessions with Jona Fels." },
+    fr: { title: "Constellation Familiale & Coaching Systémique Freiburg | Jona Fels", description: "Constellation familiale systémique à Freiburg. ✓ Dissoudre les blocages inconscients ✓ Gagner en clarté ✓ Séances individuelles discrètes." },
   },
   "/angebote": {
     de: { title: "Angebote & Termine in Freiburg – Jona Fels", description: "Buche dein systemisches Coaching: Kennenlern-Session oder tiefgreifende Familienaufstellung in Freiburg." },
