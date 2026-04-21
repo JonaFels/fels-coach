@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { JsonLd } from "@/components/JsonLd";
 import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
@@ -20,6 +21,7 @@ const UeberMich = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead />
+      <JsonLd />
       <Header />
       <div ref={heroRef}>
         <PraxisHeroBanner variant="sitzbereich" />
