@@ -26,9 +26,9 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string }>> = {
   "/": {
-    de: { title: "Systemische Familienaufstellung & Coaching Freiburg | Jona Fels", description: "Systemische Familienaufstellung in Freiburg. ✓ Unbewusste Blockaden lösen ✓ Klarheit gewinnen ✓ Diskrete Einzelsitzungen mit Jona Fels." },
-    en: { title: "Systemic Family Constellation & Coaching Freiburg | Jona Fels", description: "Systemic family constellation in Freiburg. ✓ Dissolve unconscious blockages ✓ Gain clarity ✓ Discreet 1:1 sessions with Jona Fels." },
-    fr: { title: "Constellation Familiale & Coaching Systémique Freiburg | Jona Fels", description: "Constellation familiale systémique à Freiburg. ✓ Dissoudre les blocages inconscients ✓ Gagner en clarté ✓ Séances individuelles discrètes." },
+    de: { title: "Systemische Familienaufstellung & Coaching Freiburg | Jona Fels", description: "Systemische Familienaufstellung in Freiburg. Unbewusste Blockaden lösen und Klarheit gewinnen. Diskrete Einzelsitzungen mit Jona Fels." },
+    en: { title: "Systemic Family Constellation & Coaching Freiburg | Jona Fels", description: "Systemic family constellation in Freiburg. Dissolve unconscious blockages and gain clarity. Discreet 1:1 sessions with Jona Fels." },
+    fr: { title: "Constellation Familiale & Coaching Systémique Freiburg | Jona Fels", description: "Constellation familiale systémique à Freiburg. Dissoudre les blocages inconscients et gagner en clarté. Séances individuelles discrètes." },
   },
   "/angebote": {
     de: { title: "Angebote & Termine in Freiburg – Jona Fels", description: "Buche dein systemisches Coaching: Kennenlern-Session oder tiefgreifende Familienaufstellung in Freiburg." },
@@ -36,19 +36,19 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     fr: { title: "Offres & Rendez-vous à Freiburg – Jona Fels", description: "Réservez votre coaching systémique : séance découverte ou constellation familiale approfondie." },
   },
   "/systemische-familienaufstellung-freiburg": {
-    de: { title: "Einzelsitzungen: Familienaufstellung mit Bodenankern | Jona Fels", description: "Erfahre, wie eine Familienaufstellung im geschützten Einzelsetting funktioniert. Mit Bodenankern familiäre Verstrickungen lösen und neue Wege finden." },
-    en: { title: "Individual Sessions: Family Constellation with Floor Anchors | Jona Fels", description: "Discover how a family constellation works in a protected 1:1 setting. Use floor anchors to dissolve family entanglements and find new paths." },
-    fr: { title: "Séances Individuelles : Constellation Familiale avec Ancres au Sol | Jona Fels", description: "Découvrez comment une constellation familiale fonctionne en cadre individuel protégé. Avec des ancres au sol pour dénouer les enchevêtrements familiaux." },
+    de: { title: "Familienaufstellung in Freiburg: Einzelsitzungen | Jona Fels", description: "Löse unbewusste Verstrickungen mit einer systemischen Familienaufstellung in Freiburg. Diskrete Einzelsitzungen mit Bodenankern. Jetzt 30 Min. Gratis-Vorgespräch!" },
+    en: { title: "Family Constellation in Freiburg: 1:1 Sessions | Jona Fels", description: "Dissolve unconscious entanglements with a systemic family constellation in Freiburg. Discreet 1:1 sessions with floor anchors. Free 30-min intro call!" },
+    fr: { title: "Constellation Familiale à Freiburg : Séances Individuelles | Jona Fels", description: "Dénouez les enchevêtrements inconscients avec une constellation familiale systémique à Freiburg. Séances individuelles discrètes avec ancres au sol." },
   },
   "/ebook": {
-    de: { title: "E-Book: Systemische Familienaufstellung verstehen | Jona Fels", description: "Hole dir mein E-Book zur systemischen Arbeit. ✓ Praxisnahe Impulse ✓ Verstrickungen erkennen ✓ Jetzt herunterladen und den ersten Schritt machen." },
-    en: { title: "E-Book: Understanding Systemic Family Constellation | Jona Fels", description: "Get my e-book on systemic work. ✓ Practical impulses ✓ Recognise entanglements ✓ Download now and take the first step." },
-    fr: { title: "E-Book : Comprendre la Constellation Familiale Systémique | Jona Fels", description: "Obtenez mon e-book sur le travail systémique. ✓ Impulsions pratiques ✓ Reconnaître les enchevêtrements ✓ Téléchargez maintenant." },
+    de: { title: "Gratis E-Book: Warum du dich unbewusst selbst sabotierst", description: "Kostenloses E-Book (6 Seiten): Erfahre, warum du in alte Muster zurückfällst, wie das Gummiband-Prinzip wirkt und wie du innere Blockaden löst." },
+    en: { title: "Free E-Book: Why You Unconsciously Sabotage Yourself", description: "Free e-book (6 pages): Learn why you fall back into old patterns, how the rubber band principle works and how to dissolve inner blockages." },
+    fr: { title: "E-Book Gratuit : Pourquoi vous vous sabotez inconsciemment", description: "E-book gratuit (6 pages) : Découvrez pourquoi vous retombez dans d'anciens schémas et comment dissoudre les blocages intérieurs." },
   },
   "/ueber-mich": {
-    de: { title: "Über mich: Dein systemischer Coach in Freiburg | Jona Fels", description: "Lerne Jona Fels kennen. Erfahre mehr über meine Philosophie, meine Erfahrung und wie ich dir als systemischer Coach in Freiburg zur Seite stehe." },
-    en: { title: "About Me: Your Systemic Coach in Freiburg | Jona Fels", description: "Get to know Jona Fels. Learn more about my philosophy, my experience and how I can support you as a systemic coach in Freiburg." },
-    fr: { title: "À propos : Votre Coach Systémique à Freiburg | Jona Fels", description: "Faites connaissance avec Jona Fels. Découvrez ma philosophie, mon expérience et comment je vous accompagne en tant que coach systémique à Freiburg." },
+    de: { title: "Über mich | Jona Fels – Systemischer Coach in Freiburg", description: "Lerne Jona Fels kennen. Erfahre, wie ich als zertifizierter Familiensteller meine eigenen Muster durchbrochen habe und dir helfe, dein wahres Selbst zu leben." },
+    en: { title: "About Me | Jona Fels – Systemic Coach in Freiburg", description: "Get to know Jona Fels. Learn how I broke through my own patterns as a certified family constellator and help you live your true self." },
+    fr: { title: "À propos | Jona Fels – Coach Systémique à Freiburg", description: "Faites connaissance avec Jona Fels. Découvrez comment j'ai brisé mes propres schémas et comment je vous aide à vivre votre vrai soi." },
   },
   "/kontakt": {
     de: { title: "Kontakt – Systemisches Coaching Freiburg – Jona Fels", description: "Kontaktiere Jona Fels für ein kostenloses Erstgespräch. Erreichbar per E-Mail, WhatsApp oder Telegram." },
