@@ -80,10 +80,10 @@ const Kontakt = () => {
           className="pt-2 pb-8 md:pt-4 md:pb-12"
         >
           <div className="container mx-auto px-4 max-w-2xl">
-            <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-0.5 text-center">
+            <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 text-center">
               {t("contact.calendarHeadline")}
             </p>
-            <p className="text-[11px] text-muted-foreground text-center mb-2">
+            <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
             <div className="relative min-h-[420px] bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
