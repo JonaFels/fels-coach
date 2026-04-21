@@ -58,8 +58,8 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels",
-    en: "Systemic Coaching & Family Constellation in Freiburg – Jona Fels",
+    de: "Systemische Familienaufstellung & Coaching in Freiburg",
+    en: "Systemic Family Constellation & Coaching in Freiburg",
   },
   "hero.title": {
     de: "Endlich ankommen, wo der Sturm aufhört.",
@@ -382,8 +382,8 @@ export const translations: Translations = {
     en: "The Path to Wholeness",
   },
   "ebook.headline": {
-    de: "Warum du dich unbewusst selbst sabotierst – und wie du die Erlaubnis findest, endlich ganz du selbst zu sein.",
-    en: "Why you unconsciously sabotage yourself – and how to find permission to finally be wholly yourself.",
+    de: "E-Book: Warum du dich unbewusst selbst sabotierst",
+    en: "E-Book: Why you unconsciously sabotage yourself",
   },
   "ebook.subheadline": {
     de: "Auf 6 kompakten Seiten erfährst du, wie die unsichtbare Architektur deiner inneren Blockaden funktioniert – und wie du den Weg zum Ganzsein findest.",
@@ -534,8 +534,8 @@ export const translations: Translations = {
 
   // Über mich Page
   "about.title": {
-    de: "Über mich",
-    en: "About me",
+    de: "Über mich: Dein systemischer Coach in Freiburg",
+    en: "About me: Your systemic coach in Freiburg",
   },
   "about.subtitle": {
     de: "Wie ich mein eigenes Muster durchbrochen habe",
