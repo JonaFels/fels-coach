@@ -52,18 +52,6 @@
   force = true
 
 [[redirects]]
-  from = "/fr"
-  to = "https://www.fels-coach.de/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/fr/*"
-  to = "https://www.fels-coach.de/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/angebote.html"
   to = "https://www.fels-coach.de/"
   status = 301
