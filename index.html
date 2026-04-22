@@ -68,33 +68,22 @@
     <!-- Skip-Link für Barrierefreiheit (BFSG/WCAG 2.1 AA) -->
     <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
 
-    <!-- Netlify Forms: statische Hints für die Build-Erkennung (unsichtbar) -->
-    <form name="contact" netlify hidden>
-      <p>
-        <label>Name <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Email <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Message <textarea name="message"></textarea></label>
-      </p>
-      <p>
+    <!-- Netlify Forms: statische Hints für die Build-Erkennung. Doppelt versteckt
+         (hidden + inline-CSS + aria-hidden), damit nichts sichtbar wird –
+         auch nicht in unstyled Renderern oder bei AI-Crawlern. -->
+    <div hidden aria-hidden="true" style="display:none !important; visibility:hidden; position:absolute; left:-99999px; width:0; height:0; overflow:hidden;">
+      <form name="contact" netlify hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
         <button type="submit">Send</button>
-      </p>
-    </form>
-
-    <form name="ebook" netlify hidden>
-      <p>
-        <label>Name <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Email <input type="email" name="email" /></label>
-      </p>
-      <p>
+      </form>
+      <form name="ebook" netlify hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
         <button type="submit">Send</button>
-      </p>
-    </form>
+      </form>
+    </div>
 
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
