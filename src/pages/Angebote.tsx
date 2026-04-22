@@ -104,7 +104,7 @@ const Angebote = () => {
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
               {t("offerings.preiseTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-3 max-w-[600px] mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground text-center mb-3 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
               {t("offerings.preiseIntro")}
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-10">
