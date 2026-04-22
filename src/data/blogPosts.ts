@@ -9,17 +9,14 @@ export interface BlogPost {
   title: {
     de: string;
     en: string;
-    fr: string;
   };
   excerpt: {
     de: string;
     en: string;
-    fr: string;
   };
   content: {
     de: string;
     en: string;
-    fr: string;
   };
   image?: string;
   publishedAt: string;
