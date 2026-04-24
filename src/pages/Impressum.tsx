@@ -41,6 +41,7 @@ const Impressum = () => {
               {t("imprint.insuranceName")}<br />
               Continentale Sachversicherung AG<br />
               Sitz der Gesellschaft: Dortmund<br />
+              {t("imprint.insuranceNumber")} 536387517<br />
               {t("imprint.insuranceScope")}
             </p>
 
