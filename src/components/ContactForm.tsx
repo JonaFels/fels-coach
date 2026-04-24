@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { trackContactFormSubmit, trackFormInteraction } from "@/lib/tracking";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "required").max(100),
@@ -66,21 +67,16 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit to Netlify Forms
-      const netlifyBody = new URLSearchParams();
-      netlifyBody.append("form-name", "contact");
-      netlifyBody.append("name", formData.name);
-      netlifyBody.append("email", formData.email);
-      netlifyBody.append("message", formData.message);
-
-      const netlifyRes = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: netlifyBody.toString(),
+      const { error } = await supabase.functions.invoke("send-contact-request", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
       });
 
-      if (!netlifyRes.ok) {
-        throw new Error(`Netlify form error: ${netlifyRes.statusText}`);
+      if (error) {
+        throw error;
       }
 
       setIsSuccess(true);
