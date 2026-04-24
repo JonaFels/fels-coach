@@ -1104,6 +1104,7 @@ export const translations: Translations = {
   "imprint.vatText": { de: "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:", en: "VAT identification number pursuant to § 27a of the German VAT Act:" },
   "imprint.insuranceHeading": { de: "Angaben zur Berufshaftpflichtversicherung", en: "Professional liability insurance" },
   "imprint.insuranceName": { de: "Name und Sitz des Versicherers:", en: "Name and registered office of the insurer:" },
+  "imprint.insuranceNumber": { de: "Versicherungsnummer:", en: "Insurance number:" },
   "imprint.insuranceScope": { de: "Räumlicher Geltungsbereich: Deutschland und europäisches Ausland", en: "Territorial scope: Germany and European countries" },
   "imprint.editorialHeading": { de: "Verantwortlich für redaktionelle Inhalte (gem. § 18 Abs. 2 MStV)", en: "Responsible for editorial content (pursuant to § 18 para. 2 MStV)" },
   "imprint.disputeHeading": { de: "EU-Streitschlichtung", en: "EU dispute resolution" },
