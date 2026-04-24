@@ -205,7 +205,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     if (emailResponse.error) {
-      console.error("Resend error:", emailResponse.error);
+      console.error("Resend error:", JSON.stringify(emailResponse.error));
       return new Response(
         JSON.stringify({ error: "Anfrage konnte nicht gesendet werden. Bitte versuche es später erneut." }),
         { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
@@ -217,7 +217,7 @@ const handler = async (req: Request): Promise<Response> => {
       headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   } catch (error) {
-    console.error("Error in send-contact-request function:", error);
+    console.error("Error in send-contact-request function:", JSON.stringify(error));
     return new Response(
       JSON.stringify({ error: "Ein Fehler ist aufgetreten. Bitte versuche es später erneut." }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
