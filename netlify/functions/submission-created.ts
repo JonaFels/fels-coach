@@ -10,8 +10,8 @@ import { Resend } from "resend";
  */
 
 const OWNER_EMAIL = "info@fels-coach.de";
-const FROM_CONTACT = "Coach Anfrage <anfrage@send.fels-coach.de>";
-const FROM_EBOOK = "Jona Fels <anfrage@send.fels-coach.de>";
+const FROM_CONTACT = "Coach Anfrage <noreply@resend.fels-coach.de>";
+const FROM_EBOOK = "Jona Fels <noreply@resend.fels-coach.de>";
 const EBOOK_DOWNLOAD_URL = "https://fels-coach.de/der-weg-zum-ganzsein.pdf";
 
 interface NetlifySubmissionEvent {
