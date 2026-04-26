@@ -102,7 +102,7 @@ const BlogPost = () => {
 
               {post.image && (
                 <div className="aspect-video rounded-xl overflow-hidden mb-8">
-                  <img src={post.image} alt={`Titelbild: ${post.title.de}`} className="w-full h-full object-cover" loading="eager" />
+                  <img src={post.image} alt={`Titelbild: ${post.title.de}`} className="w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="high" />
                 </div>
               )}
 

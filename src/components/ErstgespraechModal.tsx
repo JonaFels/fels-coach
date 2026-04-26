@@ -79,7 +79,8 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
               src={profilBild}
               alt="Jona Fels – Systemischer Coach in Freiburg"
               className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover object-center shadow-md mb-4 no-fade"
-              loading="eager"
+              loading="lazy"
+              decoding="async"
             />
             <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
               Lass uns unverbindlich sprechen
