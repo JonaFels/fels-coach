@@ -23,7 +23,10 @@
   RewriteRule ^angebote\.html$ / [L,R=301]
   RewriteRule ^ebook\.html$ / [L,R=301]
   RewriteRule ^buchen\.html$ / [L,R=301]
-  RewriteRule ^termine/index\.php$ / [L,R=301]
+  RewriteRule ^familienaufstellung\.html$ / [L,R=301]
+  # Termine-URL mit und ohne Query-Parameter (?provider=...&service=...)
+  RewriteRule ^termine/index\.php/?$ / [L,R=301]
+  RewriteRule ^termine(/.*)?$ / [L,R=301]
   RewriteRule ^index\.html$ / [L,R=301]
   RewriteRule ^en/contact\.html$ / [L,R=301]
   RewriteRule ^datenschutz\.html$ /datenschutz [L,R=301]
