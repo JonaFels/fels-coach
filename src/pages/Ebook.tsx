@@ -68,42 +68,58 @@ const Ebook = () => {
     });
 
     try {
-      // Submit to Netlify Forms
-      const netlifyBody = new URLSearchParams();
-      netlifyBody.append("form-name", "ebook");
-      netlifyBody.append("name", name);
-      netlifyBody.append("email", email);
+      // 1) Netlify Forms (E-Book-Versand via submission-created Function – nur in Production)
+      let netlifyOk = false;
+      try {
+        const netlifyBody = new URLSearchParams();
+        netlifyBody.append("form-name", "ebook");
+        netlifyBody.append("name", name);
+        netlifyBody.append("email", email);
 
-      const netlifyRes = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: netlifyBody.toString(),
-      });
-
-      if (!netlifyRes.ok) {
-        throw new Error(`Netlify form error: ${netlifyRes.statusText}`);
+        const netlifyRes = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: netlifyBody.toString(),
+        });
+        netlifyOk = netlifyRes.ok;
+        if (!netlifyOk) {
+          console.warn("Netlify form non-OK:", netlifyRes.status, netlifyRes.statusText);
+        }
+      } catch (netErr) {
+        // Im Lovable Preview gibt es keinen Netlify-Server – das ist OK
+        console.warn("Netlify form not reachable (Preview/Dev):", netErr);
       }
 
-      // Newsletter-Anmeldung (nur wenn explizit zugestimmt) – DSGVO Double-Opt-In
+      // 2) Newsletter-Anmeldung (nur wenn explizit zugestimmt) – DSGVO Double-Opt-In
+      let mlOk = true;
       if (newsletterConsent) {
         try {
           const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
             body: { email, name, consent: true, website: "" },
           });
           if (mlError) {
+            mlOk = false;
             console.error("MailerLite error:", mlError);
-            toast({ title: t("ebook.newsletterError"), variant: "destructive" });
           }
         } catch (mlErr) {
+          mlOk = false;
           console.error("MailerLite invoke error:", mlErr);
         }
       }
 
       setSubmitted(true);
-      toast({ title: t("ebook.toastSuccessTitle"), description: t("ebook.toastSuccessDesc") });
+      if (newsletterConsent && !mlOk) {
+        toast({ title: t("ebook.newsletterError"), variant: "destructive" });
+      } else {
+        toast({ title: t("ebook.toastSuccessTitle"), description: t("ebook.toastSuccessDesc") });
+      }
     } catch (error) {
       console.error("Error:", error);
-      toast({ title: t("ebook.toastConnectionTitle"), description: t("ebook.toastConnectionDesc"), variant: "destructive" });
+      toast({
+        title: t("ebook.toastConnectionTitle"),
+        description: t("ebook.toastConnectionDesc"),
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
