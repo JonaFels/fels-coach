@@ -6,10 +6,12 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { supabase } from "@/integrations/supabase/client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
@@ -27,6 +29,7 @@ const Ebook = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
+  const [newsletterConsent, setNewsletterConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
@@ -79,6 +82,21 @@ const Ebook = () => {
 
       if (!netlifyRes.ok) {
         throw new Error(`Netlify form error: ${netlifyRes.statusText}`);
+      }
+
+      // Newsletter-Anmeldung (nur wenn explizit zugestimmt) – DSGVO Double-Opt-In
+      if (newsletterConsent) {
+        try {
+          const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
+            body: { email, name, consent: true, website: "" },
+          });
+          if (mlError) {
+            console.error("MailerLite error:", mlError);
+            toast({ title: t("ebook.newsletterError"), variant: "destructive" });
+          }
+        } catch (mlErr) {
+          console.error("MailerLite invoke error:", mlErr);
+        }
       }
 
       setSubmitted(true);
@@ -209,6 +227,23 @@ const Ebook = () => {
                         autoComplete="off"
                       />
                     </div>
+
+                    {/* Newsletter-Einwilligung (DSGVO – Opt-In, Double-Opt-In via MailerLite) */}
+                    <div className="flex items-start gap-2 pt-1">
+                      <Checkbox
+                        id="ebook-newsletter"
+                        checked={newsletterConsent}
+                        onCheckedChange={(v) => setNewsletterConsent(v === true)}
+                        className="mt-0.5"
+                      />
+                      <Label
+                        htmlFor="ebook-newsletter"
+                        className="text-xs text-muted-foreground leading-relaxed font-normal cursor-pointer"
+                      >
+                        {t("ebook.newsletterConsent")}
+                      </Label>
+                    </div>
+
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       {t("ebook.privacyNote")}{" "}
                       <Link to="/datenschutz" className="text-secondary hover:underline">

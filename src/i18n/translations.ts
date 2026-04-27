@@ -521,6 +521,14 @@ export const translations: Translations = {
     de: "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
     en: "Systemic Quick-Check: First steps to analyze your inner statics.",
   },
+  "ebook.newsletterConsent": {
+    de: "Ja, ich möchte zusätzlich kostenlose Impulse & den Newsletter per E-Mail erhalten. Du erhältst zur Bestätigung eine E-Mail (Double-Opt-In). Deine Einwilligung kannst du jederzeit per Klick im Newsletter oder per E-Mail an info@fels-coach.de widerrufen.",
+    en: "Yes, I would also like to receive free impulses & the newsletter by email. You will receive a confirmation email (double opt-in). You can withdraw your consent at any time via the unsubscribe link in the newsletter or by email to info@fels-coach.de.",
+  },
+  "ebook.newsletterError": {
+    de: "Newsletter-Anmeldung fehlgeschlagen, dein E-Book ist aber unterwegs.",
+    en: "Newsletter signup failed, but your e-book is on its way.",
+  },
 
   // Kontakt Page
   "contact.title": {
