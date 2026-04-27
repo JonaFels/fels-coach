@@ -76,29 +76,37 @@ const Ebook = () => {
     });
 
     try {
-      // 1) Netlify Forms (E-Book-Versand via submission-created Function – nur in Production)
-      let netlifyOk = false;
+      // 1) E-Book-Versand via Resend Edge Function (Lead wird in Supabase gespeichert)
+      let ebookOk = false;
       try {
-        const netlifyBody = new URLSearchParams();
-        netlifyBody.append("form-name", "ebook");
-        netlifyBody.append("name", name);
-        netlifyBody.append("email", email);
-
-        const netlifyRes = await fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: netlifyBody.toString(),
+        const { error: ebookError } = await supabase.functions.invoke("send-ebook-email", {
+          body: { name, email, website: "" },
         });
-        netlifyOk = netlifyRes.ok;
-        if (!netlifyOk) {
-          console.warn("Netlify form non-OK:", netlifyRes.status, netlifyRes.statusText);
+        if (ebookError) {
+          console.error("send-ebook-email error:", ebookError);
+        } else {
+          ebookOk = true;
         }
-      } catch (netErr) {
-        // Im Lovable Preview gibt es keinen Netlify-Server – das ist OK
-        console.warn("Netlify form not reachable (Preview/Dev):", netErr);
+      } catch (ebookErr) {
+        console.error("send-ebook-email invoke error:", ebookErr);
       }
 
-      // 2) Newsletter-Anmeldung (nur wenn explizit zugestimmt) – DSGVO Double-Opt-In
+      // --- FALLBACK: Netlify Forms (auskommentiert; bei Bedarf reaktivieren) ---
+      // try {
+      //   const netlifyBody = new URLSearchParams();
+      //   netlifyBody.append("form-name", "ebook");
+      //   netlifyBody.append("name", name);
+      //   netlifyBody.append("email", email);
+      //   await fetch("/", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //     body: netlifyBody.toString(),
+      //   });
+      // } catch (netErr) {
+      //   console.warn("Netlify form not reachable:", netErr);
+      // }
+
+      // 2) Newsletter-Anmeldung (DSGVO Double-Opt-In via MailerLite)
       let mlOk = true;
       if (newsletterConsent) {
         try {
@@ -116,11 +124,18 @@ const Ebook = () => {
       }
 
       setSubmitted(true);
-      if (newsletterConsent && !mlOk) {
-        toast({ title: t("ebook.newsletterError"), variant: "destructive" });
+      if (!ebookOk) {
+        toast({
+          title: t("ebook.toastConnectionTitle"),
+          description: t("ebook.toastConnectionDesc"),
+          variant: "destructive",
+        });
+      } else if (newsletterConsent && !mlOk) {
+        toast({ title: t("ebook.newsletterError") });
       } else {
         toast({ title: t("ebook.toastSuccessTitle"), description: t("ebook.toastSuccessDesc") });
       }
+
     } catch (error) {
       console.error("Error:", error);
       toast({
