@@ -11,6 +11,8 @@
     { "source": "/ebook.html", "destination": "/", "statusCode": 301 },
     { "source": "/buchen.html", "destination": "/", "statusCode": 301 },
     { "source": "/termine/index.php", "destination": "/", "statusCode": 301 },
+    { "source": "/termine/:path*", "destination": "/", "statusCode": 301 },
+    { "source": "/familienaufstellung.html", "destination": "/", "statusCode": 301 },
     { "source": "/index.html", "destination": "/", "statusCode": 301 },
     { "source": "/datenschutz.html", "destination": "/datenschutz", "statusCode": 301 },
     {
