@@ -86,6 +86,8 @@ const Datenschutz = () => {
             <h2>{t("privacy.s8.heading")}</h2>
             <p>{t("privacy.s8.p1")}</p>
             <p>{t("privacy.s8.p2")}</p>
+            <p>{t("privacy.s8.p3")}</p>
+            <p>{t("privacy.s8.p4")}</p>
 
             <hr />
 
