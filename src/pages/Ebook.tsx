@@ -227,6 +227,23 @@ const Ebook = () => {
                         autoComplete="off"
                       />
                     </div>
+
+                    {/* Newsletter-Einwilligung (DSGVO – Opt-In, Double-Opt-In via MailerLite) */}
+                    <div className="flex items-start gap-2 pt-1">
+                      <Checkbox
+                        id="ebook-newsletter"
+                        checked={newsletterConsent}
+                        onCheckedChange={(v) => setNewsletterConsent(v === true)}
+                        className="mt-0.5"
+                      />
+                      <Label
+                        htmlFor="ebook-newsletter"
+                        className="text-xs text-muted-foreground leading-relaxed font-normal cursor-pointer"
+                      >
+                        {t("ebook.newsletterConsent")}
+                      </Label>
+                    </div>
+
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       {t("ebook.privacyNote")}{" "}
                       <Link to="/datenschutz" className="text-secondary hover:underline">
