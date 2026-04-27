@@ -60,6 +60,15 @@ const Ebook = () => {
       return;
     }
 
+    if (!newsletterConsent) {
+      toast({
+        title: t("ebook.newsletterRequiredTitle"),
+        description: t("ebook.newsletterRequiredDesc"),
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     toast({
@@ -251,6 +260,8 @@ const Ebook = () => {
                         checked={newsletterConsent}
                         onCheckedChange={(v) => setNewsletterConsent(v === true)}
                         className="mt-0.5"
+                        required
+                        aria-required="true"
                       />
                       <Label
                         htmlFor="ebook-newsletter"

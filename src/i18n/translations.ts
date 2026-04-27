@@ -529,6 +529,14 @@ export const translations: Translations = {
     de: "Newsletter-Anmeldung fehlgeschlagen, dein E-Book ist aber unterwegs.",
     en: "Newsletter signup failed, but your e-book is on its way.",
   },
+  "ebook.newsletterRequiredTitle": {
+    de: "Einwilligung erforderlich",
+    en: "Consent required",
+  },
+  "ebook.newsletterRequiredDesc": {
+    de: "Bitte bestätige die Newsletter-Anmeldung, um das kostenlose E-Book zu erhalten.",
+    en: "Please confirm the newsletter signup to receive the free e-book.",
+  },
 
   // Kontakt Page
   "contact.title": {
