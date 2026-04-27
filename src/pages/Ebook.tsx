@@ -260,6 +260,8 @@ const Ebook = () => {
                         checked={newsletterConsent}
                         onCheckedChange={(v) => setNewsletterConsent(v === true)}
                         className="mt-0.5"
+                        required
+                        aria-required="true"
                       />
                       <Label
                         htmlFor="ebook-newsletter"
