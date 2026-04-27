@@ -84,6 +84,21 @@ const Ebook = () => {
         throw new Error(`Netlify form error: ${netlifyRes.statusText}`);
       }
 
+      // Newsletter-Anmeldung (nur wenn explizit zugestimmt) – DSGVO Double-Opt-In
+      if (newsletterConsent) {
+        try {
+          const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
+            body: { email, name, consent: true, website: "" },
+          });
+          if (mlError) {
+            console.error("MailerLite error:", mlError);
+            toast({ title: t("ebook.newsletterError"), variant: "destructive" });
+          }
+        } catch (mlErr) {
+          console.error("MailerLite invoke error:", mlErr);
+        }
+      }
+
       setSubmitted(true);
       toast({ title: t("ebook.toastSuccessTitle"), description: t("ebook.toastSuccessDesc") });
     } catch (error) {
