@@ -64,7 +64,6 @@ const Ebook = () => {
       toast({
         title: t("ebook.newsletterRequiredTitle"),
         description: t("ebook.newsletterRequiredDesc"),
-        variant: "destructive",
       });
       return;
     }
