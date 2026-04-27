@@ -60,6 +60,15 @@ const Ebook = () => {
       return;
     }
 
+    if (!newsletterConsent) {
+      toast({
+        title: t("ebook.newsletterRequiredTitle"),
+        description: t("ebook.newsletterRequiredDesc"),
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     toast({
