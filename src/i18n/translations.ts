@@ -58,16 +58,16 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Coaching bei toxischen Familienmustern – Freiburg",
-    en: "Coaching for toxic family patterns – Freiburg",
+    de: "Systemisches Coaching bei belastenden Familienmustern – Freiburg",
+    en: "Systemic coaching for challenging family patterns – Freiburg",
   },
   "hero.title": {
-    de: "Befrei dich aus toxischen Familienmustern. Werde zum Fels in deinem eigenen Leben.",
-    en: "Free yourself from toxic family patterns. Become the rock in your own life.",
+    de: "Finde zurück zu dir – und werde zum Fels in deinem eigenen Leben.",
+    en: "Find your way back to yourself – and become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Wenn du mit grenzüberschreitenden, manipulativen oder vereinnahmenden Familienstrukturen aufgewachsen bist, kennst du den permanenten inneren Sturm. Im systemischen Coaching findest du deine Grenzen, deinen eigenen Willen und deine innere Ruhe wieder – standhaft, in deiner Kraft, klar in dir selbst.",
-    en: "If you grew up with boundary-crossing, manipulative or engulfing family structures, you know the constant inner storm. In systemic coaching, you reclaim your boundaries, your own will and your inner peace – steady, in your power, clear in yourself.",
+    de: "Manche Familienmuster wirken bis weit ins Erwachsenenleben hinein – auch wenn vieles Gute war. Wenn du spürst, dass alte Dynamiken dir heute Kraft kosten, schauen wir gemeinsam hin. Im systemischen Coaching findest du Schritt für Schritt zu deinen Grenzen, deinem eigenen Willen und deiner inneren Ruhe.",
+    en: "Some family patterns reach far into adult life – even when much was good. If you sense that old dynamics still cost you energy today, we'll look at them together. In systemic coaching, you find your way step by step to your boundaries, your own will and your inner peace.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -674,12 +674,12 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich kenne das Gefühl, in einer Familie aufzuwachsen, in der nichts wirklich sicher ist – wo Grenzen ständig überschritten werden, Schuldgefühle das Leben steuern und du dich selbst längst verloren hast. Lange war ich zu weniger als fünf Prozent ich selbst – alles andere war reine Überlebensanpassung an Muster, die früh auf mich übertragen wurden.",
-    en: "I know what it feels like to grow up in a family where nothing is truly safe – where boundaries are constantly crossed, guilt runs your life, and you've long lost yourself. For a long time, I was less than five percent myself – everything else was pure survival adaptation to patterns transferred to me early on.",
+    de: "Ich weiß, wie es sich anfühlt, lange nicht wirklich bei sich selbst zu sein – wenn Schuldgefühle den Alltag mitsteuern und du das Gefühl hast, dich an Erwartungen anzupassen, statt deinem eigenen Weg zu folgen. Auch ich habe lange in solchen Mustern gelebt, ohne sie zu erkennen.",
+    en: "I know what it feels like to be far from yourself for a long time – when guilt quietly steers your everyday life and you feel like you're adapting to expectations rather than following your own path. I lived in such patterns for years without recognizing them.",
   },
   "aboutPreview.text2": {
-    de: "Das Familienstellen hat mir geholfen, diese Dynamiken sichtbar zu machen und sie zu durchbrechen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – standhaft, mit klaren Grenzen, an denen manipulative Dynamiken abprallen. Genau diesen Weg gehe ich mit dir: damit du der Fels in der Brandung deines eigenen Lebens wirst.",
-    en: "Family constellation work helped me make these dynamics visible and break through them. Today I live over 95 percent as my true self – steady, with clear boundaries that manipulative dynamics bounce off. This is exactly the path I walk with you: so you become the rock in the surf of your own life.",
+    de: "Das Familienstellen hat mir geholfen, diese Dynamiken sichtbar zu machen – mit Respekt vor allem, was war, und ohne jemandem die Schuld zu geben. Heute stehe ich klarer in meinem Leben, mit gesunden Grenzen und mehr Ruhe in mir. Genau diesen Weg gehe ich auch mit dir: in deinem Tempo, behutsam und klar.",
+    en: "Family constellation work helped me make these dynamics visible – with respect for everything that was, and without blaming anyone. Today I stand more clearly in my life, with healthy boundaries and more inner calm. This is exactly the path I walk with you: at your pace, gently and clearly.",
   },
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
@@ -692,36 +692,36 @@ export const translations: Translations = {
     en: "How do we do this concretely?",
   },
   "method.title": {
-    de: "Familienaufstellung – Wurzeln toxischer Muster sichtbar machen",
-    en: "Family Constellation – Make the roots of toxic patterns visible",
+    de: "Familienaufstellung – alte Muster verstehen und lösen",
+    en: "Family Constellation – understand and release old patterns",
   },
   "method.description": {
-    de: "In Einzelsessions schauen wir, welche unsichtbaren Familiendynamiken dich bis heute steuern. Keine endlose Gesprächstherapie – sondern ein präziser Blick auf die Wurzel deiner Verstrickungen, damit du gesunde Grenzen aufbauen kannst.",
-    en: "In individual sessions, we look at which invisible family dynamics still control you today. No endless talk therapy – but a precise look at the root of your entanglements, so you can build healthy boundaries.",
+    de: "In Einzelsessions schauen wir gemeinsam, welche Familiendynamiken bis heute in dir wirken. Kein Aufrechnen, keine Schuldzuweisung – ein behutsamer Blick auf die Wurzel deiner Themen, damit du wieder klar bei dir ankommst.",
+    en: "In individual sessions, we look together at which family dynamics still resonate within you today. No score-keeping, no blame – a gentle look at the root of your themes, so you can arrive clearly with yourself again.",
   },
   "method.step1.title": {
     de: "Ankommen & Thema benennen",
     en: "Arrive & name the issue",
   },
   "method.step1.desc": {
-    de: "Was hält dich gefangen? Wir benennen das Muster, das gerade am meisten Energie kostet – ohne Druck, ohne Bewertung.",
-    en: "What's holding you captive? We name the pattern that costs you the most energy right now – without pressure, without judgment.",
+    de: "Was beschäftigt dich gerade? Wir benennen das Thema, das dir aktuell am meisten Energie kostet – ohne Druck, ohne Bewertung.",
+    en: "What's on your mind right now? We name the topic that currently costs you the most energy – without pressure, without judgment.",
   },
   "method.step2.title": {
-    de: "Verstrickungen sichtbar machen",
-    en: "Make entanglements visible",
+    de: "Dynamiken sichtbar machen",
+    en: "Make dynamics visible",
   },
   "method.step2.desc": {
-    de: "Mit Bodenankern wird sichtbar, welche Familienrollen dich noch halten – und wo grenzüberschreitende Dynamiken deinen Alltag steuern.",
-    en: "With floor anchors, the family roles still holding you become visible – and where boundary-crossing dynamics steer your everyday life.",
+    de: "Mit Bodenankern wird sichtbar, welche Rollen und Bindungen noch in dir wirken – und wo alte Muster deinen Alltag mitsteuern.",
+    en: "With floor anchors, the roles and bonds still at work within you become visible – and where old patterns are co-steering your everyday life.",
   },
   "method.step3.title": {
     de: "Grenzen & Standfestigkeit",
     en: "Boundaries & steadiness",
   },
   "method.step3.desc": {
-    de: "Du erlebst, wie es sich anfühlt, an deinem Platz zu stehen – mit klaren Grenzen, an denen manipulative Dynamiken abprallen.",
-    en: "You experience what it feels like to stand in your own place – with clear boundaries that manipulative dynamics bounce off.",
+    de: "Du erlebst, wie es sich anfühlt, an deinem eigenen Platz zu stehen – mit gesunden Grenzen und mehr Ruhe in dir.",
+    en: "You experience what it feels like to stand in your own place – with healthy boundaries and more calm within you.",
   },
   "method.cta": {
     de: "Mehr über die Methode erfahren",
@@ -734,8 +734,8 @@ export const translations: Translations = {
     en: "Become the rock in your own life.",
   },
   "finalCta.description": {
-    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt aus alten Familienmustern in deine eigene Standfestigkeit findest.",
-    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right – and how you can step by step find your way out of old family patterns into your own steadiness.",
+    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt zu mehr Klarheit, gesunden Grenzen und deiner eigenen Standfestigkeit findest.",
+    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right – and how you can step by step find more clarity, healthy boundaries and your own steadiness.",
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",
