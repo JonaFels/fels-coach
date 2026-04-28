@@ -378,8 +378,8 @@ export const translations: Translations = {
 
   // E-Book Page
   "ebook.title": {
-    de: "Der Weg zum Ganzsein",
-    en: "The Path to Wholeness",
+    de: "Der Weg zum Ganzsein – Jetzt gratis herunterladen",
+    en: "The Path to Wholeness – Download for free now",
   },
   "ebook.headline": {
     de: "Schluss mit emotionaler Erpressung: Wie du dich aus toxischen Familienmustern befreist",
