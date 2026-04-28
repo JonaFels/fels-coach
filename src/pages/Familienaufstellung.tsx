@@ -241,17 +241,9 @@ const Familienaufstellung = () => {
                 <span className="font-medium text-foreground text-sm">– Miriam</span>
               </footer>
             </blockquote>
-            <div className="text-center mt-6">
-              <Link
-                to="/#testimonials"
-                className="inline-flex items-center gap-1 text-secondary hover:text-secondary/80 font-medium text-sm underline-offset-4 hover:underline transition-colors"
-              >
-                {t("family.proof.link")}
-                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-              </Link>
-            </div>
           </div>
         </section>
+
 
 
         {/* E-Book Soft Conversion */}
