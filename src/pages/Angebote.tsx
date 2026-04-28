@@ -176,7 +176,16 @@ const Angebote = () => {
               className="text-base px-8 min-h-[44px]"
               asChild
             >
-              <a href="/kontakt#erstgespraech" onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}>
+              <a
+                href="/kontakt#erstgespraech"
+                onClick={(e) => {
+                  if (booking) {
+                    e.preventDefault();
+                    booking.openErstgespraech();
+                  }
+                  trackCTAClick("angebote_consultation", "angebote_page", "link");
+                }}
+              >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("offerings.unsureCta")}
               </a>
