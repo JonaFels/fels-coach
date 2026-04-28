@@ -506,20 +506,20 @@ export const translations: Translations = {
     en: "Please check your internet connection.",
   },
   "ebook.benefit1": {
-    de: "Das Gummiband-Prinzip: Warum alte Familiendynamiken dich immer wieder zurückziehen.",
-    en: "The Rubber Band Principle: Why old family dynamics keep pulling you back.",
+    de: "Das Gummiband-Prinzip: Warum du dich immer wieder von manipulativen Dynamiken einfangen lässt, obwohl du dir eigentlich vorgenommen hattest, auf Distanz zu gehen.",
+    en: "The Rubber Band Principle: Why you keep getting caught up in manipulative dynamics, even though you'd resolved to keep your distance.",
   },
   "ebook.benefit2": {
-    de: "Die Familien-Dynamik: Wie vereinnahmende oder grenzüberschreitende Strukturen bis heute wirken.",
-    en: "The Family Dynamic: How engulfing or boundary-crossing structures still affect you today.",
+    de: "Die Eltern-Dynamik: Wie unsichtbare familiäre Verstrickungen dich daran hindern, deine eigenen Bedürfnisse zu spüren und zu leben.",
+    en: "The Parental Dynamic: How invisible family entanglements prevent you from sensing and living your own needs.",
   },
   "ebook.benefit3": {
-    de: "Zurück zu dir selbst: Was wirklich zu dir gehört – und was du nur mitträgst.",
-    en: "Back to Yourself: What truly belongs to you – and what you only carry along.",
+    de: "Wahre Grenzen setzen: Wie du lernst, emotionalen Abstand zu wahren und Manipulationen an dir abprallen zu lassen – ganz ohne schlechtes Gewissen.",
+    en: "Setting true boundaries: How to keep emotional distance and let manipulation bounce off you – without any guilt.",
   },
   "ebook.benefit4": {
-    de: "Systemischer Quick-Check: Erste Schritte, um Verstrickungen zu erkennen und Klarheit zu finden.",
-    en: "Systemic Quick-Check: First steps to recognise entanglements and find clarity.",
+    de: "Systemischer Quick-Check: Die ersten Schritte, um deinen eigenen Willen wiederzufinden und endlich der Fels in deiner eigenen Brandung zu werden.",
+    en: "Systemic Quick-Check: The first steps to rediscover your own will and finally become the rock in your own storm.",
   },
   "ebook.newsletterConsent": {
     de: "Ja, ich möchte den Newsletter mit Impulsen erhalten. Bestätigung per E-Mail (Double-Opt-In), Abmeldung jederzeit möglich.",
