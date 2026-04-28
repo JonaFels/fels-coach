@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
@@ -14,7 +15,18 @@ const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
+  const { hash } = useLocation();
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to hash target (e.g. #anfahrt) immediately before paint
+  useLayoutEffect(() => {
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+    }
+  }, [hash]);
 
   // Embed Orbnet booking widget & suppress its fullscreen loading overlay
   useEffect(() => {
