@@ -506,20 +506,20 @@ export const translations: Translations = {
     en: "Please check your internet connection.",
   },
   "ebook.benefit1": {
-    de: "Das Gummiband-Prinzip: Warum du trotz Talent immer wieder in alte Muster zurückfällst.",
-    en: "The Rubber Band Principle: Why despite your talents you keep falling back into old patterns.",
+    de: "Das Gummiband-Prinzip: Warum alte Familiendynamiken dich immer wieder zurückziehen.",
+    en: "The Rubber Band Principle: Why old family dynamics keep pulling you back.",
   },
   "ebook.benefit2": {
-    de: "Die Eltern-Dynamik: Wie ungelöste Vorwürfe deine Beziehungen und deinen Erfolg blockieren.",
-    en: "The Parent Dynamic: How unresolved grievances block your relationships and success.",
+    de: "Die Familien-Dynamik: Wie vereinnahmende oder grenzüberschreitende Strukturen bis heute wirken.",
+    en: "The Family Dynamic: How engulfing or boundary-crossing structures still affect you today.",
   },
   "ebook.benefit3": {
-    de: "Die innere Erlaubnis: Wie du aufhörst, Zuschauer deines Lebens zu sein.",
-    en: "The Inner Permission: How to stop being a spectator of your own life.",
+    de: "Zurück zu dir selbst: Was wirklich zu dir gehört – und was du nur mitträgst.",
+    en: "Back to Yourself: What truly belongs to you – and what you only carry along.",
   },
   "ebook.benefit4": {
-    de: "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
-    en: "Systemic Quick-Check: First steps to analyze your inner statics.",
+    de: "Systemischer Quick-Check: Erste Schritte, um Verstrickungen zu erkennen und Klarheit zu finden.",
+    en: "Systemic Quick-Check: First steps to recognise entanglements and find clarity.",
   },
   "ebook.newsletterConsent": {
     de: "Ja, ich möchte den Newsletter mit Impulsen erhalten. Bestätigung per E-Mail (Double-Opt-In), Abmeldung jederzeit möglich.",
