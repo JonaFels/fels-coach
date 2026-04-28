@@ -58,16 +58,16 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemische Familienaufstellung & Coaching in Freiburg",
-    en: "Systemic Family Constellation & Coaching in Freiburg",
+    de: "Coaching bei toxischen Familienmustern – Freiburg",
+    en: "Coaching for toxic family patterns – Freiburg",
   },
   "hero.title": {
-    de: "Endlich ankommen, wo der Sturm aufhört.",
-    en: "Finally arriving where the storm ends.",
+    de: "Befrei dich aus toxischen Familienmustern. Werde zum Fels in deinem eigenen Leben.",
+    en: "Free yourself from toxic family patterns. Become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Du sehnst dich danach, das ‚Müssen' hinter dir zu lassen? In meinem Coaching schaffst du den Raum, um endlich bei dir selbst anzukommen. Ein sicherer Ort und eine Begleitung, die dir mit Aufrichtigkeit zur Seite steht.",
-    en: "Do you long to leave the 'having to' behind? In my coaching, you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
+    de: "Wenn du mit grenzüberschreitenden, manipulativen oder vereinnahmenden Familienstrukturen aufgewachsen bist, kennst du den permanenten inneren Sturm. Im systemischen Coaching findest du deine Grenzen, deinen eigenen Willen und deine innere Ruhe wieder – standhaft, in deiner Kraft, klar in dir selbst.",
+    en: "If you grew up with boundary-crossing, manipulative or engulfing family structures, you know the constant inner storm. In systemic coaching, you reclaim your boundaries, your own will and your inner peace – steady, in your power, clear in yourself.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -82,12 +82,12 @@ export const translations: Translations = {
     en: "Let's just talk",
   },
   "hero.ctaMicrocopy": {
-    de: "Unverbindlich & persönlich – 30 Min., die Klarheit schaffen.",
-    en: "Non-binding & personal – 30 min. that create clarity.",
+    de: "Unverbindlich & persönlich – 30 Min., die zeigen, ob du dich gesehen fühlst.",
+    en: "Non-binding & personal – 30 min. to see if you feel understood.",
   },
   "hero.socialProof": {
-    de: "Über 100 begleitete Klienten auf dem Weg zu sich selbst.",
-    en: "Over 100 clients guided on their path to themselves.",
+    de: "Über 100 Menschen begleitet – auf dem Weg zu gesunden Grenzen und sich selbst.",
+    en: "Over 100 people guided – on their path to healthy boundaries and themselves.",
   },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
@@ -670,16 +670,16 @@ export const translations: Translations = {
 
   // About Preview (Landing Page)
   "aboutPreview.title": {
-    de: "Der Weg zum eigenen Ganz-Sein",
-    en: "The path to your own wholeness",
+    de: "Vom inneren Sturm zum eigenen Fels",
+    en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich weiß, wie sich das anfühlt – denn mir ging es lange genauso. Als ich 2017 aus einem fluchtartigen Auslandsjahr zurückkehrte, brachten mich alte Umgebungen sofort wieder in meine alten Verhaltensweisen zurück. Ich erkannte schmerzhaft: Ich war zu weniger als fünf Prozent ich selbst – alles andere war reine Überlebensanpassung. Es waren Gedanken und emotionale Muster, die früh auf mich übertragen wurden.",
-    en: "I know how that feels – because for a long time, I felt the same way. When I returned from a year abroad in 2017, old environments immediately pulled me back into old behaviors. I painfully realized: I was less than five percent myself – everything else was pure survival adaptation. These were thoughts and emotional patterns that were transferred to me early on.",
+    de: "Ich kenne das Gefühl, in einer Familie aufzuwachsen, in der nichts wirklich sicher ist – wo Grenzen ständig überschritten werden, Schuldgefühle das Leben steuern und du dich selbst längst verloren hast. Lange war ich zu weniger als fünf Prozent ich selbst – alles andere war reine Überlebensanpassung an Muster, die früh auf mich übertragen wurden.",
+    en: "I know what it feels like to grow up in a family where nothing is truly safe – where boundaries are constantly crossed, guilt runs your life, and you've long lost yourself. For a long time, I was less than five percent myself – everything else was pure survival adaptation to patterns transferred to me early on.",
   },
   "aboutPreview.text2": {
-    de: "Das Familienstellen hat mich schließlich inspiriert, ganz genau zu verstehen, was in mir wirklich passiert. In Momenten, wo Unterbewusstes klar werden kann, konnte ich diese Muster durchbrechen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – und in meinem Coaching helfe ich auch dir dabei, den Raum dafür zu schaffen: die Tiefe deiner immer wiederkehrenden Muster aus dem Alltag zu finden und zu lösen, damit in deinem Leben nachhaltig Gelassenheit entsteht.",
-    en: "Family constellation work ultimately inspired me to understand precisely what was really happening inside me. In moments where the subconscious can become clear, I was able to break through these patterns. Today, I live over 95 percent as my true self – and in my coaching, I help you create that space too: to find and resolve the depth of your recurring everyday patterns, so that lasting serenity arises in your life.",
+    de: "Das Familienstellen hat mir geholfen, diese Dynamiken sichtbar zu machen und sie zu durchbrechen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – standhaft, mit klaren Grenzen, an denen manipulative Dynamiken abprallen. Genau diesen Weg gehe ich mit dir: damit du der Fels in der Brandung deines eigenen Lebens wirst.",
+    en: "Family constellation work helped me make these dynamics visible and break through them. Today I live over 95 percent as my true self – steady, with clear boundaries that manipulative dynamics bounce off. This is exactly the path I walk with you: so you become the rock in the surf of your own life.",
   },
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
@@ -692,36 +692,36 @@ export const translations: Translations = {
     en: "How do we do this concretely?",
   },
   "method.title": {
-    de: "Familienaufstellung – dein System-Audit",
-    en: "Family Constellation – Your System Audit",
+    de: "Familienaufstellung – Wurzeln toxischer Muster sichtbar machen",
+    en: "Family Constellation – Make the roots of toxic patterns visible",
   },
   "method.description": {
-    de: "In Einzelsessions schauen wir uns an, welche unsichtbaren Dynamiken dich steuern. Keine endlose Gesprächstherapie – sondern ein präziser Blick auf die Wurzel deiner Muster.",
-    en: "In individual sessions, we look at which invisible dynamics are controlling you. No endless talk therapy – but a precise look at the root of your patterns.",
+    de: "In Einzelsessions schauen wir, welche unsichtbaren Familiendynamiken dich bis heute steuern. Keine endlose Gesprächstherapie – sondern ein präziser Blick auf die Wurzel deiner Verstrickungen, damit du gesunde Grenzen aufbauen kannst.",
+    en: "In individual sessions, we look at which invisible family dynamics still control you today. No endless talk therapy – but a precise look at the root of your entanglements, so you can build healthy boundaries.",
   },
   "method.step1.title": {
-    de: "Ankommen & Fokus finden",
-    en: "Arrive & Find Focus",
+    de: "Ankommen & Thema benennen",
+    en: "Arrive & name the issue",
   },
   "method.step1.desc": {
-    de: "Was beschäftigt dich? Gemeinsam finden wir das Thema, das gerade am meisten Energie bindet.",
-    en: "What's on your mind? Together we find the theme that currently binds the most energy.",
+    de: "Was hält dich gefangen? Wir benennen das Muster, das gerade am meisten Energie kostet – ohne Druck, ohne Bewertung.",
+    en: "What's holding you captive? We name the pattern that costs you the most energy right now – without pressure, without judgment.",
   },
   "method.step2.title": {
-    de: "Muster sichtbar machen",
-    en: "Making Patterns Visible",
+    de: "Verstrickungen sichtbar machen",
+    en: "Make entanglements visible",
   },
   "method.step2.desc": {
-    de: "Durch Aufstellungsarbeit wird sichtbar, was im Unterbewussten wirkt – die unsichtbare Architektur deiner inneren Blockaden.",
-    en: "Through constellation work, what operates in the subconscious becomes visible – the invisible architecture of your inner blockages.",
+    de: "Mit Bodenankern wird sichtbar, welche Familienrollen dich noch halten – und wo grenzüberschreitende Dynamiken deinen Alltag steuern.",
+    en: "With floor anchors, the family roles still holding you become visible – and where boundary-crossing dynamics steer your everyday life.",
   },
   "method.step3.title": {
-    de: "Integration & Lösung",
-    en: "Integration & Resolution",
+    de: "Grenzen & Standfestigkeit",
+    en: "Boundaries & steadiness",
   },
   "method.step3.desc": {
-    de: "Du erlebst, wie heilsam es ist, wenn sich der Raum öffnet, in dem alte Muster durchbrochen werden – für nachhaltige Gelassenheit.",
-    en: "You experience how healing it is when the space opens in which old patterns are broken – for lasting serenity.",
+    de: "Du erlebst, wie es sich anfühlt, an deinem Platz zu stehen – mit klaren Grenzen, an denen manipulative Dynamiken abprallen.",
+    en: "You experience what it feels like to stand in your own place – with clear boundaries that manipulative dynamics bounce off.",
   },
   "method.cta": {
     de: "Mehr über die Methode erfahren",
@@ -730,12 +730,12 @@ export const translations: Translations = {
 
   // Final CTA (Homepage)
   "finalCta.title": {
-    de: "Bereit für den ersten Schritt?",
-    en: "Ready for the first step?",
+    de: "Werde zum Fels in deinem eigenen Leben.",
+    en: "Become the rock in your own life.",
   },
   "finalCta.description": {
-    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt und wie ich dich am besten begleiten kann.",
-    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right and how I can best accompany you.",
+    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt aus alten Familienmustern in deine eigene Standfestigkeit findest.",
+    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right – and how you can step by step find your way out of old family patterns into your own steadiness.",
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",
