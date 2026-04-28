@@ -692,36 +692,36 @@ export const translations: Translations = {
     en: "How do we do this concretely?",
   },
   "method.title": {
-    de: "Familienaufstellung – dein System-Audit",
-    en: "Family Constellation – Your System Audit",
+    de: "Familienaufstellung – Wurzeln toxischer Muster sichtbar machen",
+    en: "Family Constellation – Make the roots of toxic patterns visible",
   },
   "method.description": {
-    de: "In Einzelsessions schauen wir uns an, welche unsichtbaren Dynamiken dich steuern. Keine endlose Gesprächstherapie – sondern ein präziser Blick auf die Wurzel deiner Muster.",
-    en: "In individual sessions, we look at which invisible dynamics are controlling you. No endless talk therapy – but a precise look at the root of your patterns.",
+    de: "In Einzelsessions schauen wir, welche unsichtbaren Familiendynamiken dich bis heute steuern. Keine endlose Gesprächstherapie – sondern ein präziser Blick auf die Wurzel deiner Verstrickungen, damit du gesunde Grenzen aufbauen kannst.",
+    en: "In individual sessions, we look at which invisible family dynamics still control you today. No endless talk therapy – but a precise look at the root of your entanglements, so you can build healthy boundaries.",
   },
   "method.step1.title": {
-    de: "Ankommen & Fokus finden",
-    en: "Arrive & Find Focus",
+    de: "Ankommen & Thema benennen",
+    en: "Arrive & name the issue",
   },
   "method.step1.desc": {
-    de: "Was beschäftigt dich? Gemeinsam finden wir das Thema, das gerade am meisten Energie bindet.",
-    en: "What's on your mind? Together we find the theme that currently binds the most energy.",
+    de: "Was hält dich gefangen? Wir benennen das Muster, das gerade am meisten Energie kostet – ohne Druck, ohne Bewertung.",
+    en: "What's holding you captive? We name the pattern that costs you the most energy right now – without pressure, without judgment.",
   },
   "method.step2.title": {
-    de: "Muster sichtbar machen",
-    en: "Making Patterns Visible",
+    de: "Verstrickungen sichtbar machen",
+    en: "Make entanglements visible",
   },
   "method.step2.desc": {
-    de: "Durch Aufstellungsarbeit wird sichtbar, was im Unterbewussten wirkt – die unsichtbare Architektur deiner inneren Blockaden.",
-    en: "Through constellation work, what operates in the subconscious becomes visible – the invisible architecture of your inner blockages.",
+    de: "Mit Bodenankern wird sichtbar, welche Familienrollen dich noch halten – und wo grenzüberschreitende Dynamiken deinen Alltag steuern.",
+    en: "With floor anchors, the family roles still holding you become visible – and where boundary-crossing dynamics steer your everyday life.",
   },
   "method.step3.title": {
-    de: "Integration & Lösung",
-    en: "Integration & Resolution",
+    de: "Grenzen & Standfestigkeit",
+    en: "Boundaries & steadiness",
   },
   "method.step3.desc": {
-    de: "Du erlebst, wie heilsam es ist, wenn sich der Raum öffnet, in dem alte Muster durchbrochen werden – für nachhaltige Gelassenheit.",
-    en: "You experience how healing it is when the space opens in which old patterns are broken – for lasting serenity.",
+    de: "Du erlebst, wie es sich anfühlt, an deinem Platz zu stehen – mit klaren Grenzen, an denen manipulative Dynamiken abprallen.",
+    en: "You experience what it feels like to stand in your own place – with clear boundaries that manipulative dynamics bounce off.",
   },
   "method.cta": {
     de: "Mehr über die Methode erfahren",
