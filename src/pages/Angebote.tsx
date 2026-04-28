@@ -48,7 +48,7 @@ const Angebote = () => {
 
       <main id="main-content">
         {/* Intro */}
-        <section className="py-24 md:py-32">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
               {t("offerings.title")}
