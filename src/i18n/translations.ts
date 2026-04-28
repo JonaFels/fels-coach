@@ -418,32 +418,32 @@ export const translations: Translations = {
     en: "The Rubber Band Principle",
   },
   "ebook.feature1.text": {
-    de: "Warum du trotz Talent immer wieder in alte Muster zurückfällst und dich wertlos fühlst.",
-    en: "Why despite your talents you keep falling back into old patterns and feel worthless.",
+    de: "Warum dich alte Familiendynamiken immer wieder zurückziehen, sobald du eigene Wege gehen willst.",
+    en: "Why old family dynamics keep pulling you back as soon as you try to walk your own path.",
   },
   "ebook.feature2.title": {
-    de: "Die Eltern-Dynamik",
-    en: "The Parent Dynamic",
+    de: "Die Familien-Dynamik",
+    en: "The Family Dynamic",
   },
   "ebook.feature2.text": {
-    de: "Wie ungelöste Vorwürfe an Vater oder Mutter deinen heutigen Erfolg und deine Beziehungen blockieren.",
-    en: "How unresolved grievances toward father or mother are blocking your current success and relationships.",
+    de: "Wie vereinnahmende oder grenzüberschreitende Familienstrukturen bis heute deine Beziehungen und dein Selbstgefühl prägen.",
+    en: "How engulfing or boundary-crossing family structures still shape your relationships and sense of self today.",
   },
   "ebook.feature3.title": {
-    de: "Die innere Erlaubnis",
-    en: "The Inner Permission",
+    de: "Zurück zu dir selbst",
+    en: "Back to Yourself",
   },
   "ebook.feature3.text": {
-    de: "Der Prozess, wie du aufhörst, ein Zuschauer deines Lebens zu sein, und zum stabilen Mittelpunkt deiner Existenz wirst.",
-    en: "The process of how to stop being a spectator of your life and become the stable center of your existence.",
+    de: "Wie du unterscheidest, was wirklich zu dir gehört – und was du nur aus deinem Familiensystem mitträgst.",
+    en: "How to distinguish what truly belongs to you – and what you only carry from your family system.",
   },
   "ebook.feature4.title": {
     de: "Systemischer Quick-Check",
     en: "Systemic Quick-Check",
   },
   "ebook.feature4.text": {
-    de: "Erste Schritte, um deine 'innere Statik' zu analysieren.",
-    en: "First steps to analyze your 'inner statics'.",
+    de: "Erste Schritte, um deine inneren Verstrickungen zu erkennen und Klarheit zu gewinnen.",
+    en: "First steps to recognise your inner entanglements and gain clarity.",
   },
   "ebook.success": {
     de: "Vielen Dank! Das E-Book wurde per E-Mail an dich gesendet. Bitte überprüfe auch deinen Spam-Ordner.",
