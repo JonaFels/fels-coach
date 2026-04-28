@@ -34,8 +34,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Family Constellation in Freiburg: 1:1 Sessions | Jona Fels", description: "Systemic coaching & family constellation in Freiburg: Dissolve unconscious entanglements in a discreet 1:1 setting. Free 30-min intro call now!" },
   },
   "/ebook": {
-    de: { title: "Gratis E-Book: Warum du dich unbewusst selbst sabotierst", description: "Kostenloses E-Book (6 Seiten): Erfahre, warum du in alte Muster zurückfällst, wie das Gummiband-Prinzip wirkt und wie du innere Blockaden löst." },
-    en: { title: "Free E-Book: Why You Unconsciously Sabotage Yourself", description: "Free e-book (6 pages): Learn why you fall back into old patterns, how the rubber band principle works and how to dissolve inner blockages." },
+    de: { title: "Gratis E-Book: Warum du dich in alten Familienmustern verlierst", description: "Kostenloses E-Book (6 Seiten): Erkenne, wie vereinnahmende oder grenzüberschreitende Familienstrukturen wirken – und finde zurück zu dir selbst." },
+    en: { title: "Free E-Book: Why You Lose Yourself in Old Family Patterns", description: "Free e-book (6 pages): Understand how engulfing or boundary-crossing family structures affect you – and find your way back to yourself." },
   },
   "/ueber-mich": {
     de: { title: "Über mich | Jona Fels – Systemischer Coach in Freiburg", description: "Lerne Jona Fels kennen. Erfahre, wie ich als zertifizierter Familiensteller meine eigenen Muster durchbrochen habe und dir helfe, dein wahres Selbst zu leben." },

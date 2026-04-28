@@ -382,12 +382,12 @@ export const translations: Translations = {
     en: "The Path to Wholeness",
   },
   "ebook.headline": {
-    de: "E-Book: Warum du dich unbewusst selbst sabotierst",
-    en: "E-Book: Why you unconsciously sabotage yourself",
+    de: "E-Book: Warum du dich in alten Familienmustern verlierst",
+    en: "E-Book: Why you lose yourself in old family patterns",
   },
   "ebook.subheadline": {
-    de: "Auf 6 kompakten Seiten erfährst du, wie die unsichtbare Architektur deiner inneren Blockaden funktioniert – und wie du den Weg zum Ganzsein findest.",
-    en: "In 6 concise pages, discover how the invisible architecture of your inner blockages works – and how to find the path to wholeness.",
+    de: "Auf 6 kompakten Seiten erfährst du, warum du oft Gefühle, Lasten und Rollen trägst, die nie deine eigenen waren – und wie du wieder zu dir selbst findest.",
+    en: "In 6 concise pages, you'll discover why you often carry feelings, burdens and roles that were never your own – and how to find your way back to yourself.",
   },
   "ebook.name": {
     de: "Name",
@@ -418,32 +418,32 @@ export const translations: Translations = {
     en: "The Rubber Band Principle",
   },
   "ebook.feature1.text": {
-    de: "Warum du trotz Talent immer wieder in alte Muster zurückfällst und dich wertlos fühlst.",
-    en: "Why despite your talents you keep falling back into old patterns and feel worthless.",
+    de: "Warum dich alte Familiendynamiken immer wieder zurückziehen, sobald du eigene Wege gehen willst.",
+    en: "Why old family dynamics keep pulling you back as soon as you try to walk your own path.",
   },
   "ebook.feature2.title": {
-    de: "Die Eltern-Dynamik",
-    en: "The Parent Dynamic",
+    de: "Die Familien-Dynamik",
+    en: "The Family Dynamic",
   },
   "ebook.feature2.text": {
-    de: "Wie ungelöste Vorwürfe an Vater oder Mutter deinen heutigen Erfolg und deine Beziehungen blockieren.",
-    en: "How unresolved grievances toward father or mother are blocking your current success and relationships.",
+    de: "Wie vereinnahmende oder grenzüberschreitende Familienstrukturen bis heute deine Beziehungen und dein Selbstgefühl prägen.",
+    en: "How engulfing or boundary-crossing family structures still shape your relationships and sense of self today.",
   },
   "ebook.feature3.title": {
-    de: "Die innere Erlaubnis",
-    en: "The Inner Permission",
+    de: "Zurück zu dir selbst",
+    en: "Back to Yourself",
   },
   "ebook.feature3.text": {
-    de: "Der Prozess, wie du aufhörst, ein Zuschauer deines Lebens zu sein, und zum stabilen Mittelpunkt deiner Existenz wirst.",
-    en: "The process of how to stop being a spectator of your life and become the stable center of your existence.",
+    de: "Wie du unterscheidest, was wirklich zu dir gehört – und was du nur aus deinem Familiensystem mitträgst.",
+    en: "How to distinguish what truly belongs to you – and what you only carry from your family system.",
   },
   "ebook.feature4.title": {
     de: "Systemischer Quick-Check",
     en: "Systemic Quick-Check",
   },
   "ebook.feature4.text": {
-    de: "Erste Schritte, um deine 'innere Statik' zu analysieren.",
-    en: "First steps to analyze your 'inner statics'.",
+    de: "Erste Schritte, um deine inneren Verstrickungen zu erkennen und Klarheit zu gewinnen.",
+    en: "First steps to recognise your inner entanglements and gain clarity.",
   },
   "ebook.success": {
     de: "Vielen Dank! Das E-Book wurde per E-Mail an dich gesendet. Bitte überprüfe auch deinen Spam-Ordner.",
@@ -506,20 +506,20 @@ export const translations: Translations = {
     en: "Please check your internet connection.",
   },
   "ebook.benefit1": {
-    de: "Das Gummiband-Prinzip: Warum du trotz Talent immer wieder in alte Muster zurückfällst.",
-    en: "The Rubber Band Principle: Why despite your talents you keep falling back into old patterns.",
+    de: "Das Gummiband-Prinzip: Warum alte Familiendynamiken dich immer wieder zurückziehen.",
+    en: "The Rubber Band Principle: Why old family dynamics keep pulling you back.",
   },
   "ebook.benefit2": {
-    de: "Die Eltern-Dynamik: Wie ungelöste Vorwürfe deine Beziehungen und deinen Erfolg blockieren.",
-    en: "The Parent Dynamic: How unresolved grievances block your relationships and success.",
+    de: "Die Familien-Dynamik: Wie vereinnahmende oder grenzüberschreitende Strukturen bis heute wirken.",
+    en: "The Family Dynamic: How engulfing or boundary-crossing structures still affect you today.",
   },
   "ebook.benefit3": {
-    de: "Die innere Erlaubnis: Wie du aufhörst, Zuschauer deines Lebens zu sein.",
-    en: "The Inner Permission: How to stop being a spectator of your own life.",
+    de: "Zurück zu dir selbst: Was wirklich zu dir gehört – und was du nur mitträgst.",
+    en: "Back to Yourself: What truly belongs to you – and what you only carry along.",
   },
   "ebook.benefit4": {
-    de: "Systemischer Quick-Check: Erste Schritte, um deine innere Statik zu analysieren.",
-    en: "Systemic Quick-Check: First steps to analyze your inner statics.",
+    de: "Systemischer Quick-Check: Erste Schritte, um Verstrickungen zu erkennen und Klarheit zu finden.",
+    en: "Systemic Quick-Check: First steps to recognise entanglements and find clarity.",
   },
   "ebook.newsletterConsent": {
     de: "Ja, ich möchte den Newsletter mit Impulsen erhalten. Bestätigung per E-Mail (Double-Opt-In), Abmeldung jederzeit möglich.",
