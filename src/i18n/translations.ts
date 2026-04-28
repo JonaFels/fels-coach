@@ -66,8 +66,8 @@ export const translations: Translations = {
     en: "Find your way back to yourself – and become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Du spürst, dass etwas nicht stimmt – aber kannst es nicht greifen? Wer mit einer vereinnahmenden Mutter oder einem grenzüberschreitenden Vater aufgewachsen ist, trägt oft Gefühle, Lasten und Rollen, die nie die eigenen waren. Im systemischen Coaching machen wir sichtbar, was zu wem gehört – und du findest zurück zu dir selbst, deinen Grenzen und deiner inneren Klarheit.",
-    en: "You sense that something isn't right – but can't quite grasp it? Those who grew up with an engulfing mother or a boundary-crossing father often carry feelings, burdens and roles that were never their own. In systemic coaching, we make visible what belongs to whom – and you find your way back to yourself, your boundaries and your inner clarity.",
+    de: "Du spürst, dass etwas nicht stimmt – aber kannst es nicht greifen? Wer in vereinnahmenden oder grenzüberschreitenden Familienstrukturen aufgewachsen ist, trägt oft Gefühle, Lasten und Rollen, die nie die eigenen waren. Im systemischen Coaching machen wir sichtbar, was zu wem gehört – und du findest zurück zu dir selbst, deinen Grenzen und deiner inneren Klarheit.",
+    en: "You sense that something isn't right – but can't quite grasp it? Those who grew up in engulfing or boundary-crossing family structures often carry feelings, burdens and roles that were never their own. In systemic coaching, we make visible what belongs to whom – and you find your way back to yourself, your boundaries and your inner clarity.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -674,8 +674,8 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich kenne dieses diffuse Gefühl, nicht zu wissen, was eigentlich mit einem los ist – weil so vieles in einem wirkt, das gar nicht zu einem selbst gehört. Wer in vereinnahmenden oder grenzüberschreitenden Familienstrukturen aufgewachsen ist, trägt oft die Themen der Mutter oder des Vaters mit, ohne es zu merken.",
-    en: "I know that diffuse feeling of not knowing what's really going on with you – because so much inside you isn't actually yours. Those who grew up in engulfing or boundary-crossing family structures often carry their mother's or father's themes without realizing it.",
+    de: "Ich kenne dieses diffuse Gefühl, nicht zu wissen, was eigentlich mit einem los ist – weil so vieles in einem wirkt, das gar nicht zu einem selbst gehört. Wer in vereinnahmenden oder grenzüberschreitenden Familienstrukturen aufgewachsen ist, trägt oft Themen aus der eigenen Familie mit, ohne es zu merken.",
+    en: "I know that diffuse feeling of not knowing what's really going on with you – because so much inside you isn't actually yours. Those who grew up in engulfing or boundary-crossing family structures often carry themes from their own family without realizing it.",
   },
   "aboutPreview.text2": {
     de: "Das Familienstellen hat mir geholfen, klar zu unterscheiden: Was gehört zu mir – und was zu wem anders? Heute stehe ich in meinem eigenen Leben, mit gesunden Grenzen und innerer Ruhe. Genau diesen Weg gehe ich mit dir: behutsam, klar und in deinem Tempo.",
