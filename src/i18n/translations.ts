@@ -378,16 +378,16 @@ export const translations: Translations = {
 
   // E-Book Page
   "ebook.title": {
-    de: "Der Weg zum Ganzsein",
-    en: "The Path to Wholeness",
+    de: "Der Weg zum Ganzsein – Jetzt gratis herunterladen",
+    en: "The Path to Wholeness – Download for free now",
   },
   "ebook.headline": {
-    de: "E-Book: Warum du dich in alten Familienmustern verlierst",
-    en: "E-Book: Why you lose yourself in old family patterns",
+    de: "Schluss mit emotionaler Erpressung: Wie du dich aus toxischen Familienmustern befreist",
+    en: "End emotional blackmail: How to free yourself from toxic family patterns",
   },
   "ebook.subheadline": {
-    de: "Auf 6 kompakten Seiten erfährst du, warum du oft Gefühle, Lasten und Rollen trägst, die nie deine eigenen waren – und wie du wieder zu dir selbst findest.",
-    en: "In 6 concise pages, you'll discover why you often carry feelings, burdens and roles that were never your own – and how to find your way back to yourself.",
+    de: "Auf 6 kompakten Seiten erfährst du, warum du immer wieder in alte emotionale Abhängigkeiten zurückfällst – besonders im familiären Umfeld – und wie du den Weg in ein selbstbestimmtes Leben ohne ständige Schuldgefühle findest. Das E-Book „Der Weg zum Ganzsein“ zeigt dir die unsichtbare Architektur deiner familiären Blockaden.",
+    en: "In 6 concise pages, you'll learn why you keep falling back into old emotional dependencies – especially within your family – and how to find your way into a self-determined life without constant guilt. The e-book 'The Path to Wholeness' reveals the invisible architecture of your family blockages.",
   },
   "ebook.name": {
     de: "Name",
@@ -398,16 +398,20 @@ export const translations: Translations = {
     en: "Email Address",
   },
   "ebook.privacyNote": {
-    de: "Die Datenschutzerklärung findest du",
-    en: "You can find the privacy policy",
+    de: "Mit dem Klick auf den Button bist du damit einverstanden, dass Jona Fels dir das kostenlose E-Book zusendet und dich in den E-Mail-Newsletter aufnimmt. Deine Daten werden gemäß der",
+    en: "By clicking the button, you agree that Jona Fels sends you the free e-book and adds you to the email newsletter. Your data is processed according to the",
   },
   "ebook.here": {
-    de: "hier",
-    en: "here",
+    de: "Datenschutzerklärung",
+    en: "privacy policy",
+  },
+  "ebook.privacyNoteAfter": {
+    de: "verarbeitet. Du kannst diese Einwilligung jederzeit mit nur einem Klick am Ende jeder E-Mail widerrufen.",
+    en: "You can revoke this consent at any time with just one click at the end of every email.",
   },
   "ebook.download": {
-    de: "Kostenlos anfordern",
-    en: "Request for Free & Gain Clarity",
+    de: "Jetzt gratis E-Book & Impulse sichern",
+    en: "Get my free e-book & impulses now",
   },
   "ebook.infoTitle": {
     de: "Was du in diesem E-Book erfährst:",
@@ -506,20 +510,20 @@ export const translations: Translations = {
     en: "Please check your internet connection.",
   },
   "ebook.benefit1": {
-    de: "Das Gummiband-Prinzip: Warum alte Familiendynamiken dich immer wieder zurückziehen.",
-    en: "The Rubber Band Principle: Why old family dynamics keep pulling you back.",
+    de: "Das Gummiband-Prinzip: Warum du dich immer wieder von manipulativen Dynamiken einfangen lässt, obwohl du dir eigentlich vorgenommen hattest, auf Distanz zu gehen.",
+    en: "The Rubber Band Principle: Why you keep getting caught up in manipulative dynamics, even though you'd resolved to keep your distance.",
   },
   "ebook.benefit2": {
-    de: "Die Familien-Dynamik: Wie vereinnahmende oder grenzüberschreitende Strukturen bis heute wirken.",
-    en: "The Family Dynamic: How engulfing or boundary-crossing structures still affect you today.",
+    de: "Die Eltern-Dynamik: Wie unsichtbare familiäre Verstrickungen dich daran hindern, deine eigenen Bedürfnisse zu spüren und zu leben.",
+    en: "The Parental Dynamic: How invisible family entanglements prevent you from sensing and living your own needs.",
   },
   "ebook.benefit3": {
-    de: "Zurück zu dir selbst: Was wirklich zu dir gehört – und was du nur mitträgst.",
-    en: "Back to Yourself: What truly belongs to you – and what you only carry along.",
+    de: "Wahre Grenzen setzen: Wie du lernst, emotionalen Abstand zu wahren und Manipulationen an dir abprallen zu lassen – ganz ohne schlechtes Gewissen.",
+    en: "Setting true boundaries: How to keep emotional distance and let manipulation bounce off you – without any guilt.",
   },
   "ebook.benefit4": {
-    de: "Systemischer Quick-Check: Erste Schritte, um Verstrickungen zu erkennen und Klarheit zu finden.",
-    en: "Systemic Quick-Check: First steps to recognise entanglements and find clarity.",
+    de: "Systemischer Quick-Check: Die ersten Schritte, um deinen eigenen Willen wiederzufinden und endlich der Fels in deiner eigenen Brandung zu werden.",
+    en: "Systemic Quick-Check: The first steps to rediscover your own will and finally become the rock in your own storm.",
   },
   "ebook.newsletterConsent": {
     de: "Ja, ich möchte den Newsletter mit Impulsen erhalten. Bestätigung per E-Mail (Double-Opt-In), Abmeldung jederzeit möglich.",

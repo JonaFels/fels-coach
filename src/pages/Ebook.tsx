@@ -6,7 +6,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -29,7 +29,7 @@ const Ebook = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
-  const [newsletterConsent, setNewsletterConsent] = useState(false);
+  const newsletterConsent = true;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
@@ -267,30 +267,6 @@ const Ebook = () => {
                       />
                     </div>
 
-                    {/* Newsletter-Einwilligung (DSGVO – Opt-In, Double-Opt-In via MailerLite) */}
-                    <div className="flex items-start gap-2 pt-1">
-                      <Checkbox
-                        id="ebook-newsletter"
-                        checked={newsletterConsent}
-                        onCheckedChange={(v) => setNewsletterConsent(v === true)}
-                        className="mt-0.5"
-                        required
-                        aria-required="true"
-                      />
-                      <Label
-                        htmlFor="ebook-newsletter"
-                        className="text-xs text-muted-foreground leading-relaxed font-normal cursor-pointer"
-                      >
-                        {t("ebook.newsletterConsent")}
-                      </Label>
-                    </div>
-
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {t("ebook.privacyNote")}{" "}
-                      <Link to="/datenschutz" className="text-secondary hover:underline">
-                        {t("ebook.here")}
-                      </Link>
-                    </p>
                     <Button type="submit" className="w-full min-h-[44px]" disabled={isSubmitting}>
                       {isSubmitting ? (
                         <>
@@ -301,6 +277,15 @@ const Ebook = () => {
                         t("ebook.download")
                       )}
                     </Button>
+
+                    {/* Einwilligung direkt unter dem Button (DSGVO – implizit per Klick) */}
+                    <p className="text-xs text-muted-foreground leading-relaxed pt-1">
+                      {t("ebook.privacyNote")}{" "}
+                      <Link to="/datenschutz" className="text-secondary hover:underline">
+                        {t("ebook.here")}
+                      </Link>
+                      {" "}{t("ebook.privacyNoteAfter")}
+                    </p>
                   </form>
                 )}
               </div>
