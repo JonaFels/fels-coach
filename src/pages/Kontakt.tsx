@@ -7,6 +7,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ContactForm } from "@/components/ContactForm";
+import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
 const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
@@ -80,6 +81,15 @@ const Kontakt = () => {
           className="pt-2 pb-8 md:pt-4 md:pb-12"
         >
           <div className="container mx-auto px-4 max-w-2xl">
+            <img
+              src={profilBild}
+              alt="Jona Fels – Systemischer Coach in Freiburg"
+              className="w-24 h-24 rounded-full object-cover object-center shadow-md mx-auto mb-4 no-fade"
+              loading="eager"
+              decoding="async"
+              width={96}
+              height={96}
+            />
             <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 text-center">
               {t("contact.calendarHeadline")}
             </p>
