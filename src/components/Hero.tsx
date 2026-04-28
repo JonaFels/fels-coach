@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Phone } from "lucide-react";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp";
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const booking = useErstgespraech();
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
