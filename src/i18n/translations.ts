@@ -450,8 +450,8 @@ export const translations: Translations = {
     en: "First steps to recognise your inner entanglements and gain clarity.",
   },
   "ebook.success": {
-    de: "Vielen Dank! Das E-Book wurde per E-Mail an dich gesendet. Bitte überprüfe auch deinen Spam-Ordner.",
-    en: "Thank you! The e-book has been sent to your email. Please also check your spam folder.",
+    de: "Du hast gleich eine E-Mail von mir im Postfach – bitte bestätige darin kurz deine Adresse. Direkt danach bekommst du den Download-Link für dein E-Book. Schau bitte auch im Spam-Ordner nach.",
+    en: "You'll receive an email from me shortly – please confirm your address in it. Right after that you'll get the download link for your e-book. Please also check your spam folder.",
   },
   "ebook.freeEbook": {
     de: "Kostenloses E-Book",
