@@ -730,12 +730,12 @@ export const translations: Translations = {
 
   // Final CTA (Homepage)
   "finalCta.title": {
-    de: "Bereit für den ersten Schritt?",
-    en: "Ready for the first step?",
+    de: "Werde zum Fels in deinem eigenen Leben.",
+    en: "Become the rock in your own life.",
   },
   "finalCta.description": {
-    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt und wie ich dich am besten begleiten kann.",
-    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right and how I can best accompany you.",
+    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt aus alten Familienmustern in deine eigene Standfestigkeit findest.",
+    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right – and how you can step by step find your way out of old family patterns into your own steadiness.",
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",
