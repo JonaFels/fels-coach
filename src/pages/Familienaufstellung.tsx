@@ -19,9 +19,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 const Familienaufstellung = () => {
   const { t, language } = useLanguage();
+  const booking = useErstgespraech();
   const heroRef = useRef<HTMLDivElement>(null);
 
   useHalfHeroHashScroll("#methode", heroRef);
@@ -130,9 +132,13 @@ const Familienaufstellung = () => {
             <Button asChild variant="outline" className="min-h-[44px]">
               <Link
                 to="/kontakt#erstgespraech"
-                onClick={() =>
-                  trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link")
-                }
+                onClick={(e) => {
+                  if (booking) {
+                    e.preventDefault();
+                    booking.openErstgespraech();
+                  }
+                  trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link");
+                }}
               >
                 {t("cta.bookNow")}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
@@ -277,9 +283,13 @@ const Familienaufstellung = () => {
             <Button size="lg" className="min-h-[44px]" asChild>
               <a
                 href="/kontakt#erstgespraech"
-                onClick={() =>
-                  trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")
-                }
+                onClick={(e) => {
+                  if (booking) {
+                    e.preventDefault();
+                    booking.openErstgespraech();
+                  }
+                  trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link");
+                }}
               >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("cta.bookNow")}

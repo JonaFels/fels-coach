@@ -2,9 +2,11 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 export const FinalCTA = () => {
   const { t } = useLanguage();
+  const booking = useErstgespraech();
 
   return (
     <section className="py-20 md:py-24 bg-primary text-primary-foreground relative overflow-hidden">
@@ -38,8 +40,14 @@ export const FinalCTA = () => {
             asChild
           >
             <a
-              href="/kontakt"
-              onClick={() => trackCTAClick("final_cta", "homepage_final", "link")}
+              href="/kontakt#erstgespraech"
+              onClick={(e) => {
+                if (booking) {
+                  e.preventDefault();
+                  booking.openErstgespraech();
+                }
+                trackCTAClick("final_cta", "homepage_final", "link");
+              }}
             >
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("finalCta.button")}

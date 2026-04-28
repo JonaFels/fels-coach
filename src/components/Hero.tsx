@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Phone } from "lucide-react";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp";
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const booking = useErstgespraech();
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
@@ -43,7 +45,16 @@ export const Hero = () => {
                 className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 asChild
               >
-                <a href="/kontakt" onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}>
+                <a
+                  href="/kontakt#erstgespraech"
+                  onClick={(e) => {
+                    if (booking) {
+                      e.preventDefault();
+                      booking.openErstgespraech();
+                    }
+                    trackCTAClick("hero_consultation", "homepage_hero", "link");
+                  }}
+                >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t("hero.ctaConsultation")}
                 </a>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
@@ -8,12 +8,28 @@ const HASH_TO_SEMUID: Record<string, string> = {
   "#coaching": "55df32ef-b5d1-468e-a4ba-f7f892398327",
 };
 
+interface BookingContextValue {
+  openErstgespraech: () => void;
+}
+
+const BookingContext = createContext<BookingContextValue | null>(null);
+
 /**
- * Globaler Trigger: Öffnet das Booking-Overlay basierend auf dem URL-Hash.
- * #erstgespraech öffnet das Erstgespräch-Modal mit Kalender.
- * #kennenlernen und #coaching öffnen den normalen Orbnet-Kalender.
+ * Hook für Komponenten, die das Erstgespräch-Modal direkt öffnen wollen,
+ * ohne den User zur Kontakt-Seite zu navigieren.
  */
-export const HashBookingTrigger = () => {
+export const useErstgespraech = () => {
+  const ctx = useContext(BookingContext);
+  return ctx;
+};
+
+/**
+ * Globaler Trigger + Provider:
+ * - Stellt openErstgespraech() global bereit (für CTA-Buttons)
+ * - Reagiert zusätzlich auf URL-Hashes (#erstgespraech, #kennenlernen, #coaching)
+ *   damit direkte Links und Browser-Back weiterhin funktionieren
+ */
+export const HashBookingTrigger = ({ children }: { children?: ReactNode }) => {
   const location = useLocation();
   const { openBooking, BookingDialog } = useOrbnetBooking();
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
@@ -33,12 +49,13 @@ export const HashBookingTrigger = () => {
   }, [location.hash]);
 
   return (
-    <>
+    <BookingContext.Provider value={{ openErstgespraech: () => setErstgespraechOpen(true) }}>
+      {children}
       <BookingDialog />
       <ErstgespraechModal
         open={erstgespraechOpen}
         onClose={() => setErstgespraechOpen(false)}
       />
-    </>
+    </BookingContext.Provider>
   );
 };

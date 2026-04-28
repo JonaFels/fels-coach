@@ -5,6 +5,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 import logoIcon from "@/assets/coaching-logo-new.webp";
 
 const NAV_ITEMS = [
@@ -19,9 +20,18 @@ const NAV_ITEMS = [
 export const Header = () => {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const booking = useErstgespraech();
 
   const handleNavClick = (key: string, href: string) => {
     trackLinkClick(t(key), href, "header_navigation");
+  };
+
+  const handleCTAClick = (e: React.MouseEvent) => {
+    if (booking) {
+      e.preventDefault();
+      booking.openErstgespraech();
+    }
+    trackNavToOffers("header");
   };
 
   return (
@@ -67,8 +77,8 @@ export const Header = () => {
               asChild
             >
               <a
-                href="/kontakt"
-                onClick={() => trackNavToOffers("header")}
+                href="/kontakt#erstgespraech"
+                onClick={handleCTAClick}
               >
                 <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
                 {t("nav.contact")}
@@ -115,9 +125,9 @@ export const Header = () => {
                 asChild
               >
                 <a
-                  href="/kontakt"
-                  onClick={() => {
-                    trackNavToOffers("header");
+                  href="/kontakt#erstgespraech"
+                  onClick={(e) => {
+                    handleCTAClick(e);
                     setIsMobileMenuOpen(false);
                   }}
                 >

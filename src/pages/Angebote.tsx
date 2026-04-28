@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 
@@ -32,7 +33,8 @@ const offerings = [
 const Angebote = () => {
   const { t } = useLanguage();
   const { openBooking, BookingDialog } = useOrbnetBooking();
-  
+  const booking = useErstgespraech();
+
 
   const values = [
     { icon: Heart, labelKey: "offerings.value.empathetic", descKey: "offerings.value.empatheticDesc" },
@@ -174,7 +176,16 @@ const Angebote = () => {
               className="text-base px-8 min-h-[44px]"
               asChild
             >
-              <a href="/kontakt" onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}>
+              <a
+                href="/kontakt#erstgespraech"
+                onClick={(e) => {
+                  if (booking) {
+                    e.preventDefault();
+                    booking.openErstgespraech();
+                  }
+                  trackCTAClick("angebote_consultation", "angebote_page", "link");
+                }}
+              >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("offerings.unsureCta")}
               </a>
