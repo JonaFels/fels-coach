@@ -382,12 +382,12 @@ export const translations: Translations = {
     en: "The Path to Wholeness",
   },
   "ebook.headline": {
-    de: "E-Book: Warum du dich unbewusst selbst sabotierst",
-    en: "E-Book: Why you unconsciously sabotage yourself",
+    de: "E-Book: Warum du dich in alten Familienmustern verlierst",
+    en: "E-Book: Why you lose yourself in old family patterns",
   },
   "ebook.subheadline": {
-    de: "Auf 6 kompakten Seiten erfährst du, wie die unsichtbare Architektur deiner inneren Blockaden funktioniert – und wie du den Weg zum Ganzsein findest.",
-    en: "In 6 concise pages, discover how the invisible architecture of your inner blockages works – and how to find the path to wholeness.",
+    de: "Auf 6 kompakten Seiten erfährst du, warum du oft Gefühle, Lasten und Rollen trägst, die nie deine eigenen waren – und wie du wieder zu dir selbst findest.",
+    en: "In 6 concise pages, you'll discover why you often carry feelings, burdens and roles that were never your own – and how to find your way back to yourself.",
   },
   "ebook.name": {
     de: "Name",
