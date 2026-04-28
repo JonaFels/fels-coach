@@ -126,8 +126,8 @@ export const Header = () => {
               >
                 <a
                   href="/kontakt#erstgespraech"
-                  onClick={() => {
-                    trackNavToOffers("header");
+                  onClick={(e) => {
+                    handleCTAClick(e);
                     setIsMobileMenuOpen(false);
                   }}
                 >
