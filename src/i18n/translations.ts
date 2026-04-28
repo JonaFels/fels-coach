@@ -554,44 +554,44 @@ export const translations: Translations = {
     en: "Your systemic coach in Freiburg",
   },
   "about.subtitle": {
-    de: "Wie ich mein eigenes Muster durchbrochen habe",
-    en: "How I broke through my own pattern",
+    de: "Wie ich aus alten Familienmustern herausgefunden habe",
+    en: "How I found my way out of old family patterns",
   },
   "about.intro1": {
-    de: "Meine eigene Erfahrung hat mich dorthin gebracht, wo ich heute bin und warum ich behaupte, dass jeder im Kern ganz ist.",
-    en: "My own experience brought me to where I am today and why I believe that everyone is whole at their core.",
+    de: "Meine eigene Erfahrung hat mich dorthin gebracht, wo ich heute bin – und sie ist der Grund, warum ich überzeugt bin: In jedem von uns ist ein Kern, der ganz und klar ist, auch wenn er lange unter fremden Lasten verschüttet war.",
+    en: "My own experience brought me to where I am today – and it is the reason I am convinced: within each of us is a core that is whole and clear, even when it has long been buried under burdens that aren't our own.",
   },
   "about.intro2": {
-    de: "2017 kehrte ich aus einem fluchtartigen Auslandsjahr zurück. In der Ferne hatte ich ein unglaubliches Hoch erlebt, doch kaum war ich wieder in der Heimat, spürte ich den Rückschlag: Alte Umgebungen drängten mich unweigerlich wieder in alte Verhaltensweisen. In dieser Zeit fühlte ich mich, als bestünde ich zu weniger als fünf Prozent aus meinem wahren Selbst. Alles andere war reine Überlebensanpassung. Mir wurde bewusst, dass ich mir Charaktereigenschaften angeeignet hatte, nur um bestimmte Phasen meiner Kindheit zu überstehen.",
-    en: "In 2017, I returned from a year abroad that felt like an escape. In the distance, I had experienced an incredible high, but as soon as I was back home, I felt the backlash: Old environments inevitably pushed me back into old behaviors. During this time, I felt as if less than five percent of me was my true self. Everything else was pure survival adaptation. I realized that I had adopted character traits just to survive certain phases of my childhood.",
+    de: "2017 kehrte ich aus einem fluchtartigen Auslandsjahr zurück. In der Ferne hatte ich erlebt, wie sich Leichtigkeit anfühlen kann – doch kaum war ich wieder zu Hause, drängten mich vertraute Familienstrukturen unweigerlich in alte Rollen und Verhaltensweisen zurück. In dieser Zeit fühlte ich mich, als bestünde ich zu weniger als fünf Prozent aus meinem wahren Selbst. Alles andere war Anpassung, um in einem Umfeld zu funktionieren, das wenig Raum für mich ließ.",
+    en: "In 2017, I returned from a year abroad that felt like an escape. Far from home, I had experienced what lightness can feel like – but as soon as I was back, familiar family structures inevitably pulled me into old roles and behaviors again. During this time, I felt as if less than five percent of me was my true self. Everything else was adaptation, just to function in surroundings that left little room for me.",
   },
   "about.guidance.title": {
     de: "Der Wendepunkt",
     en: "The turning point",
   },
   "about.guidance1": {
-    de: "Ich wollte dieses befreite Gefühl aus dem Ausland unbedingt wieder in meinen Alltag integrieren und suchte intensiv nach Wegen. Zuletzt war es das Familienstellen, das mich inspirierte, ganz genau zu verstehen, was in mir wirklich passierte. Ich lernte zu erkennen: Es sind Gedanken und emotionale Muster, die in der frühen Kindheit auf uns übertragen wurden, die uns steuern.",
-    en: "I desperately wanted to integrate that liberated feeling from abroad back into my everyday life and searched intensively for ways. Ultimately, it was family constellation work that inspired me to understand precisely what was really happening inside me. I learned to recognize: It is thoughts and emotional patterns transferred to us in early childhood that control us.",
+    de: "Ich wollte dieses freie Gefühl unbedingt zurück in meinen Alltag holen und suchte nach Wegen. Schließlich war es das Familienstellen, das mir half, klar zu sehen, was eigentlich in mir wirkt: Es sind Gefühle, Gedanken und Rollen aus dem Familiensystem, die früh übernommen wurden – und uns als Erwachsene noch immer steuern, ohne dass wir es merken.",
+    en: "I really wanted to bring that free feeling back into my everyday life and searched for ways. In the end, it was family constellation work that helped me see clearly what was actually at work inside me: feelings, thoughts and roles from the family system, taken on early in life – and still steering us as adults without us noticing.",
   },
   "about.guidance2": {
-    de: "In den Aufstellungen durfte ich erleben, wie heilsam es ist, wenn das Unterbewusste klar werden kann und sich der Raum öffnet, in dem das Muster durchbrochen wird. Dadurch konnte ich meine Erfahrungen loslassen und ein unbeschwerteres Leben beginnen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – und das nicht nur für Momente, sondern die ganze Zeit.",
-    en: "In the constellations, I was able to experience how healing it is when the subconscious can become clear and the space opens in which the pattern is broken. Through this, I was able to let go of my experiences and begin a more carefree life. Today, I live over 95 percent as my true self – and not just for moments, but all the time.",
+    de: "In den Aufstellungen durfte ich erleben, wie befreiend es ist, wenn sichtbar wird, was zu mir gehört – und was nicht. Ich konnte alte Lasten zurückgeben und ein leichteres Leben beginnen. Heute stehe ich in meinem eigenen Leben – mit klaren Grenzen, innerer Ruhe und einem festen Fels in mir, an dem alte Dynamiken abprallen können.",
+    en: "In the constellations, I was able to experience how freeing it is when it becomes visible what truly belongs to me – and what doesn't. I could give old burdens back and begin a lighter life. Today I stand in my own life – with clear boundaries, inner calm and a solid rock inside me where old dynamics can simply bounce off.",
   },
   "about.guidance3": {
-    de: "Wir alle haben die Wahl: Du kannst entscheiden, ob du deine inneren Muster löst oder ob dein Leben passiert, wie es deine Eltern und dein Umfeld dir gesagt haben. Ich habe mich für das innere Wachstum entschieden.",
-    en: "We all have a choice: You can decide whether to resolve your inner patterns or whether your life happens as your parents and environment told you. I chose inner growth.",
+    de: "Wir alle haben die Wahl: Du kannst entscheiden, ob du alte Familienmuster löst – oder ob dein Leben weiter so verläuft, wie es dein Umfeld dir vorgegeben hat. Ich habe mich für den Weg nach innen entschieden.",
+    en: "We all have a choice: You can decide whether to release old family patterns – or whether your life continues to unfold the way your surroundings have shaped it. I chose the path inward.",
   },
   "about.core.title": {
     de: "Meine Aufgabe heute",
     en: "My mission today",
   },
   "about.core1": {
-    de: "Heute ist es eine Aufgabe für mich, Räume zu schaffen, in denen wir das Bewusstsein für unsere Tiefe eröffnen und innere Wachstumsprozesse anstoßen.",
-    en: "Today, my mission is to create spaces where we can open awareness for our depth and initiate inner growth processes.",
+    de: "Heute schaffe ich Räume, in denen Menschen erkennen können, was wirklich zu ihnen gehört – und was sie aus ihrem Familiensystem mittragen, ohne es bestellt zu haben. So entsteht der Boden, auf dem du wieder zu dir selbst zurückfindest.",
+    en: "Today, I create spaces where people can recognize what truly belongs to them – and what they carry from their family system without ever having asked for it. This is the ground on which you can find your way back to yourself.",
   },
   "about.core2": {
-    de: "Gemeinsam schauen wir uns an, wo deine größten Schätze vergraben sind, damit du Frieden mit deiner Vergangenheit schließen kannst und nachhaltig Gelassenheit entsteht.",
-    en: "Together, we look at where your greatest treasures are buried, so that you can make peace with your past and lasting serenity arises.",
+    de: "Gemeinsam schauen wir hin, was dich heute klein hält oder verstrickt – damit du Frieden mit deiner Vergangenheit schließen, gesunde Grenzen entwickeln und nachhaltig Gelassenheit finden kannst.",
+    en: "Together, we look at what is holding you small or entangled today – so that you can make peace with your past, develop healthy boundaries and find lasting serenity.",
   },
   "about.cv.title": {
     de: "Lebenslauf",
