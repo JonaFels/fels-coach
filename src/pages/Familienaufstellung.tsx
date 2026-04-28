@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight } from "lucide-react";
+import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight, Check, BookOpen, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
