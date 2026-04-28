@@ -14,8 +14,8 @@ export const translations: Translations = {
     en: "Coaching",
   },
   "nav.familienaufstellung": {
-    de: "Coaching & Aufstellungen",
-    en: "Coaching & Constellations",
+    de: "Familienaufstellung",
+    en: "Family Constellation",
   },
   "nav.ebook": {
     de: "Gratis E-Book",
@@ -38,8 +38,8 @@ export const translations: Translations = {
     en: "Free Consultation",
   },
   "nav.angebote": {
-    de: "Ablauf & Preise",
-    en: "Process & Pricing",
+    de: "Termine & Preise",
+    en: "Appointments & Prices",
   },
   "nav.blog": {
     de: "Blog",
@@ -154,20 +154,20 @@ export const translations: Translations = {
     en: "Meaningful change needs a clear framework and genuine trust. Here you can see how our collaboration is structured – organized, personal, and on equal footing.",
   },
   "offerings.ablaufTitle": {
-    de: "So läuft eine Sitzung ab",
-    en: "How a Session Works",
+    de: "So buchst du deinen Termin",
+    en: "How to book your appointment",
   },
   "offerings.step1": {
-    de: "Ankommen & Anliegen klären – Wir starten mit einem kurzen Check-in: Was beschäftigt dich gerade? Was möchtest du heute mitnehmen? So finden wir gemeinsam den Fokus für die Sitzung.",
-    en: "Arriving & clarifying your concern – We start with a brief check-in: What's on your mind? What would you like to take away today? Together we find the focus for the session.",
+    de: "Kostenloses Erstgespräch – In 30 Minuten am Telefon klären wir dein Anliegen und schauen, ob die Chemie stimmt. Völlig unverbindlich.",
+    en: "Free first call – In 30 minutes by phone we clarify your concern and see if the chemistry fits. Completely non-binding.",
   },
   "offerings.step2": {
-    de: "Die Aufstellung – Mithilfe von Bodenankern stellen wir dein System auf und machen sichtbar, was im Verborgenen wirkt. Dabei zeigen sich oft überraschende Zusammenhänge und tiefe Einsichten, die allein durch Gespräche nicht erreichbar wären.",
-    en: "The constellation – Using floor anchors, we set up your system and make visible what has been working beneath the surface. Often surprising connections and deep insights emerge that wouldn't be reachable through conversation alone.",
+    de: "Termin wählen & buchen – Such dir online direkt einen passenden Termin aus oder schreib mir per E-Mail bzw. Telegram – ganz wie es dir lieber ist.",
+    en: "Choose & book your slot – Pick an appointment directly online or write me via email or Telegram – whatever you prefer.",
   },
   "offerings.step3": {
-    de: "Kurze Integration & Nachwirkung – Wir schließen die Sitzung mit einer kurzen Einordnung ab. Die eigentliche Wirkung entfaltet sich danach – eine Aufstellung arbeitet in den Tagen und Wochen nach der Sitzung in dir weiter.",
-    en: "Brief integration & aftereffect – We close the session with a short reflection. The real effect unfolds afterwards – a constellation continues to work within you in the days and weeks following the session.",
+    de: "In die Praxis kommen – Du kommst in meinen Praxisraum in der Karlstraße 51 in Freiburg. Den genauen Ablauf der Sitzung selbst findest du auf der Familienaufstellung-Seite.",
+    en: "Come to the practice – You visit my practice room at Karlstraße 51 in Freiburg. You'll find the exact session flow on the Family Constellation page.",
   },
   "offerings.preiseTitle": {
     de: "Klare Konditionen",
@@ -1179,8 +1179,8 @@ export const translations: Translations = {
     en: "We work on solutions that make a difference in your daily life.",
   },
   "offerings.ablaufIntro": {
-    de: "Jede Sitzung dauert 80 Minuten und folgt einem klaren, aber flexiblen Rahmen – damit du dich voll auf dein Thema einlassen kannst.",
-    en: "Each session lasts 80 minutes and follows a clear but flexible structure – so you can fully engage with your topic.",
+    de: "In drei einfachen Schritten von deiner ersten Anfrage bis in meinen Praxisraum in Freiburg.",
+    en: "In three simple steps from your first inquiry to my practice in Freiburg.",
   },
   "offerings.perUnit": {
     de: "/ 80 Min.",
