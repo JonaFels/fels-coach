@@ -66,8 +66,8 @@ export const translations: Translations = {
     en: "Find your way back to yourself – and become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Wenn alte Familienmuster dich bis heute klein halten – Schuldgefühle, das Gefühl, nie zu genügen, oder das ständige Anpassen an andere – dann bist du hier richtig. Im systemischen Coaching schauen wir gemeinsam auf die Wurzel und finden Schritt für Schritt zurück zu deinen Grenzen, deinem eigenen Willen und deiner inneren Ruhe.",
-    en: "If old family patterns still keep you small today – guilt, the feeling of never being enough, or constantly adapting to others – you're in the right place. In systemic coaching, we look at the root together and find your way back, step by step, to your boundaries, your own will and your inner peace.",
+    de: "Du spürst, dass etwas nicht stimmt – aber kannst es nicht greifen? Wer mit einer vereinnahmenden Mutter oder einem grenzüberschreitenden Vater aufgewachsen ist, trägt oft Gefühle, Lasten und Rollen, die nie die eigenen waren. Im systemischen Coaching machen wir sichtbar, was zu wem gehört – und du findest zurück zu dir selbst, deinen Grenzen und deiner inneren Klarheit.",
+    en: "You sense that something isn't right – but can't quite grasp it? Those who grew up with an engulfing mother or a boundary-crossing father often carry feelings, burdens and roles that were never their own. In systemic coaching, we make visible what belongs to whom – and you find your way back to yourself, your boundaries and your inner clarity.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -674,12 +674,12 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich kenne das Gefühl, in Mustern festzustecken, die sich anfühlen, als wären sie deine eigenen – obwohl sie es nie waren. Übermäßige Verantwortung, Schuldgefühle, das ständige Funktionieren für andere. Lange habe ich selbst so gelebt, ohne zu erkennen, woher das wirklich kommt.",
-    en: "I know what it feels like to be stuck in patterns that feel like your own – even though they never were. Excessive responsibility, guilt, constantly functioning for others. For a long time, I lived this way myself, without recognizing where it really came from.",
+    de: "Ich kenne dieses diffuse Gefühl, nicht zu wissen, was eigentlich mit einem los ist – weil so vieles in einem wirkt, das gar nicht zu einem selbst gehört. Wer in vereinnahmenden oder grenzüberschreitenden Familienstrukturen aufgewachsen ist, trägt oft die Themen der Mutter oder des Vaters mit, ohne es zu merken.",
+    en: "I know that diffuse feeling of not knowing what's really going on with you – because so much inside you isn't actually yours. Those who grew up in engulfing or boundary-crossing family structures often carry their mother's or father's themes without realizing it.",
   },
   "aboutPreview.text2": {
-    de: "Das Familienstellen hat mir geholfen, diese Dynamiken klar zu sehen und sie dort zu lassen, wo sie hingehören. Heute stehe ich in meinem eigenen Leben – mit gesunden Grenzen und innerer Ruhe. Genau diesen Weg gehe ich mit dir: behutsam, klar und in deinem Tempo.",
-    en: "Family constellation work helped me see these dynamics clearly and leave them where they belong. Today I stand in my own life – with healthy boundaries and inner calm. This is exactly the path I walk with you: gently, clearly and at your pace.",
+    de: "Das Familienstellen hat mir geholfen, klar zu unterscheiden: Was gehört zu mir – und was zu wem anders? Heute stehe ich in meinem eigenen Leben, mit gesunden Grenzen und innerer Ruhe. Genau diesen Weg gehe ich mit dir: behutsam, klar und in deinem Tempo.",
+    en: "Family constellation work helped me clearly distinguish: what belongs to me – and what belongs to whom else? Today I stand in my own life, with healthy boundaries and inner calm. This is exactly the path I walk with you: gently, clearly and at your pace.",
   },
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
