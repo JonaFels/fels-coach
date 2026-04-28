@@ -29,7 +29,7 @@ const Ebook = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
-  const [newsletterConsent, setNewsletterConsent] = useState(false);
+  const newsletterConsent = true;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
