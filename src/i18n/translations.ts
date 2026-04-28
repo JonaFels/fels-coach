@@ -386,7 +386,7 @@ export const translations: Translations = {
     en: "Free from old family patterns: How to find your way back to yourself",
   },
   "ebook.subheadline": {
-    de: "Auf 6 kompakten Seiten erfährst du, warum du immer wieder in vertraute Familiendynamiken zurückrutschst – und wie du Schritt für Schritt in ein selbstbestimmtes Leben findest, ohne ständige Schuldgefühle. Das E-Book „Der Weg zum Ganzsein" zeigt dir die unsichtbare Architektur deiner familiären Verstrickungen.",
+    de: "Auf 6 kompakten Seiten erfährst du, warum du immer wieder in vertraute Familiendynamiken zurückrutschst – und wie du Schritt für Schritt in ein selbstbestimmtes Leben findest, ohne ständige Schuldgefühle. Das E-Book ‚Der Weg zum Ganzsein‘ zeigt dir die unsichtbare Architektur deiner familiären Verstrickungen.",
     en: "In 6 concise pages, you'll learn why you keep slipping back into familiar family dynamics – and how to step by step find your way into a self-determined life, without constant guilt. The e-book 'The Path to Wholeness' reveals the invisible architecture of your family entanglements.",
   },
   "ebook.name": {
