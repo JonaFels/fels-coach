@@ -382,12 +382,12 @@ export const translations: Translations = {
     en: "The Path to Wholeness",
   },
   "ebook.headline": {
-    de: "E-Book: Warum du dich in alten Familienmustern verlierst",
-    en: "E-Book: Why you lose yourself in old family patterns",
+    de: "Schluss mit emotionaler Erpressung: Wie du dich aus toxischen Familienmustern befreist",
+    en: "End emotional blackmail: How to free yourself from toxic family patterns",
   },
   "ebook.subheadline": {
-    de: "Auf 6 kompakten Seiten erfährst du, warum du oft Gefühle, Lasten und Rollen trägst, die nie deine eigenen waren – und wie du wieder zu dir selbst findest.",
-    en: "In 6 concise pages, you'll discover why you often carry feelings, burdens and roles that were never your own – and how to find your way back to yourself.",
+    de: "Auf 6 kompakten Seiten erfährst du, warum du immer wieder in alte emotionale Abhängigkeiten zurückfällst – besonders im familiären Umfeld – und wie du den Weg in ein selbstbestimmtes Leben ohne ständige Schuldgefühle findest. Das E-Book „Der Weg zum Ganzsein“ zeigt dir die unsichtbare Architektur deiner familiären Blockaden.",
+    en: "In 6 concise pages, you'll learn why you keep falling back into old emotional dependencies – especially within your family – and how to find your way into a self-determined life without constant guilt. The e-book 'The Path to Wholeness' reveals the invisible architecture of your family blockages.",
   },
   "ebook.name": {
     de: "Name",
