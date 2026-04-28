@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight } from "lucide-react";
+import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight, Check, BookOpen, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -222,6 +222,52 @@ const Familienaufstellung = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof – verweist dezent auf Startseite */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-2xl">
+            <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
+              <Quote className="h-6 w-6 text-secondary/40 flex-shrink-0 mt-1" aria-hidden="true" />
+              <div>
+                <p className="text-muted-foreground italic leading-relaxed mb-3">
+                  {t("family.proof.text")}
+                </p>
+                <Link
+                  to="/#testimonials"
+                  className="inline-flex items-center gap-1 text-secondary hover:text-secondary/80 font-medium text-sm underline-offset-4 hover:underline transition-colors"
+                >
+                  {t("family.proof.link")}
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* E-Book Soft Conversion */}
+        <section className="py-12 md:py-16 bg-secondary/5">
+          <div className="container mx-auto px-4 max-w-2xl">
+            <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
+              <div className="flex-shrink-0 p-3 rounded-full bg-secondary/10">
+                <BookOpen className="h-6 w-6 text-secondary" aria-hidden="true" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  {t("family.ebookHint.title")}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  {t("family.ebookHint.text")}
+                </p>
+                <Button asChild variant="outline" size="sm" className="min-h-[40px]">
+                  <Link to="/ebook">
+                    {t("family.ebookHint.cta")}
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

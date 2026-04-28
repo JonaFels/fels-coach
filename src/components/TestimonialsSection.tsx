@@ -12,7 +12,7 @@ export const TestimonialsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-muted/30" aria-label={t("testimonials.title")}>
+    <section id="testimonials" className="py-16 md:py-20 bg-muted/30 scroll-mt-24" aria-label={t("testimonials.title")}>
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">
           {t("testimonials.title")}
