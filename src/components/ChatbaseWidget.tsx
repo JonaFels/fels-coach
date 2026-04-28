@@ -61,14 +61,45 @@ export const ChatbaseWidget = () => {
       script.onload = () => {
         setIsLoaded(true);
         setIsLoading(false);
-        // Versuche, den Chat automatisch zu öffnen
-        setTimeout(() => {
+
+        // Robust öffnen: pollt bis das Chatbase-Widget bereit ist
+        // und ruft dann mehrfach "open" auf, falls der erste Versuch
+        // noch zu früh kommt (Iframe muss vollständig gemountet sein).
+        let attempts = 0;
+        const maxAttempts = 40; // ~8 Sekunden
+        const tryOpen = () => {
+          attempts++;
           try {
+            // Bevorzugt: Klick auf das vom Widget injizierte Bubble-Element
+            const bubble = document.querySelector<HTMLElement>(
+              '[id^="chatbase-bubble-button"], button[aria-label*="hat" i][class*="chatbase" i]'
+            );
+            const iframe = document.getElementById("chatbase-bubble-window");
+
+            if (iframe && (iframe as HTMLElement).style.display !== "none") {
+              return; // Bereits offen
+            }
+
+            if (bubble) {
+              bubble.click();
+              // Prüfen, ob es wirklich aufging
+              setTimeout(() => {
+                const win = document.getElementById("chatbase-bubble-window") as HTMLElement | null;
+                if (!win || win.style.display === "none") {
+                  if (attempts < maxAttempts) setTimeout(tryOpen, 200);
+                }
+              }, 250);
+              return;
+            }
+
+            // Fallback: API-Call
             window.chatbase?.("open");
           } catch {
             /* noop */
           }
-        }, 600);
+          if (attempts < maxAttempts) setTimeout(tryOpen, 200);
+        };
+        tryOpen();
       };
       script.onerror = () => {
         setIsLoading(false);
