@@ -49,25 +49,25 @@ const App = () => (
           <AppTracking />
           <ScrollToTop />
           <ChatbaseWidget />
-          <HashBookingTrigger />
-
-          <Suspense fallback={<RouteFallback />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/angebote" element={<Angebote />} />
-              <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
-              <Route path="/ebook" element={<Ebook />} />
-              <Route path="/kontakt" element={<Kontakt />} />
-              <Route path="/ueber-mich" element={<UeberMich />} />
-              <Route path="/datenschutz" element={<Datenschutz />} />
-              <Route path="/impressum" element={<Impressum />} />
-              <Route path="/agb" element={<AGB />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+          <HashBookingTrigger>
+            <Suspense fallback={<RouteFallback />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/angebote" element={<Angebote />} />
+                <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
+                <Route path="/ebook" element={<Ebook />} />
+                <Route path="/kontakt" element={<Kontakt />} />
+                <Route path="/ueber-mich" element={<UeberMich />} />
+                <Route path="/datenschutz" element={<Datenschutz />} />
+                <Route path="/impressum" element={<Impressum />} />
+                <Route path="/agb" element={<AGB />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </HashBookingTrigger>
         </BrowserRouter>
       </TooltipProvider>
     </LanguageProvider>
