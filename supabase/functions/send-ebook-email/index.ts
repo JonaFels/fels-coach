@@ -156,7 +156,7 @@ const handler = async (req: Request): Promise<Response> => {
         </td></tr>
         <tr><td style="padding:8px 40px 32px;">
           <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#444;">Nimm dir Zeit dafür. Lass die Worte wirken. Und falls du Fragen hast oder spürst, dass du tiefer gehen möchtest – ich freue mich, von dir zu hören.</p>
-          <p style="margin:0;font-size:15px;line-height:1.7;color:#444;">Herzlich,<br><strong>Jona</strong></p>
+          <p style="margin:0;font-size:15px;line-height:1.7;color:#444;">Herzlichst,<br><strong>Jona</strong></p>
         </td></tr>
         <tr><td style="padding:20px 40px;background-color:#F9F7F2;border-radius:0 0 8px 8px;border-top:1px solid #eee;">
           <p style="margin:0;font-size:12px;color:#888;text-align:center;line-height:1.5;">
