@@ -9,11 +9,11 @@ import logoIcon from "@/assets/coaching-logo-new.webp";
 
 const NAV_ITEMS = [
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
+  { key: "nav.ueber", href: "/ueber-mich" },
   { key: "nav.angebote", href: "/angebote" },
   { key: "nav.ebook", href: "/ebook" },
   { key: "nav.blog", href: "/blog" },
   { key: "nav.kontakt", href: "/kontakt" },
-  { key: "nav.ueber", href: "/ueber-mich" },
 ];
 
 export const Header = () => {
