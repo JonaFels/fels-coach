@@ -670,16 +670,16 @@ export const translations: Translations = {
 
   // About Preview (Landing Page)
   "aboutPreview.title": {
-    de: "Der Weg zum eigenen Ganz-Sein",
-    en: "The path to your own wholeness",
+    de: "Vom inneren Sturm zum eigenen Fels",
+    en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich weiß, wie sich das anfühlt – denn mir ging es lange genauso. Als ich 2017 aus einem fluchtartigen Auslandsjahr zurückkehrte, brachten mich alte Umgebungen sofort wieder in meine alten Verhaltensweisen zurück. Ich erkannte schmerzhaft: Ich war zu weniger als fünf Prozent ich selbst – alles andere war reine Überlebensanpassung. Es waren Gedanken und emotionale Muster, die früh auf mich übertragen wurden.",
-    en: "I know how that feels – because for a long time, I felt the same way. When I returned from a year abroad in 2017, old environments immediately pulled me back into old behaviors. I painfully realized: I was less than five percent myself – everything else was pure survival adaptation. These were thoughts and emotional patterns that were transferred to me early on.",
+    de: "Ich kenne das Gefühl, in einer Familie aufzuwachsen, in der nichts wirklich sicher ist – wo Grenzen ständig überschritten werden, Schuldgefühle das Leben steuern und du dich selbst längst verloren hast. Lange war ich zu weniger als fünf Prozent ich selbst – alles andere war reine Überlebensanpassung an Muster, die früh auf mich übertragen wurden.",
+    en: "I know what it feels like to grow up in a family where nothing is truly safe – where boundaries are constantly crossed, guilt runs your life, and you've long lost yourself. For a long time, I was less than five percent myself – everything else was pure survival adaptation to patterns transferred to me early on.",
   },
   "aboutPreview.text2": {
-    de: "Das Familienstellen hat mich schließlich inspiriert, ganz genau zu verstehen, was in mir wirklich passiert. In Momenten, wo Unterbewusstes klar werden kann, konnte ich diese Muster durchbrechen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – und in meinem Coaching helfe ich auch dir dabei, den Raum dafür zu schaffen: die Tiefe deiner immer wiederkehrenden Muster aus dem Alltag zu finden und zu lösen, damit in deinem Leben nachhaltig Gelassenheit entsteht.",
-    en: "Family constellation work ultimately inspired me to understand precisely what was really happening inside me. In moments where the subconscious can become clear, I was able to break through these patterns. Today, I live over 95 percent as my true self – and in my coaching, I help you create that space too: to find and resolve the depth of your recurring everyday patterns, so that lasting serenity arises in your life.",
+    de: "Das Familienstellen hat mir geholfen, diese Dynamiken sichtbar zu machen und sie zu durchbrechen. Heute lebe ich zu über 95 Prozent mein wahres Selbst – standhaft, mit klaren Grenzen, an denen manipulative Dynamiken abprallen. Genau diesen Weg gehe ich mit dir: damit du der Fels in der Brandung deines eigenen Lebens wirst.",
+    en: "Family constellation work helped me make these dynamics visible and break through them. Today I live over 95 percent as my true self – steady, with clear boundaries that manipulative dynamics bounce off. This is exactly the path I walk with you: so you become the rock in the surf of your own life.",
   },
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
