@@ -132,9 +132,13 @@ const Familienaufstellung = () => {
             <Button asChild variant="outline" className="min-h-[44px]">
               <Link
                 to="/kontakt#erstgespraech"
-                onClick={() =>
-                  trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link")
-                }
+                onClick={(e) => {
+                  if (booking) {
+                    e.preventDefault();
+                    booking.openErstgespraech();
+                  }
+                  trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link");
+                }}
               >
                 {t("cta.bookNow")}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
