@@ -474,24 +474,24 @@ export const translations: Translations = {
     en: "Please enter a valid email address.",
   },
   "ebook.sending": {
-    de: "E-Book wird gesendet...",
-    en: "Sending e-book...",
+    de: "Wird gesendet...",
+    en: "Sending...",
   },
   "ebook.toastSendingTitle": {
-    de: "E-Book wird gesendet...",
-    en: "Sending e-book...",
+    de: "Anmeldung läuft...",
+    en: "Submitting...",
   },
   "ebook.toastSendingDesc": {
-    de: "Bitte warte einen Moment, dein E-Book ist unterwegs!",
-    en: "Please wait a moment, your e-book is on its way!",
+    de: "Einen Moment bitte.",
+    en: "One moment please.",
   },
   "ebook.toastSuccessTitle": {
-    de: "E-Book erfolgreich gesendet!",
-    en: "E-book sent successfully!",
+    de: "Fast geschafft!",
+    en: "Almost done!",
   },
   "ebook.toastSuccessDesc": {
-    de: "Prüfe dein E-Mail-Postfach für den Download-Link.",
-    en: "Check your inbox for the download link.",
+    de: "Bitte bestätige deine E-Mail-Adresse – danach kommt der Download-Link.",
+    en: "Please confirm your email – the download link follows right after.",
   },
   "ebook.toastErrorTitle": {
     de: "Fehler beim Senden",
