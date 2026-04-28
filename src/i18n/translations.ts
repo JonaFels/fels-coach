@@ -343,13 +343,17 @@ export const translations: Translations = {
     de: "… du bereit bist, ehrlich hinzuschauen und dich auf einen tiefen Prozess einzulassen.",
     en: "… you are ready to look honestly and engage in a deep process.",
   },
+  "family.proof.title": {
+    de: "Eine Stimme aus der Aufstellungsarbeit",
+    en: "A voice from constellation work",
+  },
   "family.proof.text": {
     de: "Was Menschen über die Arbeit mit mir sagen, kannst du auf der Startseite lesen.",
     en: "You can read what people say about working with me on the homepage.",
   },
   "family.proof.link": {
-    de: "Erfahrungen ansehen",
-    en: "View experiences",
+    de: "Weitere Erfahrungen ansehen",
+    en: "View more experiences",
   },
   "family.ebookHint.title": {
     de: "Noch nicht bereit für ein Gespräch?",
