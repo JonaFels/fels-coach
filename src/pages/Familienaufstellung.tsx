@@ -74,7 +74,7 @@ const Familienaufstellung = () => {
 
       <main id="main-content" className="flex-1">
         {/* Title + Subline */}
-        <section id="methode" className="py-12 md:py-16">
+        <section id="methode" className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
               {t("family.title")}
@@ -86,7 +86,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Intro */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
               {t("family.intro.title")}
@@ -98,7 +98,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Benefits with icons */}
-        <section className="py-16 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-8">
               {t("family.benefits.title")}
@@ -122,7 +122,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Mid-page MicroCTA */}
-        <section className="py-8 md:py-10 bg-secondary/5">
+        <section className="py-12 md:py-16 bg-secondary/5">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <p className="text-muted-foreground mb-4 italic">
               {t("family.midCta.text")}
@@ -142,7 +142,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Process */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-10">
               {/* Text */}
@@ -199,7 +199,7 @@ const Familienaufstellung = () => {
 
         {/* FAQ */}
         <section
-          className="py-16 md:py-20"
+          className="py-20 md:py-28"
           aria-labelledby="family-faq-heading"
         >
           <div className="container mx-auto px-4 max-w-3xl">
@@ -227,7 +227,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Social Proof – verweist dezent auf Startseite */}
-        <section className="py-12 md:py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
               <Quote className="h-6 w-6 text-secondary/40 flex-shrink-0 mt-1" aria-hidden="true" />
@@ -248,7 +248,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* E-Book Soft Conversion */}
-        <section className="py-12 md:py-16 bg-secondary/5">
+        <section className="py-16 md:py-24 bg-secondary/5">
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
               <div className="flex-shrink-0 p-3 rounded-full bg-secondary/10">
@@ -273,7 +273,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-20 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <Button size="lg" className="min-h-[44px]" asChild>
               <a
