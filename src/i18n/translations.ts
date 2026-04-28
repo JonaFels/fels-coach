@@ -316,8 +316,72 @@ export const translations: Translations = {
     en: "What is a Family Constellation?",
   },
   "family.intro.text": {
-    de: "Familienaufstellung ist eine kraftvolle Methode des systemischen Coachings, um unbewusste Dynamiken und Verstrickungen innerhalb Deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Heilung und Veränderung ebnen.",
-    en: "Family constellation is a powerful method of systemic coaching to uncover unconscious dynamics and entanglements within your family system. Often we carry burdens or patterns of our ancestors within us that block us in our current life without being aware of it. A constellation can make these deep-rooted causes visible and pave the way for healing and change.",
+    de: "Familienaufstellung ist eine kraftvolle Methode des systemischen Coachings, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
+    en: "Family constellation is a powerful method of systemic coaching to uncover unconscious dynamics and entanglements within your family system. Often we carry burdens or patterns of our ancestors within us that block us in our current life without being aware of it. A constellation can make these deep-rooted causes visible and pave the way for clarity and lasting change.",
+  },
+  "family.subtitle": {
+    de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare sichtbar.",
+    en: "When old family patterns block you – make the invisible visible.",
+  },
+  "family.midCta.text": {
+    de: "Klingt das nach dem, wonach du suchst?",
+    en: "Sounds like what you're looking for?",
+  },
+  "family.step4.title": {
+    de: "4. Integration im Alltag",
+    en: "4. Integration into daily life",
+  },
+  "family.step4.text": {
+    de: "Das Lösungsbild wirkt nach – wir besprechen, wie du die neuen Impulse in deinem Alltag verankern kannst.",
+    en: "The solution image continues to work – we discuss how you can anchor the new impulses in your daily life.",
+  },
+  "family.process.stepsTitle": {
+    de: "So läuft eine Sitzung ab",
+    en: "How a session unfolds",
+  },
+  "family.faq.title": {
+    de: "Häufige Fragen zur Familienaufstellung",
+    en: "Frequently asked questions about family constellation",
+  },
+  "family.faq.q1": {
+    de: "Muss ich vorher viel über meine Familie erzählen?",
+    en: "Do I have to share a lot about my family beforehand?",
+  },
+  "family.faq.a1": {
+    de: "Nein. Wir klären gemeinsam dein Anliegen, aber du musst keine Familiengeschichte ausbreiten. Die Bodenanker und dein Spüren tragen den Prozess – nicht das Erzählen.",
+    en: "No. We clarify your concern together, but you don't need to lay out your family history. The floor anchors and your sensing carry the process – not the storytelling.",
+  },
+  "family.faq.q2": {
+    de: "Sind andere Personen oder Stellvertreter dabei?",
+    en: "Are other people or stand-ins involved?",
+  },
+  "family.faq.a2": {
+    de: "Nein – wir arbeiten in der Einzelaufstellung ausschließlich zu zweit. Statt Stellvertretern nutzen wir Bodenanker, die für die Mitglieder deines Systems stehen. Das schafft einen geschützten, intimen Rahmen.",
+    en: "No – in individual constellation work we work strictly one-on-one. Instead of stand-ins, we use floor anchors representing members of your system. This creates a protected, intimate setting.",
+  },
+  "family.faq.q3": {
+    de: "Wie lange dauert eine Sitzung?",
+    en: "How long does a session last?",
+  },
+  "family.faq.a3": {
+    de: "Eine Sitzung mit Einzelaufstellung dauert 80 Minuten. Wir nehmen uns die Zeit, die dein Thema braucht, ohne unter Druck zu geraten.",
+    en: "A session with individual constellation lasts 80 minutes. We take the time your topic needs, without pressure.",
+  },
+  "family.faq.q4": {
+    de: "Ist das eine Therapie?",
+    en: "Is this therapy?",
+  },
+  "family.faq.a4": {
+    de: "Nein. Familienaufstellung ist eine Form des systemischen Coachings und ersetzt keine Psychotherapie. Sie eignet sich für Menschen, die klar denken können und einen Impuls für Veränderung suchen.",
+    en: "No. Family constellation is a form of systemic coaching and does not replace psychotherapy. It is suited for people who can think clearly and are looking for an impulse for change.",
+  },
+  "family.faq.q5": {
+    de: "Was, wenn ich emotional werde?",
+    en: "What if I become emotional?",
+  },
+  "family.faq.a5": {
+    de: "Gefühle sind willkommen – sie zeigen, dass etwas in Bewegung kommt. Mein Praxisraum ist ein geschützter Ort, und ich begleite dich achtsam durch jeden Moment.",
+    en: "Emotions are welcome – they show that something is moving. My practice is a safe space, and I accompany you mindfully through every moment.",
   },
   "family.benefits.title": {
     de: "Welchen Nutzen bringt eine Aufstellung?",
