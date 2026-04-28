@@ -352,8 +352,8 @@ export const translations: Translations = {
     en: "Not ready for a conversation yet?",
   },
   "family.ebookHint.text": {
-    de: "In meinem kostenlosen E-Book „Der Weg zum Ganzsein" zeige ich dir, wie alte Familienmuster dich heute noch beeinflussen – und wie du den ersten Schritt zur Veränderung gehst.",
-    en: "In my free e-book \"The Path to Wholeness\" I show you how old family patterns still influence you today – and how to take the first step toward change.",
+    de: "In meinem kostenlosen E-Book „Der Weg zum Ganzsein“ zeige ich dir, wie alte Familienmuster dich heute noch beeinflussen – und wie du den ersten Schritt zur Veränderung gehst.",
+    en: "In my free e-book „The Path to Wholeness“ I show you how old family patterns still influence you today – and how to take the first step toward change.",
   },
   "family.ebookHint.cta": {
     de: "E-Book gratis sichern",
