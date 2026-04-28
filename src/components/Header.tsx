@@ -78,7 +78,7 @@ export const Header = () => {
             >
               <a
                 href="/kontakt#erstgespraech"
-                onClick={() => trackNavToOffers("header")}
+                onClick={handleCTAClick}
               >
                 <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
                 {t("nav.contact")}
