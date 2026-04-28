@@ -58,16 +58,16 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemische Familienaufstellung & Coaching in Freiburg",
-    en: "Systemic Family Constellation & Coaching in Freiburg",
+    de: "Coaching bei toxischen Familienmustern – Freiburg",
+    en: "Coaching for toxic family patterns – Freiburg",
   },
   "hero.title": {
-    de: "Endlich ankommen, wo der Sturm aufhört.",
-    en: "Finally arriving where the storm ends.",
+    de: "Befrei dich aus toxischen Familienmustern. Werde zum Fels in deinem eigenen Leben.",
+    en: "Free yourself from toxic family patterns. Become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Du sehnst dich danach, das ‚Müssen' hinter dir zu lassen? In meinem Coaching schaffst du den Raum, um endlich bei dir selbst anzukommen. Ein sicherer Ort und eine Begleitung, die dir mit Aufrichtigkeit zur Seite steht.",
-    en: "Do you long to leave the 'having to' behind? In my coaching, you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
+    de: "Wenn du mit grenzüberschreitenden, manipulativen oder vereinnahmenden Familienstrukturen aufgewachsen bist, kennst du den permanenten inneren Sturm. Im systemischen Coaching findest du deine Grenzen, deinen eigenen Willen und deine innere Ruhe wieder – standhaft, in deiner Kraft, klar in dir selbst.",
+    en: "If you grew up with boundary-crossing, manipulative or engulfing family structures, you know the constant inner storm. In systemic coaching, you reclaim your boundaries, your own will and your inner peace – steady, in your power, clear in yourself.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -82,12 +82,12 @@ export const translations: Translations = {
     en: "Let's just talk",
   },
   "hero.ctaMicrocopy": {
-    de: "Unverbindlich & persönlich – 30 Min., die Klarheit schaffen.",
-    en: "Non-binding & personal – 30 min. that create clarity.",
+    de: "Unverbindlich & persönlich – 30 Min., die zeigen, ob du dich gesehen fühlst.",
+    en: "Non-binding & personal – 30 min. to see if you feel understood.",
   },
   "hero.socialProof": {
-    de: "Über 100 begleitete Klienten auf dem Weg zu sich selbst.",
-    en: "Over 100 clients guided on their path to themselves.",
+    de: "Über 100 Menschen begleitet – auf dem Weg zu gesunden Grenzen und sich selbst.",
+    en: "Over 100 people guided – on their path to healthy boundaries and themselves.",
   },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
