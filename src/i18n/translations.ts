@@ -312,8 +312,52 @@ export const translations: Translations = {
     en: "Systemic Constellation & Family Constellation in Freiburg",
   },
   "family.intro.title": {
-    de: "Was ist eine Familienaufstellung?",
-    en: "What is a Family Constellation?",
+    de: "Was in einer Aufstellung wirklich passiert",
+    en: "What really happens in a constellation",
+  },
+  "family.aboutLink": {
+    de: "Mehr über meinen Weg als Coach erfahren",
+    en: "Learn more about my path as a coach",
+  },
+  "family.suitedFor.title": {
+    de: "Diese Arbeit passt zu dir, wenn …",
+    en: "This work fits you if …",
+  },
+  "family.suitedFor.1": {
+    de: "… du dich in alten Familienrollen gefangen fühlst.",
+    en: "… you feel trapped in old family roles.",
+  },
+  "family.suitedFor.2": {
+    de: "… sich Beziehungsmuster bei dir immer wieder wiederholen.",
+    en: "… relationship patterns keep repeating in your life.",
+  },
+  "family.suitedFor.3": {
+    de: "… du eine innere Last spürst, die sich nicht ganz wie deine eigene anfühlt.",
+    en: "… you feel an inner burden that doesn't quite feel like your own.",
+  },
+  "family.suitedFor.4": {
+    de: "… du bereit bist, ehrlich hinzuschauen und dich auf einen tiefen Prozess einzulassen.",
+    en: "… you are ready to look honestly and engage in a deep process.",
+  },
+  "family.proof.text": {
+    de: "Was Menschen über die Arbeit mit mir sagen, kannst du auf der Startseite lesen.",
+    en: "You can read what people say about working with me on the homepage.",
+  },
+  "family.proof.link": {
+    de: "Erfahrungen ansehen",
+    en: "View experiences",
+  },
+  "family.ebookHint.title": {
+    de: "Noch nicht bereit für ein Gespräch?",
+    en: "Not ready for a conversation yet?",
+  },
+  "family.ebookHint.text": {
+    de: "In meinem kostenlosen E-Book „Der Weg zum Ganzsein" zeige ich dir, wie alte Familienmuster dich heute noch beeinflussen – und wie du den ersten Schritt zur Veränderung gehst.",
+    en: "In my free e-book \"The Path to Wholeness\" I show you how old family patterns still influence you today – and how to take the first step toward change.",
+  },
+  "family.ebookHint.cta": {
+    de: "E-Book gratis sichern",
+    en: "Get the free e-book",
   },
   "family.intro.text": {
     de: "Familienaufstellung ist eine kraftvolle Methode des systemischen Coachings, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
