@@ -57,22 +57,25 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-[9999] flex items-start md:items-center justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto overscroll-contain"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
+      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-4xl my-auto flex flex-col overflow-hidden">
         {/* Close button */}
         <Button
           variant="ghost"
           size="icon"
           onClick={onClose}
-          className="absolute right-3 top-3 z-10 rounded-full"
+          className="absolute right-3 top-3 z-10 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background"
           aria-label="Schließen"
         >
           <X className="h-5 w-5" />
         </Button>
 
-        <div className="flex-1 overflow-y-auto">
+        <div
+          className="flex-1 overflow-y-auto overscroll-contain max-h-[90vh]"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           {/* Portrait + Text */}
           <div className="p-8 md:p-10 lg:p-12 flex flex-col items-center text-center bg-muted/40">
             <img
