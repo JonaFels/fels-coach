@@ -19,9 +19,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 const Familienaufstellung = () => {
   const { t, language } = useLanguage();
+  const booking = useErstgespraech();
   const heroRef = useRef<HTMLDivElement>(null);
 
   useHalfHeroHashScroll("#methode", heroRef);
