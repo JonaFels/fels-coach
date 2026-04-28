@@ -2,9 +2,11 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 export const FinalCTA = () => {
   const { t } = useLanguage();
+  const booking = useErstgespraech();
 
   return (
     <section className="py-20 md:py-24 bg-primary text-primary-foreground relative overflow-hidden">
