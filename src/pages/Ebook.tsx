@@ -76,62 +76,41 @@ const Ebook = () => {
     });
 
     try {
-      // 1) E-Book-Versand via Resend Edge Function (Lead wird in Supabase gespeichert)
-      let ebookOk = false;
+      // 1) Lead in Supabase speichern (Best-effort)
       try {
-        const { error: ebookError } = await supabase.functions.invoke("send-ebook-email", {
-          body: { name, email, website: "" },
-        });
-        if (ebookError) {
-          console.error("send-ebook-email error:", ebookError);
-        } else {
-          ebookOk = true;
-        }
-      } catch (ebookErr) {
-        console.error("send-ebook-email invoke error:", ebookErr);
+        const { error: leadError } = await supabase
+          .from("ebook_leads")
+          .insert({ name, email });
+        if (leadError) console.error("ebook_leads insert error:", leadError);
+      } catch (leadErr) {
+        console.error("ebook_leads invoke error:", leadErr);
       }
 
-      // --- FALLBACK: Netlify Forms (auskommentiert; bei Bedarf reaktivieren) ---
-      // try {
-      //   const netlifyBody = new URLSearchParams();
-      //   netlifyBody.append("form-name", "ebook");
-      //   netlifyBody.append("name", name);
-      //   netlifyBody.append("email", email);
-      //   await fetch("/", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      //     body: netlifyBody.toString(),
-      //   });
-      // } catch (netErr) {
-      //   console.warn("Netlify form not reachable:", netErr);
-      // }
-
-      // 2) Newsletter-Anmeldung (DSGVO Double-Opt-In via MailerLite)
+      // 2) Newsletter-Anmeldung mit Double-Opt-In via MailerLite.
+      //    Der Versand des E-Books erfolgt anschließend automatisch über eine
+      //    MailerLite-Automation (Trigger: Bestätigung der Gruppe „Ebook"),
+      //    sobald die Person ihre E-Mail-Adresse bestätigt hat.
       let mlOk = true;
-      if (newsletterConsent) {
-        try {
-          const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
-            body: { email, name, consent: true, website: "" },
-          });
-          if (mlError) {
-            mlOk = false;
-            console.error("MailerLite error:", mlError);
-          }
-        } catch (mlErr) {
+      try {
+        const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
+          body: { email, name, consent: true, website: "" },
+        });
+        if (mlError) {
           mlOk = false;
-          console.error("MailerLite invoke error:", mlErr);
+          console.error("MailerLite error:", mlError);
         }
+      } catch (mlErr) {
+        mlOk = false;
+        console.error("MailerLite invoke error:", mlErr);
       }
 
       setSubmitted(true);
-      if (!ebookOk) {
+      if (!mlOk) {
         toast({
           title: t("ebook.toastConnectionTitle"),
           description: t("ebook.toastConnectionDesc"),
           variant: "destructive",
         });
-      } else if (newsletterConsent && !mlOk) {
-        toast({ title: t("ebook.newsletterError") });
       } else {
         toast({ title: t("ebook.toastSuccessTitle"), description: t("ebook.toastSuccessDesc") });
       }
