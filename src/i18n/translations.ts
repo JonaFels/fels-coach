@@ -490,8 +490,8 @@ export const translations: Translations = {
     en: "Almost done!",
   },
   "ebook.toastSuccessDesc": {
-    de: "Bitte bestätige deine E-Mail-Adresse – danach kommt der Download-Link.",
-    en: "Please confirm your email – the download link follows right after.",
+    de: "Bitte bestätige in der ersten E-Mail kurz deine Anmeldung – danach kommt eine zweite Mail mit dem Download-Link.",
+    en: "Please confirm your subscription in the first email – a second email with the download link will follow.",
   },
   "ebook.toastErrorTitle": {
     de: "Fehler beim Senden",
