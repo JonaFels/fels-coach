@@ -84,7 +84,7 @@ const Kontakt = () => {
             <img
               src={profilBild}
               alt="Jona Fels – Systemischer Coach in Freiburg"
-              className="w-24 h-24 rounded-full object-cover object-center shadow-md mx-auto mb-4 no-fade"
+              className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
               loading="eager"
               decoding="async"
               width={96}
