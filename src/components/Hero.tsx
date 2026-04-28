@@ -45,7 +45,16 @@ export const Hero = () => {
                 className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 asChild
               >
-                <a href="/kontakt#erstgespraech" onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}>
+                <a
+                  href="/kontakt#erstgespraech"
+                  onClick={(e) => {
+                    if (booking) {
+                      e.preventDefault();
+                      booking.openErstgespraech();
+                    }
+                    trackCTAClick("hero_consultation", "homepage_hero", "link");
+                  }}
+                >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t("hero.ctaConsultation")}
                 </a>
