@@ -134,7 +134,7 @@ const Ebook = () => {
 
       <main id="main-content" className="flex-1">
         {/* Header */}
-        <section className="pt-10 pb-6 md:pt-16 md:pb-8">
+        <section className="pt-14 pb-10 md:pt-20 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
               {t("ebook.freeEbook")}
@@ -149,8 +149,8 @@ const Ebook = () => {
         </section>
 
         {/* Content – Bild + Benefits/Form nebeneinander */}
-        <section className="pb-16 md:pb-20 bg-muted/40">
-          <div className="container mx-auto px-4 py-10 md:py-14 max-w-4xl">
+        <section className="pb-20 md:pb-28 bg-muted/40">
+          <div className="container mx-auto px-4 py-14 md:py-20 max-w-4xl">
             <div className="grid gap-10 md:gap-12 md:grid-cols-2 items-start">
 
               {/* Left: Mockup + Benefits */}

@@ -90,7 +90,7 @@ const Kontakt = () => {
         {/* 1. Orbnet-Kalender direkt oben */}
         <section
           id="erstgespraech"
-          className="pt-2 pb-8 md:pt-4 md:pb-12"
+          className="pt-8 pb-12 md:pt-12 md:pb-16"
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <img
@@ -116,7 +116,7 @@ const Kontakt = () => {
 
 
         {/* 3. Alternative Kontaktwege */}
-        <section className="py-16 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-8 text-center">
               {t("contact.altTitle")}
@@ -165,7 +165,7 @@ const Kontakt = () => {
         </section>
 
         {/* Anfahrt */}
-        <section id="anfahrt" className="py-20 md:py-28 bg-muted/40 scroll-mt-24">
+        <section id="anfahrt" className="py-24 md:py-32 bg-muted/40 scroll-mt-24">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px flex-1 max-w-16 bg-border" />

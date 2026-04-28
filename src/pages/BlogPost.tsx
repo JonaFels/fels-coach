@@ -92,7 +92,7 @@ const BlogPost = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead title={`${post.title.de} | Jona Fels`} description={post.excerpt.de} image={post.image} type="article" />
       <Header />
-      <main id="main-content" className="flex-1 py-16 md:py-20">
+      <main id="main-content" className="flex-1 py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <article>
               <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px]">
