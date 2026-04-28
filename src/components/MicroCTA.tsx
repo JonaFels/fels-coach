@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trackCTAClick } from "@/lib/tracking";
+import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 interface MicroCTAProps {
   variant?: "primary" | "secondary" | "ghost";
@@ -11,6 +12,7 @@ interface MicroCTAProps {
 
 export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
   const { t } = useLanguage();
+  const booking = useErstgespraech();
 
   return (
     <div className={cn("flex flex-col items-center justify-center py-8", className)}>
@@ -22,7 +24,13 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
       >
         <a
           href="/kontakt#erstgespraech"
-          onClick={() => trackCTAClick("micro_cta_vorgespraech", "micro_cta", "link")}
+          onClick={(e) => {
+            if (booking) {
+              e.preventDefault();
+              booking.openErstgespraech();
+            }
+            trackCTAClick("micro_cta_vorgespraech", "micro_cta", "link");
+          }}
         >
           <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
           {t("cta.bookNow")}
