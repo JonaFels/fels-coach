@@ -226,26 +226,33 @@ const Familienaufstellung = () => {
           </div>
         </section>
 
-        {/* Social Proof – verweist dezent auf Startseite */}
+        {/* Social Proof – echte Stimme zur Aufstellungsarbeit */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-2xl">
-            <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
-              <Quote className="h-6 w-6 text-secondary/40 flex-shrink-0 mt-1" aria-hidden="true" />
-              <div>
-                <p className="text-muted-foreground italic leading-relaxed mb-3">
-                  {t("family.proof.text")}
-                </p>
-                <Link
-                  to="/#testimonials"
-                  className="inline-flex items-center gap-1 text-secondary hover:text-secondary/80 font-medium text-sm underline-offset-4 hover:underline transition-colors"
-                >
-                  {t("family.proof.link")}
-                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                </Link>
-              </div>
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground text-center mb-8">
+              {t("family.proof.title")}
+            </h2>
+            <blockquote className="relative bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/60">
+              <Quote className="absolute top-6 left-6 h-7 w-7 text-secondary/25" aria-hidden="true" />
+              <p className="text-muted-foreground italic leading-relaxed text-base md:text-lg pl-8">
+                „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit."
+              </p>
+              <footer className="mt-5 pl-8">
+                <span className="font-medium text-foreground text-sm">– Miriam</span>
+              </footer>
+            </blockquote>
+            <div className="text-center mt-6">
+              <Link
+                to="/#testimonials"
+                className="inline-flex items-center gap-1 text-secondary hover:text-secondary/80 font-medium text-sm underline-offset-4 hover:underline transition-colors"
+              >
+                {t("family.proof.link")}
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </section>
+
 
         {/* E-Book Soft Conversion */}
         <section className="py-16 md:py-24 bg-secondary/5">
