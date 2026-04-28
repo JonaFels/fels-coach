@@ -398,12 +398,16 @@ export const translations: Translations = {
     en: "Email Address",
   },
   "ebook.privacyNote": {
-    de: "Die Datenschutzerklärung findest du",
-    en: "You can find the privacy policy",
+    de: "Mit dem Klick auf den Button bist du damit einverstanden, dass Jona Fels dir das kostenlose E-Book zusendet und dich in den E-Mail-Newsletter aufnimmt. Deine Daten werden gemäß der",
+    en: "By clicking the button, you agree that Jona Fels sends you the free e-book and adds you to the email newsletter. Your data is processed according to the",
   },
   "ebook.here": {
-    de: "hier",
-    en: "here",
+    de: "Datenschutzerklärung",
+    en: "privacy policy",
+  },
+  "ebook.privacyNoteAfter": {
+    de: "verarbeitet. Du kannst diese Einwilligung jederzeit mit nur einem Klick am Ende jeder E-Mail widerrufen.",
+    en: "You can revoke this consent at any time with just one click at the end of every email.",
   },
   "ebook.download": {
     de: "Jetzt gratis E-Book & Impulse sichern",
