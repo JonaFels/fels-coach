@@ -406,8 +406,8 @@ export const translations: Translations = {
     en: "here",
   },
   "ebook.download": {
-    de: "Kostenlos anfordern",
-    en: "Request for Free & Gain Clarity",
+    de: "Jetzt gratis E-Book & Impulse sichern",
+    en: "Get my free e-book & impulses now",
   },
   "ebook.infoTitle": {
     de: "Was du in diesem E-Book erfährst:",
