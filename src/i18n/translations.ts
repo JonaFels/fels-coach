@@ -66,8 +66,8 @@ export const translations: Translations = {
     en: "Find your way back to yourself – and become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Manche Familienmuster wirken bis weit ins Erwachsenenleben hinein – auch wenn vieles Gute war. Wenn du spürst, dass alte Dynamiken dir heute Kraft kosten, schauen wir gemeinsam hin. Im systemischen Coaching findest du Schritt für Schritt zu deinen Grenzen, deinem eigenen Willen und deiner inneren Ruhe.",
-    en: "Some family patterns reach far into adult life – even when much was good. If you sense that old dynamics still cost you energy today, we'll look at them together. In systemic coaching, you find your way step by step to your boundaries, your own will and your inner peace.",
+    de: "Wenn alte Familienmuster dich bis heute klein halten – Schuldgefühle, das Gefühl, nie zu genügen, oder das ständige Anpassen an andere – dann bist du hier richtig. Im systemischen Coaching schauen wir gemeinsam auf die Wurzel und finden Schritt für Schritt zurück zu deinen Grenzen, deinem eigenen Willen und deiner inneren Ruhe.",
+    en: "If old family patterns still keep you small today – guilt, the feeling of never being enough, or constantly adapting to others – you're in the right place. In systemic coaching, we look at the root together and find your way back, step by step, to your boundaries, your own will and your inner peace.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -674,12 +674,12 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich weiß, wie es sich anfühlt, lange nicht wirklich bei sich selbst zu sein – wenn Schuldgefühle den Alltag mitsteuern und du das Gefühl hast, dich an Erwartungen anzupassen, statt deinem eigenen Weg zu folgen. Auch ich habe lange in solchen Mustern gelebt, ohne sie zu erkennen.",
-    en: "I know what it feels like to be far from yourself for a long time – when guilt quietly steers your everyday life and you feel like you're adapting to expectations rather than following your own path. I lived in such patterns for years without recognizing them.",
+    de: "Ich kenne das Gefühl, in Mustern festzustecken, die sich anfühlen, als wären sie deine eigenen – obwohl sie es nie waren. Übermäßige Verantwortung, Schuldgefühle, das ständige Funktionieren für andere. Lange habe ich selbst so gelebt, ohne zu erkennen, woher das wirklich kommt.",
+    en: "I know what it feels like to be stuck in patterns that feel like your own – even though they never were. Excessive responsibility, guilt, constantly functioning for others. For a long time, I lived this way myself, without recognizing where it really came from.",
   },
   "aboutPreview.text2": {
-    de: "Das Familienstellen hat mir geholfen, diese Dynamiken sichtbar zu machen – mit Respekt vor allem, was war, und ohne jemandem die Schuld zu geben. Heute stehe ich klarer in meinem Leben, mit gesunden Grenzen und mehr Ruhe in mir. Genau diesen Weg gehe ich auch mit dir: in deinem Tempo, behutsam und klar.",
-    en: "Family constellation work helped me make these dynamics visible – with respect for everything that was, and without blaming anyone. Today I stand more clearly in my life, with healthy boundaries and more inner calm. This is exactly the path I walk with you: at your pace, gently and clearly.",
+    de: "Das Familienstellen hat mir geholfen, diese Dynamiken klar zu sehen und sie dort zu lassen, wo sie hingehören. Heute stehe ich in meinem eigenen Leben – mit gesunden Grenzen und innerer Ruhe. Genau diesen Weg gehe ich mit dir: behutsam, klar und in deinem Tempo.",
+    en: "Family constellation work helped me see these dynamics clearly and leave them where they belong. Today I stand in my own life – with healthy boundaries and inner calm. This is exactly the path I walk with you: gently, clearly and at your pace.",
   },
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
