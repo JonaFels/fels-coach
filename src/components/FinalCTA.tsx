@@ -41,7 +41,13 @@ export const FinalCTA = () => {
           >
             <a
               href="/kontakt#erstgespraech"
-              onClick={() => trackCTAClick("final_cta", "homepage_final", "link")}
+              onClick={(e) => {
+                if (booking) {
+                  e.preventDefault();
+                  booking.openErstgespraech();
+                }
+                trackCTAClick("final_cta", "homepage_final", "link");
+              }}
             >
               <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("finalCta.button")}
