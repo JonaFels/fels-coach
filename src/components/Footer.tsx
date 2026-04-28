@@ -18,6 +18,10 @@ export const Footer = () => {
             {t("footer.contact")}
           </a>
           <span className="hidden md:inline text-border">·</span>
+          <a href="/kontakt#anfahrt" className="hover:text-foreground transition-colors no-underline-effect">
+            {t("nav.anfahrt")}
+          </a>
+          <span className="hidden md:inline text-border">·</span>
           <a href="/datenschutz" className="hover:text-foreground transition-colors no-underline-effect">
             {t("footer.privacy")}
           </a>
