@@ -86,10 +86,9 @@ const Ebook = () => {
         console.error("ebook_leads invoke error:", leadErr);
       }
 
-      // 2) Newsletter-Anmeldung mit Double-Opt-In via MailerLite.
-      //    Der Versand des E-Books erfolgt anschließend automatisch über eine
-      //    MailerLite-Automation (Trigger: Bestätigung der Gruppe „Ebook"),
-      //    sobald die Person ihre E-Mail-Adresse bestätigt hat.
+      // 2) Newsletter-Anmeldung via Brevo.
+      //    Der Versand des E-Books erfolgt über eine Brevo-Automatisierung
+      //    (Trigger: Kontakt wird zur Liste "Webseite Leads" hinzugefügt).
       let mlOk = true;
       try {
         const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
@@ -97,11 +96,11 @@ const Ebook = () => {
         });
         if (mlError) {
           mlOk = false;
-          console.error("MailerLite error:", mlError);
+          console.error("Brevo error:", mlError);
         }
       } catch (mlErr) {
         mlOk = false;
-        console.error("MailerLite invoke error:", mlErr);
+        console.error("Brevo invoke error:", mlErr);
       }
 
       setSubmitted(true);

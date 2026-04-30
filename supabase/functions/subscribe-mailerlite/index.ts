@@ -9,7 +9,7 @@ const corsHeaders = {
 
 const RATE_LIMIT = 5;
 const WINDOW_MINUTES = 60;
-const MAILERLITE_GROUP_ID = "185921016567957128";
+const BREVO_LIST_ID = 3;
 
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -80,9 +80,9 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const apiKey = Deno.env.get("MAILERLITE_API_KEY");
+    const apiKey = Deno.env.get("BREVO_API_KEY");
     if (!apiKey) {
-      console.error("MAILERLITE_API_KEY not configured");
+      console.error("BREVO_API_KEY not configured");
       return new Response(
         JSON.stringify({ error: "Newsletter-Service nicht konfiguriert." }),
         { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } },
@@ -98,7 +98,7 @@ const handler = async (req: Request): Promise<Response> => {
       req.headers.get("x-real-ip") ||
       "unknown";
 
-    const allowed = await checkRateLimit(supabase, clientIP, "subscribe-mailerlite");
+    const allowed = await checkRateLimit(supabase, clientIP, "subscribe-brevo");
     if (!allowed) {
       return new Response(
         JSON.stringify({ error: "Zu viele Anfragen. Bitte versuche es später erneut." }),
@@ -134,44 +134,40 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // MailerLite v2 API: upsert subscriber + add to group
-    // Using "groups" array forces double-opt-in unless subscriber already confirmed
-    const mlResponse = await fetch("https://connect.mailerlite.com/api/subscribers", {
+    // Brevo API: Create/update contact and add to list
+    const brevoResponse = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${apiKey}`,
+        "api-key": apiKey,
         "Content-Type": "application/json",
         "Accept": "application/json",
       },
       body: JSON.stringify({
         email,
-        fields: name ? { name } : undefined,
-        groups: [MAILERLITE_GROUP_ID],
-        status: "unconfirmed", // triggers double-opt-in confirmation email
-        ip_address: clientIP !== "unknown" ? clientIP : undefined,
-        subscribed_at: new Date().toISOString().slice(0, 19).replace("T", " "),
-        opted_in_at: new Date().toISOString().slice(0, 19).replace("T", " "),
+        listIds: [BREVO_LIST_ID],
+        updateEnabled: true,
+        attributes: name ? { VORNAME: name } : undefined,
       }),
     });
 
-    const mlData = await mlResponse.json().catch(() => ({}));
-
-    if (!mlResponse.ok) {
-      console.error("MailerLite API error:", mlResponse.status, JSON.stringify(mlData));
+    // Brevo returns 201 for new contact, 204 for updated
+    if (!brevoResponse.ok && brevoResponse.status !== 204) {
+      const brevoData = await brevoResponse.json().catch(() => ({}));
+      console.error("Brevo API error:", brevoResponse.status, JSON.stringify(brevoData));
       return new Response(
         JSON.stringify({ error: "Newsletter-Anmeldung fehlgeschlagen." }),
         { status: 502, headers: { "Content-Type": "application/json", ...corsHeaders } },
       );
     }
 
-    console.log("MailerLite subscribe success:", email);
+    console.log("Brevo subscribe success:", email);
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   } catch (error) {
-    console.error("Error in subscribe-mailerlite function:", error);
+    console.error("Error in subscribe function:", error);
     return new Response(
       JSON.stringify({ error: "Ein Fehler ist aufgetreten." }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } },
