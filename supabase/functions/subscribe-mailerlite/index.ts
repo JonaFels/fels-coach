@@ -10,6 +10,8 @@ const corsHeaders = {
 const RATE_LIMIT = 5;
 const WINDOW_MINUTES = 60;
 const BREVO_LIST_ID = 3;
+const BREVO_DOI_TEMPLATE_ID = 1; // TODO: Replace with actual Brevo DOI template ID
+const BREVO_REDIRECT_URL = "https://fels-coach.de/ebook";
 
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
