@@ -10,6 +10,8 @@ const corsHeaders = {
 const RATE_LIMIT = 5;
 const WINDOW_MINUTES = 60;
 const BREVO_LIST_ID = 3;
+const BREVO_DOI_TEMPLATE_ID = 1; // TODO: Replace with actual Brevo DOI template ID
+const BREVO_REDIRECT_URL = "https://fels-coach.de/ebook";
 
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -134,8 +136,8 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Brevo API: Create/update contact and add to list
-    const brevoResponse = await fetch("https://api.brevo.com/v3/contacts", {
+    // Brevo Double Opt-In API
+    const brevoResponse = await fetch("https://api.brevo.com/v3/contacts/doubleOptinConfirmation", {
       method: "POST",
       headers: {
         "api-key": apiKey,
@@ -144,8 +146,9 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         email,
-        listIds: [BREVO_LIST_ID],
-        updateEnabled: true,
+        includeListIds: [BREVO_LIST_ID],
+        templateId: BREVO_DOI_TEMPLATE_ID,
+        redirectionUrl: BREVO_REDIRECT_URL,
         attributes: name ? { VORNAME: name } : undefined,
       }),
     });
