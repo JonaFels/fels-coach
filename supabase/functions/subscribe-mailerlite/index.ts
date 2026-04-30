@@ -136,8 +136,8 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Brevo API: Create/update contact and add to list
-    const brevoResponse = await fetch("https://api.brevo.com/v3/contacts", {
+    // Brevo Double Opt-In API
+    const brevoResponse = await fetch("https://api.brevo.com/v3/contacts/doubleOptinConfirmation", {
       method: "POST",
       headers: {
         "api-key": apiKey,
@@ -146,8 +146,9 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         email,
-        listIds: [BREVO_LIST_ID],
-        updateEnabled: true,
+        includeListIds: [BREVO_LIST_ID],
+        templateId: BREVO_DOI_TEMPLATE_ID,
+        redirectionUrl: BREVO_REDIRECT_URL,
         attributes: name ? { VORNAME: name } : undefined,
       }),
     });
