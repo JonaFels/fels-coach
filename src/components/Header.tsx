@@ -3,6 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
@@ -19,6 +20,8 @@ const NAV_ITEMS = [
 
 export const Header = () => {
   const { t } = useLanguage();
+  const { getImage } = useCMS();
+  const logoSrc = getImage("branding.logo", logoIcon);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const booking = useErstgespraech();
 
@@ -41,7 +44,7 @@ export const Header = () => {
           {/* Brand */}
           <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
             <img
-              src={logoIcon}
+              src={logoSrc}
               alt="Jona Fels"
               className="h-8 w-8 object-contain"
               width={32}

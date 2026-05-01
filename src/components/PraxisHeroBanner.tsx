@@ -2,14 +2,22 @@ import praxisLounge from "@/assets/praxis-lounge.webp";
 import praxisLoungeMobile from "@/assets/praxis-lounge-800.webp";
 import praxisSitzbereich from "@/assets/praxis-sitzbereich.webp";
 import praxisSitzbereichMobile from "@/assets/praxis-sitzbereich-800.webp";
+import { useCMS } from "@/contexts/CMSContext";
 
 interface PraxisHeroBannerProps {
   variant?: "lounge" | "sitzbereich";
 }
 
 export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerProps) => {
-  const image = variant === "lounge" ? praxisLounge : praxisSitzbereich;
-  const imageMobile = variant === "lounge" ? praxisLoungeMobile : praxisSitzbereichMobile;
+  const { getImage } = useCMS();
+  const defaultImage = variant === "lounge" ? praxisLounge : praxisSitzbereich;
+  const defaultMobile = variant === "lounge" ? praxisLoungeMobile : praxisSitzbereichMobile;
+  const image = variant === "lounge"
+    ? getImage("praxis.lounge", defaultImage)
+    : getImage("praxis.sitzbereich", defaultImage);
+  const imageMobile = variant === "lounge"
+    ? getImage("praxis.lounge_mobile", defaultMobile)
+    : getImage("praxis.sitzbereich_mobile", defaultMobile);
   const alt =
     variant === "lounge"
       ? "Coaching-Praxis von Jona Fels in Freiburg – gemütlicher Lounge-Bereich mit Rattanstuhl und Glastisch"
