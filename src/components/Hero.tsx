@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Phone } from "lucide-react";
@@ -8,7 +9,10 @@ import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp"
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const { getImage } = useCMS();
   const booking = useErstgespraech();
+  const heroImg = getImage("hero.image", profilBild);
+  const heroImgMobile = getImage("hero.image_mobile", profilBildMobile);
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
