@@ -24,6 +24,8 @@ import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 const Familienaufstellung = () => {
   const { t, language } = useLanguage();
+  const { getImage } = useCMS();
+  const familyImage = getImage("family.image", praxisAufstellung);
   const booking = useErstgespraech();
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -165,7 +167,7 @@ const Familienaufstellung = () => {
               {/* Aufstellungsbild mit Bodenankern */}
               <div className="rounded-2xl overflow-hidden shadow-md">
                 <img
-                  src={praxisAufstellung}
+                  src={familyImage}
                   alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
                   className="w-full h-auto object-cover"
                   loading="lazy"

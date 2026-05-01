@@ -25,6 +25,8 @@ const ebookSchema = z.object({
 
 const Ebook = () => {
   const { t } = useLanguage();
+  const { getImage } = useCMS();
+  const ebookImage = getImage("ebook.image", ebookMockup);
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState("");
@@ -157,7 +159,7 @@ const Ebook = () => {
               <div className="space-y-8">
                 <div className="flex justify-center">
                   <img
-                    src={ebookMockup}
+                    src={ebookImage}
                     alt="E-Book 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
                     className="w-full max-w-sm h-auto rounded-lg shadow-xl"
                     loading="lazy"
