@@ -106,23 +106,29 @@ export type Database = {
       }
       site_content: {
         Row: {
+          category: string
           created_at: string
           id: string
           key: string
+          type: string
           updated_at: string
           value: string
         }
         Insert: {
+          category?: string
           created_at?: string
           id?: string
           key: string
+          type?: string
           updated_at?: string
           value: string
         }
         Update: {
+          category?: string
           created_at?: string
           id?: string
           key?: string
+          type?: string
           updated_at?: string
           value?: string
         }
