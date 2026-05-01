@@ -8,12 +8,15 @@ import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { AuthorBox } from "@/components/AuthorBox";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
 
 const UeberMich = () => {
   const { t } = useLanguage();
+  const { getImage } = useCMS();
+  const portrait = getImage("about.image", profilBild);
   const heroRef = useRef<HTMLDivElement>(null);
 
   useHalfHeroHashScroll("#portrait", heroRef, 0.65);
@@ -32,7 +35,7 @@ const UeberMich = () => {
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mb-6">
               <img
-                src={profilBild}
+                src={portrait}
                 alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
                 className="w-48 h-auto md:w-60 aspect-[4/5] rounded-2xl object-cover object-center mx-auto shadow-xl ring-4 ring-background"
                 loading="eager"

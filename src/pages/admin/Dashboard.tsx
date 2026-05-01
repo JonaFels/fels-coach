@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
 import { LogOut, ImageIcon, Link as LinkIcon, Type } from "lucide-react";
+import { ImageUploader } from "@/components/admin/ImageUploader";
 
 const typeIcon = (type: CMSEntry["type"]) => {
   if (type === "image") return <ImageIcon className="h-3.5 w-3.5" />;
@@ -104,13 +105,16 @@ const FieldEditor = ({ entry, onSaved }: { entry: CMSEntry; onSaved: () => void 
 
       {entry.type === "image" && (
         <div className="space-y-2">
-          <Input
-            id={`field-${entry.key}`}
-            type="url"
-            placeholder="https://…/bild.webp"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
+          <div className="flex gap-2 items-center">
+            <Input
+              id={`field-${entry.key}`}
+              type="url"
+              placeholder="https://…/bild.webp oder Bild hochladen →"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
+            <ImageUploader keyHint={entry.key} onUploaded={(url) => setValue(url)} />
+          </div>
           {value && (
             <div className="border border-border rounded-md p-2 bg-muted/30 inline-block">
               <p className="text-xs text-muted-foreground mb-1">Vorschau:</p>

@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import { ContactForm } from "@/components/ContactForm";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
@@ -15,6 +16,8 @@ const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
+  const { getImage } = useCMS();
+  const portrait = getImage("about.image", profilBild);
   const { hash } = useLocation();
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -94,7 +97,7 @@ const Kontakt = () => {
         >
           <div className="container mx-auto px-4 max-w-2xl">
             <img
-              src={profilBild}
+              src={portrait}
               alt="Jona Fels – Systemischer Coach in Freiburg"
               className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
               loading="eager"

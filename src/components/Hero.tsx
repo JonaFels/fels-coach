@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Phone } from "lucide-react";
@@ -8,7 +9,10 @@ import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp"
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const { getImage } = useCMS();
   const booking = useErstgespraech();
+  const heroImg = getImage("hero.image", profilBild);
+  const heroImgMobile = getImage("hero.image_mobile", profilBildMobile);
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
@@ -68,8 +72,8 @@ export const Hero = () => {
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5" />
               <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-muted/40 shadow-md shadow-foreground/5 ring-1 ring-border/10">
                 <img
-                  src={profilBildMobile}
-                  srcSet={`${profilBildMobile} 450w, ${profilBild} 853w`}
+                  src={heroImgMobile}
+                  srcSet={`${heroImgMobile} 450w, ${heroImg} 853w`}
                   sizes="(max-width: 768px) 240px, 320px"
                   alt="Jona Fels – Systemischer Coach in Freiburg"
                   className="w-full h-full object-cover object-[center_18%]"
