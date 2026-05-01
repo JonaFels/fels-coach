@@ -5,14 +5,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ChatbaseWidget } from "@/components/ChatbaseWidget";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
+import { ProtectedRoute } from "@/components/admin/ProtectedRoute";
 
 import { useAppTracking } from "@/hooks/useTracking";
 // Eager: Startseite (LCP-kritisch) + 404
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/admin/Login";
+import AdminDashboard from "./pages/admin/Dashboard";
 
 // Lazy: alle übrigen Routen → kleinerer initialer Bundle, ~50 KiB Einsparung
 const Angebote = lazy(() => import("./pages/Angebote"));
