@@ -89,9 +89,8 @@ const Ebook = () => {
         console.error("ebook_leads invoke error:", leadErr);
       }
 
-      // 2) Newsletter-Anmeldung via Brevo.
-      //    Der Versand des E-Books erfolgt über eine Brevo-Automatisierung
-      //    (Trigger: Kontakt wird zur Liste "Webseite Leads" hinzugefügt).
+      // 2) Newsletter-Anmeldung via Brevo (Double-Opt-In).
+      //    Nach Bestätigung liefert die Brevo-Automation das E-Book.
       let mlOk = true;
       try {
         const { error: mlError } = await supabase.functions.invoke("subscribe-mailerlite", {
@@ -104,6 +103,16 @@ const Ebook = () => {
       } catch (mlErr) {
         mlOk = false;
         console.error("Brevo invoke error:", mlErr);
+      }
+
+      // 3) Direkte E-Book-Mail (garantiert Auslieferung, auch ohne DOI-Bestätigung).
+      try {
+        const { error: ebookError } = await supabase.functions.invoke("send-ebook-email", {
+          body: { name, email, website: "" },
+        });
+        if (ebookError) console.error("send-ebook-email error:", ebookError);
+      } catch (ebookErr) {
+        console.error("send-ebook-email invoke error:", ebookErr);
       }
 
       setSubmitted(true);
