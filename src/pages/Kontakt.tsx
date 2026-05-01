@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import { ContactForm } from "@/components/ContactForm";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 

@@ -16,6 +16,7 @@ import { JsonLd } from "@/components/JsonLd";
 
 import { trackCTAClick } from "@/lib/tracking";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCMS } from "@/contexts/CMSContext";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
