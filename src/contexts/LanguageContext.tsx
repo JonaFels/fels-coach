@@ -13,7 +13,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { overrides } = useCMS();
+  const { getText } = useCMS();
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem("language");
     return saved === "en" ? "en" : "de";
@@ -27,8 +27,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const t = useCallback(
     (key: string): string => {
       // CMS-Override gilt nur für Deutsch (siehe Plan: nur DE)
-      if (language === "de" && overrides[key] !== undefined) {
-        return overrides[key];
+      if (language === "de") {
+        const override = getText(key);
+        if (override !== undefined) return override;
       }
       const translation = translations[key];
       if (!translation) {
@@ -37,7 +38,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       }
       return translation[language];
     },
-    [language, overrides]
+    [language, getText]
   );
 
   return (
