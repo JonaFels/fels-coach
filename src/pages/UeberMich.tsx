@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
+import zertifikatBracht from "@/assets/zertifikat-familienaufsteller-wolfgang-bracht.jpg";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -104,9 +106,30 @@ const UeberMich = () => {
                     {t("about.cv1.badge")}
                   </span>
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
-                  {t("about.cv1.title")}
-                </h3>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="font-serif text-lg font-semibold text-foreground mb-1 text-left hover:text-secondary transition-colors underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      {t("about.cv1.title")}
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-3xl">
+                    <DialogHeader>
+                      <DialogTitle>Ausbildungsbescheinigung</DialogTitle>
+                      <DialogDescription>
+                        Zertifikat – Familiensteller-Ausbildung 2025/26 bei Wolfgang Bracht
+                      </DialogDescription>
+                    </DialogHeader>
+                    <img
+                      src={zertifikatBracht}
+                      alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      loading="lazy"
+                    />
+                  </DialogContent>
+                </Dialog>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   {t("about.cv1.desc")}
                 </p>
