@@ -26,13 +26,31 @@ const Ebook = () => {
         <section className="pt-14 pb-10 md:pt-20 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-              {t("ebook.freeEbook")}
+              Impulse
             </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-tight mb-4">
-              {t("ebook.headline")}
+              Frei von alten Familienmustern
             </h1>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              {t("ebook.subheadline")}
+              Ein Leitgedanke, um verborgene Dynamiken zu erkennen und wieder bei dir selbst anzukommen.
+            </p>
+          </div>
+        </section>
+
+        {/* Intro */}
+        <section className="pb-10 md:pb-14">
+          <div className="container mx-auto px-4 max-w-3xl space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              In meiner Praxis erlebe ich oft, dass Menschen intellektuell längst verstehen,
+              woher ihr Schmerz kommt – und dennoch immer wieder in die gleichen familiären
+              Verstrickungen zurückrutschen. Reine Analyse reicht meist nicht aus, um tief
+              sitzende emotionale Muster aus der frühen Kindheit wirklich zu lösen.
+            </p>
+            <p>
+              In diesem kompakten Impuls-Papier teile ich meine systemische Perspektive auf die
+              Entstehung und Wandlung dieser Dynamiken. Es ist eine Einladung, die unsichtbare
+              Architektur deiner Familie besser zu verstehen und zu erkennen, wie ein Weg aus
+              der Rebellion oder Resignation hin zu echtem inneren Frieden aussehen kann.
             </p>
           </div>
         </section>
@@ -44,7 +62,7 @@ const Ebook = () => {
               <div className="flex justify-center">
                 <img
                   src={ebookImage}
-                  alt="E-Book 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
+                  alt="Cover 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
                   className="w-full max-w-sm h-auto rounded-lg shadow-xl"
                   loading="lazy"
                   decoding="async"
@@ -55,11 +73,12 @@ const Ebook = () => {
 
               <div className="text-center md:text-left">
                 <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-4">
-                  Lies es jetzt – ohne Anmeldung
+                  Meine Gedanken für dich
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Hier ist meine Philosophie. Lies sie dir in Ruhe durch – komplett kostenlos,
-                  ohne E-Mail-Abfrage.
+                  Lass diese Zeilen in Ruhe auf dich wirken. Nimm dir die Impulse mit, die in
+                  deiner jetzigen Situation für dich stimmig sind. Du kannst den Text hier
+                  direkt öffnen oder für später speichern.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
                   <Button asChild size="lg" className="min-h-[48px]">
