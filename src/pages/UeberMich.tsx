@@ -115,27 +115,29 @@ const UeberMich = () => {
                       {t("about.cv1.title")}
                     </button>
                   </DialogTrigger>
-                  <DialogContent
-                    className="max-w-4xl max-h-[92vh] p-6 border-[#6b4a2b]/40 overflow-hidden"
-                    style={{
-                      backgroundColor: "#a87a4a",
-                      backgroundImage:
-                        "repeating-linear-gradient(90deg, rgba(60,30,10,0.18) 0 2px, transparent 2px 7px), repeating-linear-gradient(90deg, rgba(255,235,200,0.08) 0 1px, transparent 1px 14px), linear-gradient(180deg, rgba(40,20,5,0.25), rgba(255,220,170,0.10))",
-                    }}
-                  >
-                    <DialogHeader>
-                      <DialogTitle className="text-white drop-shadow-sm">Ausbildungsbescheinigung</DialogTitle>
-                      <DialogDescription className="text-white/85">
-                        Zertifikat – Familiensteller-Ausbildung 2025/26 bei Wolfgang Bracht
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="flex items-center justify-center w-full" style={{ maxHeight: "calc(92vh - 8rem)" }}>
-                      <img
-                        src={zertifikatBracht}
-                        alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
-                        className="max-h-[80vh] w-auto h-auto object-contain rounded-md shadow-2xl"
-                        loading="lazy"
-                      />
+                  <DialogContent className="max-w-3xl max-h-[94vh] p-0 border-0 bg-background overflow-hidden rounded-xl shadow-2xl">
+                    <div className="flex flex-col max-h-[94vh]">
+                      <DialogHeader className="px-8 pt-7 pb-5 border-b border-border bg-muted/40">
+                        <div className="flex items-center gap-3">
+                          <span className="inline-block h-8 w-1 bg-secondary rounded-full" aria-hidden />
+                          <div>
+                            <DialogTitle className="font-serif text-xl md:text-2xl font-semibold text-foreground tracking-tight">
+                              Ausbildungsbescheinigung
+                            </DialogTitle>
+                            <DialogDescription className="text-sm text-muted-foreground mt-1">
+                              Familiensteller-Ausbildung 2025/26 · Wolfgang Bracht · Freiburg, April 2026
+                            </DialogDescription>
+                          </div>
+                        </div>
+                      </DialogHeader>
+                      <div className="flex items-center justify-center px-6 md:px-10 py-8 bg-gradient-to-b from-muted/30 to-background overflow-auto">
+                        <img
+                          src={zertifikatBracht}
+                          alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
+                          className="max-h-[72vh] w-auto h-auto object-contain rounded-md shadow-xl ring-1 ring-border"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                   </DialogContent>
 
