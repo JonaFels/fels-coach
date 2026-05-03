@@ -90,7 +90,7 @@ const Ebook = () => {
                   <Button asChild size="lg" variant="outline" className="min-h-[48px]">
                     <a href={PDF_URL} download>
                       <Download className="mr-2 h-4 w-4" aria-hidden="true" />
-                      PDF herunterladen
+                      Als PDF herunterladen
                     </a>
                   </Button>
                 </div>
