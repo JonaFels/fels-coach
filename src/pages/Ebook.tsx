@@ -84,7 +84,7 @@ const Ebook = () => {
                   <Button asChild size="lg" className="min-h-[48px]">
                     <a href={PDF_URL} target="_blank" rel="noopener noreferrer">
                       <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Jetzt lesen
+                      Jetzt im Browser lesen
                     </a>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="min-h-[48px]">
