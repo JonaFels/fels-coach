@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
 import zertifikatBracht from "@/assets/zertifikat-familienaufsteller-wolfgang-bracht.jpg";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
