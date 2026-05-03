@@ -77,20 +77,13 @@ const Ebook = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Lass diese Zeilen in Ruhe auf dich wirken. Nimm dir die Impulse mit, die in
-                  deiner jetzigen Situation für dich stimmig sind. Du kannst den Text hier
-                  direkt öffnen oder für später speichern.
+                  deiner jetzigen Situation für dich stimmig sind.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <div className="flex justify-center md:justify-start">
                   <Button asChild size="lg" className="min-h-[48px]">
                     <a href={PDF_URL} target="_blank" rel="noopener noreferrer">
                       <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Jetzt im Browser lesen
-                    </a>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="min-h-[48px]">
-                    <a href={PDF_URL} download>
-                      <Download className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Als PDF herunterladen
+                      Jetzt lesen
                     </a>
                   </Button>
                 </div>
