@@ -115,20 +115,30 @@ const UeberMich = () => {
                       {t("about.cv1.title")}
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl">
+                  <DialogContent
+                    className="max-w-4xl max-h-[92vh] p-6 border-[#6b4a2b]/40 overflow-hidden"
+                    style={{
+                      backgroundColor: "#a87a4a",
+                      backgroundImage:
+                        "repeating-linear-gradient(90deg, rgba(60,30,10,0.18) 0 2px, transparent 2px 7px), repeating-linear-gradient(90deg, rgba(255,235,200,0.08) 0 1px, transparent 1px 14px), linear-gradient(180deg, rgba(40,20,5,0.25), rgba(255,220,170,0.10))",
+                    }}
+                  >
                     <DialogHeader>
-                      <DialogTitle>Ausbildungsbescheinigung</DialogTitle>
-                      <DialogDescription>
+                      <DialogTitle className="text-white drop-shadow-sm">Ausbildungsbescheinigung</DialogTitle>
+                      <DialogDescription className="text-white/85">
                         Zertifikat – Familiensteller-Ausbildung 2025/26 bei Wolfgang Bracht
                       </DialogDescription>
                     </DialogHeader>
-                    <img
-                      src={zertifikatBracht}
-                      alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
-                      className="w-full h-auto rounded-lg shadow-md"
-                      loading="lazy"
-                    />
+                    <div className="flex items-center justify-center w-full" style={{ maxHeight: "calc(92vh - 8rem)" }}>
+                      <img
+                        src={zertifikatBracht}
+                        alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
+                        className="max-h-[80vh] w-auto h-auto object-contain rounded-md shadow-2xl"
+                        loading="lazy"
+                      />
+                    </div>
                   </DialogContent>
+
                 </Dialog>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   {t("about.cv1.desc")}
