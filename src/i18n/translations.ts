@@ -18,8 +18,8 @@ export const translations: Translations = {
     en: "Family Constellation",
   },
   "nav.ebook": {
-    de: "Gratis E-Book",
-    en: "Free E-Book",
+    de: "Impulse",
+    en: "Impulses",
   },
   "nav.kontakt": {
     de: "Kontakt",
