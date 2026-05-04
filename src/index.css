@@ -51,11 +51,11 @@
     --radius: 1.5rem;
 
     /* Custom brand tokens */
-    --fels-charcoal: 213 23% 24%;
-    --fels-sage: 160 25% 32%;
-    --fels-sand: 48 30% 93%;
-    --fels-cream: 40 20% 98%;
-    --fels-sage-gray: 48 20% 93%;
+    --fels-charcoal: 270 25% 18%;
+    --fels-sage: 270 30% 42%;
+    --fels-sand: 270 25% 92%;
+    --fels-cream: 270 30% 98%;
+    --fels-sage-gray: 275 25% 90%;
 
     /* Spacing System */
     --space-xs: 0.25rem;
@@ -67,14 +67,14 @@
     --space-3xl: 4rem;
 
     /* Sidebar tokens */
-    --sidebar-background: 48 30% 93%;
-    --sidebar-foreground: 213 23% 24%;
-    --sidebar-primary: 160 25% 32%;
-    --sidebar-primary-foreground: 40 20% 98%;
-    --sidebar-accent: 48 20% 93%;
-    --sidebar-accent-foreground: 213 23% 24%;
-    --sidebar-border: 48 15% 88%;
-    --sidebar-ring: 160 25% 32%;
+    --sidebar-background: 270 25% 92%;
+    --sidebar-foreground: 270 25% 18%;
+    --sidebar-primary: 270 30% 42%;
+    --sidebar-primary-foreground: 270 30% 98%;
+    --sidebar-accent: 275 25% 90%;
+    --sidebar-accent-foreground: 270 25% 18%;
+    --sidebar-border: 270 20% 86%;
+    --sidebar-ring: 270 30% 42%;
   }
 
   .dark {
