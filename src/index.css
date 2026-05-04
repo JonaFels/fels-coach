@@ -13,50 +13,49 @@
 
 @layer base {
   :root {
-    /* Background: Warm Linen (#F9F7F2) */
-    --background: 40 33% 96%;
-    /* Foreground: Dark Slate (#2D3748 equivalent) */
-    --foreground: 213 23% 24%;
+    /* Background: Soft Pastel Lavender */
+    --background: 270 30% 96%;
+    /* Foreground: Deep Plum */
+    --foreground: 270 25% 18%;
 
-    /* Card: Soft warm white */
-    --card: 40 30% 97%;
-    --card-foreground: 213 23% 24%;
+    /* Card: Pale lavender white */
+    --card: 270 25% 97%;
+    --card-foreground: 270 25% 18%;
 
-    --popover: 40 30% 97%;
-    --popover-foreground: 213 23% 24%;
+    --popover: 270 25% 97%;
+    --popover-foreground: 270 25% 18%;
 
-    /* Primary: Slate Sage (#2F4F4F inspired, warmer) */
-    --primary: 160 25% 32%;
-    --primary-foreground: 40 20% 98%;
+    /* Primary: Dark Pastel Purple */
+    --primary: 270 30% 42%;
+    --primary-foreground: 270 30% 98%;
 
-    /* Secondary: Earthy Slate (#4A5568) */
-    --secondary: 213 15% 34%;
-    --secondary-foreground: 40 20% 98%;
+    /* Secondary: Muted Plum */
+    --secondary: 275 18% 38%;
+    --secondary-foreground: 270 30% 98%;
 
-    /* Muted: Sand (#F5F5DC inspired) */
-    --muted: 48 30% 93%;
-    /* Darkened to ensure WCAG AA contrast (>= 7:1, AAA) on linen background */
-    --muted-foreground: 213 18% 24%;
+    /* Muted: Soft lavender */
+    --muted: 270 25% 92%;
+    --muted-foreground: 270 15% 28%;
 
-    /* Accent: Light sand-sage */
-    --accent: 48 20% 93%;
-    --accent-foreground: 213 23% 24%;
+    /* Accent: Light lavender */
+    --accent: 275 25% 90%;
+    --accent-foreground: 270 25% 18%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 40 20% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 270 30% 98%;
 
-    --border: 48 15% 88%;
-    --input: 48 15% 88%;
-    --ring: 160 25% 32%;
+    --border: 270 20% 86%;
+    --input: 270 20% 86%;
+    --ring: 270 30% 42%;
 
     --radius: 1.5rem;
 
     /* Custom brand tokens */
-    --fels-charcoal: 213 23% 24%;
-    --fels-sage: 160 25% 32%;
-    --fels-sand: 48 30% 93%;
-    --fels-cream: 40 20% 98%;
-    --fels-sage-gray: 48 20% 93%;
+    --fels-charcoal: 270 25% 18%;
+    --fels-sage: 270 30% 42%;
+    --fels-sand: 270 25% 92%;
+    --fels-cream: 270 30% 98%;
+    --fels-sage-gray: 275 25% 90%;
 
     /* Spacing System */
     --space-xs: 0.25rem;
@@ -68,14 +67,14 @@
     --space-3xl: 4rem;
 
     /* Sidebar tokens */
-    --sidebar-background: 48 30% 93%;
-    --sidebar-foreground: 213 23% 24%;
-    --sidebar-primary: 160 25% 32%;
-    --sidebar-primary-foreground: 40 20% 98%;
-    --sidebar-accent: 48 20% 93%;
-    --sidebar-accent-foreground: 213 23% 24%;
-    --sidebar-border: 48 15% 88%;
-    --sidebar-ring: 160 25% 32%;
+    --sidebar-background: 270 25% 92%;
+    --sidebar-foreground: 270 25% 18%;
+    --sidebar-primary: 270 30% 42%;
+    --sidebar-primary-foreground: 270 30% 98%;
+    --sidebar-accent: 275 25% 90%;
+    --sidebar-accent-foreground: 270 25% 18%;
+    --sidebar-border: 270 20% 86%;
+    --sidebar-ring: 270 30% 42%;
   }
 
   .dark {
