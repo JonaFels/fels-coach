@@ -51,19 +51,34 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, []);
 
   useEffect(() => {
-    // CMS-Daten sind nicht kritisch für LCP – alle Komponenten haben Fallbacks.
-    // Verschieben hinter den Initial-Paint, damit Supabase nicht im kritischen
-    // Anfragepfad landet (PageSpeed: Netzwerkabhängigkeitsbaum).
-    const w = window as Window & { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number };
-    if (typeof w.requestIdleCallback === "function") {
-      const id = w.requestIdleCallback(() => load(), { timeout: 2500 });
-      return () => {
-        const cancel = (window as unknown as { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback;
-        cancel?.(id);
-      };
+    // CMS-Daten sind nicht kritisch (alle Komponenten haben Fallbacks).
+    // Lighthouse fügt jeden Fetch, der sich aus dem Initial-Bundle ergibt,
+    // dem "Netzwerkabhängigkeitsbaum" hinzu – auch hinter requestIdleCallback.
+    // Lösung: Anfrage erst nach erster Nutzerinteraktion ODER nach
+    // 'load' + großzügiger Verzögerung starten. So liegt sie zuverlässig
+    // außerhalb des kritischen Pfades.
+    let started = false;
+    const start = () => {
+      if (started) return;
+      started = true;
+      cleanup();
+      const w = window as Window & { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number };
+      if (typeof w.requestIdleCallback === "function") {
+        w.requestIdleCallback(() => load(), { timeout: 3000 });
+      } else {
+        window.setTimeout(load, 0);
+      }
+    };
+
+    const events: Array<keyof WindowEventMap> = ["pointerdown", "keydown", "scroll", "touchstart"];
+    events.forEach((e) => window.addEventListener(e, start, { once: true, passive: true }));
+    const fallbackTimer = window.setTimeout(start, 4000);
+
+    function cleanup() {
+      events.forEach((e) => window.removeEventListener(e, start));
+      window.clearTimeout(fallbackTimer);
     }
-    const t = window.setTimeout(load, 1500);
-    return () => window.clearTimeout(t);
+    return cleanup;
   }, [load]);
 
   const getText = useCallback(
