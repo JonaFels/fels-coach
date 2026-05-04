@@ -9,7 +9,7 @@ import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ChatbaseWidget } from "@/components/ChatbaseWidget";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
-import { ProtectedRoute } from "@/components/admin/ProtectedRoute";
+
 
 import { useAppTracking } from "@/hooks/useTracking";
 // Eager: Startseite (LCP-kritisch) + 404
