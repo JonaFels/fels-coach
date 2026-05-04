@@ -30,13 +30,12 @@ export const FinalCTA = () => {
           <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-5">
             {t("finalCta.title")}
           </h2>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
+          <p className="text-primary-foreground/95 text-lg leading-relaxed mb-8">
             {t("finalCta.description")}
           </p>
           <Button
             size="lg"
-            variant="secondary"
-            className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-background text-primary hover:bg-background/90"
             asChild
           >
             <a
@@ -53,7 +52,7 @@ export const FinalCTA = () => {
               {t("finalCta.button")}
             </a>
           </Button>
-          <p className="text-sm text-primary-foreground/60 mt-5">
+          <p className="text-sm text-primary-foreground/85 mt-5">
             {t("finalCta.microcopy")}
           </p>
         </div>
