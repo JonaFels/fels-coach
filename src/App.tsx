@@ -75,9 +75,9 @@ const App = () => (
                   <Route
                     path="/admin"
                     element={
-                      <ProtectedRoute>
+                      <ProtectedRouteLazy>
                         <AdminDashboard />
-                      </ProtectedRoute>
+                      </ProtectedRouteLazy>
                     }
                   />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
