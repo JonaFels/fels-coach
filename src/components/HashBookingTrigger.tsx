@@ -1,7 +1,11 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, lazy, Suspense, type ReactNode } from "react";
 import { useLocation } from "react-router-dom";
-import { useOrbnetBooking } from "@/components/OrbnetBooking";
-import { ErstgespraechModal } from "@/components/ErstgespraechModal";
+
+// Lazy: Orbnet/Dialog-Code (Radix Dialog + Booking-Wrapper) wird erst geladen,
+// wenn der User wirklich ein Modal öffnet. Spart ~30+ KiB im Initial-Bundle.
+const LazyBookingMounts = lazy(() =>
+  import("@/components/HashBookingMounts").then((m) => ({ default: m.HashBookingMounts })),
+);
 
 const HASH_TO_SEMUID: Record<string, string> = {
   "#kennenlernen": "609d5e7a-e208-4715-b073-e99206aebbf7",
@@ -14,48 +18,55 @@ interface BookingContextValue {
 
 const BookingContext = createContext<BookingContextValue | null>(null);
 
-/**
- * Hook für Komponenten, die das Erstgespräch-Modal direkt öffnen wollen,
- * ohne den User zur Kontakt-Seite zu navigieren.
- */
-export const useErstgespraech = () => {
-  const ctx = useContext(BookingContext);
-  return ctx;
-};
+export const useErstgespraech = () => useContext(BookingContext);
 
 /**
  * Globaler Trigger + Provider:
  * - Stellt openErstgespraech() global bereit (für CTA-Buttons)
  * - Reagiert zusätzlich auf URL-Hashes (#erstgespraech, #kennenlernen, #coaching)
- *   damit direkte Links und Browser-Back weiterhin funktionieren
+ * - Mountet das eigentliche Booking/Modal-UI erst nach Bedarf (Lazy-Chunk)
  */
 export const HashBookingTrigger = ({ children }: { children?: ReactNode }) => {
   const location = useLocation();
-  const { openBooking, BookingDialog } = useOrbnetBooking();
   const [erstgespraechOpen, setErstgespraechOpen] = useState(false);
+  const [bookingSemuid, setBookingSemuid] = useState<string | null>(null);
+  const [needsMount, setNeedsMount] = useState(false);
 
   useEffect(() => {
     const hash = location.hash;
     if (hash === "#erstgespraech") {
       setErstgespraechOpen(true);
+      setNeedsMount(true);
       window.history.replaceState(null, "", location.pathname + location.search);
     } else {
       const semuid = HASH_TO_SEMUID[hash];
       if (semuid) {
-        openBooking(semuid);
+        setBookingSemuid(semuid);
+        setNeedsMount(true);
         window.history.replaceState(null, "", location.pathname + location.search);
       }
     }
   }, [location.hash]);
 
+  const openErstgespraech = () => {
+    setErstgespraechOpen(true);
+    setNeedsMount(true);
+  };
+
   return (
-    <BookingContext.Provider value={{ openErstgespraech: () => setErstgespraechOpen(true) }}>
+    <BookingContext.Provider value={{ openErstgespraech }}>
       {children}
-      <BookingDialog />
-      <ErstgespraechModal
-        open={erstgespraechOpen}
-        onClose={() => setErstgespraechOpen(false)}
-      />
+      {needsMount && (
+        <Suspense fallback={null}>
+          <LazyBookingMounts
+            erstgespraechOpen={erstgespraechOpen}
+            onCloseErstgespraech={() => setErstgespraechOpen(false)}
+            bookingSemuid={bookingSemuid}
+            onCloseBooking={() => setBookingSemuid(null)}
+          />
+        </Suspense>
+      )}
     </BookingContext.Provider>
   );
 };
+
