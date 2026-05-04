@@ -96,7 +96,7 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name].[hash][extname]',
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
-          ui: ["@radix-ui/react-accordion", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
+          ui: ["@radix-ui/react-accordion", "@radix-ui/react-dialog"],
         },
       },
     },
