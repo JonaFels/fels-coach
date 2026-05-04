@@ -51,7 +51,19 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, []);
 
   useEffect(() => {
-    load();
+    // CMS-Daten sind nicht kritisch für LCP – alle Komponenten haben Fallbacks.
+    // Verschieben hinter den Initial-Paint, damit Supabase nicht im kritischen
+    // Anfragepfad landet (PageSpeed: Netzwerkabhängigkeitsbaum).
+    const w = window as Window & { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number };
+    if (typeof w.requestIdleCallback === "function") {
+      const id = w.requestIdleCallback(() => load(), { timeout: 2500 });
+      return () => {
+        const cancel = (window as unknown as { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback;
+        cancel?.(id);
+      };
+    }
+    const t = window.setTimeout(load, 1500);
+    return () => window.clearTimeout(t);
   }, [load]);
 
   const getText = useCallback(
