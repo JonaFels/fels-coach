@@ -270,7 +270,7 @@ const Familienaufstellung = () => {
                   {t("family.ebookHint.text")}
                 </p>
                 <Button asChild variant="outline" size="sm" className="min-h-[40px]">
-                  <Link to="/ebook">
+                  <Link to="/impulse">
                     {t("family.ebookHint.cta")}
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>

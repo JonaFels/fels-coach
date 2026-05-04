@@ -38,7 +38,7 @@ export const AuthorBox = () => {
                 {t("author.credential1")}
               </span>
               <Link
-                to="/ebook"
+                to="/impulse"
                 className="inline-flex items-center px-4 py-1.5 text-xs font-medium rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
               >
                 ✨ Impulse entdecken

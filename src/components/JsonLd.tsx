@@ -248,34 +248,34 @@ export const JsonLd = () => {
           mainEntity: [
             {
               "@type": "Question",
-              name: "Was ist eine systemische Familienaufstellung und wie läuft sie bei mir in Freiburg ab?",
+              name: "Muss ich meine Familie zur Aufstellung mitbringen?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Eine systemische Familienaufstellung macht verborgene Dynamiken in Systemen sichtbar. In meinem Praxisraum in der Karlstraße 51 (Freiburg) schauen wir uns in geschützter Atmosphäre an, was im Argen liegt, und erarbeiten gemeinsam nachhaltige Lösungswege für Ihre Blockaden.",
+                text: "Nein – und das ist für viele eine große Erleichterung. Wir arbeiten ausschließlich im geschützten 1:1 Setting in meinem Praxisraum in Freiburg. Statt mit fremden Stellvertretern nutzen wir Bodenanker (z. B. kleine Tücher oder Karten), die wir im Raum positionieren. So entsteht ein klares Bild deines Systems – ohne dass jemand außer dir und mir anwesend ist.",
               },
             },
             {
               "@type": "Question",
-              name: "Was kostet ein Coaching oder eine Familienaufstellung?",
+              name: "Was ist, wenn während der Sitzung starke Emotionen hochkommen?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Transparenz ist mir wichtig: Eine reguläre Coaching-Sitzung kostet 70 € pro Einheit (80 Minuten). Mein Ziel ist es, Ihnen effiziente und wirkungsvolle Impulse zu geben, die Sie wirklich weiterbringen.",
+                text: "Das darf sein – und ich halte den Rahmen für dich. Mein Job ist es, präsent und ruhig dabei zu sein, dich zu begleiten und dafür zu sorgen, dass du am Ende nicht aufgewühlt, sondern geerdet wieder rausgehst. Wir arbeiten in deinem Tempo, nichts wird erzwungen.",
               },
             },
             {
               "@type": "Question",
-              name: "Bietest du auch Termine am Wochenende an?",
+              name: "Wie viele Sitzungen brauche ich, bis sich etwas verändert?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Ja, absolut. Da viele meiner Klienten berufstätig sind, biete ich meine Sitzungen spezialisiert am Samstag zwischen 14:00 und 20:00 Uhr an. So haben Sie die nötige Ruhe, um sich ohne Alltagsstress auf den Prozess einzulassen.",
+                text: "Das ist sehr individuell. Manche Klient:innen spüren bereits nach einer Aufstellung eine deutliche Entlastung, andere kommen über mehrere Monate in lockerer Folge. Häufig sind 3 bis 6 Sitzungen ein guter Rahmen, um ein Thema wirklich in die Tiefe zu bearbeiten – ich dränge dich aber zu nichts.",
               },
             },
             {
               "@type": "Question",
-              name: "Wo findet das Coaching statt?",
+              name: "Übernimmt die Krankenkasse die Kosten?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sie finden mich zentral in der Karlstraße 51, 79104 Freiburg im Breisgau. Mein Praxisraum bietet eine ruhige, geschützte Atmosphäre für Ihre Coaching-Sitzungen.",
+                text: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 70 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
               },
             },
             {
@@ -283,7 +283,15 @@ export const JsonLd = () => {
               name: "Wie kann ich starten und ist ein Vorgespräch möglich?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Der erste Schritt ist ganz einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So können wir schauen, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
+                text: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Wo findet das Coaching statt und gibt es Wochenend-Termine?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau (Tram 3). Da viele Klient:innen berufstätig sind, biete ich meine Sitzungen schwerpunktmäßig samstags zwischen 14:00 und 20:00 Uhr an – mit Ruhe und ohne Alltagsstress.",
               },
             },
           ],
