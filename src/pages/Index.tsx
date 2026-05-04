@@ -2,16 +2,15 @@ import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { AboutPreview } from "@/components/AboutPreview";
-import { Footer } from "@/components/Footer";
-import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
-import { JsonLd } from "@/components/JsonLd";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { LazyMount } from "@/components/LazyMount";
 
-// Below-the-fold per Lazy-Chunk → Radix Accordion (FAQ) wird nicht im
-// kritischen Pfad gemounted. Verhindert ~100 ms Forced Reflow.
+// Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
+const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
+const CookieBanner = lazy(() => import("@/components/CookieBanner").then((m) => ({ default: m.CookieBanner })));
+const JsonLd = lazy(() => import("@/components/JsonLd").then((m) => ({ default: m.JsonLd })));
 const TestimonialsSection = lazy(() =>
   import("@/components/TestimonialsSection").then((m) => ({ default: m.TestimonialsSection })),
 );
