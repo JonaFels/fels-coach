@@ -41,7 +41,7 @@ export const AuthorBox = () => {
                 to="/ebook"
                 className="inline-flex items-center px-4 py-1.5 text-xs font-medium rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
               >
-                📘 Mein Gratis E-Book sichern
+                ✨ Impulse entdecken
               </Link>
             </div>
           </div>
