@@ -36,9 +36,9 @@ const routes = [
     description: 'Erfahre, wie Familienaufstellungen unbewusste Dynamiken aufdecken. Ablauf, Nutzen und Methodik erklärt.',
   },
   {
-    path: '/ebook', folder: 'ebook',
-    title: 'Jona Fels | Kostenloses E-Book',
-    description: 'Lade das kostenlose E-Book herunter und starte deine persönliche Transformation. Lerne unbewusste Muster zu durchbrechen.',
+    path: '/impulse', folder: 'impulse',
+    title: 'Impulse zur Familienaufstellung – Freiburg | Jona Fels',
+    description: 'Kostenlose Impulse rund um Familienaufstellung & systemisches Coaching: Erkenne unbewusste Familienmuster, finde zurück zu dir selbst und werde zum Fels in deinem Leben.',
   },
   {
     path: '/kontakt', folder: 'kontakt',
