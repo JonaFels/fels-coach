@@ -28,7 +28,9 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead />
-      <JsonLd />
+      <Suspense fallback={null}>
+        <JsonLd />
+      </Suspense>
       <Header />
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
@@ -57,8 +59,10 @@ const Index = () => {
           </LazyMount>
         </Suspense>
       </main>
-      <Footer />
-      <CookieBanner />
+      <Suspense fallback={null}>
+        <Footer />
+        <CookieBanner />
+      </Suspense>
     </div>
   );
 };
