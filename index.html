@@ -36,11 +36,14 @@
 
     <!-- Critical CSS (Above-the-fold) - inlined to eliminate render-blocking -->
     <style>
+      /* CLS-Fix: Fallback-Fonts mit angepassten Metriken, damit beim Font-Swap (Playfair/Montserrat) keine Layout-Shifts entstehen */
+      @font-face{font-family:'Playfair Fallback';src:local('Georgia'),local('Times New Roman');size-adjust:107%;ascent-override:92%;descent-override:24%;line-gap-override:0%;}
+      @font-face{font-family:'Montserrat Fallback';src:local('Arial'),local('Helvetica');size-adjust:107%;ascent-override:90%;descent-override:24%;line-gap-override:0%;}
       :root{--background:270 30% 96%;--foreground:270 35% 12%;--muted:270 25% 92%;--muted-foreground:270 25% 22%;--primary:270 45% 22%;--primary-foreground:270 30% 98%;--secondary:275 25% 30%;--secondary-foreground:270 30% 98%;--border:270 22% 80%;--ring:270 45% 22%;--radius:1.5rem;}
       *,::before,::after{box-sizing:border-box;border:0 solid hsl(var(--border));}
-      html{-webkit-text-size-adjust:100%;line-height:1.5;font-family:Montserrat,ui-sans-serif,system-ui,sans-serif;scroll-behavior:smooth;}
-      body{margin:0;background:hsl(var(--background));color:hsl(var(--foreground));font-family:Montserrat,ui-sans-serif,system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased;}
-      h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',ui-serif,Georgia,serif;line-height:1.3;letter-spacing:-.01em;margin:1.5em 0 .75em;}
+      html{-webkit-text-size-adjust:100%;line-height:1.5;font-family:Montserrat,'Montserrat Fallback',ui-sans-serif,system-ui,sans-serif;scroll-behavior:smooth;}
+      body{margin:0;background:hsl(var(--background));color:hsl(var(--foreground));font-family:Montserrat,'Montserrat Fallback',ui-sans-serif,system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased;}
+      h1,h2,h3,h4,h5,h6{font-family:'Playfair Display','Playfair Fallback',ui-serif,Georgia,serif;line-height:1.3;letter-spacing:-.01em;margin:1.5em 0 .75em;}
       h1{font-size:clamp(1.875rem,4vw + 1rem,3.75rem);}
       h2{font-size:clamp(1.5rem,3vw + .5rem,2.25rem);}
       img{max-width:100%;height:auto;display:block;}
