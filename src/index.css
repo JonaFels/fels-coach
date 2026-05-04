@@ -25,8 +25,8 @@
     --popover: 270 25% 97%;
     --popover-foreground: 270 35% 12%;
 
-    /* Primary: Dark Pastel Purple (deeper for contrast) */
-    --primary: 270 40% 32%;
+    /* Primary: Deep Plum Purple */
+    --primary: 270 45% 22%;
     --primary-foreground: 270 30% 98%;
 
     /* Secondary: Muted Plum */
@@ -46,7 +46,7 @@
 
     --border: 270 22% 80%;
     --input: 270 22% 80%;
-    --ring: 270 40% 32%;
+    --ring: 270 45% 22%;
 
     --radius: 1.5rem;
 
