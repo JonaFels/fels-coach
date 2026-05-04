@@ -15,38 +15,38 @@
   :root {
     /* Background: Soft Pastel Lavender */
     --background: 270 30% 96%;
-    /* Foreground: Deep Plum */
-    --foreground: 270 25% 18%;
+    /* Foreground: Deep Plum (high contrast) */
+    --foreground: 270 35% 12%;
 
     /* Card: Pale lavender white */
     --card: 270 25% 97%;
-    --card-foreground: 270 25% 18%;
+    --card-foreground: 270 35% 12%;
 
     --popover: 270 25% 97%;
-    --popover-foreground: 270 25% 18%;
+    --popover-foreground: 270 35% 12%;
 
-    /* Primary: Dark Pastel Purple */
-    --primary: 270 30% 42%;
+    /* Primary: Dark Pastel Purple (deeper for contrast) */
+    --primary: 270 40% 32%;
     --primary-foreground: 270 30% 98%;
 
     /* Secondary: Muted Plum */
-    --secondary: 275 18% 38%;
+    --secondary: 275 25% 30%;
     --secondary-foreground: 270 30% 98%;
 
     /* Muted: Soft lavender */
     --muted: 270 25% 92%;
-    --muted-foreground: 270 15% 28%;
+    --muted-foreground: 270 25% 22%;
 
     /* Accent: Light lavender */
-    --accent: 275 25% 90%;
-    --accent-foreground: 270 25% 18%;
+    --accent: 275 25% 88%;
+    --accent-foreground: 270 35% 12%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 270 30% 98%;
 
-    --border: 270 20% 86%;
-    --input: 270 20% 86%;
-    --ring: 270 30% 42%;
+    --border: 270 22% 80%;
+    --input: 270 22% 80%;
+    --ring: 270 40% 32%;
 
     --radius: 1.5rem;
 
