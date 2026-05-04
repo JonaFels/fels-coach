@@ -15,10 +15,8 @@ import { useAppTracking } from "@/hooks/useTracking";
 // Eager: Startseite (LCP-kritisch) + 404
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import AdminLogin from "./pages/admin/Login";
-import AdminDashboard from "./pages/admin/Dashboard";
 
-// Lazy: alle übrigen Routen → kleinerer initialer Bundle, ~50 KiB Einsparung
+// Lazy: alle übrigen Routen + Admin (nicht im kritischen Pfad) → kleinerer initialer Bundle
 const Angebote = lazy(() => import("./pages/Angebote"));
 const Familienaufstellung = lazy(() => import("./pages/Familienaufstellung"));
 const Ebook = lazy(() => import("./pages/Ebook"));
@@ -29,6 +27,11 @@ const Impressum = lazy(() => import("./pages/Impressum"));
 const AGB = lazy(() => import("./pages/AGB"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
+const ProtectedRouteLazy = lazy(() =>
+  import("./components/admin/ProtectedRoute").then((m) => ({ default: m.ProtectedRoute }))
+);
 
 const queryClient = new QueryClient();
 
