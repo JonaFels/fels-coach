@@ -16,20 +16,6 @@ export const Hero = () => {
 
   return (
     <section className="py-16 md:py-24 lg:py-28 overflow-hidden relative">
-      <svg
-        className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-[0.035] pointer-events-none"
-        viewBox="0 0 800 800"
-        width="800"
-        height="800"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M400 50C550 50 700 150 730 300C760 450 700 550 650 620C600 690 500 750 400 750C300 750 200 690 150 620C100 550 40 450 70 300C100 150 250 50 400 50Z"
-          fill="currentColor"
-          className="text-foreground"
-        />
-      </svg>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
