@@ -1,14 +1,16 @@
 import { lazy, Suspense } from "react";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
-const ChatbaseWidget = lazy(() => import("@/components/ChatbaseWidget").then((m) => ({ default: m.ChatbaseWidget })));
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
+
+// Lazy: Toaster, Sonner und ChatbaseWidget sind nicht LCP-kritisch
+const Toaster = lazy(() => import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })));
+const Sonner = lazy(() => import("@/components/ui/sonner").then((m) => ({ default: m.Toaster })));
+const ChatbaseWidget = lazy(() => import("@/components/ChatbaseWidget").then((m) => ({ default: m.ChatbaseWidget })));
 
 
 import { useAppTracking } from "@/hooks/useTracking";
@@ -51,12 +53,16 @@ const App = () => (
     <CMSProvider>
       <LanguageProvider>
         <TooltipProvider>
-          <Toaster />
-          <Sonner />
+          <Suspense fallback={null}>
+            <Toaster />
+            <Sonner />
+          </Suspense>
           <BrowserRouter>
             <AppTracking />
             <ScrollToTop />
-            <ChatbaseWidget />
+            <Suspense fallback={null}>
+              <ChatbaseWidget />
+            </Suspense>
             <HashBookingTrigger>
               <Suspense fallback={<RouteFallback />}>
                 <Routes>
