@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { ChatbaseWidget } from "@/components/ChatbaseWidget";
+const ChatbaseWidget = lazy(() => import("@/components/ChatbaseWidget").then((m) => ({ default: m.ChatbaseWidget })));
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
 
 
