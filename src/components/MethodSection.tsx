@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Eye, Lightbulb } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 
@@ -44,18 +43,14 @@ export const MethodSection = () => {
           </div>
 
           <div className="text-center">
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-base"
+            <Link
+              to="/systemische-familienaufstellung-freiburg#methode"
               onClick={() => trackCTAClick("method_learn_more", "homepage_method", "link")}
+              className="inline-flex items-center gap-2 text-base font-medium text-secondary underline-offset-4 hover:underline transition-colors"
             >
-              <Link to="/systemische-familienaufstellung-freiburg#methode">
-                {t("method.cta")}
-                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
+              {t("method.cta")}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>
