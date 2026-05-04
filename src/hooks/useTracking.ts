@@ -32,14 +32,19 @@ export const useScrollTracking = (): void => {
 
   useEffect(() => {
     trackedDepths.current.clear();
+    let ticking = false;
 
-    const handleScroll = () => {
+    const measure = () => {
+      ticking = false;
+      // Early exit: alle Tiefen schon getrackt → keine teuren Layout-Reads mehr
+      if (trackedDepths.current.size >= 4) return;
+
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.scrollY;
-      const scrollPercent = Math.round(
-        (scrollTop / (documentHeight - windowHeight)) * 100
-      );
+      const denom = documentHeight - windowHeight;
+      if (denom <= 0) return;
+      const scrollPercent = Math.round((scrollTop / denom) * 100);
 
       const depths = [25, 50, 75, 100];
       depths.forEach((depth) => {
@@ -48,6 +53,13 @@ export const useScrollTracking = (): void => {
           trackScrollDepth(depth, location.pathname);
         }
       });
+    };
+
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      // rAF batcht Layout-Reads mit dem Browser-Frame → kein Forced Reflow
+      requestAnimationFrame(measure);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
