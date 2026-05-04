@@ -267,7 +267,7 @@ Und natürlich machen sie uns auch glücklich. Doch liegt der jetzige Zustand an
 
 Und jetzt die goldene Frage, wie hören wir auf, Glück zu opfern?
 
-Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des [„Skripts des Lebens"](/ebook) erklärt wird. Lies in meinem E-Book mehr darüber, wie du alte Muster durchbrichst.
+Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des [„Skripts des Lebens"](/impulse) erklärt wird. Lies in meinen Impulsen mehr darüber, wie du alte Muster durchbrichst.
 
 Wir finden einen Moment wie: „Wenn ich mich einlasse, werde ich zurück gelassen.". Und merken dort ist ein Schmerz und können sogar den Moment finden, als es mit soundso vielen Jahren mit Person soundso war, und wir nehmen ein Gefühl wahr und lassen es zu. Was vor vielleicht ein paar Tagen noch gar nicht möglich war. Und der Satz verschwindet, die nicht beendete Situation wurde beendet.
 
