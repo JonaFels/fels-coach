@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
@@ -18,19 +17,15 @@ export const AboutPreview = () => {
             <p>{t("aboutPreview.text1")}</p>
             <p>{t("aboutPreview.text2")}</p>
           </div>
-          <div className="mt-10">
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-base"
+          <div className="mt-10 text-center">
+            <Link
+              to="/ueber-mich#portrait"
               onClick={() => trackCTAClick("about_preview_more", "homepage_about", "link")}
+              className="inline-flex items-center gap-2 text-base font-medium text-secondary underline-offset-4 hover:underline transition-colors"
             >
-              <Link to="/ueber-mich#portrait">
-                {t("aboutPreview.cta")}
-                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
+              {t("aboutPreview.cta")}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>

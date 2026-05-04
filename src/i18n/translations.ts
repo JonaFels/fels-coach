@@ -62,8 +62,8 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemisches Coaching bei belastenden Familienmustern – Freiburg",
-    en: "Systemic coaching for challenging family patterns – Freiburg",
+    de: "Systemisches Coaching & Familienaufstellung in Freiburg",
+    en: "Systemic Coaching & Family Constellation in Freiburg",
   },
   "hero.title": {
     de: "Finde zurück zu dir – und werde zum Fels in deinem eigenen Leben.",
@@ -794,8 +794,8 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich kenne dieses diffuse Gefühl, nicht zu wissen, was eigentlich mit einem los ist – weil so vieles in einem wirkt, das gar nicht zu einem selbst gehört. Wer in vereinnahmenden oder grenzüberschreitenden Familienstrukturen aufgewachsen ist, trägt oft Themen aus der eigenen Familie mit, ohne es zu merken.",
-    en: "I know that diffuse feeling of not knowing what's really going on with you – because so much inside you isn't actually yours. Those who grew up in engulfing or boundary-crossing family structures often carry themes from their own family without realizing it.",
+    de: "Ich habe selbst erfahren, wie es ist, wenn die Grenzen in der Familie verschwimmen und man unbewusst fremde Lasten mitträgt. Lange habe ich gespürt, dass etwas nicht stimmt – ohne greifen zu können, was eigentlich zu mir gehört und was nicht.",
+    en: "I know from my own experience what it's like when boundaries within a family blur and you unknowingly carry burdens that aren't yours. For a long time I sensed something was off – without being able to grasp what actually belonged to me and what didn't.",
   },
   "aboutPreview.text2": {
     de: "Das Familienstellen hat mir geholfen, klar zu unterscheiden: Was gehört zu mir – und was zu wem anders? Heute stehe ich in meinem eigenen Leben, mit gesunden Grenzen und innerer Ruhe. Genau diesen Weg gehe ich mit dir: behutsam, klar und in deinem Tempo.",
@@ -808,8 +808,8 @@ export const translations: Translations = {
 
   // Method Section (Homepage)
   "method.intro": {
-    de: "Wie machen wir das konkret?",
-    en: "How do we do this concretely?",
+    de: "Wie machen wir das konkret? – Geschützt im 1:1 Setting",
+    en: "How do we do this concretely? – Safely in a 1-on-1 setting",
   },
   "method.title": {
     de: "Familienaufstellung – alte Muster verstehen und lösen",
