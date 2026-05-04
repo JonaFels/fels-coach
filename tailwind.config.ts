@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "system-ui", "sans-serif"],
-        serif: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Montserrat", "Montserrat Fallback", "system-ui", "sans-serif"],
+        serif: ["Playfair Display", "Playfair Fallback", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
