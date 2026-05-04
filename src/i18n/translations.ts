@@ -98,8 +98,8 @@ export const translations: Translations = {
     en: "Discover My Offers",
   },
   "hero.ctaEbook": {
-    de: "Kostenloses E-Book",
-    en: "Free E-Book",
+    de: "Impulse entdecken",
+    en: "Discover Impulses",
   },
 
   // Coaching Description (Homepage) – Pain Point
@@ -144,8 +144,8 @@ export const translations: Translations = {
     en: "Completely non-binding & personal",
   },
   "coaching.ebookLink": {
-    de: "Kostenloses E-Book lesen",
-    en: "Read Free E-Book",
+    de: "Impulse für deinen Weg",
+    en: "Impulses for your journey",
   },
 
   // Offerings Section
@@ -364,8 +364,8 @@ export const translations: Translations = {
     en: "In my free e-book „The Path to Wholeness“ I show you how old family patterns still influence you today – and how to take the first step toward change.",
   },
   "family.ebookHint.cta": {
-    de: "E-Book gratis sichern",
-    en: "Get the free e-book",
+    de: "Impulse jetzt entdecken",
+    en: "Discover impulses now",
   },
   "family.intro.text": {
     de: "Familienaufstellung ist eine kraftvolle Methode des systemischen Coachings, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
@@ -526,8 +526,8 @@ export const translations: Translations = {
     en: "You can revoke this consent at any time with just one click at the end of every email.",
   },
   "ebook.download": {
-    de: "Jetzt gratis E-Book & Impulse sichern",
-    en: "Get my free e-book & impulses now",
+    de: "Jetzt Impulse sichern",
+    en: "Get my impulses now",
   },
   "ebook.infoTitle": {
     de: "Was du in diesem E-Book erfährst:",
@@ -570,8 +570,8 @@ export const translations: Translations = {
     en: "In a few minutes you'll find an email titled \"Please confirm your subscription\" in your inbox. Click the confirmation button – right after, you'll receive a second email from me with the download link for your e-book. Please also check your spam folder.",
   },
   "ebook.freeEbook": {
-    de: "Kostenloses E-Book",
-    en: "Free E-Book",
+    de: "Impulse",
+    en: "Impulses",
   },
   "ebook.done": {
     de: "Geschafft!",
