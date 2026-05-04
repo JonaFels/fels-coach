@@ -26,6 +26,10 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#6B2E2E" />
 
+    <!-- Preconnect zu Supabase: verkürzt kritische Kette (TLS/DNS bereits warm, sobald CMS-Anfrage startet) -->
+    <link rel="preconnect" href="https://ywqucntgzlsrrefjfntk.supabase.co" crossorigin />
+    <link rel="dns-prefetch" href="https://ywqucntgzlsrrefjfntk.supabase.co" />
+
     <!-- Font Preload entfernt: Vite hasht Asset-URLs (/assets/...woff2), 
          feste /fonts/-Pfade liefen ins Leere. Fontsource-CSS lädt fonts direkt mit. -->
 

@@ -34,8 +34,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="text-center md:text-left order-2 md:order-1">
-            <h1 className="inline-flex items-center gap-3 text-[0.78rem] md:text-[0.82rem] uppercase tracking-[0.14em] font-bold text-primary mb-5 md:mb-6 animate-fade-in-up">
-              <span aria-hidden="true" className="h-px w-8 bg-primary/70" />
+            <h1 className="text-[0.78rem] md:text-[0.82rem] uppercase tracking-[0.14em] font-bold text-primary mb-5 md:mb-6 animate-fade-in-up">
               {t("hero.eyebrow")}
             </h1>
             <p className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight leading-[1.15] animate-fade-in-up [animation-delay:50ms]">
