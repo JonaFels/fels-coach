@@ -1,4 +1,4 @@
-name: Deploy React App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,33 +10,63 @@ permissions:
   pages: write
   id-token: write
 
+# Nur ein Deployment gleichzeitig; in-progress nicht abbrechen,
+# damit ein laufendes Production-Deploy sauber durchläuft.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          
+          cache: "npm"
+
       - name: Install dependencies
-        run: npm install
-        
-      - name: Build the app
-        run: npm run build
-        
+        run: npm ci
+
+      - name: Build (Vite + SSG Prerender)
+        run: |
+          npm run build
+          node scripts/prerender.js
+
+      # SPA-Fallback für GitHub Pages: 404.html = index.html,
+      # damit Deep-Links wie /impulse oder /kontakt nach einem
+      # direkten Aufruf / Refresh nicht in einen 404 laufen.
+      - name: Create SPA 404 fallback
+        run: cp dist/index.html dist/404.html
+
+      # CNAME für die Custom Domain (fels-coach.de via Cloudflare)
+      - name: Write CNAME
+        run: echo "fels-coach.de" > dist/CNAME
+
+      # Jekyll-Processing auf GitHub Pages deaktivieren,
+      # sonst werden Dateien mit Underscore (_app, _vite) ignoriert.
+      - name: Disable Jekyll
+        run: touch dist/.nojekyll
+
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4
-        
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-          
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@
-        v4
+        uses: actions/deploy-pages@v4
