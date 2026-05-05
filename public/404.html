@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <title>Weiterleitung – Fels-Coach</title>
+    <script>
+      // SPA-Fallback: GitHub Pages liefert diese Datei bei Deep-Links.
+      // Wir behalten den ursprünglichen Pfad (inkl. Query/Hash) bei und
+      // laden index.html, damit der React-Router übernehmen kann.
+      (function () {
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace(path === "/404" ? "/" : path);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
