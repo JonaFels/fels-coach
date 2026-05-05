@@ -126,10 +126,7 @@ export const ContactForm = () => {
           noValidate
           name="contact"
           method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="website"
         >
-          <input type="hidden" name="form-name" value="contact" />
           <div className="space-y-2">
             <Label htmlFor="contact-name">
               {t("contactForm.name")} <span className="text-destructive">*</span>

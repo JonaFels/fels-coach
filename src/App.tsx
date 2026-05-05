@@ -68,7 +68,7 @@ const App = () => (
                   <Route path="/angebote" element={<Angebote />} />
                   <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
                   <Route path="/impulse" element={<Impulse />} />
-                  {/* Legacy redirect: /ebook -> /impulse (301 via vercel.json/.htaccess; client fallback) */}
+                  {/* Legacy redirect: /ebook -> /impulse (301 via Cloudflare Bulk Redirects; client fallback) */}
                   <Route path="/ebook" element={<Impulse />} />
                   <Route path="/kontakt" element={<Kontakt />} />
                   <Route path="/ueber-mich" element={<UeberMich />} />
