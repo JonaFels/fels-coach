@@ -6,10 +6,10 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
 
-// Lazy: Toaster, Sonner und ChatbaseWidget sind nicht LCP-kritisch
-const Toaster = lazy(() => import("@/components/ui/toaster").then((m) => ({ default: m.Toaster })));
-const Sonner = lazy(() => import("@/components/ui/sonner").then((m) => ({ default: m.Toaster })));
+// Lazy: ChatbaseWidget ist nicht LCP-kritisch
 const ChatbaseWidget = lazy(() => import("@/components/ChatbaseWidget").then((m) => ({ default: m.ChatbaseWidget })));
 
 
@@ -53,10 +53,8 @@ const App = () => (
     <CMSProvider>
       <LanguageProvider>
         <TooltipProvider>
-          <Suspense fallback={null}>
-            <Toaster />
-            <Sonner />
-          </Suspense>
+          <Toaster />
+          <Sonner />
           <BrowserRouter>
             <AppTracking />
             <ScrollToTop />
