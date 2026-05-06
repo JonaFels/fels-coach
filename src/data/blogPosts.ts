@@ -400,7 +400,7 @@ Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden.
 
 ## Das eigene Umfeld bewusst wählen
 
-Im Idealfall ist ein Elternteil dabei, das einen nehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genauso gewohnt wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die das sehen können, was versteckt und doch da ist. Wenn du spürst, dass es Zeit ist, dich selbst neu kennenzulernen, kann ein systemisches [Coaching in Freiburg](/angebote) ein geschützter Raum dafür sein – oder du beginnst mit einem [kostenlosen Erstgespräch](/kontakt#erstgespraech).`,
+Im Idealfall ist ein Elternteil dabei, das einen nehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genauso gewohnt wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die das sehen können, was versteckt und doch da ist.`,
       en: `All paths in life are shaped — almost decided — by our family roots. Looking at the paths our parents or more distant ancestors took, we often find that we have taken similar steps ourselves. With professions, it can easily become apparent how family history continues. It is important to develop the understanding of being part of a system and how we sometimes go along, to please others, in order to create connection. Completely unconsciously.
 
 ## Between Expectations and the True Self
