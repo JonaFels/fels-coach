@@ -276,14 +276,17 @@ They behave in relation to each other and react to the other photon no matter ho
       de: "Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.",
       en: "Trapped in an Old Script? The Real Reason Happiness Often Stays Away.",
     },
+    metaTitle: "Gefangen im alten Drehbuch? Warum Glück ausbleibt",
+    metaDescription:
+      "Warum opfern wir unser Glück für alte Muster? Über Bindungsliebe, das Lebensskript und wie du eine neue Entscheidung treffen kannst.",
+    imageAlt:
+      "Symbolbild: ein altes Drehbuch und Spuren vergangener Familienmuster, die das heutige Glück prägen",
     excerpt: {
       de: "Was ist Glück an sich überhaupt? Psychologisch betrachtet macht nicht die Situation unglücklich, sondern die Bewertung der Situation. Wie wir aufhören, Glück zu opfern.",
       en: "What is happiness, really? Psychology tells us it's not the situation that makes us unhappy, but our evaluation of it. How we stop sacrificing happiness.",
     },
     content: {
-      de: `## Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.
-
-Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
+      de: `Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
 
 ## Der Blick der Psychologie: Unsere Bewertung entscheidet
 
