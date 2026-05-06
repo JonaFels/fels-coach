@@ -3,6 +3,7 @@ import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschic
 import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
 import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
 import blogWahresSelbst from "@/assets/blog-wahres-selbst.webp";
+import blogWahresIch from "@/assets/blog-wahres-ich.webp";
 
 export interface BlogPost {
   id: string;
