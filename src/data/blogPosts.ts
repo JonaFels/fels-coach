@@ -5,6 +5,7 @@ import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
 
 export interface BlogPost {
   id: string;
+  /** URL-Slug (z. B. "mein-erster-artikel"). Bei Bedarf via slugify(title) generierbar. */
   slug: string;
   title: {
     de: string;
@@ -19,8 +20,40 @@ export interface BlogPost {
     en: string;
   };
   image?: string;
+  /** Pflicht-Alt-Text für das Titelbild. Fällt auf Titel zurück, wenn leer. */
+  imageAlt?: string;
+  /** Optionaler SEO-Meta-Title (max. 60 Zeichen). Fällt auf Artikeltitel zurück. */
+  metaTitle?: string;
+  /** Optionale SEO-Meta-Description (max. 150 Zeichen). Fällt auf excerpt zurück. */
+  metaDescription?: string;
   publishedAt: string;
 }
+
+/**
+ * Generiert aus einem Titel einen URL-freundlichen Slug.
+ * Beispiel: "Mein erster Artikel!" -> "mein-erster-artikel"
+ */
+export const slugify = (input: string): string =>
+  input
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Diakritika entfernen
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/ß/g, "ss")
+    .replace(/[^a-z0-9\s-]/g, "") // Sonderzeichen raus
+    .trim()
+    .replace(/\s+/g, "-") // Leerzeichen -> Bindestrich
+    .replace(/-+/g, "-"); // Mehrfach-Bindestriche zusammenfassen
+
+/** Kürzt Text auf maxLen Zeichen (wortweise, mit "…"). */
+export const clampMeta = (text: string, maxLen: number): string => {
+  if (text.length <= maxLen) return text;
+  const cut = text.slice(0, maxLen - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > maxLen * 0.6 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+};
 
 export const blogPosts: BlogPost[] = [
   {
