@@ -128,7 +128,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Rückruf Anfrage <noreply@resend.fels-coach.de>",
-      to: ["info@fels-coach.de"],
+      to: ["jona-fels@magenta.de"],
       subject: `Neue Rückruf-Anfrage (${contactType})`,
       html: `
 <!DOCTYPE html>

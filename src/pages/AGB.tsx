@@ -54,7 +54,7 @@ const AGB = () => {
             <p>{t("terms.s8.text")} {t("terms.s8.privacyLink")} <Link to="/datenschutz" className="underline hover:text-secondary">{t("terms.s8.privacyLinkText")}</Link>.</p>
 
             <h3>{t("terms.s9.heading")}</h3>
-            <p>{t("terms.s9.p1")} <a href="mailto:info@fels-coach.de" className="underline hover:text-secondary">info@fels-coach.de</a>).</p>
+            <p>{t("terms.s9.p1")} <a href="mailto:jona-fels@magenta.de" className="underline hover:text-secondary">jona-fels@magenta.de</a>).</p>
             <p><strong>{t("terms.s9.heading").includes("Widerruf") ? "Wichtiger Hinweis zum vorzeitigen Erlöschen:" : "Important notice on early expiration:"}</strong> {t("terms.s9.p2")}</p>
 
             <h3>{t("terms.s10.heading")}</h3>

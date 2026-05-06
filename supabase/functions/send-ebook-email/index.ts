@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
     const customerEmail = await resend.emails.send({
       from: "Jona Fels <noreply@resend.fels-coach.de>",
       to: [trimmedEmail],
-      replyTo: "info@fels-coach.de",
+      replyTo: "jona-fels@magenta.de",
       subject: "Dein E-Book: Der Weg zum Ganzsein",
       html: `
 <!DOCTYPE html>
@@ -161,7 +161,7 @@ const handler = async (req: Request): Promise<Response> => {
         <tr><td style="padding:20px 40px;background-color:#F9F7F2;border-radius:0 0 8px 8px;border-top:1px solid #eee;">
           <p style="margin:0;font-size:12px;color:#888;text-align:center;line-height:1.5;">
             Jona Fels – Systemisches Coaching &amp; Familienaufstellungen<br>
-            Karlstraße 51, 79104 Freiburg · <a href="mailto:info@fels-coach.de" style="color:#2F4F4F;">info@fels-coach.de</a>
+            Karlstraße 51, 79104 Freiburg · <a href="mailto:jona-fels@magenta.de" style="color:#2F4F4F;">jona-fels@magenta.de</a>
           </p>
         </td></tr>
       </table>
@@ -183,7 +183,7 @@ const handler = async (req: Request): Promise<Response> => {
     try {
       await resend.emails.send({
         from: "E-Book Lead <noreply@resend.fels-coach.de>",
-        to: ["info@fels-coach.de"],
+        to: ["jona-fels@magenta.de"],
         replyTo: trimmedEmail,
         subject: `Neuer E-Book Download: ${trimmedName}`,
         html: `<p><strong>Name:</strong> ${safeName}</p><p><strong>E-Mail:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>`,
