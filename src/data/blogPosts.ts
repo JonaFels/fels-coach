@@ -3,6 +3,7 @@ import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschic
 import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
 import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
 import blogWahresSelbst from "@/assets/blog-wahres-selbst.webp";
+import blogWahresIch from "@/assets/blog-wahres-ich.webp";
 
 export interface BlogPost {
   id: string;
@@ -416,6 +417,73 @@ Already in childhood, talents and personality can be recognized. It's just a pit
 Ideally, there is a parent who can take you as you are. And if not, perhaps it is another person. But it is always possible to decide to find people who can see what is hidden and yet there.`,
     },
     image: blogWahresSelbst,
+    publishedAt: "2026-05-06",
+  },
+  {
+    id: "6",
+    slug: "warum-bin-ich-nicht-ich-selbst-suche-nach-dem-wahren-ich",
+    title: {
+      de: "Warum bin ich nicht ich selbst? Die Suche nach dem wahren Ich",
+      en: "Why Am I Not Myself? The Search for the True I",
+    },
+    metaTitle: "Warum bin ich nicht ich selbst? Suche nach dem wahren Ich",
+    metaDescription:
+      "Eine philosophische Reflexion über Identität, Erziehung und das Finden des eigenen Kerns. Ideal für alle, die sich mit Selbstfindung beschäftigen.",
+    imageAlt:
+      "Symbolbild: Silhouette eines Menschen, die sich in stillem Wasser spiegelt – Sinnbild für die Suche nach dem wahren Ich",
+    excerpt: {
+      de: "Eine philosophische Reflexion über Identität, Erziehung und das Finden des eigenen Kerns. Für alle, die sich mit Selbstfindung beschäftigen.",
+      en: "A philosophical reflection on identity, upbringing and finding one's own core. For everyone exploring the search for the Self.",
+    },
+    content: {
+      de: `Also ich bin ja einfach, ich mache, was ich eben will und so ist das. Das unbeschriebene Blatt. Aus den Umständen heraus passiert es. Oder nicht?
+
+Aber warum will ich dann was anderes als andere? Wenn es einfach nur so ist, dass meine Eltern mir zeigen, wie es geht und ich ja unbeschrieben bin, dann müsste ich es doch genauso machen, wie sie es mir sagen. Oder gibt es in mir etwas, das ganz ich bin? Und was ist das? Ein zusammengewürfeltes Konstrukt aus Meinungen all der Menschen in meinem Leben?
+
+## Identität: Ein zusammengewürfeltes Konstrukt oder echtes Selbst?
+
+Oder, ist da etwas, das immer gleich ist in mir? Dessen ich mir gewiss sein kann. Sogar egal, was alle um mich herum sagen. Eine Stabilität, wie ein sicherer Hafen.
+
+Sagen wir, wir nennen es Selbst.
+
+Aber nun, wenn ich das bin oder habe, warum kann ich es nicht klar sehen? Und was kann soetwas so Eindeutiges, so durcheinander bringen?
+
+...
+
+## Zurück zum Ursprung: Wo haben wir uns verloren?
+
+Gehen wir an den Anfang. Ich weiß es nicht mehr, aber ich bin auf die Welt gekommen. Ich wurde geboren. Und irgendwann fing ich an mich zu erinnern. Ich war bei meiner Mutter und hatte Freunde und mein Vater war da. Ich konnte sogar schon gleich richtig denken. Und ich wusste, wer ich bin. Ich erinnere mich sogar, wo ich davor war. Aber nun weiß ich - oder wusste lange nur das - was hier alle so sagen.
+
+## Das Erlernte hinterfragen: Was ist meine Wahrheit?
+
+Ich musste alles lernen, sprechen, gehen. Und vor allem tun und oft auch sagen, wie es gesagt wurde. Ich glaube, ich verstehe ein bisschen, warum ich verwirrt bin. Aber stimmt es denn jetzt alles, wie ich es tun und sagen sollte?
+
+Was ist wahr und was nicht? Ich glaube, ganz am Anfang wusste ich es.`,
+      en: `So I am simply who I am, I do what I want, and that's how it is. The blank slate. It happens out of circumstance. Or doesn't it?
+
+But then why do I want something different from others? If it is simply that my parents show me how it's done and I am unwritten, then I would have to do it exactly as they say. Or is there something in me that is entirely me? And what is that? A patchwork construct of the opinions of all the people in my life?
+
+## Identity: A Patchwork Construct or a Real Self?
+
+Or is there something that is always the same in me? Of which I can be certain. No matter what everyone around me says. A stability, like a safe harbor.
+
+Let's say we call it Self.
+
+But now, if I am this or have it, why can I not see it clearly? And what can throw something so unambiguous into such confusion?
+
+...
+
+## Back to the Origin: Where Did We Lose Ourselves?
+
+Let's go to the beginning. I don't remember anymore, but I came into the world. I was born. And at some point I began to remember. I was with my mother and had friends and my father was there. I could even think properly right away. And I knew who I was. I even remember where I was before. But now I know — or for a long time only knew — what everyone here says.
+
+## Questioning What Is Learned: What Is My Truth?
+
+I had to learn everything, to speak, to walk. And above all to do and often to say things the way they were said. I think I understand a little why I am confused. But is it really all true, the way I should do and say it?
+
+What is true and what is not? I believe that, right at the very beginning, I knew.`,
+    },
+    image: blogWahresIch,
     publishedAt: "2026-05-06",
   },
 ];
