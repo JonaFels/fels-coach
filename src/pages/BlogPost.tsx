@@ -20,6 +20,38 @@ const BlogPost = () => {
 
   const post = blogPosts.find((p) => p.slug === slug);
 
+  // Article JSON-LD pro Blogpost (dynamisch je Slug)
+  useEffect(() => {
+    if (!post) return;
+    const url = `https://fels-coach.de/blog/${post.slug}`;
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title.de,
+      description: post.excerpt.de,
+      image: post.image ? `https://fels-coach.de${post.image.startsWith("/") ? "" : "/"}${post.image}` : undefined,
+      datePublished: post.publishedAt,
+      dateModified: post.publishedAt,
+      inLanguage: "de",
+      mainEntityOfPage: { "@type": "WebPage", "@id": url },
+      url,
+      author: { "@type": "Person", name: "Jona Fels", url: "https://fels-coach.de/ueber-mich" },
+      publisher: {
+        "@type": "Organization",
+        name: "Systemisches Coaching & Familienaufstellung",
+        logo: { "@type": "ImageObject", url: "https://fels-coach.de/web-app-manifest-512x512.png" },
+      },
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-blog-schema", "true");
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, [post]);
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
