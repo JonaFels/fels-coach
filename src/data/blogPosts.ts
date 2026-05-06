@@ -63,6 +63,11 @@ export const blogPosts: BlogPost[] = [
       de: "Keine Gruppe nötig: Wie du Klarheit für dein Familiensystem im 1:1 Coaching findest",
       en: "No Group Needed: How to Find Clarity for Your Family System in 1:1 Coaching",
     },
+    metaTitle: "Familienstellen 1:1 in Freiburg – Klarheit ohne Gruppe",
+    metaDescription:
+      "Familienaufstellung im geschützten 1:1-Setting mit Bodenankern. So findest du Klarheit für dein Familiensystem – ohne Gruppe.",
+    imageAlt:
+      "Praxisraum in Freiburg mit Bodenankern und Filzmatten für Familienaufstellung im Einzelsetting",
     excerpt: {
       de: "Wie funktionieren Familienaufstellungen im 1:1 Format? Erfahre, welche Vorteile Bodenanker und der Perspektivwechsel in Einzelsitzungen bieten.",
       en: "How do family constellations work in a 1:1 format? Discover the benefits of floor anchors and perspective shifts in individual sessions.",
