@@ -80,6 +80,30 @@ const BlogPost = () => {
 
     lines.forEach((line, index) => {
       const trimmedLine = line.trim();
+
+      // Markdown-Bild: ![alt text](url) – Pflicht-Alt-Attribut
+      const imgMatch = trimmedLine.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      if (imgMatch) {
+        flushList();
+        const altText = imgMatch[1].trim();
+        const src = imgMatch[2].trim();
+        if (!altText && import.meta.env.DEV) {
+          console.warn(`[Blog] Bild ohne alt-Attribut: ${src}`);
+        }
+        elements.push(
+          <figure key={index} className="my-8">
+            <img
+              src={src}
+              alt={altText}
+              className="w-full h-auto rounded-xl"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        );
+        return;
+      }
+
       const listMatch = trimmedLine.match(/^\d+\.\s+(.+)/);
       if (listMatch) {
         const processedItem = listMatch[1]
@@ -121,9 +145,14 @@ const BlogPost = () => {
     return elements;
   };
 
+  // Dynamische Meta-Tags mit Längenbegrenzung (Title 60, Description 150)
+  const metaTitle = clampMeta(post.metaTitle ?? `${post.title.de} | Jona Fels`, 60);
+  const metaDescription = clampMeta(post.metaDescription ?? post.excerpt.de, 150);
+  const imageAlt = post.imageAlt?.trim() || `Titelbild: ${post.title.de}`;
+
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead title={`${post.title.de} | Jona Fels`} description={post.excerpt.de} image={post.image} type="article" />
+      <SEOHead title={metaTitle} description={metaDescription} image={post.image} type="article" />
       <Header />
       <main id="main-content" className="flex-1 py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,7 +164,7 @@ const BlogPost = () => {
 
               {post.image && (
                 <div className="aspect-video rounded-xl overflow-hidden mb-8">
-                  <img src={post.image} alt={`Titelbild: ${post.title.de}`} className="w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="high" />
+                  <img src={post.image} alt={imageAlt} className="w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="high" />
                 </div>
               )}
 
