@@ -213,8 +213,13 @@ Yet this culture-dependent classification, which places the individual before th
       de: "Das wissende Feld: Wie funktioniert eigentlich die Wahrnehmung beim Familienstellen?",
       en: "The Knowing Field: How Does Perception Actually Work in Family Constellations?",
     },
+    metaTitle: "Das wissende Feld: Wahrnehmung beim Familienstellen",
+    metaDescription:
+      "Wie können Stellvertreter ein fremdes Familiensystem nachfühlen? Über repräsentierende Wahrnehmung, das wissende Feld und Quantenphysik.",
+    imageAlt:
+      "Symbolische Darstellung des wissenden Feldes – verbundene Lichtpunkte als Sinnbild für stellvertretende Wahrnehmung",
     excerpt: {
-      de: "Wie kann es sein, dass fremde Menschen das Familiensystem eines anderen Menschen nachbilden können? Ein Blick auf das Phänomen der stellvertretenden Wahrnehmung und die Brücke zur Quantenphysik.",
+      de: "Wie können fremde Menschen das Familiensystem eines anderen nachbilden? Ein Blick auf stellvertretende Wahrnehmung und die Brücke zur Quantenphysik.",
       en: "How is it possible that strangers can replicate another person's family system? A look at the phenomenon of representative perception and the bridge to quantum physics.",
     },
     content: {
