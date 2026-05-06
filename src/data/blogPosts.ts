@@ -146,9 +146,7 @@ With individual constellations, the **dynamics in the family system** can be sho
       en: "One man above all laid the foundation for today's family constellations: Bert Hellinger. But this therapeutic method belongs in a historical context of many evolving psychological theories.",
     },
     content: {
-      de: `## Von Freud bis Hellinger: Woher das Familienstellen wirklich kommt
-
-Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
+      de: `Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
 
 ### Die drei Kräfte der Psychologie
 
@@ -288,9 +286,7 @@ They behave in relation to each other and react to the other photon no matter ho
       en: "What is happiness, really? Psychology tells us it's not the situation that makes us unhappy, but our evaluation of it. How we stop sacrificing happiness.",
     },
     content: {
-      de: `## Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.
-
-Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
+      de: `Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
 
 ## Der Blick der Psychologie: Unsere Bewertung entscheidet
 
