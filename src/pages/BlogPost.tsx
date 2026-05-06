@@ -8,7 +8,7 @@ import { AuthorBox } from "@/components/AuthorBox";
 
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts, clampMeta } from "@/data/blogPosts";
 import { ArrowLeft } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
