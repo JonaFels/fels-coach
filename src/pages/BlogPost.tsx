@@ -28,8 +28,10 @@ const BlogPost = () => {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       headline: post.title.de,
-      description: post.excerpt.de,
-      image: post.image ? `https://fels-coach.de${post.image.startsWith("/") ? "" : "/"}${post.image}` : undefined,
+      description: post.metaDescription ?? post.excerpt.de,
+      image: post.image
+        ? `https://fels-coach.de${post.image.startsWith("/") ? "" : "/"}${post.image}`
+        : undefined,
       datePublished: post.publishedAt,
       dateModified: post.publishedAt,
       inLanguage: "de",
