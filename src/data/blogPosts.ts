@@ -73,9 +73,7 @@ export const blogPosts: BlogPost[] = [
       en: "How do family constellations work in a 1:1 format? Discover the benefits of floor anchors and perspective shifts in individual sessions.",
     },
     content: {
-      de: `## Familienstellen in einer Einzelsitzung
-
-Viele kennen Familienaufstellungen von Aufstellungsabenden in Gruppenform. Aber wie geht es in einem Einzelformat, mit zwei Personen? Erfahre mehr über die Möglichkeiten einer [Einzelsitzung](/angebote).
+      de: `Viele kennen Familienaufstellungen von Aufstellungsabenden in Gruppenform. Aber wie geht es in einem Einzelformat, mit zwei Personen? Erfahre mehr über die Möglichkeiten einer [Einzelsitzung](/angebote).
 
 ### Bodenanker als Stellvertreter
 
