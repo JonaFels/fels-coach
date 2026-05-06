@@ -142,11 +142,13 @@ With individual constellations, the **dynamics in the family system** can be sho
     imageAlt:
       "Historische Wurzeln der Familienaufstellung – Symbolbild zur Entwicklung von Freud bis Hellinger",
     excerpt: {
-      de: "Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt: Bert Hellinger. Eine Einordnung der Methode in die Geschichte der Psychologie.",
+      de: "Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. Bert Hellinger. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.",
       en: "One man above all laid the foundation for today's family constellations: Bert Hellinger. But this therapeutic method belongs in a historical context of many evolving psychological theories.",
     },
     content: {
-      de: `Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
+      de: `## Von Freud bis Hellinger: Woher das Familienstellen wirklich kommt
+
+Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
 
 ### Die drei Kräfte der Psychologie
 
