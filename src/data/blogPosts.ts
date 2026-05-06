@@ -2,6 +2,7 @@ import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.webp";
 import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
 import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
+import blogWahresSelbst from "@/assets/blog-wahres-selbst.webp";
 
 export interface BlogPost {
   id: string;
