@@ -48,11 +48,12 @@ function extractBlogPosts() {
   }
   const src = readFileSync(BLOG_DATA_FILE, "utf-8");
   const posts = [];
-  // Match Block: { ... slug: "...", ... publishedAt: "YYYY-MM-DD", ... }
-  const regex = /\{\s*[^}]*?slug:\s*["']([^"']+)["'][^}]*?publishedAt:\s*["']([^"']+)["'][^}]*?\}/gs;
-  let m;
-  while ((m = regex.exec(src)) !== null) {
-    posts.push({ slug: m[1], publishedAt: m[2] });
+  const slugRegex = /slug:\s*["']([^"']+)["']/g;
+  const dateRegex = /publishedAt:\s*["'](\d{4}-\d{2}-\d{2})["']/g;
+  const slugs = [...src.matchAll(slugRegex)].map((m) => m[1]);
+  const dates = [...src.matchAll(dateRegex)].map((m) => m[1]);
+  for (let i = 0; i < slugs.length; i++) {
+    posts.push({ slug: slugs[i], publishedAt: dates[i] });
   }
   return posts;
 }
