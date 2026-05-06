@@ -63,14 +63,17 @@ export const blogPosts: BlogPost[] = [
       de: "Keine Gruppe nötig: Wie du Klarheit für dein Familiensystem im 1:1 Coaching findest",
       en: "No Group Needed: How to Find Clarity for Your Family System in 1:1 Coaching",
     },
+    metaTitle: "Familienstellen 1:1 in Freiburg – Klarheit ohne Gruppe",
+    metaDescription:
+      "Familienaufstellung im geschützten 1:1-Setting mit Bodenankern. So findest du Klarheit für dein Familiensystem – ohne Gruppe.",
+    imageAlt:
+      "Praxisraum in Freiburg mit Bodenankern und Filzmatten für Familienaufstellung im Einzelsetting",
     excerpt: {
       de: "Wie funktionieren Familienaufstellungen im 1:1 Format? Erfahre, welche Vorteile Bodenanker und der Perspektivwechsel in Einzelsitzungen bieten.",
       en: "How do family constellations work in a 1:1 format? Discover the benefits of floor anchors and perspective shifts in individual sessions.",
     },
     content: {
-      de: `## Familienstellen in einer Einzelsitzung
-
-Viele kennen Familienaufstellungen von Aufstellungsabenden in Gruppenform. Aber wie geht es in einem Einzelformat, mit zwei Personen? Erfahre mehr über die Möglichkeiten einer [Einzelsitzung](/angebote).
+      de: `Viele kennen Familienaufstellungen von Aufstellungsabenden in Gruppenform. Aber wie geht es in einem Einzelformat, mit zwei Personen? Erfahre mehr über die Möglichkeiten einer [Einzelsitzung](/angebote).
 
 ### Bodenanker als Stellvertreter
 
@@ -133,14 +136,17 @@ With individual constellations, the **dynamics in the family system** can be sho
       de: "Von Freud bis Hellinger: Woher das Familienstellen wirklich kommt",
       en: "From Freud to Hellinger: Where Family Constellations Really Come From",
     },
+    metaTitle: "Geschichte der Familienaufstellung: Freud bis Hellinger",
+    metaDescription:
+      "Wie Bert Hellinger das Familienstellen aus Psychoanalyse, humanistischer Psychologie und Zulu-Tradition entwickelt hat – ein historischer Überblick.",
+    imageAlt:
+      "Historische Wurzeln der Familienaufstellung – Symbolbild zur Entwicklung von Freud bis Hellinger",
     excerpt: {
-      de: "Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. Bert Hellinger. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt.",
+      de: "Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt: Bert Hellinger. Eine Einordnung der Methode in die Geschichte der Psychologie.",
       en: "One man above all laid the foundation for today's family constellations: Bert Hellinger. But this therapeutic method belongs in a historical context of many evolving psychological theories.",
     },
     content: {
-      de: `## Von Freud bis Hellinger: Woher das Familienstellen wirklich kommt
-
-Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
+      de: `Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
 
 ### Die drei Kräfte der Psychologie
 
@@ -207,8 +213,13 @@ Yet this culture-dependent classification, which places the individual before th
       de: "Das wissende Feld: Wie funktioniert eigentlich die Wahrnehmung beim Familienstellen?",
       en: "The Knowing Field: How Does Perception Actually Work in Family Constellations?",
     },
+    metaTitle: "Das wissende Feld: Wahrnehmung beim Familienstellen",
+    metaDescription:
+      "Wie können Stellvertreter ein fremdes Familiensystem nachfühlen? Über repräsentierende Wahrnehmung, das wissende Feld und Quantenphysik.",
+    imageAlt:
+      "Symbolische Darstellung des wissenden Feldes – verbundene Lichtpunkte als Sinnbild für stellvertretende Wahrnehmung",
     excerpt: {
-      de: "Wie kann es sein, dass fremde Menschen das Familiensystem eines anderen Menschen nachbilden können? Ein Blick auf das Phänomen der stellvertretenden Wahrnehmung und die Brücke zur Quantenphysik.",
+      de: "Wie können fremde Menschen das Familiensystem eines anderen nachbilden? Ein Blick auf stellvertretende Wahrnehmung und die Brücke zur Quantenphysik.",
       en: "How is it possible that strangers can replicate another person's family system? A look at the phenomenon of representative perception and the bridge to quantum physics.",
     },
     content: {
@@ -265,14 +276,17 @@ They behave in relation to each other and react to the other photon no matter ho
       de: "Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.",
       en: "Trapped in an Old Script? The Real Reason Happiness Often Stays Away.",
     },
+    metaTitle: "Gefangen im alten Drehbuch? Warum Glück ausbleibt",
+    metaDescription:
+      "Warum opfern wir unser Glück für alte Muster? Über Bindungsliebe, das Lebensskript und wie du eine neue Entscheidung treffen kannst.",
+    imageAlt:
+      "Symbolbild: ein altes Drehbuch und Spuren vergangener Familienmuster, die das heutige Glück prägen",
     excerpt: {
       de: "Was ist Glück an sich überhaupt? Psychologisch betrachtet macht nicht die Situation unglücklich, sondern die Bewertung der Situation. Wie wir aufhören, Glück zu opfern.",
       en: "What is happiness, really? Psychology tells us it's not the situation that makes us unhappy, but our evaluation of it. How we stop sacrificing happiness.",
     },
     content: {
-      de: `## Gefangen im alten Drehbuch? Der wahre Grund, warum das Glück oft ausbleibt.
-
-Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
+      de: `Was ist Glück an sich überhaupt? Manche denken an das Erreichen von Zielen oder bestimmte Dinge, die sie gerne tun. Aber eigentlich ist Glück nur in der Gegenwart im Hier und Jetzt da. Viele sprechen von Flow.
 
 ## Der Blick der Psychologie: Unsere Bewertung entscheidet
 
