@@ -136,14 +136,17 @@ With individual constellations, the **dynamics in the family system** can be sho
       de: "Von Freud bis Hellinger: Woher das Familienstellen wirklich kommt",
       en: "From Freud to Hellinger: Where Family Constellations Really Come From",
     },
+    metaTitle: "Geschichte der Familienaufstellung: Freud bis Hellinger",
+    metaDescription:
+      "Wie Bert Hellinger das Familienstellen aus Psychoanalyse, humanistischer Psychologie und Zulu-Tradition entwickelt hat – ein historischer Überblick.",
+    imageAlt:
+      "Historische Wurzeln der Familienaufstellung – Symbolbild zur Entwicklung von Freud bis Hellinger",
     excerpt: {
-      de: "Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. Bert Hellinger. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt.",
+      de: "Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt: Bert Hellinger. Eine Einordnung der Methode in die Geschichte der Psychologie.",
       en: "One man above all laid the foundation for today's family constellations: Bert Hellinger. But this therapeutic method belongs in a historical context of many evolving psychological theories.",
     },
     content: {
-      de: `## Von Freud bis Hellinger: Woher das Familienstellen wirklich kommt
-
-Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
+      de: `Vor allem ein Mann hat die Grundlage für das heutige Familienstellen gelegt. **Bert Hellinger**. Aber natürlich gehört diese therapeutische Methode in eine zeitliche Einordnung vieler gewachsener Theorien der psychologischen Welt. Worum es zuerst gehen soll.
 
 ### Die drei Kräfte der Psychologie
 
