@@ -2,6 +2,7 @@ import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import blogFamilienstellenGeschichte from "@/assets/blog-familienstellen-geschichte.webp";
 import blogWissendesFeld from "@/assets/blog-wissendes-feld.webp";
 import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
+import blogWahresSelbst from "@/assets/blog-wahres-selbst.webp";
 
 export interface BlogPost {
   id: string;
@@ -369,5 +370,52 @@ Whether through thoughts or feelings, processing the unfinished situations creat
     },
     image: blogAltesDrehbuch,
     publishedAt: "2026-04-04",
+  },
+  {
+    id: "5",
+    slug: "wahres-selbst-finden-familiaere-praegung-loesen",
+    title: {
+      de: "Wie die Umwelt unser wahres Selbst verschüttet",
+      en: "How Our Environment Buries Our True Self",
+    },
+    metaTitle: "Wahres Selbst finden: Wie du familiäre Prägung lösen kannst",
+    metaDescription:
+      "Fühlst du dich oft fremd im eigenen Leben? Erfahre, wie deine Herkunft dein wahres Selbst verschüttet und wie du den Weg zurück zu dir findest.",
+    imageAlt:
+      "Symbolbild: ein junger grüner Spross wächst durch rissige Erde – Sinnbild für das wahre Selbst, das sich durch familiäre Prägung hindurch zeigt",
+    excerpt: {
+      de: "Fühlst du dich oft fremd im eigenen Leben? Erfahre, wie familiäre Prägung dein wahres Selbst verschüttet und wie du sich selbst treu bleiben kannst.",
+      en: "Do you often feel like a stranger in your own life? Discover how family imprints bury your true Self and how you can find your way back to yourself.",
+    },
+    content: {
+      de: `Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon entschieden. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Es ist wichtig, das Verständnis dafür zu entwickeln, Teil eines Systems zu sein und wie man manchmal zuliebe anderer, zum Gefallen, mitläuft, um Verbindung herzustellen. Ganz unbewusst.
+
+## Zwischen Erwartungen und dem wahren Selbst
+
+Die spannende Frage ist, wann es das wirkliche Selbst ist und wann man sich verbiegt und stellt vielleicht erst in der Mitte des eigenen Lebens fest, dass das alles gar nicht zu einem passt: Der Job, viele Freunde oder sogar Hobbys. Stellen wir uns eine Frau vor, die als Ergotherapeutin arbeitet. Und für ihre Mutter ist nichts wichtiger als den Menschen in ihrem Beruf als Krankenschwester zu helfen. Und sie sagt oder denkt, dass jemand, der nicht als allererstes das Dienen und Helfen für jemand anderen im Sinn hat, ein schlechter Mensch ist. Würde die Frau sich selbst erkennen mit ihrem starken Intellekt und der Forscher-Neugierde oder würde sie ihr Potenzial vor sich selbst und allen verstecken?
+
+## Warum wir lernen, uns anzupassen
+
+Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden. Nur schade, dass die meisten Eltern sich selbst nicht erkannt haben und so auch ihr Kind nicht vollständig als es selbst erkennen. Wir passen uns an. Wir müssen, um dazuzugehören. Mal mehr, mal weniger. Aber mit der Pubertät können wir mehr erkennen, wer wir eigentlich schon immer sind. Wir lösen uns und gehen raus in die Welt. Oder entschließen, am Sicheren festzuhalten. Es kann sein, dass vieles, was dein Selbst ist, von deiner Familie angenommen wird, aber es kann sein, dass einiges nicht angenommen wird. Was an den Moment erinnert, in dem du zum allerersten Mal nicht ganz angenommen oder abgelehnt wurdest. Und erneut kannst du entscheiden, dein Selbst trotzdem zu zeigen oder dich anzupassen und den Zuspruch der Mutter oder des Vaters zu bekommen?
+
+## Das eigene Umfeld bewusst wählen
+
+Im Idealfall ist ein Elternteil dabei, das einen nehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genauso gewohnt wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die das sehen können, was versteckt und doch da ist. Wenn du spürst, dass es Zeit ist, dich selbst neu kennenzulernen, kann ein systemisches [Coaching in Freiburg](/angebote) ein geschützter Raum dafür sein – oder du beginnst mit einem [kostenlosen Erstgespräch](/kontakt#erstgespraech).`,
+      en: `All paths in life are shaped — almost decided — by our family roots. Looking at the paths our parents or more distant ancestors took, we often find that we have taken similar steps ourselves. With professions, it can easily become apparent how family history continues. It is important to develop the understanding of being part of a system and how we sometimes go along, to please others, in order to create connection. Completely unconsciously.
+
+## Between Expectations and the True Self
+
+The exciting question is when it is the real Self and when we bend ourselves — and perhaps only realize in the middle of our own life that none of it really fits: the job, many friends, or even hobbies.
+
+## Why We Learn to Adapt
+
+Already in childhood, talents and personality can be recognized. It's just a pity that most parents have not recognized themselves and therefore cannot fully recognize their child as itself. We adapt. We have to, in order to belong.
+
+## Consciously Choosing Our Environment
+
+Ideally, there is a parent who can take you as you are. And if not, perhaps it is another person. But it is always possible to decide to find people who can see what is hidden and yet there.`,
+    },
+    image: blogWahresSelbst,
+    publishedAt: "2026-05-06",
   },
 ];
