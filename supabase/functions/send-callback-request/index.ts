@@ -129,6 +129,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Rückruf Anfrage <jona@resend.fels-coach.de>",
       to: ["jona@fels-coach.de"],
+      reply_to: contact,
       subject: `Neue Rückruf-Anfrage (${contactType})`,
       html: `
 <!DOCTYPE html>
@@ -176,7 +177,11 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email response:", emailResponse);
+    console.log("Resend callback notification accepted:", JSON.stringify({
+      id: emailResponse.data?.id,
+      from: "jona@resend.fels-coach.de",
+      to: "jona@fels-coach.de",
+    }));
 
     if (emailResponse.error) {
       console.error("Resend error:", emailResponse.error);
