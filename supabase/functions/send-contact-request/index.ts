@@ -140,7 +140,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Coach Anfrage <jona@resend.fels-coach.de>",
       to: ["jona@fels-coach.de"],
-      replyTo: trimmedEmail,
+      reply_to: trimmedEmail,
       subject: `Neue Coaching-Anfrage von ${trimmedName}`,
       html: `
 <!DOCTYPE html>
@@ -203,6 +203,12 @@ const handler = async (req: Request): Promise<Response> => {
 </html>
       `,
     });
+
+    console.log("Resend contact notification accepted:", JSON.stringify({
+      id: emailResponse.data?.id,
+      from: "jona@resend.fels-coach.de",
+      to: "jona@fels-coach.de",
+    }));
 
     if (emailResponse.error) {
       console.error("Resend error:", JSON.stringify(emailResponse.error));

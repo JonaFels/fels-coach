@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
     const customerEmail = await resend.emails.send({
       from: "Jona Fels <jona@resend.fels-coach.de>",
       to: [trimmedEmail],
-      replyTo: "jona@fels-coach.de",
+      reply_to: "jona@fels-coach.de",
       subject: "Dein E-Book: Der Weg zum Ganzsein",
       html: `
 <!DOCTYPE html>
@@ -184,7 +184,7 @@ const handler = async (req: Request): Promise<Response> => {
       await resend.emails.send({
         from: "E-Book Lead <jona@resend.fels-coach.de>",
         to: ["jona@fels-coach.de"],
-        replyTo: trimmedEmail,
+        reply_to: trimmedEmail,
         subject: `Neuer E-Book Download: ${trimmedName}`,
         html: `<p><strong>Name:</strong> ${safeName}</p><p><strong>E-Mail:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>`,
       });
