@@ -22,8 +22,8 @@ const DEFAULT_IMAGE = `${SITE_URL}/og-image.webp`;
 const routes = [
   {
     path: '/', folder: null,
-    title: 'Systemische Familienaufstellungen | Jona Fels',
-    description: 'Systemische Familienaufstellung & Coaching in Freiburg ✓ Unbewusste Muster lösen ✓ Einzelsitzungen mit Bodenankern ✓ Samstags 14–20 Uhr ✓ Jona Fels',
+    title: 'Systemischer Coach Freiburg | Familienaufstellung & Familienstellen – Jona Fels',
+    description: 'Systemischer Coach in Freiburg ✓ Familienaufstellung & Familienstellen im 1:1 Setting ✓ Unbewusste Muster lösen ✓ Samstags 14–20 Uhr ✓ Jona Fels',
   },
   {
     path: '/angebote', folder: 'angebote',
@@ -32,8 +32,8 @@ const routes = [
   },
   {
     path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg',
-    title: 'Jona Fels | Familienaufstellung',
-    description: 'Erfahre, wie Familienaufstellungen unbewusste Dynamiken aufdecken. Ablauf, Nutzen und Methodik erklärt.',
+    title: 'Familienaufstellung & Familienstellen Freiburg | Jona Fels',
+    description: 'Familienaufstellung in Freiburg – auch bekannt als Familienstellen. Ablauf, Nutzen und Methodik der systemischen Einzelaufstellung mit Bodenankern erklärt.',
   },
   {
     path: '/impulse', folder: 'impulse',
