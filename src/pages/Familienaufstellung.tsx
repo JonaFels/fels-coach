@@ -102,6 +102,31 @@ const Familienaufstellung = () => {
           </div>
         </section>
 
+        {/* Synonym / SEO Section: Familienstellen = Familienaufstellung */}
+        <section id="familienstellen" aria-labelledby="familienstellen-heading" className="py-16 md:py-20">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h2
+              id="familienstellen-heading"
+              className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4"
+            >
+              Familienaufstellung – auch bekannt als Familienstellen
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Die Begriffe <strong>Familienaufstellung</strong> und <strong>Familienstellen</strong> meinen
+              im Kern dasselbe: eine systemische Methode, mit der unbewusste Dynamiken und Verstrickungen
+              in der Herkunftsfamilie sichtbar gemacht werden. Manche Menschen suchen nach
+              „Familienaufstellung Freiburg", andere nach „Familienstellen Freiburg" – beide landen hier
+              richtig.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Als <strong>systemischer Coach in Freiburg</strong> arbeite ich ausschließlich im
+              geschützten 1:1 Setting in meinem Praxisraum in der Karlstraße – mit Bodenankern statt
+              fremder Stellvertreter. So kannst du dein Familiensystem in Ruhe betrachten, neue
+              Perspektiven einnehmen und alte Muster Schritt für Schritt lösen.
+            </p>
+          </div>
+        </section>
+
         {/* Benefits with icons */}
         <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
