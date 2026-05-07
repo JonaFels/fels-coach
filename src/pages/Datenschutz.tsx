@@ -27,7 +27,7 @@ const Datenschutz = () => {
               {t("privacy.s1.owner")}<br />
               Egonstraße 91<br />
               79106 Freiburg<br />
-              E-Mail: <a href="mailto:jona-fels@magenta.de">jona-fels@magenta.de</a>
+              E-Mail: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
             </p>
 
             <hr />
@@ -48,7 +48,7 @@ const Datenschutz = () => {
               <li><strong>{language === "de" ? "Datenübertragbarkeit (Art. 20 DSGVO):" : "Right to data portability (Art. 20 GDPR):"}</strong> {t("privacy.s3.portability")}</li>
               <li><strong>{language === "de" ? "Widerspruchsrecht (Art. 21 DSGVO):" : "Right to object (Art. 21 GDPR):"}</strong> {t("privacy.s3.objection")}</li>
             </ul>
-            <p>{t("privacy.s3.outro")} <a href="mailto:jona-fels@magenta.de">jona-fels@magenta.de</a>. {t("privacy.s3.complaint")}</p>
+            <p>{t("privacy.s3.outro")} <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>. {t("privacy.s3.complaint")}</p>
 
             <hr />
 
