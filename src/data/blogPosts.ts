@@ -498,7 +498,7 @@ What is true and what is not? I believe that, right at the very beginning, I kne
     metaDescription:
       "Erfahre, wie Familienprägung und dein Umfeld dein Selbstbild formen. Lerne, den Kreislauf der Anpassung zu durchbrechen und dein wahres Potenzial zu leben.",
     imageAlt:
-      "Symbolbild: Person tritt aus dem Wald in eine sonnendurchflutete Wiese – Sinnbild für den Schritt vom Erkennen zur freien Veränderung",
+      "Symbolbild: offene Hand lässt eine Feder im warmen Sonnenlicht los – Sinnbild für das Loslassen alter Prägungen und freie Veränderung",
     excerpt: {
       de: "Wie Familienprägung und dein Umfeld dein Selbstbild formen – und wie du den Kreislauf der Anpassung durchbrichst, um dein wahres Potenzial zu leben.",
       en: "How family imprints and your environment shape your self-image – and how to break the cycle of adaptation to live your true potential.",
