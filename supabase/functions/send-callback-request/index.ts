@@ -127,7 +127,7 @@ const handler = async (req: Request): Promise<Response> => {
     const safeContact = escapeHtml(contact);
 
     const emailResponse = await resend.emails.send({
-      from: "Rückruf Anfrage <noreply@resend.fels-coach.de>",
+      from: "Rückruf Anfrage <jona@resend.fels-coach.de>",
       to: ["jona@fels-coach.de"],
       subject: `Neue Rückruf-Anfrage (${contactType})`,
       html: `
