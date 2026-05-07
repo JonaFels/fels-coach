@@ -112,17 +112,15 @@ const Familienaufstellung = () => {
               Familienaufstellung – auch bekannt als Familienstellen
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Die Begriffe <strong>Familienaufstellung</strong> und <strong>Familienstellen</strong> meinen
-              im Kern dasselbe: eine systemische Methode, mit der unbewusste Dynamiken und Verstrickungen
-              in der Herkunftsfamilie sichtbar gemacht werden. Manche Menschen suchen nach
-              „Familienaufstellung Freiburg", andere nach „Familienstellen Freiburg" – beide landen hier
-              richtig.
+              <strong>Familienaufstellung</strong> und <strong>Familienstellen</strong> meinen dasselbe:
+              eine systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner
+              Herkunftsfamilie sichtbar macht – egal, mit welchem der beiden Begriffe du gesucht hast.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Als <strong>systemischer Coach in Freiburg</strong> arbeite ich ausschließlich im
-              geschützten 1:1 Setting in meinem Praxisraum in der Karlstraße – mit Bodenankern statt
-              fremder Stellvertreter. So kannst du dein Familiensystem in Ruhe betrachten, neue
-              Perspektiven einnehmen und alte Muster Schritt für Schritt lösen.
+              In meinem Praxisraum in der Karlstraße in Freiburg arbeite ich mit dir im geschützten
+              1:1 Setting. Statt fremder Stellvertreter nutzen wir Bodenanker, mit denen du dein
+              Familiensystem in Ruhe betrachten, neue Perspektiven einnehmen und alte Muster Schritt
+              für Schritt lösen kannst.
             </p>
           </div>
         </section>
