@@ -19,7 +19,7 @@ export const JsonLd = () => {
           ],
           url: "https://fels-coach.de",
           telephone: "+4917667608617",
-          email: "jona-fels@magenta.de",
+          email: "jona@fels-coach.de",
           description:
             "Systemische Familienaufstellung und Coaching in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
           address: {
@@ -168,7 +168,7 @@ export const JsonLd = () => {
             "Systemischer Coach und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
-          email: "jona-fels@magenta.de",
+          email: "jona@fels-coach.de",
           telephone: "+4917667608617",
           address: {
             "@type": "PostalAddress",

@@ -139,7 +139,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Coach Anfrage <noreply@resend.fels-coach.de>",
-      to: ["jona-fels@magenta.de"],
+      to: ["jona@fels-coach.de"],
       replyTo: trimmedEmail,
       subject: `Neue Coaching-Anfrage von ${trimmedName}`,
       html: `

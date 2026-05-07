@@ -27,7 +27,7 @@ const Impressum = () => {
             <h3>{t("imprint.contactHeading")}</h3>
             <p>
               {t("imprint.phone")}: 0176 67608617<br />
-              E-Mail: <a href="mailto:jona-fels@magenta.de">jona-fels@magenta.de</a>
+              E-Mail: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
             </p>
 
             <h3>{t("imprint.vatHeading")}</h3>

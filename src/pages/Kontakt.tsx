@@ -133,7 +133,7 @@ const Kontakt = () => {
                   </h3>
                   <div className="flex flex-col gap-4">
                     <a
-                      href="mailto:jona-fels@magenta.de"
+                      href="mailto:jona@fels-coach.de"
                       className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
                       aria-label="E-Mail senden"
                     >
@@ -142,7 +142,7 @@ const Kontakt = () => {
                       </div>
                       <div>
                         <span className="font-medium text-foreground block">{t("contact.emailLabel")}</span>
-                        <span className="text-sm text-muted-foreground">jona-fels@magenta.de</span>
+                        <span className="text-sm text-muted-foreground">jona@fels-coach.de</span>
                       </div>
                     </a>
                     <a
