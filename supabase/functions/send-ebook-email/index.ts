@@ -134,7 +134,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // 1) E-Mail an Kunde mit Download-Link
     const customerEmail = await resend.emails.send({
-      from: "Jona Fels <jona@fels-coach.de>",
+      from: "Jona Fels <jona@resend.fels-coach.de>",
       to: [trimmedEmail],
       replyTo: "jona@fels-coach.de",
       subject: "Dein E-Book: Der Weg zum Ganzsein",
@@ -182,7 +182,7 @@ const handler = async (req: Request): Promise<Response> => {
     // 2) Benachrichtigung an Jona (Best-effort)
     try {
       await resend.emails.send({
-        from: "E-Book Lead <jona@fels-coach.de>",
+        from: "E-Book Lead <jona@resend.fels-coach.de>",
         to: ["jona@fels-coach.de"],
         replyTo: trimmedEmail,
         subject: `Neuer E-Book Download: ${trimmedName}`,
