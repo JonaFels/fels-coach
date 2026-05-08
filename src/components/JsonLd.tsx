@@ -16,6 +16,8 @@ export const JsonLd = () => {
             "Jona Fels – Familienaufstellung Freiburg",
             "Jona Fels – Systemischer Coach Freiburg",
             "Familienstellen Freiburg – Jona Fels",
+            "Familienstellen Einzelsitzung Freiburg",
+            "Familienstellen Einzelsetting Freiburg",
           ],
           url: "https://fels-coach.de",
           telephone: "+4917667608617",
