@@ -84,6 +84,7 @@ export const JsonLd = () => {
             "Familienstellen Einzelsitzung Freiburg",
             "Familienstellen Einzelsetting Freiburg",
             "Familienaufstellung Einzelsitzung",
+            "Familienaufstellung Einzelsitzung Freiburg",
             "Familienaufstellung Einzelsetting",
             "Einzelaufstellung Freiburg",
             "Familienstellen 1 zu 1",
