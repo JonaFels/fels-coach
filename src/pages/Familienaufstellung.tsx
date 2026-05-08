@@ -112,20 +112,40 @@ const Familienaufstellung = () => {
               Familienstellen Einzelsitzung & Einzelsetting in Freiburg
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong>Familienaufstellung</strong> und <strong>Familienstellen</strong> meinen dasselbe:
-              eine systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner
-              Herkunftsfamilie sichtbar macht.
+              <strong>Familienaufstellung</strong> – auch <strong>Familienstellen</strong> genannt – ist eine
+              systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner Herkunftsfamilie
+              sichtbar macht.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit ausschließlich als
-              <strong> Familienstellen Einzelsitzung</strong> im geschützten <strong>Einzelsetting</strong> (1:1)
-              an. Statt fremder Stellvertreter nutzen wir Bodenanker, mit denen du dein Familiensystem in
-              Ruhe betrachten, neue Perspektiven einnehmen und alte Muster Schritt für Schritt lösen kannst.
+              In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit als{" "}
+              <Link
+                to="/blog/familienstellen-in-einer-einzelsitzung"
+                className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+              >
+                Familienstellen-Einzelsitzung im geschützten 1:1-Setting
+              </Link>{" "}
+              an. Statt mit fremden Stellvertretern arbeiten wir mit Bodenankern – kleinen Markierungen am
+              Boden, die für die Mitglieder deines Familiensystems stehen. So kannst du dein System in Ruhe
+              betrachten, neue Perspektiven einnehmen und alte Muster Schritt für Schritt lösen.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Eine <strong>Einzelaufstellung</strong> – auch <strong>Familienstellen im Einzelsetting</strong> genannt –
-              eignet sich besonders, wenn du dein Thema in einem geschützten, vertraulichen Rahmen bearbeiten
-              möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Dauer einer Sitzung: 80 Minuten.
+              Eine <strong>Einzelaufstellung</strong> eignet sich besonders, wenn du dein Thema in einem
+              vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Wie eine
+              solche Sitzung konkret abläuft, beschreibe ich ausführlich im Beitrag{" "}
+              <Link
+                to="/blog/familienstellen-in-einer-einzelsitzung"
+                className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+              >
+                „Familienstellen in einer Einzelsitzung"
+              </Link>
+              . Wenn dich die Wirkungsweise dahinter interessiert, findest du mehr dazu im Artikel{" "}
+              <Link
+                to="/blog/das-wissende-feld-wahrnehmung-beim-familienstellen"
+                className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+              >
+                „Das wissende Feld"
+              </Link>
+              . Eine Sitzung dauert 80 Minuten.
             </p>
           </div>
         </section>
