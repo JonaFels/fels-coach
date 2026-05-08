@@ -102,25 +102,30 @@ const Familienaufstellung = () => {
           </div>
         </section>
 
-        {/* Synonym / SEO Section: Familienstellen = Familienaufstellung */}
-        <section id="familienstellen" aria-labelledby="familienstellen-heading" className="py-16 md:py-20">
+        {/* Synonym / SEO Section: Familienstellen Einzelsitzung & Einzelsetting */}
+        <section id="familienstellen-einzelsitzung" aria-labelledby="familienstellen-heading" className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2
               id="familienstellen-heading"
               className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4"
             >
-              Familienaufstellung – auch bekannt als Familienstellen
+              Familienstellen Einzelsitzung & Einzelsetting in Freiburg
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong>Familienaufstellung</strong> und <strong>Familienstellen</strong> meinen dasselbe:
               eine systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner
               Herkunftsfamilie sichtbar macht.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit ausschließlich als
+              <strong> Familienstellen Einzelsitzung</strong> im geschützten <strong>Einzelsetting</strong> (1:1)
+              an. Statt fremder Stellvertreter nutzen wir Bodenanker, mit denen du dein Familiensystem in
+              Ruhe betrachten, neue Perspektiven einnehmen und alte Muster Schritt für Schritt lösen kannst.
+            </p>
             <p className="text-muted-foreground leading-relaxed">
-              In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit als
-              Einzelaufstellung im geschützten 1:1 Setting an. Statt fremder Stellvertreter nutzen wir
-              Bodenanker, mit denen du dein Familiensystem in Ruhe betrachten, neue Perspektiven
-              einnehmen und alte Muster Schritt für Schritt lösen kannst.
+              Eine <strong>Einzelaufstellung</strong> – auch <strong>Familienstellen im Einzelsetting</strong> genannt –
+              eignet sich besonders, wenn du dein Thema in einem geschützten, vertraulichen Rahmen bearbeiten
+              möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Dauer einer Sitzung: 80 Minuten.
             </p>
           </div>
         </section>
