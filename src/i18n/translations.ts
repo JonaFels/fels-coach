@@ -879,8 +879,8 @@ export const translations: Translations = {
     en: "I accompany people in recognizing and dissolving unconscious patterns. With precision and deep compassion, I support you on your path to more clarity and inner peace.",
   },
   "author.credential1": {
-    de: "Familienaufsteller i.A.",
-    en: "Family Constellation Facilitator in Training",
+    de: "Familienaufsteller",
+    en: "Family Constellation Facilitator",
   },
   "author.credential3": {
     de: "Achtsame Begleitung",
@@ -893,12 +893,12 @@ export const translations: Translations = {
     en: "Trust features",
   },
   "trust.certified": {
-    de: "In Ausbildung",
-    en: "In Training",
+    de: "Ausgebildet",
+    en: "Certified",
   },
   "trust.certifiedDesc": {
-    de: "Familienaufsteller i.A.",
-    en: "Family constellation facilitator in training",
+    de: "Familienaufsteller",
+    en: "Family constellation facilitator",
   },
   "trust.location": {
     de: "Präsenz in Freiburg",
