@@ -30,8 +30,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Appointments & Prices – Family Constellation Freiburg | Jona Fels", description: "Book your systemic coaching or family constellation in Freiburg. Intro session €40, coaching with individual constellation €70 – free first call included." },
   },
   "/systemische-familienaufstellung-freiburg": {
-    de: { title: "Familienaufstellung Freiburg – Einzelsitzungen mit Bodenankern | Jona Fels", description: "Systemische Familienaufstellung in Freiburg im 1:1 Setting mit Bodenankern. Löse unbewusste Verstrickungen und alte Familienmuster. Jetzt 30-Min-Erstgespräch buchen." },
-    en: { title: "Family Constellation Freiburg – 1:1 Sessions with Floor Anchors | Jona Fels", description: "Systemic family constellation in Freiburg in a 1:1 setting with floor anchors. Dissolve unconscious entanglements and old family patterns. Book your free 30-min intro now." },
+    de: { title: "Familienstellen Einzelsitzung & Einzelsetting Freiburg | Jona Fels", description: "Familienstellen als Einzelsitzung im 1:1 Einzelsetting in Freiburg. Systemische Familienaufstellung mit Bodenankern – ohne Gruppe, vertraulich. Jetzt Erstgespräch buchen." },
+    en: { title: "Family Constellation 1:1 Session Freiburg | Jona Fels", description: "Family constellation as a 1:1 individual session in Freiburg. Systemic work with floor anchors – no group, fully confidential. Book your free intro now." },
   },
   "/impulse": {
     de: { title: "Impulse zur Familienaufstellung – Freiburg | Jona Fels", description: "Kostenlose Impulse rund um Familienaufstellung & systemisches Coaching: Erkenne unbewusste Familienmuster, finde zurück zu dir selbst und werde zum Fels in deinem Leben." },
