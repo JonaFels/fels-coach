@@ -109,7 +109,7 @@ const Familienaufstellung = () => {
               id="familienstellen-heading"
               className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4"
             >
-              Familienstellen Einzelsitzung & Einzelsetting in Freiburg
+              Familienaufstellung Einzelsitzung in Freiburg – 1:1 mit Bodenankern
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong>Familienaufstellung</strong> – auch <strong>Familienstellen</strong> genannt – ist eine
