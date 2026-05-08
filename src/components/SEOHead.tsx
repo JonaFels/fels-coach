@@ -76,7 +76,7 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     const meta = pageMeta[pathname]?.[language] || defaultMeta[language];
     const pageTitle = title || meta.title;
     const pageDescription = description || meta.description;
-    const rawImage = image || "https://fels-coach.de/og-image.webp?v=2";
+    const rawImage = image || "https://fels-coach.de/og-image.webp?v=3";
     // Open Graph braucht ABSOLUTE URLs (sonst zieht Facebook/LinkedIn das Bild nicht).
     // Vite-Asset-Imports (z. B. /assets/blog-xxx.webp) zur Domain ergänzen.
     const pageImage = rawImage.startsWith("http")
