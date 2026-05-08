@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
+import { RelatedPosts } from "@/components/RelatedPosts";
 
 
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -179,6 +180,8 @@ const BlogPost = () => {
 
               <AuthorBox />
             </article>
+
+            <RelatedPosts currentSlug={post.slug} />
         </div>
       </main>
       <Footer />
