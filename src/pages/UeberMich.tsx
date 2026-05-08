@@ -72,6 +72,31 @@ const UeberMich = () => {
               <p>{t("about.guidance1")}</p>
               <p>{t("about.guidance2")}</p>
               <p>{t("about.guidance3")}</p>
+              <p>
+                {language === "de" ? (
+                  <>
+                    Wie ich konkret arbeite, erfährst du auf der Seite zur{" "}
+                    <Link
+                      to="/systemische-familienaufstellung-freiburg"
+                      className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+                    >
+                      systemischen Familienaufstellung in Freiburg
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    To see how I actually work, visit the page on{" "}
+                    <Link
+                      to="/systemische-familienaufstellung-freiburg"
+                      className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+                    >
+                      systemic family constellation in Freiburg
+                    </Link>
+                    .
+                  </>
+                )}
+              </p>
             </div>
           </div>
         </section>
