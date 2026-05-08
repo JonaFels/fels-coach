@@ -48,3 +48,23 @@ div[class*="orbnet"][style*="position: fixed"] {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+/* Mobile-Scroll-Fix für Orbnet-Booking-Widget:
+   Das Widget blockiert auf dem Smartphone vertikales Scrollen über
+   dem Formularbereich. touch-action: pan-y erlaubt dem Browser, die
+   Scroll-Geste an den umgebenden Modal-/Seiten-Container zu geben. */
+.orbnet-booking-mask,
+.orbnet-booking-mask * {
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Inputs/Buttons innerhalb des Widgets dürfen weiterhin Tap empfangen –
+   nur Container-Drags werden an den Seiten-Scroll weitergereicht. */
+.orbnet-booking-mask input,
+.orbnet-booking-mask textarea,
+.orbnet-booking-mask select,
+.orbnet-booking-mask button,
+.orbnet-booking-mask [role="button"] {
+  touch-action: manipulation !important;
+}
