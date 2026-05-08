@@ -180,6 +180,8 @@ const BlogPost = () => {
 
               <AuthorBox />
             </article>
+
+            <RelatedPosts currentSlug={post.slug} />
         </div>
       </main>
       <Footer />
