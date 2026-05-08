@@ -209,7 +209,7 @@ export const JsonLd = () => {
             {
               "@type": "EducationalOccupationalCredential",
               credentialCategory: "Ausbildung",
-              name: "Systemischer Familienaufsteller (in Ausbildung)",
+              name: "Systemischer Familienaufsteller",
             },
             {
               "@type": "EducationalOccupationalCredential",
