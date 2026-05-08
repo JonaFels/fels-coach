@@ -31,7 +31,7 @@ const offerings = [
 ];
 
 const Angebote = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { openBooking, BookingDialog } = useOrbnetBooking();
   const booking = useErstgespraech();
 
