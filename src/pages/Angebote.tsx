@@ -84,8 +84,33 @@ const Angebote = () => {
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.ablaufTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
+            <p className="text-sm text-muted-foreground text-center mb-4 leading-relaxed">
               {t("offerings.ablaufIntro")}
+            </p>
+            <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
+              {language === "de" ? (
+                <>
+                  Ausführlich erklärt findest du die Methode auf der Seite zur{" "}
+                  <Link
+                    to="/systemische-familienaufstellung-freiburg"
+                    className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+                  >
+                    systemischen Familienaufstellung
+                  </Link>
+                  .
+                </>
+              ) : (
+                <>
+                  You can read about the method in detail on the page about{" "}
+                  <Link
+                    to="/systemische-familienaufstellung-freiburg"
+                    className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+                  >
+                    systemic family constellation
+                  </Link>
+                  .
+                </>
+              )}
             </p>
             <ol className="space-y-6">
               {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (
