@@ -16,7 +16,7 @@ import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
 
 const UeberMich = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { getImage } = useCMS();
   const portrait = getImage("about.image", profilBild);
   const heroRef = useRef<HTMLDivElement>(null);
