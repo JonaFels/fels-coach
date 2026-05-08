@@ -16,6 +16,7 @@ export const JsonLd = () => {
             "Jona Fels – Familienaufstellung Freiburg",
             "Jona Fels – Systemischer Coach Freiburg",
             "Familienstellen Freiburg – Jona Fels",
+            "Familienaufstellung Einzelsitzung Freiburg",
             "Familienstellen Einzelsitzung Freiburg",
             "Familienstellen Einzelsetting Freiburg",
           ],
