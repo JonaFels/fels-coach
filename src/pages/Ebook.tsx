@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { useCMS } from "@/contexts/CMSContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -22,8 +23,9 @@ const Ebook = () => {
       <Header />
 
       <main id="main-content" className="flex-1">
+        <PraxisHeroBanner variant="sitzbereich" />
         {/* Header */}
-        <section className="pt-14 pb-10 md:pt-20 md:pb-14">
+        <section className="pt-8 pb-10 md:pt-12 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
               Impulse
