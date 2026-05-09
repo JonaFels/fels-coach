@@ -55,7 +55,14 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
             <X className="h-5 w-5" />
           </Button>
         </div>
-        <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
+        <div className="relative">
+          <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
+          {/* Overlay to hide Orbnet language flag inside the embedded widget */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute top-0 right-0 h-12 w-14 bg-background"
+          />
+        </div>
       </div>
     </div>
   );
