@@ -2,6 +2,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Calendar, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+declare global {
+  interface Window {
+    loadCustomCssOverrides?: () => void;
+  }
+}
+
 interface OrbnetDialogProps {
   semuid: string;
   open: boolean;
