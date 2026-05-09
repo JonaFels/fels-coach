@@ -89,12 +89,19 @@ const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => 
             <X className="h-5 w-5" />
           </Button>
         </div>
-        <iframe
-          src={url}
-          className="flex-1 w-full rounded-b-2xl"
-          title="Orbnet Terminbuchung"
-          allow="payment"
-        />
+        <div className="relative flex-1">
+          <iframe
+            src={url}
+            className="absolute inset-0 w-full h-full rounded-b-2xl"
+            title="Orbnet Terminbuchung"
+            allow="payment"
+          />
+          {/* Overlay to hide Orbnet language flag (cross-origin iframe, CSS injection not possible) */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute top-0 right-0 h-12 w-14 bg-background rounded-bl-md"
+          />
+        </div>
       </div>
     </div>
   );
