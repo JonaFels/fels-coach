@@ -5,7 +5,7 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
-import { LazyMount } from "@/components/LazyMount";
+
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
@@ -39,24 +39,16 @@ const Index = () => {
           <AboutPreview />
         </ScrollFadeIn>
         <Suspense fallback={null}>
-          <LazyMount minHeight="400px">
-            <ScrollFadeIn>
-              <TestimonialsSection />
-            </ScrollFadeIn>
-          </LazyMount>
-          <LazyMount minHeight="400px">
-            <ScrollFadeIn>
-              <MethodSection />
-            </ScrollFadeIn>
-          </LazyMount>
-          <LazyMount minHeight="500px">
-            <ScrollFadeIn>
-              <FAQSection />
-            </ScrollFadeIn>
-          </LazyMount>
-          <LazyMount minHeight="300px">
-            <FinalCTA />
-          </LazyMount>
+          <ScrollFadeIn>
+            <TestimonialsSection />
+          </ScrollFadeIn>
+          <ScrollFadeIn>
+            <MethodSection />
+          </ScrollFadeIn>
+          <ScrollFadeIn>
+            <FAQSection />
+          </ScrollFadeIn>
+          <FinalCTA />
         </Suspense>
       </main>
       <Suspense fallback={null}>
