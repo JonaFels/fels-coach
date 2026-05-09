@@ -757,6 +757,22 @@ export const translations: Translations = {
     de: "Der Wendepunkt meiner persönlichen Transformation.",
     en: "The turning point of my personal transformation.",
   },
+  "about.cv4.year": {
+    de: "seit Mai 2026",
+    en: "since May 2026",
+  },
+  "about.cv4.title": {
+    de: "Gestalttherapie-Ausbildung",
+    en: "Gestalt Therapy Training",
+  },
+  "about.cv4.desc": {
+    de: "Ausbildung zur Gestalttherapie – Vertiefung in der therapeutischen Begleitung mit Gestaltmethodik und achtsamer Wahrnehmung.",
+    en: "Training in Gestalt therapy – deepening therapeutic accompaniment with Gestalt methodology and mindful awareness.",
+  },
+  "about.cv4.badge": {
+    de: "laufend",
+    en: "ongoing",
+  },
 
   // Legal Pages
   "privacy.title": {
