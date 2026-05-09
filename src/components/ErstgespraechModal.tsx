@@ -94,7 +94,14 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           </div>
 
           {/* Orbnet Kalender via Script-Injection */}
-          <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
+          <div className="relative">
+            <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
+            {/* Overlay um den 'Sprache: 🇬🇧'-Schalter zu verdecken (Cross-Origin) */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute top-6 md:top-8 right-6 md:right-8 h-12 w-40 bg-background"
+            />
+          </div>
         </div>
       </div>
     </div>
