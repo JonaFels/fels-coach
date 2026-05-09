@@ -121,7 +121,25 @@ const UeberMich = () => {
               {t("about.cv.title")}
             </h2>
             <div className="space-y-6">
-              {/* Current entry – subtle highlight */}
+              {/* Current entry – Gestalttherapie */}
+              <div className="border-l-2 border-secondary pl-5 py-1">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
+                  <span className="text-sm font-semibold text-secondary">
+                    {t("about.cv4.year")}
+                  </span>
+                  <span className="text-xs text-muted-foreground italic">
+                    {t("about.cv4.badge")}
+                  </span>
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
+                  {t("about.cv4.title")}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {t("about.cv4.desc")}
+                </p>
+              </div>
+
+              {/* Current entry – Familiensteller */}
               <div className="border-l-2 border-secondary pl-5 py-1">
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
                   <span className="text-sm font-semibold text-secondary">
