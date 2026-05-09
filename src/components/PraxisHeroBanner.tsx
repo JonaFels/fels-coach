@@ -32,7 +32,7 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
         alt={alt}
         className="w-full h-full object-cover object-center"
         loading="eager"
-        fetchPriority="high"
+        fetchpriority="high"
         decoding="async"
         width={1400}
         height={583}
