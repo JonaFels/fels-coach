@@ -21,6 +21,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
   useEffect(() => {
     if (!open || !containerRef.current) return;
+    window.loadCustomCssOverrides?.();
 
     // Clear previous widget content
     while (containerRef.current.firstChild) {
