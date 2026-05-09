@@ -2,6 +2,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Calendar, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+declare global {
+  interface Window {
+    loadCustomCssOverrides?: () => void;
+  }
+}
+
 interface OrbnetDialogProps {
   semuid: string;
   open: boolean;
@@ -13,6 +19,7 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
 
   useEffect(() => {
     if (!open || !containerRef.current) return;
+    window.loadCustomCssOverrides?.();
 
     // Clear previous widget content safely
     while (containerRef.current.firstChild) {
@@ -78,6 +85,7 @@ interface OrbnetIframeDialogProps {
 const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => {
   useEffect(() => {
     if (!open) return;
+    window.loadCustomCssOverrides?.();
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, [open]);

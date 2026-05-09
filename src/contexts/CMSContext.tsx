@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { cmsRegistryByKey } from "@/cms/registry";
 
 interface CMSRow {
@@ -31,6 +30,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const load = useCallback(async () => {
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
       const { data, error } = await supabase
         .from("site_content")
         .select("key, value, type, category");

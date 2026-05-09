@@ -26,10 +26,6 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#6B2E2E" />
 
-    <!-- Preconnect zu Supabase: verkürzt kritische Kette (TLS/DNS bereits warm, sobald CMS-Anfrage startet) -->
-    <link rel="preconnect" href="https://ywqucntgzlsrrefjfntk.supabase.co" crossorigin />
-    <link rel="dns-prefetch" href="https://ywqucntgzlsrrefjfntk.supabase.co" />
-
     <!-- Font Preload entfernt: Vite hasht Asset-URLs (/assets/...woff2), 
          feste /fonts/-Pfade liefen ins Leere. Fontsource-CSS lädt fonts direkt mit. -->
 
@@ -72,9 +68,11 @@
     <meta name="twitter:image" content="https://fels-coach.de/og-image.webp?v=3" />
     <meta name="twitter:image:alt" content="Jona Fels – Systemisches Coaching & Familienaufstellung in Freiburg" />
 
-    <!-- Custom CSS - Bearbeitbar auf dem Server (non-blocking) -->
-    <link rel="preload" href="/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/custom.css" /></noscript>
+    <!-- Custom CSS bleibt editierbar, wird aber erst nach dem Seitenaufbau oder bei Termin-Interaktion geladen. -->
+    <script>
+      window.loadCustomCssOverrides=function(){if(document.querySelector('link[href="/custom.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href='/custom.css';document.head.appendChild(l)};
+      window.addEventListener('load',function(){window.setTimeout(window.loadCustomCssOverrides,12000)},{once:true});
+    </script>
   </head>
 
   <body>

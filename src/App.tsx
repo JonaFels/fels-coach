@@ -1,13 +1,10 @@
 import { lazy, Suspense } from "react";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 
 // Lazy: ChatbaseWidget ist nicht LCP-kritisch
 const ChatbaseWidget = lazy(() => import("@/components/ChatbaseWidget").then((m) => ({ default: m.ChatbaseWidget })));
@@ -35,8 +32,6 @@ const ProtectedRouteLazy = lazy(() =>
   import("./components/admin/ProtectedRoute").then((m) => ({ default: m.ProtectedRoute }))
 );
 
-const queryClient = new QueryClient();
-
 // Separate component for tracking (needs Router context)
 const AppTracking = () => {
   useAppTracking();
@@ -49,53 +44,48 @@ const RouteFallback = () => (
 );
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <CMSProvider>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <AppTracking />
-            <ScrollToTop />
-            <Suspense fallback={null}>
-              <ChatbaseWidget />
-            </Suspense>
-            <HashBookingTrigger>
-              <Suspense fallback={<RouteFallback />}>
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/angebote" element={<Angebote />} />
-                  <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
-                  <Route path="/impulse" element={<Impulse />} />
-                  {/* Legacy redirect: /ebook -> /impulse (301 via Cloudflare Bulk Redirects; client fallback) */}
-                  <Route path="/ebook" element={<Impulse />} />
-                  <Route path="/kontakt" element={<Kontakt />} />
-                  <Route path="/ueber-mich" element={<UeberMich />} />
-                  <Route path="/datenschutz" element={<Datenschutz />} />
-                  <Route path="/impressum" element={<Impressum />} />
-                  <Route path="/agb" element={<AGB />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blog/:slug" element={<BlogPost />} />
-                  <Route path="/admin/login" element={<AdminLogin />} />
-                  <Route
-                    path="/admin"
-                    element={
-                      <ProtectedRouteLazy>
-                        <AdminDashboard />
-                      </ProtectedRouteLazy>
-                    }
-                  />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
-            </HashBookingTrigger>
-          </BrowserRouter>
-        </TooltipProvider>
-      </LanguageProvider>
-    </CMSProvider>
-  </QueryClientProvider>
+  <CMSProvider>
+    <LanguageProvider>
+      <Toaster />
+      <BrowserRouter>
+        <AppTracking />
+        <ScrollToTop />
+        <Suspense fallback={null}>
+          <ChatbaseWidget />
+        </Suspense>
+        <HashBookingTrigger>
+          <Suspense fallback={<RouteFallback />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/angebote" element={<Angebote />} />
+              <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
+              <Route path="/impulse" element={<Impulse />} />
+              {/* Legacy redirect: /ebook -> /impulse (301 via Cloudflare Bulk Redirects; client fallback) */}
+              <Route path="/ebook" element={<Impulse />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/ueber-mich" element={<UeberMich />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/agb" element={<AGB />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route
+                path="/admin"
+                element={
+                  <ProtectedRouteLazy>
+                    <AdminDashboard />
+                  </ProtectedRouteLazy>
+                }
+              />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </HashBookingTrigger>
+      </BrowserRouter>
+    </LanguageProvider>
+  </CMSProvider>
 );
 
 export default App;

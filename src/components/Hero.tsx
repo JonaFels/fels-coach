@@ -11,6 +11,7 @@ export const Hero = () => {
   const { t } = useLanguage();
   const { getImage } = useCMS();
   const booking = useErstgespraech();
+  const priorityProps = { fetchpriority: "high" } as Record<string, string>;
   const heroImg = getImage("hero.image", profilBild);
   const heroImgMobile = getImage("hero.image_mobile", profilBildMobile);
 
@@ -65,7 +66,7 @@ export const Hero = () => {
                   className="w-full h-full object-cover object-[center_18%]"
                   loading="eager"
                   decoding="async"
-                  fetchPriority="high"
+                  {...priorityProps}
                   width="320"
                   height="427"
                 />
