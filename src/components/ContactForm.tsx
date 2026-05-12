@@ -69,6 +69,10 @@ export const ContactForm = () => {
       const workerUrl = import.meta.env.VITE_WORKER_URL as string | undefined;
 
       if (!workerUrl) {
+        console.error(
+          "[ContactForm] VITE_WORKER_URL ist nicht gesetzt. " +
+          "Bitte die Umgebungsvariable in Cloudflare Pages (Settings → Environment variables) hinterlegen und neu deployen."
+        );
         toast({
           title: t("contactForm.error.notConfigured"),
           variant: "destructive",
