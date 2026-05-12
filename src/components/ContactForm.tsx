@@ -10,7 +10,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { trackContactFormSubmit, trackFormInteraction } from "@/lib/tracking";
-import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "required").max(100),
@@ -67,32 +66,27 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const workerUrl = import.meta.env.VITE_CONTACT_WORKER_URL as string | undefined;
+      const workerUrl = import.meta.env.VITE_WORKER_URL as string | undefined;
 
-      if (workerUrl) {
-        // Cloudflare Worker (Lovable-unabhängig)
-        const res = await fetch(workerUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-            website: formData.website || "",
-          }),
+      if (!workerUrl) {
+        toast({
+          title: t("contactForm.error.notConfigured"),
+          variant: "destructive",
         });
-        if (!res.ok) throw new Error(`Worker ${res.status}`);
-      } else {
-        // Fallback: Supabase Edge Function
-        const { error } = await supabase.functions.invoke("send-contact-request", {
-          body: {
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-          },
-        });
-        if (error) throw error;
+        return;
       }
+
+      const res = await fetch(workerUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          website: formData.website || "",
+        }),
+      });
+      if (!res.ok) throw new Error(`Worker ${res.status}`);
 
       setIsSuccess(true);
       trackContactFormSubmit(true);

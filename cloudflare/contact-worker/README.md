@@ -5,7 +5,7 @@ Receives the contact form POST and sends a notification email via Resend.
 
 This makes the contact form independent of Lovable / Supabase. The
 Lovable project can be deleted; as long as this Worker runs on Cloudflare
-and `VITE_CONTACT_WORKER_URL` is set in the GitHub Pages build, the form
+and `VITE_WORKER_URL` is set in the GitHub Pages build, the form
 keeps working.
 
 ---
@@ -47,7 +47,7 @@ in the Cloudflare dashboard.)
 ### 5. Tell the website to use it
 Add to your GitHub Actions build env / `.env.production`:
 ```
-VITE_CONTACT_WORKER_URL=https://fels-coach-contact.<your-subdomain>.workers.dev
+VITE_WORKER_URL=https://fels-coach-contact.<your-subdomain>.workers.dev
 ```
 Rebuild and deploy the site. Done.
 
