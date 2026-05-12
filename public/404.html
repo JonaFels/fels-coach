@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=/" />
     <title>Weiterleitung – Fels-Coach</title>
     <script>
-      // SPA-Fallback: GitHub Pages liefert diese Datei bei Deep-Links.
-      // Wir behalten den ursprünglichen Pfad (inkl. Query/Hash) bei und
-      // laden index.html, damit der React-Router übernehmen kann.
+      // SPA-Fallback für GitHub Pages (rafgraph/spa-github-pages).
+      // GitHub Pages liefert bei jedem Deep-Link 404.html aus.
+      // Wir kodieren den Pfad als Query-String, leiten auf / weiter,
+      // und index.html stellt den ursprünglichen Pfad im History-API wieder her.
       (function () {
-        var path = window.location.pathname + window.location.search + window.location.hash;
-        window.location.replace(path === "/404" ? "/" : path);
+        var pathSegmentsToKeep = 0; // 0 für Custom Domain (fels-coach.de)
+        var l = window.location;
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
       })();
     </script>
   </head>
