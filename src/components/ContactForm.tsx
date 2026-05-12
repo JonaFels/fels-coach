@@ -67,16 +67,31 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke("send-contact-request", {
-        body: {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-      });
+      const workerUrl = import.meta.env.VITE_CONTACT_WORKER_URL as string | undefined;
 
-      if (error) {
-        throw error;
+      if (workerUrl) {
+        // Cloudflare Worker (Lovable-unabhängig)
+        const res = await fetch(workerUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            website: formData.website || "",
+          }),
+        });
+        if (!res.ok) throw new Error(`Worker ${res.status}`);
+      } else {
+        // Fallback: Supabase Edge Function
+        const { error } = await supabase.functions.invoke("send-contact-request", {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          },
+        });
+        if (error) throw error;
       }
 
       setIsSuccess(true);
