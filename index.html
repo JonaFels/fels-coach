@@ -73,20 +73,6 @@
       window.loadCustomCssOverrides=function(){if(document.querySelector('link[href="/custom.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href='/custom.css';document.head.appendChild(l)};
       window.addEventListener('load',function(){window.setTimeout(window.loadCustomCssOverrides,12000)},{once:true});
     </script>
-    <!-- SPA-Fallback-Decoder für GitHub Pages: stellt Pfad aus 404.html wieder her,
-         BEVOR React Router lädt. Muss vor allen Modul-Scripts stehen. -->
-    <script>
-      (function (l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function (s) {
-            return s.replace(/~and~/g, '&');
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
   </head>
 
   <body>
