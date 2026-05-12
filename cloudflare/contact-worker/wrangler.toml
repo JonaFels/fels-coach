@@ -1,0 +1,11 @@
+name = "fels-coach-contact"
+main = "src/worker.ts"
+compatibility_date = "2025-01-01"
+
+[vars]
+NOTIFY_TO = "jona@fels-coach.de"
+NOTIFY_FROM = "Kontaktformular <kontakt@fels-coach.de>"
+ALLOWED_ORIGIN = "https://fels-coach.de"
+
+# Set the secret once via:
+#   wrangler secret put RESEND_API_KEY
