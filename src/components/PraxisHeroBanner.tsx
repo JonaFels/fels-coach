@@ -25,7 +25,7 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
       : "Coaching-Praxis von Jona Fels in Freiburg – einladender Sitzbereich mit Sofa, Sessel und warmem Licht";
 
   return (
-    <div className="w-full h-32 sm:h-40 md:h-[40vh] md:max-h-[400px] lg:h-[42vh] lg:max-h-[450px] overflow-hidden relative">
+    <div className="w-full h-28 sm:h-36 md:h-[30vh] md:max-h-[280px] lg:h-[32vh] lg:max-h-[320px] overflow-hidden relative">
       <img
         src={image}
         srcSet={`${imageMobile} 800w, ${image} 1400w`}
