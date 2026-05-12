@@ -25,7 +25,7 @@ const Ebook = () => {
       <main id="main-content" className="flex-1">
         <PraxisHeroBanner variant="sitzbereich" />
         {/* Header */}
-        <section className="pt-8 pb-10 md:pt-12 md:pb-14">
+        <section className="pt-16 pb-16 md:pt-24 md:pb-20">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
               Impulse
@@ -40,7 +40,7 @@ const Ebook = () => {
         </section>
 
         {/* Intro */}
-        <section className="pb-10 md:pb-14">
+        <section className="pb-20 md:pb-28">
           <div className="container mx-auto px-4 max-w-3xl space-y-5 text-muted-foreground leading-relaxed">
             <p>
               In meiner Praxis erlebe ich oft, dass Menschen intellektuell längst verstehen,
