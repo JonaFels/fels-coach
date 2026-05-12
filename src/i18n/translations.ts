@@ -1002,6 +1002,10 @@ export const translations: Translations = {
     de: "Fehler beim Senden. Bitte versuche es erneut.",
     en: "Error sending. Please try again.",
   },
+  "contactForm.error.notConfigured": {
+    de: "Das Kontaktformular ist noch nicht vollständig eingerichtet. Bitte versuche es später erneut.",
+    en: "The contact form is not fully configured yet. Please try again later.",
+  },
   "contactForm.required": {
     de: "Pflichtfeld",
     en: "Required",
