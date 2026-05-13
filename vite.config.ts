@@ -4,6 +4,24 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 /**
+ * Macht alle vite-injizierten <link rel="stylesheet"> non-blocking via
+ * preload+onload-Trick. Beseitigt render-blocking CSS (~300ms LCP-Gewinn).
+ * Critical CSS für above-the-fold ist bereits in index.html inlined.
+ */
+const asyncCssPlugin = (): Plugin => ({
+  name: "async-css",
+  apply: "build",
+  transformIndexHtml(html) {
+    return html.replace(
+      /<link rel="stylesheet"(?:\s+crossorigin)?\s+href="([^"]+\.css)">/g,
+      (_m, href) =>
+        `<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'">` +
+        `<noscript><link rel="stylesheet" href="${href}"></noscript>`
+    );
+  },
+});
+
+/**
  * Preloadet das LCP-Bild (Praxis-Sitzbereich, 800w-Variante für Mobile,
  * 1400w für Desktop) bereits im <head>, bevor JS geparsed wird.
  * Reduziert "Resource Load Delay" drastisch (~6s -> <500ms).
@@ -51,6 +69,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
+    asyncCssPlugin(),
     lcpImagePreloadPlugin(),
   ].filter(Boolean),
   resolve: {
