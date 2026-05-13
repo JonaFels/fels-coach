@@ -77,10 +77,10 @@ export const MailerLiteSignup = () => {
                 Trägst du Lasten, die gar nicht dir gehören?
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">
-                Begleite mich 42 Tage lang auf einer leisen Reise zu dir
-                selbst. Alle sechs Tage erreicht dich ein tiefer Impuls zu
-                Familienmustern, Emotionsarbeit und gesunder Abgrenzung –
-                direkt in dein Postfach.
+                Begleite mich auf einer leisen Reise zu dir selbst. Alle
+                sieben Tage erreicht dich ein tiefer Impuls zu Familienmustern,
+                Emotionsarbeit und gesunder Abgrenzung – direkt in dein
+                Postfach.
               </p>
             </div>
 
