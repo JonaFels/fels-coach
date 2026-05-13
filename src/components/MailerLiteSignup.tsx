@@ -71,16 +71,16 @@ export const MailerLiteSignup = () => {
           <>
             <div className="text-center mb-10 md:mb-12">
               <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-                42-Tage-Impulsreise
+                Wöchentliche Impulsreise
               </p>
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-tight mb-4">
                 Trägst du Lasten, die gar nicht dir gehören?
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">
-                Begleite mich 42 Tage lang auf einer leisen Reise zu dir
-                selbst. Alle sechs Tage erreicht dich ein tiefer Impuls zu
-                Familienmustern, Emotionsarbeit und gesunder Abgrenzung –
-                direkt in dein Postfach.
+                Begleite mich auf einer leisen Reise zu dir selbst. Alle
+                sieben Tage erreicht dich ein tiefer Impuls zu Familienmustern,
+                Emotionsarbeit und gesunder Abgrenzung – direkt in dein
+                Postfach.
               </p>
             </div>
 
