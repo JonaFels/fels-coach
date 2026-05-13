@@ -94,6 +94,8 @@ const Ebook = () => {
             </div>
           </div>
         </section>
+
+        <MailerLiteSignup />
       </main>
       <Footer />
       <CookieBanner />
