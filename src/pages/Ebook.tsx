@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import { MailerLiteSignup } from "@/components/MailerLiteSignup";
 import { useCMS } from "@/contexts/CMSContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -93,6 +94,8 @@ const Ebook = () => {
             </div>
           </div>
         </section>
+
+        <MailerLiteSignup />
       </main>
       <Footer />
       <CookieBanner />
