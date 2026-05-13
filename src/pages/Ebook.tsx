@@ -3,6 +3,7 @@ import ebookMockup from "@/assets/ebook-tablet-mockup.webp";
 import { Button } from "@/components/ui/button";
 
 import { Header } from "@/components/Header";
+import { MailerLiteCourseForm } from "@/components/MailerLiteCourseForm";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
@@ -91,6 +92,13 @@ const Ebook = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* E-Mail-Kurs */}
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <MailerLiteCourseForm />
           </div>
         </section>
       </main>
