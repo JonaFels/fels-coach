@@ -7,6 +7,7 @@ const MAILERLITE_ENDPOINT =
   "https://assets.mailerlite.com/jsonp/1636736/forms/187371615369037675/subscribe";
 
 export const MailerLiteCourseForm = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // honeypot
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -20,6 +21,7 @@ export const MailerLiteCourseForm = () => {
 
     try {
       const formData = new FormData();
+      formData.append("fields[name]", name);
       formData.append("fields[email]", email);
       formData.append("ml-submit", "1");
       formData.append("anticsrf", "true");
@@ -31,6 +33,7 @@ export const MailerLiteCourseForm = () => {
       });
 
       setStatus("success");
+      setName("");
       setEmail("");
     } catch (err) {
       console.error("MailerLite subscribe error", err);
@@ -69,9 +72,22 @@ export const MailerLiteCourseForm = () => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          className="flex flex-col gap-3 max-w-md mx-auto"
           noValidate
         >
+          <label htmlFor="ml-course-name" className="sr-only">
+            Name
+          </label>
+          <Input
+            id="ml-course-name"
+            type="text"
+            autoComplete="name"
+            placeholder="Dein Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="h-12"
+            disabled={status === "loading"}
+          />
           <label htmlFor="ml-course-email" className="sr-only">
             E-Mail-Adresse
           </label>
@@ -83,7 +99,7 @@ export const MailerLiteCourseForm = () => {
             placeholder="Deine E-Mail-Adresse"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 flex-1"
+            className="h-12"
             disabled={status === "loading"}
           />
           <input
@@ -100,7 +116,7 @@ export const MailerLiteCourseForm = () => {
             type="submit"
             size="lg"
             disabled={status === "loading"}
-            className="h-12 min-h-[48px] sm:w-auto"
+            className="h-12 min-h-[48px]"
           >
             {status === "loading" ? "Wird gesendet…" : "Kurs starten"}
           </Button>
