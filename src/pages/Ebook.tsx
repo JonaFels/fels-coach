@@ -3,6 +3,7 @@ import ebookMockup from "@/assets/ebook-tablet-mockup.webp";
 import { Button } from "@/components/ui/button";
 
 import { Header } from "@/components/Header";
+import { MailerLiteCourseForm } from "@/components/MailerLiteCourseForm";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
