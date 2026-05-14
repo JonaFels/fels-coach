@@ -608,8 +608,6 @@ A quiet depth in which something real is slumbering. Something that tugs as if o
 It surely takes a great deal of courage to meet, so to speak, the elephant in the room and not to keep telling the same stories again and again. Yet after intensive processes, real change can arise.`,
     },
     image: blogVorgespraechTiefe,
-    imageAlt:
-      "Stiller Flussweg im warmen Gegenlicht, der von einem fernen Wasserfall in eine sonnige Lichtung führt",
     publishedAt: "2026-05-14",
   },
 ];
