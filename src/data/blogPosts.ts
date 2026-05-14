@@ -576,7 +576,7 @@ Wenn es mit Verstehen und Denken nicht klappt, was dann? Was nützt es, wenn die
 
 ## Der Weg in die eigene Tiefe
 
-Und im selben Moment ist da etwas anderes, wie wenn man neben einem Wasserfall ist und langsam weitergeht an dem Flussufer entlang Richtung Tal. Das dominante Geräusch ist nach weniger Schritten verschwunden, als wäre es nie da gewesen. Und plötzlich eine farbenprächtige, weite Landschaft. Bäume, eine kleine Lichtung, sogar ein paar Vögel die vorbei fliegen. Empfindungen, Gefühle, Emotionen kommen auf. Tauchen hier und da auf. Sie bleiben nicht. Aber wenn selbst diese fast schon neue Welt nach dem Verlassen des wilden Wasserfalls leiser wird und die Augen leicht vor Müdigkeit zufallen, ist da noch etwas anderes.
+Und im selben Moment ist da etwas anderes, wie wenn man neben einem Wasserfall ist und langsam weitergeht an dem Flussufer entlang Richtung Tal. Das dominante Geräusch ist nach wenigen Schritten verschwunden, als wäre es nie da gewesen. Und plötzlich eine farbenprächtige, weite Landschaft. Bäume, eine kleine Lichtung, sogar ein paar Vögel die vorbei fliegen. Empfindungen, Gefühle, Emotionen kommen auf. Tauchen hier und da auf. Sie bleiben nicht. Aber wenn selbst diese fast schon neue Welt nach dem Verlassen des wilden Wasserfalls leiser wird und die Augen leicht vor Müdigkeit zufallen, ist da noch etwas anderes.
 
 Eine leise Tiefe in der etwas Echtes schlummert. Etwas das wie an einem Seil zupft und wir sehen nur wie es am anderen Ende schwingt und hören wie es klingt. Wie können wir nur etwas, das so schwer zu sehen ist, wirklich wahrnehmen?
 
