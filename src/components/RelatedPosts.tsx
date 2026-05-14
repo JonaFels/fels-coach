@@ -43,6 +43,11 @@ const RELATED_MAP: Record<string, string[]> = {
     "warum-bin-ich-nicht-ich-selbst-suche-nach-dem-wahren-ich",
     "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
   ],
+  "warum-nicht-ueber-vergangenes-reden-im-vorgespraech": [
+    "familienstellen-in-einer-einzelsitzung",
+    "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
+    "wahres-selbst-finden-familiaere-praegung-loesen",
+  ],
 };
 
 interface RelatedPostsProps {
