@@ -5,6 +5,7 @@ import blogAltesDrehbuch from "@/assets/blog-altes-drehbuch.webp";
 import blogWahresSelbst from "@/assets/blog-wahres-selbst.webp";
 import blogWahresIch from "@/assets/blog-wahres-ich.webp";
 import blogFremdbestimmtFrei from "@/assets/blog-fremdbestimmt-frei.webp";
+import blogVorgespraechTiefe from "@/assets/blog-vorgespraech-tiefe.jpg";
 
 export interface BlogPost {
   id: string;
