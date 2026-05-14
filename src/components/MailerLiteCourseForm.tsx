@@ -61,13 +61,26 @@ export const MailerLiteCourseForm = () => {
       </p>
 
       {status === "success" ? (
-        <div className="flex flex-col items-center gap-3 py-6 text-foreground">
-          <CheckCircle2 className="w-10 h-10 text-primary" aria-hidden="true" />
-          <p className="font-serif text-lg">Vielen Dank!</p>
-          <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
-            Bitte bestätige deine Anmeldung über den Link, den ich dir gerade per E-Mail
-            geschickt habe.
-          </p>
+        <div
+          role="status"
+          aria-live="polite"
+          className="relative max-w-md mx-auto bg-background/70 border border-border/60 rounded-2xl px-8 py-10 shadow-sm animate-fade-in"
+        >
+          <div className="flex flex-col items-center text-center">
+            <span className="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-5">
+              <span className="absolute inset-0 rounded-full bg-primary/10 animate-ping" aria-hidden="true" />
+              <CheckCircle2 className="relative w-7 h-7 text-primary" strokeWidth={1.75} aria-hidden="true" />
+            </span>
+            <h3 className="font-serif text-2xl text-foreground mb-3">Vielen Dank!</h3>
+            <div className="w-10 h-px bg-border mb-4" aria-hidden="true" />
+            <p className="text-muted-foreground leading-relaxed">
+              Bitte bestätige deine Anmeldung über den Link, den ich dir gerade per E-Mail
+              geschickt habe.
+            </p>
+            <p className="text-xs text-muted-foreground/80 mt-4 italic">
+              Schau auch kurz in deinen Spam-Ordner.
+            </p>
+          </div>
         </div>
       ) : (
         <form
