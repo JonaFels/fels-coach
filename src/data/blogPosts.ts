@@ -539,4 +539,77 @@ Ideally, there is a parent who can fully accept you as you are. And if not, perh
     image: blogFremdbestimmtFrei,
     publishedAt: "2026-05-07",
   },
+  {
+    id: "8",
+    slug: "warum-nicht-ueber-vergangenes-reden-im-vorgespraech",
+    title: {
+      de: "Warum nicht über Vergangenes reden in einem Vorgespräch?",
+      en: "Why Not Talk About the Past in a Preliminary Conversation?",
+    },
+    metaTitle: "Warum nicht über Vergangenes reden im Vorgespräch?",
+    metaDescription:
+      "Warum reines Reden über die Vergangenheit oft nicht weiterhilft – und wie echte Veränderung jenseits des Gedankenkarussells beginnt.",
+    imageAlt:
+      "Stiller Flussweg im warmen Gegenlicht, der von einem fernen Wasserfall in eine sonnige Lichtung führt – Sinnbild für den Weg in die innere Tiefe",
+    excerpt: {
+      de: "Warum reines Erzählen in der Therapie oft nicht reicht – und wie ein Weg jenseits des Gedankenkarussells in die eigene Tiefe führen kann.",
+      en: "Why simply talking in therapy often is not enough – and how a path beyond the carousel of thoughts can lead into your own depth.",
+    },
+    content: {
+      de: `Kennst du das auch? Wie jemand erzählt, dass er bei einem Psychotherapeuten war und es nicht wirklich gut war.
+
+## Die trügerische Erleichterung des Redens
+
+> "Da kann man alles erzählen und es fühlt sich gut an, dass alles mal vertraulich erzählen zu können. Aber irgendwie war's das nicht. Nach vier Monaten hab ich es dann sein gelassen"
+
+Aber wie verbesserst du wirklich deine Situation? Dass du später sagen kannst, dass die Sitzung bei xy was in dir verändert hat. Und er oder sie dir wirklich weiter geholfen hat.
+
+Wie macht man das? Wirklich an diesen Punkt zu kommen?
+
+## Der Kopf versteht, aber das Gefühl bleibt
+
+Sagen wir, ein Mann im mittleren Alter geht zu seinem Psychotherapeuten, er erzählt von seiner Situation. Anfangs von seiner Beziehung zu seinen Kindern und seiner Frau, später von seinen Eltern. Er geht einmal die Woche hin und der Therapeut stellt Fragen, bringt ihn immer wieder in Reflexionen. Wie die Mutter war, wie sie anders ist, als er sich es gedacht hatte. Die Bilder der Kindheit werden klarer und es wird irgendwie besser. Die Stunden der Analyse scheinen Früchte zu tragen. Schon kleine Fortschritte, die Sicht auf bestimmte Situationen ist nun anders. Die sonstigen reaktiven Ausbrüche im Streit sind weniger schlimm. Aber die Therapie geht schon fast sieben Monate und irgendwie geht es nicht weiter. Vom Verstehen her ja schon, aber im Ganzen betrachtet kaum.
+
+## Der Ausstieg aus dem Gedankenkarussell
+
+Wenn es mit Verstehen und Denken nicht klappt, was dann? Was nützt es, wenn die Gedanken langsam aber sicher anfangen wie in einer Go-Kart-Bahn wieder an der selben Stelle stehen und die nächste Runde machen. Der Denkende würde sagen, eine Abzweigung einbauen, aber letztlich führt sie wieder auf dieselbe Bahn. Was ist der logische Schritt? Ja, das Denken aufgeben.
+
+## Der Weg in die eigene Tiefe
+
+Und im selben Moment ist da etwas anderes, wie wenn man neben einem Wasserfall ist und langsam weitergeht an dem Flussufer entlang Richtung Tal. Das dominante Geräusch ist nach weniger Schritten verschwunden, als wäre es nie da gewesen. Und plötzlich eine farbenprächtige, weite Landschaft. Bäume, eine kleine Lichtung, sogar ein paar Vögel die vorbei fliegen. Empfindungen, Gefühle, Emotionen kommen auf. Tauchen hier und da auf. Sie bleiben nicht. Aber wenn selbst diese fast schon neue Welt nach dem Verlassen des wilden Wasserfalls leiser wird und die Augen leicht vor Müdigkeit zufallen, ist da noch etwas anderes.
+
+Eine leise Tiefe in der etwas Echtes schlummert. Etwas das wie an einem Seil zupft und wir sehen nur wie es am anderen Ende schwingt und hören wie es klingt. Wie können wir nur etwas, das so schwer zu sehen ist, wirklich wahrnehmen?
+
+Es braucht sicherlich eine Menge Mut sozusagen dem Elefanten im Raum zu begegnen und nicht immer wieder die Geschichten zu erzählen. Doch nach intensiven Prozessen kann sich wirkliche Veränderung einstellen.`,
+      en: `Do you know this too? When someone tells you they went to a psychotherapist and it really wasn't good.
+
+## The Deceptive Relief of Talking
+
+> "You can tell everything and it feels good to finally be able to share it confidentially. But somehow that wasn't it. After four months I let it go."
+
+But how do you really improve your situation? So that later you can say that the sessions with xy actually changed something in you. And that he or she really helped you further.
+
+How do you do that? How do you really get to that point?
+
+## The Mind Understands, but the Feeling Remains
+
+Let's say a man in middle age goes to his psychotherapist and talks about his situation. At first about his relationship with his children and his wife, later about his parents. He goes once a week and the therapist asks questions, brings him again and again into reflection. How his mother was, how she is different from what he had thought. The images of childhood become clearer and somehow it gets better. The hours of analysis seem to bear fruit. Small progress, the view on certain situations is now different. The otherwise reactive outbursts during arguments are less severe. But the therapy has been going on for almost seven months and somehow it isn't moving further. In terms of understanding, yes, but on the whole, hardly.
+
+## Stepping Off the Carousel of Thoughts
+
+If it doesn't work with understanding and thinking, then what? What use is it if the thoughts slowly but surely start to circle in a go-kart track and run the same lap again? The thinker would say, build in a turn-off – but ultimately it leads back to the same track. What is the logical step? Yes, to let go of thinking.
+
+## The Way Into Your Own Depth
+
+And in the same moment there is something else, as if you stand beside a waterfall and slowly walk on along the riverbank towards the valley. After only a few steps the dominant noise is gone, as if it had never been there. And suddenly a colourful, wide landscape. Trees, a small clearing, even a few birds flying by. Sensations, feelings, emotions arise. They appear here and there. They do not stay. But if even this almost new world becomes quieter after leaving the wild waterfall, and the eyes gently close from tiredness, there is still something else.
+
+A quiet depth in which something real is slumbering. Something that tugs as if on a rope, and we only see how it swings on the other end and hear how it sounds. How can we truly perceive something that is so hard to see?
+
+It surely takes a great deal of courage to meet, so to speak, the elephant in the room and not to keep telling the same stories again and again. Yet after intensive processes, real change can arise.`,
+    },
+    image: blogVorgespraechTiefe,
+    imageAlt:
+      "Stiller Flussweg im warmen Gegenlicht, der von einem fernen Wasserfall in eine sonnige Lichtung führt",
+    publishedAt: "2026-05-14",
+  },
 ];
