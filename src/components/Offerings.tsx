@@ -8,14 +8,14 @@ const offerings = [
   {
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
-    price: 40,
+    price: 55,
     duration: 30,
     href: "https://www.orbnet.de/p/fels-coach/kennenlernen-sitzung",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
-    price: 70,
+    price: 95,
     duration: 80,
     href: "https://www.orbnet.de/p/fels-coach/coaching-sitzung",
   },

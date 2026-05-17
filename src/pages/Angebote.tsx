@@ -18,14 +18,14 @@ const offerings = [
   {
     titleKey: "offerings.kennenlernen.title",
     descKey: "offerings.kennenlernen.desc",
-    price: 40,
+    price: 55,
     badgeKey: "offerings.badge.einstieg",
     semuid: "609d5e7a-e208-4715-b073-e99206aebbf7",
   },
   {
     titleKey: "offerings.coaching.title",
     descKey: "offerings.coaching.desc",
-    price: 70,
+    price: 95,
     semuid: "55df32ef-b5d1-468e-a4ba-f7f892398327",
   },
 ];

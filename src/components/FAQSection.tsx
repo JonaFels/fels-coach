@@ -22,7 +22,7 @@ const faqData = {
     },
     {
       question: "Übernimmt die Krankenkasse die Kosten?",
-      answer: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 70 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+      answer: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
