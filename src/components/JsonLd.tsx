@@ -40,7 +40,7 @@ export const JsonLd = () => {
           },
           image: "https://fels-coach.de/web-app-manifest-512x512.png",
           logo: "https://fels-coach.de/web-app-manifest-512x512.png",
-          priceRange: "40 €–70 €",
+          priceRange: "55 €–95 €",
           currenciesAccepted: "EUR",
           paymentAccepted: "Cash, Bank Transfer",
           openingHoursSpecification: [
@@ -119,11 +119,11 @@ export const JsonLd = () => {
                   areaServed: "Freiburg im Breisgau",
                   serviceType: "Systemisches Coaching",
                 },
-                price: "40.00",
+                price: "55.00",
                 priceCurrency: "EUR",
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: "40.00",
+                  price: "55.00",
                   priceCurrency: "EUR",
                   unitText: "Sitzung",
                 },
@@ -141,11 +141,11 @@ export const JsonLd = () => {
                   areaServed: "Freiburg im Breisgau",
                   serviceType: "Systemische Familienaufstellung",
                 },
-                price: "70.00",
+                price: "95.00",
                 priceCurrency: "EUR",
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: "70.00",
+                  price: "95.00",
                   priceCurrency: "EUR",
                   unitText: "80 Minuten",
                 },
@@ -297,7 +297,7 @@ export const JsonLd = () => {
               name: "Übernimmt die Krankenkasse die Kosten?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 70 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+                text: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
               },
             },
             {
