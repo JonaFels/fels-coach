@@ -26,27 +26,32 @@ const RELATED_MAP: Record<string, string[]> = {
   "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt": [
     "wahres-selbst-finden-familiaere-praegung-loesen",
     "fremdbestimmt-oder-frei-umfeld-wahres-ich",
-    "familienstellen-in-einer-einzelsitzung",
+    "im-meerestraum-gefangen",
   ],
   "wahres-selbst-finden-familiaere-praegung-loesen": [
     "warum-bin-ich-nicht-ich-selbst-suche-nach-dem-wahren-ich",
     "fremdbestimmt-oder-frei-umfeld-wahres-ich",
-    "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
+    "im-meerestraum-gefangen",
   ],
   "warum-bin-ich-nicht-ich-selbst-suche-nach-dem-wahren-ich": [
     "fremdbestimmt-oder-frei-umfeld-wahres-ich",
     "wahres-selbst-finden-familiaere-praegung-loesen",
-    "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
+    "im-meerestraum-gefangen",
   ],
   "fremdbestimmt-oder-frei-umfeld-wahres-ich": [
     "wahres-selbst-finden-familiaere-praegung-loesen",
     "warum-bin-ich-nicht-ich-selbst-suche-nach-dem-wahren-ich",
-    "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
+    "im-meerestraum-gefangen",
   ],
   "warum-nicht-ueber-vergangenes-reden-im-vorgespraech": [
     "familienstellen-in-einer-einzelsitzung",
     "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
     "wahres-selbst-finden-familiaere-praegung-loesen",
+  ],
+  "im-meerestraum-gefangen": [
+    "wahres-selbst-finden-familiaere-praegung-loesen",
+    "warum-bin-ich-nicht-ich-selbst-suche-nach-dem-wahren-ich",
+    "gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt",
   ],
 };
 
