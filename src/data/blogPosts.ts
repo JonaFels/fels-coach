@@ -610,4 +610,40 @@ It surely takes a great deal of courage to meet, so to speak, the elephant in th
     image: blogVorgespraechTiefe,
     publishedAt: "2026-05-14",
   },
+  {
+    id: "9",
+    slug: "im-meerestraum-gefangen",
+    title: {
+      de: "Im Meerestraum gefangen",
+      en: "Trapped in the Sea Dream",
+    },
+    metaTitle: "Im Meerestraum gefangen – Walking in your shoes",
+    metaDescription:
+      "Ein poetischer Text über Identität, Mitgefühl und das Ertrinken zwischen Liebe und Hass. Zwischen zwei Kräften stehen, denen wir nichts entgegensetzen können.",
+    excerpt: {
+      de: "Ein poetischer Text über Identität, Mitgefühl und das Ertrinken zwischen Liebe und Hass. Zwischen zwei Kräften stehen, denen wir nichts entgegensetzen können.",
+      en: "A poetic text about identity, compassion, and drowning between love and hate. Standing between two forces against which we are powerless.",
+    },
+    content: {
+      de: `## Walking in your shoes
+
+Bin ich ich oder du? Und will ich ich sein? Ich Frage mich, wer wäre ich, wenn ich nicht genau da stehen würde, wo du bist? Wo könnte ich mehr lieben?
+
+Wer wäre ich ohne diese Selbstaufgabe? Ohne dieses Mitgefühl? Wäre ich Mensch ohne die voll und ganz nahe zu sein?
+
+Eigentlich träume ich, doch ich glaube, nie war es echter als jetzt. Jetzt Mitten in der Nacht, wo ich weine vor...? Liebe? So fühlt es sich an, aber wenn ich nur ein bisschen mehr ich selbst bin, fühle ich deinen Schmerz. Und Meine Unfähigkeit ihn nicht nehmen zu können. Mein Denken und Fragen angesichts von Gefühlen gegen die ich nichts machen kann. Da, jetzt gerade, ist Liebe und Hass so nahe. Und gar nichts ist unter Kontrolle. Mein Versuch sie zu bekommen oder loszulassen, macht rein gar nichts.
+
+Ich hoffe nur ich ertrinke nicht in diesem Zustand, ich überlebe, ich finde ein Ufer, sehe etwas, nehme überhaupt wieder war. Kann die Augen öffnen liege am Ufer und ertrinke nicht, während ich Liebe fühle die Hass ist oder anders herum. Bin ich Mensch so? Ist es so, wenn ich ehrlich mit mir selbst bin und aufwache und erkenne, das ich zwischen zwei Kräften stehe denen ich rein gar nichts entgegensetzen kann. Komplett ohnmächtig mit Gedanken, die so tun, als wäre ich jemand, jemand, der etwas entscheiden könnte. Wie könnte ich da nicht lieben. Wie sollte ich fühlen, wenn ich langsam ertrinke und nichts, was ich tun könnte, etwas verändern würde.`,
+      en: `## Walking in your shoes
+
+Am I me or you? And do I want to be me? I wonder, who would I be if I weren't standing exactly where you are? Where could I love more?
+
+Who would I be without this self-abandonment? Without this compassion? Would I be human without being fully close?
+
+Actually, I'm dreaming, but I believe it has never been more real than now. Now, in the middle of the night, where I cry because of...? Love? That's how it feels, but when I'm just a little more myself, I feel your pain. And my inability to take it away. My thinking and questioning in the face of feelings against which I can do nothing. Right there, right now, love and hate are so close. And nothing is under control. My attempt to get them or let them go does absolutely nothing.
+
+I only hope I don't drown in this state, I survive, I find a shore, see something, become aware of anything again. Can open my eyes, lie on the shore and don't drown, while I feel love that is hate or vice versa. Am I human like this? Is this what it's like when I'm honest with myself and wake up and realize that I'm standing between two forces against which I can do absolutely nothing. Completely powerless with thoughts that pretend I'm someone, someone who could decide something. How could I not love there. How should I feel when I'm slowly drowning and nothing I could do would change anything.`,
+    },
+    publishedAt: "2026-05-22",
+  },
 ];
