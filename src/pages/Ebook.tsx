@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 import { Header } from "@/components/Header";
 import { MailerLiteCourseForm } from "@/components/MailerLiteCourseForm";
-import { RoleCheckQuiz } from "@/components/RoleCheckQuiz";
+
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
@@ -96,12 +96,6 @@ const Ebook = () => {
           </div>
         </section>
 
-        {/* Rollen-Check Quiz */}
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <RoleCheckQuiz />
-          </div>
-        </section>
 
         {/* E-Mail-Kurs */}
         <section className="pb-20 md:pb-28">
