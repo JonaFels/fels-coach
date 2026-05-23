@@ -23,6 +23,9 @@ const FAQSection = lazy(() =>
 const FinalCTA = lazy(() =>
   import("@/components/FinalCTA").then((m) => ({ default: m.FinalCTA })),
 );
+const RoleCheckQuiz = lazy(() =>
+  import("@/components/RoleCheckQuiz").then((m) => ({ default: m.RoleCheckQuiz })),
+);
 
 const Index = () => {
   return (
