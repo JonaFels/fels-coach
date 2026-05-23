@@ -35,9 +35,17 @@ const questions: Question[] = [
 const scaleLabels = [
   { value: 1, label: "Trifft gar nicht zu" },
   { value: 2, label: "Trifft eher nicht zu" },
-  { value: 3, label: "Teils, teils" },
-  { value: 4, label: "Trifft eher zu" },
-  { value: 5, label: "Trifft voll zu" },
+  { value: 3, label: "Trifft eher zu" },
+  { value: 4, label: "Trifft voll zu" },
+];
+
+type LifeArea = "beruf" | "partnerschaft" | "familie" | "gesundheit";
+
+const lifeAreaOptions: { value: LifeArea; label: string; hint: string }[] = [
+  { value: "beruf", label: "Beruf & Business", hint: "Karriere, Führung, Verantwortung" },
+  { value: "partnerschaft", label: "Partnerschaft & Liebe", hint: "Nähe, Beziehung, Bindung" },
+  { value: "familie", label: "Herkunftsfamilie", hint: "Eltern, Geschwister, Generationen" },
+  { value: "gesundheit", label: "Gesundheit & Energie", hint: "Körper, Erschöpfung, Vitalität" },
 ];
 
 const resultContent: Record<ResultType, {
@@ -108,7 +116,7 @@ const intensityFor = (percent: number): { label: string; tone: string } => {
 
 export const RoleCheckQuiz = () => {
   const booking = useErstgespraech();
-  const [step, setStep] = useState<"start" | "quiz" | "loading" | "result">("start");
+  const [step, setStep] = useState<"start" | "quiz" | "lifearea" | "loading" | "result">("start");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [primaryType, setPrimaryType] = useState<ResultType | null>(null);
@@ -118,6 +126,7 @@ export const RoleCheckQuiz = () => {
     anklaeger: 0,
   });
   const [selected, setSelected] = useState<number | null>(null);
+  const [lifeArea, setLifeArea] = useState<LifeArea | null>(null);
 
   const start = () => {
     setAnswers({});
@@ -125,6 +134,7 @@ export const RoleCheckQuiz = () => {
     setPrimaryType(null);
     setPercentages({ lastentraeger: 0, anpasser: 0, anklaeger: 0 });
     setSelected(null);
+    setLifeArea(null);
     setStep("quiz");
   };
 
@@ -140,21 +150,30 @@ export const RoleCheckQuiz = () => {
         setCurrentIndex((i) => i + 1);
         setSelected(null);
       } else {
-        finalize(next);
+        // Statt direkt zu finalisieren: Kontext-Frage zum Lebensbereich
+        setStep("lifearea");
       }
     }, 300);
   };
 
-  const finalize = async (allAnswers: Record<number, number>) => {
+  const handleLifeArea = (area: LifeArea) => {
+    if (lifeArea !== null) return;
+    setLifeArea(area);
+    window.setTimeout(() => {
+      finalize(answers, area);
+    }, 250);
+  };
+
+  const finalize = async (allAnswers: Record<number, number>, area: LifeArea) => {
     setStep("loading");
     const scores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
     for (const q of questions) {
       scores[q.category] += allAnswers[q.id] ?? 0;
     }
 
-    // Prozentuale Ausprägung: ((Punkte - 5) / 20) * 100, sauber 0–100%
+    // 4er-Skala, 5 Fragen pro Kategorie: min 5, max 20 → ((Punkte - 5) / 15) * 100
     const computePercent = (raw: number) =>
-      Math.max(0, Math.min(100, Math.round(((raw - 5) / 20) * 100)));
+      Math.max(0, Math.min(100, Math.round(((raw - 5) / 15) * 100)));
     const pct: Record<Category, number> = {
       lastentraeger: computePercent(scores.lastentraeger),
       anpasser: computePercent(scores.anpasser),
@@ -162,12 +181,10 @@ export const RoleCheckQuiz = () => {
     };
     setPercentages(pct);
 
-    // Dominante Kategorie nach Prozent (Tie-break: lastentraeger > anklaeger > anpasser)
     const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
     const sorted = [...rankOrder].sort((a, b) => pct[b] - pct[a]);
     const topCategory = sorted[0];
 
-    // Integriertes System: ALLE drei < 30%
     const isIntegrated =
       pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
 
@@ -181,6 +198,7 @@ export const RoleCheckQuiz = () => {
         score_lastentraeger: scores.lastentraeger,
         score_anpasser: scores.anpasser,
         score_anklaeger: scores.anklaeger,
+        life_area: area,
       });
     } catch (e) {
       console.error("Quiz submission failed", e);
@@ -310,6 +328,51 @@ export const RoleCheckQuiz = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
+            </motion.div>
+          )}
+
+          {step === "lifearea" && (
+            <motion.div
+              key="lifearea"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="max-w-2xl mx-auto text-center"
+            >
+              <p className="text-secondary font-medium uppercase tracking-wider text-xs md:text-sm mb-3">
+                Nur noch eine letzte Sache …
+              </p>
+              <h3 className="font-serif text-2xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
+                In welchem Lebensbereich spürst du aktuell die stärksten Auswirkungen oder Blockaden?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8 md:mb-10">
+                Wähle den Bereich, in dem die Schwere gerade am deutlichsten ist.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-3 md:gap-4 text-left">
+                {lifeAreaOptions.map((opt) => {
+                  const isSelected = lifeArea === opt.value;
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => handleLifeArea(opt.value)}
+                      disabled={lifeArea !== null}
+                      className={`group rounded-2xl border bg-background transition-all duration-200 px-5 py-5 md:py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
+                        isSelected
+                          ? "border-secondary bg-secondary/10 shadow-sm"
+                          : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"
+                      } ${lifeArea !== null && !isSelected ? "opacity-50" : ""}`}
+                    >
+                      <p className="font-serif text-lg md:text-xl text-foreground font-semibold mb-1">
+                        {opt.label}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{opt.hint}</p>
+                    </button>
+                  );
+                })}
+              </div>
             </motion.div>
           )}
 

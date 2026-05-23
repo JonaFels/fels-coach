@@ -1,0 +1,1 @@
+ALTER TABLE public.quiz_submissions ADD COLUMN IF NOT EXISTS life_area text;
