@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2, Sparkles, ArrowRight, ArrowLeft, RefreshCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
+import { trackCTAClick } from "@/lib/tracking";
 
 type Category = "lastentraeger" | "anpasser" | "anklaeger";
 type ResultType = Category | "integriert" | "ambivalent";
