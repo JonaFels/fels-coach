@@ -6,30 +6,33 @@ import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 type Category = "lastentraeger" | "anpasser" | "anklaeger";
-type ResultType = Category | "integriert";
+type ResultType = Category | "integriert" | "ambivalent";
 
 interface Question {
   id: number;
   category: Category;
   text: string;
+  /** Gewichtung der Frage (1 = Standard, 1.5 = Schlüsselfrage / tiefes Identitäts- bzw. Loyalitätsmuster) */
+  weight: number;
 }
 
+// Schlüsselfragen (Identität / unbewusste Loyalität) wiegen stärker als Verhaltens-Indikatoren.
 const questions: Question[] = [
-  { id: 1, category: "lastentraeger", text: "Wenn jemand in meinem nahen Umfeld ein Problem hat, empfinde ich sofort einen inneren Druck, die Lösung finden oder zumindest lindern zu müssen." },
-  { id: 2, category: "anklaeger", text: "Wenn Dinge nicht nach Plan laufen, ist meine erste innere Reaktion oft Frustration über die Inkompetenz oder Ineffizienz der anderen." },
-  { id: 3, category: "anpasser", text: "Ich ertappe mich oft dabei, dass ich meine eigenen Bedürfnisse kaum spüren kann, solange die Bedürfnisse der anderen im Raum nicht geklärt sind." },
-  { id: 4, category: "lastentraeger", text: "Mein eigener Erfolg oder ein Moment echter Ruhe fühlt sich für mich oft erst dann 'erlaubt' an, wenn ich weiß, dass es allen in meinem System gut geht." },
-  { id: 5, category: "anklaeger", text: "Ich zeige selten echte Verletzlichkeit, da ich tief im Inneren davon ausgehe, dass Schwäche letztendlich gegen mich verwendet wird." },
-  { id: 6, category: "anpasser", text: "In Konflikten oder emotional angespannten Situationen neige ich dazu, innerlich zu 'verstummen' oder mich unsichtbar zu machen, um die Lage nicht zu verschlimmern." },
-  { id: 7, category: "lastentraeger", text: "Unter extremem Stress neige ich dazu, noch mehr Verantwortung an mich zu reißen und Aufgaben anderer zu übernehmen, anstatt um Hilfe zu bitten." },
-  { id: 8, category: "anpasser", text: "Es fällt mir extrem schwer, klare Grenzen zu setzen und 'Nein' zu sagen, weil die unterschwellige Angst vor Ablehnung übermächtig ist." },
-  { id: 9, category: "anklaeger", text: "Bevor ich das Risiko eingehe, von jemandem enttäuscht zu werden, gehe ich lieber auf Distanz und mache Dinge mit mir selbst aus." },
-  { id: 10, category: "lastentraeger", text: "Ich ziehe unbewusst viel von meiner Identität und meinem Selbstwert aus der Tatsache, dass ich für andere der 'Fels in der Brandung' bin." },
-  { id: 11, category: "anpasser", text: "Wenn der Druck im Außen zu groß wird, ziehe ich mich innerlich komplett zurück und hoffe einfach, dass der Sturm an mir vorbeizieht." },
-  { id: 12, category: "anklaeger", text: "In extremen Krisensituationen werde ich oft zynisch, weise anderen hart die Schuld zu und regele die Dinge emotionslos im Alleingang." },
-  { id: 13, category: "lastentraeger", text: "Ich habe häufig das Gefühl, emotionale 'Altlasten' oder eine Schwere aus meiner Herkunftsfamilie zu tragen, die eigentlich gar nicht meine eigene ist." },
-  { id: 14, category: "anpasser", text: "Ich habe oft das unbestimmte Gefühl, dass ich mich anstrengen oder anpassen muss, um meine Daseinsberechtigung im System zu rechtfertigen." },
-  { id: 15, category: "anklaeger", text: "Ich reguliere meinen Stress meistens dadurch, dass ich die Kontrolle übernehme und Härte zeige, anstatt mein Umfeld um Unterstützung zu bitten." },
+  { id: 1, category: "lastentraeger", weight: 1.0, text: "Wenn jemand in meinem nahen Umfeld ein Problem hat, empfinde ich sofort einen inneren Druck, die Lösung finden oder zumindest lindern zu müssen." },
+  { id: 2, category: "anklaeger",     weight: 1.0, text: "Wenn Dinge nicht nach Plan laufen, ist meine erste innere Reaktion oft Frustration über die Inkompetenz oder Ineffizienz der anderen." },
+  { id: 3, category: "anpasser",      weight: 1.5, text: "Ich ertappe mich oft dabei, dass ich meine eigenen Bedürfnisse kaum spüren kann, solange die Bedürfnisse der anderen im Raum nicht geklärt sind." },
+  { id: 4, category: "lastentraeger", weight: 1.5, text: "Mein eigener Erfolg oder ein Moment echter Ruhe fühlt sich für mich oft erst dann 'erlaubt' an, wenn ich weiß, dass es allen in meinem System gut geht." },
+  { id: 5, category: "anklaeger",     weight: 1.5, text: "Ich zeige selten echte Verletzlichkeit, da ich tief im Inneren davon ausgehe, dass Schwäche letztendlich gegen mich verwendet wird." },
+  { id: 6, category: "anpasser",      weight: 1.0, text: "In Konflikten oder emotional angespannten Situationen neige ich dazu, innerlich zu 'verstummen' oder mich unsichtbar zu machen, um die Lage nicht zu verschlimmern." },
+  { id: 7, category: "lastentraeger", weight: 1.0, text: "Unter extremem Stress neige ich dazu, noch mehr Verantwortung an mich zu reißen und Aufgaben anderer zu übernehmen, anstatt um Hilfe zu bitten." },
+  { id: 8, category: "anpasser",      weight: 1.5, text: "Es fällt mir extrem schwer, klare Grenzen zu setzen und 'Nein' zu sagen, weil die unterschwellige Angst vor Ablehnung übermächtig ist." },
+  { id: 9, category: "anklaeger",     weight: 1.5, text: "Bevor ich das Risiko eingehe, von jemandem enttäuscht zu werden, gehe ich lieber auf Distanz und mache Dinge mit mir selbst aus." },
+  { id: 10, category: "lastentraeger", weight: 1.5, text: "Ich ziehe unbewusst viel von meiner Identität und meinem Selbstwert aus der Tatsache, dass ich für andere der 'Fels in der Brandung' bin." },
+  { id: 11, category: "anpasser",      weight: 1.0, text: "Wenn der Druck im Außen zu groß wird, ziehe ich mich innerlich komplett zurück und hoffe einfach, dass der Sturm an mir vorbeizieht." },
+  { id: 12, category: "anklaeger",     weight: 1.5, text: "In extremen Krisensituationen werde ich oft zynisch, weise anderen hart die Schuld zu und regele die Dinge emotionslos im Alleingang." },
+  { id: 13, category: "lastentraeger", weight: 1.5, text: "Ich habe häufig das Gefühl, emotionale 'Altlasten' oder eine Schwere aus meiner Herkunftsfamilie zu tragen, die eigentlich gar nicht meine eigene ist." },
+  { id: 14, category: "anpasser",      weight: 1.5, text: "Ich habe oft das unbestimmte Gefühl, dass ich mich anstrengen oder anpassen muss, um meine Daseinsberechtigung im System zu rechtfertigen." },
+  { id: 15, category: "anklaeger",     weight: 1.0, text: "Ich reguliere meinen Stress meistens dadurch, dass ich die Kontrolle übernehme und Härte zeige, anstatt mein Umfeld um Unterstützung zu bitten." },
 ];
 
 const scaleLabels = [
@@ -98,6 +101,17 @@ const resultContent: Record<ResultType, {
       "Dein potenzieller 'blinder Fleck' ist lediglich die Gewohnheit: Erlaubst du dir wirklich schon, diese ungebundene Freiheit und Größe in all deinen Lebensbereichen voll auszuleben?",
     wayOut:
       "Für Menschen mit einem integrierten Profil geht es im 1:1 Coaching nicht mehr um das Heilen alter Wunden, sondern um reine Potenzialentfaltung. Wie nutzt du diese freie Kraft für deine nächsten großen Visionen? Lass uns im Erstgespräch genau diesen Hebel ansetzen.",
+  },
+  ambivalent: {
+    title: "Dein systemisches Profil: Das ambivalente Spektrum",
+    surface:
+      "Deine Antworten zeigen kein einzelnes dominantes Muster – sondern eine fein austarierte Mischung aus allen drei systemischen Dynamiken. Du wechselst situativ zwischen Verantwortung-Tragen, Anpassen und Distanzieren. Nach außen wirkst du oft flexibel und vielseitig. Innerlich kann sich das jedoch anfühlen wie eine ständige Unruhe: Du weißt selbst nicht mehr, welcher Teil von dir gerade 'echt' ist und welcher Teil nur reagiert.",
+    loyalty:
+      "Systemisch gesehen hast du gelernt, dich an die emotionale Lage deines Umfelds anzupassen – mal als Lastenträger, mal als Anpasser, mal als Distanzierer. Diese Beweglichkeit war früh deine Überlebensstrategie in einem System, das keine klare Rolle für dich bereithielt. Deine unbewusste Loyalität lautet: 'Ich passe mich der Dynamik an, die gerade gebraucht wird, damit ich überall dazugehören kann.'",
+    blindSpot:
+      "Weil du in allen drei Mustern zuhause bist, fehlt dir oft das klare Gespür: Wer bin ich eigentlich, wenn ich nicht reagiere? Deine Stärke – die Flexibilität – wird dann zur Falle, wenn sie verhindert, dass du einen eigenen, stabilen Platz einnimmst.",
+    wayOut:
+      "Der erste Schritt ist nicht, eines der Muster zu 'beheben', sondern den Punkt in dir zu finden, von dem aus du nicht mehr reagieren musst. In einer 1:1 Familienaufstellung machen wir sichtbar, wo dein eigener Platz im System ist – jenseits aller übernommenen Rollen.",
   },
 };
 
@@ -183,38 +197,70 @@ export const RoleCheckQuiz = () => {
 
   const finalize = async (allAnswers: Record<number, number>, area: LifeArea) => {
     setStep("loading");
-    const scores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+
+    // 1) Rohwerte je Kategorie für DB-Speicherung (unweighted Summe).
+    const rawScores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+    // 2) Gewichtete Summen für die Auswertung.
+    const weightedScores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+    const weightTotals: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+
     for (const q of questions) {
-      scores[q.category] += allAnswers[q.id] ?? 0;
+      const ans = allAnswers[q.id] ?? 0;
+      rawScores[q.category] += ans;
+      weightedScores[q.category] += ans * q.weight;
+      weightTotals[q.category] += q.weight;
     }
 
-    // 4er-Skala, 5 Fragen pro Kategorie: min 5, max 20 → ((Punkte - 5) / 15) * 100
-    const computePercent = (raw: number) =>
-      Math.max(0, Math.min(100, Math.round(((raw - 5) / 15) * 100)));
+    // Skala 1–4, normalisiert per Kategorie über deren Gewichtssumme.
+    const computePercent = (cat: Category) => {
+      const w = weightTotals[cat];
+      const min = w * 1;
+      const max = w * 4;
+      const range = max - min;
+      if (range <= 0) return 0;
+      return Math.max(0, Math.min(100, Math.round(((weightedScores[cat] - min) / range) * 100)));
+    };
+
     const pct: Record<Category, number> = {
-      lastentraeger: computePercent(scores.lastentraeger),
-      anpasser: computePercent(scores.anpasser),
-      anklaeger: computePercent(scores.anklaeger),
+      lastentraeger: computePercent("lastentraeger"),
+      anpasser: computePercent("anpasser"),
+      anklaeger: computePercent("anklaeger"),
     };
     setPercentages(pct);
 
-    const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
-    const sorted = [...rankOrder].sort((a, b) => pct[b] - pct[a]);
+    // Deterministisches Ranking: zuerst nach Prozent, bei Gleichstand nach gewichtetem Rohwert.
+    const cats: Category[] = ["lastentraeger", "anpasser", "anklaeger"];
+    const sorted = [...cats].sort((a, b) => {
+      if (pct[b] !== pct[a]) return pct[b] - pct[a];
+      return weightedScores[b] - weightedScores[a];
+    });
     const topCategory = sorted[0];
 
-    const isIntegrated =
-      pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
+    const maxPct = pct[sorted[0]];
+    const minPct = pct[sorted[2]];
+    const spread = maxPct - minPct;
 
-    const primary: ResultType = isIntegrated ? "integriert" : topCategory;
+    // 1) Integriertes Profil: alle drei Dynamiken niedrig.
+    const isIntegrated = pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
+
+    // 2) Ambivalentes Profil: alle drei ähnlich stark ausgeprägt – keine klare Dominanz.
+    //    Gleichstand (Spread ≤ 7 Prozentpunkte) bei mittlerem bis hohem Niveau.
+    const isAmbivalent = !isIntegrated && spread <= 7 && maxPct >= 35;
+
+    const primary: ResultType = isIntegrated
+      ? "integriert"
+      : isAmbivalent
+      ? "ambivalent"
+      : topCategory;
     setPrimaryType(primary);
 
     try {
       await supabase.from("quiz_submissions").insert({
         dominant_type: primary,
-        secondary_type: isIntegrated ? null : sorted[1],
-        score_lastentraeger: scores.lastentraeger,
-        score_anpasser: scores.anpasser,
-        score_anklaeger: scores.anklaeger,
+        secondary_type: isIntegrated || isAmbivalent ? null : sorted[1],
+        score_lastentraeger: rawScores.lastentraeger,
+        score_anpasser: rawScores.anpasser,
+        score_anklaeger: rawScores.anklaeger,
         life_area: area,
       });
     } catch (e) {
@@ -460,7 +506,7 @@ export const RoleCheckQuiz = () => {
                 {(["lastentraeger", "anpasser", "anklaeger"] as Category[]).map((cat, idx) => {
                   const value = percentages[cat];
                   const intensity = intensityFor(value);
-                  const isDominant = primaryType !== "integriert" && primaryType === cat;
+                  const isDominant = primaryType !== "integriert" && primaryType !== "ambivalent" && primaryType === cat;
                   return (
                     <motion.div
                       key={cat}
@@ -531,6 +577,8 @@ export const RoleCheckQuiz = () => {
                 >
                   {primaryType === "integriert"
                     ? "Potenzial-Gespräch buchen"
+                    : primaryType === "ambivalent"
+                    ? "Klarheits-Gespräch buchen"
                     : "Jetzt Erstgespräch buchen"}
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
