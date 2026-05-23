@@ -126,6 +126,7 @@ export const RoleCheckQuiz = () => {
     anklaeger: 0,
   });
   const [selected, setSelected] = useState<number | null>(null);
+  const [isAdvancing, setIsAdvancing] = useState(false);
   const [lifeArea, setLifeArea] = useState<LifeArea | null>(null);
 
   const start = () => {
@@ -134,26 +135,42 @@ export const RoleCheckQuiz = () => {
     setPrimaryType(null);
     setPercentages({ lastentraeger: 0, anpasser: 0, anklaeger: 0 });
     setSelected(null);
+    setIsAdvancing(false);
     setLifeArea(null);
     setStep("quiz");
   };
 
   const handleAnswer = (value: number) => {
-    if (selected !== null) return;
-    setSelected(value);
+    if (isAdvancing) return;
     const q = questions[currentIndex];
     const next = { ...answers, [q.id]: value };
     setAnswers(next);
+    setSelected(value);
+    setIsAdvancing(true);
 
     window.setTimeout(() => {
       if (currentIndex < questions.length - 1) {
-        setCurrentIndex((i) => i + 1);
-        setSelected(null);
+        const nextIdx = currentIndex + 1;
+        setCurrentIndex(nextIdx);
+        setSelected(next[questions[nextIdx].id] ?? null);
       } else {
-        // Statt direkt zu finalisieren: Kontext-Frage zum Lebensbereich
         setStep("lifearea");
       }
+      setIsAdvancing(false);
     }, 300);
+  };
+
+  const handleBack = () => {
+    if (isAdvancing || currentIndex === 0) return;
+    const prevIdx = currentIndex - 1;
+    setCurrentIndex(prevIdx);
+    setSelected(answers[questions[prevIdx].id] ?? null);
+  };
+
+  const handleLifeAreaBack = () => {
+    setLifeArea(null);
+    setSelected(answers[questions[questions.length - 1].id] ?? null);
+    setStep("quiz");
   };
 
   const handleLifeArea = (area: LifeArea) => {
