@@ -88,6 +88,7 @@ export type Database = {
           score_anklaeger: number
           score_anpasser: number
           score_lastentraeger: number
+          secondary_type: string | null
         }
         Insert: {
           created_at?: string
@@ -96,6 +97,7 @@ export type Database = {
           score_anklaeger?: number
           score_anpasser?: number
           score_lastentraeger?: number
+          secondary_type?: string | null
         }
         Update: {
           created_at?: string
@@ -104,6 +106,7 @@ export type Database = {
           score_anklaeger?: number
           score_anpasser?: number
           score_lastentraeger?: number
+          secondary_type?: string | null
         }
         Relationships: []
       }
