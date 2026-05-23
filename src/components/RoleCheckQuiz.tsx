@@ -102,6 +102,17 @@ const resultContent: Record<ResultType, {
     wayOut:
       "Für Menschen mit einem integrierten Profil geht es im 1:1 Coaching nicht mehr um das Heilen alter Wunden, sondern um reine Potenzialentfaltung. Wie nutzt du diese freie Kraft für deine nächsten großen Visionen? Lass uns im Erstgespräch genau diesen Hebel ansetzen.",
   },
+  ambivalent: {
+    title: "Dein systemisches Profil: Das ambivalente Spektrum",
+    surface:
+      "Deine Antworten zeigen kein einzelnes dominantes Muster – sondern eine fein austarierte Mischung aus allen drei systemischen Dynamiken. Du wechselst situativ zwischen Verantwortung-Tragen, Anpassen und Distanzieren. Nach außen wirkst du oft flexibel und vielseitig. Innerlich kann sich das jedoch anfühlen wie eine ständige Unruhe: Du weißt selbst nicht mehr, welcher Teil von dir gerade 'echt' ist und welcher Teil nur reagiert.",
+    loyalty:
+      "Systemisch gesehen hast du gelernt, dich an die emotionale Lage deines Umfelds anzupassen – mal als Lastenträger, mal als Anpasser, mal als Distanzierer. Diese Beweglichkeit war früh deine Überlebensstrategie in einem System, das keine klare Rolle für dich bereithielt. Deine unbewusste Loyalität lautet: 'Ich passe mich der Dynamik an, die gerade gebraucht wird, damit ich überall dazugehören kann.'",
+    blindSpot:
+      "Weil du in allen drei Mustern zuhause bist, fehlt dir oft das klare Gespür: Wer bin ich eigentlich, wenn ich nicht reagiere? Deine Stärke – die Flexibilität – wird dann zur Falle, wenn sie verhindert, dass du einen eigenen, stabilen Platz einnimmst.",
+    wayOut:
+      "Der erste Schritt ist nicht, eines der Muster zu 'beheben', sondern den Punkt in dir zu finden, von dem aus du nicht mehr reagieren musst. In einer 1:1 Familienaufstellung machen wir sichtbar, wo dein eigener Platz im System ist – jenseits aller übernommenen Rollen.",
+  },
 };
 
 const categoryLabels: Record<Category, string> = {
