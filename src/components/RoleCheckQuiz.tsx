@@ -339,9 +339,47 @@ export const RoleCheckQuiz = () => {
               className="max-w-2xl mx-auto"
             >
               <p className="text-secondary font-medium uppercase tracking-wider text-xs md:text-sm mb-3 text-center">
-                Dein Ergebnis
+                Dein systemisches Spektrum
               </p>
-              <h3 className="font-serif text-2xl md:text-4xl font-semibold text-foreground mb-8 leading-tight text-center">
+
+              {/* Progress Bars für alle 3 Kategorien */}
+              <div className="mb-10 md:mb-12 space-y-5 md:space-y-6">
+                {(["lastentraeger", "anpasser", "anklaeger"] as Category[]).map((cat, idx) => {
+                  const value = percentages[cat];
+                  const intensity = intensityFor(value);
+                  const isDominant = primaryType !== "integriert" && primaryType === cat;
+                  return (
+                    <motion.div
+                      key={cat}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 + idx * 0.1, duration: 0.5, ease: "easeOut" }}
+                    >
+                      <div className="flex items-baseline justify-between gap-3 mb-2">
+                        <p className={`font-serif text-base md:text-lg ${isDominant ? "text-foreground font-semibold" : "text-foreground/85"}`}>
+                          {categoryLabels[cat]}
+                        </p>
+                        <p className={`text-sm md:text-base font-medium tabular-nums ${isDominant ? "text-secondary" : "text-muted-foreground"}`}>
+                          {value}%
+                        </p>
+                      </div>
+                      <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
+                        <motion.div
+                          className={`h-full rounded-full ${isDominant ? "bg-secondary" : "bg-secondary/40"}`}
+                          initial={{ width: 0 }}
+                          animate={{ width: `${value}%` }}
+                          transition={{ delay: 0.25 + idx * 0.1, duration: 0.9, ease: "easeOut" }}
+                        />
+                      </div>
+                      <p className={`mt-1.5 text-xs md:text-[0.78rem] ${intensity.tone}`}>
+                        {intensity.label}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              <h3 className="font-serif text-2xl md:text-4xl font-semibold text-foreground mb-6 leading-tight text-center">
                 {resultContent[primaryType].title}
               </h3>
 
@@ -371,22 +409,6 @@ export const RoleCheckQuiz = () => {
                   <p>{resultContent[primaryType].wayOut}</p>
                 </div>
               </div>
-
-              {secondaryType && secondaryType !== primaryType && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="mt-10 rounded-2xl border border-secondary/20 bg-secondary/5 p-6 md:p-8"
-                >
-                  <p className="text-secondary font-medium uppercase tracking-wider text-xs mb-2">
-                    Dein Stress-Profil
-                  </p>
-                  <p className="text-foreground/85 leading-[1.75] text-base">
-                    {stressProfiles[secondaryType]}
-                  </p>
-                </motion.div>
-              )}
 
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Button
