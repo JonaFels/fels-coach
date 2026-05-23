@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 type Category = "lastentraeger" | "anpasser" | "anklaeger";
+type ResultType = Category | "integriert";
 
 interface Question {
   id: number;
@@ -39,7 +40,7 @@ const scaleLabels = [
   { value: 5, label: "Trifft voll zu" },
 ];
 
-const resultContent: Record<Category, {
+const resultContent: Record<ResultType, {
   title: string;
   surface: string;
   loyalty: string;
@@ -79,6 +80,17 @@ const resultContent: Record<Category, {
     wayOut:
       "Es geht nicht darum, deine Schutzmechanismen einzureißen. Es geht darum, die alte Wut oder den Schmerz im System dorthin zurückzugeben, wo er entstanden ist. In einer Aufstellung entsteht Raum für eine Stärke, die nicht mehr aus Härte, sondern aus innerer Klarheit kommt.",
   },
+  integriert: {
+    title: "Dein systemisches Profil: In deiner Kraft (Das integrierte System)",
+    surface:
+      "Deine Antworten zeigen eine hohe systemische Reife und eine gesunde innere Balance. Es gelingt dir im Alltag gut, Verantwortung dort zu lassen, wo sie hingehört, ohne in die Überlastung des Lastenträgers zu kippen. Gleichzeitig kannst du deine eigenen Bedürfnisse klar wahrnehmen und kommunizieren, ohne dich unsichtbar zu machen oder in die Härte zu flüchten.",
+    loyalty:
+      "Systemisch gesehen stehst du bereits sehr stabil an deinem eigenen, rechtmäßigen Platz im Leben. Du hast wahrscheinlich schon viel reflektiert oder ein natürliches Gespür dafür entwickelt, dich von alten, unbewussten Dynamiken deiner Herkunftsfamilie abzugrenzen. Deine Energie gehört dir.",
+    blindSpot:
+      "Dein 'blinder Fleck' ist hier eher die Frage, ob du dir wirklich erlaubst, diese Freiheit und Kraft voll auszuleben, oder ob du dich aus Gewohnheit noch manchmal zurückhältst.",
+    wayOut:
+      "Für Menschen in deiner Position geht es in der 1:1 Arbeit meistens nicht mehr um das mühsame Lösen schwerer Verstrickungen. Es geht um Schöpfungskraft: Wie nutzt du diese freie, ungebundene Energie, um deine persönlichen oder beruflichen Visionen auf das nächste Level zu bringen? Lass uns im Erstgespräch schauen, wie wir dein volles Potenzial freisetzen.",
+  },
 };
 
 const stressProfiles: Record<Category, string> = {
@@ -95,7 +107,7 @@ export const RoleCheckQuiz = () => {
   const [step, setStep] = useState<"start" | "quiz" | "loading" | "result">("start");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [primaryType, setPrimaryType] = useState<Category | null>(null);
+  const [primaryType, setPrimaryType] = useState<ResultType | null>(null);
   const [secondaryType, setSecondaryType] = useState<Category | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
 
@@ -134,15 +146,23 @@ export const RoleCheckQuiz = () => {
     // Tie-break: lastentraeger wins on rank 1
     const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
     const sorted = [...rankOrder].sort((a, b) => scores[b] - scores[a]);
-    const primary = sorted[0];
+    const topCategory = sorted[0];
     const secondary = sorted[1];
+
+    // Gesundes / Integriertes Profil: niedrige Gesamtwerte oder kein dominanter Typ
+    const totalScore = scores.lastentraeger + scores.anpasser + scores.anklaeger;
+    const maxScore = scores[topCategory];
+    const isIntegrated = totalScore <= 35 || maxScore < 12;
+
+    const primary: ResultType = isIntegrated ? "integriert" : topCategory;
+
     setPrimaryType(primary);
-    setSecondaryType(secondary);
+    setSecondaryType(isIntegrated ? null : secondary);
 
     try {
       await supabase.from("quiz_submissions").insert({
         dominant_type: primary,
-        secondary_type: secondary,
+        secondary_type: isIntegrated ? null : secondary,
         score_lastentraeger: scores.lastentraeger,
         score_anpasser: scores.anpasser,
         score_anklaeger: scores.anklaeger,
@@ -359,7 +379,9 @@ export const RoleCheckQuiz = () => {
                   onClick={() => booking?.openErstgespraech()}
                   className="min-h-[52px] px-8 text-base w-full sm:w-auto"
                 >
-                  Jetzt Erstgespräch buchen
+                  {primaryType === "integriert"
+                    ? "Potenzial-Gespräch buchen"
+                    : "Jetzt Erstgespräch buchen"}
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
                 <Button
