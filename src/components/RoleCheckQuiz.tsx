@@ -35,9 +35,17 @@ const questions: Question[] = [
 const scaleLabels = [
   { value: 1, label: "Trifft gar nicht zu" },
   { value: 2, label: "Trifft eher nicht zu" },
-  { value: 3, label: "Teils, teils" },
-  { value: 4, label: "Trifft eher zu" },
-  { value: 5, label: "Trifft voll zu" },
+  { value: 3, label: "Trifft eher zu" },
+  { value: 4, label: "Trifft voll zu" },
+];
+
+type LifeArea = "beruf" | "partnerschaft" | "familie" | "gesundheit";
+
+const lifeAreaOptions: { value: LifeArea; label: string; hint: string }[] = [
+  { value: "beruf", label: "Beruf & Business", hint: "Karriere, Führung, Verantwortung" },
+  { value: "partnerschaft", label: "Partnerschaft & Liebe", hint: "Nähe, Beziehung, Bindung" },
+  { value: "familie", label: "Herkunftsfamilie", hint: "Eltern, Geschwister, Generationen" },
+  { value: "gesundheit", label: "Gesundheit & Energie", hint: "Körper, Erschöpfung, Vitalität" },
 ];
 
 const resultContent: Record<ResultType, {
