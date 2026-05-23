@@ -80,6 +80,33 @@ export type Database = {
         }
         Relationships: []
       }
+      quiz_submissions: {
+        Row: {
+          created_at: string
+          dominant_type: string
+          id: string
+          score_anklaeger: number
+          score_anpasser: number
+          score_lastentraeger: number
+        }
+        Insert: {
+          created_at?: string
+          dominant_type: string
+          id?: string
+          score_anklaeger?: number
+          score_anpasser?: number
+          score_lastentraeger?: number
+        }
+        Update: {
+          created_at?: string
+          dominant_type?: string
+          id?: string
+          score_anklaeger?: number
+          score_anpasser?: number
+          score_lastentraeger?: number
+        }
+        Relationships: []
+      }
       rate_limits: {
         Row: {
           endpoint: string
