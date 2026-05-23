@@ -182,7 +182,7 @@ export const RoleCheckQuiz = () => {
                 Selbsttest · 3 Minuten
               </p>
               <h2 id="rollencheck-heading" className="font-serif text-3xl md:text-5xl font-semibold text-foreground mb-4 leading-tight">
-                Trägst du, was nicht dir gehört?
+                Was wäre, wenn dein Problem eine unbewusste Loyalität ist?
               </h2>
               <p className="font-serif italic text-lg md:text-xl text-secondary mb-6">
                 Der systemische Rollen-Check.

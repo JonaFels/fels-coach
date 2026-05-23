@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
-import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+
 
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
@@ -36,7 +36,6 @@ const Index = () => {
       </Suspense>
       <Header />
       <main id="main-content">
-        <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
         <Suspense fallback={null}>
           <ScrollFadeIn>
