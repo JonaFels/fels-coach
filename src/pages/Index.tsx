@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
+import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 
 
@@ -36,6 +37,7 @@ const Index = () => {
       </Suspense>
       <Header />
       <main id="main-content">
+        <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
         <Suspense fallback={null}>
           <ScrollFadeIn>
