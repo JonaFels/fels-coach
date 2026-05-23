@@ -23,6 +23,9 @@ const FAQSection = lazy(() =>
 const FinalCTA = lazy(() =>
   import("@/components/FinalCTA").then((m) => ({ default: m.FinalCTA })),
 );
+const RoleCheckQuiz = lazy(() =>
+  import("@/components/RoleCheckQuiz").then((m) => ({ default: m.RoleCheckQuiz })),
+);
 
 const Index = () => {
   return (
@@ -35,6 +38,15 @@ const Index = () => {
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
+        <Suspense fallback={null}>
+          <ScrollFadeIn>
+            <section aria-labelledby="rollencheck-heading" className="py-16 md:py-24 bg-background">
+              <div className="container mx-auto px-4 max-w-4xl">
+                <RoleCheckQuiz />
+              </div>
+            </section>
+          </ScrollFadeIn>
+        </Suspense>
         <ScrollFadeIn>
           <AboutPreview />
         </ScrollFadeIn>
