@@ -409,6 +409,20 @@ export const RoleCheckQuiz = () => {
                   );
                 })}
               </div>
+
+              <div className="mt-8 flex justify-center">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleLifeAreaBack}
+                  disabled={lifeArea !== null}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Zurück zu den Fragen
+                </Button>
+              </div>
             </motion.div>
           )}
 
