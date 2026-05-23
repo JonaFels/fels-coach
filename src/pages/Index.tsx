@@ -38,6 +38,15 @@ const Index = () => {
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
+        <Suspense fallback={null}>
+          <ScrollFadeIn>
+            <section aria-labelledby="rollencheck-heading" className="py-16 md:py-24 bg-background">
+              <div className="container mx-auto px-4 max-w-4xl">
+                <RoleCheckQuiz />
+              </div>
+            </section>
+          </ScrollFadeIn>
+        </Suspense>
         <ScrollFadeIn>
           <AboutPreview />
         </ScrollFadeIn>
