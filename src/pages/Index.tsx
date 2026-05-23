@@ -5,6 +5,7 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import { QuizTeaser } from "@/components/QuizTeaser";
 
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
