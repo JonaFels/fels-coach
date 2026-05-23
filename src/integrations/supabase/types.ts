@@ -85,6 +85,7 @@ export type Database = {
           created_at: string
           dominant_type: string
           id: string
+          life_area: string | null
           score_anklaeger: number
           score_anpasser: number
           score_lastentraeger: number
@@ -94,6 +95,7 @@ export type Database = {
           created_at?: string
           dominant_type: string
           id?: string
+          life_area?: string | null
           score_anklaeger?: number
           score_anpasser?: number
           score_lastentraeger?: number
@@ -103,6 +105,7 @@ export type Database = {
           created_at?: string
           dominant_type?: string
           id?: string
+          life_area?: string | null
           score_anklaeger?: number
           score_anpasser?: number
           score_lastentraeger?: number
