@@ -506,7 +506,7 @@ export const RoleCheckQuiz = () => {
                 {(["lastentraeger", "anpasser", "anklaeger"] as Category[]).map((cat, idx) => {
                   const value = percentages[cat];
                   const intensity = intensityFor(value);
-                  const isDominant = primaryType !== "integriert" && primaryType === cat;
+                  const isDominant = primaryType !== "integriert" && primaryType !== "ambivalent" && primaryType === cat;
                   return (
                     <motion.div
                       key={cat}
