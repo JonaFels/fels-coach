@@ -379,7 +379,9 @@ export const RoleCheckQuiz = () => {
                   onClick={() => booking?.openErstgespraech()}
                   className="min-h-[52px] px-8 text-base w-full sm:w-auto"
                 >
-                  Jetzt Erstgespräch buchen
+                  {primaryType === "integriert"
+                    ? "Potenzial-Gespräch buchen"
+                    : "Jetzt Erstgespräch buchen"}
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
                 <Button
