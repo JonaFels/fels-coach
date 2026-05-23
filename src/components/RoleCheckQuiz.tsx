@@ -331,6 +331,51 @@ export const RoleCheckQuiz = () => {
             </motion.div>
           )}
 
+          {step === "lifearea" && (
+            <motion.div
+              key="lifearea"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="max-w-2xl mx-auto text-center"
+            >
+              <p className="text-secondary font-medium uppercase tracking-wider text-xs md:text-sm mb-3">
+                Nur noch eine letzte Sache …
+              </p>
+              <h3 className="font-serif text-2xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
+                In welchem Lebensbereich spürst du aktuell die stärksten Auswirkungen oder Blockaden?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-8 md:mb-10">
+                Wähle den Bereich, in dem die Schwere gerade am deutlichsten ist.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-3 md:gap-4 text-left">
+                {lifeAreaOptions.map((opt) => {
+                  const isSelected = lifeArea === opt.value;
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => handleLifeArea(opt.value)}
+                      disabled={lifeArea !== null}
+                      className={`group rounded-2xl border bg-background transition-all duration-200 px-5 py-5 md:py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
+                        isSelected
+                          ? "border-secondary bg-secondary/10 shadow-sm"
+                          : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"
+                      } ${lifeArea !== null && !isSelected ? "opacity-50" : ""}`}
+                    >
+                      <p className="font-serif text-lg md:text-xl text-foreground font-semibold mb-1">
+                        {opt.label}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{opt.hint}</p>
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
+
           {step === "loading" && (
             <motion.div
               key="loading"
