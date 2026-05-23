@@ -112,14 +112,18 @@ export const RoleCheckQuiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [primaryType, setPrimaryType] = useState<ResultType | null>(null);
-  const [secondaryType, setSecondaryType] = useState<Category | null>(null);
+  const [percentages, setPercentages] = useState<Record<Category, number>>({
+    lastentraeger: 0,
+    anpasser: 0,
+    anklaeger: 0,
+  });
   const [selected, setSelected] = useState<number | null>(null);
 
   const start = () => {
     setAnswers({});
     setCurrentIndex(0);
     setPrimaryType(null);
-    setSecondaryType(null);
+    setPercentages({ lastentraeger: 0, anpasser: 0, anklaeger: 0 });
     setSelected(null);
     setStep("quiz");
   };
@@ -147,26 +151,33 @@ export const RoleCheckQuiz = () => {
     for (const q of questions) {
       scores[q.category] += allAnswers[q.id] ?? 0;
     }
-    // Tie-break: lastentraeger wins on rank 1
-    const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
-    const sorted = [...rankOrder].sort((a, b) => scores[b] - scores[a]);
-    const topCategory = sorted[0];
-    const secondary = sorted[1];
 
-    // Gesundes / Integriertes Profil: niedrige Gesamtwerte oder kein dominanter Typ
-    const totalScore = scores.lastentraeger + scores.anpasser + scores.anklaeger;
-    const maxScore = scores[topCategory];
-    const isIntegrated = totalScore <= 35 || maxScore < 12;
+    // Prozentuale Ausprägung: ((Punkte - 5) / 20) * 100, sauber 0–100%
+    const computePercent = (raw: number) =>
+      Math.max(0, Math.min(100, Math.round(((raw - 5) / 20) * 100)));
+    const pct: Record<Category, number> = {
+      lastentraeger: computePercent(scores.lastentraeger),
+      anpasser: computePercent(scores.anpasser),
+      anklaeger: computePercent(scores.anklaeger),
+    };
+    setPercentages(pct);
+
+    // Dominante Kategorie nach Prozent (Tie-break: lastentraeger > anklaeger > anpasser)
+    const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
+    const sorted = [...rankOrder].sort((a, b) => pct[b] - pct[a]);
+    const topCategory = sorted[0];
+
+    // Integriertes System: ALLE drei < 30%
+    const isIntegrated =
+      pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
 
     const primary: ResultType = isIntegrated ? "integriert" : topCategory;
-
     setPrimaryType(primary);
-    setSecondaryType(isIntegrated ? null : secondary);
 
     try {
       await supabase.from("quiz_submissions").insert({
         dominant_type: primary,
-        secondary_type: isIntegrated ? null : secondary,
+        secondary_type: isIntegrated ? null : sorted[1],
         score_lastentraeger: scores.lastentraeger,
         score_anpasser: scores.anpasser,
         score_anklaeger: scores.anklaeger,
