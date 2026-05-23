@@ -577,6 +577,8 @@ export const RoleCheckQuiz = () => {
                 >
                   {primaryType === "integriert"
                     ? "Potenzial-Gespräch buchen"
+                    : primaryType === "ambivalent"
+                    ? "Klarheits-Gespräch buchen"
                     : "Jetzt Erstgespräch buchen"}
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
