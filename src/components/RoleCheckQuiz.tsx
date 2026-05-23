@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Loader2, Sparkles, ArrowRight, ArrowLeft, RefreshCw } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { trackCTAClick } from "@/lib/tracking";
 
@@ -272,6 +271,7 @@ export const RoleCheckQuiz = () => {
     setPrimaryType(primary);
 
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
       await supabase.from("quiz_submissions").insert({
         dominant_type: primary,
         secondary_type: isIntegrated || isAmbivalent ? null : sorted[1],
