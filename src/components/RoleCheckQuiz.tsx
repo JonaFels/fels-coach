@@ -48,7 +48,7 @@ const resultContent: Record<ResultType, {
   wayOut: string;
 }> = {
   lastentraeger: {
-    title: "Dein systemisches Profil: Der Lastenträger (Der Fels)",
+    title: "Dein primäres Profil: Der Lastenträger (Der Fels)",
     surface:
       "Du funktionierst. Du bist der Mensch, zu dem andere kommen, wenn es brennt. Du übernimmst Verantwortung – beruflich wie privat – und sorgst dafür, dass das System nicht zusammenbricht. Das gibt dir Kraft und eine gewisse Unersetzbarkeit. Doch der Preis dafür ist hoch: Eine schleichende, tiefe Erschöpfung und das leise Gefühl, dass für deine eigenen Bedürfnisse kein Raum mehr übrig ist.",
     loyalty:
@@ -59,7 +59,7 @@ const resultContent: Record<ResultType, {
       "Kognitiv weißt du längst, dass du mehr loslassen müsstest. Aber das System in dir wehrt sich, weil Loslassen sich wie Verrat anfühlt. In einer 1:1 Familienaufstellung machen wir genau diese Dynamik sichtbar und geben die Verantwortung ehrenvoll zurück.",
   },
   anpasser: {
-    title: "Dein systemisches Profil: Der Anpasser (Der Ausharrende)",
+    title: "Dein primäres Profil: Der Anpasser (Der Ausharrende)",
     surface:
       "Du bist ein Meister darin, die emotionale Temperatur in einem Raum zu lesen. Du spürst sofort, was andere brauchen, und formst dich so, dass du nirgends aneckst. Du vermeidest Konflikte und stellst eigene Wünsche zurück. Im Inneren fühlst du dich jedoch oft orientierungslos, übersehen oder hast das Gefühl, dein Leben auf einer Art 'Warteschleife' zu verbringen.",
     loyalty:
@@ -70,7 +70,7 @@ const resultContent: Record<ResultType, {
       "Diese Erlaubnis wird von außen nicht kommen – du musst dir deinen rechtmäßigen Platz im System zurückerobern. In einer Aufstellung lösen wir die unsichtbare Bremse, damit du aufhörst, das Leben anderer auszuhalten, und beginnst, dein eigenes zu gestalten.",
   },
   anklaeger: {
-    title: "Dein systemisches Profil: Der autonome Distanzierer",
+    title: "Dein primäres Profil: Der autonome Distanzierer",
     surface:
       "Du wirkst nach außen hin extrem unabhängig, stark und oft hart. Wenn Dinge nicht funktionieren, siehst du sofort, wer die Verantwortung trägt, und baust Druck auf. Du regelst Beziehungen und berufliche Herausforderungen oft durch Leistung, Kontrolle und Abgrenzung. Gleichzeitig spürst du eine innere Isolation, weil echte Nähe dir schwerfällt.",
     loyalty:
@@ -83,23 +83,27 @@ const resultContent: Record<ResultType, {
   integriert: {
     title: "Dein systemisches Profil: In deiner Kraft (Das integrierte System)",
     surface:
-      "Deine Antworten zeigen eine hohe systemische Reife und eine gesunde innere Balance. Es gelingt dir im Alltag gut, Verantwortung dort zu lassen, wo sie hingehört, ohne in die Überlastung des Lastenträgers zu kippen. Gleichzeitig kannst du deine eigenen Bedürfnisse klar wahrnehmen und kommunizieren, ohne dich unsichtbar zu machen oder in die Härte zu flüchten.",
+      "Deine Antworten zeigen eine bemerkenswerte systemische Reife und eine gesunde innere Balance. Es gelingt dir im Alltag hervorragend, Verantwortung dort zu lassen, wo sie hingehört, ohne in die Überlastung des Lastenträgers zu kippen. Du nimmst dir deinen Raum, ohne dich anzupassen, und bleibst weich und nahbar, ohne Schutzmauern hochzuziehen.",
     loyalty:
-      "Systemisch gesehen stehst du bereits sehr stabil an deinem eigenen, rechtmäßigen Platz im Leben. Du hast wahrscheinlich schon viel reflektiert oder ein natürliches Gespür dafür entwickelt, dich von alten, unbewussten Dynamiken deiner Herkunftsfamilie abzugrenzen. Deine Energie gehört dir.",
+      "Systemisch gesehen stehst du stabil an deinem eigenen, rechtmäßigen Platz im Leben. Du hast unbewusste Verstrickungen deiner Herkunftsfamilie entweder bereits erfolgreich gelöst oder trägst ein gesundes Urvertrauen in dir. Deine Energie steht dir für dein eigenes Leben frei zur Verfügung.",
     blindSpot:
-      "Dein 'blinder Fleck' ist hier eher die Frage, ob du dir wirklich erlaubst, diese Freiheit und Kraft voll auszuleben, oder ob du dich aus Gewohnheit noch manchmal zurückhältst.",
+      "Dein potenzieller 'blinder Fleck' ist lediglich die Gewohnheit: Erlaubst du dir wirklich schon, diese ungebundene Freiheit und Größe in all deinen Lebensbereichen voll auszuleben?",
     wayOut:
-      "Für Menschen in deiner Position geht es in der 1:1 Arbeit meistens nicht mehr um das mühsame Lösen schwerer Verstrickungen. Es geht um Schöpfungskraft: Wie nutzt du diese freie, ungebundene Energie, um deine persönlichen oder beruflichen Visionen auf das nächste Level zu bringen? Lass uns im Erstgespräch schauen, wie wir dein volles Potenzial freisetzen.",
+      "Für Menschen mit einem integrierten Profil geht es im 1:1 Coaching nicht mehr um das Heilen alter Wunden, sondern um reine Potenzialentfaltung. Wie nutzt du diese freie Kraft für deine nächsten großen Visionen? Lass uns im Erstgespräch genau diesen Hebel ansetzen.",
   },
 };
 
-const stressProfiles: Record<Category, string> = {
-  lastentraeger:
-    "Dein Stress-Profil zeigt starke Tendenzen zum Lastenträger: Wenn dein eigentliches System unter extremen Druck gerät, fängst du an, zwanghaft Verantwortung an dich zu reißen, um die Kontrolle zu behalten.",
-  anpasser:
-    "Dein Stress-Profil zeigt starke Tendenzen zum Anpasser: Wenn dein eigentliches System unter extremen Druck gerät, neigst du dazu, dich emotional komplett unsichtbar zu machen und innerlich zu verstummen.",
-  anklaeger:
-    "Dein Stress-Profil zeigt starke Tendenzen zum autonomen Distanzierer: Wenn dein eigentliches System unter extremen Druck gerät, kippst du in die Härte, wirst zynisch und stößt andere von dir weg.",
+const categoryLabels: Record<Category, string> = {
+  lastentraeger: "Der Lastenträger",
+  anpasser: "Der Anpasser",
+  anklaeger: "Der Distanzierer",
+};
+
+const intensityFor = (percent: number): { label: string; tone: string } => {
+  if (percent <= 25) return { label: "Kaum ausgeprägt · Gesundes Fundament", tone: "text-muted-foreground" };
+  if (percent <= 55) return { label: "Leichte Ausprägung · Situative Tendenz", tone: "text-secondary/80" };
+  if (percent <= 80) return { label: "Moderate Ausprägung · Aktive Dynamik", tone: "text-secondary" };
+  return { label: "Starke Ausprägung · Dominante Verstrickung", tone: "text-primary" };
 };
 
 export const RoleCheckQuiz = () => {
@@ -108,14 +112,18 @@ export const RoleCheckQuiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [primaryType, setPrimaryType] = useState<ResultType | null>(null);
-  const [secondaryType, setSecondaryType] = useState<Category | null>(null);
+  const [percentages, setPercentages] = useState<Record<Category, number>>({
+    lastentraeger: 0,
+    anpasser: 0,
+    anklaeger: 0,
+  });
   const [selected, setSelected] = useState<number | null>(null);
 
   const start = () => {
     setAnswers({});
     setCurrentIndex(0);
     setPrimaryType(null);
-    setSecondaryType(null);
+    setPercentages({ lastentraeger: 0, anpasser: 0, anklaeger: 0 });
     setSelected(null);
     setStep("quiz");
   };
@@ -143,26 +151,33 @@ export const RoleCheckQuiz = () => {
     for (const q of questions) {
       scores[q.category] += allAnswers[q.id] ?? 0;
     }
-    // Tie-break: lastentraeger wins on rank 1
-    const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
-    const sorted = [...rankOrder].sort((a, b) => scores[b] - scores[a]);
-    const topCategory = sorted[0];
-    const secondary = sorted[1];
 
-    // Gesundes / Integriertes Profil: niedrige Gesamtwerte oder kein dominanter Typ
-    const totalScore = scores.lastentraeger + scores.anpasser + scores.anklaeger;
-    const maxScore = scores[topCategory];
-    const isIntegrated = totalScore <= 35 || maxScore < 12;
+    // Prozentuale Ausprägung: ((Punkte - 5) / 20) * 100, sauber 0–100%
+    const computePercent = (raw: number) =>
+      Math.max(0, Math.min(100, Math.round(((raw - 5) / 20) * 100)));
+    const pct: Record<Category, number> = {
+      lastentraeger: computePercent(scores.lastentraeger),
+      anpasser: computePercent(scores.anpasser),
+      anklaeger: computePercent(scores.anklaeger),
+    };
+    setPercentages(pct);
+
+    // Dominante Kategorie nach Prozent (Tie-break: lastentraeger > anklaeger > anpasser)
+    const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
+    const sorted = [...rankOrder].sort((a, b) => pct[b] - pct[a]);
+    const topCategory = sorted[0];
+
+    // Integriertes System: ALLE drei < 30%
+    const isIntegrated =
+      pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
 
     const primary: ResultType = isIntegrated ? "integriert" : topCategory;
-
     setPrimaryType(primary);
-    setSecondaryType(isIntegrated ? null : secondary);
 
     try {
       await supabase.from("quiz_submissions").insert({
         dominant_type: primary,
-        secondary_type: isIntegrated ? null : secondary,
+        secondary_type: isIntegrated ? null : sorted[1],
         score_lastentraeger: scores.lastentraeger,
         score_anpasser: scores.anpasser,
         score_anklaeger: scores.anklaeger,
@@ -324,9 +339,47 @@ export const RoleCheckQuiz = () => {
               className="max-w-2xl mx-auto"
             >
               <p className="text-secondary font-medium uppercase tracking-wider text-xs md:text-sm mb-3 text-center">
-                Dein Ergebnis
+                Dein systemisches Spektrum
               </p>
-              <h3 className="font-serif text-2xl md:text-4xl font-semibold text-foreground mb-8 leading-tight text-center">
+
+              {/* Progress Bars für alle 3 Kategorien */}
+              <div className="mb-10 md:mb-12 space-y-5 md:space-y-6">
+                {(["lastentraeger", "anpasser", "anklaeger"] as Category[]).map((cat, idx) => {
+                  const value = percentages[cat];
+                  const intensity = intensityFor(value);
+                  const isDominant = primaryType !== "integriert" && primaryType === cat;
+                  return (
+                    <motion.div
+                      key={cat}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 + idx * 0.1, duration: 0.5, ease: "easeOut" }}
+                    >
+                      <div className="flex items-baseline justify-between gap-3 mb-2">
+                        <p className={`font-serif text-base md:text-lg ${isDominant ? "text-foreground font-semibold" : "text-foreground/85"}`}>
+                          {categoryLabels[cat]}
+                        </p>
+                        <p className={`text-sm md:text-base font-medium tabular-nums ${isDominant ? "text-secondary" : "text-muted-foreground"}`}>
+                          {value}%
+                        </p>
+                      </div>
+                      <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
+                        <motion.div
+                          className={`h-full rounded-full ${isDominant ? "bg-secondary" : "bg-secondary/40"}`}
+                          initial={{ width: 0 }}
+                          animate={{ width: `${value}%` }}
+                          transition={{ delay: 0.25 + idx * 0.1, duration: 0.9, ease: "easeOut" }}
+                        />
+                      </div>
+                      <p className={`mt-1.5 text-xs md:text-[0.78rem] ${intensity.tone}`}>
+                        {intensity.label}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              <h3 className="font-serif text-2xl md:text-4xl font-semibold text-foreground mb-6 leading-tight text-center">
                 {resultContent[primaryType].title}
               </h3>
 
@@ -356,22 +409,6 @@ export const RoleCheckQuiz = () => {
                   <p>{resultContent[primaryType].wayOut}</p>
                 </div>
               </div>
-
-              {secondaryType && secondaryType !== primaryType && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="mt-10 rounded-2xl border border-secondary/20 bg-secondary/5 p-6 md:p-8"
-                >
-                  <p className="text-secondary font-medium uppercase tracking-wider text-xs mb-2">
-                    Dein Stress-Profil
-                  </p>
-                  <p className="text-foreground/85 leading-[1.75] text-base">
-                    {stressProfiles[secondaryType]}
-                  </p>
-                </motion.div>
-              )}
 
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Button
