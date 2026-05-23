@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2, Sparkles, ArrowRight, ArrowLeft, RefreshCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
+import { trackCTAClick } from "@/lib/tracking";
 
 type Category = "lastentraeger" | "anpasser" | "anklaeger";
 type ResultType = Category | "integriert" | "ambivalent";
@@ -572,15 +573,26 @@ export const RoleCheckQuiz = () => {
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Button
                   size="lg"
-                  onClick={() => booking?.openErstgespraech()}
+                  asChild
                   className="min-h-[52px] px-8 text-base w-full sm:w-auto"
                 >
-                  {primaryType === "integriert"
-                    ? "Potenzial-Gespräch buchen"
-                    : primaryType === "ambivalent"
-                    ? "Klarheits-Gespräch buchen"
-                    : "Jetzt Erstgespräch buchen"}
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  <a
+                    href="/kontakt#erstgespraech"
+                    onClick={(e) => {
+                      if (booking) {
+                        e.preventDefault();
+                        booking.openErstgespraech();
+                      }
+                      trackCTAClick("rollencheck_result", `quiz_${primaryType}`, "link");
+                    }}
+                  >
+                    {primaryType === "integriert"
+                      ? "Potenzial-Gespräch buchen"
+                      : primaryType === "ambivalent"
+                      ? "Klarheits-Gespräch buchen"
+                      : "Jetzt Erstgespräch buchen"}
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </a>
                 </Button>
                 <Button
                   variant="ghost"
