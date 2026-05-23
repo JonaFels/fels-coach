@@ -48,7 +48,7 @@ const resultContent: Record<ResultType, {
   wayOut: string;
 }> = {
   lastentraeger: {
-    title: "Dein systemisches Profil: Der Lastenträger (Der Fels)",
+    title: "Dein primäres Profil: Der Lastenträger (Der Fels)",
     surface:
       "Du funktionierst. Du bist der Mensch, zu dem andere kommen, wenn es brennt. Du übernimmst Verantwortung – beruflich wie privat – und sorgst dafür, dass das System nicht zusammenbricht. Das gibt dir Kraft und eine gewisse Unersetzbarkeit. Doch der Preis dafür ist hoch: Eine schleichende, tiefe Erschöpfung und das leise Gefühl, dass für deine eigenen Bedürfnisse kein Raum mehr übrig ist.",
     loyalty:
@@ -59,7 +59,7 @@ const resultContent: Record<ResultType, {
       "Kognitiv weißt du längst, dass du mehr loslassen müsstest. Aber das System in dir wehrt sich, weil Loslassen sich wie Verrat anfühlt. In einer 1:1 Familienaufstellung machen wir genau diese Dynamik sichtbar und geben die Verantwortung ehrenvoll zurück.",
   },
   anpasser: {
-    title: "Dein systemisches Profil: Der Anpasser (Der Ausharrende)",
+    title: "Dein primäres Profil: Der Anpasser (Der Ausharrende)",
     surface:
       "Du bist ein Meister darin, die emotionale Temperatur in einem Raum zu lesen. Du spürst sofort, was andere brauchen, und formst dich so, dass du nirgends aneckst. Du vermeidest Konflikte und stellst eigene Wünsche zurück. Im Inneren fühlst du dich jedoch oft orientierungslos, übersehen oder hast das Gefühl, dein Leben auf einer Art 'Warteschleife' zu verbringen.",
     loyalty:
@@ -70,7 +70,7 @@ const resultContent: Record<ResultType, {
       "Diese Erlaubnis wird von außen nicht kommen – du musst dir deinen rechtmäßigen Platz im System zurückerobern. In einer Aufstellung lösen wir die unsichtbare Bremse, damit du aufhörst, das Leben anderer auszuhalten, und beginnst, dein eigenes zu gestalten.",
   },
   anklaeger: {
-    title: "Dein systemisches Profil: Der autonome Distanzierer",
+    title: "Dein primäres Profil: Der autonome Distanzierer",
     surface:
       "Du wirkst nach außen hin extrem unabhängig, stark und oft hart. Wenn Dinge nicht funktionieren, siehst du sofort, wer die Verantwortung trägt, und baust Druck auf. Du regelst Beziehungen und berufliche Herausforderungen oft durch Leistung, Kontrolle und Abgrenzung. Gleichzeitig spürst du eine innere Isolation, weil echte Nähe dir schwerfällt.",
     loyalty:
@@ -83,23 +83,27 @@ const resultContent: Record<ResultType, {
   integriert: {
     title: "Dein systemisches Profil: In deiner Kraft (Das integrierte System)",
     surface:
-      "Deine Antworten zeigen eine hohe systemische Reife und eine gesunde innere Balance. Es gelingt dir im Alltag gut, Verantwortung dort zu lassen, wo sie hingehört, ohne in die Überlastung des Lastenträgers zu kippen. Gleichzeitig kannst du deine eigenen Bedürfnisse klar wahrnehmen und kommunizieren, ohne dich unsichtbar zu machen oder in die Härte zu flüchten.",
+      "Deine Antworten zeigen eine bemerkenswerte systemische Reife und eine gesunde innere Balance. Es gelingt dir im Alltag hervorragend, Verantwortung dort zu lassen, wo sie hingehört, ohne in die Überlastung des Lastenträgers zu kippen. Du nimmst dir deinen Raum, ohne dich anzupassen, und bleibst weich und nahbar, ohne Schutzmauern hochzuziehen.",
     loyalty:
-      "Systemisch gesehen stehst du bereits sehr stabil an deinem eigenen, rechtmäßigen Platz im Leben. Du hast wahrscheinlich schon viel reflektiert oder ein natürliches Gespür dafür entwickelt, dich von alten, unbewussten Dynamiken deiner Herkunftsfamilie abzugrenzen. Deine Energie gehört dir.",
+      "Systemisch gesehen stehst du stabil an deinem eigenen, rechtmäßigen Platz im Leben. Du hast unbewusste Verstrickungen deiner Herkunftsfamilie entweder bereits erfolgreich gelöst oder trägst ein gesundes Urvertrauen in dir. Deine Energie steht dir für dein eigenes Leben frei zur Verfügung.",
     blindSpot:
-      "Dein 'blinder Fleck' ist hier eher die Frage, ob du dir wirklich erlaubst, diese Freiheit und Kraft voll auszuleben, oder ob du dich aus Gewohnheit noch manchmal zurückhältst.",
+      "Dein potenzieller 'blinder Fleck' ist lediglich die Gewohnheit: Erlaubst du dir wirklich schon, diese ungebundene Freiheit und Größe in all deinen Lebensbereichen voll auszuleben?",
     wayOut:
-      "Für Menschen in deiner Position geht es in der 1:1 Arbeit meistens nicht mehr um das mühsame Lösen schwerer Verstrickungen. Es geht um Schöpfungskraft: Wie nutzt du diese freie, ungebundene Energie, um deine persönlichen oder beruflichen Visionen auf das nächste Level zu bringen? Lass uns im Erstgespräch schauen, wie wir dein volles Potenzial freisetzen.",
+      "Für Menschen mit einem integrierten Profil geht es im 1:1 Coaching nicht mehr um das Heilen alter Wunden, sondern um reine Potenzialentfaltung. Wie nutzt du diese freie Kraft für deine nächsten großen Visionen? Lass uns im Erstgespräch genau diesen Hebel ansetzen.",
   },
 };
 
-const stressProfiles: Record<Category, string> = {
-  lastentraeger:
-    "Dein Stress-Profil zeigt starke Tendenzen zum Lastenträger: Wenn dein eigentliches System unter extremen Druck gerät, fängst du an, zwanghaft Verantwortung an dich zu reißen, um die Kontrolle zu behalten.",
-  anpasser:
-    "Dein Stress-Profil zeigt starke Tendenzen zum Anpasser: Wenn dein eigentliches System unter extremen Druck gerät, neigst du dazu, dich emotional komplett unsichtbar zu machen und innerlich zu verstummen.",
-  anklaeger:
-    "Dein Stress-Profil zeigt starke Tendenzen zum autonomen Distanzierer: Wenn dein eigentliches System unter extremen Druck gerät, kippst du in die Härte, wirst zynisch und stößt andere von dir weg.",
+const categoryLabels: Record<Category, string> = {
+  lastentraeger: "Der Lastenträger",
+  anpasser: "Der Anpasser",
+  anklaeger: "Der Distanzierer",
+};
+
+const intensityFor = (percent: number): { label: string; tone: string } => {
+  if (percent <= 25) return { label: "Kaum ausgeprägt · Gesundes Fundament", tone: "text-muted-foreground" };
+  if (percent <= 55) return { label: "Leichte Ausprägung · Situative Tendenz", tone: "text-secondary/80" };
+  if (percent <= 80) return { label: "Moderate Ausprägung · Aktive Dynamik", tone: "text-secondary" };
+  return { label: "Starke Ausprägung · Dominante Verstrickung", tone: "text-primary" };
 };
 
 export const RoleCheckQuiz = () => {
