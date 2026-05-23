@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Loader2, Sparkles, ArrowRight, RefreshCw } from "lucide-react";
+import { Loader2, Sparkles, ArrowRight, ArrowLeft, RefreshCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 
@@ -126,6 +126,7 @@ export const RoleCheckQuiz = () => {
     anklaeger: 0,
   });
   const [selected, setSelected] = useState<number | null>(null);
+  const [isAdvancing, setIsAdvancing] = useState(false);
   const [lifeArea, setLifeArea] = useState<LifeArea | null>(null);
 
   const start = () => {
@@ -134,26 +135,42 @@ export const RoleCheckQuiz = () => {
     setPrimaryType(null);
     setPercentages({ lastentraeger: 0, anpasser: 0, anklaeger: 0 });
     setSelected(null);
+    setIsAdvancing(false);
     setLifeArea(null);
     setStep("quiz");
   };
 
   const handleAnswer = (value: number) => {
-    if (selected !== null) return;
-    setSelected(value);
+    if (isAdvancing) return;
     const q = questions[currentIndex];
     const next = { ...answers, [q.id]: value };
     setAnswers(next);
+    setSelected(value);
+    setIsAdvancing(true);
 
     window.setTimeout(() => {
       if (currentIndex < questions.length - 1) {
-        setCurrentIndex((i) => i + 1);
-        setSelected(null);
+        const nextIdx = currentIndex + 1;
+        setCurrentIndex(nextIdx);
+        setSelected(next[questions[nextIdx].id] ?? null);
       } else {
-        // Statt direkt zu finalisieren: Kontext-Frage zum Lebensbereich
         setStep("lifearea");
       }
+      setIsAdvancing(false);
     }, 300);
+  };
+
+  const handleBack = () => {
+    if (isAdvancing || currentIndex === 0) return;
+    const prevIdx = currentIndex - 1;
+    setCurrentIndex(prevIdx);
+    setSelected(answers[questions[prevIdx].id] ?? null);
+  };
+
+  const handleLifeAreaBack = () => {
+    setLifeArea(null);
+    setSelected(answers[questions[questions.length - 1].id] ?? null);
+    setStep("quiz");
   };
 
   const handleLifeArea = (area: LifeArea) => {
@@ -303,12 +320,12 @@ export const RoleCheckQuiz = () => {
                           key={opt.value}
                           type="button"
                           onClick={() => handleAnswer(opt.value)}
-                          disabled={selected !== null}
+                          disabled={isAdvancing}
                           className={`group w-full flex items-center gap-4 rounded-xl border bg-background transition-all duration-200 px-4 md:px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
                             isSelected
                               ? "border-secondary bg-secondary/10 shadow-sm"
                               : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"
-                          } ${selected !== null && !isSelected ? "opacity-50" : ""}`}
+                          } ${isAdvancing && !isSelected ? "opacity-50" : ""}`}
                         >
                           <span
                             className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center font-serif text-base md:text-lg font-semibold transition-colors ${
@@ -325,6 +342,25 @@ export const RoleCheckQuiz = () => {
                         </button>
                       );
                     })}
+                  </div>
+
+                  <div className="mt-6 flex items-center justify-between">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleBack}
+                      disabled={currentIndex === 0 || isAdvancing}
+                      className="text-muted-foreground hover:text-foreground disabled:opacity-40"
+                    >
+                      <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
+                      Zurück
+                    </Button>
+                    {selected !== null && (
+                      <span className="text-xs text-muted-foreground">
+                        Antwort kann jederzeit geändert werden
+                      </span>
+                    )}
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -372,6 +408,20 @@ export const RoleCheckQuiz = () => {
                     </button>
                   );
                 })}
+              </div>
+
+              <div className="mt-8 flex justify-center">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleLifeAreaBack}
+                  disabled={lifeArea !== null}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Zurück zu den Fragen
+                </Button>
               </div>
             </motion.div>
           )}
