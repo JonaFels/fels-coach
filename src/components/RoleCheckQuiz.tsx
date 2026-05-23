@@ -212,20 +212,36 @@ export const RoleCheckQuiz = () => {
       weightTotals[q.category] += q.weight;
     }
 
-    // Skala 1–4, normalisiert per Kategorie über deren Gewichtssumme.
-    const computePercent = (cat: Category) => {
-      const w = weightTotals[cat];
-      const min = w * 1;
-      const max = w * 4;
-      const range = max - min;
-      if (range <= 0) return 0;
-      return Math.max(0, Math.min(100, Math.round(((weightedScores[cat] - min) / range) * 100)));
+    // Gewichteter Durchschnitt je Kategorie auf der 1–4 Skala
+    const avgPer: Record<Category, number> = {
+      lastentraeger: weightedScores.lastentraeger / weightTotals.lastentraeger,
+      anpasser: weightedScores.anpasser / weightTotals.anpasser,
+      anklaeger: weightedScores.anklaeger / weightTotals.anklaeger,
     };
 
+    // Persönlicher Antwort-Baseline (ipsative Korrektur gegen Response-Style-Bias:
+    // gleicht aus, dass manche Menschen tendenziell überall zustimmen / ablehnen).
+    const userMean =
+      (avgPer.lastentraeger + avgPer.anpasser + avgPer.anklaeger) / 3;
+
+    // Absolute Ausprägung 0–100 (wie stark ist diese Dynamik für sich genommen).
+    const absolutePct = (cat: Category) =>
+      Math.max(0, Math.min(100, ((avgPer[cat] - 1) / 3) * 100));
+
+    // Relative Dominanz 0–100 (wie stark hebt sich diese Kategorie vom eigenen
+    // Antwort-Durchschnitt ab). ±1 Skalenpunkt Abweichung → ±40 Prozentpunkte.
+    const relativePct = (cat: Category) =>
+      Math.max(0, Math.min(100, 50 + (avgPer[cat] - userMean) * 40));
+
+    // Hybrid 55 % absolut / 45 % relativ – verstärkt echte Dominanz, ohne den
+    // absoluten Intensitäts-Anker zu verlieren.
+    const hybrid = (cat: Category) =>
+      Math.round(absolutePct(cat) * 0.55 + relativePct(cat) * 0.45);
+
     const pct: Record<Category, number> = {
-      lastentraeger: computePercent("lastentraeger"),
-      anpasser: computePercent("anpasser"),
-      anklaeger: computePercent("anklaeger"),
+      lastentraeger: hybrid("lastentraeger"),
+      anpasser: hybrid("anpasser"),
+      anklaeger: hybrid("anklaeger"),
     };
     setPercentages(pct);
 
