@@ -116,7 +116,7 @@ const intensityFor = (percent: number): { label: string; tone: string } => {
 
 export const RoleCheckQuiz = () => {
   const booking = useErstgespraech();
-  const [step, setStep] = useState<"start" | "quiz" | "loading" | "result">("start");
+  const [step, setStep] = useState<"start" | "quiz" | "lifearea" | "loading" | "result">("start");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [primaryType, setPrimaryType] = useState<ResultType | null>(null);
@@ -126,6 +126,7 @@ export const RoleCheckQuiz = () => {
     anklaeger: 0,
   });
   const [selected, setSelected] = useState<number | null>(null);
+  const [lifeArea, setLifeArea] = useState<LifeArea | null>(null);
 
   const start = () => {
     setAnswers({});
@@ -133,6 +134,7 @@ export const RoleCheckQuiz = () => {
     setPrimaryType(null);
     setPercentages({ lastentraeger: 0, anpasser: 0, anklaeger: 0 });
     setSelected(null);
+    setLifeArea(null);
     setStep("quiz");
   };
 
@@ -148,21 +150,30 @@ export const RoleCheckQuiz = () => {
         setCurrentIndex((i) => i + 1);
         setSelected(null);
       } else {
-        finalize(next);
+        // Statt direkt zu finalisieren: Kontext-Frage zum Lebensbereich
+        setStep("lifearea");
       }
     }, 300);
   };
 
-  const finalize = async (allAnswers: Record<number, number>) => {
+  const handleLifeArea = (area: LifeArea) => {
+    if (lifeArea !== null) return;
+    setLifeArea(area);
+    window.setTimeout(() => {
+      finalize(answers, area);
+    }, 250);
+  };
+
+  const finalize = async (allAnswers: Record<number, number>, area: LifeArea) => {
     setStep("loading");
     const scores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
     for (const q of questions) {
       scores[q.category] += allAnswers[q.id] ?? 0;
     }
 
-    // Prozentuale Ausprägung: ((Punkte - 5) / 20) * 100, sauber 0–100%
+    // 4er-Skala, 5 Fragen pro Kategorie: min 5, max 20 → ((Punkte - 5) / 15) * 100
     const computePercent = (raw: number) =>
-      Math.max(0, Math.min(100, Math.round(((raw - 5) / 20) * 100)));
+      Math.max(0, Math.min(100, Math.round(((raw - 5) / 15) * 100)));
     const pct: Record<Category, number> = {
       lastentraeger: computePercent(scores.lastentraeger),
       anpasser: computePercent(scores.anpasser),
@@ -170,12 +181,10 @@ export const RoleCheckQuiz = () => {
     };
     setPercentages(pct);
 
-    // Dominante Kategorie nach Prozent (Tie-break: lastentraeger > anklaeger > anpasser)
     const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
     const sorted = [...rankOrder].sort((a, b) => pct[b] - pct[a]);
     const topCategory = sorted[0];
 
-    // Integriertes System: ALLE drei < 30%
     const isIntegrated =
       pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
 
@@ -189,6 +198,7 @@ export const RoleCheckQuiz = () => {
         score_lastentraeger: scores.lastentraeger,
         score_anpasser: scores.anpasser,
         score_anklaeger: scores.anklaeger,
+        life_area: area,
       });
     } catch (e) {
       console.error("Quiz submission failed", e);
