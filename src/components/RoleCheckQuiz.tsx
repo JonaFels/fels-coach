@@ -320,12 +320,12 @@ export const RoleCheckQuiz = () => {
                           key={opt.value}
                           type="button"
                           onClick={() => handleAnswer(opt.value)}
-                          disabled={selected !== null}
+                          disabled={isAdvancing}
                           className={`group w-full flex items-center gap-4 rounded-xl border bg-background transition-all duration-200 px-4 md:px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
                             isSelected
                               ? "border-secondary bg-secondary/10 shadow-sm"
                               : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"
-                          } ${selected !== null && !isSelected ? "opacity-50" : ""}`}
+                          } ${isAdvancing && !isSelected ? "opacity-50" : ""}`}
                         >
                           <span
                             className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center font-serif text-base md:text-lg font-semibold transition-colors ${
@@ -342,6 +342,25 @@ export const RoleCheckQuiz = () => {
                         </button>
                       );
                     })}
+                  </div>
+
+                  <div className="mt-6 flex items-center justify-between">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleBack}
+                      disabled={currentIndex === 0 || isAdvancing}
+                      className="text-muted-foreground hover:text-foreground disabled:opacity-40"
+                    >
+                      <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
+                      Zurück
+                    </Button>
+                    {selected !== null && (
+                      <span className="text-xs text-muted-foreground">
+                        Antwort kann jederzeit geändert werden
+                      </span>
+                    )}
                   </div>
                 </motion.div>
               </AnimatePresence>
