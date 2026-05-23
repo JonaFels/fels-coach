@@ -5,7 +5,6 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
-import { QuizTeaser } from "@/components/QuizTeaser";
 
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
@@ -44,10 +43,9 @@ const Index = () => {
             <section
               id="rollencheck-quiz"
               aria-labelledby="rollencheck-heading"
-              className="py-16 md:py-24 bg-muted/40 border-y border-border/40"
+              className="py-16 md:py-24 bg-background"
             >
-              <div className="container mx-auto px-4 max-w-4xl space-y-14 md:space-y-20">
-                <QuizTeaser />
+              <div className="container mx-auto px-4 max-w-4xl">
                 <RoleCheckQuiz />
               </div>
             </section>
