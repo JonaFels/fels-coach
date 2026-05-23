@@ -197,38 +197,70 @@ export const RoleCheckQuiz = () => {
 
   const finalize = async (allAnswers: Record<number, number>, area: LifeArea) => {
     setStep("loading");
-    const scores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+
+    // 1) Rohwerte je Kategorie für DB-Speicherung (unweighted Summe).
+    const rawScores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+    // 2) Gewichtete Summen für die Auswertung.
+    const weightedScores: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+    const weightTotals: Record<Category, number> = { lastentraeger: 0, anpasser: 0, anklaeger: 0 };
+
     for (const q of questions) {
-      scores[q.category] += allAnswers[q.id] ?? 0;
+      const ans = allAnswers[q.id] ?? 0;
+      rawScores[q.category] += ans;
+      weightedScores[q.category] += ans * q.weight;
+      weightTotals[q.category] += q.weight;
     }
 
-    // 4er-Skala, 5 Fragen pro Kategorie: min 5, max 20 → ((Punkte - 5) / 15) * 100
-    const computePercent = (raw: number) =>
-      Math.max(0, Math.min(100, Math.round(((raw - 5) / 15) * 100)));
+    // Skala 1–4, normalisiert per Kategorie über deren Gewichtssumme.
+    const computePercent = (cat: Category) => {
+      const w = weightTotals[cat];
+      const min = w * 1;
+      const max = w * 4;
+      const range = max - min;
+      if (range <= 0) return 0;
+      return Math.max(0, Math.min(100, Math.round(((weightedScores[cat] - min) / range) * 100)));
+    };
+
     const pct: Record<Category, number> = {
-      lastentraeger: computePercent(scores.lastentraeger),
-      anpasser: computePercent(scores.anpasser),
-      anklaeger: computePercent(scores.anklaeger),
+      lastentraeger: computePercent("lastentraeger"),
+      anpasser: computePercent("anpasser"),
+      anklaeger: computePercent("anklaeger"),
     };
     setPercentages(pct);
 
-    const rankOrder: Category[] = ["lastentraeger", "anklaeger", "anpasser"];
-    const sorted = [...rankOrder].sort((a, b) => pct[b] - pct[a]);
+    // Deterministisches Ranking: zuerst nach Prozent, bei Gleichstand nach gewichtetem Rohwert.
+    const cats: Category[] = ["lastentraeger", "anpasser", "anklaeger"];
+    const sorted = [...cats].sort((a, b) => {
+      if (pct[b] !== pct[a]) return pct[b] - pct[a];
+      return weightedScores[b] - weightedScores[a];
+    });
     const topCategory = sorted[0];
 
-    const isIntegrated =
-      pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
+    const maxPct = pct[sorted[0]];
+    const minPct = pct[sorted[2]];
+    const spread = maxPct - minPct;
 
-    const primary: ResultType = isIntegrated ? "integriert" : topCategory;
+    // 1) Integriertes Profil: alle drei Dynamiken niedrig.
+    const isIntegrated = pct.lastentraeger < 30 && pct.anpasser < 30 && pct.anklaeger < 30;
+
+    // 2) Ambivalentes Profil: alle drei ähnlich stark ausgeprägt – keine klare Dominanz.
+    //    Gleichstand (Spread ≤ 7 Prozentpunkte) bei mittlerem bis hohem Niveau.
+    const isAmbivalent = !isIntegrated && spread <= 7 && maxPct >= 35;
+
+    const primary: ResultType = isIntegrated
+      ? "integriert"
+      : isAmbivalent
+      ? "ambivalent"
+      : topCategory;
     setPrimaryType(primary);
 
     try {
       await supabase.from("quiz_submissions").insert({
         dominant_type: primary,
-        secondary_type: isIntegrated ? null : sorted[1],
-        score_lastentraeger: scores.lastentraeger,
-        score_anpasser: scores.anpasser,
-        score_anklaeger: scores.anklaeger,
+        secondary_type: isIntegrated || isAmbivalent ? null : sorted[1],
+        score_lastentraeger: rawScores.lastentraeger,
+        score_anpasser: rawScores.anpasser,
+        score_anklaeger: rawScores.anklaeger,
         life_area: area,
       });
     } catch (e) {
