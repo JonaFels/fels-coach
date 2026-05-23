@@ -572,15 +572,26 @@ export const RoleCheckQuiz = () => {
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Button
                   size="lg"
-                  onClick={() => booking?.openErstgespraech()}
+                  asChild
                   className="min-h-[52px] px-8 text-base w-full sm:w-auto"
                 >
-                  {primaryType === "integriert"
-                    ? "Potenzial-Gespräch buchen"
-                    : primaryType === "ambivalent"
-                    ? "Klarheits-Gespräch buchen"
-                    : "Jetzt Erstgespräch buchen"}
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  <a
+                    href="/kontakt#erstgespraech"
+                    onClick={(e) => {
+                      if (booking) {
+                        e.preventDefault();
+                        booking.openErstgespraech();
+                      }
+                      trackCTAClick("rollencheck_result", `quiz_${primaryType}`, "link");
+                    }}
+                  >
+                    {primaryType === "integriert"
+                      ? "Potenzial-Gespräch buchen"
+                      : primaryType === "ambivalent"
+                      ? "Klarheits-Gespräch buchen"
+                      : "Jetzt Erstgespräch buchen"}
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </a>
                 </Button>
                 <Button
                   variant="ghost"
