@@ -6,30 +6,33 @@ import { supabase } from "@/integrations/supabase/client";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 type Category = "lastentraeger" | "anpasser" | "anklaeger";
-type ResultType = Category | "integriert";
+type ResultType = Category | "integriert" | "ambivalent";
 
 interface Question {
   id: number;
   category: Category;
   text: string;
+  /** Gewichtung der Frage (1 = Standard, 1.5 = Schlüsselfrage / tiefes Identitäts- bzw. Loyalitätsmuster) */
+  weight: number;
 }
 
+// Schlüsselfragen (Identität / unbewusste Loyalität) wiegen stärker als Verhaltens-Indikatoren.
 const questions: Question[] = [
-  { id: 1, category: "lastentraeger", text: "Wenn jemand in meinem nahen Umfeld ein Problem hat, empfinde ich sofort einen inneren Druck, die Lösung finden oder zumindest lindern zu müssen." },
-  { id: 2, category: "anklaeger", text: "Wenn Dinge nicht nach Plan laufen, ist meine erste innere Reaktion oft Frustration über die Inkompetenz oder Ineffizienz der anderen." },
-  { id: 3, category: "anpasser", text: "Ich ertappe mich oft dabei, dass ich meine eigenen Bedürfnisse kaum spüren kann, solange die Bedürfnisse der anderen im Raum nicht geklärt sind." },
-  { id: 4, category: "lastentraeger", text: "Mein eigener Erfolg oder ein Moment echter Ruhe fühlt sich für mich oft erst dann 'erlaubt' an, wenn ich weiß, dass es allen in meinem System gut geht." },
-  { id: 5, category: "anklaeger", text: "Ich zeige selten echte Verletzlichkeit, da ich tief im Inneren davon ausgehe, dass Schwäche letztendlich gegen mich verwendet wird." },
-  { id: 6, category: "anpasser", text: "In Konflikten oder emotional angespannten Situationen neige ich dazu, innerlich zu 'verstummen' oder mich unsichtbar zu machen, um die Lage nicht zu verschlimmern." },
-  { id: 7, category: "lastentraeger", text: "Unter extremem Stress neige ich dazu, noch mehr Verantwortung an mich zu reißen und Aufgaben anderer zu übernehmen, anstatt um Hilfe zu bitten." },
-  { id: 8, category: "anpasser", text: "Es fällt mir extrem schwer, klare Grenzen zu setzen und 'Nein' zu sagen, weil die unterschwellige Angst vor Ablehnung übermächtig ist." },
-  { id: 9, category: "anklaeger", text: "Bevor ich das Risiko eingehe, von jemandem enttäuscht zu werden, gehe ich lieber auf Distanz und mache Dinge mit mir selbst aus." },
-  { id: 10, category: "lastentraeger", text: "Ich ziehe unbewusst viel von meiner Identität und meinem Selbstwert aus der Tatsache, dass ich für andere der 'Fels in der Brandung' bin." },
-  { id: 11, category: "anpasser", text: "Wenn der Druck im Außen zu groß wird, ziehe ich mich innerlich komplett zurück und hoffe einfach, dass der Sturm an mir vorbeizieht." },
-  { id: 12, category: "anklaeger", text: "In extremen Krisensituationen werde ich oft zynisch, weise anderen hart die Schuld zu und regele die Dinge emotionslos im Alleingang." },
-  { id: 13, category: "lastentraeger", text: "Ich habe häufig das Gefühl, emotionale 'Altlasten' oder eine Schwere aus meiner Herkunftsfamilie zu tragen, die eigentlich gar nicht meine eigene ist." },
-  { id: 14, category: "anpasser", text: "Ich habe oft das unbestimmte Gefühl, dass ich mich anstrengen oder anpassen muss, um meine Daseinsberechtigung im System zu rechtfertigen." },
-  { id: 15, category: "anklaeger", text: "Ich reguliere meinen Stress meistens dadurch, dass ich die Kontrolle übernehme und Härte zeige, anstatt mein Umfeld um Unterstützung zu bitten." },
+  { id: 1, category: "lastentraeger", weight: 1.0, text: "Wenn jemand in meinem nahen Umfeld ein Problem hat, empfinde ich sofort einen inneren Druck, die Lösung finden oder zumindest lindern zu müssen." },
+  { id: 2, category: "anklaeger",     weight: 1.0, text: "Wenn Dinge nicht nach Plan laufen, ist meine erste innere Reaktion oft Frustration über die Inkompetenz oder Ineffizienz der anderen." },
+  { id: 3, category: "anpasser",      weight: 1.5, text: "Ich ertappe mich oft dabei, dass ich meine eigenen Bedürfnisse kaum spüren kann, solange die Bedürfnisse der anderen im Raum nicht geklärt sind." },
+  { id: 4, category: "lastentraeger", weight: 1.5, text: "Mein eigener Erfolg oder ein Moment echter Ruhe fühlt sich für mich oft erst dann 'erlaubt' an, wenn ich weiß, dass es allen in meinem System gut geht." },
+  { id: 5, category: "anklaeger",     weight: 1.5, text: "Ich zeige selten echte Verletzlichkeit, da ich tief im Inneren davon ausgehe, dass Schwäche letztendlich gegen mich verwendet wird." },
+  { id: 6, category: "anpasser",      weight: 1.0, text: "In Konflikten oder emotional angespannten Situationen neige ich dazu, innerlich zu 'verstummen' oder mich unsichtbar zu machen, um die Lage nicht zu verschlimmern." },
+  { id: 7, category: "lastentraeger", weight: 1.0, text: "Unter extremem Stress neige ich dazu, noch mehr Verantwortung an mich zu reißen und Aufgaben anderer zu übernehmen, anstatt um Hilfe zu bitten." },
+  { id: 8, category: "anpasser",      weight: 1.5, text: "Es fällt mir extrem schwer, klare Grenzen zu setzen und 'Nein' zu sagen, weil die unterschwellige Angst vor Ablehnung übermächtig ist." },
+  { id: 9, category: "anklaeger",     weight: 1.5, text: "Bevor ich das Risiko eingehe, von jemandem enttäuscht zu werden, gehe ich lieber auf Distanz und mache Dinge mit mir selbst aus." },
+  { id: 10, category: "lastentraeger", weight: 1.5, text: "Ich ziehe unbewusst viel von meiner Identität und meinem Selbstwert aus der Tatsache, dass ich für andere der 'Fels in der Brandung' bin." },
+  { id: 11, category: "anpasser",      weight: 1.0, text: "Wenn der Druck im Außen zu groß wird, ziehe ich mich innerlich komplett zurück und hoffe einfach, dass der Sturm an mir vorbeizieht." },
+  { id: 12, category: "anklaeger",     weight: 1.5, text: "In extremen Krisensituationen werde ich oft zynisch, weise anderen hart die Schuld zu und regele die Dinge emotionslos im Alleingang." },
+  { id: 13, category: "lastentraeger", weight: 1.5, text: "Ich habe häufig das Gefühl, emotionale 'Altlasten' oder eine Schwere aus meiner Herkunftsfamilie zu tragen, die eigentlich gar nicht meine eigene ist." },
+  { id: 14, category: "anpasser",      weight: 1.5, text: "Ich habe oft das unbestimmte Gefühl, dass ich mich anstrengen oder anpassen muss, um meine Daseinsberechtigung im System zu rechtfertigen." },
+  { id: 15, category: "anklaeger",     weight: 1.0, text: "Ich reguliere meinen Stress meistens dadurch, dass ich die Kontrolle übernehme und Härte zeige, anstatt mein Umfeld um Unterstützung zu bitten." },
 ];
 
 const scaleLabels = [
