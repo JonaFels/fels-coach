@@ -31,6 +31,8 @@ export interface BlogPost {
   /** Optionale SEO-Meta-Description (max. 150 Zeichen). Fällt auf excerpt zurück. */
   metaDescription?: string;
   publishedAt: string;
+  /** Optionale FAQ-Liste (deutsch) – wird als FAQPage-JSON-LD ausgespielt für Google Rich Results. */
+  faq?: { question: string; answer: string }[];
 }
 
 /**
