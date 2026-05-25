@@ -773,6 +773,10 @@ export const translations: Translations = {
     de: "laufend",
     en: "ongoing",
   },
+  "about.praxinode": {
+    de: "Neben dem Coaching begleite ich auch Kolleg:innen in die digitale Welt – mit [Praxinode](https://praxinode.com), Webseiten für Therapeuten & Coaches.",
+    en: "Besides coaching, I also help colleagues enter the digital world – with [Praxinode](https://praxinode.com), websites for therapists & coaches.",
+  },
 
   // Legal Pages
   "privacy.title": {
