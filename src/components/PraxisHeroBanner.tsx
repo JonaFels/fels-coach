@@ -31,7 +31,7 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
         srcSet={`${imageMobile} 800w, ${image} 1400w`}
         sizes="(max-width: 768px) 100vw, 1400px"
         alt={alt}
-        className="w-full h-full object-cover object-center"
+        className="img-warm w-full h-full object-cover object-center"
         loading="eager"
         decoding="async"
         {...priorityProps}
