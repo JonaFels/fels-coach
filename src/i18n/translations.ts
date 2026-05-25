@@ -70,8 +70,8 @@ export const translations: Translations = {
     en: "Find your way back to yourself – and become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Du spürst, dass etwas nicht stimmt – aber kannst es nicht greifen? Wer in vereinnahmenden oder grenzüberschreitenden Familienstrukturen aufgewachsen ist, trägt oft Gefühle, Lasten und Rollen, die nie die eigenen waren. Im systemischen Coaching machen wir sichtbar, was zu wem gehört – und du findest zurück zu dir selbst, deinen Grenzen und deiner inneren Klarheit.",
-    en: "You sense that something isn't right – but can't quite grasp it? Those who grew up in engulfing or boundary-crossing family structures often carry feelings, burdens and roles that were never their own. In systemic coaching, we make visible what belongs to whom – and you find your way back to yourself, your boundaries and your inner clarity.",
+    de: "Du spürst, dass etwas nicht stimmt – aber kannst es nicht greifen? Wer in vereinnahmenden Familienstrukturen aufgewachsen ist, trägt oft Lasten und Rollen, die nie die eigenen waren. Im 1:1-Coaching machen wir sichtbar, was zu wem gehört – damit du zurückfindest zu dir, zu deinen Grenzen und zu innerer Klarheit.",
+    en: "You sense something isn't right – but can't quite grasp it? Those who grew up in engulfing family structures often carry burdens and roles that were never their own. In 1-on-1 coaching, we make visible what belongs to whom – so you find your way back to yourself, your boundaries, and inner clarity.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
