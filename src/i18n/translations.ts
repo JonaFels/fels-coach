@@ -309,6 +309,10 @@ export const translations: Translations = {
     de: "AGB",
     en: "Terms",
   },
+  "footer.praxinode": {
+    de: "Auch: [Praxinode](https://praxinode.com) – Webseiten für Therapeuten & Coaches",
+    en: "Also: [Praxinode](https://praxinode.com) – Websites for therapists & coaches",
+  },
 
   // Familienaufstellung Page
   "family.title": {
