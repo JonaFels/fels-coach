@@ -63,7 +63,7 @@ export const Hero = () => {
                   srcSet={`${heroImgMobile} 450w, ${heroImg} 853w`}
                   sizes="(max-width: 768px) 240px, 320px"
                   alt="Jona Fels – Systemischer Coach in Freiburg"
-                  className="w-full h-full object-cover object-[center_18%]"
+                  className="img-warm w-full h-full object-cover object-[center_18%]"
                   loading="eager"
                   decoding="async"
                   {...priorityProps}
