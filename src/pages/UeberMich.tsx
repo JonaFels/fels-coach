@@ -223,7 +223,7 @@ const UeberMich = () => {
             <p className="text-sm text-muted-foreground leading-relaxed">
               {language === "de" ? (
                 <>
-                  Neben dem Coaching begleite ich auch Kolleg:innen in die digitale Welt – mit{" "}
+                  Neben dem Coaching begleite ich auch Kollegen in die digitale Welt – mit{" "}
                   <a
                     href="https://praxinode.com"
                     target="_blank"
