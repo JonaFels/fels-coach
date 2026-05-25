@@ -77,7 +77,7 @@ export const RelatedPosts = ({ currentSlug }: RelatedPostsProps) => {
         id="related-posts-heading"
         className="font-serif text-2xl font-semibold text-foreground mb-6 text-center"
       >
-        Das könnte dich auch interessieren
+        Lesen als nächstes
       </h2>
 
       <ul role="list" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
