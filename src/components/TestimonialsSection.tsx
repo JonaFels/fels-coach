@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const testimonials: { name: string; age?: number; text: string }[] = [
   {
     name: "Miriam",
+    age: 29,
     text: "Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame und einfühlsame Begleitung.",
   },
   {
