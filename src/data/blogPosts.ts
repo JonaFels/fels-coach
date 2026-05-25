@@ -621,10 +621,10 @@ It surely takes a great deal of courage to meet, so to speak, the elephant in th
     },
     metaTitle: "Im Meerestraum gefangen – Walking in your shoes",
     metaDescription:
-      "Ein poetischer Text über Identität, Mitgefühl und das Ertrinken zwischen Liebe und Hass. Zwischen zwei Kräften stehen, denen wir nichts entgegensetzen können.",
+      "Ein poetischer Text über Identität, Mitgefühl und das Ertrinken zwischen Mitgefühl und Autonomie.",
     excerpt: {
-      de: "Ein poetischer Text über Identität, Mitgefühl und das Ertrinken zwischen Liebe und Hass. Zwischen zwei Kräften stehen, denen wir nichts entgegensetzen können.",
-      en: "A poetic text about identity, compassion, and drowning between love and hate. Standing between two forces against which we are powerless.",
+      de: "Ein poetischer Text über Identität, Mitgefühl und das Ertrinken zwischen Mitgefühl und Autonomie.",
+      en: "A poetic text about identity, compassion, and drowning between compassion and autonomy.",
     },
     content: {
       de: `## Walking in your shoes
