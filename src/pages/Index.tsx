@@ -5,6 +5,8 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { EbookExitIntent } from "@/components/EbookExitIntent";
 
 
 
