@@ -50,9 +50,7 @@ const App = () => (
       <BrowserRouter>
         <AppTracking />
         <ScrollToTop />
-        <Suspense fallback={null}>
-          <ChatbaseWidget />
-        </Suspense>
+        <ChatbaseWidget />
         <HashBookingTrigger>
           <Suspense fallback={<RouteFallback />}>
             <Routes>
