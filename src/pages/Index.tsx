@@ -70,7 +70,6 @@ const Index = () => {
         <Footer />
         <CookieBanner />
       </Suspense>
-      <StickyMobileCTA />
     </div>
   );
 };
