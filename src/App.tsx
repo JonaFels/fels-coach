@@ -6,8 +6,8 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
 import { Toaster } from "@/components/ui/toaster";
 
-// Lazy: ChatbaseWidget ist nicht LCP-kritisch
-const ChatbaseWidget = lazy(() => import("@/components/ChatbaseWidget").then((m) => ({ default: m.ChatbaseWidget })));
+// Eager-Import: vermeidet "Failed to fetch dynamically imported module" im Lovable-Preview
+import { ChatbaseWidget } from "@/components/ChatbaseWidget";
 
 
 import { useAppTracking } from "@/hooks/useTracking";
