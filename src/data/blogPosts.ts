@@ -385,12 +385,12 @@ Whether through thoughts or feelings, processing the unfinished situations creat
     },
     metaTitle: "Wahres Selbst finden: Wie du familiäre Prägung lösen kannst",
     metaDescription:
-      "Fühlst du dich oft fremd im eigenen Leben? Erfahre, wie deine Herkunft dein wahres Selbst verschüttet und wie du den Weg zurück zu dir findest.",
+      "Fühlst du dich oft fremd im eigenen Leben? Erfahre, wie familiäre Prägung dein wahres Selbst verschüttet und wie du dir selbst treu bleiben kannst.",
     imageAlt:
       "Symbolbild: ein junger grüner Spross wächst durch rissige Erde – Sinnbild für das wahre Selbst, das sich durch familiäre Prägung hindurch zeigt",
     excerpt: {
-      de: "Fühlst du dich oft fremd im eigenen Leben? Erfahre, wie familiäre Prägung dein wahres Selbst verschüttet und wie du sich selbst treu bleiben kannst.",
-      en: "Do you often feel like a stranger in your own life? Discover how family imprints bury your true Self and how you can find your way back to yourself.",
+      de: "Fühlst du dich oft fremd im eigenen Leben? Erfahre, wie familiäre Prägung dein wahres Selbst verschüttet und wie du dir selbst treu bleiben kannst.",
+      en: "Do you often feel like a stranger in your own life? Discover how family imprints bury your true Self and how you can stay true to yourself.",
     },
     content: {
       de: `Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon entschieden. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Es ist wichtig, das Verständnis dafür zu entwickeln, Teil eines Systems zu sein und wie man manchmal zuliebe anderer, zum Gefallen, mitläuft, um Verbindung herzustellen. Ganz unbewusst.
