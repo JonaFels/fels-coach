@@ -1,13 +1,14 @@
 import { Quote } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const testimonials = [
+const testimonials: { name: string; age?: number; text: string }[] = [
   {
     name: "Miriam",
     text: "Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame und einfühlsame Begleitung.",
   },
   {
     name: "Johannes",
+    age: 39,
     text: "Jona hat ein super Gespür den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem tieferen Verständnis und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
   },
 ];
@@ -36,7 +37,10 @@ export const TestimonialsSection = () => {
                 „{testimonial.text}"
               </p>
               <footer className="mt-6 pl-8">
-                <span className="font-medium text-foreground">– {testimonial.name}</span>
+                <span className="font-medium text-foreground">
+                  – {testimonial.name}
+                  {testimonial.age ? <span className="text-muted-foreground font-normal">, {testimonial.age}</span> : null}
+                </span>
               </footer>
             </blockquote>
           ))}
