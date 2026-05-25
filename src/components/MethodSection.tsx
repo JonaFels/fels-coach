@@ -42,6 +42,32 @@ export const MethodSection = () => {
             ))}
           </div>
 
+          {/* Mein Ansatz – die Werkzeuge, mit denen ich arbeite */}
+          <div className="mt-2 mb-14 rounded-3xl border border-border/60 bg-card/60 p-6 md:p-8">
+            <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground text-center mb-2">
+              Mein Ansatz
+            </h3>
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-6">
+              Ich kombiniere bewährte Methoden – immer mit dem Blick, was dir <em>gerade</em> am besten hilft.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto" role="list">
+              {[
+                { t: "Familienstellen nach Hellinger", d: "Bodenanker, Repräsentanten, das wissende Feld." },
+                { t: "Systemischer Blick", d: "Was zu wem gehört – Ordnung im inneren System." },
+                { t: "Innere Anteile & Inneres Kind", d: "Arbeit mit Inneren Anteilen (IFS-inspiriert)." },
+                { t: "Präsenz & Prozessarbeit", d: "Im Moment bleiben – was lebendig ist, darf da sein." },
+              ].map((item) => (
+                <li
+                  key={item.t}
+                  className="flex flex-col gap-1 rounded-2xl border border-border/40 bg-background/70 px-4 py-3"
+                >
+                  <span className="font-medium text-foreground text-sm md:text-base">{item.t}</span>
+                  <span className="text-muted-foreground text-xs md:text-sm leading-relaxed">{item.d}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="text-center">
             <Link
               to="/systemische-familienaufstellung-freiburg#methode"
