@@ -766,8 +766,8 @@ export const translations: Translations = {
     en: "Gestalt Therapy Training",
   },
   "about.cv4.desc": {
-    de: "Ausbildung zur Gestalttherapie – Vertiefung in der therapeutischen Begleitung mit Gestaltmethodik und achtsamer Wahrnehmung.",
-    en: "Training in Gestalt therapy – deepening therapeutic accompaniment with Gestalt methodology and mindful awareness.",
+    de: "Mehrjährige Ausbildung in Gestalttherapie bei Damiano Nöthen (Freiburg & Italien) – Vertiefung in Präsenz, Prozessarbeit und der bewussten Wahrnehmung des, was im Moment lebendig ist.",
+    en: "Multi-year training in Gestalt therapy with Damiano Nöthen (Freiburg & Italy) – deepening presence, process work, and conscious awareness of what is alive in the moment.",
   },
   "about.cv4.badge": {
     de: "laufend",
