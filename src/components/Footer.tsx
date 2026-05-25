@@ -71,6 +71,9 @@ export const Footer = () => {
           <p className="text-center text-xs text-muted-foreground tracking-wide">
             © {currentYear} Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels. {t("footer.rights")}
           </p>
+          <p className="text-center text-xs text-muted-foreground/70 mt-2">
+            {t("footer.praxinode")}
+          </p>
         </div>
       </div>
     </footer>
