@@ -37,7 +37,10 @@ export const TestimonialsSection = () => {
                 „{testimonial.text}"
               </p>
               <footer className="mt-6 pl-8">
-                <span className="font-medium text-foreground">– {testimonial.name}</span>
+                <span className="font-medium text-foreground">
+                  – {testimonial.name}
+                  {testimonial.age ? <span className="text-muted-foreground font-normal">, {testimonial.age}</span> : null}
+                </span>
               </footer>
             </blockquote>
           ))}
