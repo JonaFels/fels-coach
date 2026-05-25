@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 
 export const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -70,6 +70,35 @@ export const Footer = () => {
         <div className="border-t border-border/40 pt-4">
           <p className="text-center text-xs text-muted-foreground tracking-wide">
             © {currentYear} Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels. {t("footer.rights")}
+          </p>
+          <p className="text-center text-xs text-muted-foreground/70 mt-2">
+            {language === "de" ? (
+              <>
+                Auch:{" "}
+                <a
+                  href="https://praxinode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary hover:text-foreground transition-colors"
+                >
+                  Praxinode
+                </a>
+                {" "}– Webseiten für Therapeuten & Coaches
+              </>
+            ) : (
+              <>
+                Also:{" "}
+                <a
+                  href="https://praxinode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary hover:text-foreground transition-colors"
+                >
+                  Praxinode
+                </a>
+                {" "}– Websites for therapists & coaches
+              </>
+            )}
           </p>
         </div>
       </div>
