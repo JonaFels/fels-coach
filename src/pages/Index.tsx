@@ -6,9 +6,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import { EbookExitIntent } from "@/components/EbookExitIntent";
-
-
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
@@ -75,7 +72,6 @@ const Index = () => {
         <CookieBanner />
       </Suspense>
       <StickyMobileCTA />
-      <EbookExitIntent />
     </div>
   );
 };
