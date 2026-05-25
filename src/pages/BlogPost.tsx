@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,13 +7,18 @@ import { SEOHead } from "@/components/SEOHead";
 import { AuthorBox } from "@/components/AuthorBox";
 import { RelatedPosts } from "@/components/RelatedPosts";
 
-
 import { useLanguage } from "@/contexts/LanguageContext";
-import { blogPosts, clampMeta } from "@/data/blogPosts";
-import { ArrowLeft } from "lucide-react";
+import { blogPosts, clampMeta, slugify } from "@/data/blogPosts";
+import { ArrowLeft, Clock, List } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
 import DOMPurify from "dompurify";
+
+interface TocItem {
+  id: string;
+  text: string;
+  level: 2 | 3;
+}
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -55,6 +60,57 @@ const BlogPost = () => {
     };
   }, [post]);
 
+  // TOC + Lesezeit aus Content ableiten
+  const { toc, readingTime } = useMemo(() => {
+    if (!post) return { toc: [] as TocItem[], readingTime: 0 };
+    const lines = post.content.de.split("\n");
+    const tocItems: TocItem[] = [];
+    const usedIds = new Set<string>();
+    lines.forEach((raw) => {
+      const line = raw.trim();
+      let level: 2 | 3 | null = null;
+      let text = "";
+      if (line.startsWith("### ")) {
+        level = 3;
+        text = line.replace("### ", "");
+      } else if (line.startsWith("## ")) {
+        level = 2;
+        text = line.replace("## ", "");
+      }
+      if (level && text) {
+        let id = slugify(text);
+        let i = 2;
+        while (usedIds.has(id)) {
+          id = `${slugify(text)}-${i++}`;
+        }
+        usedIds.add(id);
+        tocItems.push({ id, text, level });
+      }
+    });
+    const words = post.content.de.split(/\s+/).filter(Boolean).length;
+    return { toc: tocItems, readingTime: Math.max(1, Math.round(words / 200)) };
+  }, [post]);
+
+  const [activeId, setActiveId] = useState<string>("");
+
+  useEffect(() => {
+    if (toc.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: "-80px 0px -70% 0px", threshold: 0 },
+    );
+    toc.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [toc, post]);
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
@@ -67,15 +123,28 @@ const BlogPost = () => {
     const lines = content.split("\n");
     const elements: JSX.Element[] = [];
     let listItems: string[] = [];
+    let firstParagraphRendered = false;
+    const usedIds = new Set<string>();
+    const makeId = (text: string) => {
+      let id = slugify(text);
+      let i = 2;
+      while (usedIds.has(id)) id = `${slugify(text)}-${i++}`;
+      usedIds.add(id);
+      return id;
+    };
 
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
-          <ol key={`list-${elements.length}`} className="list-decimal list-inside space-y-2 my-4 text-muted-foreground" role="list">
+          <ol
+            key={`list-${elements.length}`}
+            className="list-decimal list-outside ml-6 space-y-2 my-6 text-foreground/85 marker:text-secondary/60"
+            role="list"
+          >
             {listItems.map((item, i) => (
-              <li key={i} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
+              <li key={i} className="pl-1" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
             ))}
-          </ol>
+          </ol>,
         );
         listItems = [];
       }
@@ -84,7 +153,6 @@ const BlogPost = () => {
     lines.forEach((line, index) => {
       const trimmedLine = line.trim();
 
-      // Markdown-Bild: ![alt text](url) – Pflicht-Alt-Attribut
       const imgMatch = trimmedLine.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
       if (imgMatch) {
         flushList();
@@ -94,15 +162,20 @@ const BlogPost = () => {
           console.warn(`[Blog] Bild ohne alt-Attribut: ${src}`);
         }
         elements.push(
-          <figure key={index} className="my-8">
+          <figure key={index} className="my-10 -mx-4 sm:mx-0">
             <img
               src={src}
               alt={altText}
-              className="w-full h-auto rounded-xl"
+              className="w-full h-auto sm:rounded-xl"
               loading="lazy"
               decoding="async"
             />
-          </figure>
+            {altText && (
+              <figcaption className="mt-3 text-center text-xs text-muted-foreground italic px-4">
+                {altText}
+              </figcaption>
+            )}
+          </figure>,
         );
         return;
       }
@@ -111,7 +184,10 @@ const BlogPost = () => {
       if (listMatch) {
         const processedItem = listMatch[1]
           .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>');
+          .replace(
+            /\[(.+?)\]\((.+?)\)/g,
+            '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
+          );
         listItems.push(processedItem);
         return;
       } else if (listItems.length > 0 && trimmedLine !== "") {
@@ -120,16 +196,39 @@ const BlogPost = () => {
 
       if (trimmedLine.startsWith("### ")) {
         flushList();
-        elements.push(<h3 key={index} className="font-serif text-xl font-semibold text-foreground mt-8 mb-3">{trimmedLine.replace("### ", "")}</h3>);
+        const text = trimmedLine.replace("### ", "");
+        const id = makeId(text);
+        elements.push(
+          <h3
+            key={index}
+            id={id}
+            className="font-serif text-xl md:text-2xl font-semibold text-foreground mt-10 mb-3 scroll-mt-24"
+          >
+            {text}
+          </h3>,
+        );
       } else if (trimmedLine.startsWith("## ")) {
         flushList();
-        elements.push(<h2 key={index} className="font-serif text-2xl font-semibold text-foreground mt-8 mb-3">{trimmedLine.replace("## ", "")}</h2>);
+        const text = trimmedLine.replace("## ", "");
+        const id = makeId(text);
+        elements.push(
+          <h2
+            key={index}
+            id={id}
+            className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-4 scroll-mt-24"
+          >
+            {text}
+          </h2>,
+        );
       } else if (trimmedLine.startsWith("> ")) {
         flushList();
         elements.push(
-          <blockquote key={index} className="border-l-4 border-secondary pl-4 py-2 my-6 italic text-muted-foreground bg-muted/30 rounded-r">
+          <blockquote
+            key={index}
+            className="border-l-2 border-secondary/60 pl-6 my-8 font-serif text-xl md:text-2xl italic text-foreground/80 leading-relaxed"
+          >
             {trimmedLine.replace("> ", "")}
-          </blockquote>
+          </blockquote>,
         );
       } else if (trimmedLine === "") {
         flushList();
@@ -137,9 +236,22 @@ const BlogPost = () => {
         flushList();
         const processedLine = trimmedLine
           .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>');
+          .replace(
+            /\[(.+?)\]\((.+?)\)/g,
+            '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
+          );
+        const isFirst = !firstParagraphRendered;
+        firstParagraphRendered = true;
         elements.push(
-          <p key={index} className="text-muted-foreground leading-relaxed my-4" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }} />
+          <p
+            key={index}
+            className={`text-foreground/85 leading-[1.8] my-5 text-[1.075rem] ${
+              isFirst
+                ? "first-letter:font-serif first-letter:text-6xl first-letter:font-semibold first-letter:text-secondary first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.9]"
+                : ""
+            }`}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }}
+          />,
         );
       }
     });
@@ -148,7 +260,6 @@ const BlogPost = () => {
     return elements;
   };
 
-  // Dynamische Meta-Tags mit Längenbegrenzung (Title 60, Description 150)
   const metaTitle = clampMeta(post.metaTitle ?? `${post.title.de} | Jona Fels`, 60);
   const metaDescription = clampMeta(post.metaDescription ?? post.excerpt.de, 150);
   const imageAlt = post.imageAlt?.trim() || `Titelbild: ${post.title.de}`;
@@ -157,31 +268,100 @@ const BlogPost = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead title={metaTitle} description={metaDescription} image={post.image} type="article" />
       <Header />
-      <main id="main-content" className="flex-1 py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <article>
-              <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px]">
-                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-                {t("blog.backToList")}
-              </Link>
+      <main id="main-content" className="flex-1 pt-20 md:pt-28 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px] text-sm"
+            >
+              <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+              {t("blog.backToList")}
+            </Link>
 
-              {post.image && (
-                <div className="aspect-video rounded-xl overflow-hidden mb-8">
-                  <img src={post.image} alt={imageAlt} className="w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="high" />
+            <header className="mb-10 max-w-3xl">
+              <p className="text-xs uppercase tracking-[0.18em] text-secondary/80 font-medium mb-4">
+                Journal
+              </p>
+              <h1 className="font-serif text-3xl md:text-5xl font-semibold text-foreground leading-[1.15] mb-5">
+                {post.title.de}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 font-serif italic">
+                {post.excerpt.de}
+              </p>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground border-t border-border/60 pt-5">
+                <span className="font-medium text-foreground">Jona Fels</span>
+                <span className="text-border">·</span>
+                <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+                <span className="text-border">·</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                  {readingTime} Min Lesezeit
+                </span>
+              </div>
+            </header>
+
+            {post.image && (
+              <figure className="mb-12 max-w-4xl">
+                <div className="aspect-[16/9] rounded-2xl overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={imageAlt}
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                  />
                 </div>
+              </figure>
+            )}
+
+            <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12 xl:gap-16">
+              <article className="max-w-2xl">
+                <div className="prose-content">{renderContent(post.content.de)}</div>
+                <AuthorBox />
+              </article>
+
+              {toc.length > 1 && (
+                <aside className="hidden lg:block" aria-label="Inhaltsverzeichnis">
+                  <div className="sticky top-28">
+                    <p className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium mb-4">
+                      <List className="h-3.5 w-3.5" aria-hidden="true" />
+                      In diesem Artikel
+                    </p>
+                    <nav>
+                      <ul className="space-y-2.5 text-sm border-l border-border/60">
+                        {toc.map((item) => {
+                          const isActive = activeId === item.id;
+                          return (
+                            <li
+                              key={item.id}
+                              className={item.level === 3 ? "pl-6" : "pl-4"}
+                            >
+                              <a
+                                href={`#${item.id}`}
+                                className={`block -ml-px border-l-2 pl-3 py-1 leading-snug transition-colors ${
+                                  isActive
+                                    ? "border-secondary text-foreground font-medium"
+                                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-border"
+                                }`}
+                              >
+                                {item.text}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </nav>
+                  </div>
+                </aside>
               )}
+            </div>
 
-              <header className="mb-8">
-                <p className="text-sm text-muted-foreground mb-3">{formatDate(post.publishedAt)}</p>
-                <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">{post.title.de}</h1>
-              </header>
-
-              <div className="prose prose-lg max-w-none">{renderContent(post.content.de)}</div>
-
-              <AuthorBox />
-            </article>
-
-            <RelatedPosts currentSlug={post.slug} />
+            <div className="max-w-3xl">
+              <RelatedPosts currentSlug={post.slug} />
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
