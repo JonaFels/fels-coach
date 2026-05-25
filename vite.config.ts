@@ -38,21 +38,36 @@ const lcpImagePreloadPlugin = (): Plugin => {
     transformIndexHtml(html) {
       const find = (pattern: RegExp) =>
         bundleFiles.find((f) => pattern.test(f));
-      const mobile = find(/praxis-sitzbereich-800\.[^.]+\.webp$/);
-      const desktop = find(/praxis-sitzbereich\.[^.]+\.webp$/);
+      const bannerMobile = find(/praxis-sitzbereich-800\.[^.]+\.webp$/);
+      const bannerDesktop = find(/praxis-sitzbereich\.[^.]+\.webp$/);
+      const profileMobile = find(/jona-fels-systemisches-coaching-450\.[^.]+\.webp$/);
+      const profileDesktop = find(/jona-fels-systemisches-coaching\.[^.]+\.webp$/);
       const links: string[] = [];
-      if (mobile) {
+      // LCP-Kandidat (Mobile): Profilbild – größeres sichtbares Element als der schmale Banner
+      if (profileMobile) {
         links.push(
-          `<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="/${mobile}" media="(max-width: 768px)">`
+          `<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="/${profileMobile}" media="(max-width: 768px)">`
         );
       }
-      if (desktop) {
+      if (profileDesktop) {
         links.push(
-          `<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="/${desktop}" media="(min-width: 769px)">`
+          `<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="/${profileDesktop}" media="(min-width: 769px)">`
+        );
+      }
+      // Banner – parallel laden, aber niedrigere Priorität, damit LCP-Bild zuerst kommt
+      if (bannerMobile) {
+        links.push(
+          `<link rel="preload" as="image" type="image/webp" href="/${bannerMobile}" media="(max-width: 768px)">`
+        );
+      }
+      if (bannerDesktop) {
+        links.push(
+          `<link rel="preload" as="image" type="image/webp" href="/${bannerDesktop}" media="(min-width: 769px)">`
         );
       }
       return html.replace("</head>", `${links.join("")}</head>`);
     },
+
   };
 };
 
