@@ -72,7 +72,33 @@ export const Footer = () => {
             © {currentYear} Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels. {t("footer.rights")}
           </p>
           <p className="text-center text-xs text-muted-foreground/70 mt-2">
-            {t("footer.praxinode")}
+            {language === "de" ? (
+              <>
+                Auch:{" "}
+                <a
+                  href="https://praxinode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary hover:text-foreground transition-colors"
+                >
+                  Praxinode
+                </a>
+                {" "}– Webseiten für Therapeuten & Coaches
+              </>
+            ) : (
+              <>
+                Also:{" "}
+                <a
+                  href="https://praxinode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary hover:text-foreground transition-colors"
+                >
+                  Praxinode
+                </a>
+                {" "}– Websites for therapists & coaches
+              </>
+            )}
           </p>
         </div>
       </div>
