@@ -891,8 +891,8 @@ export const translations: Translations = {
     en: "Systemic Coach & Family Constellation Facilitator",
   },
   "author.bio": {
-    de: "Ich begleite Menschen dabei, unbewusste Muster zu erkennen und aufzulösen. Mit Präzision und tiefem Mitgefühl unterstütze ich dich auf deinem Weg zu mehr Klarheit und innerem Frieden.",
-    en: "I accompany people in recognizing and dissolving unconscious patterns. With precision and deep compassion, I support you on your path to more clarity and inner peace.",
+    de: "Ich begleite Menschen dabei, unbewusste Muster zu erkennen und aufzulösen. Mit Präzision und tiefem Mitgefühl unterstütze ich dich auf deinem Weg zu mehr Klarheit.",
+    en: "I accompany people in recognizing and dissolving unconscious patterns. With precision and deep compassion, I support you on your path to more clarity.",
   },
   "author.credential1": {
     de: "Familienaufsteller",
