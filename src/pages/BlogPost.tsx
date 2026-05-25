@@ -60,6 +60,28 @@ const BlogPost = () => {
     };
   }, [post]);
 
+  // Optionales FAQPage-Schema – nur ausspielen wenn der Post FAQs definiert
+  useEffect(() => {
+    if (!post?.faq?.length) return;
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: post.faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-blog-faq-schema", "true");
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, [post]);
+
   // TOC + Lesezeit aus Content ableiten
   const { toc, readingTime } = useMemo(() => {
     if (!post) return { toc: [] as TocItem[], readingTime: 0 };

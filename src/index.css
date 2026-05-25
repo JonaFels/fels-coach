@@ -296,3 +296,11 @@ h2 {
 h3 {
   font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
 }
+
+/* Einheitliche Bildsprache: dezent warmer Linen-Ton über alle Hero/Praxis-Fotos */
+.img-warm {
+  filter: saturate(0.92) contrast(1.02) brightness(1.01) sepia(0.04);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .img-warm { transition: filter 400ms ease; }
+}
