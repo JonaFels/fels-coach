@@ -89,8 +89,8 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
-              <div ref={calendarRef} className="min-h-[1100px] md:min-h-[900px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
+            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4" style={{ touchAction: "pan-y" }}>
+              <div ref={calendarRef} className="min-h-[1700px] md:min-h-[1100px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
             </div>
           </div>
         </section>
