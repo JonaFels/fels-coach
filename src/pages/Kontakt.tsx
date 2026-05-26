@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,13 +12,14 @@ import { ContactForm } from "@/components/ContactForm";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
-const ORBNET_BOOKING_URL = "https://www.orbnet.de/p/fels-coach/";
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
   const { getImage } = useCMS();
   const portrait = getImage("about.image", profilBild);
   const { hash } = useLocation();
+  const calendarRef = useRef<HTMLDivElement>(null);
 
   // Scroll to hash target (e.g. #anfahrt) immediately before paint
   useLayoutEffect(() => {
@@ -29,6 +30,32 @@ const Kontakt = () => {
       el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
     }
   }, [hash]);
+
+  // Mount Orbnet embed widget
+  useEffect(() => {
+    if (!calendarRef.current) return;
+    while (calendarRef.current.firstChild) {
+      calendarRef.current.removeChild(calendarRef.current.firstChild);
+    }
+    const mask = document.createElement("div");
+    mask.className = "orbnet-booking-mask";
+    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
+    mask.dataset.source = "my.orbnet.de";
+    mask.dataset.type = "embed";
+    calendarRef.current.appendChild(mask);
+
+    const existing = document.getElementById("orbnet-booking-script-page");
+    if (existing) existing.remove();
+    const script = document.createElement("script");
+    script.id = "orbnet-booking-script-page";
+    script.src =
+      "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
+    script.crossOrigin = "anonymous";
+    script.referrerPolicy = "origin";
+    document.body.appendChild(script);
+  }, []);
+
+
 
 
   return (
@@ -58,15 +85,8 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            <div className="relative bg-background rounded-2xl border border-border shadow-sm overflow-hidden">
-              <iframe
-                src={ORBNET_BOOKING_URL}
-                title="Orbnet Terminbuchung"
-                className="w-full block rounded-2xl"
-                style={{ height: "min(80vh, 800px)", minHeight: "600px", border: 0 }}
-                allow="payment"
-                loading="lazy"
-              />
+            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
+              <div ref={calendarRef} className="min-h-[500px]" />
             </div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
@@ -8,13 +8,42 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
-const ORBNET_BOOKING_URL = "https://www.orbnet.de/p/fels-coach/";
+const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open || !containerRef.current) return;
+
+    // Reset container
+    while (containerRef.current.firstChild) {
+      containerRef.current.removeChild(containerRef.current.firstChild);
+    }
+
+    const mask = document.createElement("div");
+    mask.className = "orbnet-booking-mask";
+    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
+    mask.dataset.source = "my.orbnet.de";
+    mask.dataset.type = "embed";
+    containerRef.current.appendChild(mask);
+
+    const existing = document.getElementById("orbnet-booking-script");
+    if (existing) existing.remove();
+
+    const script = document.createElement("script");
+    script.id = "orbnet-booking-script";
+    script.src =
+      "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
+    script.crossOrigin = "anonymous";
+    script.referrerPolicy = "origin";
+    document.body.appendChild(script);
   }, [open]);
 
   if (!open) return null;
@@ -22,9 +51,10 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-start md:items-center justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto overscroll-contain"
+      style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-4xl my-auto flex flex-col overflow-hidden max-h-[95vh]">
+      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-4xl my-auto flex flex-col overflow-hidden">
         <Button
           variant="ghost"
           size="icon"
@@ -52,15 +82,9 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           </p>
         </div>
 
-        {/* Orbnet Kalender als iframe – scrollt sauber auf Mobile */}
-        <div className="flex-1 min-h-0 bg-background">
-          <iframe
-            src={ORBNET_BOOKING_URL}
-            title="Orbnet Terminbuchung"
-            className="w-full h-full block"
-            style={{ minHeight: "500px", height: "min(70vh, 700px)", border: 0 }}
-            allow="payment"
-          />
+        {/* Orbnet Embed – page-scroll-friendly */}
+        <div className="bg-background p-3 md:p-4">
+          <div ref={containerRef} className="min-h-[500px]" />
         </div>
       </div>
     </div>
