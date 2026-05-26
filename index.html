@@ -29,6 +29,14 @@
     <!-- Font Preload entfernt: Vite hasht Asset-URLs (/assets/...woff2), 
          feste /fonts/-Pfade liefen ins Leere. Fontsource-CSS lädt fonts direkt mit. -->
 
+    <!-- Orbnet Booking Widget vorab vorladen, damit beim Öffnen des
+         Erstgespräch-Modals keine spürbare Init-Verzögerung mehr entsteht -->
+    <link rel="preconnect" href="https://static.orbnet.de" crossorigin />
+    <link rel="preconnect" href="https://my.orbnet.de" crossorigin />
+    <link rel="preload" as="script" href="https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5" crossorigin="anonymous" />
+
+
+
 
     <!-- Critical CSS (Above-the-fold) - inlined to eliminate render-blocking -->
     <style>
