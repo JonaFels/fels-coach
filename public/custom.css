@@ -72,14 +72,27 @@ div[class*="orbnet"][style*="position: fixed"] {
   max-height: none !important;
 }
 
-/* iFrame des Widgets: Orbnet darf seine natürliche Höhe selbst bestimmen */
+/* iFrame des Widgets: feste Höhe passend zum Kalender-Inhalt, damit
+   kein interner Scroll entsteht. touch-action: pan-y leitet vertikale
+   Touch-/Wheel-Gesten an den umgebenden Seiten-Scroll weiter. */
 .orbnet-booking-mask iframe {
   touch-action: pan-y !important;
   -webkit-overflow-scrolling: touch !important;
   width: 100% !important;
+  height: 820px !important;
+  min-height: 820px !important;
+  max-height: none !important;
   border: 0 !important;
   display: block !important;
   pointer-events: auto !important;
+  overflow: hidden !important;
+}
+
+@media (min-width: 768px) {
+  .orbnet-booking-mask iframe {
+    height: 720px !important;
+    min-height: 720px !important;
+  }
 }
 
 /* Eingaben dürfen normal getappt werden */

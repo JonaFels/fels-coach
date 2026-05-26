@@ -89,14 +89,14 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            {/* Gleicher Scroll-Trick wie im Erstgespräch-Modal: fester
-                Höhenrahmen mit eigenem Touch-Scroll, damit das Orbnet-Widget
-                den Seiten-Scroll nicht abfängt. */}
+            {/* Inline in den Seitenfluss eingebettet – kein eigener Scroll-
+                Container. touch-action: pan-y leitet vertikale Wischgesten
+                über dem Kalender an den Seiten-Scroll weiter. */}
             <div
-              className="relative bg-background rounded-2xl border border-border shadow-sm overflow-y-auto overscroll-contain"
-              style={{ height: "min(85vh, 800px)", WebkitOverflowScrolling: "touch", touchAction: "pan-y" }}
+              className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4"
+              style={{ touchAction: "pan-y" }}
             >
-              <div ref={calendarRef} className="min-h-[600px] w-full p-2 md:p-4" />
+              <div ref={calendarRef} className="w-full" style={{ touchAction: "pan-y" }} />
             </div>
           </div>
         </section>
