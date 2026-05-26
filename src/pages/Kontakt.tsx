@@ -111,8 +111,11 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            <div className="relative min-h-[420px] bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
-              <div ref={containerRef} />
+            <div
+              className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4 overflow-y-auto overscroll-contain min-h-[600px] md:min-h-[700px]"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
+              <div ref={containerRef} className="min-h-[600px] md:min-h-[700px]" />
             </div>
           </div>
         </section>
