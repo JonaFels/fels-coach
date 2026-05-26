@@ -1,7 +1,8 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
+import { Mail, Send, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -9,21 +10,24 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCMS } from "@/contexts/CMSContext";
 import { ContactForm } from "@/components/ContactForm";
+import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 const Kontakt = () => {
   const { t } = useLanguage();
   const { getImage } = useCMS();
   const portrait = getImage("about.image", profilBild);
   const { hash } = useLocation();
-  const calendarRef = useRef<HTMLDivElement>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   // Scroll to hash target (e.g. #anfahrt) immediately before paint
   useLayoutEffect(() => {
     if (!hash) return;
+    if (hash === "#erstgespraech") {
+      setModalOpen(true);
+      return;
+    }
     const id = hash.replace("#", "");
     const el = document.getElementById(id);
     if (el) {
@@ -31,49 +35,15 @@ const Kontakt = () => {
     }
   }, [hash]);
 
-  // Mount Orbnet embed widget – guarded against React StrictMode double-mount
-  // (würde sonst die Node bei der ersten Cleanup-Phase löschen und Orbnets
-  // ResizeObserver ins Leere laufen lassen → null-Reference + ~6s blockierte
-  // Touch-Listener bis die Initialisierung "aufgibt").
-  useEffect(() => {
-    if (!calendarRef.current) return;
-    if (calendarRef.current.childElementCount > 0) return; // bereits gemountet
-
-    const mask = document.createElement("div");
-    mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
-    mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    mask.style.touchAction = "pan-y";
-    calendarRef.current.appendChild(mask);
-
-    if (!document.getElementById("orbnet-booking-script-page")) {
-      const script = document.createElement("script");
-      script.id = "orbnet-booking-script-page";
-      script.src =
-        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-      script.crossOrigin = "anonymous";
-      script.referrerPolicy = "origin";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
-
-
-
-
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* 1. Orbnet-Kalender direkt oben */}
-        <section
-          id="erstgespraech"
-          className="pt-8 pb-12 md:pt-12 md:pb-16"
-        >
-          <div className="container mx-auto px-4 max-w-2xl">
+        {/* 1. Erstgespräch-CTA – öffnet das Modal (gleiche UX wie überall) */}
+        <section id="erstgespraech" className="pt-10 pb-12 md:pt-16 md:pb-20">
+          <div className="container mx-auto px-4 max-w-2xl text-center">
             <img
               src={portrait}
               alt="Jona Fels – Systemischer Coach in Freiburg"
@@ -83,23 +53,27 @@ const Kontakt = () => {
               width={96}
               height={96}
             />
-            <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 text-center">
+            <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
               {t("contact.calendarHeadline")}
             </p>
-            <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-muted-foreground mb-7 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            {/* Inline in den Seitenfluss eingebettet – kein eigener Scroll-
-                Container. touch-action: pan-y leitet vertikale Wischgesten
-                über dem Kalender an den Seiten-Scroll weiter. */}
-            <div
-              className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4"
-              style={{ touchAction: "pan-y" }}
+            <Button
+              size="lg"
+              onClick={() => setModalOpen(true)}
+              className="rounded-full px-8 py-6 text-base shadow-md hover:shadow-lg transition-all"
             >
-              <div ref={calendarRef} className="w-full" style={{ touchAction: "pan-y" }} />
-            </div>
+              <Calendar className="h-5 w-5 mr-2" aria-hidden="true" />
+              Kostenloses Erstgespräch buchen
+            </Button>
+            <p className="text-xs text-muted-foreground mt-4">
+              Kostenlos · 30 Min · Unverbindlich
+            </p>
           </div>
         </section>
+
+
 
 
         {/* 3. Alternative Kontaktwege */}
@@ -232,6 +206,7 @@ const Kontakt = () => {
       </main>
       <Footer />
       <CookieBanner />
+      <ErstgespraechModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };
