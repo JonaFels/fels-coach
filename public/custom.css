@@ -49,29 +49,57 @@ div[class*="orbnet"][style*="position: fixed"] {
   pointer-events: none !important;
 }
 
-/* Mobile-Scroll-Fix für Orbnet-Booking-Widget:
-   Das Widget blockiert auf dem Smartphone vertikales Scrollen über
-   dem Formularbereich. touch-action: pan-y erlaubt dem Browser, die
-   Scroll-Geste an den umgebenden Modal-/Seiten-Container zu geben. */
-.orbnet-booking-mask,
-.orbnet-booking-mask *:not(input):not(textarea):not(select):not(button):not([role="button"]) {
+/* === Orbnet Booking Widget – Scroll-Fix (Mobile + Desktop) ===
+   Problem: Das Widget legt einen Container/iframe mit fester innerer Höhe
+   und Overflow an, der vertikales Scrollen (Touch und Mausrad) abfängt.
+   Lösung: Widget entfaltet seine volle natürliche Höhe (kein interner
+   Scroll), die Seite/das Modal scrollt drumherum. */
+
+.orbnet-booking-mask {
   touch-action: pan-y !important;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 700px;
+  width: 100% !important;
+  display: block !important;
 }
 
-/* iFrames innerhalb des Widgets dürfen den Seiten-Scroll nicht blocken */
+.orbnet-booking-mask * {
+  touch-action: pan-y !important;
+  max-height: none !important;
+}
+
+/* iFrame des Widgets: volle Höhe, kein interner Scroll mehr */
 .orbnet-booking-mask iframe {
   touch-action: pan-y !important;
-  pointer-events: auto;
+  -webkit-overflow-scrolling: touch !important;
+  width: 100% !important;
+  min-height: 1000px !important;
+  height: 1200px !important;
+  max-height: none !important;
+  border: 0 !important;
+  display: block !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
 }
 
-/* Inputs/Buttons innerhalb des Widgets dürfen weiterhin Tap empfangen –
-   nur Container-Drags werden an den Seiten-Scroll weitergereicht. */
+@media (min-width: 768px) {
+  .orbnet-booking-mask iframe {
+    height: 900px !important;
+    min-height: 850px !important;
+  }
+}
+
+/* Eingaben dürfen normal getappt werden */
 .orbnet-booking-mask input,
 .orbnet-booking-mask textarea,
 .orbnet-booking-mask select,
 .orbnet-booking-mask button,
-.orbnet-booking-mask [role="button"] {
+.orbnet-booking-mask [role="button"],
+.orbnet-booking-mask a {
   touch-action: manipulation !important;
+  pointer-events: auto !important;
 }
