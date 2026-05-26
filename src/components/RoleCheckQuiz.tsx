@@ -620,6 +620,13 @@ export const RoleCheckQuiz = () => {
                   Test wiederholen
                 </Button>
               </div>
+
+              <p className="mt-10 text-xs md:text-sm text-muted-foreground/80 leading-relaxed border-t border-border/60 pt-6 max-w-2xl mx-auto text-center">
+                <strong className="font-medium text-muted-foreground">Wichtiger Hinweis:</strong>{" "}
+                Dieser Test dient ausschließlich der persönlichen Selbstreflexion und psychoedukativen Zwecken.
+                Die Ergebnisse stellen keine absolute Wahrheit und keine psychologische oder medizinische Diagnose dar.
+                Ein solcher Test kann und soll keine professionelle Therapie, heilkundliche Behandlung oder ärztliche Beratung ersetzen.
+              </p>
             </motion.div>
           )}
         </AnimatePresence>

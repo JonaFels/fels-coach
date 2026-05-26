@@ -111,6 +111,57 @@ const Datenschutz = () => {
 
             <h2>{t("privacy.s12.heading")}</h2>
             <p>{t("privacy.s12.text")}</p>
+
+            <hr />
+
+            <h2>Datenschutzhinweise zum Systemischen Selbsttest</h2>
+            <p>
+              Auf dieser Website biete ich einen freiwilligen systemischen Selbsttest („Rollencheck") an,
+              mit dem du dein persönliches systemisches Muster reflektieren kannst. Im Folgenden informiere
+              ich dich über die Verarbeitung deiner Daten im Rahmen dieses Tests.
+            </p>
+            <p>
+              <strong>Zweck der Verarbeitung:</strong> Die von dir im Test gegebenen Antworten werden
+              ausschließlich dazu verarbeitet, dein individuelles Ergebnis zu berechnen und dir auf der
+              Seite anzuzeigen. Eine darüber hinausgehende Auswertung, Profilbildung oder Weitergabe an
+              Dritte findet nicht statt.
+            </p>
+            <p>
+              <strong>Rechtsgrundlage:</strong> Rechtsgrundlage der Verarbeitung ist deine Einwilligung
+              durch die aktive Teilnahme am Test (Art. 6 Abs. 1 lit. a DSGVO) sowie mein berechtigtes
+              Interesse an einer qualitativen Verbesserung meines Coaching-Angebots (Art. 6 Abs. 1 lit. f DSGVO).
+            </p>
+            <p>
+              <strong>Art der verarbeiteten Daten:</strong> Während du den Test durchläufst, werden deine
+              Antworten zunächst lokal in deinem Browser verarbeitet. Nach Abschluss des Tests werden die
+              anonymen Auswertungsdaten (gewählte Lebensbereiche sowie die kategorisierten Punktwerte und
+              dein dominanter Ergebnistyp) in pseudonymisierter Form auf einem durch mich beauftragten
+              Server (Auftragsverarbeiter: Supabase, Hosting innerhalb der EU) gespeichert. Diese Daten
+              enthalten <strong>keine personenbezogenen Identifikatoren</strong> wie Name, E-Mail-Adresse
+              oder IP-Adresse und können dir nicht zugeordnet werden.
+            </p>
+            <p>
+              <strong>Verknüpfung mit personenbezogenen Daten:</strong> Eine Verknüpfung der Test-Antworten
+              mit deiner Person erfolgt ausschließlich dann, wenn du dich im Anschluss aus eigener Initiative
+              über ein Kontaktformular meldest oder ein Erstgespräch buchst. In diesem Fall gelten zusätzlich
+              die Informationen in den vorstehenden Abschnitten dieser Datenschutzerklärung.
+            </p>
+            <p>
+              <strong>Speicherdauer:</strong> Die anonymen Auswertungsdaten werden so lange gespeichert,
+              wie sie zur statistischen Verbesserung des Angebots benötigt werden, und in regelmäßigen
+              Abständen aggregiert bzw. gelöscht.
+            </p>
+            <p>
+              <strong>Widerruf:</strong> Da die Speicherung anonymisiert erfolgt, ist eine nachträgliche
+              Zuordnung und damit auch eine Einzellöschung deiner Test-Antworten technisch nicht möglich.
+              Du kannst die Teilnahme am Test jederzeit abbrechen, bevor du das Endergebnis anzeigen lässt.
+            </p>
+            <p>
+              <strong>Hinweis zum Charakter des Tests:</strong> Der Selbsttest dient ausschließlich der
+              persönlichen Selbstreflexion und psychoedukativen Zwecken. Er stellt ausdrücklich keine
+              psychologische oder medizinische Diagnose dar und ersetzt keine professionelle Therapie,
+              heilkundliche Behandlung oder ärztliche Beratung.
+            </p>
           </div>
         </div>
       </main>
