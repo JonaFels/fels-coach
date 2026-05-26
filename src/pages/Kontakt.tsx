@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,14 +12,13 @@ import { ContactForm } from "@/components/ContactForm";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+const ORBNET_BOOKING_URL = "https://www.orbnet.de/p/fels-coach/";
 
 const Kontakt = () => {
   const { t } = useLanguage();
   const { getImage } = useCMS();
   const portrait = getImage("about.image", profilBild);
   const { hash } = useLocation();
-  const containerRef = useRef<HTMLDivElement>(null);
 
   // Scroll to hash target (e.g. #anfahrt) immediately before paint
   useLayoutEffect(() => {
@@ -31,58 +30,6 @@ const Kontakt = () => {
     }
   }, [hash]);
 
-  // Embed Orbnet booking widget & suppress its fullscreen loading overlay
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    while (containerRef.current.firstChild) {
-      containerRef.current.removeChild(containerRef.current.firstChild);
-    }
-
-    const mask = document.createElement("div");
-    mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
-    mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    containerRef.current.appendChild(mask);
-
-    // Observer: remove any fixed-position loading overlay Orbnet injects into body
-    const removeOrbnetOverlay = () => {
-      document.querySelectorAll('body > div[style*="position: fixed"]').forEach((el) => {
-        const html = el.innerHTML || "";
-        if (html.includes("Lade") || html.includes("loading") || html.includes("spinner")) {
-          (el as HTMLElement).style.display = "none";
-        }
-      });
-    };
-
-    const observer = new MutationObserver(removeOrbnetOverlay);
-    observer.observe(document.body, { childList: true, subtree: false });
-
-    // Also run immediately and after short delays
-    removeOrbnetOverlay();
-    const t1 = setTimeout(removeOrbnetOverlay, 300);
-    const t2 = setTimeout(removeOrbnetOverlay, 800);
-    const t3 = setTimeout(removeOrbnetOverlay, 1500);
-
-    const existingScript = document.getElementById("orbnet-booking-script");
-    if (existingScript) existingScript.remove();
-
-    const script = document.createElement("script");
-    script.id = "orbnet-booking-script";
-    script.src =
-      "https://static.orbnet.de/3.0/dist/booking.js?ver=7643f23565c4865f828a0e810e468eab35cf22e2";
-    script.crossOrigin = "anonymous";
-    script.referrerPolicy = "origin";
-    document.body.appendChild(script);
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -111,8 +58,15 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
-              <div ref={containerRef} className="min-h-[420px]" />
+            <div className="relative bg-background rounded-2xl border border-border shadow-sm overflow-hidden">
+              <iframe
+                src={ORBNET_BOOKING_URL}
+                title="Orbnet Terminbuchung"
+                className="w-full block rounded-2xl"
+                style={{ height: "min(80vh, 800px)", minHeight: "600px", border: 0 }}
+                allow="payment"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
