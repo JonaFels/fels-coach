@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Mail, Send, TrainFront, Car, DoorOpen, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
