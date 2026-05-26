@@ -54,9 +54,16 @@ div[class*="orbnet"][style*="position: fixed"] {
    dem Formularbereich. touch-action: pan-y erlaubt dem Browser, die
    Scroll-Geste an den umgebenden Modal-/Seiten-Container zu geben. */
 .orbnet-booking-mask,
-.orbnet-booking-mask * {
+.orbnet-booking-mask *:not(input):not(textarea):not(select):not(button):not([role="button"]) {
   touch-action: pan-y !important;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: auto !important;
+}
+
+/* iFrames innerhalb des Widgets dürfen den Seiten-Scroll nicht blocken */
+.orbnet-booking-mask iframe {
+  touch-action: pan-y !important;
+  pointer-events: auto;
 }
 
 /* Inputs/Buttons innerhalb des Widgets dürfen weiterhin Tap empfangen –
