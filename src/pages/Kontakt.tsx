@@ -31,28 +31,32 @@ const Kontakt = () => {
     }
   }, [hash]);
 
-  // Mount Orbnet embed widget
+  // Mount Orbnet embed widget – guarded against React StrictMode double-mount
+  // (würde sonst die Node bei der ersten Cleanup-Phase löschen und Orbnets
+  // ResizeObserver ins Leere laufen lassen → null-Reference + ~6s blockierte
+  // Touch-Listener bis die Initialisierung "aufgibt").
   useEffect(() => {
     if (!calendarRef.current) return;
-    while (calendarRef.current.firstChild) {
-      calendarRef.current.removeChild(calendarRef.current.firstChild);
-    }
+    if (calendarRef.current.childElementCount > 0) return; // bereits gemountet
+
     const mask = document.createElement("div");
     mask.className = "orbnet-booking-mask";
     mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
     mask.dataset.source = "my.orbnet.de";
     mask.dataset.type = "embed";
+    mask.style.touchAction = "pan-y";
     calendarRef.current.appendChild(mask);
 
-    const existing = document.getElementById("orbnet-booking-script-page");
-    if (existing) existing.remove();
-    const script = document.createElement("script");
-    script.id = "orbnet-booking-script-page";
-    script.src =
-      "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-    script.crossOrigin = "anonymous";
-    script.referrerPolicy = "origin";
-    document.body.appendChild(script);
+    if (!document.getElementById("orbnet-booking-script-page")) {
+      const script = document.createElement("script");
+      script.id = "orbnet-booking-script-page";
+      script.src =
+        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
+      script.crossOrigin = "anonymous";
+      script.referrerPolicy = "origin";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
 
