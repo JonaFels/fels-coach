@@ -31,28 +31,32 @@ const Kontakt = () => {
     }
   }, [hash]);
 
-  // Mount Orbnet embed widget
+  // Mount Orbnet embed widget – guarded against React StrictMode double-mount
+  // (würde sonst die Node bei der ersten Cleanup-Phase löschen und Orbnets
+  // ResizeObserver ins Leere laufen lassen → null-Reference + ~6s blockierte
+  // Touch-Listener bis die Initialisierung "aufgibt").
   useEffect(() => {
     if (!calendarRef.current) return;
-    while (calendarRef.current.firstChild) {
-      calendarRef.current.removeChild(calendarRef.current.firstChild);
-    }
+    if (calendarRef.current.childElementCount > 0) return; // bereits gemountet
+
     const mask = document.createElement("div");
     mask.className = "orbnet-booking-mask";
     mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
     mask.dataset.source = "my.orbnet.de";
     mask.dataset.type = "embed";
+    mask.style.touchAction = "pan-y";
     calendarRef.current.appendChild(mask);
 
-    const existing = document.getElementById("orbnet-booking-script-page");
-    if (existing) existing.remove();
-    const script = document.createElement("script");
-    script.id = "orbnet-booking-script-page";
-    script.src =
-      "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-    script.crossOrigin = "anonymous";
-    script.referrerPolicy = "origin";
-    document.body.appendChild(script);
+    if (!document.getElementById("orbnet-booking-script-page")) {
+      const script = document.createElement("script");
+      script.id = "orbnet-booking-script-page";
+      script.src =
+        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
+      script.crossOrigin = "anonymous";
+      script.referrerPolicy = "origin";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
 
@@ -85,8 +89,8 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
-              <div ref={calendarRef} className="min-h-[1100px] md:min-h-[900px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
+            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4" style={{ touchAction: "pan-y" }}>
+              <div ref={calendarRef} className="min-h-[1700px] md:min-h-[1100px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
             </div>
           </div>
         </section>

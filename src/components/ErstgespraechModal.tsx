@@ -21,29 +21,26 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
   useEffect(() => {
     if (!open || !containerRef.current) return;
-
-    // Reset container
-    while (containerRef.current.firstChild) {
-      containerRef.current.removeChild(containerRef.current.firstChild);
-    }
+    if (containerRef.current.childElementCount > 0) return; // StrictMode guard
 
     const mask = document.createElement("div");
     mask.className = "orbnet-booking-mask";
     mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
     mask.dataset.source = "my.orbnet.de";
     mask.dataset.type = "embed";
+    mask.style.touchAction = "pan-y";
     containerRef.current.appendChild(mask);
 
-    const existing = document.getElementById("orbnet-booking-script");
-    if (existing) existing.remove();
-
-    const script = document.createElement("script");
-    script.id = "orbnet-booking-script";
-    script.src =
-      "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-    script.crossOrigin = "anonymous";
-    script.referrerPolicy = "origin";
-    document.body.appendChild(script);
+    if (!document.getElementById("orbnet-booking-script")) {
+      const script = document.createElement("script");
+      script.id = "orbnet-booking-script";
+      script.src =
+        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
+      script.crossOrigin = "anonymous";
+      script.referrerPolicy = "origin";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, [open]);
 
   if (!open) return null;
@@ -84,7 +81,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
         {/* Orbnet Embed – page-scroll-friendly */}
         <div className="bg-background p-3 md:p-4">
-          <div ref={containerRef} className="min-h-[1100px] md:min-h-[900px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
+          <div ref={containerRef} className="min-h-[1700px] md:min-h-[1100px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
         </div>
       </div>
     </div>
