@@ -72,12 +72,13 @@ div[class*="orbnet"][style*="position: fixed"] {
   max-height: none !important;
 }
 
-/* iFrame des Widgets: Orbnet bestimmt die Höhe selbst (per postMessage-
-   Resize). Wir setzen nur Breite/Reset – so wird im Modal nichts
-   abgeschnitten, der äußere Scroll-Container übernimmt das Scrollen. */
+/* iFrame des Widgets: großzügige Mindesthöhe, damit auch lange
+   Frageformulare komplett sichtbar sind. Der äußere Modal-Container
+   scrollt drumherum. */
 .orbnet-booking-mask iframe {
   width: 100% !important;
   max-width: 100% !important;
+  min-height: 2400px !important;
   border: 0 !important;
   display: block !important;
   pointer-events: auto !important;
