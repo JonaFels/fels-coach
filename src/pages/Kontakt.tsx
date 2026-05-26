@@ -206,6 +206,7 @@ const Kontakt = () => {
       </main>
       <Footer />
       <CookieBanner />
+      <ErstgespraechModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };
