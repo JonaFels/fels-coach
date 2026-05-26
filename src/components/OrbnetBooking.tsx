@@ -55,19 +55,22 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
         <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-5 md:px-8 md:py-6 border-b border-border bg-background rounded-t-2xl">
           <h3 className="font-serif text-lg font-semibold text-foreground">Termin wählen</h3>
           <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full" aria-label="Schließen">
             <X className="h-5 w-5" />
           </Button>
         </div>
-        <div className="relative">
-          <div ref={containerRef} className="min-h-[400px] p-6 md:p-8" />
+        <div
+          className="relative flex-1 overflow-y-auto overscroll-contain"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
+          <div ref={containerRef} className="min-h-[600px] md:min-h-[700px] p-6 md:p-8" />
           {/* Overlay to hide Orbnet language flag inside the embedded widget */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute top-0 right-0 h-12 w-14 bg-background"
+            className="pointer-events-none absolute top-0 right-0 h-12 w-14 bg-background z-[1]"
           />
         </div>
       </div>
