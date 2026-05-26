@@ -31,9 +31,13 @@
 
     <!-- Orbnet Booking Widget vorab vorladen, damit beim Öffnen des
          Erstgespräch-Modals keine spürbare Init-Verzögerung mehr entsteht -->
+    <link rel="dns-prefetch" href="https://static.orbnet.de" />
+    <link rel="dns-prefetch" href="https://my.orbnet.de" />
     <link rel="preconnect" href="https://static.orbnet.de" crossorigin />
     <link rel="preconnect" href="https://my.orbnet.de" crossorigin />
-    <link rel="preload" as="script" href="https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5" crossorigin="anonymous" fetchpriority="high" />
+    <!-- Slowest Orbnet-API-Call (Event-Metadaten) ebenfalls vorwärmen -->
+    <link rel="prefetch" href="https://my.orbnet.de/events/basic/8ed15a55-6bf4-46cd-9de5-cef914d992b1" crossorigin />
 
 
 
