@@ -84,7 +84,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
         {/* Orbnet Embed – page-scroll-friendly */}
         <div className="bg-background p-3 md:p-4">
-          <div ref={containerRef} className="min-h-[500px]" />
+          <div ref={containerRef} className="min-h-[1100px] md:min-h-[900px] w-full" style={{ touchAction: "pan-y", WebkitOverflowScrolling: "touch" }} />
         </div>
       </div>
     </div>
