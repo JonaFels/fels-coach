@@ -72,13 +72,14 @@ div[class*="orbnet"][style*="position: fixed"] {
   max-height: none !important;
 }
 
-/* iFrame des Widgets: großzügige Mindesthöhe, damit auch lange
-   Frageformulare komplett sichtbar sind. Der äußere Modal-Container
-   scrollt drumherum. */
+/* iFrame des Widgets: Orbnet passt die Höhe per postMessage selbst an.
+   Wir setzen nur eine moderate Mindesthöhe, damit der Kalender beim
+   ersten Render nicht abgeschnitten wirkt. */
 .orbnet-booking-mask iframe {
   width: 100% !important;
   max-width: 100% !important;
-  min-height: 2400px !important;
+  min-height: 760px !important;
+  height: auto !important;
   border: 0 !important;
   display: block !important;
   pointer-events: auto !important;
