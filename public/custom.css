@@ -72,25 +72,14 @@ div[class*="orbnet"][style*="position: fixed"] {
   max-height: none !important;
 }
 
-/* iFrame des Widgets: volle Höhe, kein interner Scroll mehr */
+/* iFrame des Widgets: Orbnet darf seine natürliche Höhe selbst bestimmen */
 .orbnet-booking-mask iframe {
   touch-action: pan-y !important;
   -webkit-overflow-scrolling: touch !important;
   width: 100% !important;
-  min-height: 1500px !important;
-  height: 1700px !important;
-  max-height: none !important;
   border: 0 !important;
   display: block !important;
   pointer-events: auto !important;
-  overflow: visible !important;
-}
-
-@media (min-width: 768px) {
-  .orbnet-booking-mask iframe {
-    height: 1100px !important;
-    min-height: 1050px !important;
-  }
 }
 
 /* Eingaben dürfen normal getappt werden */
