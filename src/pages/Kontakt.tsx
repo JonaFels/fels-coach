@@ -58,8 +58,15 @@ const Kontakt = () => {
             <p className="text-sm md:text-base text-muted-foreground text-center mb-6 max-w-xl mx-auto leading-relaxed">
               {t("contact.calendarMicrocopy")}
             </p>
-            <div className="relative bg-background rounded-2xl border border-border shadow-sm p-2 md:p-4">
-              <div ref={containerRef} className="min-h-[420px]" />
+            <div className="relative bg-background rounded-2xl border border-border shadow-sm overflow-hidden">
+              <iframe
+                src={ORBNET_BOOKING_URL}
+                title="Orbnet Terminbuchung"
+                className="w-full block rounded-2xl"
+                style={{ height: "min(80vh, 800px)", minHeight: "600px", border: 0 }}
+                allow="payment"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
