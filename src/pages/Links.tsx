@@ -28,33 +28,33 @@ const Links = () => {
         </p>
 
         {/* Link-Buttons */}
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-3.5 w-full">
           {/* Primary: Selbsttest */}
           <a
             href="/#rollencheck-quiz"
-            className="w-full rounded-lg bg-primary text-primary-foreground font-medium py-3.5 px-5 text-[15px] flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-transform duration-200 no-underline-effect"
+            className="group w-full rounded-xl bg-primary text-primary-foreground font-medium py-4 px-5 text-[15px] flex items-center gap-3 shadow-sm hover:shadow-md hover:-translate-y-[1px] transition-all duration-200 no-underline-effect"
           >
-            <Compass className="w-[18px] h-[18px]" aria-hidden="true" />
-            🧭 3-Minuten Selbsttest: Unbewusste Loyalitäten erkennen
+            <Compass className="w-[18px] h-[18px] shrink-0 opacity-90" aria-hidden="true" />
+            <span className="flex-1 text-left leading-snug">3-Minuten Selbsttest: Unbewusste Loyalitäten erkennen</span>
           </a>
 
           {/* Secondary: Homepage */}
           <a
             href="/"
-            className="w-full rounded-lg border border-primary/40 bg-card text-primary font-medium py-3.5 px-5 text-[15px] flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-transform duration-200 no-underline-effect"
+            className="group w-full rounded-xl border border-primary/25 bg-card text-foreground font-medium py-4 px-5 text-[15px] flex items-center gap-3 hover:border-primary/50 hover:-translate-y-[1px] transition-all duration-200 no-underline-effect"
           >
-            <Globe className="w-[18px] h-[18px]" aria-hidden="true" />
-            🌐 Meine Arbeitsweise &amp; Philosophie
+            <Globe className="w-[18px] h-[18px] shrink-0 text-primary/80" aria-hidden="true" />
+            <span className="flex-1 text-left leading-snug">Meine Arbeitsweise &amp; Philosophie</span>
           </a>
 
           {/* Soft CTA: Erstgespräch */}
           <button
             type="button"
             onClick={() => booking?.openErstgespraech()}
-            className="w-full rounded-lg bg-muted text-foreground font-medium py-3.5 px-5 text-[15px] flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-transform duration-200"
+            className="group w-full rounded-xl bg-muted/70 text-foreground font-medium py-4 px-5 text-[15px] flex items-center gap-3 hover:bg-muted hover:-translate-y-[1px] transition-all duration-200"
           >
-            <Phone className="w-[18px] h-[18px]" aria-hidden="true" />
-            📞 Lass uns einfach mal reden (Kostenfreies Erstgespräch)
+            <Phone className="w-[18px] h-[18px] shrink-0 text-primary/80" aria-hidden="true" />
+            <span className="flex-1 text-left leading-snug">Lass uns einfach mal reden — kostenfreies Erstgespräch</span>
           </button>
         </div>
 
