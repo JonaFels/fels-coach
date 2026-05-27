@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { AboutPreview } from "@/components/AboutPreview";
@@ -27,8 +28,33 @@ const RoleCheckQuiz = lazy(() =>
 );
 
 const Index = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    let cancelled = false;
+    let attempts = 0;
+    const tryScroll = () => {
+      if (cancelled) return;
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (attempts++ < 40) {
+        window.setTimeout(tryScroll, 100);
+      }
+    };
+    tryScroll();
+    return () => {
+      cancelled = true;
+    };
+  }, [hash]);
+
   return (
     <div className="min-h-screen flex flex-col">
+
       <SEOHead />
       <Suspense fallback={null}>
         <JsonLd />
