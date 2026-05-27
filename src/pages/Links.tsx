@@ -13,7 +13,7 @@ const Links = () => {
           <img
             src={portrait}
             alt="Jona Fels – Systemischer Coach in Freiburg"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_18%]"
             loading="eager"
             decoding="async"
           />
