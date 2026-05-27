@@ -1,18 +1,11 @@
 import { Quote } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const testimonials: { name: string; age?: number; text: string }[] = [
-  {
-    name: "Miriam",
-    age: 29,
-    text: "Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame und einfühlsame Begleitung.",
-  },
-  {
-    name: "Johannes",
-    age: 39,
-    text: "Jona hat ein super Gespür den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem tieferen Verständnis und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
-  },
-];
+const johannes = {
+  name: "Johannes",
+  age: 39,
+  text: "Jona hat ein super Gespür den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem tieferen Verständnis und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
+};
 
 export const TestimonialsSection = () => {
   const { t } = useLanguage();
@@ -28,23 +21,31 @@ export const TestimonialsSection = () => {
         </p>
 
         <div className="space-y-8">
-          {testimonials.map((testimonial, index) => (
-            <blockquote
-              key={index}
-              className="relative bg-card rounded-xl p-8 shadow-sm border border-border"
-            >
-              <Quote className="absolute top-6 left-6 h-8 w-8 text-secondary/20" aria-hidden="true" />
-              <p className="text-muted-foreground leading-relaxed text-lg italic pl-8">
-                „{testimonial.text}"
-              </p>
-              <footer className="mt-6 pl-8">
-                <span className="font-medium text-foreground">
-                  – {testimonial.name}
-                  {testimonial.age ? <span className="text-muted-foreground font-normal">, {testimonial.age}</span> : null}
-                </span>
-              </footer>
-            </blockquote>
-          ))}
+          {/* Miriam – hervorgehoben für bessere Lesbarkeit */}
+          <blockquote className="relative bg-card rounded-xl p-8 shadow-sm border border-border">
+            <Quote className="absolute top-6 left-6 h-8 w-8 text-secondary/20" aria-hidden="true" />
+            <p className="text-muted-foreground leading-relaxed text-lg italic pl-8">
+              „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong className="text-foreground font-semibold not-italic">tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich konnte mich in einem <strong className="text-foreground font-semibold not-italic">gut gehaltenen Rahmen</strong> mit meinem <strong className="text-foreground font-semibold not-italic">familiären Thema</strong> auseinandersetzen und gewann an <strong className="text-foreground font-semibold not-italic">Klarheit und Sicherheit</strong>. Ich bin sehr dankbar für die <strong className="text-foreground font-semibold not-italic">tiefen Erkenntnisse</strong> und die aufmerksame und <strong className="text-foreground font-semibold not-italic">einfühlsame Begleitung</strong>."
+            </p>
+            <footer className="mt-6 pl-8">
+              <span className="font-medium text-foreground">
+                – Miriam<span className="text-muted-foreground font-normal">, 29</span>
+              </span>
+            </footer>
+          </blockquote>
+
+          {/* Johannes */}
+          <blockquote className="relative bg-card rounded-xl p-8 shadow-sm border border-border">
+            <Quote className="absolute top-6 left-6 h-8 w-8 text-secondary/20" aria-hidden="true" />
+            <p className="text-muted-foreground leading-relaxed text-lg italic pl-8">
+              „{johannes.text}"
+            </p>
+            <footer className="mt-6 pl-8">
+              <span className="font-medium text-foreground">
+                – {johannes.name}<span className="text-muted-foreground font-normal">, {johannes.age}</span>
+              </span>
+            </footer>
+          </blockquote>
         </div>
       </div>
     </section>
