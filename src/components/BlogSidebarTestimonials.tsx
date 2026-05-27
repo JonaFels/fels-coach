@@ -15,7 +15,7 @@ export const BlogSidebarTestimonials = () => {
         <CardContent className="p-5">
           <Quote className="h-5 w-5 text-secondary/30 mb-3" aria-hidden="true" />
           <p className="text-muted-foreground text-sm leading-relaxed italic">
-            „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong className="text-foreground font-semibold not-italic">tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich bin sehr dankbar für die <strong className="text-foreground font-semibold not-italic">tiefen Erkenntnisse</strong> und die <strong className="text-foreground font-semibold not-italic">einfühlsame Begleitung</strong>."
+            „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong className="text-foreground font-semibold not-italic">tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich bin sehr dankbar für die tiefen Erkenntnisse und die einfühlsame Begleitung."
           </p>
           <p className="mt-3 text-sm font-medium text-foreground">
             – Miriam
