@@ -1,6 +1,6 @@
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Compass, Globe, Phone } from "lucide-react";
-import portrait from "@/assets/jona-fels-freigestellt.webp";
+import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Links = () => {
   const booking = useErstgespraech();
