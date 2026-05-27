@@ -1,5 +1,5 @@
 import { useErstgespraech } from "@/components/HashBookingTrigger";
-import { Calendar, Compass, Globe, Instagram, Linkedin } from "lucide-react";
+import { Compass, Globe, Phone } from "lucide-react";
 import portrait from "@/assets/jona-fels-freigestellt.webp";
 
 const Links = () => {
@@ -7,15 +7,9 @@ const Links = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-background">
-      {/* Subtile Brand-Atmosphäre */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-accent/60 via-background to-background"
-      />
-
-      <div className="relative w-full max-w-[500px] flex flex-col items-center px-5 flex-1">
+      <div className="w-full max-w-[480px] flex flex-col items-center px-5 flex-1">
         {/* Portrait */}
-        <div className="w-28 h-28 rounded-full bg-card mt-12 overflow-hidden ring-4 ring-card shadow-lg">
+        <div className="w-24 h-24 rounded-full bg-card mt-10 overflow-hidden ring-4 ring-card shadow-md">
           <img
             src={portrait}
             alt="Jona Fels – Systemischer Coach in Freiburg"
@@ -26,81 +20,55 @@ const Links = () => {
         </div>
 
         {/* Name + Titel */}
-        <h1 className="font-serif text-3xl font-semibold text-foreground mt-5 tracking-tight">
+        <h1 className="text-xl font-semibold text-gray-900 mt-4">
           Jona Fels
         </h1>
-        <p className="text-sm text-muted-foreground mt-1.5 text-center">
+        <p className="text-sm text-gray-600 mb-10 text-center">
           Systemisches Coaching &amp; Familienaufstellung
-        </p>
-        <p className="text-xs text-muted-foreground/80 mt-1 text-center">
-          Freiburg · in Präsenz
         </p>
 
         {/* Link-Buttons */}
-        <div className="flex flex-col gap-3 w-full mt-10">
-          {/* Primary: Erstgespräch */}
-          <button
-            type="button"
-            onClick={() => booking?.openErstgespraech()}
-            className="group w-full rounded-2xl bg-primary text-primary-foreground font-medium py-4 px-5 text-[15px] flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
-          >
-            <Calendar className="w-[18px] h-[18px]" aria-hidden="true" />
-            Kostenloses Erstgespräch buchen
-          </button>
-
-          {/* Secondary: Quiz */}
+        <div className="flex flex-col gap-4 w-full">
+          {/* Primary: Selbsttest */}
           <a
             href="/#rollencheck-quiz"
-            className="group w-full rounded-2xl bg-card border border-border text-foreground font-medium py-4 px-5 text-[15px] flex items-center justify-center gap-2.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-primary/40 transition-all no-underline-effect"
+            className="w-full rounded-lg bg-primary text-primary-foreground font-medium py-3.5 px-5 text-[15px] flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-transform duration-200 no-underline-effect"
           >
-            <Compass className="w-[18px] h-[18px] text-primary" aria-hidden="true" />
-            Test: Was ist deine unbewusste Loyalität?
+            <Compass className="w-[18px] h-[18px]" aria-hidden="true" />
+            🧭 3-Minuten Selbsttest: Unbewusste Loyalitäten erkennen
           </a>
 
           {/* Secondary: Homepage */}
           <a
             href="/"
-            className="group w-full rounded-2xl bg-card border border-border text-foreground font-medium py-4 px-5 text-[15px] flex items-center justify-center gap-2.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-primary/40 transition-all no-underline-effect"
+            className="w-full rounded-lg border border-primary/40 bg-card text-primary font-medium py-3.5 px-5 text-[15px] flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-transform duration-200 no-underline-effect"
           >
-            <Globe className="w-[18px] h-[18px] text-primary" aria-hidden="true" />
-            Mehr über meine Arbeit erfahren
+            <Globe className="w-[18px] h-[18px]" aria-hidden="true" />
+            🌐 Meine Arbeitsweise &amp; Philosophie
           </a>
-        </div>
 
-        {/* Social Icons */}
-        <div className="flex justify-center gap-3 mt-8">
-          <a
-            href="https://www.instagram.com/jona.fels/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary/40 transition-colors no-underline-effect"
+          {/* Soft CTA: Erstgespräch */}
+          <button
+            type="button"
+            onClick={() => booking?.openErstgespraech()}
+            className="w-full rounded-lg bg-muted text-foreground font-medium py-3.5 px-5 text-[15px] flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-transform duration-200"
           >
-            <Instagram className="w-[18px] h-[18px]" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jona-fels"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary/40 transition-colors no-underline-effect"
-          >
-            <Linkedin className="w-[18px] h-[18px]" />
-          </a>
+            <Phone className="w-[18px] h-[18px]" aria-hidden="true" />
+            📞 Lass uns einfach mal reden (Kostenfreies Erstgespräch)
+          </button>
         </div>
 
         {/* Footer-Links */}
         <div className="mt-auto pb-8 pt-12 flex justify-center gap-4">
           <a
             href="/impressum"
-            className="text-xs text-muted-foreground hover:text-foreground no-underline-effect"
+            className="text-xs text-gray-400 hover:text-gray-600 no-underline-effect"
           >
             Impressum
           </a>
-          <span className="text-xs text-muted-foreground/50" aria-hidden="true">·</span>
           <a
             href="/datenschutz"
-            className="text-xs text-muted-foreground hover:text-foreground no-underline-effect"
+            className="text-xs text-gray-400 hover:text-gray-600 no-underline-effect"
           >
             Datenschutz
           </a>
