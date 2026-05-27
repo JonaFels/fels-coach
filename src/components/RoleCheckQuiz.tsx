@@ -613,7 +613,14 @@ export const RoleCheckQuiz = () => {
                 <Button
                   variant="ghost"
                   size="lg"
-                  onClick={start}
+                  onClick={() => {
+                    start();
+                    requestAnimationFrame(() => {
+                      document
+                        .getElementById("rollencheck-quiz")
+                        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    });
+                  }}
                   className="min-h-[52px] text-muted-foreground hover:text-foreground"
                 >
                   <RefreshCw className="mr-2 h-4 w-4" aria-hidden="true" />
