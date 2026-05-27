@@ -1,6 +1,6 @@
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Compass, Globe, Phone } from "lucide-react";
-import portrait from "@/assets/jona-fels-freigestellt.webp";
+import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Links = () => {
   const booking = useErstgespraech();
@@ -13,7 +13,7 @@ const Links = () => {
           <img
             src={portrait}
             alt="Jona Fels – Systemischer Coach in Freiburg"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_18%]"
             loading="eager"
             decoding="async"
           />
