@@ -28,7 +28,30 @@ const RoleCheckQuiz = lazy(() =>
 );
 
 const Index = () => {
-  return (
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    let cancelled = false;
+    let attempts = 0;
+    const tryScroll = () => {
+      if (cancelled) return;
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (attempts++ < 40) {
+        window.setTimeout(tryScroll, 100);
+      }
+    };
+    tryScroll();
+    return () => {
+      cancelled = true;
+    };
+  }, [hash]);
+
     <div className="min-h-screen flex flex-col">
       <SEOHead />
       <Suspense fallback={null}>
