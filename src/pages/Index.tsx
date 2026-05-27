@@ -52,7 +52,9 @@ const Index = () => {
     };
   }, [hash]);
 
+  return (
     <div className="min-h-screen flex flex-col">
+
       <SEOHead />
       <Suspense fallback={null}>
         <JsonLd />
