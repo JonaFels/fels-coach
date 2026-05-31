@@ -158,6 +158,34 @@ const UeberMich = () => {
                       {t("about.cv1.title")}
                     </button>
                   </DialogTrigger>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {t("about.cv1.desc")}
+                  </p>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      aria-label="Ausbildungsbescheinigung Familiensteller ansehen"
+                      className="group mt-4 inline-flex items-center gap-4 rounded-lg border border-border bg-card p-3 pr-5 text-left shadow-sm hover:shadow-md hover:border-secondary/60 transition-all cursor-pointer"
+                    >
+                      <img
+                        src={zertifikatBracht}
+                        alt="Vorschau Ausbildungsbescheinigung Familiensteller"
+                        className="h-20 w-16 object-cover rounded-md ring-1 ring-border group-hover:ring-secondary/50 transition"
+                        loading="lazy"
+                      />
+                      <span className="flex flex-col">
+                        <span className="text-xs uppercase tracking-wide text-secondary font-semibold">
+                          Zertifikat
+                        </span>
+                        <span className="font-serif text-sm font-medium text-foreground">
+                          Ausbildungsbescheinigung ansehen
+                        </span>
+                        <span className="text-xs text-muted-foreground mt-0.5">
+                          Wolfgang Bracht · Freiburg, April 2026
+                        </span>
+                      </span>
+                    </button>
+                  </DialogTrigger>
                   <DialogContent className="max-w-3xl max-h-[94vh] p-0 border-0 bg-background overflow-hidden rounded-xl shadow-2xl">
                     <div className="flex flex-col max-h-[94vh]">
                       <DialogHeader className="px-8 pt-7 pb-5 border-b border-border bg-muted/40">
@@ -183,11 +211,8 @@ const UeberMich = () => {
                       </div>
                     </div>
                   </DialogContent>
-
                 </Dialog>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {t("about.cv1.desc")}
-                </p>
+
               </div>
 
               <div className="border-l-2 border-border pl-5 py-1">
