@@ -150,14 +150,9 @@ const UeberMich = () => {
                   </span>
                 </div>
                 <Dialog>
-                  <DialogTrigger asChild>
-                    <button
-                      type="button"
-                      className="font-serif text-lg font-semibold text-foreground mb-1 text-left hover:text-secondary transition-colors underline-offset-4 hover:underline cursor-pointer"
-                    >
-                      {t("about.cv1.title")}
-                    </button>
-                  </DialogTrigger>
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
+                    {t("about.cv1.title")}
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed text-sm">
                     {t("about.cv1.desc")}
                   </p>
