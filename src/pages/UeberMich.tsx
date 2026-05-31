@@ -165,22 +165,22 @@ const UeberMich = () => {
                     <button
                       type="button"
                       aria-label="Ausbildungsbescheinigung Familiensteller ansehen"
-                      className="group mt-4 inline-flex items-center gap-4 rounded-lg border border-border bg-card p-3 pr-5 text-left shadow-sm hover:shadow-md hover:border-secondary/60 transition-all cursor-pointer"
+                      className="group mt-2 inline-flex items-center gap-2 text-left cursor-pointer hover:opacity-80 transition-opacity"
                     >
                       <img
                         src={zertifikatBracht}
                         alt="Vorschau Ausbildungsbescheinigung Familiensteller"
-                        className="h-20 w-16 object-cover rounded-md ring-1 ring-border group-hover:ring-secondary/50 transition"
+                        className="h-12 w-9 object-cover rounded ring-1 ring-border group-hover:ring-secondary/50 transition"
                         loading="lazy"
                       />
                       <span className="flex flex-col">
-                        <span className="text-xs uppercase tracking-wide text-secondary font-semibold">
+                        <span className="text-[11px] uppercase tracking-wide text-secondary font-semibold leading-tight">
                           Zertifikat
                         </span>
-                        <span className="font-serif text-sm font-medium text-foreground">
+                        <span className="font-serif text-sm font-medium text-foreground underline-offset-2 group-hover:underline">
                           Ausbildungsbescheinigung ansehen
                         </span>
-                        <span className="text-xs text-muted-foreground mt-0.5">
+                        <span className="text-[11px] text-muted-foreground leading-tight">
                           Wolfgang Bracht · Freiburg, April 2026
                         </span>
                       </span>
