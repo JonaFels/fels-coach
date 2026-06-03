@@ -156,15 +156,23 @@ const Angebote = () => {
               <Button
                 size="lg"
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md min-h-[44px]"
-                onClick={() => {
-                  if (booking) booking.openErstgespraech();
-                  trackCTAClick("angebote_free_call", "angebote_page", "button");
-                }}
+                asChild
               >
-                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                {language === "de"
-                  ? "Kostenloses Telefonat vereinbaren"
-                  : "Schedule a free phone call"}
+                <a
+                  href="/kontakt#erstgespraech"
+                  onClick={(e) => {
+                    if (booking) {
+                      e.preventDefault();
+                      booking.openErstgespraech();
+                    }
+                    trackCTAClick("angebote_free_call", "angebote_page", "link");
+                  }}
+                >
+                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+                  {language === "de"
+                    ? "Kostenloses Telefonat vereinbaren"
+                    : "Schedule a free phone call"}
+                </a>
               </Button>
             </div>
 
