@@ -1227,8 +1227,8 @@ export const translations: Translations = {
     en: "Let's have a quick chat",
   },
   "offerings.unsureText": {
-    de: "Du weißt noch nicht, welches Angebot zu dir passt? In einem kostenlosen 30-Minuten-Vorgespräch finden wir es gemeinsam heraus – ganz ohne Verpflichtung.",
-    en: "Not sure which offer suits you? In a free 30-minute preliminary talk, we'll figure it out together – no obligation at all.",
+    de: "Mir ist wichtig, dass wir vor dem ersten Termin kurz reinschnuppern. In einem kostenlosen 30-Minuten-Vorgespräch klären wir dein Anliegen – ganz ohne Verpflichtung. Danach starten wir mit einer Kennenlern-Session. Alle weiteren Sitzungen sind gleich aufgebaut und kosten gleich viel.",
+    en: "I find it important that we get a brief sense of each other before the first session. In a free 30-minute preliminary talk, we'll clarify your concern – no obligation at all. After that, we start with an introductory session. All further sessions follow the same structure and cost the same.",
   },
   "offerings.unsureCta": {
     de: "Erstgespräch vereinbaren",
