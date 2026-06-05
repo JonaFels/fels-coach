@@ -226,13 +226,13 @@ export const trackLinkClick = (
 // SOCIAL MEDIA TRACKING
 // ==========================================
 
-type SocialPlatform = "facebook" | "instagram" | "linkedin" | "telegram";
+type SocialPlatform = "facebook" | "instagram" | "linkedin" | "whatsapp";
 
 const SOCIAL_PATTERNS: Record<SocialPlatform, RegExp> = {
   facebook: /facebook\.com/i,
   instagram: /instagram\.com/i,
   linkedin: /linkedin\.com/i,
-  telegram: /t\.me/i,
+  whatsapp: /wa\.me/i,
 };
 
 /**

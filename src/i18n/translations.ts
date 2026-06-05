@@ -166,8 +166,8 @@ export const translations: Translations = {
     en: "Free first call – In 30 minutes by phone we clarify your concern and see if the chemistry fits. Completely non-binding.",
   },
   "offerings.step2": {
-    de: "Termin wählen & buchen – Such dir online direkt einen passenden Termin aus oder schreib mir per E-Mail bzw. Telegram – ganz wie es dir lieber ist.",
-    en: "Choose & book your slot – Pick an appointment directly online or write me via email or Telegram – whatever you prefer.",
+    de: "Termin wählen & buchen – Such dir online direkt einen passenden Termin aus oder schreib mir per E-Mail bzw. WhatsApp – ganz wie es dir lieber ist.",
+    en: "Choose & book your slot – Pick an appointment directly online or write me via email or WhatsApp – whatever you prefer.",
   },
   "offerings.step3": {
     de: "In die Praxis kommen – Du kommst in meinen Praxisraum in der Karlstraße 51 in Freiburg. Den genauen Ablauf der Sitzung selbst findest du auf der Familienaufstellung-Seite.",
@@ -178,8 +178,8 @@ export const translations: Translations = {
     en: "Clear Conditions",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg. Termine kannst du direkt über die beiden untenstehenden Optionen online buchen – oder per E-Mail und Telegram vereinbaren.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
-    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg. You can book directly via the two options below – or arrange an appointment by email or Telegram.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
+    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg. Termine kannst du direkt über die beiden untenstehenden Optionen online buchen – oder per E-Mail und WhatsApp vereinbaren.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
+    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg. You can book directly via the two options below – or arrange an appointment by email or WhatsApp.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
@@ -1115,8 +1115,8 @@ export const translations: Translations = {
     en: "Email",
   },
   "contact.telegramLabel": {
-    de: "Telegram",
-    en: "Telegram",
+    de: "WhatsApp",
+    en: "WhatsApp",
   },
 
   // Kontakt Page – Anfahrt
