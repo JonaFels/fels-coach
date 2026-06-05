@@ -136,7 +136,7 @@ export const cmsRegistry: CMSEntry[] = [
   { key: "contact.directTitle", type: "text", category: "Kontakt", label: "Direkt-Kontakt Titel" },
   { key: "contact.altTitle", type: "text", category: "Kontakt", label: "Alternativen Titel" },
   { key: "contact.emailLabel", type: "text", category: "Kontakt", label: "E-Mail Label" },
-  { key: "contact.telegramLabel", type: "text", category: "Kontakt", label: "Telegram Label" },
+  { key: "contact.telegramLabel", type: "text", category: "Kontakt", label: "WhatsApp Label" },
   { key: "contact.directions.title", type: "text", category: "Kontakt", label: "Anfahrt Titel" },
   { key: "contact.directions.intro", type: "text", category: "Kontakt", label: "Anfahrt Intro" },
   { key: "contact.directions.address", type: "text", category: "Kontakt", label: "Anfahrt Adresse" },
@@ -209,7 +209,7 @@ export const cmsRegistry: CMSEntry[] = [
   // ===== Externe Links =====
   { key: "links.booking_url", type: "link", category: "Externe Links", label: "Orbnet Booking URL", fallback: "" },
   { key: "links.email", type: "link", category: "Externe Links", label: "E-Mail (mailto:)", fallback: "" },
-  { key: "links.telegram", type: "link", category: "Externe Links", label: "Telegram URL", fallback: "" },
+  { key: "links.whatsapp", type: "link", category: "Externe Links", label: "WhatsApp URL", fallback: "" },
   { key: "links.instagram", type: "link", category: "Externe Links", label: "Instagram URL", fallback: "https://www.instagram.com/jona.fels" },
   { key: "links.linkedin", type: "link", category: "Externe Links", label: "LinkedIn URL", fallback: "" },
   { key: "links.facebook", type: "link", category: "Externe Links", label: "Facebook URL", fallback: "" },

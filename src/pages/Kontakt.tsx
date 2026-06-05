@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Mail, Send, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
+import { Mail, MessageCircle, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -104,14 +104,14 @@ const Kontakt = () => {
                       </div>
                     </a>
                     <a
-                      href="https://t.me/+4917667608617"
+                      href="https://wa.me/4917667608617"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
-                      aria-label="Telegram öffnen"
+                      aria-label="WhatsApp öffnen"
                     >
                       <div className="p-2.5 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <Send className="h-5 w-5 text-primary" aria-hidden="true" />
+                        <MessageCircle className="h-5 w-5 text-primary" aria-hidden="true" />
                       </div>
                       <div>
                         <span className="font-medium text-foreground block">{t("contact.telegramLabel")}</span>
