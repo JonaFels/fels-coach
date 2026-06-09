@@ -42,8 +42,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Impulses on Family Constellation – Freiburg | Jona Fels", description: "Free impulses on family constellation & coaching: Recognise unconscious patterns, find yourself and become the rock." },
   },
   "/ueber-mich": {
-    de: { title: "Über mich – Jona Fels, Systemischer Coach & Familienaufsteller in Freiburg", description: "Lerne Jona Fels kennen: systemischer Coach und Familienaufsteller in Freiburg. Erfahre, wie ich meine eigenen Muster durchbrochen habe – und dich auf deinem Weg begleite." },
-    en: { title: "About Me – Jona Fels, Systemic Coach & Family Constellator in Freiburg", description: "Get to know Jona Fels: systemic coach and family constellator in Freiburg. Learn how I broke through my own patterns – and how I'll accompany you on your path." },
+    de: { title: "Über mich – Jona Fels, Coach Freiburg", description: "Lerne Jona Fels kennen: systemischer Coach in Freiburg. Erfahre, wie ich meine eigenen Muster durchbrach – und dich begleite." },
+    en: { title: "About Me – Jona Fels, Coach Freiburg", description: "Get to know Jona Fels: systemic coach in Freiburg. Learn how I broke through my own patterns – and accompany you." },
   },
   "/kontakt": {
     de: { title: "Kontakt – Familienaufstellung & Coaching Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Erstgespräch zur Familienaufstellung oder zum systemischen Coaching. Per Telefon, E-Mail oder WhatsApp." },
