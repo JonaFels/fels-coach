@@ -19,13 +19,18 @@ const Kontakt = () => {
   const { getImage } = useCMS();
   const portrait = getImage("about.image", profilBild);
   const { hash } = useLocation();
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
 
-  // Scroll to hash target (e.g. #anfahrt) immediately before paint
+  // Legacy: redirect #anfahrt to /angebote#anfahrt
   useLayoutEffect(() => {
     if (!hash) return;
     if (hash === "#erstgespraech") {
       setModalOpen(true);
+      return;
+    }
+    if (hash === "#anfahrt") {
+      navigate("/angebote#anfahrt", { replace: true });
       return;
     }
     const id = hash.replace("#", "");
@@ -33,7 +38,7 @@ const Kontakt = () => {
     if (el) {
       el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
     }
-  }, [hash]);
+  }, [hash, navigate]);
 
   return (
     <div className="min-h-screen flex flex-col">
