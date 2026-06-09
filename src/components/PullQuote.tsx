@@ -13,7 +13,7 @@ export const PullQuote = () => {
       : "You don't need to fix what was never broken. Sometimes it's enough to look – and give what was its rightful place.";
 
   return (
-    <section className="py-28 md:py-40 relative overflow-hidden" aria-label="Zitat">
+    <section className="py-36 md:py-48 relative overflow-hidden" aria-label="Zitat">
       {/* Hintergrund-Ornament: organischer Kreis in Sage */}
       <svg
         aria-hidden="true"

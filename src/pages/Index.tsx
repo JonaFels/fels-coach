@@ -69,7 +69,7 @@ const Index = () => {
             <section
               id="rollencheck-quiz"
               aria-labelledby="rollencheck-heading"
-              className="py-24 md:py-32 bg-background"
+              className="py-32 md:py-40 bg-background"
             >
               <div className="container mx-auto px-4 max-w-4xl">
                 <RoleCheckQuiz />

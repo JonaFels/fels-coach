@@ -9,7 +9,7 @@ export const MethodSection = () => {
   const steps = [{ key: "method.step1" }, { key: "method.step2" }, { key: "method.step3" }];
 
   return (
-    <section className="py-28 md:py-40 bg-muted/40 relative overflow-hidden">
+    <section className="py-36 md:py-48 bg-muted/40 relative overflow-hidden">
       {/* dezentes Hintergrund-Ornament */}
       <svg
         aria-hidden="true"
