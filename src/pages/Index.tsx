@@ -74,6 +74,7 @@ const Index = () => {
             </section>
           </ScrollFadeIn>
         </Suspense>
+        <div className="h-20 md:h-28" />
         <SectionDivider />
         <ScrollFadeIn>
           <AboutPreview />
