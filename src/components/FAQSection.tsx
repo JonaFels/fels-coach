@@ -66,15 +66,15 @@ export const FAQSection = () => {
   const faqs = faqData[language];
 
   return (
-    <section className="py-16 md:py-20" aria-labelledby="faq-heading">
+    <section className="py-28 md:py-40" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
-        <p className="text-secondary font-medium uppercase tracking-wider text-sm text-center mb-4">
+        <p className="text-[0.72rem] md:text-xs uppercase tracking-[0.28em] text-secondary/80 font-medium text-center mb-6">
           {t("faq.subtitle")}
         </p>
-        <h2 id="faq-heading" className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-12">
+        <h2 id="faq-heading" className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-16 leading-tight">
           {t("faq.title")}
         </h2>
-        <div className="bg-card rounded-3xl border border-border/50 shadow-sm p-6 md:p-8">
+        <div className="bg-card rounded-3xl border border-border/50 shadow-sm p-8 md:p-10">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>

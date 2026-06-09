@@ -6,6 +6,7 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import { SectionDivider } from "@/components/SectionDivider";
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
@@ -19,6 +20,9 @@ const MethodSection = lazy(() =>
 );
 const FAQSection = lazy(() =>
   import("@/components/FAQSection").then((m) => ({ default: m.FAQSection })),
+);
+const PullQuote = lazy(() =>
+  import("@/components/PullQuote").then((m) => ({ default: m.PullQuote })),
 );
 const RoleCheckQuiz = lazy(() =>
   import("@/components/RoleCheckQuiz").then((m) => ({ default: m.RoleCheckQuiz })),
@@ -65,7 +69,7 @@ const Index = () => {
             <section
               id="rollencheck-quiz"
               aria-labelledby="rollencheck-heading"
-              className="py-16 md:py-24 bg-background"
+              className="py-24 md:py-32 bg-background"
             >
               <div className="container mx-auto px-4 max-w-4xl">
                 <RoleCheckQuiz />
@@ -73,6 +77,7 @@ const Index = () => {
             </section>
           </ScrollFadeIn>
         </Suspense>
+        <SectionDivider />
         <ScrollFadeIn>
           <AboutPreview />
         </ScrollFadeIn>
@@ -80,8 +85,12 @@ const Index = () => {
           <ScrollFadeIn>
             <TestimonialsSection />
           </ScrollFadeIn>
+          <SectionDivider />
           <ScrollFadeIn>
             <MethodSection />
+          </ScrollFadeIn>
+          <ScrollFadeIn>
+            <PullQuote />
           </ScrollFadeIn>
           <ScrollFadeIn>
             <FAQSection />
