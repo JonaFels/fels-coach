@@ -62,19 +62,21 @@ const Index = () => {
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
-        <Suspense fallback={null}>
-          <ScrollFadeIn>
-            <section
-              id="rollencheck-quiz"
-              aria-labelledby="rollencheck-heading"
-              className="py-40 md:py-52 bg-background"
-            >
-              <div className="container mx-auto px-4 max-w-4xl">
-                <RoleCheckQuiz />
-              </div>
-            </section>
-          </ScrollFadeIn>
-        </Suspense>
+        <LazyMount rootMargin="600px 0px" minHeight="600px">
+          <Suspense fallback={null}>
+            <ScrollFadeIn>
+              <section
+                id="rollencheck-quiz"
+                aria-labelledby="rollencheck-heading"
+                className="py-40 md:py-52 bg-background"
+              >
+                <div className="container mx-auto px-4 max-w-4xl">
+                  <RoleCheckQuiz />
+                </div>
+              </section>
+            </ScrollFadeIn>
+          </Suspense>
+        </LazyMount>
         <div className="h-20 md:h-28" />
         <SectionDivider />
         <ScrollFadeIn>
