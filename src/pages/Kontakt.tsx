@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Mail, MessageCircle, TrainFront, Car, DoorOpen, MapPin, Calendar } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Mail, MessageCircle, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
