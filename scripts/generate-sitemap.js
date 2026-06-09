@@ -18,7 +18,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const SITE_URL = "https://fels-coach.de";
+const SITE_URL = "https://fels-coach.lovable.app";
 const DIST_DIR = join(__dirname, "..", "dist");
 const PUBLIC_DIR = join(__dirname, "..", "public");
 const BLOG_DATA_FILE = join(__dirname, "..", "src", "data", "blogPosts.ts");
