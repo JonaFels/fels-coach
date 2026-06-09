@@ -21,9 +21,6 @@ const MethodSection = lazy(() =>
 const FAQSection = lazy(() =>
   import("@/components/FAQSection").then((m) => ({ default: m.FAQSection })),
 );
-const PullQuote = lazy(() =>
-  import("@/components/PullQuote").then((m) => ({ default: m.PullQuote })),
-);
 const RoleCheckQuiz = lazy(() =>
   import("@/components/RoleCheckQuiz").then((m) => ({ default: m.RoleCheckQuiz })),
 );
