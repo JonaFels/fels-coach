@@ -63,7 +63,7 @@ const UeberMich = () => {
         </section>
 
         {/* Guidance */}
-        <section className="py-16 md:py-20">
+        <section className="py-24 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-6 border-l-4 border-secondary pl-4">
               {t("about.guidance.title")}
@@ -102,7 +102,7 @@ const UeberMich = () => {
         </section>
 
         {/* Core */}
-        <section className="py-16 md:py-20 bg-muted/40">
+        <section className="py-24 md:py-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-6 border-l-4 border-secondary pl-4">
               {t("about.core.title")}
@@ -115,7 +115,7 @@ const UeberMich = () => {
         </section>
 
         {/* CV */}
-        <section className="py-16 md:py-20">
+        <section className="py-24 md:py-28">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
               {t("about.cv.title")}
@@ -238,7 +238,7 @@ const UeberMich = () => {
         </section>
 
         {/* Praxinode – subtle side project mention */}
-        <section className="py-10 md:py-14 bg-muted/40">
+        <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-sm text-muted-foreground leading-relaxed">
               {language === "de" ? (
