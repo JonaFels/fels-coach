@@ -1,9 +1,39 @@
-/* Nur Latin-Subset + tatsächlich genutzte Gewichte. 700 entfernt (kaum genutzt → font-semibold übernimmt). Spart 2 woff2-Requests. */
-@import "@fontsource/playfair-display/latin-400.css";
-@import "@fontsource/playfair-display/latin-600.css";
-@import "@fontsource/montserrat/latin-400.css";
-@import "@fontsource/montserrat/latin-500.css";
-@import "@fontsource/montserrat/latin-600.css";
+/* Latin-Subset, font-display: optional → vermeidet Layout-Shifts beim Schriftartenwechsel (CLS-Fix). */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url('@fontsource/playfair-display/files/playfair-display-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: url('@fontsource/playfair-display/files/playfair-display-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url('@fontsource/montserrat/files/montserrat-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: optional;
+  src: url('@fontsource/montserrat/files/montserrat-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: url('@fontsource/montserrat/files/montserrat-latin-600-normal.woff2') format('woff2');
+}
 
 @tailwind base;
 @tailwind components;
