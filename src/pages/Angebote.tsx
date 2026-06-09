@@ -35,6 +35,14 @@ const Angebote = () => {
   const { t, language } = useLanguage();
   const { openBooking, BookingDialog } = useOrbnetBooking();
   const booking = useErstgespraech();
+  const { hash } = useLocation();
+
+  useLayoutEffect(() => {
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+  }, [hash]);
 
 
   const values = [
