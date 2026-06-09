@@ -71,7 +71,7 @@ const Angebote = () => {
         </section>
 
         {/* Was dich erwartet */}
-        <section className="py-32 md:py-32 bg-muted/40">
+        <section className="py-32 md:py-40 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="grid gap-8 md:grid-cols-3 text-center">
               {values.map((val) => (
@@ -88,7 +88,7 @@ const Angebote = () => {
         </section>
 
         {/* Ablauf */}
-        <section className="py-32 md:py-32">
+        <section className="py-32 md:py-40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-4">
               {t("offerings.ablaufTitle")}
@@ -135,7 +135,7 @@ const Angebote = () => {
         </section>
 
         {/* Preise & Buchung */}
-        <section className="py-32 md:py-32 bg-muted/40">
+        <section className="py-32 md:py-40 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
               {t("offerings.preiseTitle")}
@@ -263,7 +263,7 @@ const Angebote = () => {
         </section>
 
         {/* Noch unsicher? */}
-        <section className="py-32 md:py-32">
+        <section className="py-32 md:py-40">
           <div className="container mx-auto px-4 text-center max-w-lg">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
               {t("offerings.unsure")}
