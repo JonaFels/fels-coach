@@ -82,7 +82,7 @@ const Kontakt = () => {
 
 
         {/* 3. Alternative Kontaktwege */}
-        <section className="py-20 md:py-28">
+        <section className="py-28 md:py-36">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-8 text-center">
               {t("contact.altTitle")}

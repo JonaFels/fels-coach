@@ -61,7 +61,7 @@ const Ebook = () => {
 
         {/* Content */}
         <section className="pb-20 md:pb-28 bg-muted/40">
-          <div className="container mx-auto px-4 py-14 md:py-20 max-w-3xl">
+          <div className="container mx-auto px-4 py-20 md:py-28 max-w-3xl">
             <div className="grid gap-10 md:gap-12 md:grid-cols-2 items-center">
               <div className="flex justify-center">
                 <img
