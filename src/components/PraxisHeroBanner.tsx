@@ -10,7 +10,7 @@ interface PraxisHeroBannerProps {
 
 export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerProps) => {
   const { getImage } = useCMS();
-  const priorityProps = { fetchpriority: "low" } as Record<string, string>;
+  const priorityProps = { fetchpriority: "high" } as Record<string, string>;
   const defaultImage = variant === "lounge" ? praxisLounge : praxisSitzbereich;
   const defaultMobile = variant === "lounge" ? praxisLoungeMobile : praxisSitzbereichMobile;
   const image = variant === "lounge"
