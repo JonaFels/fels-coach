@@ -35,7 +35,7 @@ export const MethodSection = () => {
           </p>
 
           {/* Nummerierte Schritte – editoriale Optik */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-20">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-32">
             {steps.map((_step, index) => (
               <div
                 key={index}
