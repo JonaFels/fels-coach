@@ -22,8 +22,8 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string }>> = {
   "/": {
-    de: { title: "Familienaufstellung & Coaching Freiburg – toxische Familienmuster lösen | Jona Fels", description: "Familienaufstellung & systemisches Coaching in Freiburg. Befrei dich aus toxischen Familienmustern – für klare Grenzen, innere Standfestigkeit und einen freien Weg." },
-    en: { title: "Family Constellation & Coaching Freiburg – release toxic family patterns | Jona Fels", description: "Family constellation & systemic coaching in Freiburg. Free yourself from toxic family patterns – for clear boundaries, inner steadiness and a free path." },
+    de: { title: "Familienaufstellung & Coaching Freiburg | Jona Fels", description: "Familienaufstellung & Coaching in Freiburg. Löse unbewusste Muster – für innere Standfestigkeit und Klarheit." },
+    en: { title: "Family Constellation & Coaching Freiburg | Jona Fels", description: "Family constellation & coaching in Freiburg. Free yourself from unconscious patterns – for inner steadiness and clarity." },
   },
   "/angebote": {
     de: { title: "Termine & Preise – Familienaufstellung Freiburg | Jona Fels", description: "Buche dein systemisches Coaching oder eine Familienaufstellung in Freiburg. Kennenlern-Session 55 €, Coaching mit Einzelaufstellung 95 € – inkl. kostenloser Erstgespräch." },
