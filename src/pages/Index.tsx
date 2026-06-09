@@ -20,9 +20,6 @@ const MethodSection = lazy(() =>
 const FAQSection = lazy(() =>
   import("@/components/FAQSection").then((m) => ({ default: m.FAQSection })),
 );
-const FinalCTA = lazy(() =>
-  import("@/components/FinalCTA").then((m) => ({ default: m.FinalCTA })),
-);
 const RoleCheckQuiz = lazy(() =>
   import("@/components/RoleCheckQuiz").then((m) => ({ default: m.RoleCheckQuiz })),
 );
@@ -89,7 +86,6 @@ const Index = () => {
           <ScrollFadeIn>
             <FAQSection />
           </ScrollFadeIn>
-          <FinalCTA />
         </Suspense>
       </main>
       <Suspense fallback={null}>
