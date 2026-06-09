@@ -25,5 +25,17 @@ Jona Fels ist ein systemischer Coach und ausgebildeter Familienaufsteller mit Si
 - Standort: Freiburg, Deutschland
 - Buchung: https://www.orbnet.de/p/fels-coach
 
-## Sprachen
-Die Website und Coaching-Angebote sind verfügbar auf Deutsch, Englisch und Französisch.
+## Pages
+- [Startseite](/): Systemisches Coaching & Familienaufstellung in Freiburg – Persönliche Begleitung durch Jona Fels.
+- [Über mich](/ueber-mich): Wer ich bin, meine Herangehensweise und Qualifikationen als systemischer Coach.
+- [Angebote](/angebote): Coaching-Sessions, Preise und Pakete für Einzelaufstellungen in Freiburg.
+- [Familienaufstellung](/familienaufstellung): Methodik der systemischen Einzelaufstellung mit Bodenankern.
+- [Blog](/blog): Artikel zu Familienaufstellung, persönlicher Entwicklung und systemischer Arbeit.
+- [E-Book](/ebook): "Der Weg zum Ganzsein" – Gratis-E-Book zur systemischen Familienaufstellung.
+- [Kontakt & Buchung](/kontakt): Termin vereinbaren, Erstgespräch buchen und direkter Kontakt.
+- [Links](/links): Empfohlene Ressourcen und weiterführende Informationen.
+
+## Optional
+- [Impressum](/impressum)
+- [Datenschutz](/datenschutz)
+- [AGB](/agb)
