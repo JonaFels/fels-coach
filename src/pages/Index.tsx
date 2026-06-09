@@ -61,6 +61,7 @@ const Index = () => {
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
+        <div className="h-20 md:h-24" />
         <Suspense fallback={null}>
           <ScrollFadeIn>
             <section
