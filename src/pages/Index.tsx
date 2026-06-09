@@ -87,9 +87,6 @@ const Index = () => {
             <MethodSection />
           </ScrollFadeIn>
           <ScrollFadeIn>
-            <PullQuote />
-          </ScrollFadeIn>
-          <ScrollFadeIn>
             <FAQSection />
           </ScrollFadeIn>
         </Suspense>
