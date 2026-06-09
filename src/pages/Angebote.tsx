@@ -233,6 +233,35 @@ const Angebote = () => {
           </div>
         </section>
 
+        {/* Anfahrt / Karte */}
+        <section id="anfahrt" className="py-20 md:py-28 scroll-mt-24">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="h-px flex-1 max-w-16 bg-border" />
+              <MapPin className="h-5 w-5 text-secondary" />
+              <div className="h-px flex-1 max-w-16 bg-border" />
+            </div>
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-6 text-center">
+              {t("contact.directions.title")}
+            </h2>
+            <div className="rounded-lg overflow-hidden border border-border shadow-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.8!2d7.8384!3d47.9990!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911c9f3e1f3b3d%3A0x0!2sKarlstra%C3%9Fe%2051%2C%2079104%20Freiburg%20im%20Breisgau!5e0!3m2!1sde!2sde!4v1"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Praxisraum Jona – Karlstraße 51, 79104 Freiburg im Breisgau"
+              />
+            </div>
+            <p className="text-sm text-muted-foreground text-center mt-2">
+              {t("contact.directions.address")}
+            </p>
+          </div>
+        </section>
+
         {/* Noch unsicher? */}
         <section className="py-24 md:py-32">
           <div className="container mx-auto px-4 text-center max-w-lg">
