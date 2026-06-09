@@ -18,7 +18,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const SITE_URL = "https://fels-coach.de";
+const SITE_URL = "https://fels-coach.lovable.app";
 const DIST_DIR = join(__dirname, "..", "dist");
 const PUBLIC_DIR = join(__dirname, "..", "public");
 const BLOG_DATA_FILE = join(__dirname, "..", "src", "data", "blogPosts.ts");
@@ -29,9 +29,11 @@ const staticRoutes = [
   { path: "/angebote", changefreq: "weekly", priority: "0.9" },
   { path: "/systemische-familienaufstellung-freiburg", changefreq: "monthly", priority: "0.8" },
   { path: "/impulse", changefreq: "monthly", priority: "0.8" },
+  { path: "/ebook", changefreq: "monthly", priority: "0.7" },
   { path: "/ueber-mich", changefreq: "monthly", priority: "0.7" },
   { path: "/kontakt", changefreq: "monthly", priority: "0.7" },
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
+  { path: "/links", changefreq: "yearly", priority: "0.3" },
   { path: "/datenschutz", changefreq: "yearly", priority: "0.3" },
   { path: "/impressum", changefreq: "yearly", priority: "0.3" },
   { path: "/agb", changefreq: "yearly", priority: "0.3" },
