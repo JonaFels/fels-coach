@@ -30,13 +30,13 @@ const Ebook = () => {
         <section className="pt-16 pb-16 md:pt-24 md:pb-20">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-              Impulse
+              {t("ebook.pageEyebrow")}
             </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-tight mb-4">
-              Frei von alten Familienmustern
+              {t("ebook.pageH1")}
             </h1>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Ein Leitgedanke, um verborgene Dynamiken zu erkennen und wieder bei dir selbst anzukommen.
+              {t("ebook.pageSubtitle")}
             </p>
           </div>
         </section>
@@ -44,18 +44,8 @@ const Ebook = () => {
         {/* Intro */}
         <section className="pb-20 md:pb-28">
           <div className="container mx-auto px-4 max-w-3xl space-y-5 text-muted-foreground leading-relaxed">
-            <p>
-              In meiner Praxis erlebe ich oft, dass Menschen intellektuell längst verstehen,
-              woher ihr Schmerz kommt – und dennoch immer wieder in die gleichen familiären
-              Verstrickungen zurückrutschen. Reine Analyse reicht meist nicht aus, um tief
-              sitzende emotionale Muster aus der frühen Kindheit wirklich zu lösen.
-            </p>
-            <p>
-              In diesem kompakten Impuls-Papier teile ich meine systemische Perspektive auf die
-              Entstehung und Wandlung dieser Dynamiken. Es ist eine Einladung, die unsichtbare
-              Architektur deiner Familie besser zu verstehen und zu erkennen, wie ein Weg aus
-              der Rebellion oder Resignation hin zu echtem inneren Frieden aussehen kann.
-            </p>
+            <p>{t("ebook.intro.p1")}</p>
+            <p>{t("ebook.intro.p2")}</p>
           </div>
         </section>
 
@@ -66,7 +56,7 @@ const Ebook = () => {
               <div className="flex justify-center">
                 <img
                   src={ebookImage}
-                  alt="Cover 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet"
+                  alt={t("ebook.tabletAlt")}
                   className="w-full max-w-sm h-auto rounded-lg shadow-xl"
                   loading="lazy"
                   decoding="async"
@@ -77,17 +67,16 @@ const Ebook = () => {
 
               <div className="text-center md:text-left">
                 <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-4">
-                  Meine Gedanken für dich
+                  {t("ebook.thoughtsTitle")}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Lass diese Zeilen in Ruhe auf dich wirken. Nimm dir die Impulse mit, die in
-                  deiner jetzigen Situation für dich stimmig sind.
+                  {t("ebook.thoughtsText")}
                 </p>
                 <div className="flex justify-center md:justify-start">
                   <Button asChild size="lg" className="min-h-[48px]">
                     <a href={PDF_URL} target="_blank" rel="noopener noreferrer">
                       <BookOpen className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Jetzt lesen
+                      {t("ebook.readNow")}
                     </a>
                   </Button>
                 </div>

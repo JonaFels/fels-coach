@@ -127,7 +127,7 @@ export const InlineQuickForm = ({ className, onClose }: InlineQuickFormProps) =>
           onClick={onClose}
           className="mt-2 text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
         >
-          Abbrechen
+          {t("common.cancel")}
         </button>
       )}
     </div>
