@@ -12,7 +12,7 @@ export const TestimonialsSection = () => {
   const johannesQ = t("testimonials.johannesQuote");
 
   const enhance = (s: string) =>
-    s.replaceAll("<strong>", '<strong class="text-foreground font-semibold not-italic">');
+    s.split("<strong>").join('<strong class="text-foreground font-semibold not-italic">');
 
   return (
     <section
