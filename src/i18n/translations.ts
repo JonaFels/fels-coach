@@ -1374,13 +1374,14 @@ export const translations: Translations = {
 
   // Testimonials
   "testimonials.eyebrow": { de: "Stimmen aus der Praxis", en: "Voices from the practice" },
+  // Testimonial quotes are intentionally kept in the original German on every language
   "testimonials.miriamQuote": {
     de: "Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong>tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an <strong>Klarheit und Sicherheit</strong>. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame, einfühlsame Begleitung.",
-    en: "I had a 1:1 constellation with Jona and felt very comfortable from the start through his <strong>deep presence</strong>. I was able to explore my family issue in a well-held space and gained <strong>clarity and security</strong>. I am very grateful for the deep insights and the attentive, empathetic guidance.",
+    en: "Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong>tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an <strong>Klarheit und Sicherheit</strong>. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame, einfühlsame Begleitung.",
   },
   "testimonials.johannesQuote": {
     de: "Jona hat ein <strong>super Gespür</strong> den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem <strong>tieferen Verständnis</strong> und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
-    en: "Jona has a <strong>wonderful sense</strong> for guiding your process exactly where it gets stuck. Dynamics become clear that weren't conscious before. This leads to <strong>deeper understanding</strong> and letting go. Absolute recommendation. I will gladly come back.",
+    en: "Jona hat ein <strong>super Gespür</strong> den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem <strong>tieferen Verständnis</strong> und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
   },
 
   // Method – approach
