@@ -53,7 +53,7 @@ export const Header = () => {
               decoding="async"
             />
             <span className="font-serif text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-none whitespace-nowrap">
-              Jona Fels – Systemisches Coaching
+              {t("header.brandTagline")}
             </span>
           </a>
 
@@ -93,7 +93,7 @@ export const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="xl:hidden p-2 -mr-2 text-foreground"
-            aria-label="Menu"
+            aria-label={t("menu.label")}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

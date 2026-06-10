@@ -97,29 +97,14 @@ const Angebote = () => {
               {t("offerings.ablaufIntro")}
             </p>
             <p className="text-sm text-muted-foreground text-center mb-10 leading-relaxed">
-              {language === "de" ? (
-                <>
-                  Ausführlich erklärt findest du die Methode auf der Seite zur{" "}
-                  <Link
-                    to="/systemische-familienaufstellung-freiburg"
-                    className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
-                  >
-                    systemischen Familienaufstellung
-                  </Link>
-                  .
-                </>
-              ) : (
-                <>
-                  You can read about the method in detail on the page about{" "}
-                  <Link
-                    to="/systemische-familienaufstellung-freiburg"
-                    className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
-                  >
-                    systemic family constellation
-                  </Link>
-                  .
-                </>
-              )}
+              {t("offerings.methodLink.prefix")}
+              <Link
+                to="/systemische-familienaufstellung-freiburg"
+                className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+              >
+                {t("offerings.methodLink.text")}
+              </Link>
+              .
             </p>
             <ol className="space-y-6">
               {["offerings.step1", "offerings.step2", "offerings.step3"].map((key, i) => (
@@ -153,14 +138,10 @@ const Angebote = () => {
             {/* Erstgespräch Highlight */}
             <div className="mb-10 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
-                {language === "de"
-                  ? "Der entspannte Start in unsere Zusammenarbeit"
-                  : "A relaxed start to our work together"}
+                {t("offerings.erstgespraech.title")}
               </h3>
               <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto mb-6">
-                {language === "de"
-                  ? "Mir ist wichtig, dass du dich wohlfühlst. Daher empfehle ich zum Start immer ein kostenloses, 30-minütiges Telefonat. So können wir in Ruhe schauen, wo du stehst und ob mein Ansatz für dich passt."
-                  : "It's important to me that you feel comfortable. That's why I always recommend a free 30-minute phone call to start. We can take our time to see where you stand and whether my approach is right for you."}
+                {t("offerings.erstgespraech.text")}
               </p>
               <Button
                 size="lg"
@@ -178,17 +159,13 @@ const Angebote = () => {
                   }}
                 >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                  {language === "de"
-                    ? "Kostenloses Telefonat vereinbaren"
-                    : "Schedule a free phone call"}
+                  {t("offerings.erstgespraech.cta")}
                 </a>
               </Button>
             </div>
 
             <p className="text-sm text-muted-foreground text-center mb-8 leading-relaxed max-w-xl mx-auto">
-              {language === "de"
-                ? "Du bist dir schon sicher und möchtest direkt in die Praxis kommen? Dann buche hier deinen Termin:"
-                : "Already sure and want to come directly to the practice? Then book your appointment here:"}
+              {t("offerings.directBook.text")}
             </p>
 
             <div className="grid gap-8 md:grid-cols-2">

@@ -3,6 +3,7 @@ import praxisLoungeMobile from "@/assets/praxis-lounge-800.webp";
 import praxisSitzbereich from "@/assets/praxis-sitzbereich.webp";
 import praxisSitzbereichMobile from "@/assets/praxis-sitzbereich-800.webp";
 import { useCMS } from "@/contexts/CMSContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface PraxisHeroBannerProps {
   variant?: "lounge" | "sitzbereich";
@@ -10,6 +11,7 @@ interface PraxisHeroBannerProps {
 
 export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerProps) => {
   const { getImage } = useCMS();
+  const { t } = useLanguage();
   const priorityProps = { fetchpriority: "high" } as Record<string, string>;
   const defaultImage = variant === "lounge" ? praxisLounge : praxisSitzbereich;
   const defaultMobile = variant === "lounge" ? praxisLoungeMobile : praxisSitzbereichMobile;
@@ -19,10 +21,7 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
   const imageMobile = variant === "lounge"
     ? getImage("praxis.lounge_mobile", defaultMobile)
     : getImage("praxis.sitzbereich_mobile", defaultMobile);
-  const alt =
-    variant === "lounge"
-      ? "Coaching-Praxis von Jona Fels in Freiburg – gemütlicher Lounge-Bereich mit Rattanstuhl und Glastisch"
-      : "Coaching-Praxis von Jona Fels in Freiburg – einladender Sitzbereich mit Sofa, Sessel und warmem Licht";
+  const alt = variant === "lounge" ? t("praxis.lounge.alt") : t("praxis.sitzbereich.alt");
 
   return (
     <div className="w-full h-28 sm:h-36 md:h-[30vh] md:max-h-[280px] lg:h-[32vh] lg:max-h-[320px] overflow-hidden relative">

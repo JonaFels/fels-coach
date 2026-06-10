@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, X } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const STORAGE_KEY = "ebook-teaser-dismissed-v1";
 
@@ -13,6 +14,7 @@ const STORAGE_KEY = "ebook-teaser-dismissed-v1";
  * - Nicht aggressiv: keine Modal-Overlays, keine Verzögerung der Seite.
  */
 export const EbookExitIntent = () => {
+  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -62,7 +64,7 @@ export const EbookExitIntent = () => {
   return (
     <div
       role="dialog"
-      aria-label="Kostenloses E-Book"
+      aria-label={t("ebookTeaser.ariaLabel")}
       className="fixed z-40 bottom-20 md:bottom-6 right-4 md:right-6 left-4 md:left-auto md:max-w-sm animate-fade-in"
     >
       <div className="relative bg-card border border-border rounded-2xl shadow-2xl shadow-foreground/10 p-5 md:p-6">
@@ -70,7 +72,7 @@ export const EbookExitIntent = () => {
           type="button"
           onClick={dismiss}
           className="absolute top-2 right-2 p-1.5 text-muted-foreground hover:text-foreground rounded-full hover:bg-muted/60 transition-colors"
-          aria-label="Schließen"
+          aria-label={t("modal.close")}
         >
           <X className="h-4 w-4" aria-hidden="true" />
         </button>
@@ -80,10 +82,10 @@ export const EbookExitIntent = () => {
           </div>
           <div className="min-w-0">
             <p className="font-serif text-base md:text-lg font-semibold text-foreground leading-snug mb-1">
-              Bevor du gehst – ein Geschenk
+              {t("ebookTeaser.title")}
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-              Mein kostenloses E-Book „Der Weg zum Ganzsein" – 7 Impulse, um alten Familienmustern auf die Spur zu kommen.
+              {t("ebookTeaser.desc")}
             </p>
             <Link
               to="/ebook"
@@ -93,7 +95,7 @@ export const EbookExitIntent = () => {
               }}
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground rounded-full px-4 py-2 text-sm font-medium hover:-translate-y-0.5 transition-transform"
             >
-              Jetzt holen
+              {t("ebookTeaser.cta")}
             </Link>
           </div>
         </div>
