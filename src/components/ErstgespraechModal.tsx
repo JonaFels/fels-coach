@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ErstgespraechModalProps {
   open: boolean;
@@ -13,7 +12,6 @@ const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
 
   useEffect(() => {
     if (!open) return;
@@ -59,7 +57,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           size="icon"
           onClick={onClose}
           className="absolute right-3 top-3 z-10 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background"
-          aria-label={t("modal.close")}
+          aria-label="Schließen"
         >
           <X className="h-5 w-5" />
         </Button>
@@ -68,16 +66,16 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
         <div className="p-6 md:p-8 flex flex-col items-center text-center bg-muted/40 shrink-0">
           <img
             src={profilBild}
-            alt={t("modal.profileAlt")}
+            alt="Jona Fels – Systemischer Coach in Freiburg"
             className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-[center_18%] shadow-md mb-3 no-fade"
             loading="lazy"
             decoding="async"
           />
           <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2">
-            {t("modal.erstgespraech.title")}
+            Lass uns unverbindlich sprechen
           </h3>
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl">
-            {t("modal.erstgespraech.text")}
+            In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus.
           </p>
         </div>
 

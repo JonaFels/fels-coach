@@ -130,7 +130,7 @@ export const ContactForm = () => {
       <CardContent>
         <div aria-live="polite" aria-atomic="true" className="sr-only">
           {Object.keys(errors).length > 0 && (
-            <span>{t("contactForm.errorsPresent")}</span>
+            <span>Es gibt Fehler im Formular. Bitte überprüfe deine Eingaben.</span>
           )}
         </div>
         <form
@@ -207,7 +207,7 @@ export const ContactForm = () => {
 
           {/* Honeypot */}
           <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
-            <Label htmlFor="contact-website">{t("contactForm.honeypotLabel")}</Label>
+            <Label htmlFor="contact-website">Website (nicht ausfüllen)</Label>
             <Input
               id="contact-website"
               type="text"
@@ -223,8 +223,8 @@ export const ContactForm = () => {
             {t("contactForm.privacyNotice")}{" "}
             <Link to="/datenschutz" className="underline hover:text-secondary">
               {t("contactForm.privacyLink")}
-            </Link>
-            {t("contactForm.privacyNoticeSuffix")}
+            </Link>{" "}
+            zu.
           </p>
 
           <Button 

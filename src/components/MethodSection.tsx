@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 
 export const MethodSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const steps = [{ key: "method.step1" }, { key: "method.step2" }, { key: "method.step3" }];
 
@@ -61,20 +61,24 @@ export const MethodSection = () => {
           {/* Mein Ansatz – die Werkzeuge, mit denen ich arbeite */}
           <div className="mt-2 mb-16 rounded-3xl border border-border/60 bg-card/60 p-8 md:p-10">
             <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground text-center mb-3">
-              {t("method.approachTitle")}
+              {language === "de" ? "Mein Ansatz" : "My approach"}
             </h3>
-            <p
-              className="text-muted-foreground text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-8"
-              dangerouslySetInnerHTML={{ __html: t("method.approachDesc") }}
-            />
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-8">
+              Ich kombiniere bewährte Methoden – immer mit dem Blick, was dir <em>gerade</em> am besten hilft.
+            </p>
             <ul className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto" role="list">
-              {[1, 2, 3, 4].map((n) => (
+              {[
+                { t: "Familienstellen nach Hellinger", d: "Bodenanker, Repräsentanten, das wissende Feld." },
+                { t: "Systemischer Blick", d: "Was zu wem gehört – Ordnung im inneren System." },
+                { t: "Innere Anteile & Inneres Kind", d: "Arbeit mit Inneren Anteilen (IFS-inspiriert)." },
+                { t: "Präsenz & Prozessarbeit", d: "Im Moment bleiben – was lebendig ist, darf da sein." },
+              ].map((item) => (
                 <li
-                  key={n}
+                  key={item.t}
                   className="flex flex-col gap-1 rounded-2xl border border-border/40 bg-background/70 px-4 py-3"
                 >
-                  <span className="font-medium text-foreground text-sm md:text-base">{t(`method.tool${n}.title`)}</span>
-                  <span className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t(`method.tool${n}.desc`)}</span>
+                  <span className="font-medium text-foreground text-sm md:text-base">{item.t}</span>
+                  <span className="text-muted-foreground text-xs md:text-sm leading-relaxed">{item.d}</span>
                 </li>
               ))}
             </ul>

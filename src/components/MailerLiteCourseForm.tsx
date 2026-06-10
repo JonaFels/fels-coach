@@ -1,15 +1,12 @@
 import { useState, FormEvent } from "react";
-import { Link } from "react-router-dom";
 import { Mail, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const MAILERLITE_ENDPOINT =
   "https://assets.mailerlite.com/jsonp/1636736/forms/187371615369037675/subscribe";
 
 export const MailerLiteCourseForm = () => {
-  const { t } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // honeypot
@@ -51,15 +48,16 @@ export const MailerLiteCourseForm = () => {
       </div>
 
       <p className="text-secondary font-medium uppercase tracking-wider text-sm mb-3">
-        {t("emailCourse.eyebrow")}
+        Kostenloser E-Mail-Kurs
       </p>
 
       <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground leading-tight mb-5">
-        {t("emailCourse.title")}
+        Impulse für deinen Weg
       </h2>
 
       <p className="text-muted-foreground leading-relaxed mb-10 max-w-md mx-auto">
-        {t("emailCourse.desc")}
+        Erhalte über mehrere Wochen achtsam aufeinander aufbauende Impulse, um alte
+        Familienmuster zu erkennen und Schritt für Schritt zu dir selbst zurückzufinden.
       </p>
 
       {status === "success" ? (
@@ -73,13 +71,14 @@ export const MailerLiteCourseForm = () => {
               <span className="absolute inset-0 rounded-full bg-primary/10 animate-ping" aria-hidden="true" />
               <CheckCircle2 className="relative w-7 h-7 text-primary" strokeWidth={1.75} aria-hidden="true" />
             </span>
-            <h3 className="font-serif text-2xl text-foreground mb-3">{t("emailCourse.successTitle")}</h3>
+            <h3 className="font-serif text-2xl text-foreground mb-3">Vielen Dank!</h3>
             <div className="w-10 h-px bg-border mb-4" aria-hidden="true" />
             <p className="text-muted-foreground leading-relaxed">
-              {t("emailCourse.successText")}
+              Bitte bestätige deine Anmeldung über den Link, den ich dir gerade per E-Mail
+              geschickt habe.
             </p>
             <p className="text-xs text-muted-foreground/80 mt-4 italic">
-              {t("emailCourse.spamNote")}
+              Schau auch kurz in deinen Spam-Ordner.
             </p>
           </div>
         </div>
@@ -90,27 +89,27 @@ export const MailerLiteCourseForm = () => {
           noValidate
         >
           <label htmlFor="ml-course-name" className="sr-only">
-            {t("emailCourse.namePlaceholder")}
+            Name
           </label>
           <Input
             id="ml-course-name"
             type="text"
             autoComplete="name"
-            placeholder={t("emailCourse.namePlaceholder")}
+            placeholder="Dein Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="h-12"
             disabled={status === "loading"}
           />
           <label htmlFor="ml-course-email" className="sr-only">
-            {t("emailCourse.emailPlaceholder")}
+            E-Mail-Adresse
           </label>
           <Input
             id="ml-course-email"
             type="email"
             required
             autoComplete="email"
-            placeholder={t("emailCourse.emailPlaceholder")}
+            placeholder="Deine E-Mail-Adresse"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="h-12"
@@ -132,22 +131,23 @@ export const MailerLiteCourseForm = () => {
             disabled={status === "loading"}
             className="h-12 min-h-[48px]"
           >
-            {status === "loading" ? t("emailCourse.loading") : t("emailCourse.submit")}
+            {status === "loading" ? "Wird gesendet…" : "Kurs starten"}
           </Button>
         </form>
       )}
 
       {status === "error" && (
         <p className="text-destructive text-sm mt-4">
-          {t("emailCourse.error")}
+          Etwas ist schiefgelaufen. Bitte versuche es später noch einmal.
         </p>
       )}
 
       <p className="text-xs text-muted-foreground mt-8 leading-relaxed max-w-sm mx-auto">
-        {t("emailCourse.privacyPrefix")}
-        <Link to="/datenschutz" className="underline hover:text-foreground">
-          {t("emailCourse.privacyLink")}
-        </Link>
+        Mit der Anmeldung erklärst du dich einverstanden, regelmäßig Impulse per E-Mail zu
+        erhalten. Du kannst dich jederzeit abmelden. Details in der{" "}
+        <a href="/datenschutz" className="underline hover:text-foreground">
+          Datenschutzerklärung
+        </a>
         .
       </p>
     </div>

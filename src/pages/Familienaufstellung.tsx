@@ -109,24 +109,31 @@ const Familienaufstellung = () => {
               id="familienstellen-heading"
               className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4"
             >
-              {t("family.seo.heading")}
+              Familienaufstellung Einzelsitzung in Freiburg – 1:1 mit Bodenankern
             </h2>
-            <p
-              className="text-muted-foreground leading-relaxed mb-4"
-              dangerouslySetInnerHTML={{ __html: t("family.seo.p1.html") }}
-            />
             <p className="text-muted-foreground leading-relaxed mb-4">
-              {t("family.seo.p2")}
+              <strong>Familienaufstellung</strong> – auch <strong>Familienstellen</strong> genannt – ist eine
+              systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner Herkunftsfamilie
+              sichtbar macht.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit als
+              Einzelsitzung im geschützten 1:1-Setting an. Statt mit fremden Stellvertretern arbeiten wir mit
+              Bodenankern – kleinen Markierungen am Boden, die für die Mitglieder deines Familiensystems
+              stehen. So kannst du dein System in Ruhe betrachten, neue Perspektiven einnehmen und alte
+              Muster Schritt für Schritt lösen.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              <span dangerouslySetInnerHTML={{ __html: t("family.seo.p3.prefix") }} />
+              Eine <strong>Einzelaufstellung</strong> eignet sich besonders, wenn du dein Thema in einem
+              vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Wie eine
+              solche Sitzung konkret abläuft, liest du im Beitrag{" "}
               <Link
                 to="/blog/familienstellen-in-einer-einzelsitzung"
                 className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
               >
-                {t("family.seo.blogLinkText")}
+                Familienstellen in einer Einzelsitzung
               </Link>
-              {t("family.seo.duration")}
+              . Eine Sitzung dauert 80 Minuten.
             </p>
           </div>
         </section>
@@ -197,7 +204,7 @@ const Familienaufstellung = () => {
               <div className="rounded-2xl overflow-hidden shadow-md">
                 <img
                   src={familyImage}
-                  alt={t("family.aufstellungImageAlt")}
+                  alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
                   className="w-full h-auto object-cover"
                   loading="lazy"
                 />
@@ -273,7 +280,7 @@ const Familienaufstellung = () => {
             <blockquote className="relative bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/60">
               <Quote className="absolute top-6 left-6 h-7 w-7 text-secondary/25" aria-hidden="true" />
               <p className="text-muted-foreground italic leading-relaxed text-base md:text-lg pl-8">
-                {t("family.proofQuote")}
+                „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit."
               </p>
               <footer className="mt-5 pl-8">
                 <span className="font-medium text-foreground text-sm">– Miriam</span>

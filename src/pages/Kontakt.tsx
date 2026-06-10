@@ -51,7 +51,7 @@ const Kontakt = () => {
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <img
               src={portrait}
-              alt={t("contact.profileAlt")}
+              alt="Jona Fels – Systemischer Coach in Freiburg"
               className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
               loading="eager"
               decoding="async"
@@ -70,10 +70,10 @@ const Kontakt = () => {
               className="rounded-full px-8 py-6 text-base shadow-md hover:shadow-lg transition-all"
             >
               <Calendar className="h-5 w-5 mr-2" aria-hidden="true" />
-              {t("contact.bookingButton")}
+              Kostenloses Erstgespräch buchen
             </Button>
             <p className="text-xs text-muted-foreground mt-4">
-              {t("contact.bookingMicrocopy")}
+              Kostenlos · 30 Min · Unverbindlich
             </p>
           </div>
         </section>
@@ -100,7 +100,7 @@ const Kontakt = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
-                      aria-label={t("contact.whatsappAria")}
+                      aria-label="WhatsApp öffnen"
                     >
                       <div className="p-2.5 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
                         <MessageCircle className="h-5 w-5 text-primary" aria-hidden="true" />

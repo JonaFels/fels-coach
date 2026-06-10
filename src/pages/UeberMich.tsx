@@ -38,7 +38,7 @@ const UeberMich = () => {
             <div className="mb-6">
               <img
                 src={portrait}
-                alt={t("about.portraitAlt")}
+                alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
                 className="w-48 h-auto md:w-60 aspect-[4/5] rounded-2xl object-cover object-center mx-auto shadow-xl ring-4 ring-background"
                 loading="eager"
                 width="208"
@@ -159,24 +159,24 @@ const UeberMich = () => {
                   <DialogTrigger asChild>
                     <button
                       type="button"
-                      aria-label={t("about.cert.ariaLabel")}
+                      aria-label="Ausbildungsbescheinigung Familiensteller ansehen"
                       className="group mt-2 inline-flex items-center gap-2 text-left cursor-pointer hover:opacity-80 transition-opacity"
                     >
                       <img
                         src={zertifikatBracht}
-                        alt={t("about.cert.thumbAlt")}
+                        alt="Vorschau Ausbildungsbescheinigung Familiensteller"
                         className="h-12 w-9 object-cover rounded ring-1 ring-border group-hover:ring-secondary/50 transition"
                         loading="lazy"
                       />
                       <span className="flex flex-col">
                         <span className="text-[11px] uppercase tracking-wide text-secondary font-semibold leading-tight">
-                          {t("about.cert.label")}
+                          Zertifikat
                         </span>
                         <span className="font-serif text-sm font-medium text-foreground underline-offset-2 group-hover:underline">
-                          {t("about.cert.linkText")}
+                          Ausbildungsbescheinigung ansehen
                         </span>
                         <span className="text-[11px] text-muted-foreground leading-tight">
-                          {t("about.cert.issuer")}
+                          Wolfgang Bracht · Freiburg, April 2026
                         </span>
                       </span>
                     </button>
@@ -188,10 +188,10 @@ const UeberMich = () => {
                           <span className="inline-block h-8 w-1 bg-secondary rounded-full" aria-hidden />
                           <div>
                             <DialogTitle className="font-serif text-xl md:text-2xl font-semibold text-foreground tracking-tight">
-                              {t("about.cert.dialogTitle")}
+                              Ausbildungsbescheinigung
                             </DialogTitle>
                             <DialogDescription className="text-sm text-muted-foreground mt-1">
-                              {t("about.cert.dialogDesc")}
+                              Familiensteller-Ausbildung 2025/26 · Wolfgang Bracht · Freiburg, April 2026
                             </DialogDescription>
                           </div>
                         </div>
@@ -199,7 +199,7 @@ const UeberMich = () => {
                       <div className="flex items-center justify-center px-6 md:px-10 py-8 bg-gradient-to-b from-muted/30 to-background overflow-auto">
                         <img
                           src={zertifikatBracht}
-                          alt={t("about.cert.imageAlt")}
+                          alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
                           className="max-h-[72vh] w-auto h-auto object-contain rounded-md shadow-xl ring-1 ring-border"
                           loading="lazy"
                         />
