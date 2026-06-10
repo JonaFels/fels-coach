@@ -89,8 +89,9 @@
     <!-- Skip-Link für Barrierefreiheit (BFSG/WCAG 2.1 AA) -->
     <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
 
-    <!-- Neutraler Placeholder: nur Hintergrundfarbe, kein gefälschter Header, damit beim Hydrate nichts "Falsches" aufblitzt. -->
-    <div id="root"><div style="min-height:100vh;background:hsl(270 30% 96%)"></div></div>
+    <!-- Skeleton-Header, der optisch 1:1 dem echten sticky Header entspricht.
+         Verhindert sowohl Blank-Flash als auch eine "falsch wirkende" Zwischenanzeige. -->
+    <div id="root"><div style="min-height:100vh;background:hsl(270 30% 96%)"><header style="position:sticky;top:0;z-index:40;width:100%;background:hsl(270 25% 92% / .95);backdrop-filter:blur(4px);border-bottom:1px solid hsl(270 22% 80%);"><div style="max-width:1280px;margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"><div style="display:flex;align-items:center;gap:0.625rem;min-width:0;"><div style="width:28px;height:28px;border-radius:9999px;background:hsl(270 45% 22% / .12);flex-shrink:0;"></div><span style="font-family:'Playfair Display','Playfair Fallback',Georgia,serif;font-size:1rem;color:hsl(270 35% 12%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Jona Fels – Systemisches Coaching</span></div><div style="width:24px;height:24px;display:flex;flex-direction:column;justify-content:space-between;flex-shrink:0;"><span style="display:block;height:2px;background:hsl(270 35% 12%);border-radius:2px;"></span><span style="display:block;height:2px;background:hsl(270 35% 12%);border-radius:2px;"></span><span style="display:block;height:2px;background:hsl(270 35% 12%);border-radius:2px;"></span></div></div></header></div></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
