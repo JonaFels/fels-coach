@@ -1360,4 +1360,237 @@ export const translations: Translations = {
   "privacy.s11.text": { de: "Einige der von mir eingesetzten Dienstleister haben ihren Hauptsitz in den USA (z.\u00a0B. Google, GitHub, Cloudflare, Resend, Chatbase). Wenn Daten in die USA übertragen werden, stütze ich mich auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Unternehmen. Sollte ein Unternehmen nicht zertifiziert sein, nutze ich hilfsweise EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, um ein Datenschutzniveau zu gewährleisten, das dem europäischen Standard entspricht.", en: "Some of the service providers I use are headquartered in the USA (e.g. Google, GitHub, Cloudflare, Resend, Chatbase). When data is transferred to the USA, I rely on the EU Commission's adequacy decision (EU-US Data Privacy Framework) for certified companies. If a company is not certified, I use EU Standard Contractual Clauses (SCC) pursuant to Art. 46(2)(c) GDPR to ensure a level of data protection that corresponds to European standards." },
   "privacy.s12.heading": { de: "12. Systemischer Rollen-Check", en: "12. Systemic Role Check" },
   "privacy.s12.text": { de: "Auf unserer Webseite bieten wir einen interaktiven systemischen Rollen-Check an. Wenn du diesen Test nutzt, werden deine Antworten, die daraus resultierenden Auswertungsergebnisse sowie der von dir gewählte Lebensbereich in einer Datenbank gespeichert. Diese Speicherung dient der Bereitstellung der unmittelbaren Auswertung und der statistischen Optimierung meiner Coaching-Angebote. Die Daten werden ausschließlich für systemische Auswertungszwecke verwendet. Zur Speicherung und Verarbeitung der Ergebnisse nutzen wir den Datenbank-Dienst Supabase (Supabase Inc., USA). Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag (AVV), der die Einhaltung europäischer Datenschutzstandards garantiert. Eine Identifizierung deiner Person durch diese Daten findet nicht statt, sofern du am Ende des Tests keine freiwilligen Kontaktdaten angibst. Rechtsgrundlage: Berechtigtes Interesse an der Bereitstellung interaktiver Coaching-Tools (Art. 6 Abs. 1 lit. f DSGVO).", en: "On our website, we offer an interactive systemic role check. When you use this test, your answers, the resulting evaluation results, and your chosen life area are stored in a database. This storage serves to provide the immediate evaluation and to statistically optimize my coaching offerings. The data is used exclusively for systemic evaluation purposes. For storage and processing of the results, we use the database service Supabase (Supabase Inc., USA). A data processing agreement (DPA) is in place with the provider, guaranteeing compliance with European data protection standards. Your person cannot be identified from this data, provided you do not voluntarily provide contact details at the end of the test. Legal basis: Legitimate interest in providing interactive coaching tools (Art. 6(1)(f) GDPR)." },
+
+  // === EN-Rollout: zusätzliche Keys ===
+
+  // Header / Footer
+  "header.brandTagline": { de: "Jona Fels – Systemisches Coaching", en: "Jona Fels – Systemic Coaching" },
+  "footer.brandName": { de: "Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels", en: "Systemic Coaching & Family Constellation in Freiburg – Jona Fels" },
+
+  // Common
+  "common.cancel": { de: "Abbrechen", en: "Cancel" },
+  "modal.close": { de: "Schließen", en: "Close" },
+  "menu.label": { de: "Menü", en: "Menu" },
+
+  // Testimonials
+  "testimonials.eyebrow": { de: "Stimmen aus der Praxis", en: "Voices from the practice" },
+  "testimonials.miriamQuote": {
+    de: "Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong>tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an <strong>Klarheit und Sicherheit</strong>. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame, einfühlsame Begleitung.",
+    en: "I had a 1:1 constellation with Jona and felt very comfortable from the start through his <strong>deep presence</strong>. I was able to explore my family issue in a well-held space and gained <strong>clarity and security</strong>. I am very grateful for the deep insights and the attentive, empathetic guidance.",
+  },
+  "testimonials.johannesQuote": {
+    de: "Jona hat ein <strong>super Gespür</strong> den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem <strong>tieferen Verständnis</strong> und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
+    en: "Jona has a <strong>wonderful sense</strong> for guiding your process exactly where it gets stuck. Dynamics become clear that weren't conscious before. This leads to <strong>deeper understanding</strong> and letting go. Absolute recommendation. I will gladly come back.",
+  },
+
+  // Method – approach
+  "method.approachTitle": { de: "Mein Ansatz", en: "My approach" },
+  "method.approachDesc": {
+    de: "Ich kombiniere bewährte Methoden – immer mit dem Blick, was dir <em>gerade</em> am besten hilft.",
+    en: "I combine proven methods – always with an eye on what helps you <em>most right now</em>.",
+  },
+  "method.tool1.title": { de: "Familienstellen nach Hellinger", en: "Family constellation (Hellinger)" },
+  "method.tool1.desc": { de: "Bodenanker, Repräsentanten, das wissende Feld.", en: "Floor anchors, representatives, the knowing field." },
+  "method.tool2.title": { de: "Systemischer Blick", en: "Systemic perspective" },
+  "method.tool2.desc": { de: "Was zu wem gehört – Ordnung im inneren System.", en: "What belongs to whom – order in your inner system." },
+  "method.tool3.title": { de: "Innere Anteile & Inneres Kind", en: "Inner parts & inner child" },
+  "method.tool3.desc": { de: "Arbeit mit Inneren Anteilen (IFS-inspiriert).", en: "Work with inner parts (IFS-inspired)." },
+  "method.tool4.title": { de: "Präsenz & Prozessarbeit", en: "Presence & process work" },
+  "method.tool4.desc": { de: "Im Moment bleiben – was lebendig ist, darf da sein.", en: "Staying in the moment – what is alive may be there." },
+
+  // Erstgespräch Modal
+  "modal.erstgespraech.title": { de: "Lass uns unverbindlich sprechen", en: "Let's talk – no strings attached" },
+  "modal.erstgespraech.text": {
+    de: "In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus.",
+    en: "In 30 minutes we'll clarify your questions, look at your current blockage, and check whether I'm the right coach for you. Simply pick your preferred time below.",
+  },
+  "modal.profileAlt": { de: "Jona Fels – Systemischer Coach in Freiburg", en: "Jona Fels – systemic coach in Freiburg" },
+
+  // Offerings – inline EN migration
+  "offerings.erstgespraech.title": { de: "Der entspannte Start in unsere Zusammenarbeit", en: "A relaxed start to our work together" },
+  "offerings.erstgespraech.text": {
+    de: "Mir ist wichtig, dass du dich wohlfühlst. Daher empfehle ich zum Start immer ein kostenloses, 30-minütiges Telefonat. So können wir in Ruhe schauen, wo du stehst und ob mein Ansatz für dich passt.",
+    en: "It's important to me that you feel comfortable. That's why I always recommend a free 30-minute phone call to start. We can take our time to see where you stand and whether my approach is right for you.",
+  },
+  "offerings.erstgespraech.cta": { de: "Kostenloses Telefonat vereinbaren", en: "Schedule a free phone call" },
+  "offerings.directBook.text": {
+    de: "Du bist dir schon sicher und möchtest direkt in die Praxis kommen? Dann buche hier deinen Termin:",
+    en: "Already sure and want to come directly to the practice? Then book your appointment here:",
+  },
+  "offerings.methodLink.prefix": { de: "Ausführlich erklärt findest du die Methode auf der Seite zur ", en: "You can read about the method in detail on the page about " },
+  "offerings.methodLink.text": { de: "systemischen Familienaufstellung", en: "systemic family constellation" },
+
+  // Contact page
+  "contact.bookingButton": { de: "Kostenloses Erstgespräch buchen", en: "Book Free Consultation" },
+  "contact.bookingMicrocopy": { de: "Kostenlos · 30 Min · Unverbindlich", en: "Free · 30 min · Non-binding" },
+  "contact.profileAlt": { de: "Jona Fels – Systemischer Coach in Freiburg", en: "Jona Fels – systemic coach in Freiburg" },
+  "contact.whatsappAria": { de: "WhatsApp öffnen", en: "Open WhatsApp" },
+
+  // Familienaufstellung – SEO synonym section
+  "family.seo.heading": { de: "Familienaufstellung Einzelsitzung in Freiburg – 1:1 mit Bodenankern", en: "Family Constellation individual session in Freiburg – 1:1 with floor anchors" },
+  "family.seo.p1.html": {
+    de: "<strong>Familienaufstellung</strong> – auch <strong>Familienstellen</strong> genannt – ist eine systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner Herkunftsfamilie sichtbar macht.",
+    en: "<strong>Family constellation</strong> – also called <strong>systemic constellation work</strong> – is a systemic method that makes unconscious dynamics and entanglements in your family of origin visible.",
+  },
+  "family.seo.p2": {
+    de: "In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit als Einzelsitzung im geschützten 1:1-Setting an. Statt mit fremden Stellvertretern arbeiten wir mit Bodenankern – kleinen Markierungen am Boden, die für die Mitglieder deines Familiensystems stehen. So kannst du dein System in Ruhe betrachten, neue Perspektiven einnehmen und alte Muster Schritt für Schritt lösen.",
+    en: "In my practice on Karlstraße in Freiburg, I offer this work as an individual session in a protected 1:1 setting. Instead of using stranger representatives, we work with floor anchors – small markers on the floor that stand for the members of your family system. This lets you look at your system in peace, take new perspectives, and dissolve old patterns step by step.",
+  },
+  "family.seo.p3.prefix": {
+    de: "Eine <strong>Einzelaufstellung</strong> eignet sich besonders, wenn du dein Thema in einem vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Wie eine solche Sitzung konkret abläuft, liest du im Beitrag ",
+    en: "An <strong>individual constellation</strong> is particularly suitable if you want to work on your topic in a confidential setting without having to open up in front of a group. You can read about how such a session works in detail in the article ",
+  },
+  "family.seo.blogLinkText": { de: "Familienstellen in einer Einzelsitzung", en: "Family constellation in an individual session" },
+  "family.seo.duration": { de: ". Eine Sitzung dauert 80 Minuten.", en: ". A session lasts 80 minutes." },
+  "family.proofQuote": {
+    de: "„Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit.\"",
+    en: "\"I had a 1:1 constellation with Jona and felt very comfortable from the start through his deep presence. I could engage with my family topic in a well-held space and gained clarity and security.\"",
+  },
+  "family.aufstellungImageAlt": {
+    de: "Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum",
+    en: "Systemic family constellation in the practice – colored floor anchors mark the positions of family members in the room",
+  },
+
+  // UeberMich – Certificate
+  "about.cert.ariaLabel": { de: "Ausbildungsbescheinigung Familiensteller ansehen", en: "View family constellation training certificate" },
+  "about.cert.thumbAlt": { de: "Vorschau Ausbildungsbescheinigung Familiensteller", en: "Preview of family constellation training certificate" },
+  "about.cert.label": { de: "Zertifikat", en: "Certificate" },
+  "about.cert.linkText": { de: "Ausbildungsbescheinigung ansehen", en: "View training certificate" },
+  "about.cert.issuer": { de: "Wolfgang Bracht · Freiburg, April 2026", en: "Wolfgang Bracht · Freiburg, April 2026" },
+  "about.cert.dialogTitle": { de: "Ausbildungsbescheinigung", en: "Training Certificate" },
+  "about.cert.dialogDesc": { de: "Familiensteller-Ausbildung 2025/26 · Wolfgang Bracht · Freiburg, April 2026", en: "Family Constellation Training 2025/26 · Wolfgang Bracht · Freiburg, April 2026" },
+  "about.cert.imageAlt": {
+    de: "Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026",
+    en: "Training certificate as family constellation facilitator for Jona Fels, issued by Wolfgang Bracht, Freiburg April 2026",
+  },
+  "about.portraitAlt": { de: "Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg", en: "Jona Fels - systemic coach and process companion in Freiburg" },
+
+  // Ebook page
+  "ebook.pageEyebrow": { de: "Impulse", en: "Impulses" },
+  "ebook.pageH1": { de: "Frei von alten Familienmustern", en: "Free from old family patterns" },
+  "ebook.pageSubtitle": {
+    de: "Ein Leitgedanke, um verborgene Dynamiken zu erkennen und wieder bei dir selbst anzukommen.",
+    en: "A guiding thought to recognize hidden dynamics and arrive back at yourself.",
+  },
+  "ebook.intro.p1": {
+    de: "In meiner Praxis erlebe ich oft, dass Menschen intellektuell längst verstehen, woher ihr Schmerz kommt – und dennoch immer wieder in die gleichen familiären Verstrickungen zurückrutschen. Reine Analyse reicht meist nicht aus, um tief sitzende emotionale Muster aus der frühen Kindheit wirklich zu lösen.",
+    en: "In my practice I often see people who intellectually understand where their pain comes from – and yet keep slipping back into the same family entanglements. Pure analysis is usually not enough to truly dissolve deep-seated emotional patterns from early childhood.",
+  },
+  "ebook.intro.p2": {
+    de: "In diesem kompakten Impuls-Papier teile ich meine systemische Perspektive auf die Entstehung und Wandlung dieser Dynamiken. Es ist eine Einladung, die unsichtbare Architektur deiner Familie besser zu verstehen und zu erkennen, wie ein Weg aus der Rebellion oder Resignation hin zu echtem inneren Frieden aussehen kann.",
+    en: "In this compact impulse paper I share my systemic perspective on how these dynamics arise and transform. It is an invitation to better understand the invisible architecture of your family and to see what a path out of rebellion or resignation toward real inner peace can look like.",
+  },
+  "ebook.thoughtsTitle": { de: "Meine Gedanken für dich", en: "My thoughts for you" },
+  "ebook.thoughtsText": {
+    de: "Lass diese Zeilen in Ruhe auf dich wirken. Nimm dir die Impulse mit, die in deiner jetzigen Situation für dich stimmig sind.",
+    en: "Let these lines work on you in peace. Take with you the impulses that feel right for you in your current situation.",
+  },
+  "ebook.readNow": { de: "Jetzt lesen", en: "Read now" },
+  "ebook.tabletAlt": { de: "Cover 'Der Weg zum Ganz-Sein' von Jona Fels auf einem Tablet", en: "Cover 'The Path to Wholeness' by Jona Fels on a tablet" },
+
+  // E-Mail course (MailerLite)
+  "emailCourse.eyebrow": { de: "Kostenloser E-Mail-Kurs", en: "Free email course" },
+  "emailCourse.title": { de: "Impulse für deinen Weg", en: "Impulses for your path" },
+  "emailCourse.desc": {
+    de: "Erhalte über mehrere Wochen achtsam aufeinander aufbauende Impulse, um alte Familienmuster zu erkennen und Schritt für Schritt zu dir selbst zurückzufinden.",
+    en: "Receive impulses over several weeks that build mindfully on each other – to recognize old family patterns and step by step find your way back to yourself.",
+  },
+  "emailCourse.successTitle": { de: "Vielen Dank!", en: "Thank you!" },
+  "emailCourse.successText": {
+    de: "Bitte bestätige deine Anmeldung über den Link, den ich dir gerade per E-Mail geschickt habe.",
+    en: "Please confirm your subscription via the link I just sent you by email.",
+  },
+  "emailCourse.spamNote": { de: "Schau auch kurz in deinen Spam-Ordner.", en: "Please also check your spam folder briefly." },
+  "emailCourse.namePlaceholder": { de: "Dein Name", en: "Your name" },
+  "emailCourse.emailPlaceholder": { de: "Deine E-Mail-Adresse", en: "Your email address" },
+  "emailCourse.loading": { de: "Wird gesendet…", en: "Sending…" },
+  "emailCourse.submit": { de: "Kurs starten", en: "Start course" },
+  "emailCourse.error": {
+    de: "Etwas ist schiefgelaufen. Bitte versuche es später noch einmal.",
+    en: "Something went wrong. Please try again later.",
+  },
+  "emailCourse.privacyPrefix": {
+    de: "Mit der Anmeldung erklärst du dich einverstanden, regelmäßig Impulse per E-Mail zu erhalten. Du kannst dich jederzeit abmelden. Details in der ",
+    en: "By subscribing you agree to receive regular impulses by email. You can unsubscribe at any time. Details in the ",
+  },
+  "emailCourse.privacyLink": { de: "Datenschutzerklärung", en: "privacy policy" },
+
+  // Ebook exit-intent teaser
+  "ebookTeaser.ariaLabel": { de: "Kostenloses E-Book", en: "Free e-book" },
+  "ebookTeaser.title": { de: "Bevor du gehst – ein Geschenk", en: "Before you go – a gift" },
+  "ebookTeaser.desc": {
+    de: "Mein kostenloses E-Book „Der Weg zum Ganzsein\" – 7 Impulse, um alten Familienmustern auf die Spur zu kommen.",
+    en: "My free e-book \"The Path to Wholeness\" – 7 impulses to get on the trail of old family patterns.",
+  },
+  "ebookTeaser.cta": { de: "Jetzt holen", en: "Get it now" },
+
+  // Sticky mobile CTA
+  "cta.mobileCta": { de: "Kostenloses Erstgespräch", en: "Free Consultation" },
+
+  // Contact form additions
+  "contactForm.errorsPresent": { de: "Es gibt Fehler im Formular. Bitte überprüfe deine Eingaben.", en: "There are errors in the form. Please check your entries." },
+  "contactForm.honeypotLabel": { de: "Website (nicht ausfüllen)", en: "Website (do not fill in)" },
+  "contactForm.privacyNoticeSuffix": { de: " zu.", en: "." },
+
+  // Praxis hero alts
+  "praxis.lounge.alt": {
+    de: "Coaching-Praxis von Jona Fels in Freiburg – gemütlicher Lounge-Bereich mit Rattanstuhl und Glastisch",
+    en: "Coaching practice of Jona Fels in Freiburg – cozy lounge area with rattan chair and glass table",
+  },
+  "praxis.sitzbereich.alt": {
+    de: "Coaching-Praxis von Jona Fels in Freiburg – einladender Sitzbereich mit Sofa, Sessel und warmem Licht",
+    en: "Coaching practice of Jona Fels in Freiburg – inviting seating area with sofa, armchair and warm light",
+  },
+
+  // Author box
+  "author.impulseLink": { de: "✨ Impulse entdecken", en: "✨ Discover impulses" },
+
+  // SEO Head
+  "seo.ogImageAlt": {
+    de: "Jona Fels – Systemisches Coaching & Familienaufstellung in Freiburg",
+    en: "Jona Fels – Systemic Coaching & Family Constellation in Freiburg",
+  },
+
+  // Quiz Teaser
+  "quizTeaser.eyebrow": { de: "Systemische Diagnostik", en: "Systemic diagnostics" },
+  "quizTeaser.headline": { de: "Trägst du, was nicht dir gehört?", en: "Are you carrying what isn't yours?" },
+  "quizTeaser.desc": {
+    de: "Finde in 2 Minuten heraus, ob du in deinem Familiensystem unbewusst die Rolle des Lastenträgers, des Anpassers oder des Distanzierers übernommen hast.",
+    en: "Find out in 2 minutes whether you have unconsciously taken on the role of the burden-bearer, the adapter, or the distancer in your family system.",
+  },
+  "quizTeaser.cta": { de: "Zum kostenfreien Rollen-Check", en: "Take the free role check" },
+  "quizTeaser.meta": { de: "Anonym · keine E-Mail nötig · 2 Minuten", en: "Anonymous · no email needed · 2 minutes" },
+
+  // Rolle-Check Quiz – UI chrome
+  "quiz.eyebrow": { de: "Selbsttest · 3 Minuten", en: "Self-test · 3 minutes" },
+  "quiz.headline": { de: "Was wäre, wenn dein Problem eine unbewusste Loyalität ist?", en: "What if your problem is an unconscious loyalty?" },
+  "quiz.subheadline": { de: "Der systemische Rollen-Check.", en: "The systemic role check." },
+  "quiz.intro": {
+    de: "15 ehrliche Fragen. Eine klare Antwort darauf, welches unbewusste Muster heute in dir wirkt – und wo dein Weg zurück zu dir beginnt.",
+    en: "15 honest questions. A clear answer about which unconscious pattern is at work in you today – and where your path back to yourself begins.",
+  },
+  "quiz.startButton": { de: "Test starten", en: "Start the test" },
+  "quiz.anonymousNote": { de: "Anonym · keine E-Mail nötig", en: "Anonymous · no email needed" },
+  "quiz.progressOf": { de: "Frage {n} von {total}", en: "Question {n} of {total}" },
+  "quiz.backButton": { de: "Zurück", en: "Back" },
+  "quiz.changeNote": { de: "Antwort kann jederzeit geändert werden", en: "Answer can be changed at any time" },
+  "quiz.lifeArea.eyebrow": { de: "Nur noch eine letzte Sache …", en: "Just one last thing …" },
+  "quiz.lifeArea.question": { de: "In welchem Lebensbereich spürst du aktuell die stärksten Auswirkungen oder Blockaden?", en: "In which area of life do you currently feel the strongest effects or blockages?" },
+  "quiz.lifeArea.hint": { de: "Wähle den Bereich, in dem die Schwere gerade am deutlichsten ist.", en: "Choose the area where the heaviness is currently most clearly felt." },
+  "quiz.backToQuestions": { de: "Zurück zu den Fragen", en: "Back to the questions" },
+  "quiz.loading": { de: "Dein Ergebnis wird vorbereitet …", en: "Preparing your result …" },
+  "quiz.result.eyebrow": { de: "Dein systemisches Spektrum", en: "Your systemic spectrum" },
+  "quiz.result.loyaltyHeading": { de: "Die unbewusste Loyalität dahinter", en: "The unconscious loyalty behind it" },
+  "quiz.result.blindSpotHeading": { de: "Dein blinder Fleck", en: "Your blind spot" },
+  "quiz.result.wayOutHeading": { de: "Der Weg hinaus", en: "The way out" },
+  "quiz.cta.integrated": { de: "Potenzial-Gespräch buchen", en: "Book a potential conversation" },
+  "quiz.cta.ambivalent": { de: "Klarheits-Gespräch buchen", en: "Book a clarity conversation" },
+  "quiz.cta.default": { de: "Jetzt Erstgespräch buchen", en: "Book free consultation now" },
+  "quiz.retakeButton": { de: "Test wiederholen", en: "Retake the test" },
+  "quiz.disclaimer.label": { de: "Wichtiger Hinweis:", en: "Important note:" },
+  "quiz.disclaimer.text": {
+    de: " Dieser Test dient ausschließlich der persönlichen Selbstreflexion und psychoedukativen Zwecken. Die Ergebnisse stellen keine absolute Wahrheit und keine psychologische oder medizinische Diagnose dar. Ein solcher Test kann und soll keine professionelle Therapie, heilkundliche Behandlung oder ärztliche Beratung ersetzen.",
+    en: " This test serves exclusively for personal self-reflection and psychoeducational purposes. The results are not an absolute truth and not a psychological or medical diagnosis. Such a test cannot and should not replace professional therapy, naturopathic treatment, or medical advice.",
+  },
 };
+
