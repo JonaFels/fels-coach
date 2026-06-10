@@ -2,10 +2,11 @@ import { Quote } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const TestimonialsSection = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  const quoteOpen = language === "de" ? "„" : "\u201C";
-  const quoteClose = language === "de" ? "\u201C" : "\u201D";
+  // Quotes are kept in original German, so always use German quotation marks
+  const quoteOpen = "„";
+  const quoteClose = "\u201C";
 
   // Use plain strings rendered via dangerouslySetInnerHTML so we can keep <strong> emphasis
   const miriam = t("testimonials.miriamQuote");
