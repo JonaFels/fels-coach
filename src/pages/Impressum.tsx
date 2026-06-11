@@ -52,15 +52,6 @@ const Impressum = () => {
               79106 Freiburg
             </p>
 
-            <h3>{t("imprint.disputeHeading")}</h3>
-            <p>
-              {t("imprint.disputeText")}<br />
-              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a><br />
-              {t("imprint.disputeEmail")}
-            </p>
-
-            <h3>{t("imprint.arbitrationHeading")}</h3>
-            <p>{t("imprint.arbitrationText")}</p>
 
             <h3>{t("imprint.coachingHeading")}</h3>
             <p>{t("imprint.coachingText")}</p>
