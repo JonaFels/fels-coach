@@ -331,46 +331,42 @@
    PUNKT 5: MICRO-INTERACTIONS (Gesamtprompt)
    ============================================ */
 
-/* Button Hover-Effekt: translateY(-2px) + Schatten */
+/* Button: gentler lift, layered editorial shadow */
 button:not(:disabled),
 [role="button"]:not(:disabled),
 .btn:not(:disabled) {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo), background-color 0.25s ease;
 }
 
 button:not(:disabled):hover,
 [role="button"]:not(:disabled):hover,
 .btn:not(:disabled):hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px hsl(var(--foreground) / 0.15);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-elevated);
 }
 
 button:not(:disabled):active,
 [role="button"]:not(:disabled):active {
   transform: translateY(0);
+  transition-duration: 0.1s;
 }
 
-/* Link Hover-Effekt: Wachsende Unterstreichung von links nach rechts
-   Skip-Link ausnehmen, damit er nicht durch `position: relative` sichtbar wird.
-*/
-a:not(.no-underline-effect):not(.skip-link) {
+/* Link Hover-Effekt — nur für echte Prosa-Links (innerhalb von p/li/blockquote),
+   damit Navigation, Buttons-as-link, Cards & Icon-Links sauber bleiben. */
+:where(p, li, blockquote) a:not(.no-underline-effect):not(.skip-link) {
   position: relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s var(--ease-out-expo);
+  text-decoration: none;
 }
 
-a:not(.no-underline-effect):not(.skip-link)::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width 0.3s ease;
+:where(p, li, blockquote) a:not(.no-underline-effect):not(.skip-link):hover {
+  background-size: 100% 1px;
 }
 
-a:not(.no-underline-effect):not(.skip-link):hover::after {
-  width: 100%;
-}
 
 /* Image Fade-In nach Laden (0.4s) */
 img {
