@@ -214,7 +214,72 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Editorial eyebrow label — refined, hairline rule integrated.
+     Use as: <p class="eyebrow">…</p> */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: theme('fontFamily.sans');
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--secondary));
+    line-height: 1;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 2.25rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  /* Soft editorial card surface */
+  .surface-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border) / 0.6);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+  }
+  .surface-card:hover {
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-2px);
+  }
+
+  /* Elegant ornamental rule — replaces hr in editorial sections */
+  .rule-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: hsl(var(--secondary) / 0.45);
+  }
+  .rule-ornament::before,
+  .rule-ornament::after {
+    content: '';
+    flex: 1;
+    max-width: 7rem;
+    height: 1px;
+    background: linear-gradient(to right, transparent, currentColor, transparent);
+  }
+
+  /* Drop-cap for editorial paragraphs */
+  .has-dropcap::first-letter {
+    font-family: theme('fontFamily.serif');
+    font-size: 3.5em;
+    line-height: 0.85;
+    float: left;
+    padding: 0.4rem 0.6rem 0 0;
+    color: hsl(var(--primary));
+    font-weight: 600;
+  }
 }
+
 
 /* Skip-Link für Barrierefreiheit - nur bei Tastatur-Fokus sichtbar */
 .skip-link {
