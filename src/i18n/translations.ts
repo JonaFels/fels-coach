@@ -814,7 +814,7 @@ export const translations: Translations = {
     en: "I have lived through a lot of confusion and disorienting times. And back then I already decided, \"this can't go on like this\". Early on, at sixteen, I stumbled across family constellation by chance and have used it as my way out ever since.",
   },
   "aboutPreview.text2": {
-    de: "Durch Familienstellen habe ich erkannt, woher meine Verwirrungen kamen. Das all die Prägung durch mein Familiensystem der Ursprung ist und nicht ich einfach defekt.",
+    de: "Durch Familienstellen habe ich erkannt, woher meine Verwirrungen kamen. Dass all die Prägungen durch mein Familiensystem der Ursprung dafür sind und nicht ich einfach defekt bin.",
     en: "Through family constellation I recognised where my confusion came from. That all the imprinting through my family system is the origin – and not that I am simply broken.",
   },
 
