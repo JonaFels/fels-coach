@@ -833,7 +833,7 @@ export const translations: Translations = {
     en: "Family Constellation – understand and release old patterns",
   },
   "method.description": {
-    de: "In Einzelsessions schauen wir gemeinsam, welche Familiendynamiken bis heute in dir wirken. Kein Aufrechnen, keine Schuldzuweisung – ein behutsamer Blick auf die Wurzel deiner Themen, damit du wieder klar bei dir ankommst.",
+    de: "Ich biete 1:1 Coaching an in denen wir eine Aufstellung zu zweit machen. Wir schauen hinter die Fassade, was bei dir im System wirkt. Und finden Lösungen, um deinen Platz zu finden.",
     en: "In individual sessions, we look together at which family dynamics still resonate within you today. No score-keeping, no blame – a gentle look at the root of your themes, so you can arrive clearly with yourself again.",
   },
   "method.step1.title": {
