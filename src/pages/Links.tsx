@@ -1,5 +1,5 @@
 import { useErstgespraech } from "@/components/HashBookingTrigger";
-import { Compass, Globe, Phone, Mail, Instagram, Facebook, Linkedin, BadgeCheck } from "lucide-react";
+import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const linkButtons = [
@@ -11,15 +11,15 @@ const linkButtons = [
   },
   {
     href: "/",
-    icon: Globe,
-    label: "Meine Webseite",
-    sub: "Arbeitsweise & Philosophie",
+    icon: HeartHandshake,
+    label: "1:1 Coaching in Freiburg",
+    sub: "Systemisches Coaching & Familienaufstellung",
   },
   {
-    href: "mailto:kontakt@fels-coach.de",
-    icon: Mail,
-    label: "kontakt@fels-coach.de",
-    sub: "Schreib mir direkt",
+    href: "/blog",
+    icon: BookOpen,
+    label: "Blog",
+    sub: "Impulse zu Familie, Mustern & Wachstum",
   },
 ];
 
