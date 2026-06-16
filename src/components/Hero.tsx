@@ -16,22 +16,22 @@ export const Hero = () => {
   const heroImgMobile = getImage("hero.image_mobile", profilBildMobile);
 
   return (
-    <section className="py-6 md:py-8 lg:py-10 overflow-hidden relative">
+    <section className="py-10 md:py-16 lg:py-20 overflow-hidden relative">
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
           <div className="text-center md:text-left order-2 md:order-1">
-            <p className="eyebrow mb-6 md:mb-7 animate-fade-in-up">
+            <p className="eyebrow mb-10 md:mb-12 animate-fade-in-up">
               {t("hero.eyebrow")}
             </p>
 
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight leading-[1.15] animate-fade-in-up [animation-delay:50ms]">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight leading-[1.2] animate-fade-in-up [animation-delay:50ms]">
               {t("hero.title")}
             </h1>
-            <p className="mt-6 md:mt-8 text-lg md:text-xl tracking-wide text-muted-foreground max-w-xl leading-[1.9] animate-fade-in-up [animation-delay:100ms]">
+            <p className="mt-10 md:mt-12 text-lg md:text-xl tracking-wide text-muted-foreground max-w-xl leading-[2] animate-fade-in-up [animation-delay:100ms]">
               {t("hero.subtitle")}
             </p>
-            <div className="mt-10 md:mt-12 flex flex-col items-center md:items-start gap-4 animate-fade-in-up [animation-delay:200ms]">
+            <div className="mt-14 md:mt-16 flex flex-col items-center md:items-start gap-5 animate-fade-in-up [animation-delay:200ms]">
               <Button
                 size="lg"
                 className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
