@@ -79,7 +79,8 @@ export const Footer = () => {
                   href="https://praxinode.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary hover:text-foreground transition-colors"
+                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
+
                 >
                   Praxinode
                 </a>
