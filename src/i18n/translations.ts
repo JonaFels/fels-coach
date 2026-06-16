@@ -66,8 +66,8 @@ export const translations: Translations = {
     en: "Systemic Coaching & Family Constellation in Freiburg",
   },
   "hero.title": {
-    de: "Unklar, zu viel im Kopf, Orientierungslos.",
-    en: "Unclear, overwhelmed, without direction.",
+    de: "„Unklar, zu viel im Kopf, Orientierungslos.“",
+    en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
     de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinen 1:1 Coaching.",
