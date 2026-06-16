@@ -810,7 +810,7 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich habe viel Unklarheit und orientierungslose Zeiten durch lebt. Und damals schon entschieden, „so kann es nicht weiter gehen". Schon früh mit sechszehn Jahren zufällig über Familienstellen gestolpert und es seitdem als meinen Weg daraus genutzt.",
+    de: "Ich habe viel Unklarheit und orientierungslose Zeiten durch lebt. Und damals schon entschieden, „so kann es nicht weiter gehen“. Schon früh mit sechszehn Jahren zufällig über Familienstellen gestolpert und es seitdem als meinen Weg daraus genutzt.",
     en: "I have lived through a lot of confusion and disorienting times. And back then I already decided, \"this can't go on like this\". Early on, at sixteen, I stumbled across family constellation by chance and have used it as my way out ever since.",
   },
   "aboutPreview.text2": {
