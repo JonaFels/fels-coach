@@ -230,42 +230,7 @@ const UeberMich = () => {
           </div>
         </section>
 
-        {/* Praxinode – subtle side project mention */}
-        <section className="py-14 md:py-28 bg-muted/40">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {language === "de" ? (
-                <>
-                  Neben dem Coaching begleite ich auch Kollegen in die digitale Welt – mit{" "}
-                  <a
-                    href="https://praxinode.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-secondary underline underline-offset-4 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
 
-                  >
-                    Praxinode
-                  </a>
-                  , Webseiten für Therapeuten & Coaches.
-                </>
-              ) : (
-                <>
-                  Besides coaching, I also help colleagues enter the digital world – with{" "}
-                  <a
-                    href="https://praxinode.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-secondary underline underline-offset-4 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
-
-                  >
-                    Praxinode
-                  </a>
-                  , websites for therapists & coaches.
-                </>
-              )}
-            </p>
-          </div>
-        </section>
 
       </main>
       <Footer />
