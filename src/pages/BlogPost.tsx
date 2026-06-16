@@ -160,11 +160,11 @@ const BlogPost = () => {
         elements.push(
           <ol
             key={`list-${elements.length}`}
-            className="list-decimal list-outside ml-6 space-y-2 my-6 text-foreground/85 marker:text-secondary/60"
+            className="list-decimal list-outside ml-6 space-y-3 my-8 text-foreground/85 marker:text-secondary/60 leading-[1.8] text-[1.075rem]"
             role="list"
           >
             {listItems.map((item, i) => (
-              <li key={i} className="pl-1" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
+              <li key={i} className="pl-2" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
             ))}
           </ol>,
         );
@@ -184,16 +184,16 @@ const BlogPost = () => {
           console.warn(`[Blog] Bild ohne alt-Attribut: ${src}`);
         }
         elements.push(
-          <figure key={index} className="my-10 -mx-4 sm:mx-0">
+          <figure key={index} className="my-14 -mx-4 sm:mx-0">
             <img
               src={src}
               alt={altText}
-              className="w-full h-auto sm:rounded-xl"
+              className="w-full h-auto sm:rounded-2xl"
               loading="lazy"
               decoding="async"
             />
             {altText && (
-              <figcaption className="mt-3 text-center text-xs text-muted-foreground italic px-4">
+              <figcaption className="mt-4 text-center text-xs text-muted-foreground italic px-4 tracking-wide">
                 {altText}
               </figcaption>
             )}
@@ -224,7 +224,7 @@ const BlogPost = () => {
           <h3
             key={index}
             id={id}
-            className="font-serif text-xl md:text-2xl font-semibold text-foreground mt-10 mb-3 scroll-mt-24"
+            className="font-serif text-xl md:text-2xl font-semibold text-foreground mt-14 mb-4 scroll-mt-24 leading-snug"
           >
             {text}
           </h3>,
@@ -237,7 +237,7 @@ const BlogPost = () => {
           <h2
             key={index}
             id={id}
-            className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-4 scroll-mt-24"
+            className="font-serif text-2xl md:text-[2rem] font-semibold text-foreground mt-20 mb-6 scroll-mt-24 leading-[1.2] relative pl-5 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[3px] before:bg-secondary/50 before:rounded-full"
           >
             {text}
           </h2>,
@@ -247,7 +247,7 @@ const BlogPost = () => {
         elements.push(
           <blockquote
             key={index}
-            className="border-l-2 border-secondary/60 pl-6 my-8 font-serif text-xl md:text-2xl italic text-foreground/80 leading-relaxed"
+            className="my-12 px-6 md:px-8 py-6 border-l-2 border-secondary/60 bg-muted/40 rounded-r-xl font-serif text-xl md:text-2xl italic text-foreground/85 leading-[1.5]"
           >
             {trimmedLine.replace("> ", "")}
           </blockquote>,
@@ -267,9 +267,9 @@ const BlogPost = () => {
         elements.push(
           <p
             key={index}
-            className={`text-foreground/85 leading-[1.8] my-5 text-[1.075rem] ${
+            className={`text-foreground/85 leading-[1.85] my-7 text-[1.075rem] md:text-[1.1rem] ${
               isFirst
-                ? "first-letter:font-serif first-letter:text-6xl first-letter:font-semibold first-letter:text-secondary first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.9]"
+                ? "first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:font-semibold first-letter:text-secondary first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:leading-[0.9]"
                 : ""
             }`}
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }}
@@ -280,6 +280,7 @@ const BlogPost = () => {
 
     flushList();
     return elements;
+
   };
 
   const metaTitle = clampMeta(post.metaTitle ?? `${post.title.de} | Jona Fels`, 60);
