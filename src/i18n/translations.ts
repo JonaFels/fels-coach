@@ -810,13 +810,14 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich habe selbst erfahren, wie es ist, wenn die Grenzen in der Familie verschwimmen und man unbewusst fremde Lasten mitträgt. Lange habe ich gespürt, dass etwas nicht stimmt – ohne greifen zu können, was eigentlich zu mir gehört und was nicht.",
-    en: "I know from my own experience what it's like when boundaries within a family blur and you unknowingly carry burdens that aren't yours. For a long time I sensed something was off – without being able to grasp what actually belonged to me and what didn't.",
+    de: "Ich habe viel Unklarheit und orientierungslose Zeiten durch lebt. Und damals schon entschieden, „so kann es nicht weiter gehen". Schon früh mit sechszehn Jahren zufällig über Familienstellen gestolpert und es seitdem als meinen Weg daraus genutzt.",
+    en: "I have lived through a lot of confusion and disorienting times. And back then I already decided, \"this can't go on like this\". Early on, at sixteen, I stumbled across family constellation by chance and have used it as my way out ever since.",
   },
   "aboutPreview.text2": {
-    de: "Das Familienstellen hat mir geholfen, klar zu unterscheiden: Was gehört zu mir – und was zu wem anders? Heute stehe ich in meinem eigenen Leben, mit gesunden Grenzen und innerer Ruhe. Genau diesen Weg gehe ich mit dir: behutsam, klar und in deinem Tempo.",
-    en: "Family constellation work helped me clearly distinguish: what belongs to me – and what belongs to whom else? Today I stand in my own life, with healthy boundaries and inner calm. This is exactly the path I walk with you: gently, clearly and at your pace.",
+    de: "Durch Familienstellen habe ich erkannt, woher meine Verwirrungen kamen. Das all die Prägung durch mein Familiensystem der Ursprung ist und nicht ich einfach defekt.",
+    en: "Through family constellation I recognised where my confusion came from. That all the imprinting through my family system is the origin – and not that I am simply broken.",
   },
+
   "aboutPreview.cta": {
     de: "Mehr über meinen Weg lesen",
     en: "Read more about my journey",
