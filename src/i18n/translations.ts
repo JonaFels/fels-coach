@@ -62,12 +62,12 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Unklar, zu viel im Kopf, Orientierungslos.",
-    en: "Unclear, overwhelmed, without direction.",
+    de: "Systemisches Coaching & Familienaufstellung in Freiburg",
+    en: "Systemic Coaching & Family Constellation in Freiburg",
   },
   "hero.title": {
-    de: "Finde zurück zu dir – und werde zum Fels in deinem eigenen Leben.",
-    en: "Find your way back to yourself – and become the rock in your own life.",
+    de: "Unklar, zu viel im Kopf, Orientierungslos.",
+    en: "Unclear, overwhelmed, without direction.",
   },
   "hero.subtitle": {
     de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinen 1:1 Coaching.",
