@@ -90,9 +90,6 @@ const Kontakt = () => {
               <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
                 {t("contact.calendarHeadline")}
               </p>
-              <p className="text-sm md:text-base text-muted-foreground mb-3 max-w-xl mx-auto leading-relaxed">
-                {t("contact.calendarMicrocopy")}
-              </p>
               <p className="text-xs text-muted-foreground mb-8">
                 Kostenlos · 30 Min · Unverbindlich
               </p>
