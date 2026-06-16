@@ -62,16 +62,16 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemisches Coaching & Familienaufstellung in Freiburg",
-    en: "Systemic Coaching & Family Constellation in Freiburg",
+    de: "Unklar, zu viel im Kopf, Orientierungslos.",
+    en: "Unclear, overwhelmed, without direction.",
   },
   "hero.title": {
     de: "Finde zurück zu dir – und werde zum Fels in deinem eigenen Leben.",
     en: "Find your way back to yourself – and become the rock in your own life.",
   },
   "hero.subtitle": {
-    de: "Du spürst, dass etwas nicht stimmt – aber kannst es nicht greifen? Wer in vereinnahmenden Familienstrukturen aufgewachsen ist, trägt oft Lasten und Rollen, die nie die eigenen waren. Im 1:1-Coaching machen wir sichtbar, was zu wem gehört – damit du zurückfindest zu dir, zu deinen Grenzen und zu innerer Klarheit.",
-    en: "You sense something isn't right – but can't quite grasp it? Those who grew up in engulfing family structures often carry burdens and roles that were never their own. In 1-on-1 coaching, we make visible what belongs to whom – so you find your way back to yourself, your boundaries, and inner clarity.",
+    de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinen 1:1 Coaching.",
+    en: "Does your life feel like it has no up or down anymore? As if the center were missing? Systemic methods helped me find my way out. Learn more about my 1:1 coaching here.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
