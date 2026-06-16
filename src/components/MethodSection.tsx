@@ -10,17 +10,8 @@ export const MethodSection = () => {
 
   return (
     <section className="py-36 md:py-48 bg-muted/40 relative overflow-hidden">
-      {/* dezentes Hintergrund-Ornament */}
-      <svg
-        aria-hidden="true"
-        className="absolute -right-24 -top-24 w-[520px] h-[520px] opacity-[0.05] pointer-events-none"
-        viewBox="0 0 400 400"
-        fill="none"
-      >
-        <circle cx="200" cy="200" r="180" stroke="currentColor" strokeWidth="1" className="text-secondary" />
-        <circle cx="200" cy="200" r="120" stroke="currentColor" strokeWidth="1" className="text-secondary" />
-        <circle cx="200" cy="200" r="60" stroke="currentColor" strokeWidth="1" className="text-secondary" />
-      </svg>
+
+
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
