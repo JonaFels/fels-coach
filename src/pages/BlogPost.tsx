@@ -160,11 +160,11 @@ const BlogPost = () => {
         elements.push(
           <ol
             key={`list-${elements.length}`}
-            className="list-decimal list-outside ml-6 space-y-2 my-6 text-foreground/85 marker:text-secondary/60"
+            className="list-decimal list-outside ml-6 space-y-3 my-8 text-foreground/85 marker:text-secondary/60 leading-[1.8] text-[1.075rem]"
             role="list"
           >
             {listItems.map((item, i) => (
-              <li key={i} className="pl-1" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
+              <li key={i} className="pl-2" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
             ))}
           </ol>,
         );
@@ -184,16 +184,16 @@ const BlogPost = () => {
           console.warn(`[Blog] Bild ohne alt-Attribut: ${src}`);
         }
         elements.push(
-          <figure key={index} className="my-10 -mx-4 sm:mx-0">
+          <figure key={index} className="my-14 -mx-4 sm:mx-0">
             <img
               src={src}
               alt={altText}
-              className="w-full h-auto sm:rounded-xl"
+              className="w-full h-auto sm:rounded-2xl"
               loading="lazy"
               decoding="async"
             />
             {altText && (
-              <figcaption className="mt-3 text-center text-xs text-muted-foreground italic px-4">
+              <figcaption className="mt-4 text-center text-xs text-muted-foreground italic px-4 tracking-wide">
                 {altText}
               </figcaption>
             )}
@@ -224,7 +224,7 @@ const BlogPost = () => {
           <h3
             key={index}
             id={id}
-            className="font-serif text-xl md:text-2xl font-semibold text-foreground mt-10 mb-3 scroll-mt-24"
+            className="font-serif text-xl md:text-2xl font-semibold text-foreground mt-14 mb-4 scroll-mt-24 leading-snug"
           >
             {text}
           </h3>,
@@ -237,7 +237,7 @@ const BlogPost = () => {
           <h2
             key={index}
             id={id}
-            className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-4 scroll-mt-24"
+            className="font-serif text-2xl md:text-[2rem] font-semibold text-foreground mt-20 mb-6 scroll-mt-24 leading-[1.2] relative pl-5 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[3px] before:bg-secondary/50 before:rounded-full"
           >
             {text}
           </h2>,
@@ -247,7 +247,7 @@ const BlogPost = () => {
         elements.push(
           <blockquote
             key={index}
-            className="border-l-2 border-secondary/60 pl-6 my-8 font-serif text-xl md:text-2xl italic text-foreground/80 leading-relaxed"
+            className="my-12 px-6 md:px-8 py-6 border-l-2 border-secondary/60 bg-muted/40 rounded-r-xl font-serif text-xl md:text-2xl italic text-foreground/85 leading-[1.5]"
           >
             {trimmedLine.replace("> ", "")}
           </blockquote>,
@@ -267,9 +267,9 @@ const BlogPost = () => {
         elements.push(
           <p
             key={index}
-            className={`text-foreground/85 leading-[1.8] my-5 text-[1.075rem] ${
+            className={`text-foreground/85 leading-[1.85] my-7 text-[1.075rem] md:text-[1.1rem] ${
               isFirst
-                ? "first-letter:font-serif first-letter:text-6xl first-letter:font-semibold first-letter:text-secondary first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.9]"
+                ? "first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:font-semibold first-letter:text-secondary first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:leading-[0.9]"
                 : ""
             }`}
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }}
@@ -280,6 +280,7 @@ const BlogPost = () => {
 
     flushList();
     return elements;
+
   };
 
   const metaTitle = clampMeta(post.metaTitle ?? `${post.title.de} | Jona Fels`, 60);
@@ -290,28 +291,28 @@ const BlogPost = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead title={metaTitle} description={metaDescription} image={post.image} type="article" />
       <Header />
-      <main id="main-content" className="flex-1 pt-20 md:pt-28 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <main id="main-content" className="flex-1 pt-24 md:pt-32 pb-24 md:pb-32">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[44px] text-sm"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-10 md:mb-14 min-h-[44px] text-sm"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               {t("blog.backToList")}
             </Link>
 
-            <header className="mb-10 max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.18em] text-secondary/80 font-medium mb-4">
+            <header className="mb-14 md:mb-20 max-w-3xl">
+              <p className="text-xs uppercase tracking-[0.22em] text-secondary/80 font-medium mb-6">
                 Journal
               </p>
-              <h1 className="font-serif text-3xl md:text-5xl font-semibold text-foreground leading-[1.15] mb-5">
+              <h1 className="font-serif text-3xl md:text-5xl lg:text-[3.25rem] font-semibold text-foreground leading-[1.1] mb-7 tracking-tight">
                 {post.title.de}
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 font-serif italic">
+              <p className="text-lg md:text-xl text-muted-foreground leading-[1.55] mb-8 font-serif italic">
                 {post.excerpt.de}
               </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground border-t border-border/60 pt-5">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground border-t border-border/60 pt-6">
                 <span className="font-medium text-foreground">Jona Fels</span>
                 <span className="text-border">·</span>
                 <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
@@ -324,8 +325,8 @@ const BlogPost = () => {
             </header>
 
             {post.image && (
-              <figure className="mb-12 max-w-4xl">
-                <div className="aspect-[16/9] rounded-2xl overflow-hidden">
+              <figure className="mb-16 md:mb-20 max-w-4xl">
+                <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-sm">
                   <img
                     src={post.image}
                     alt={imageAlt}
@@ -338,11 +339,14 @@ const BlogPost = () => {
               </figure>
             )}
 
-            <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12 xl:gap-16">
-              <article className="max-w-2xl">
+            <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-16 xl:gap-24">
+              <article className="max-w-[680px]">
                 <div className="prose-content">{renderContent(post.content.de)}</div>
-                <AuthorBox />
+                <div className="mt-16 md:mt-20">
+                  <AuthorBox />
+                </div>
               </article>
+
 
               {toc.length > 1 && (
                 <aside className="hidden lg:block" aria-label="Inhaltsverzeichnis">
@@ -380,9 +384,10 @@ const BlogPost = () => {
               )}
             </div>
 
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mt-20 md:mt-28">
               <RelatedPosts currentSlug={post.slug} />
             </div>
+
           </div>
         </div>
       </main>
