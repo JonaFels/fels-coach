@@ -1101,8 +1101,8 @@ export const translations: Translations = {
     en: "Let's have a quick talk – non-binding and free of charge.",
   },
   "contact.calendarMicrocopy": {
-    de: "Buche dir hier einen 30-minütigen Termin für ein erstes Telefonat. Wir klären in Ruhe dein Anliegen und schauen gemeinsam, ob mein Ansatz der richtige für dich ist. Hinterlasse bei der Buchung einfach deine Telefonnummer – ich rufe dich zur gebuchten Zeit an.",
-    en: "Book a 30-minute slot here for a first phone call. We'll calmly explore your concern and see together whether my approach is the right fit for you. Just leave your phone number when booking – I'll call you at the scheduled time.",
+    de: "",
+    en: "",
   },
   "contact.altTitle": {
     de: "Oder schreib mir direkt",
