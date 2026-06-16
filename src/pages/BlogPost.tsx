@@ -384,9 +384,10 @@ const BlogPost = () => {
               )}
             </div>
 
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mt-20 md:mt-28">
               <RelatedPosts currentSlug={post.slug} />
             </div>
+
           </div>
         </div>
       </main>
