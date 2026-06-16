@@ -837,8 +837,8 @@ export const translations: Translations = {
     en: "In individual sessions, we look together at which family dynamics still resonate within you today. No score-keeping, no blame – a gentle look at the root of your themes, so you can arrive clearly with yourself again.",
   },
   "method.step1.title": {
-    de: "Ankommen & Thema benennen",
-    en: "Arrive & name the issue",
+    de: "Ankommen",
+    en: "Arrive",
   },
   "method.step1.desc": {
     de: "Was beschäftigt dich gerade? Wir benennen das Thema, das dir aktuell am meisten Energie kostet – ohne Druck, ohne Bewertung.",
@@ -853,13 +853,14 @@ export const translations: Translations = {
     en: "With floor anchors, the roles and bonds still at work within you become visible – and where old patterns are co-steering your everyday life.",
   },
   "method.step3.title": {
-    de: "Grenzen & Standfestigkeit",
-    en: "Boundaries & steadiness",
+    de: "Lösung",
+    en: "Resolution",
   },
   "method.step3.desc": {
-    de: "Du erlebst, wie es sich anfühlt, an deinem eigenen Platz zu stehen – mit gesunden Grenzen und mehr Ruhe in dir.",
-    en: "You experience what it feels like to stand in your own place – with healthy boundaries and more calm within you.",
+    de: "Du erlebst, wie es sich anfühlt, wenn Dynamiken klar werden und du deinen Platz einnimmst – mit mehr Ruhe in dir.",
+    en: "You experience what it feels like when dynamics become clear and you take your place – with more calm within you.",
   },
+
   "method.cta": {
     de: "Mehr über die Methode erfahren",
     en: "Learn more about the method",
