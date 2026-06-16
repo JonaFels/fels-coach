@@ -241,7 +241,8 @@ const UeberMich = () => {
                     href="https://praxinode.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+                    className="font-medium text-secondary underline underline-offset-4 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
+
                   >
                     Praxinode
                   </a>
@@ -254,7 +255,8 @@ const UeberMich = () => {
                     href="https://praxinode.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
+                    className="font-medium text-secondary underline underline-offset-4 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
+
                   >
                     Praxinode
                   </a>
