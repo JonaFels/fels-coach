@@ -168,17 +168,10 @@ const UeberMich = () => {
                         className="h-12 w-9 object-cover rounded ring-1 ring-border group-hover:ring-secondary/50 transition"
                         loading="lazy"
                       />
-                      <span className="flex flex-col">
-                        <span className="text-[11px] uppercase tracking-wide text-secondary font-semibold leading-tight">
-                          Zertifikat
-                        </span>
-                        <span className="font-serif text-sm font-medium text-foreground underline-offset-2 group-hover:underline">
-                          Ausbildungsbescheinigung ansehen
-                        </span>
-                        <span className="text-[11px] text-muted-foreground leading-tight">
-                          Wolfgang Bracht · Freiburg, April 2026
-                        </span>
+                      <span className="font-serif text-sm font-medium text-foreground underline-offset-2 group-hover:underline">
+                        Zertifikat anschauen
                       </span>
+
                     </button>
                   </DialogTrigger>
                   <DialogContent className="max-w-3xl max-h-[94vh] p-0 border-0 bg-background overflow-hidden rounded-xl shadow-2xl">
