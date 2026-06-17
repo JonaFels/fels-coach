@@ -151,7 +151,7 @@ const Angebote = () => {
             </div>
 
             {/* Erstgespräch Highlight */}
-            <div className="mb-10 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
+            <div className="mb-24 md:mb-32 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
                 {language === "de"
                   ? "Der entspannte Start in unsere Zusammenarbeit"
