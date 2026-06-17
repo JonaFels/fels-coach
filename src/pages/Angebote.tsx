@@ -13,6 +13,7 @@ import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
+import { SectionDivider } from "@/components/SectionDivider";
 
 
 const offerings = [
@@ -151,7 +152,7 @@ const Angebote = () => {
             </div>
 
             {/* Erstgespräch Highlight */}
-            <div className="mb-24 md:mb-32 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
+            <div className="mb-32 md:mb-44 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
                 {language === "de"
                   ? "Der entspannte Start in unsere Zusammenarbeit"
@@ -184,6 +185,8 @@ const Angebote = () => {
                 </a>
               </Button>
             </div>
+
+            <SectionDivider className="mb-16 md:mb-20" />
 
             <p className="text-sm text-muted-foreground text-center mb-8 leading-relaxed max-w-xl mx-auto">
               {language === "de"
