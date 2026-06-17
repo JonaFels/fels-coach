@@ -66,7 +66,7 @@ export const FAQSection = () => {
   const faqs = faqData[language];
 
   return (
-    <section className="py-36 md:py-48" aria-labelledby="faq-heading">
+    <section className="py-36 md:py-48 bg-background" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 max-w-3xl">
         <p className="text-[0.72rem] md:text-xs uppercase tracking-[0.28em] text-secondary/80 font-medium text-center mb-6">
           {t("faq.subtitle")}

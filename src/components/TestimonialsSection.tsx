@@ -13,7 +13,7 @@ export const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="py-36 md:py-48 bg-muted/30 scroll-mt-24 relative"
+      className="py-36 md:py-48 bg-background scroll-mt-24 relative"
       aria-label={t("testimonials.title")}
     >
       <div className="container mx-auto px-4 max-w-3xl">
