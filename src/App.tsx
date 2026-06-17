@@ -56,6 +56,7 @@ const App = () => (
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/index" element={<Index />} />
               <Route path="/angebote" element={<Angebote />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
               <Route path="/impulse" element={<Impulse />} />
