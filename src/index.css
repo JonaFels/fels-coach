@@ -44,7 +44,7 @@
 @layer base {
   :root {
     /* Background: Soft Pastel Lavender */
-    --background: 270 40% 99%;
+    --background: 0 0% 100%;
     /* Foreground: Deep Plum (high contrast) */
     --foreground: 270 35% 12%;
 
