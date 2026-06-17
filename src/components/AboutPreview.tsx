@@ -7,7 +7,7 @@ export const AboutPreview = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="py-36 md:py-48 relative">
+    <section className="py-36 md:py-48 relative bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           {/* Eyebrow */}
