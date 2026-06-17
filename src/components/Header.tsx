@@ -52,8 +52,8 @@ export const Header = () => {
               loading="eager"
               decoding="async"
             />
-            <span className="font-serif text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-none whitespace-nowrap">
-              Jona Fels – Systemisches Coaching
+            <span className="font-serif text-[0.82rem] sm:text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-tight whitespace-nowrap">
+              Jona Fels <span className="text-foreground/60">–</span> Systemisches Coaching
             </span>
           </a>
 
