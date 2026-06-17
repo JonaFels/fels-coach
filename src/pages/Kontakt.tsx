@@ -90,7 +90,7 @@ const Kontakt = () => {
               <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
                 {t("contact.calendarHeadline")}
               </p>
-              <p className="text-xs text-muted-foreground mb-8">
+              <p className="text-xs text-muted-foreground mb-20 md:mb-28">
                 Kostenlos · 30 Min · Unverbindlich
               </p>
             </div>
