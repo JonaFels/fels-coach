@@ -50,7 +50,7 @@ export const MethodSection = () => {
           </div>
 
           {/* Mein Ansatz – die Werkzeuge, mit denen ich arbeite */}
-          <div className="mt-2 mb-16 rounded-3xl border border-border/60 bg-card/60 p-8 md:p-10">
+          <div className="mt-2 mb-16 rounded-3xl border border-border/40 bg-transparent p-8 md:p-10">
             <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground text-center mb-3">
               {language === "de" ? "Mein Ansatz" : "My approach"}
             </h3>
