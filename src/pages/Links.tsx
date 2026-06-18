@@ -124,7 +124,7 @@ const Links = () => {
             <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center shrink-0 ring-1 ring-white/30">
               <Phone className="w-4 h-4 text-white" aria-hidden="true" />
             </span>
-            <span className="flex-1 text-center pr-9">Kostenfreies Erstgespräch</span>
+            <span className="flex-1 text-left">Kostenfreies Erstgespräch</span>
 
           </button>
 
