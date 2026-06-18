@@ -111,21 +111,22 @@ const Links = () => {
             </span>
           </a>
 
-          {/* 3. Primärer CTA — Erstgespräch (Akzent: warmes Sand/Gold) */}
+          {/* 3. Primärer CTA — Erstgespräch (Akzent: Slate Sage, Brand-Farbe) */}
           <button
             type="button"
             onClick={() => booking?.openErstgespraech()}
-            className="group relative w-full rounded-full py-4 px-5 flex items-center justify-center gap-3 font-semibold text-[15px] text-[#1f3535] shadow-[0_8px_28px_-6px_rgba(217,201,168,0.65)] hover:shadow-[0_12px_36px_-6px_rgba(217,201,168,0.85)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/40"
+            className="group relative w-full rounded-full py-4 px-5 flex items-center justify-center gap-3 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25"
             style={{
               background:
-                "linear-gradient(135deg, #f3e6c4 0%, #e8d4a4 50%, #d9c9a8 100%)",
+                "linear-gradient(135deg, #2F4F4F 0%, #3d6464 100%)",
             }}
           >
-            <span className="w-9 h-9 rounded-full bg-white/70 flex items-center justify-center shrink-0">
-              <Phone className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center shrink-0 ring-1 ring-white/30">
+              <Phone className="w-4 h-4 text-white" aria-hidden="true" />
             </span>
             <span>Kostenfreies Erstgespräch</span>
           </button>
+
 
           {/* 4. Blog */}
           <a
