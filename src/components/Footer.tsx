@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
 export const Footer = () => {
   const { t, language } = useLanguage();
@@ -63,6 +63,15 @@ export const Footer = () => {
             className="w-9 h-9 rounded-full bg-muted/60 flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 no-underline-effect"
           >
             <Linkedin className="h-4 w-4" />
+          </a>
+          <a
+            href="https://www.youtube.com/@JonaFels"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            className="w-9 h-9 rounded-full bg-muted/60 flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 no-underline-effect"
+          >
+            <Youtube className="h-4 w-4" />
           </a>
         </div>
 
