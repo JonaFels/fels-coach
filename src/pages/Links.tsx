@@ -81,34 +81,67 @@ const Links = () => {
           ))}
         </div>
 
-        {/* Primary CTA: Erstgespräch — filled */}
-        <button
-          type="button"
-          onClick={() => booking?.openErstgespraech()}
-          className="mt-8 w-full rounded-full bg-white text-[#2F4F4F] font-semibold py-4 px-5 text-[15px] flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-[0.99] transition-transform duration-200"
-        >
-          <Phone className="w-4 h-4" aria-hidden="true" />
-          Kostenfreies Erstgespräch
-        </button>
+        {/* Link list — psychologischer Funnel */}
+        <div className="flex flex-col gap-3 w-full mt-8">
+          {/* 1. Selbsttest */}
+          <a
+            href="/#rollencheck-quiz"
+            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+          >
+            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
+              <Compass className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            </span>
+            <span className="flex-1 text-left leading-tight">
+              <span className="block text-[14.5px] font-semibold">3-Minuten Selbsttest</span>
+              <span className="block text-[12px] text-[#1f3535]/60">Unbewusste Loyalitäten erkennen</span>
+            </span>
+          </a>
 
-        {/* Link list */}
-        <div className="flex flex-col gap-3 w-full mt-3">
-          {linkButtons.map(({ href, icon: Icon, label, sub }) => (
-            <a
-              key={label}
-              href={href}
-              className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:scale-[1.02] hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
-            >
-              <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
-                <Icon className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
-              </span>
-              <span className="flex-1 text-left leading-tight">
-                <span className="block text-[14.5px] font-semibold">{label}</span>
-                <span className="block text-[12px] text-[#1f3535]/60">{sub}</span>
-              </span>
-            </a>
-          ))}
+          {/* 2. 1:1 Coaching */}
+          <a
+            href="/"
+            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+          >
+            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
+              <HeartHandshake className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            </span>
+            <span className="flex-1 text-left leading-tight">
+              <span className="block text-[14.5px] font-semibold">1:1 Coaching in Freiburg</span>
+              <span className="block text-[12px] text-[#1f3535]/60">Systemisches Coaching & Familienaufstellung</span>
+            </span>
+          </a>
+
+          {/* 3. Primärer CTA — Erstgespräch (Akzent: warmes Sand/Gold) */}
+          <button
+            type="button"
+            onClick={() => booking?.openErstgespraech()}
+            className="group relative w-full rounded-full py-4 px-5 flex items-center justify-center gap-3 font-semibold text-[15px] text-[#1f3535] shadow-[0_8px_28px_-6px_rgba(217,201,168,0.65)] hover:shadow-[0_12px_36px_-6px_rgba(217,201,168,0.85)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/40"
+            style={{
+              background:
+                "linear-gradient(135deg, #f3e6c4 0%, #e8d4a4 50%, #d9c9a8 100%)",
+            }}
+          >
+            <span className="w-9 h-9 rounded-full bg-white/70 flex items-center justify-center shrink-0">
+              <Phone className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            </span>
+            <span>Kostenfreies Erstgespräch</span>
+          </button>
+
+          {/* 4. Blog */}
+          <a
+            href="/blog"
+            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+          >
+            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
+              <BookOpen className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            </span>
+            <span className="flex-1 text-left leading-tight">
+              <span className="block text-[14.5px] font-semibold">Blog</span>
+              <span className="block text-[12px] text-[#1f3535]/60">Impulse zu Familie, Mustern & Wachstum</span>
+            </span>
+          </a>
         </div>
+
 
         {/* Footer */}
         <div className="mt-12 mb-2 flex justify-center gap-4 text-[11px] text-white/70">
