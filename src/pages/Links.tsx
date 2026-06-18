@@ -1,5 +1,5 @@
 import { useErstgespraech } from "@/components/HashBookingTrigger";
-import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, BadgeCheck } from "lucide-react";
+import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const linkButtons = [
