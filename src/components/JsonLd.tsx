@@ -194,6 +194,7 @@ export const JsonLd = () => {
             "https://www.facebook.com/profile.php?id=61562014600393",
             "https://www.instagram.com/jona.fels/",
             "https://www.linkedin.com/in/jona-fels-coach/",
+            "https://www.youtube.com/@JonaFels",
           ],
           knowsAbout: [
             "Systemische Familienaufstellung",
