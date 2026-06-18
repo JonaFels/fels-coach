@@ -115,7 +115,7 @@ const Links = () => {
           <button
             type="button"
             onClick={() => booking?.openErstgespraech()}
-            className="group relative w-full rounded-full py-4 px-5 flex items-center justify-center gap-3 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25"
+            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25"
             style={{
               background:
                 "linear-gradient(135deg, #2F4F4F 0%, #3d6464 100%)",
@@ -124,7 +124,8 @@ const Links = () => {
             <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center shrink-0 ring-1 ring-white/30">
               <Phone className="w-4 h-4 text-white" aria-hidden="true" />
             </span>
-            <span>Kostenfreies Erstgespräch</span>
+            <span className="flex-1 text-center pr-9">Kostenfreies Erstgespräch</span>
+
           </button>
 
 
