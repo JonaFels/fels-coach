@@ -10,6 +10,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { MethodSection } from "@/components/MethodSection";
 import { FAQSection } from "@/components/FAQSection";
 import { RoleCheckQuiz } from "@/components/RoleCheckQuiz";
+import { YouTubeIntro } from "@/components/YouTubeIntro";
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
@@ -51,6 +52,7 @@ const Index = () => {
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
+        <YouTubeIntro videoId="uzgmW4lzsqk" />
         <section
           id="rollencheck-quiz"
           aria-labelledby="rollencheck-heading"
