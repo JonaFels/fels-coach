@@ -13,12 +13,12 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
   const [activated, setActivated] = useState(false);
 
   const heading =
-    title ?? (language === "de" ? "Lerne mich in 90 Sekunden kennen" : "Get to know me in 90 seconds");
+    title ?? (language === "de" ? "Mein Angebot — persönlich vorgestellt" : "My work — a personal introduction");
   const sub =
     subtitle ??
     (language === "de"
-      ? "Ein kurzer persönlicher Einblick: Wer ich bin und wie ich dich begleite."
-      : "A short personal introduction: who I am and how I work with you.");
+      ? "In knapp drei Minuten erfährst du, wer ich bin, wie ich arbeite und für wen mein Coaching gedacht ist."
+      : "In just under three minutes, I share who I am, how I work and who my coaching is for.");
   const playLabel = language === "de" ? "Video abspielen" : "Play video";
   const privacyNote =
     language === "de"
