@@ -1,0 +1,94 @@
+import { useState } from "react";
+import { Play } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+interface YouTubeIntroProps {
+  videoId: string;
+  title?: string;
+  subtitle?: string;
+}
+
+export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) => {
+  const { language } = useLanguage();
+  const [activated, setActivated] = useState(false);
+
+  const heading =
+    title ?? (language === "de" ? "Lerne mich in 90 Sekunden kennen" : "Get to know me in 90 seconds");
+  const sub =
+    subtitle ??
+    (language === "de"
+      ? "Ein kurzer persönlicher Einblick: Wer ich bin und wie ich dich begleite."
+      : "A short personal introduction: who I am and how I work with you.");
+  const playLabel = language === "de" ? "Video abspielen" : "Play video";
+  const privacyNote =
+    language === "de"
+      ? "Hinweis: Beim Klick wird das Video von YouTube (youtube-nocookie.com) geladen. Es werden erst dann Daten an Google übertragen."
+      : "Note: Clicking loads the video from YouTube (youtube-nocookie.com). Data will only then be transmitted to Google.";
+
+  // YouTube thumbnail (max quality, no cookies set)
+  const thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+  return (
+    <section
+      id="video-intro"
+      aria-labelledby="video-intro-heading"
+      className="py-16 md:py-24 bg-background"
+    >
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
+          <h2
+            id="video-intro-heading"
+            className="font-serif text-3xl md:text-4xl font-semibold text-foreground tracking-tight leading-tight"
+          >
+            {heading}
+          </h2>
+          <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+            {sub}
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto">
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg ring-1 ring-border/20 bg-muted">
+            {activated ? (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+                title={heading}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setActivated(true)}
+                className="group absolute inset-0 w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                aria-label={playLabel}
+              >
+                <img
+                  src={thumbnail}
+                  alt={heading}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+                <span className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
+                <span className="absolute inset-0 flex items-center justify-center">
+                  <span className="flex items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-full bg-background/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
+                    <Play
+                      className="h-7 w-7 md:h-9 md:w-9 text-primary fill-current ml-1"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </span>
+              </button>
+            )}
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground text-center max-w-2xl mx-auto">
+            {privacyNote}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
