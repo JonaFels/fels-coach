@@ -56,9 +56,31 @@ const Index = () => {
         <section
           id="rollencheck-quiz"
           aria-labelledby="rollencheck-heading"
-          className="py-40 md:py-52 bg-background"
+          className="relative py-40 md:py-52 overflow-hidden isolate"
         >
-          <div className="container mx-auto px-4 max-w-4xl">
+          {/* Layered editorial background — matches site palette (lavender/plum) */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10"
+            style={{
+              background:
+                "radial-gradient(ellipse 80% 60% at 50% 0%, hsl(var(--accent) / 0.55) 0%, transparent 65%), radial-gradient(ellipse 70% 55% at 50% 100%, hsl(var(--fels-sage-gray) / 0.6) 0%, transparent 65%), linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted) / 0.7) 50%, hsl(var(--card)) 100%)",
+            }}
+          />
+          {/* Subtle paper grain for warmth */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 opacity-[0.5] mix-blend-multiply"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+            }}
+          />
+          {/* Hairline rules top & bottom for editorial frame */}
+          <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[min(90%,40rem)] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          <div aria-hidden="true" className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[min(90%,40rem)] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+          <div className="container mx-auto px-4 max-w-4xl relative">
             <RoleCheckQuiz />
           </div>
         </section>
