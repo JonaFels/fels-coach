@@ -114,6 +114,72 @@ const Datenschutz = () => {
 
             <hr />
 
+            <h2>Einbindung von YouTube-Videos (erweiterter Datenschutzmodus)</h2>
+            <p>
+              Auf einzelnen Seiten dieser Website binde ich Videos der Plattform YouTube ein. Betreiber
+              der Plattform ist die Google Ireland Limited („Google"), Gordon House, Barrow Street,
+              Dublin 4, Irland.
+            </p>
+            <p>
+              <strong>Zwei-Klick-Lösung &amp; erweiterter Datenschutz:</strong> Beim Aufruf einer Seite
+              mit eingebettetem Video wird zunächst <strong>kein</strong> Inhalt von YouTube geladen.
+              Stattdessen siehst du nur ein lokal von meinem Server ausgeliefertes Vorschaubild sowie
+              einen Abspiel-Button. Erst wenn du aktiv auf den Abspiel-Button klickst, wird eine
+              Verbindung zu den Servern von YouTube aufgebaut. Ich nutze dabei den von YouTube
+              angebotenen „erweiterten Datenschutzmodus" (Domain <em>youtube-nocookie.com</em>), bei dem
+              laut Anbieter keine Cookies zur Profilbildung über dein Nutzungsverhalten gesetzt werden,
+              solange du das Video nicht abspielst.
+            </p>
+            <p>
+              <strong>Verarbeitete Daten nach dem Start des Videos:</strong> Sobald du das Video startest,
+              kann YouTube/Google u.&nbsp;a. deine IP-Adresse, Datum und Uhrzeit des Aufrufs, Informationen
+              zu deinem Browser und Betriebssystem, Referrer-URL, ggf. deine Geräte-ID sowie
+              Interaktionsdaten mit dem Player erhalten. Wenn du gleichzeitig in deinem Google-Konto
+              eingeloggt bist, kann Google diese Informationen direkt deinem persönlichen Konto zuordnen.
+              Dies kannst du verhindern, indem du dich vor dem Klick auf das Video aus deinem
+              Google-Konto ausloggst.
+            </p>
+            <p>
+              <strong>Zweck und Rechtsgrundlage:</strong> Die Einbindung erfolgt, um dir Inhalte über
+              mein Coaching-Angebot ansprechend und barrierearm zu präsentieren. Rechtsgrundlage für die
+              Einbindung ist mein berechtigtes Interesse an einer attraktiven Darstellung meines Angebots
+              gemäß Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO. Soweit durch das Starten des Videos auf
+              deinem Endgerät Informationen gespeichert oder ausgelesen werden, erfolgt dies auf
+              Grundlage deiner Einwilligung durch den aktiven Klick auf den Abspiel-Button
+              (§&nbsp;25 Abs.&nbsp;1 TDDDG i.&nbsp;V.&nbsp;m. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO).
+              Diese Einwilligung kannst du jederzeit für die Zukunft widerrufen, indem du das Video
+              nicht mehr abspielst bzw. die Seite verlässt.
+            </p>
+            <p>
+              <strong>Datenübermittlung in Drittländer:</strong> Eine Übermittlung deiner Daten in die
+              USA bzw. in andere Drittländer kann nicht ausgeschlossen werden. Google LLC ist nach dem
+              EU-US Data Privacy Framework zertifiziert, sodass für die Übermittlung in die USA ein
+              Angemessenheitsbeschluss der EU-Kommission besteht. Ergänzend kommen
+              Standardvertragsklauseln der EU-Kommission zur Anwendung.
+            </p>
+            <p>
+              <strong>Speicherdauer:</strong> Die konkrete Speicherdauer der durch YouTube/Google
+              erhobenen Daten ist mir nicht bekannt und wird durch Google bestimmt. Weitere Informationen
+              findest du in der Datenschutzerklärung von Google unter{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://policies.google.com/privacy
+              </a>{" "}
+              sowie in den ergänzenden Hinweisen von YouTube unter{" "}
+              <a
+                href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.youtube.com/howyoutubeworks/user-settings/privacy/
+              </a>.
+            </p>
+
+            <hr />
+
             <h2>Datenschutzhinweise zum Systemischen Selbsttest</h2>
             <p>
               Auf dieser Website biete ich einen freiwilligen systemischen Selbsttest („Rollencheck") an,
