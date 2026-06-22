@@ -20,10 +20,6 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
       ? "In knapp drei Minuten erfährst du, wer ich bin, wie ich arbeite und für wen mein Coaching gedacht ist."
       : "In just under three minutes, I share who I am, how I work and who my coaching is for.");
   const playLabel = language === "de" ? "Video abspielen" : "Play video";
-  const privacyNote =
-    language === "de"
-      ? "Hinweis: Beim Klick wird das Video von YouTube (youtube-nocookie.com) geladen. Es werden erst dann Daten an Google übertragen."
-      : "Note: Clicking loads the video from YouTube (youtube-nocookie.com). Data will only then be transmitted to Google.";
 
   // YouTube thumbnail (max quality, no cookies set)
   const thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
