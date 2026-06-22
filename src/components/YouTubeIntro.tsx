@@ -80,9 +80,7 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
               </button>
             )}
           </div>
-          <p className="mt-4 text-xs text-muted-foreground text-center max-w-2xl mx-auto">
-            {privacyNote}
-          </p>
+
         </div>
       </div>
     </section>
