@@ -48,14 +48,14 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
           </Button>
         </div>
         <div
-          className="relative flex-1 overflow-y-auto overscroll-contain"
+          className="relative flex-1 overflow-y-auto overscroll-contain rounded-b-2xl"
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           <iframe
             src={url}
             title="Booking Widget"
             loading="lazy"
-            className="w-full border-0 p-3 md:p-4"
+            className="w-full border-0 p-3 md:p-4 rounded-b-2xl"
             style={{ height: "750px" }}
             allow="payment"
           />
