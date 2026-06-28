@@ -29,13 +29,10 @@
     <!-- Font Preload entfernt: Vite hasht Asset-URLs (/assets/...woff2), 
          feste /fonts/-Pfade liefen ins Leere. Fontsource-CSS lädt fonts direkt mit. -->
 
-    <!-- Orbnet Booking Widget: nur DNS/Connection vorwärmen, damit es nicht
-         mit dem LCP-Bild um Bandbreite konkurriert. Script lädt erst beim
-         Öffnen des Erstgespräch-Modals (Lazy-Chunk). -->
-    <link rel="dns-prefetch" href="https://static.orbnet.de" />
-    <link rel="dns-prefetch" href="https://my.orbnet.de" />
-    <link rel="preconnect" href="https://static.orbnet.de" crossorigin />
-    <link rel="preconnect" href="https://my.orbnet.de" crossorigin />
+    <!-- Therapsy Booking Widget: DNS/Connection vorwärmen, damit das Iframe
+         nach dem LCP schnell lädt, ohne mit dem Hero-Bild zu konkurrieren. -->
+    <link rel="dns-prefetch" href="https://bookings.therapsy.at" />
+    <link rel="preconnect" href="https://bookings.therapsy.at" crossorigin />
 
 
 
