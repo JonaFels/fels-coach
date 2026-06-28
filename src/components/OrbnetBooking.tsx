@@ -125,7 +125,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url="https://www.orbnet.de/p/fels-coach/"
+        url={THERAPSY_URL}
         open={open}
         onClose={() => setOpen(false)}
       />
