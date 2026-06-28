@@ -3,49 +3,40 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
+const fallbackStyles = {
+  wrap: { minHeight: "100vh", background: "hsl(270 30% 96%)", color: "hsl(270 35% 12%)", fontFamily: "Montserrat,'Montserrat Fallback',ui-sans-serif,system-ui,sans-serif" } as const,
+  header: { padding: "1rem clamp(1rem,4vw,3rem)", borderBottom: "1px solid hsl(270 22% 80%)", display: "flex", gap: "1rem", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" } as const,
+  brand: { fontFamily: "'Playfair Display','Playfair Fallback',Georgia,serif", fontSize: "clamp(1rem,2vw,1.25rem)", fontWeight: 600, textDecoration: "none", color: "inherit" } as const,
+  nav: { display: "flex", gap: ".75rem 1rem", alignItems: "center", flexWrap: "wrap", fontSize: ".95rem" } as const,
+  navLink: { color: "inherit", textDecoration: "underline", textUnderlineOffset: ".25em" } as const,
+  main: { width: "min(960px,100%)", margin: "0 auto", padding: "clamp(3rem,9vw,7rem) clamp(1.25rem,4vw,3rem)" } as const,
+  eyebrow: { margin: "0 0 1rem", textTransform: "uppercase", letterSpacing: ".08em", fontSize: ".78rem", fontWeight: 700, color: "hsl(275 25% 30%)" } as const,
+  h1: { margin: "0 0 1.5rem", fontFamily: "'Playfair Display','Playfair Fallback',Georgia,serif", fontSize: "clamp(2.25rem,7vw,4.5rem)", lineHeight: 1.08 } as const,
+  lead: { maxWidth: "42rem", margin: "0 0 2rem", fontSize: "clamp(1.05rem,2vw,1.25rem)", lineHeight: 1.8 } as const,
+  ctas: { display: "flex", gap: ".875rem", flexWrap: "wrap" } as const,
+  ctaPrimary: { display: "inline-flex", alignItems: "center", minHeight: "3rem", padding: ".85rem 1.15rem", borderRadius: "999px", background: "hsl(270 45% 22%)", color: "hsl(270 30% 98%)", fontWeight: 700, textDecoration: "none" } as const,
+  ctaSecondary: { display: "inline-flex", alignItems: "center", minHeight: "3rem", padding: ".85rem 1.15rem", borderRadius: "999px", border: "1px solid hsl(270 22% 70%)", color: "inherit", fontWeight: 700, textDecoration: "none" } as const,
+};
+
 const StaticFallback = () => (
-  <div className="min-h-screen bg-background text-foreground">
-    <header className="border-b border-border px-4 py-4 sm:px-8 lg:px-12">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
-        <a href="/" className="font-serif text-lg font-semibold text-primary sm:text-xl">
-          Systemisches Coaching &amp; Familienaufstellung
-        </a>
-        <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium" aria-label="Hauptnavigation">
-          <a className="underline decoration-secondary underline-offset-4" href="/systemische-familienaufstellung-freiburg">
-            Familienaufstellung
-          </a>
-          <a className="underline decoration-secondary underline-offset-4" href="/ueber-mich">
-            Über mich
-          </a>
-          <a className="underline decoration-secondary underline-offset-4" href="/angebote">
-            Termine &amp; Preise
-          </a>
-          <a className="underline decoration-secondary underline-offset-4" href="/blog">
-            Blog
-          </a>
-          <a className="underline decoration-secondary underline-offset-4" href="/kontakt">
-            Kontakt
-          </a>
-        </nav>
-      </div>
+  <div style={fallbackStyles.wrap}>
+    <header style={fallbackStyles.header}>
+      <a href="/" style={fallbackStyles.brand}>Systemisches Coaching &amp; Familienaufstellung</a>
+      <nav style={fallbackStyles.nav} aria-label="Hauptnavigation">
+        <a style={fallbackStyles.navLink} href="/systemische-familienaufstellung-freiburg">Familienaufstellung</a>
+        <a style={fallbackStyles.navLink} href="/ueber-mich">Über mich</a>
+        <a style={fallbackStyles.navLink} href="/angebote">Termine &amp; Preise</a>
+        <a style={fallbackStyles.navLink} href="/blog">Blog</a>
+        <a style={fallbackStyles.navLink} href="/kontakt">Kontakt</a>
+      </nav>
     </header>
-    <main className="mx-auto max-w-4xl px-5 py-16 sm:px-8 sm:py-24">
-      <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-secondary">
-        Systemisches Coaching &amp; Familienaufstellung in Freiburg
-      </p>
-      <h1 className="mb-6 font-serif text-4xl leading-tight text-primary sm:text-6xl">
-        „Unklar, zu viel im Kopf, Orientierungslos.“
-      </h1>
-      <p className="mb-8 max-w-2xl text-lg leading-8 text-foreground/85">
-        Die Seite konnte nicht vollständig geladen werden. Du kannst trotzdem direkt zur Terminbuchung oder zu den wichtigsten Seiten weitergehen.
-      </p>
-      <div className="flex flex-wrap gap-3">
-        <a className="inline-flex min-h-12 items-center rounded-full bg-primary px-5 font-semibold text-primary-foreground" href="/kontakt">
-          Kostenloses Erstgespräch
-        </a>
-        <a className="inline-flex min-h-12 items-center rounded-full border border-border px-5 font-semibold" href="/angebote">
-          Termine &amp; Preise
-        </a>
+    <main style={fallbackStyles.main}>
+      <p style={fallbackStyles.eyebrow}>Systemisches Coaching &amp; Familienaufstellung in Freiburg</p>
+      <h1 style={fallbackStyles.h1}>„Unklar, zu viel im Kopf, Orientierungslos.“</h1>
+      <p style={fallbackStyles.lead}>Die Seite konnte nicht vollständig geladen werden. Du kannst trotzdem direkt zur Terminbuchung oder zu den wichtigsten Seiten weitergehen.</p>
+      <div style={fallbackStyles.ctas}>
+        <a style={fallbackStyles.ctaPrimary} href="/kontakt">Kostenloses Erstgespräch</a>
+        <a style={fallbackStyles.ctaSecondary} href="/angebote">Termine &amp; Preise</a>
       </div>
     </main>
   </div>
