@@ -55,7 +55,7 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
             src={url}
             title="Booking Widget"
             loading="lazy"
-            className="w-full border-0 p-3 md:p-4 rounded-b-2xl"
+            className="block w-full border-0 rounded-b-2xl"
             style={{ height: "750px" }}
             allow="payment"
           />
