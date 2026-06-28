@@ -1,3 +1,4 @@
+import { Component, type ReactNode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -50,7 +51,7 @@ const StaticFallback = () => (
   </div>
 );
 
-class RootErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
+class RootErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
   state = { hasError: false };
 
   static getDerivedStateFromError() {
