@@ -25,8 +25,9 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
       style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      {/* Hellblauer Rahmen wie auf der Kontaktseite, damit die weiße Karte sanft hervorgehoben wird */}
-      <div className="relative w-full max-w-4xl my-auto rounded-3xl bg-[#eaf3fb] p-3 md:p-5 shadow-2xl">
+      {/* Weißer äußerer Rahmen, damit der Übergang zum Therapsy-Widget sauber bleibt */}
+      <div className="relative w-full max-w-4xl my-auto rounded-3xl bg-white p-3 md:p-5 shadow-2xl">
+
         <Button
           variant="ghost"
           size="icon"
