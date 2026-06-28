@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +12,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
 
 const Kontakt = () => {
   const { t } = useLanguage();
@@ -21,7 +21,6 @@ const Kontakt = () => {
   const { hash } = useLocation();
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
-  const calendarRef = useRef<HTMLDivElement>(null);
 
   // Legacy: redirect #anfahrt to /angebote#anfahrt
   useLayoutEffect(() => {
@@ -40,33 +39,6 @@ const Kontakt = () => {
       el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
     }
   }, [hash, navigate]);
-
-  // Inline Orbnet-Kalender direkt auf der Kontaktseite
-  useEffect(() => {
-    const el = calendarRef.current;
-    if (!el || el.childElementCount > 0) return;
-
-    window.loadCustomCssOverrides?.();
-
-    const mask = document.createElement("div");
-    mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
-    mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    mask.style.touchAction = "pan-y";
-    el.appendChild(mask);
-
-    if (!document.getElementById("orbnet-booking-script")) {
-      const script = document.createElement("script");
-      script.id = "orbnet-booking-script";
-      script.src =
-        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-      script.crossOrigin = "anonymous";
-      script.referrerPolicy = "origin";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -95,9 +67,16 @@ const Kontakt = () => {
               </p>
             </div>
 
-            {/* Inline Kalender */}
+            {/* Inline Kalender (Therapsy) */}
             <div className="rounded-2xl border border-border/60 bg-card shadow-sm p-3 md:p-5">
-              <div ref={calendarRef} className="min-h-[640px] w-full" />
+              <iframe
+                src={THERAPSY_URL}
+                title="Booking Widget"
+                loading="lazy"
+                className="w-full border-0 rounded-lg"
+                style={{ height: "750px" }}
+                allow="payment"
+              />
             </div>
           </div>
         </section>

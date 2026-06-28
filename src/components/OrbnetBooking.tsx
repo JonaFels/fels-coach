@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Calendar, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,45 +8,21 @@ declare global {
   }
 }
 
+const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
+
 interface OrbnetDialogProps {
   semuid: string;
   open: boolean;
   onClose: () => void;
 }
 
-const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
+const OrbnetDialog = ({ semuid: _semuid, open, onClose }: OrbnetDialogProps) => {
   useEffect(() => {
-    if (!open || !containerRef.current) return;
+    if (!open) return;
     window.loadCustomCssOverrides?.();
-
-    // Clear previous widget content safely
-    while (containerRef.current.firstChild) {
-      containerRef.current.removeChild(containerRef.current.firstChild);
-    }
-
-    const mask = document.createElement("div");
-    mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = semuid;
-    mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    containerRef.current.appendChild(mask);
-
-    const existingScript = document.getElementById("orbnet-booking-script");
-    if (existingScript) existingScript.remove();
-
-    const script = document.createElement("script");
-    script.id = "orbnet-booking-script";
-    script.src =
-      "https://static.orbnet.de/3.0/dist/booking.js?ver=7643f23565c4865f828a0e810e468eab35cf22e2";
-    script.crossOrigin = "anonymous";
-    script.referrerPolicy = "origin";
-    document.body.appendChild(script);
-
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
-  }, [open, semuid]);
+  }, [open]);
 
   if (!open) return null;
 
@@ -66,11 +42,13 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
           className="relative flex-1 overflow-y-auto overscroll-contain"
           style={{ WebkitOverflowScrolling: "touch" }}
         >
-          <div ref={containerRef} className="min-h-[600px] md:min-h-[700px] p-6 md:p-8" />
-          {/* Overlay to hide Orbnet language flag inside the embedded widget */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute top-0 right-0 h-12 w-14 bg-background z-[1]"
+          <iframe
+            src={THERAPSY_URL}
+            title="Booking Widget"
+            loading="lazy"
+            className="w-full border-0 p-3 md:p-4"
+            style={{ height: "750px" }}
+            allow="payment"
           />
         </div>
       </div>
@@ -147,7 +125,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url="https://www.orbnet.de/p/fels-coach/"
+        url={THERAPSY_URL}
         open={open}
         onClose={() => setOpen(false)}
       />
