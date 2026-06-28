@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +12,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
 
 const Kontakt = () => {
   const { t } = useLanguage();
