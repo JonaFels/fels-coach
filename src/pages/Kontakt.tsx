@@ -12,7 +12,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_URL = "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
 
 const Kontakt = () => {
   const { t } = useLanguage();
