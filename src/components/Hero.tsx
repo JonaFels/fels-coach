@@ -16,7 +16,7 @@ export const Hero = () => {
   const heroImgMobile = getImage("hero.image_mobile", profilBildMobile);
 
   return (
-    <section className="py-10 md:py-16 lg:py-20 overflow-hidden relative">
+    <section className="py-8 md:py-10 lg:py-12 overflow-hidden relative">
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
