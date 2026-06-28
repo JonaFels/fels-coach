@@ -21,8 +21,9 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
       : "In just under three minutes, I share who I am, how I work and who my coaching is for.");
   const playLabel = language === "de" ? "Video abspielen" : "Play video";
 
-  // YouTube thumbnail (max quality, no cookies set)
-  const thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+  // YouTube thumbnail – mqdefault is reliably available (hqdefault returns 403 for some videos)
+  const thumbnail = `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
+  const thumbnailFallback = `https://i.ytimg.com/vi/${videoId}/0.jpg`;
 
   return (
     <section
