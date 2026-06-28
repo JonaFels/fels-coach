@@ -24,7 +24,8 @@ interface OrbnetDialogProps {
   onClose: () => void;
 }
 
-const OrbnetDialog = ({ semuid: _semuid, open, onClose }: OrbnetDialogProps) => {
+const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
+  const url = SEMUID_TO_URL[semuid] ?? THERAPSY_ERSTGESPRAECH;
   useEffect(() => {
     if (!open) return;
     window.loadCustomCssOverrides?.();
