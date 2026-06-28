@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
@@ -8,39 +8,13 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
-const ERSTGESPRAECH_SEMUID = "8ed15a55-6bf4-46cd-9de5-cef914d992b1";
+const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
-  }, [open]);
-
-  useEffect(() => {
-    if (!open || !containerRef.current) return;
-    if (containerRef.current.childElementCount > 0) return; // StrictMode guard
-
-    const mask = document.createElement("div");
-    mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
-    mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    mask.style.touchAction = "pan-y";
-    containerRef.current.appendChild(mask);
-
-    if (!document.getElementById("orbnet-booking-script")) {
-      const script = document.createElement("script");
-      script.id = "orbnet-booking-script";
-      script.src =
-        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-      script.crossOrigin = "anonymous";
-      script.referrerPolicy = "origin";
-      script.async = true;
-      document.body.appendChild(script);
-    }
   }, [open]);
 
   if (!open) return null;
