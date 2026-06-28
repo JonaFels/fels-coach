@@ -21,7 +21,6 @@ const Kontakt = () => {
   const { hash } = useLocation();
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
-  const calendarRef = useRef<HTMLDivElement>(null);
 
   // Legacy: redirect #anfahrt to /angebote#anfahrt
   useLayoutEffect(() => {
@@ -40,33 +39,6 @@ const Kontakt = () => {
       el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
     }
   }, [hash, navigate]);
-
-  // Inline Orbnet-Kalender direkt auf der Kontaktseite
-  useEffect(() => {
-    const el = calendarRef.current;
-    if (!el || el.childElementCount > 0) return;
-
-    window.loadCustomCssOverrides?.();
-
-    const mask = document.createElement("div");
-    mask.className = "orbnet-booking-mask";
-    mask.dataset.semuid = ERSTGESPRAECH_SEMUID;
-    mask.dataset.source = "my.orbnet.de";
-    mask.dataset.type = "embed";
-    mask.style.touchAction = "pan-y";
-    el.appendChild(mask);
-
-    if (!document.getElementById("orbnet-booking-script")) {
-      const script = document.createElement("script");
-      script.id = "orbnet-booking-script";
-      script.src =
-        "https://static.orbnet.de/3.0/dist/booking.js?ver=cb722e7da8d1fc2129bd3eafa591d93f828015c5";
-      script.crossOrigin = "anonymous";
-      script.referrerPolicy = "origin";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
