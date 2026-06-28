@@ -67,9 +67,16 @@ const Kontakt = () => {
               </p>
             </div>
 
-            {/* Inline Kalender */}
+            {/* Inline Kalender (Therapsy) */}
             <div className="rounded-2xl border border-border/60 bg-card shadow-sm p-3 md:p-5">
-              <div ref={calendarRef} className="min-h-[640px] w-full" />
+              <iframe
+                src={THERAPSY_URL}
+                title="Booking Widget"
+                loading="lazy"
+                className="w-full border-0 rounded-lg"
+                style={{ height: "750px" }}
+                allow="payment"
+              />
             </div>
           </div>
         </section>
