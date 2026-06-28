@@ -25,8 +25,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
       style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      {/* Weißer äußerer Rahmen, damit der Übergang zum Therapsy-Widget sauber bleibt */}
-      <div className="relative w-full max-w-4xl my-auto rounded-3xl bg-white p-3 md:p-5 shadow-2xl">
+      <div className="relative w-full max-w-4xl my-auto rounded-2xl bg-white shadow-2xl overflow-hidden">
 
         <Button
           variant="ghost"
@@ -38,9 +37,8 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           <X className="h-5 w-5" />
         </Button>
 
-        <div className="bg-white rounded-2xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] ring-1 ring-black/5 overflow-hidden">
-          {/* Portrait + Text */}
-          <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 flex flex-col items-center text-center">
+        {/* Portrait + Text */}
+        <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 flex flex-col items-center text-center">
             <img
               src={profilBild}
               alt="Jona Fels – Systemischer Coach in Freiburg"
