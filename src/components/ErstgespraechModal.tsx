@@ -8,7 +8,7 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
-const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_URL = "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   useEffect(() => {

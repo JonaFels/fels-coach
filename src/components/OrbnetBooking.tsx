@@ -8,7 +8,15 @@ declare global {
   }
 }
 
-const THERAPSY_URL = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_BASE = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_ERSTGESPRAECH = "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_KENNENLERNEN = "https://bookings.therapsy.at/?type=596fe883-643f-4ce2-aad7-81791c631b5d&id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_COACHING = "https://bookings.therapsy.at/?type=4a663327-f5e0-4843-be57-24ddcb60ae9f&id=3f27492a3d11dc68041c958654a5b7e6";
+
+const SEMUID_TO_URL: Record<string, string> = {
+  "609d5e7a-e208-4715-b073-e99206aebbf7": THERAPSY_KENNENLERNEN,
+  "55df32ef-b5d1-468e-a4ba-f7f892398327": THERAPSY_COACHING,
+};
 
 interface OrbnetDialogProps {
   semuid: string;
@@ -16,7 +24,8 @@ interface OrbnetDialogProps {
   onClose: () => void;
 }
 
-const OrbnetDialog = ({ semuid: _semuid, open, onClose }: OrbnetDialogProps) => {
+const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
+  const url = SEMUID_TO_URL[semuid] ?? THERAPSY_ERSTGESPRAECH;
   useEffect(() => {
     if (!open) return;
     window.loadCustomCssOverrides?.();
@@ -43,7 +52,7 @@ const OrbnetDialog = ({ semuid: _semuid, open, onClose }: OrbnetDialogProps) => 
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           <iframe
-            src={THERAPSY_URL}
+            src={url}
             title="Booking Widget"
             loading="lazy"
             className="w-full border-0 p-3 md:p-4"
@@ -125,7 +134,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url={THERAPSY_URL}
+        url={THERAPSY_BASE}
         open={open}
         onClose={() => setOpen(false)}
       />
