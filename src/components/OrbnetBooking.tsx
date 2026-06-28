@@ -52,7 +52,7 @@ const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           <iframe
-            src={THERAPSY_URL}
+            src={url}
             title="Booking Widget"
             loading="lazy"
             className="w-full border-0 p-3 md:p-4"
@@ -134,7 +134,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url={THERAPSY_URL}
+        url={THERAPSY_BASE}
         open={open}
         onClose={() => setOpen(false)}
       />
