@@ -47,39 +47,40 @@ const Kontakt = () => {
 
       <main id="main-content" className="flex-1">
         {/* 1. Erstgespräch – Intro + Inline-Kalender */}
-        <section id="erstgespraech" className="pt-10 pb-16 md:pt-16 md:pb-24">
+        <section id="erstgespraech" className="pt-10 pb-16 md:pt-16 md:pb-24 bg-[#eaf3fb]">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center">
-              <img
-                src={portrait}
-                alt="Jona Fels – Systemischer Coach in Freiburg"
-                className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
-                loading="eager"
-                decoding="async"
-                width={96}
-                height={96}
-              />
-              <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
-                {t("contact.calendarHeadline")}
-              </p>
-              <p className="text-xs text-muted-foreground mb-20 md:mb-28">
-                Kostenlos · 30 Min · Unverbindlich
-              </p>
-            </div>
+            <div className="bg-white rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] ring-1 ring-black/5 overflow-hidden">
+              <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
+                <img
+                  src={portrait}
+                  alt="Jona Fels – Systemischer Coach in Freiburg"
+                  className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
+                  loading="eager"
+                  decoding="async"
+                  width={96}
+                  height={96}
+                />
+                <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
+                  {t("contact.calendarHeadline")}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Kostenlos · 30 Min · Unverbindlich
+                </p>
+              </div>
 
-            {/* Inline Kalender (Therapsy) */}
-            <div className="rounded-2xl border border-border/60 bg-card shadow-sm p-3 md:p-5">
+              {/* Inline Kalender (Therapsy) – nahtlos in der Karte */}
               <iframe
                 src={THERAPSY_URL}
                 title="Booking Widget"
                 loading="lazy"
-                className="w-full border-0 rounded-lg"
+                className="block w-full border-0"
                 style={{ height: "750px" }}
                 allow="payment"
               />
             </div>
           </div>
         </section>
+
 
         {/* 2. Alternative Kontaktwege */}
         <section className="py-24 md:py-32 bg-muted/30">
