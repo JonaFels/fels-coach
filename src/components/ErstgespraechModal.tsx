@@ -25,41 +25,42 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
       style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-4xl my-auto flex flex-col overflow-hidden">
+      {/* Hellblauer Rahmen wie auf der Kontaktseite, damit die weiße Karte sanft hervorgehoben wird */}
+      <div className="relative w-full max-w-4xl my-auto rounded-3xl bg-[#eaf3fb] p-3 md:p-5 shadow-2xl">
         <Button
           variant="ghost"
           size="icon"
           onClick={onClose}
-          className="absolute right-3 top-3 z-10 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background"
+          className="absolute right-4 top-4 z-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white shadow"
           aria-label="Schließen"
         >
           <X className="h-5 w-5" />
         </Button>
 
-        {/* Portrait + Text */}
-        <div className="p-6 md:p-8 flex flex-col items-center text-center bg-muted/40 shrink-0">
-          <img
-            src={profilBild}
-            alt="Jona Fels – Systemischer Coach in Freiburg"
-            className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-[center_18%] shadow-md mb-3 no-fade"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2">
-            Lass uns unverbindlich sprechen
-          </h3>
-          <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl">
-            In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus.
-          </p>
-        </div>
+        <div className="bg-white rounded-2xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] ring-1 ring-black/5 overflow-hidden">
+          {/* Portrait + Text */}
+          <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 flex flex-col items-center text-center">
+            <img
+              src={profilBild}
+              alt="Jona Fels – Systemischer Coach in Freiburg"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-[center_18%] shadow-md mb-3 no-fade"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2">
+              Lass uns unverbindlich sprechen
+            </h3>
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl">
+              In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus.
+            </p>
+          </div>
 
-        {/* Therapsy Booking Embed */}
-        <div className="bg-background p-3 md:p-4">
+          {/* Therapsy Booking Embed – nahtlos in der Karte */}
           <iframe
             src={THERAPSY_URL}
             title="Booking Widget"
             loading="lazy"
-            className="w-full rounded-md border-0"
+            className="block w-full border-0"
             style={{ height: "750px" }}
             allow="payment"
           />
