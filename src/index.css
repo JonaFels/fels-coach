@@ -368,8 +368,8 @@ button:not(:disabled):active,
 }
 
 
-/* Image Fade-In nach Laden (0.4s) */
-img {
+/* Image Fade-In nur für lazy-loaded Bilder (verhindert unsichtbare eager-Hero-Bilder) */
+img[loading="lazy"] {
   opacity: 0;
   animation: img-fade-in 0.4s ease forwards;
 }
