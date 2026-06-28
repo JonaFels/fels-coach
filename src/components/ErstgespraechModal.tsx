@@ -63,7 +63,6 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
             style={{ height: "750px" }}
             allow="payment"
           />
-        </div>
       </div>
     </div>
   );
