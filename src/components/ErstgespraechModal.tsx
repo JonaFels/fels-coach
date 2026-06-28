@@ -53,9 +53,16 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
           </p>
         </div>
 
-        {/* Orbnet Embed – page-scroll-friendly */}
+        {/* Therapsy Booking Embed */}
         <div className="bg-background p-3 md:p-4">
-          <div ref={containerRef} className="min-h-[600px] w-full" />
+          <iframe
+            src={THERAPSY_URL}
+            title="Booking Widget"
+            loading="lazy"
+            className="w-full rounded-md border-0"
+            style={{ height: "750px" }}
+            allow="payment"
+          />
         </div>
       </div>
     </div>
