@@ -67,6 +67,10 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
                   alt={heading}
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (img.src !== thumbnailFallback) img.src = thumbnailFallback;
+                  }}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
