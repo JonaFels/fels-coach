@@ -60,7 +60,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
             title="Booking Widget"
             loading="lazy"
             className="block w-full border-0"
-            style={{ height: "750px" }}
+            style={{ height: "600px" }}
             allow="payment"
           />
       </div>
