@@ -144,7 +144,7 @@ const Angebote = () => {
             <p className="text-sm text-muted-foreground text-center mb-3 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
               {t("offerings.preiseIntro")}
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-10">
+            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-24 md:mb-32">
               <span className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 {t("offerings.location")}
