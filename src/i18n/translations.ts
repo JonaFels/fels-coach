@@ -178,8 +178,8 @@ export const translations: Translations = {
     en: "Clear Conditions",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Präsenz in Freiburg. Termine kannst du direkt über die beiden untenstehenden Optionen online buchen – oder per E-Mail und WhatsApp vereinbaren.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
-    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg. You can book directly via the two options below – or arrange an appointment by email or WhatsApp.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
+    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Vor Ort in Freiburg oder online per Video – ganz wie es dir lieber ist. Termine kannst du direkt über die beiden untenstehenden Optionen online buchen – oder per E-Mail und WhatsApp vereinbaren.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
+    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg or online via video – whatever you prefer. You can book directly via the two options below – or arrange an appointment by email or WhatsApp.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
@@ -919,12 +919,12 @@ export const translations: Translations = {
     en: "Family constellation facilitator",
   },
   "trust.location": {
-    de: "Präsenz in Freiburg",
-    en: "In-Person in Freiburg",
+    de: "Präsenz & Online",
+    en: "In-Person & Online",
   },
   "trust.locationDesc": {
-    de: "Persönliche Sessions vor Ort",
-    en: "Personal sessions on-site",
+    de: "Persönliche Sessions vor Ort oder per Video",
+    en: "Personal sessions on-site or via video",
   },
   "trust.flexible": {
     de: "Flexible Termine",
@@ -1209,16 +1209,16 @@ export const translations: Translations = {
     en: "We work on solutions that make a difference in your daily life.",
   },
   "offerings.ablaufIntro": {
-    de: "In drei einfachen Schritten von deiner ersten Anfrage bis in meinen Praxisraum in Freiburg.",
-    en: "In three simple steps from your first inquiry to my practice in Freiburg.",
+    de: "In drei einfachen Schritten von deiner ersten Anfrage bis zur Sitzung – vor Ort in Freiburg oder online.",
+    en: "In three simple steps from your first inquiry to your session – in-person in Freiburg or online.",
   },
   "offerings.perUnit": {
     de: "/ 80 Min.",
     en: "/ 80 min.",
   },
   "offerings.location": {
-    de: "Präsenz in Freiburg",
-    en: "In-person in Freiburg",
+    de: "Präsenz & Online",
+    en: "In-Person & Online",
   },
   "offerings.unsure": {
     de: "Noch unsicher?",
