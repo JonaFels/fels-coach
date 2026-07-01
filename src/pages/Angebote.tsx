@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin } from "lucide-react";
+import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -147,7 +147,11 @@ const Angebote = () => {
             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-24 md:mb-32">
               <span className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
-                {t("offerings.location")}
+                {language === "de" ? "Präsenz in Freiburg" : "In-person in Freiburg"}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Video className="h-4 w-4" aria-hidden="true" />
+                {language === "de" ? "Online per Video" : "Online via video"}
               </span>
             </div>
 
