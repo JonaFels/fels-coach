@@ -190,8 +190,8 @@ const Angebote = () => {
 
             <p className="text-sm text-muted-foreground text-center mb-8 leading-relaxed max-w-xl mx-auto">
               {language === "de"
-                ? "Du bist dir schon sicher und möchtest direkt in die Praxis kommen? Dann buche hier deinen Termin:"
-                : "Already sure and want to come directly to the practice? Then book your appointment here:"}
+                ? "Du bist dir schon sicher? Dann buche hier deinen Termin – vor Ort in Freiburg oder online:"
+                : "Already sure? Then book your appointment here – in-person in Freiburg or online:"}
             </p>
 
             <div className="grid gap-8 md:grid-cols-2">
