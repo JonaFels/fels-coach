@@ -170,8 +170,8 @@ export const translations: Translations = {
     en: "Choose & book your slot – Pick an appointment directly online or write me via email or WhatsApp – whatever you prefer.",
   },
   "offerings.step3": {
-    de: "In die Praxis kommen – Du kommst in meinen Praxisraum in der Karlstraße 51 in Freiburg. Den genauen Ablauf der Sitzung selbst findest du auf der Familienaufstellung-Seite.",
-    en: "Come to the practice – You visit my practice room at Karlstraße 51 in Freiburg. You'll find the exact session flow on the Family Constellation page.",
+    de: "Sitzung starten – Wir treffen uns in meinem Praxisraum in der Karlstraße 51 in Freiburg oder online per Video – ganz wie es dir lieber ist. Den genauen Ablauf der Sitzung selbst findest du auf der Familienaufstellung-Seite.",
+    en: "Start the session – We meet in my practice room at Karlstraße 51 in Freiburg or online via video – whatever you prefer. You'll find the exact session flow on the Family Constellation page.",
   },
   "offerings.preiseTitle": {
     de: "Klare Konditionen",
