@@ -33,13 +33,13 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
-          <h2
+          <p
             id="video-intro-heading"
-            className="font-serif text-3xl md:text-4xl font-semibold text-foreground tracking-tight leading-tight"
+            className="text-base md:text-lg text-muted-foreground leading-relaxed"
           >
-            {heading}
-          </h2>
-          <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+            <span className="font-serif text-foreground font-semibold text-xl md:text-2xl tracking-tight block mb-2">
+              {heading}
+            </span>
             {sub}
           </p>
         </div>
