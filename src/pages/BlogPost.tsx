@@ -246,12 +246,14 @@ const BlogPost = () => {
 
       const listMatch = trimmedLine.match(/^\d+\.\s+(.+)/);
       if (listMatch) {
-        const processedItem = listMatch[1]
-          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-          .replace(
-            /\[(.+?)\]\((.+?)\)/g,
-            '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
-          );
+        const processedItem = applyAutoLinks(
+          listMatch[1]
+            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+            .replace(
+              /\[(.+?)\]\((.+?)\)/g,
+              '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
+            ),
+        );
         listItems.push(processedItem);
         return;
       } else if (listItems.length > 0 && trimmedLine !== "") {
@@ -298,12 +300,14 @@ const BlogPost = () => {
         flushList();
       } else if (!trimmedLine.startsWith("#")) {
         flushList();
-        const processedLine = trimmedLine
-          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-          .replace(
-            /\[(.+?)\]\((.+?)\)/g,
-            '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
-          );
+        const processedLine = applyAutoLinks(
+          trimmedLine
+            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+            .replace(
+              /\[(.+?)\]\((.+?)\)/g,
+              '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
+            ),
+        );
         const isFirst = !firstParagraphRendered;
         firstParagraphRendered = true;
         elements.push(
