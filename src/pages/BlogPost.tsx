@@ -430,9 +430,38 @@ const BlogPost = () => {
               )}
             </div>
 
+            <aside
+              aria-label="Angebote"
+              className="max-w-3xl mt-20 md:mt-28 rounded-2xl border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12"
+            >
+              <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground leading-snug mb-4">
+                Möchtest du an deinen eigenen Themen arbeiten?
+              </h3>
+              <p className="text-foreground/80 leading-[1.7] text-[1.05rem] mb-8 max-w-2xl">
+                Wenn dieser Artikel in dir etwas angestoßen hat und du spürst, dass du dir bei
+                Unklarheiten oder alten Mustern professionelle Begleitung wünschst, lass uns
+                sprechen.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <Link
+                  to="/systemische-beratung-freiburg"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-4 text-center text-sm md:text-base font-medium text-secondary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  Zur systemischen 1:1 Beratung
+                </Link>
+                <Link
+                  to="/systemische-familienaufstellung-freiburg"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
+                >
+                  Zur Familienaufstellung
+                </Link>
+              </div>
+            </aside>
+
             <div className="max-w-3xl mt-20 md:mt-28">
               <RelatedPosts currentSlug={post.slug} />
             </div>
+
 
           </div>
         </div>
