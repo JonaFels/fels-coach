@@ -59,7 +59,7 @@ export const MethodSection = () => {
             </p>
             <ul className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto" role="list">
               {[
-                { t: "Familienstellen nach Hellinger", d: "Bodenanker, Repräsentanten, das wissende Feld." },
+                { t: "Familienstellen nach Hellinger", d: "Bodenanker, Repräsentanten, das wissende Feld.", link: "/systemische-familienaufstellung-freiburg" },
                 { t: "Systemischer Blick", d: "Was zu wem gehört – Ordnung im inneren System." },
                 { t: "Innere Anteile & Inneres Kind", d: "Arbeit mit Inneren Anteilen (IFS-inspiriert)." },
                 { t: "Präsenz & Prozessarbeit", d: "Im Moment bleiben – was lebendig ist, darf da sein." },
@@ -68,7 +68,17 @@ export const MethodSection = () => {
                   key={item.t}
                   className="flex flex-col gap-1 rounded-2xl border border-border/40 bg-background/70 px-4 py-3"
                 >
-                  <span className="font-medium text-foreground text-sm md:text-base">{item.t}</span>
+                  {item.link ? (
+                    <Link
+                      to={item.link}
+                      onClick={() => trackCTAClick("method_family_link", "homepage_method", "link")}
+                      className="font-medium text-foreground text-sm md:text-base underline-offset-4 hover:underline transition-colors"
+                    >
+                      {item.t}
+                    </Link>
+                  ) : (
+                    <span className="font-medium text-foreground text-sm md:text-base">{item.t}</span>
+                  )}
                   <span className="text-muted-foreground text-xs md:text-sm leading-relaxed">{item.d}</span>
                 </li>
               ))}
