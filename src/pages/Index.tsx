@@ -54,6 +54,7 @@ const Index = () => {
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
         <YouTubeIntro videoId="uzgmW4lzsqk" />
+        <CoachingPainPoints />
         <section
           id="rollencheck-quiz"
           aria-labelledby="rollencheck-heading"
