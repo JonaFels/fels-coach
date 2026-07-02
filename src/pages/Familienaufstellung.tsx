@@ -102,42 +102,6 @@ const Familienaufstellung = () => {
           </div>
         </section>
 
-        {/* Synonym / SEO Section: Familienstellen Einzelsitzung & Einzelsetting */}
-        <section id="familienstellen-einzelsitzung" aria-labelledby="familienstellen-heading" className="py-32 md:py-36">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2
-              id="familienstellen-heading"
-              className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4"
-            >
-              Familienaufstellung Einzelsitzung in Freiburg – 1:1 mit Bodenankern
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong>Familienaufstellung</strong> – auch <strong>Familienstellen</strong> genannt – ist eine
-              systemische Methode, die unbewusste Dynamiken und Verstrickungen in deiner Herkunftsfamilie
-              sichtbar macht.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              In meinem Praxisraum in der Karlstraße in Freiburg biete ich diese Arbeit als
-              Einzelsitzung im geschützten 1:1-Setting an. Statt mit fremden Stellvertretern arbeiten wir mit
-              Bodenankern – kleinen Markierungen am Boden, die für die Mitglieder deines Familiensystems
-              stehen. So kannst du dein System in Ruhe betrachten, neue Perspektiven einnehmen und alte
-              Muster Schritt für Schritt lösen.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Eine <strong>Einzelaufstellung</strong> eignet sich besonders, wenn du dein Thema in einem
-              vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Wie eine
-              solche Sitzung konkret abläuft, liest du im Beitrag{" "}
-              <Link
-                to="/blog/familienstellen-in-einer-einzelsitzung"
-                className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
-              >
-                Familienstellen in einer Einzelsitzung
-              </Link>
-              . Eine Sitzung dauert 80 Minuten.
-            </p>
-          </div>
-        </section>
-
         {/* Benefits with icons */}
         <section className="py-36 md:py-44">
           <div className="container mx-auto px-4 max-w-3xl">

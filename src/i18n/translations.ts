@@ -480,7 +480,7 @@ export const translations: Translations = {
     en: "1. Preliminary talk & clarify concerns",
   },
   "family.step1.text": {
-    de: "Wir nehmen uns Zeit, Dein spezifisches Anliegen und das Ziel der Aufstellung genau zu besprechen.",
+    de: "Wir nehmen uns Zeit, dein spezifisches Anliegen und das Ziel der Aufstellung genau zu besprechen.",
     en: "We take time to discuss your specific concern and the goal of the constellation in detail.",
   },
   "family.step2.title": {
@@ -488,7 +488,7 @@ export const translations: Translations = {
     en: "2. Constellation with floor anchors",
   },
   "family.step2.text": {
-    de: "Du wählst intuitiv Bodenanker aus und platzierst diese im Raum, um die Beziehungen Deines Systems darzustellen.",
+    de: "Du wählst intuitiv Bodenanker aus und platzierst diese im Raum, um die Beziehungen deines Systems darzustellen.",
     en: "You intuitively select floor anchors and place them in the room to represent the relationships of your system.",
   },
   "family.step3.title": {
