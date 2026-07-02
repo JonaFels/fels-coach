@@ -10,8 +10,12 @@ export type Translations = {
 export const translations: Translations = {
   // Navigation
   "nav.coaching": {
-    de: "Coaching",
-    en: "Coaching",
+    de: "Systemische Beratung",
+    en: "Systemic Counseling",
+  },
+  "nav.beratung": {
+    de: "Systemische Beratung",
+    en: "Systemic Counseling",
   },
   "nav.familienaufstellung": {
     de: "Familienaufstellung",
