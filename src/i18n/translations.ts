@@ -328,8 +328,8 @@ export const translations: Translations = {
     en: "What really happens in a constellation",
   },
   "family.aboutLink": {
-    de: "Mehr über meinen Weg als Coach erfahren",
-    en: "Learn more about my path as a coach",
+    de: "Mehr über meinen Weg als Berater erfahren",
+    en: "Learn more about my path as a counselor",
   },
   "family.suitedFor.title": {
     de: "Diese Arbeit passt zu dir, wenn …",
