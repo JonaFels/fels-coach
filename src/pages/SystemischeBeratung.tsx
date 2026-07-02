@@ -17,16 +17,16 @@ import { trackCTAClick } from "@/lib/tracking";
 
 const faqItems = [
   {
-    q: "Was ist der Unterschied zu einer großen Familienaufstellung?",
-    a: "Die große Aufstellung fokussiert sich oft auf das gesamte Familiensystem über Generationen. In der Beratung bleiben wir ganz nah an deinem aktuellen Gefühl im Hier und Jetzt und schauen gezielt auf die Beziehungen, die diesen konkreten Schmerz gerade in dir auslösen.",
+    q: "Was ist der Unterschied zu einer Familienaufstellung?",
+    a: "In der großen Aufstellung betrachten wir oft das gesamte Familiensystem. In der systemischen Beratung bleiben wir ganz nah an deinem aktuellen Gefühl und schauen gezielt auf die Personen, die diesen konkreten Schmerz gerade auslösen.",
   },
   {
-    q: "Bietest du die Beratung auch online an?",
-    a: "Ja. Diese tiefe Prozess- und Gesprächsarbeit lässt sich auch hervorragend online via Video-Call durchführen. So kannst du in deinem eigenen, sicheren Umfeld bleiben.",
+    q: "Geht das auch online?",
+    a: "Ja, diese tiefe emotionale Gesprächsarbeit lässt sich hervorragend via Video-Call durchführen.",
   },
   {
-    q: "Muss ich mich auf die Sitzung vorbereiten?",
-    a: "Nein. Du musst vorher nichts analysieren oder wissen. Es reicht völlig, wenn du deine aktuelle Unklarheit und deine Gefühle mitbringst. Den Rest erarbeiten wir gemeinsam im Kontakt.",
+    q: "Wie funktioniert die Buchung von Folgeterminen?",
+    a: "Nach unserem Erstgespräch erhältst du Zugang zu meinem digitalen Buchungssystem. Dort kannst du Folgetermine flexibel verwalten und erhältst alle Rechnungen bequem digital.",
   },
 ];
 
