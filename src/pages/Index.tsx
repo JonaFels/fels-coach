@@ -11,6 +11,7 @@ import { MethodSection } from "@/components/MethodSection";
 import { FAQSection } from "@/components/FAQSection";
 import { RoleCheckQuiz } from "@/components/RoleCheckQuiz";
 import { YouTubeIntro } from "@/components/YouTubeIntro";
+import { CoachingPainPoints } from "@/components/CoachingPainPoints";
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
