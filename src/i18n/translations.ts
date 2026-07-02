@@ -320,8 +320,8 @@ export const translations: Translations = {
 
   // Familienaufstellung Page
   "family.title": {
-    de: "Systemisches 1:1 Coaching & Familienaufstellung im Einzelsetting in Freiburg",
-    en: "Systemic 1:1 Coaching & Family Constellation in Individual Setting in Freiburg",
+    de: "Familienaufstellung im Einzelsetting in Freiburg",
+    en: "Family Constellation in Individual Setting in Freiburg",
   },
   "family.intro.title": {
     de: "Was in einer Aufstellung wirklich passiert",
