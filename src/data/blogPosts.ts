@@ -97,11 +97,11 @@ Im Gegensatz zum Aufstellen in Gruppen repräsentieren die Bodenanker die aufges
 
 ### Worauf der Coach achten sollte
 
-Die neuen Möglichkeiten, die Rollen zu besetzen und zu erfahren, bringen dem Klienten Vorteile – auf der anderen Seite gibt es Variationen, die vom Coach vermieden werden sollten. Der Coach hat bei Aufstellungen im 1:1 also noch ein bisschen mehr die Aufgabe, **in seiner Position in der Sitzung zu bleiben**.
+Die neuen Möglichkeiten, die Rollen zu besetzen und zu erfahren, bringen dem Klienten Vorteile – auf der anderen Seite gibt es Variationen, die vom Coach vermieden werden sollten. Als [begleitender Coach](/ueber-mich) habe ich bei Aufstellungen im 1:1 also noch ein bisschen mehr die Aufgabe, **in meiner Position in der Sitzung zu bleiben**.
 
 ### Fazit
 
-Mit den Einzelaufstellungen lassen sich die **[Dynamiken im Familiensystem](/blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt)** sehr detailliert aufzeigen und erleben lassen, um dann gelöst zu werden. Die Perspektiven können getauscht werden für mehr **Klarheit und Verständnis des Ganzen**.`,
+Mit den Einzelaufstellungen lassen sich die **[Dynamiken im Familiensystem](/blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt)** sehr detailliert aufzeigen und erleben lassen, um dann gelöst zu werden. Die Perspektiven können getauscht werden für mehr **Klarheit und Verständnis des Ganzen**. Wenn du selbst spürst, dass ein Thema aus deinem Familiensystem in dir arbeitet: In einem [kostenlosen Erstgespräch](/kontakt) schauen wir gemeinsam, ob eine [Einzelaufstellung in Freiburg oder online](/systemische-familienaufstellung-freiburg) für dich passt.`,
       en: `## Family Constellations in an Individual Session
 
 Many people know family constellations from group constellation evenings. But how does it work in an individual format, with just two people?
@@ -178,7 +178,9 @@ Diese Theorie des systemischen Denkens und seine öffentliche Zurschaustellung d
 
 Und auch wenn die systemische Ansicht mittlerweile weit verbreitet ist, wird die Methode Familienstellen zumindest in der reinen Form von Hellinger im akademischen Zusammenhang nicht mehr positiv bewertet, was an zwei Punkten liegt. Zum einen das Phänomen der **[„repräsentierenden Wahrnehmung"](/blog/das-wissende-feld-wahrnehmung-beim-familienstellen)**, also dass Personen in der Aufstellung die Positionen der Familienmitglieder einnehmen, und der eisernen Ordnung und Rollenbild, also der Hierarchie und dass nach Hellinger die Frau dem Mann folgt.
 
-Doch die kulturabhängig Einsortierung, dass im Westen die Individualisierung vor das System, bzw. Familie gesetzt wird, ist wahrscheinlich der Grund, warum die Theorie und Methode in z.B. südamerikanischen Ländern weiter verbreitet ist. Z.B. in Brasilien gibt es mehr als **fünfmal so viele aktive Familienaufsteller** wie in Deutschland. Aus philosophischer Sicht könnte man vermuten, dass mehr Ordnung bzw. Hierarchie eine größere System- oder Gruppen-Stabilität erzeugen und dafür den Individualismus einschränken. Wodurch klar wird, warum in Ländern in denen die Familie sehr wichtig ist und die Individualisierung der einzelnen Mitglieder untergeordnet ist, wie genau in Brasilien, China, Mexiko und Russland, das Familienstellen so populär geworden ist. In diesem Kontext von Individualisierung und Überordnung der Gruppe vor dem Individuum, stellt sich die Frage, wie einer sehr individualistischen Gesellschaft die Systemik weiter helfen kann – und bleibt bis heute spannend.`,
+Doch die kulturabhängig Einsortierung, dass im Westen die Individualisierung vor das System, bzw. Familie gesetzt wird, ist wahrscheinlich der Grund, warum die Theorie und Methode in z.B. südamerikanischen Ländern weiter verbreitet ist. Z.B. in Brasilien gibt es mehr als **fünfmal so viele aktive Familienaufsteller** wie in Deutschland. Aus philosophischer Sicht könnte man vermuten, dass mehr Ordnung bzw. Hierarchie eine größere System- oder Gruppen-Stabilität erzeugen und dafür den Individualismus einschränken. Wodurch klar wird, warum in Ländern in denen die Familie sehr wichtig ist und die Individualisierung der einzelnen Mitglieder untergeordnet ist, wie genau in Brasilien, China, Mexiko und Russland, das Familienstellen so populär geworden ist. In diesem Kontext von Individualisierung und Überordnung der Gruppe vor dem Individuum, stellt sich die Frage, wie einer sehr individualistischen Gesellschaft die Systemik weiter helfen kann – und bleibt bis heute spannend.
+
+Wenn dich interessiert, wie diese Wurzeln heute konkret in einer [systemischen Beratung in Freiburg](/systemische-beratung-freiburg) wirken oder wie ich [als Coach](/ueber-mich) damit arbeite, findest du auf den jeweiligen Seiten mehr dazu.`,
       en: `## From Freud to Hellinger: Where Family Constellations Really Come From
 
 One man above all laid the foundation for today's family constellations. **Bert Hellinger**. But of course, this therapeutic method belongs in a historical context of many evolving theories in the psychological world. Which is where we'll start.
@@ -310,7 +312,7 @@ Man stellt sich vor, dass all diese Gedanken zu einer quasi inneren Welt führen
 
 ## Der Einfluss unseres Umfelds: Warum wir unser Glück opfern
 
-Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [Kategorie Coaching](/systemische-familienaufstellung-freiburg) fällt.
+Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [systemische Beratung](/systemische-beratung-freiburg) fällt.
 
 Was hält den Menschen davon ab glücklich zu sein? Gedanken, ja und der Glaube an das selbstgemachte Weltbild, ja. Aber ganz greifbar, die direkte Umwelt, Freunde, Familie und alle anderen, die uns begleiten oder begleitet haben.
 
@@ -330,7 +332,7 @@ Die Gedanken um diesen Satz vom Anfang sind nicht mehr da und auch die Anhaftung
 
 Alle Theorien und Methoden kommen letztlich darin zusammen, dass es um ein Gefühl geht, das noch in der Gegenwart ist, obwohl die Situation in der Vergangenheit ist. Es sorgt für bestimmte Gedanken, die sogar zu Konzepten zusammengeführt werden können.
 
-Ob über die Gedanken oder das Gefühl, das Verarbeiten der nicht beendeten Situationen sorgt für Raum, sich selbst wieder mehr zu erkennen. Die Gefühle wieder zuzulassen, die Gedanken mit erwachsenem Bewusstsein neu einzuordnen und die Grundstimmung im Leben zu verändern.`,
+Ob über die Gedanken oder das Gefühl, das Verarbeiten der nicht beendeten Situationen sorgt für Raum, sich selbst wieder mehr zu erkennen. Die Gefühle wieder zuzulassen, die Gedanken mit erwachsenem Bewusstsein neu einzuordnen und die Grundstimmung im Leben zu verändern. Wenn du an deinem eigenen Drehbuch arbeiten möchtest, findest du hier eine [Übersicht meiner Angebote in Freiburg und online](/angebote) – oder du meldest dich direkt für ein [kostenloses Erstgespräch](/kontakt).`,
       en: `## Trapped in an Old Script? The Real Reason Happiness Often Stays Away.
 
 What is happiness in itself, really? Some think of achieving goals or certain things they enjoy doing. But actually, happiness only exists in the present, in the here and now. Many speak of flow.
@@ -393,7 +395,7 @@ Whether through thoughts or feelings, processing the unfinished situations creat
       en: "Do you often feel like a stranger in your own life? Discover how family imprints bury your true Self and how you can stay true to yourself.",
     },
     content: {
-      de: `Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon entschieden. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Es ist wichtig, das Verständnis dafür zu entwickeln, Teil eines Systems zu sein und wie man manchmal zuliebe anderer, zum Gefallen, mitläuft, um Verbindung herzustellen. Ganz unbewusst.
+      de: `Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon entschieden. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Es ist wichtig, das Verständnis dafür zu entwickeln, [Teil eines Systems](/systemische-beratung-freiburg) zu sein und wie man manchmal zuliebe anderer, zum Gefallen, mitläuft, um Verbindung herzustellen. Ganz unbewusst.
 
 ## Zwischen Erwartungen und dem wahren Selbst
 
@@ -401,11 +403,11 @@ Die spannende Frage ist, wann es das wirkliche Selbst ist und wann man sich verb
 
 ## Warum wir lernen, uns anzupassen
 
-Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden. Nur schade, dass die meisten Eltern sich selbst nicht erkannt haben und so auch ihr Kind nicht vollständig als es selbst erkennen. Wir passen uns an. Wir müssen, um dazuzugehören. Mal mehr, mal weniger. Aber mit der Pubertät können wir mehr erkennen, wer wir eigentlich schon immer sind. Wir lösen uns und gehen raus in die Welt. Oder entschließen, am Sicheren festzuhalten. Es kann sein, dass vieles, was dein Selbst ist, von deiner Familie angenommen wird, aber es kann sein, dass einiges nicht angenommen wird. Was an den Moment erinnert, in dem du zum allerersten Mal nicht ganz angenommen oder abgelehnt wurdest. Und erneut kannst du entscheiden, dein Selbst trotzdem zu zeigen oder dich anzupassen und den Zuspruch der Mutter oder des Vaters zu bekommen?
+Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden. Nur schade, dass die meisten Eltern sich selbst nicht erkannt haben und so auch ihr Kind nicht vollständig als es selbst erkennen. Wir passen uns an. Wir müssen, um dazuzugehören. Mal mehr, mal weniger. Aber mit der Pubertät können wir mehr erkennen, wer wir eigentlich schon immer sind. Wir lösen uns und gehen raus in die Welt. Oder entschließen, am Sicheren festzuhalten. Es kann sein, dass vieles, was dein Selbst ist, von deiner Familie angenommen wird, aber es kann sein, dass einiges nicht angenommen wird. Was an den Moment erinnert, in dem du zum allerersten Mal nicht ganz angenommen oder abgelehnt wurdest. Und erneut kannst du entscheiden, dein Selbst trotzdem zu zeigen oder dich anzupassen und den Zuspruch der Mutter oder des Vaters zu bekommen? Mehr dazu, wie [dein Umfeld dein wahres Ich beeinflusst](/blog/fremdbestimmt-oder-frei-umfeld-wahres-ich), findest du in einem eigenen Artikel.
 
 ## Das eigene Umfeld bewusst wählen
 
-Im Idealfall ist ein Elternteil dabei, das einen nehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genauso gewohnt wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die das sehen können, was versteckt und doch da ist.`,
+Im Idealfall ist ein Elternteil dabei, das einen nehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genauso gewohnt wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die das sehen können, was versteckt und doch da ist. In einer [Familienaufstellung](/systemische-familienaufstellung-freiburg) wird dieses Muster oft besonders klar sichtbar – und lässt sich in Bewegung bringen.`,
       en: `All paths in life are shaped — almost decided — by our family roots. Looking at the paths our parents or more distant ancestors took, we often find that we have taken similar steps ourselves. With professions, it can easily become apparent how family history continues. It is important to develop the understanding of being part of a system and how we sometimes go along, to please others, in order to create connection. Completely unconsciously.
 
 ## Between Expectations and the True Self
@@ -462,7 +464,11 @@ Gehen wir an den Anfang. Ich weiß es nicht mehr, aber ich bin auf die Welt geko
 
 Ich musste alles lernen, sprechen, gehen. Und vor allem tun und oft auch sagen, wie es gesagt wurde. Ich glaube, ich verstehe ein bisschen, warum ich verwirrt bin. Aber stimmt es denn jetzt alles, wie ich es tun und sagen sollte?
 
-Was ist wahr und was nicht? Ich glaube, ganz am Anfang wusste ich es.`,
+Was ist wahr und was nicht? Ich glaube, ganz am Anfang wusste ich es.
+
+---
+
+Wenn du diesen Fragen weiter nachgehen willst: In meinem Artikel [„Wie die Umwelt unser wahres Selbst verschüttet"](/blog/wahres-selbst-finden-familiaere-praegung-loesen) vertiefe ich das Thema. Oder du schaust dir an, wie ich in der [systemischen Beratung in Freiburg und online](/systemische-beratung-freiburg) mit genau solchen Suchbewegungen arbeite.`,
       en: `So I am simply who I am, I do what I want, and that's how it is. The blank slate. It happens out of circumstance. Or doesn't it?
 
 But then why do I want something different from others? If it is simply that my parents show me how it's done and I am unwritten, then I would have to do it exactly as they say. Or is there something in me that is entirely me? And what is that? A patchwork construct of the opinions of all the people in my life?
@@ -509,11 +515,11 @@ What is true and what is not? I believe that, right at the very beginning, I kne
     content: {
       de: `## Der unsichtbare Kompass: Warum Familiengeschichten unsere Wege lenken
 
-Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon vorbestimmt. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Du kannst das Verständnis entwickeln, Teil eines Systems zu sein und wie du manchmal zuliebe anderer, zum Gefallen, mitläufst, um Verbindung herzustellen, obwohl es dir nicht wirklich entspricht.
+Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon vorbestimmt. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Du kannst das Verständnis entwickeln, [Teil eines Systems](/systemische-beratung-freiburg) zu sein und wie du manchmal zuliebe anderer, zum Gefallen, mitläufst, um Verbindung herzustellen, obwohl es dir nicht wirklich entspricht.
 
 ## Erwartung vs. Realität: Lebst du dein Leben oder das deiner Eltern?
 
-Die spannende Frage ist, wann es das wirkliche Selbst ist und wann man sich verbiegt. Manch einer stellt vielleicht erst in der Mitte des eigenen Lebens fest, dass das alles gar nicht passt: Der Job, viele Freunde oder sogar Hobbys. Stellen wir uns eine Frau vor, die als Ergotherapeutin arbeitet. Und für ihre Mutter ist nichts wichtiger als den Menschen in ihrem Beruf als Krankenschwester zu helfen. In ihrer Welt ist es so, dass jemand, der nicht als allererstes das Dienen und Helfen für jemand anderen im Sinn hat, ein schlechter Mensch ist. Würde die Frau sich selbst erkennen mit ihrem starken Intellekt und der Forscher-Neugierde oder würde sie ihr Potenzial vor sich selbst und allen verstecken?
+Die spannende Frage ist, wann es das wirkliche Selbst ist und wann man sich verbiegt. Manch einer stellt vielleicht erst in der Mitte des eigenen Lebens fest, dass das alles gar nicht passt: Der Job, viele Freunde oder sogar Hobbys. Stellen wir uns eine Frau vor, die als Ergotherapeutin arbeitet. Und für ihre Mutter ist nichts wichtiger als den Menschen in ihrem Beruf als Krankenschwester zu helfen. In ihrer Welt ist es so, dass jemand, der nicht als allererstes das Dienen und Helfen für jemand anderen im Sinn hat, ein schlechter Mensch ist. Würde die Frau sich selbst erkennen mit ihrem starken Intellekt und der Forscher-Neugierde oder würde sie ihr Potenzial vor sich selbst und allen verstecken? Mehr dazu, wie du dein [wahres Selbst wiederfindest](/blog/wahres-selbst-finden-familiaere-praegung-loesen), im vertiefenden Artikel.
 
 ## Anpassung als Überlebensstrategie: Warum wir unser Potenzial oft verstecken
 
@@ -521,7 +527,7 @@ Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden.
 
 ## Den Kreislauf durchbrechen: So wählst du ein Umfeld, das dich wachsen lässt
 
-Im Idealfall ist ein Elternteil dabei, das einen ganz annehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genau ähnlich und vertraut wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die dein Potential sehen können und dich bestärken.`,
+Im Idealfall ist ein Elternteil dabei, das einen ganz annehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genau ähnlich und vertraut wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die dein Potential sehen können und dich bestärken. Als ersten Schritt kannst du dir mein kostenloses [E-Book „Der Weg zum Ganzsein"](/ebook) holen – oder direkt ein [unverbindliches Kennenlerngespräch](/kontakt) vereinbaren.`,
       en: `## The Invisible Compass: Why Family Stories Steer Our Paths
 
 All paths in life are shaped — almost predetermined — by our family roots. Looking at the paths our parents or more distant ancestors took, we often find that we have taken similar steps ourselves. With professions, it can easily become apparent how family history continues. You can develop the understanding of being part of a system and how you sometimes go along, to please others, in order to create connection, even though it doesn't really match who you are.
@@ -582,7 +588,7 @@ Und im selben Moment ist da etwas anderes, wie wenn man neben einem Wasserfall i
 
 Eine leise Tiefe in der etwas Echtes schlummert. Etwas das wie an einem Seil zupft und wir sehen nur wie es am anderen Ende schwingt und hören wie es klingt. Wie können wir nur etwas, das so schwer zu sehen ist, wirklich wahrnehmen?
 
-Es braucht sicherlich eine Menge Mut sozusagen dem Elefanten im Raum zu begegnen und nicht immer wieder die Geschichten zu erzählen. Doch nach intensiven Prozessen kann sich wirkliche Veränderung einstellen.`,
+Es braucht sicherlich eine Menge Mut sozusagen dem Elefanten im Raum zu begegnen und nicht immer wieder die Geschichten zu erzählen. Doch nach intensiven Prozessen kann sich wirkliche Veränderung einstellen. Genau hier setzt meine Arbeit an: sowohl in der [systemischen Beratung](/systemische-beratung-freiburg) als auch in einer [Familienaufstellung im Einzelsetting](/systemische-familienaufstellung-freiburg). Ein guter erster Schritt ist ein [kostenloses Erstgespräch](/kontakt) – dort schauen wir gemeinsam, was für dich stimmig ist.`,
       en: `Do you know this too? When someone tells you they went to a psychotherapist and it really wasn't good.
 
 ## The Deceptive Relief of Talking
