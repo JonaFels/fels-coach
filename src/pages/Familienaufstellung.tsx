@@ -127,7 +127,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Mid-page MicroCTA */}
-        <section className="py-24 md:py-32 bg-secondary/5">
+        <section className="py-14 md:py-20 bg-secondary/5">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <p className="text-muted-foreground mb-4 italic">
               {t("family.midCta.text")}
