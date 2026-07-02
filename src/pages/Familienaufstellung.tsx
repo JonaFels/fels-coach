@@ -208,7 +208,7 @@ const Familienaufstellung = () => {
 
         {/* FAQ */}
         <section
-          className="py-36 md:py-44"
+          className="py-14 md:py-20"
           aria-labelledby="family-faq-heading"
         >
           <div className="container mx-auto px-4 max-w-3xl">
