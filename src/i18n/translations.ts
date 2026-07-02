@@ -62,15 +62,15 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemisches Coaching & Familienaufstellung in Freiburg",
-    en: "Systemic Coaching & Family Constellation in Freiburg",
+    de: "Systemisches Coaching in Freiburg – Finde deine innere Klarheit",
+    en: "Systemic Coaching in Freiburg – Find your inner clarity",
   },
   "hero.title": {
     de: "„Unklar, zu viel im Kopf, Orientierungslos.“",
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinen 1:1 Coaching.",
+    de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinem 1:1 Coaching.",
     en: "Does your life feel like it has no up or down anymore? As if the center were missing? Systemic methods helped me find my way out. Learn more about my 1:1 coaching here.",
   },
   "hero.cta": {
@@ -810,7 +810,7 @@ export const translations: Translations = {
     en: "From inner storm to your own rock",
   },
   "aboutPreview.text1": {
-    de: "Ich habe viel Unklarheit und orientierungslose Zeiten durch lebt. Und damals schon entschieden, „so kann es nicht weiter gehen“. Schon früh mit sechszehn Jahren zufällig über Familienstellen gestolpert und es seitdem als meinen Weg daraus genutzt.",
+    de: "Ich habe viel Unklarheit und orientierungslose Zeiten durchlebt. Und damals schon entschieden, „so kann es nicht weiter gehen“. Schon früh mit sechzehn Jahren zufällig über Familienstellen gestolpert und es seitdem als meinen Weg daraus genutzt.",
     en: "I have lived through a lot of confusion and disorienting times. And back then I already decided, \"this can't go on like this\". Early on, at sixteen, I stumbled across family constellation by chance and have used it as my way out ever since.",
   },
   "aboutPreview.text2": {

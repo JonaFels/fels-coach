@@ -22,16 +22,16 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string }>> = {
   "/": {
-    de: { title: "Familienaufstellung & Coaching Freiburg | Jona Fels", description: "Familienaufstellung & Coaching in Freiburg. Löse unbewusste Muster – für innere Standfestigkeit und Klarheit." },
-    en: { title: "Family Constellation & Coaching Freiburg | Jona Fels", description: "Family constellation & coaching in Freiburg. Free yourself from unconscious patterns – for inner steadiness and clarity." },
+    de: { title: "Systemisches Coaching Freiburg | Jona Fels", description: "Systemisches Coaching in Freiburg für mehr Klarheit. Fühlst du dich orientierungslos? Lass uns innere Blockaden im 1:1 Setting lösen. Kostenloses Erstgespräch." },
+    en: { title: "Systemic Coaching Freiburg | Jona Fels", description: "Systemic coaching in Freiburg for more clarity. Feeling disoriented? Let's dissolve inner blockages in a 1:1 setting. Free initial consultation." },
   },
   "/angebote": {
     de: { title: "Termine & Preise – Familienaufstellung Freiburg | Jona Fels", description: "Buche Coaching oder Familienaufstellung in Freiburg. Kennenlern-Session 55 €, Coaching 95 € – inkl. kostenlosem Erstgespräch." },
     en: { title: "Appointments & Prices Freiburg | Jona Fels", description: "Book your systemic coaching or family constellation in Freiburg. Intro session €55, coaching with individual constellation €95 – free first call included." },
   },
   "/systemische-familienaufstellung-freiburg": {
-    de: { title: "Familienaufstellung 1:1 Freiburg | Jona Fels", description: "Familienaufstellung als Einzelsitzung in Freiburg: 1:1 mit Bodenankern, geschützt und vertraulich – ohne Gruppe. Jetzt kostenloses Erstgespräch buchen." },
-    en: { title: "Family Constellation 1:1 Freiburg | Jona Fels", description: "Family constellation as a 1:1 individual session in Freiburg with floor anchors – confidential, no group. Book your free intro now." },
+    de: { title: "Familienaufstellung Einzelsetting Freiburg | Jona Fels", description: "Familienaufstellung als Einzelsitzung in Freiburg: 1:1 mit Bodenankern, geschützt und vertraulich – ohne Gruppe. Jetzt kostenloses Erstgespräch buchen." },
+    en: { title: "Family Constellation Individual Session Freiburg | Jona Fels", description: "Family constellation as a 1:1 individual session in Freiburg with floor anchors – confidential, no group. Book your free intro now." },
   },
   "/impulse": {
     de: { title: "Impulse zur Familienaufstellung – Freiburg | Jona Fels", description: "Kostenlose Impulse zu Familienaufstellung & Coaching: Erkenne unbewusste Muster, finde zurück zu dir und werde zum Fels." },
