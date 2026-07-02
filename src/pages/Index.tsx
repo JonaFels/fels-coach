@@ -55,6 +55,7 @@ const Index = () => {
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
         <YouTubeIntro videoId="uzgmW4lzsqk" />
+        <OfferingsCards />
         <CoachingPainPoints />
         <section
           id="rollencheck-quiz"
