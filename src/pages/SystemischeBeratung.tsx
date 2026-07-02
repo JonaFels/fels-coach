@@ -106,7 +106,7 @@ const SystemischeBeratung = () => {
             </p>
             <Button
               size="lg"
-              className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               asChild
             >
               <a href="/kontakt#erstgespraech" onClick={handleCTA}>
