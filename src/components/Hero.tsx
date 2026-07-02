@@ -25,10 +25,13 @@ export const Hero = () => {
               {t("hero.eyebrow")}
             </p>
 
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight leading-[1.2] animate-fade-in-up [animation-delay:50ms]">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight leading-[1.2] animate-fade-in-up [animation-delay:50ms]">
               {t("hero.title")}
             </h1>
-            <p className="mt-10 md:mt-12 text-lg md:text-xl tracking-wide text-muted-foreground max-w-xl leading-[2] animate-fade-in-up [animation-delay:100ms]">
+            <p className="mt-8 md:mt-10 font-serif italic text-xl md:text-2xl text-foreground/80 leading-snug animate-fade-in-up [animation-delay:80ms]">
+              {t("hero.quote")}
+            </p>
+            <p className="mt-8 md:mt-10 text-lg md:text-xl tracking-wide text-muted-foreground max-w-xl leading-[1.9] animate-fade-in-up [animation-delay:120ms]">
               {t("hero.subtitle")}
             </p>
             <div className="mt-14 md:mt-16 flex flex-col items-center md:items-start gap-5 animate-fade-in-up [animation-delay:200ms]">
