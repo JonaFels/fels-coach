@@ -11,12 +11,12 @@ interface SEOHeadProps {
 
 const defaultMeta = {
   de: {
-    title: "Familienaufstellung & Coaching Freiburg | Jona Fels",
-    description: "Systemische Familienaufstellungen und Coaching in Freiburg. Löse unbewusste Muster und finde inneren Frieden mit Jona Fels.",
+    title: "Familienaufstellung Freiburg | Jona Fels",
+    description: "Systemische Familienaufstellungen in Freiburg. Löse unbewusste Muster und finde inneren Frieden mit Jona Fels.",
   },
   en: {
-    title: "Family Constellation & Coaching Freiburg | Jona Fels",
-    description: "Systemic family constellations and coaching in Freiburg. Dissolve unconscious patterns and find inner peace with Jona Fels.",
+    title: "Family Constellation Freiburg | Jona Fels",
+    description: "Systemic family constellations in Freiburg. Dissolve unconscious patterns and find inner peace with Jona Fels.",
   },
 };
 
