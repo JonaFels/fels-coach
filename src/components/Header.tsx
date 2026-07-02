@@ -10,6 +10,7 @@ import { useErstgespraech } from "@/components/HashBookingTrigger";
 import logoIcon from "@/assets/coaching-logo-new.webp";
 
 const NAV_ITEMS = [
+  { key: "nav.beratung", href: "/systemische-beratung-freiburg" },
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
   { key: "nav.ueber", href: "/ueber-mich" },
   { key: "nav.angebote", href: "/angebote" },
