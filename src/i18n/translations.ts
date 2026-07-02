@@ -70,12 +70,16 @@ export const translations: Translations = {
     en: "Systemic Coaching in Freiburg – Find your inner clarity",
   },
   "hero.title": {
-    de: "„Unklar, zu viel im Kopf, Orientierungslos.“",
+    de: "Systemische Beratung in Freiburg – Finde deine innere Klarheit",
+    en: "Systemic Counseling in Freiburg – Find your inner clarity",
+  },
+  "hero.quote": {
+    de: "„Unklar, zu viel im Kopf, orientierungslos.“",
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinem 1:1 Coaching.",
-    en: "Does your life feel like it has no up or down anymore? As if the center were missing? Systemic methods helped me find my way out. Learn more about my 1:1 coaching here.",
+    de: "Dein Leben fühlt sich an, als hätte es kein Oben und Unten mehr? Die innere Mitte fehlt? Ich begleite dich dabei, das Chaos im Kopf zu sortieren. Erfahre hier mehr zu meiner systemischen 1:1 Beratung und Familienaufstellung.",
+    en: "Does your life feel like it has no up or down anymore? Missing your inner center? I'll accompany you in sorting the chaos in your head. Learn more here about my 1:1 systemic counseling and family constellation work.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
