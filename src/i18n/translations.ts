@@ -380,8 +380,8 @@ export const translations: Translations = {
     en: "Family constellation – also called family constellations – is a powerful method of systemic counseling to uncover unconscious dynamics and entanglements. Often we carry burdens or patterns from our family of origin that block us in our current life without being aware of it. In my practice on Karlstraße in Freiburg, I offer this work exclusively as an individual session in a protected 1:1 setting. This is especially suitable if you want to work on your topic in a confidential framework without having to open up in front of a group. A session usually lasts 80 minutes.",
   },
   "family.subtitle": {
-    de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare sichtbar.",
-    en: "When old family patterns block you – make the invisible visible.",
+    de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare im 1:1 Raum sichtbar.",
+    en: "When old family patterns block you – make the invisible visible in a 1:1 space.",
   },
   "family.midCta.text": {
     de: "Klingt das nach dem, wonach du suchst?",
@@ -448,28 +448,28 @@ export const translations: Translations = {
     en: "What are the benefits of a constellation?",
   },
   "family.benefit1": {
-    de: "Verstrickungen zu lösen und neue Perspektiven zu gewinnen.",
+    de: "Verstrickungen lösen und neue Perspektiven gewinnen.",
     en: "Dissolve entanglements and gain new perspectives.",
   },
   "family.benefit2": {
-    de: "Beziehungen zu Angehörigen zu klären und zu heilen.",
+    de: "Beziehungen zu Angehörigen klären und heilen.",
     en: "Clarify and heal relationships with family members.",
   },
   "family.benefit3": {
-    de: "Mehr innere Freiheit, Zufriedenheit und Lebensenergie zu gewinnen.",
-    en: "Gain more inner freedom, satisfaction and life energy.",
+    de: "Mehr innere Freiheit, Zufriedenheit und Lebensenergie spüren.",
+    en: "Feel more inner freedom, satisfaction and life energy.",
   },
   "family.benefit4": {
-    de: "Blockaden aufzulösen und neue Wege zu beschreiten.",
-    en: "Dissolve blockages and embark on new paths.",
+    de: "Blockaden auflösen und neue Lösungswege erkennen.",
+    en: "Dissolve blockages and recognize new solution paths.",
   },
   "family.process.title": {
     de: "Der Ablauf einer Einzelaufstellung mit Bodenankern",
     en: "The process of an individual constellation with floor anchors",
   },
   "family.process.intro": {
-    de: "In der Einzelarbeit nutzen wir Bodenanker, die für Familienmitglieder, relevante Personen oder innere Aspekte Deines Themas stehen. Diese Anker werden auf dem Boden platziert und repräsentieren die räumliche und energetische Beziehung im System. Gemeinsam ergründen wir die Dynamiken, die sich zeigen, und verschieben die Bodenanker im Raum. Dabei gehe ich als Coach in die verschiedenen Rollen und spüre nach, was sich auf den einzelnen Positionen zeigt – und auch Du darfst in Rollen gehen und so Dein System aus verschiedenen Perspektiven erleben. So entsteht Schritt für Schritt mehr Klarheit über die verborgenen Zusammenhänge.",
-    en: "In individual work, we use floor anchors that represent family members, relevant persons, or inner aspects of your topic. These anchors are placed on the floor and represent the spatial and energetic relationship in the system. Together we explore the dynamics that emerge and rearrange the floor anchors in the room. As the therapist, I step into the different roles and sense what reveals itself at each position – and you are also welcome to step into roles and experience your system from different perspectives. Step by step, more clarity about hidden connections emerges.",
+    de: "Statt mit fremden Stellvertretern arbeiten wir in der Einzelarbeit mit sogenannten Bodenankern. Diese kleinen Markierungen am Boden stehen für Familienmitglieder, relevante Personen oder innere Aspekte deines Themas. Gemeinsam ergründen wir die Dynamiken, die sich zeigen, und verschieben die Bodenanker im Raum. Dabei gehe ich als systemischer Begleiter in die verschiedenen Rollen und spüre nach, was sich auf den einzelnen Positionen zeigt – und auch du darfst in Rollen gehen, um dein System aus neuen Perspektiven zu erleben. So entsteht Schritt für Schritt Klarheit.",
+    en: "Instead of external stand-ins, we work in individual sessions with so-called floor anchors. These small markings on the floor represent family members, relevant persons, or inner aspects of your topic. Together we explore the dynamics that emerge and move the floor anchors in the room. As a systemic companion, I step into the different roles and sense what reveals itself at each position – and you are also welcome to step into roles to experience your system from new perspectives. Step by step, clarity emerges.",
   },
   "family.imageCaption": {
     de: "Die farbigen Bodenanker markieren die Positionen von Familienmitgliedern, relevanten Personen oder inneren Anteilen im Raum – sie machen Dynamiken sichtbar und erlebbar.",
