@@ -432,8 +432,8 @@ export const translations: Translations = {
     en: "Is this therapy?",
   },
   "family.faq.a4": {
-    de: "Nein. Familienaufstellung ist eine Form des systemischen Coachings und ersetzt keine Psychotherapie. Wenn du dich aktuell in einer akuten psychischen Krise befindest oder in psychotherapeutischer Behandlung bist, sprich bitte vorher mit deinem Therapeuten – wir schauen dann gemeinsam, ob und wann eine Aufstellung sinnvoll ist.",
-    en: "No. Family constellation is a form of systemic coaching and does not replace psychotherapy. If you are currently in an acute psychological crisis or in psychotherapeutic treatment, please speak with your therapist first – we'll then look together whether and when a constellation makes sense.",
+    de: "Nein. Familienaufstellung ist eine Form der systemischen Begleitung und ersetzt keine Psychotherapie. Wenn du dich aktuell in einer akuten psychischen Krise befindest oder in psychotherapeutischer Behandlung bist, sprich bitte vorher mit deinem Therapeuten – wir schauen dann gemeinsam, ob und wann eine Aufstellung sinnvoll ist.",
+    en: "No. Family constellation is a form of systemic accompaniment and does not replace psychotherapy. If you are currently in an acute psychological crisis or in psychotherapeutic treatment, please speak with your therapist first – we'll then look together whether and when a constellation makes sense.",
   },
   "family.faq.q5": {
     de: "Was, wenn ich emotional werde?",
