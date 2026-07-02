@@ -281,9 +281,13 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-36 md:py-44 bg-muted/40">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <Button size="lg" className="min-h-[44px]" asChild>
+        <section className="py-14 md:py-20 bg-muted/40">
+          <div className="container mx-auto px-4 max-w-2xl text-center">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              asChild
+            >
               <a
                 href="/kontakt#erstgespraech"
                 onClick={(e) => {
@@ -296,6 +300,7 @@ const Familienaufstellung = () => {
               >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("cta.bookNow")}
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </a>
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">
