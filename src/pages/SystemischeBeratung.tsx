@@ -47,7 +47,7 @@ const SystemischeBeratung = () => {
 
       <main id="main-content" className="flex-1">
         {/* Title */}
-        <section className="pt-16 md:pt-24 pb-12 md:pb-16">
+        <section className="pt-12 md:pt-20 pb-10 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="eyebrow mb-6">1:1 in Freiburg &amp; Online</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
