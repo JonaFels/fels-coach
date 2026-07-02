@@ -13,7 +13,7 @@ const linkButtons = [
     href: "/",
     icon: HeartHandshake,
     label: "1:1 Coaching in Freiburg",
-    sub: "Systemisches Coaching & Familienaufstellung",
+    sub: "Systemischer Berater & Familienaufstellung",
   },
   {
     href: "/blog",
@@ -62,7 +62,7 @@ const Links = () => {
         {/* Handle */}
         <h1 className="mt-4 text-lg font-semibold tracking-tight">@jona.fels</h1>
         <p className="text-sm text-white/85 text-center mt-1 max-w-[320px] leading-relaxed">
-          Systemisches Coaching & Familienaufstellung · Freiburg
+          Systemischer Berater & Familienaufstellung · Freiburg
         </p>
 
         {/* Socials */}
@@ -107,7 +107,7 @@ const Links = () => {
             </span>
             <span className="flex-1 text-left leading-tight">
               <span className="block text-[14.5px] font-semibold">1:1 Coaching in Freiburg</span>
-              <span className="block text-[12px] text-[#1f3535]/60">Systemisches Coaching & Familienaufstellung</span>
+              <span className="block text-[12px] text-[#1f3535]/60">Systemischer Berater & Familienaufstellung</span>
             </span>
           </a>
 
