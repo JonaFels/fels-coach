@@ -155,6 +155,48 @@ const BlogPost = () => {
       return id;
     };
 
+    // Interne Auto-Verlinkung: max. 2 Nennungen pro Keyword-Gruppe pro Artikel.
+    const autoLinkGroups: Array<{ href: string; keywords: string[]; count: number; max: number }> = [
+      {
+        href: "/systemische-beratung-freiburg",
+        keywords: ["Systemische Beratung", "1:1 Beratung", "innere Unklarheit", "innere Verzweiflung"],
+        count: 0,
+        max: 2,
+      },
+      {
+        href: "/systemische-familienaufstellung-freiburg",
+        keywords: ["Familienaufstellung", "Familienstellen", "Bodenanker", "Herkunftsfamilie"],
+        count: 0,
+        max: 2,
+      },
+    ];
+    const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const applyAutoLinks = (html: string): string => {
+      // Nur auf Segmente außerhalb bestehender <a>-Tags anwenden, um Nesting/Doppel-Links zu vermeiden.
+      const parts = html.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/gi);
+      return parts
+        .map((part) => {
+          if (/^<a\b/i.test(part)) return part;
+          let out = part;
+          for (const group of autoLinkGroups) {
+            for (const kw of group.keywords) {
+              if (group.count >= group.max) break;
+              const re = new RegExp(`(?<![\\w>])(${escapeRegex(kw)})(?![\\w<])`, "i");
+              if (re.test(out)) {
+                out = out.replace(
+                  re,
+                  `<a href="${group.href}" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/30 hover:decoration-secondary transition-colors">$1</a>`,
+                );
+                group.count += 1;
+              }
+            }
+          }
+          return out;
+        })
+        .join("");
+    };
+
+
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
