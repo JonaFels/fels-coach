@@ -17,16 +17,16 @@ import { trackCTAClick } from "@/lib/tracking";
 
 const faqItems = [
   {
-    q: "Was ist der Unterschied zu einer großen Familienaufstellung?",
-    a: "Die große Aufstellung fokussiert sich oft auf das gesamte Familiensystem über Generationen. In der Beratung bleiben wir ganz nah an deinem aktuellen Gefühl im Hier und Jetzt und schauen gezielt auf die Beziehungen, die diesen konkreten Schmerz gerade in dir auslösen.",
+    q: "Was ist der Unterschied zu einer Familienaufstellung?",
+    a: "In der großen Aufstellung betrachten wir oft das gesamte Familiensystem. In der systemischen Beratung bleiben wir ganz nah an deinem aktuellen Gefühl und schauen gezielt auf die Personen, die diesen konkreten Schmerz gerade auslösen.",
   },
   {
-    q: "Bietest du die Beratung auch online an?",
-    a: "Ja. Diese tiefe Prozess- und Gesprächsarbeit lässt sich auch hervorragend online via Video-Call durchführen. So kannst du in deinem eigenen, sicheren Umfeld bleiben.",
+    q: "Geht das auch online?",
+    a: "Ja, diese tiefe emotionale Gesprächsarbeit lässt sich hervorragend via Video-Call durchführen.",
   },
   {
-    q: "Muss ich mich auf die Sitzung vorbereiten?",
-    a: "Nein. Du musst vorher nichts analysieren oder wissen. Es reicht völlig, wenn du deine aktuelle Unklarheit und deine Gefühle mitbringst. Den Rest erarbeiten wir gemeinsam im Kontakt.",
+    q: "Wie funktioniert die Buchung von Folgeterminen?",
+    a: "Nach unserem Erstgespräch erhältst du Zugang zu meinem digitalen Buchungssystem. Dort kannst du Folgetermine flexibel verwalten und erhältst alle Rechnungen bequem digital.",
   },
 ];
 
@@ -94,7 +94,7 @@ const SystemischeBeratung = () => {
               Kennst du dieses Gefühl von massiver Unklarheit, innerer Verzweiflung und dem
               ständigen Nicht-Wissen, wie es weitergehen soll? In meiner systemischen Beratung
               (oft auch als Coaching bezeichnet) weichen wir diesem Zustand nicht aus, sondern
-              gehen genau dort hinein. Im 1:1 Gespräch bringen wir deine Gefühle in Kontakt und
+              gehen genau dort hinein. Im 1:1 Gespräch in meiner Praxis in der Karlstraße in Freiburg – oder flexibel online – bringen wir deine Gefühle in Kontakt und
               finden heraus, welche Beziehungsdynamiken zu nahestehenden Personen eigentlich
               hinter deinem Schmerz stecken.
             </p>
@@ -126,6 +126,23 @@ const SystemischeBeratung = () => {
           </div>
         </section>
 
+        {/* Stimmen aus der Praxis */}
+        <section className="py-14 md:py-20">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10">
+              Stimmen aus der Praxis
+            </h2>
+            <blockquote className="bg-card border border-border/50 rounded-3xl p-8 md:p-10 shadow-sm">
+              <p className="font-serif italic text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                „Jona hat ein super Gespür, den eigenen Prozess genau dorthin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Absolute Empfehlung.“
+              </p>
+              <footer className="text-muted-foreground text-sm">
+                – Johannes, 39
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
         {/* Für wen ist diese Form der Beratung? */}
         <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
@@ -146,6 +163,50 @@ const SystemischeBeratung = () => {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* So unkompliziert starten wir */}
+        <section className="py-14 md:py-20">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-12 text-center">
+              So unkompliziert starten wir
+            </h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-serif text-xl font-semibold text-secondary">1</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Termin wählen
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Buch dir über den Button einfach einen passenden Termin für unser kostenloses 30-minütiges Vorgespräch.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-serif text-xl font-semibold text-secondary">2</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Kennenlernen
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Wir telefonieren oder sehen uns per Video. Du schilderst dein Anliegen und wir prüfen in Ruhe, ob die Chemie stimmt.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-serif text-xl font-semibold text-secondary">3</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Prozessarbeit
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Wenn alles passt, vereinbaren wir deine erste 1:1 Sitzung – entweder vor Ort in Freiburg oder online.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
