@@ -156,7 +156,7 @@ const Familienaufstellung = () => {
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-10">
               {/* Text */}
               <div>
-                <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
                   {t("family.process.title")}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
