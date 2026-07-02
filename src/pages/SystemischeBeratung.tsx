@@ -51,7 +51,7 @@ const SystemischeBeratung = () => {
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="eyebrow mb-6">1:1 in Freiburg &amp; Online</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-              Systemische Beratung in Freiburg – 1:1 Raum für deine Themen
+              Systemische Beratung &amp; 1:1 Coaching in Freiburg
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
               Klarheit finden, wenn im Kopf vieles gleichzeitig läuft.
@@ -63,10 +63,11 @@ const SystemischeBeratung = () => {
         <section className="pt-8 md:pt-12 pb-20 md:pb-28 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <p className="text-muted-foreground leading-[1.9] text-lg">
-              Nicht jedes Thema erfordert eine tiefe Familienaufstellung. Oft reicht es, die aktuelle
-              Situation aus einer neuen Perspektive zu betrachten. In der systemischen Beratung schauen
-              wir gemeinsam auf das, was dich gerade blockiert – sei es im Beruf, in Beziehungen oder
-              bei wichtigen Entscheidungen.
+              In meiner systemischen Beratung (oft auch als Coaching bezeichnet) nutzen wir das
+              Systembrett und die Arbeit mit inneren Anteilen, um deine aktuelle Lebenssituation im
+              geschützten 1:1 Setting zu ordnen. Nicht jedes Thema erfordert eine tiefe
+              Familienaufstellung – oft reicht ein klarer Blick von außen, um wieder handlungsfähig
+              zu werden: im Beruf, in Beziehungen oder bei wichtigen Entscheidungen.
             </p>
           </div>
         </section>
