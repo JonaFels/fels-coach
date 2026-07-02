@@ -103,9 +103,9 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Benefits with icons */}
-        <section className="py-36 md:py-44">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-8">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center">
               {t("family.benefits.title")}
             </h2>
             <ul className="grid sm:grid-cols-2 gap-4" role="list">
