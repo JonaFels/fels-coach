@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 // Lazy: alle übrigen Routen + Admin (nicht im kritischen Pfad) → kleinerer initialer Bundle
 const Angebote = lazy(() => import("./pages/Angebote"));
 const Familienaufstellung = lazy(() => import("./pages/Familienaufstellung"));
+const SystemischeBeratung = lazy(() => import("./pages/SystemischeBeratung"));
 const Impulse = lazy(() => import("./pages/Ebook"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const UeberMich = lazy(() => import("./pages/UeberMich"));
