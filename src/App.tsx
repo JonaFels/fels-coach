@@ -60,6 +60,7 @@ const App = () => (
               <Route path="/index" element={<Index />} />
               <Route path="/angebote" element={<Angebote />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
+              <Route path="/systemische-beratung-freiburg" element={<SystemischeBeratung />} />
               <Route path="/impulse" element={<Impulse />} />
               {/* Legacy redirect: /ebook -> /impulse (301 via Cloudflare Bulk Redirects; client fallback) */}
               <Route path="/ebook" element={<Impulse />} />
