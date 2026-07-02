@@ -60,7 +60,7 @@ const SystemischeBeratung = () => {
         </section>
 
         {/* Intro */}
-        <section className="pt-8 md:pt-12 pb-20 md:pb-28 bg-muted/40">
+        <section className="pt-6 md:pt-10 pb-14 md:pb-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <p className="text-muted-foreground leading-[1.9] text-lg">
               In meiner systemischen Beratung (oft auch als Coaching bezeichnet) nutzen wir das
@@ -73,7 +73,7 @@ const SystemischeBeratung = () => {
         </section>
 
         {/* Wie wir arbeiten */}
-        <section className="py-20 md:py-28">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-12 text-center">
               Wie wir arbeiten
@@ -96,7 +96,7 @@ const SystemischeBeratung = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 md:py-28 bg-muted/40">
+        <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
               Lass uns einfach mal reden.
