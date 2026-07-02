@@ -897,7 +897,7 @@ export const translations: Translations = {
     en: "Written by",
   },
   "author.title": {
-    de: "Systemischer Coach & Familienaufsteller",
+    de: "Systemischer Berater & Familienaufsteller",
     en: "Systemic Coach & Family Constellation Facilitator",
   },
   "author.bio": {

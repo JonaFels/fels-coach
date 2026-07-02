@@ -178,7 +178,7 @@ export const JsonLd = () => {
           familyName: "Fels",
           jobTitle: "Systemischer Berater & Familienaufsteller",
           description:
-            "Systemischer Coach und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
+            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           telephone: "+4917667608617",

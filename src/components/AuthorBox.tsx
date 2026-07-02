@@ -13,7 +13,7 @@ export const AuthorBox = () => {
           <Link to="/ueber-mich" className="flex-shrink-0">
             <img
               src={profilBild}
-              alt="Jona Fels - Systemischer Coach und Prozessbegleiter in Freiburg"
+              alt="Jona Fels - Systemischer Berater und Prozessbegleiter in Freiburg"
               className="w-24 h-24 rounded-full object-cover object-center border-2 border-secondary/30 hover:border-secondary transition-colors"
               loading="lazy"
             />

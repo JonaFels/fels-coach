@@ -47,7 +47,7 @@ const Links = () => {
           <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-white/90 shadow-xl">
             <img
               src={portrait}
-              alt="Jona Fels – Systemischer Coach in Freiburg"
+              alt="Jona Fels – Systemischer Berater in Freiburg"
               className="w-full h-full object-cover object-[center_18%]"
               loading="eager"
               decoding="async"
