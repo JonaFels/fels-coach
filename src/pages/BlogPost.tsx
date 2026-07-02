@@ -46,7 +46,7 @@ const BlogPost = () => {
       author: { "@type": "Person", name: "Jona Fels", url: "https://fels-coach.de/ueber-mich" },
       publisher: {
         "@type": "Organization",
-        name: "Systemischer Berater & Familienaufstellung",
+        name: "Systemische Beratung & Familienaufstellung",
         logo: { "@type": "ImageObject", url: "https://fels-coach.de/web-app-manifest-512x512.png" },
       },
     };

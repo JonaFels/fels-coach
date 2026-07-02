@@ -21,7 +21,7 @@ const fallbackStyles = {
 const StaticFallback = () => (
   <div style={fallbackStyles.wrap}>
     <header style={fallbackStyles.header}>
-      <a href="/" style={fallbackStyles.brand}>Systemischer Berater &amp; Familienaufstellung</a>
+      <a href="/" style={fallbackStyles.brand}>Systemische Beratung &amp; Familienaufstellung</a>
       <nav style={fallbackStyles.nav} aria-label="Hauptnavigation">
         <a style={fallbackStyles.navLink} href="/systemische-familienaufstellung-freiburg">Familienaufstellung</a>
         <a style={fallbackStyles.navLink} href="/ueber-mich">Über mich</a>
@@ -31,7 +31,7 @@ const StaticFallback = () => (
       </nav>
     </header>
     <main style={fallbackStyles.main}>
-      <p style={fallbackStyles.eyebrow}>Systemischer Berater &amp; Familienaufstellung in Freiburg</p>
+      <p style={fallbackStyles.eyebrow}>Systemische Beratung &amp; Familienaufstellung in Freiburg</p>
       <h1 style={fallbackStyles.h1}>„Unklar, zu viel im Kopf, Orientierungslos.“</h1>
       <p style={fallbackStyles.lead}>Die Seite konnte nicht vollständig geladen werden. Du kannst trotzdem direkt zur Terminbuchung oder zu den wichtigsten Seiten weitergehen.</p>
       <div style={fallbackStyles.ctas}>
