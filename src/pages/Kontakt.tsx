@@ -53,7 +53,7 @@ const Kontakt = () => {
               <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
                 <img
                   src={portrait}
-                  alt="Jona Fels – Systemischer Coach in Freiburg"
+                  alt="Jona Fels – Systemischer Berater in Freiburg"
                   className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
                   loading="eager"
                   decoding="async"

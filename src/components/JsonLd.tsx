@@ -11,10 +11,10 @@ export const JsonLd = () => {
         {
           "@type": ["ProfessionalService", "LocalBusiness"],
           "@id": "https://fels-coach.de/#service",
-          name: "Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels",
+          name: "Systemischer Berater & Familienaufstellung in Freiburg – Jona Fels",
           alternateName: [
             "Jona Fels – Familienaufstellung Freiburg",
-            "Jona Fels – Systemischer Coach Freiburg",
+            "Jona Fels – Systemischer Berater Freiburg",
             "Familienstellen Freiburg – Jona Fels",
             "Familienaufstellung Einzelsitzung Freiburg",
             "Familienstellen Einzelsitzung Freiburg",
@@ -112,12 +112,12 @@ export const JsonLd = () => {
                 itemOffered: {
                   "@type": "Service",
                   "@id": "https://fels-coach.de/#service-kennenlernen",
-                  name: "Kennenlernen – Systemisches Coaching",
+                  name: "Kennenlernen – Systemische Beratung",
                   description:
                     "Erstes Kennenlernen und Einstieg in die systemische Arbeit. Wir klären Ihr Anliegen und schauen, ob die Chemie stimmt.",
                   provider: { "@id": "https://fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
-                  serviceType: "Systemisches Coaching",
+                  serviceType: "Systemische Beratung",
                 },
                 price: "55.00",
                 priceCurrency: "EUR",
@@ -176,9 +176,9 @@ export const JsonLd = () => {
           name: "Jona Fels",
           givenName: "Jona",
           familyName: "Fels",
-          jobTitle: "Systemischer Coach & Familienaufsteller",
+          jobTitle: "Systemischer Berater & Familienaufsteller",
           description:
-            "Systemischer Coach und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
+            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           telephone: "+4917667608617",
@@ -199,7 +199,7 @@ export const JsonLd = () => {
           knowsAbout: [
             "Systemische Familienaufstellung",
             "Familienaufstellung mit Bodenankern",
-            "Systemisches Coaching",
+            "Systemische Beratung",
             "Lösungsorientiertes Coaching",
             "Persönlichkeitsentwicklung",
             "Unbewusste Familienmuster",
@@ -222,7 +222,7 @@ export const JsonLd = () => {
         {
           "@type": "WebSite",
           "@id": "https://fels-coach.de/#website",
-          name: "Systemisches Coaching & Familienaufstellung in Freiburg – Jona Fels",
+          name: "Systemischer Berater & Familienaufstellung in Freiburg – Jona Fels",
           alternateName: "Jona Fels – Familienaufstellung Freiburg",
           url: "https://fels-coach.de",
           description:

@@ -41,7 +41,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
         <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 flex flex-col items-center text-center">
             <img
               src={profilBild}
-              alt="Jona Fels – Systemischer Coach in Freiburg"
+              alt="Jona Fels – Systemischer Berater in Freiburg"
               className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-[center_18%] shadow-md mb-3 no-fade"
               loading="lazy"
               decoding="async"
