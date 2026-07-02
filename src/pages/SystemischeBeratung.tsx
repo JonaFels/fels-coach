@@ -47,7 +47,7 @@ const SystemischeBeratung = () => {
 
       <main id="main-content" className="flex-1">
         {/* Title */}
-        <section className="pt-16 md:pt-24 pb-12 md:pb-16">
+        <section className="pt-12 md:pt-20 pb-10 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="eyebrow mb-6">1:1 in Freiburg &amp; Online</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
@@ -60,7 +60,7 @@ const SystemischeBeratung = () => {
         </section>
 
         {/* Intro */}
-        <section className="pt-8 md:pt-12 pb-20 md:pb-28 bg-muted/40">
+        <section className="pt-6 md:pt-10 pb-14 md:pb-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <p className="text-muted-foreground leading-[1.9] text-lg">
               In meiner systemischen Beratung (oft auch als Coaching bezeichnet) nutzen wir das
@@ -73,7 +73,7 @@ const SystemischeBeratung = () => {
         </section>
 
         {/* Wie wir arbeiten */}
-        <section className="py-20 md:py-28">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-12 text-center">
               Wie wir arbeiten
@@ -96,7 +96,7 @@ const SystemischeBeratung = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 md:py-28 bg-muted/40">
+        <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
               Lass uns einfach mal reden.
@@ -106,7 +106,7 @@ const SystemischeBeratung = () => {
             </p>
             <Button
               size="lg"
-              className="text-base px-10 py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               asChild
             >
               <a href="/kontakt#erstgespraech" onClick={handleCTA}>
