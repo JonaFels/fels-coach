@@ -26,8 +26,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Systemic Counseling & Coaching Freiburg | Jona Fels", description: "Feeling disoriented? Systemic counseling & coaching in Freiburg – 1:1 accompaniment and family constellation as individual sessions. Find clarity." },
   },
   "/systemische-beratung-freiburg": {
-    de: { title: "Systemische Beratung Freiburg | 1:1 Coaching | Jona Fels", description: "Systemische Beratung & 1:1 Coaching in Freiburg: Im geschützten 1:1 Setting begleite ich dich bei Orientierungslosigkeit und Unklarheit. Finde Klarheit und innere Ruhe." },
-    en: { title: "Systemic Counseling Freiburg | 1:1 Coaching | Jona Fels", description: "Systemic counseling & 1:1 coaching in Freiburg: In a protected 1:1 setting, I accompany you through disorientation and uncertainty. Find clarity and inner peace." },
+    de: { title: "Systemische Beratung & Coaching Freiburg | Jona Fels", description: "Innere Verzweiflung und Unklarheit? In der systemischen Beratung (1:1) in Freiburg decken wir verborgene Beziehungsdynamiken auf. Kostenloses Erstgespräch." },
+    en: { title: "Systemic Counseling & Coaching Freiburg | Jona Fels", description: "Inner desperation and uncertainty? In systemic counseling (1:1) in Freiburg we uncover hidden relationship dynamics. Free initial consultation." },
   },
   "/angebote": {
     de: { title: "Termine & Preise – Familienaufstellung Freiburg | Jona Fels", description: "Buche Coaching oder Familienaufstellung in Freiburg. Kennenlern-Session 55 €, Coaching 95 € – inkl. kostenlosem Erstgespräch." },
