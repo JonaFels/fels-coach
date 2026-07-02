@@ -151,7 +151,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Process */}
-        <section className="py-36 md:py-44 bg-muted/40">
+        <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-10">
               {/* Text */}
