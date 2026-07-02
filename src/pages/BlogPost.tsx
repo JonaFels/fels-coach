@@ -155,6 +155,48 @@ const BlogPost = () => {
       return id;
     };
 
+    // Interne Auto-Verlinkung: max. 2 Nennungen pro Keyword-Gruppe pro Artikel.
+    const autoLinkGroups: Array<{ href: string; keywords: string[]; count: number; max: number }> = [
+      {
+        href: "/systemische-beratung-freiburg",
+        keywords: ["Systemische Beratung", "1:1 Beratung", "innere Unklarheit", "innere Verzweiflung"],
+        count: 0,
+        max: 2,
+      },
+      {
+        href: "/systemische-familienaufstellung-freiburg",
+        keywords: ["Familienaufstellung", "Familienstellen", "Bodenanker", "Herkunftsfamilie"],
+        count: 0,
+        max: 2,
+      },
+    ];
+    const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const applyAutoLinks = (html: string): string => {
+      // Nur auf Segmente außerhalb bestehender <a>-Tags anwenden, um Nesting/Doppel-Links zu vermeiden.
+      const parts = html.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/gi);
+      return parts
+        .map((part) => {
+          if (/^<a\b/i.test(part)) return part;
+          let out = part;
+          for (const group of autoLinkGroups) {
+            for (const kw of group.keywords) {
+              if (group.count >= group.max) break;
+              const re = new RegExp(`(?<![\\w>])(${escapeRegex(kw)})(?![\\w<])`, "i");
+              if (re.test(out)) {
+                out = out.replace(
+                  re,
+                  `<a href="${group.href}" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/30 hover:decoration-secondary transition-colors">$1</a>`,
+                );
+                group.count += 1;
+              }
+            }
+          }
+          return out;
+        })
+        .join("");
+    };
+
+
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
@@ -204,12 +246,14 @@ const BlogPost = () => {
 
       const listMatch = trimmedLine.match(/^\d+\.\s+(.+)/);
       if (listMatch) {
-        const processedItem = listMatch[1]
-          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-          .replace(
-            /\[(.+?)\]\((.+?)\)/g,
-            '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
-          );
+        const processedItem = applyAutoLinks(
+          listMatch[1]
+            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+            .replace(
+              /\[(.+?)\]\((.+?)\)/g,
+              '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
+            ),
+        );
         listItems.push(processedItem);
         return;
       } else if (listItems.length > 0 && trimmedLine !== "") {
@@ -256,12 +300,14 @@ const BlogPost = () => {
         flushList();
       } else if (!trimmedLine.startsWith("#")) {
         flushList();
-        const processedLine = trimmedLine
-          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-          .replace(
-            /\[(.+?)\]\((.+?)\)/g,
-            '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
-          );
+        const processedLine = applyAutoLinks(
+          trimmedLine
+            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+            .replace(
+              /\[(.+?)\]\((.+?)\)/g,
+              '<a href="$2" class="text-secondary font-medium underline underline-offset-2 decoration-secondary/40 hover:decoration-secondary transition-colors">$1</a>',
+            ),
+        );
         const isFirst = !firstParagraphRendered;
         firstParagraphRendered = true;
         elements.push(
@@ -384,9 +430,38 @@ const BlogPost = () => {
               )}
             </div>
 
+            <aside
+              aria-label="Angebote"
+              className="max-w-3xl mt-20 md:mt-28 rounded-2xl border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12"
+            >
+              <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground leading-snug mb-4">
+                Möchtest du an deinen eigenen Themen arbeiten?
+              </h3>
+              <p className="text-foreground/80 leading-[1.7] text-[1.05rem] mb-8 max-w-2xl">
+                Wenn dieser Artikel in dir etwas angestoßen hat und du spürst, dass du dir bei
+                Unklarheiten oder alten Mustern professionelle Begleitung wünschst, lass uns
+                sprechen.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <Link
+                  to="/systemische-beratung-freiburg"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-4 text-center text-sm md:text-base font-medium text-secondary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  Zur systemischen 1:1 Beratung
+                </Link>
+                <Link
+                  to="/systemische-familienaufstellung-freiburg"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
+                >
+                  Zur Familienaufstellung
+                </Link>
+              </div>
+            </aside>
+
             <div className="max-w-3xl mt-20 md:mt-28">
               <RelatedPosts currentSlug={post.slug} />
             </div>
+
 
           </div>
         </div>
