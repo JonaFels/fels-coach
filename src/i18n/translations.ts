@@ -376,8 +376,8 @@ export const translations: Translations = {
     en: "Discover impulses now",
   },
   "family.intro.text": {
-    de: "Familienaufstellung ist eine kraftvolle Methode des systemischen Coachings, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
-    en: "Family constellation is a powerful method of systemic coaching to uncover unconscious dynamics and entanglements within your family system. Often we carry burdens or patterns of our ancestors within us that block us in our current life without being aware of it. A constellation can make these deep-rooted causes visible and pave the way for clarity and lasting change.",
+    de: "Familienaufstellung ist eine kraftvolle Methode der systemischen Beratung, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
+    en: "Family constellation is a powerful method of systemic counseling to uncover unconscious dynamics and entanglements within your family system. Often we carry burdens or patterns of our ancestors within us that block us in our current life without being aware of it. A constellation can make these deep-rooted causes visible and pave the way for clarity and lasting change.",
   },
   "family.subtitle": {
     de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare sichtbar.",
