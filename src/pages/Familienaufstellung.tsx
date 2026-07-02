@@ -79,9 +79,9 @@ const Familienaufstellung = () => {
 
       <main id="main-content" className="flex-1">
         {/* Title + Subline */}
-        <section id="methode" className="pt-16 md:pt-24 pb-16 md:pb-20">
+        <section id="methode" className="pt-12 md:pt-20 pb-10 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
               {t("family.title")}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
@@ -91,21 +91,21 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Intro */}
-        <section className="pt-16 md:pt-24 pb-20 md:pb-28 bg-muted/40">
+        <section className="pt-6 md:pt-10 pb-14 md:pb-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
               {t("family.intro.title")}
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-[1.9] text-lg">
               {t("family.intro.text")}
             </p>
           </div>
         </section>
 
         {/* Benefits with icons */}
-        <section className="py-36 md:py-44">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-8">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center">
               {t("family.benefits.title")}
             </h2>
             <ul className="grid sm:grid-cols-2 gap-4" role="list">
@@ -127,7 +127,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Mid-page MicroCTA */}
-        <section className="py-24 md:py-32 bg-secondary/5">
+        <section className="py-14 md:py-20 bg-secondary/5">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <p className="text-muted-foreground mb-4 italic">
               {t("family.midCta.text")}
@@ -151,12 +151,12 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Process */}
-        <section className="py-36 md:py-44 bg-muted/40">
+        <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-10">
               {/* Text */}
               <div>
-                <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
                   {t("family.process.title")}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -208,7 +208,7 @@ const Familienaufstellung = () => {
 
         {/* FAQ */}
         <section
-          className="py-36 md:py-44"
+          className="py-14 md:py-20"
           aria-labelledby="family-faq-heading"
         >
           <div className="container mx-auto px-4 max-w-3xl">
@@ -236,7 +236,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Social Proof – echte Stimme zur Aufstellungsarbeit */}
-        <section className="py-32 md:py-40">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-2xl">
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground text-center mb-8">
               {t("family.proof.title")}
@@ -256,7 +256,7 @@ const Familienaufstellung = () => {
 
 
         {/* E-Book Soft Conversion */}
-        <section className="py-32 md:py-40 bg-secondary/5">
+        <section className="py-14 md:py-20 bg-secondary/5">
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
               <div className="flex-shrink-0 p-3 rounded-full bg-secondary/10">
@@ -281,9 +281,13 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-36 md:py-44 bg-muted/40">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <Button size="lg" className="min-h-[44px]" asChild>
+        <section className="py-14 md:py-20 bg-muted/40">
+          <div className="container mx-auto px-4 max-w-2xl text-center">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              asChild
+            >
               <a
                 href="/kontakt#erstgespraech"
                 onClick={(e) => {
@@ -296,6 +300,7 @@ const Familienaufstellung = () => {
               >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("cta.bookNow")}
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </a>
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">
