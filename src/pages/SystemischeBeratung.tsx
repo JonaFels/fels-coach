@@ -94,7 +94,7 @@ const SystemischeBeratung = () => {
               Kennst du dieses Gefühl von massiver Unklarheit, innerer Verzweiflung und dem
               ständigen Nicht-Wissen, wie es weitergehen soll? In meiner systemischen Beratung
               (oft auch als Coaching bezeichnet) weichen wir diesem Zustand nicht aus, sondern
-              gehen genau dort hinein. Im 1:1 Gespräch bringen wir deine Gefühle in Kontakt und
+              gehen genau dort hinein. Im 1:1 Gespräch in meiner Praxis in der Karlstraße in Freiburg – oder flexibel online – bringen wir deine Gefühle in Kontakt und
               finden heraus, welche Beziehungsdynamiken zu nahestehenden Personen eigentlich
               hinter deinem Schmerz stecken.
             </p>
