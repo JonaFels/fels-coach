@@ -166,6 +166,50 @@ const SystemischeBeratung = () => {
           </div>
         </section>
 
+        {/* So unkompliziert starten wir */}
+        <section className="py-14 md:py-20">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-12 text-center">
+              So unkompliziert starten wir
+            </h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-serif text-xl font-semibold text-secondary">1</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Termin wählen
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Buch dir über den Button einfach einen passenden Termin für unser kostenloses 30-minütiges Vorgespräch.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-serif text-xl font-semibold text-secondary">2</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Kennenlernen
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Wir telefonieren oder sehen uns per Video. Du schilderst dein Anliegen und wir prüfen in Ruhe, ob die Chemie stimmt.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-serif text-xl font-semibold text-secondary">3</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Prozessarbeit
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Wenn alles passt, vereinbaren wir deine erste 1:1 Sitzung – entweder vor Ort in Freiburg oder online.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
