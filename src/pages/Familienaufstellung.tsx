@@ -236,7 +236,7 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Social Proof – echte Stimme zur Aufstellungsarbeit */}
-        <section className="py-32 md:py-40">
+        <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-2xl">
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground text-center mb-8">
               {t("family.proof.title")}
