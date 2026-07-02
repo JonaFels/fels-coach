@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 // Lazy: alle übrigen Routen + Admin (nicht im kritischen Pfad) → kleinerer initialer Bundle
 const Angebote = lazy(() => import("./pages/Angebote"));
 const Familienaufstellung = lazy(() => import("./pages/Familienaufstellung"));
+const SystemischeBeratung = lazy(() => import("./pages/SystemischeBeratung"));
 const Impulse = lazy(() => import("./pages/Ebook"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const UeberMich = lazy(() => import("./pages/UeberMich"));
@@ -59,6 +60,7 @@ const App = () => (
               <Route path="/index" element={<Index />} />
               <Route path="/angebote" element={<Angebote />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
+              <Route path="/systemische-beratung-freiburg" element={<SystemischeBeratung />} />
               <Route path="/impulse" element={<Impulse />} />
               {/* Legacy redirect: /ebook -> /impulse (301 via Cloudflare Bulk Redirects; client fallback) */}
               <Route path="/ebook" element={<Impulse />} />

@@ -10,8 +10,12 @@ export type Translations = {
 export const translations: Translations = {
   // Navigation
   "nav.coaching": {
-    de: "Coaching",
-    en: "Coaching",
+    de: "Systemische Beratung",
+    en: "Systemic Counseling",
+  },
+  "nav.beratung": {
+    de: "Systemische Beratung",
+    en: "Systemic Counseling",
   },
   "nav.familienaufstellung": {
     de: "Familienaufstellung",
@@ -66,12 +70,16 @@ export const translations: Translations = {
     en: "Systemic Coaching in Freiburg – Find your inner clarity",
   },
   "hero.title": {
-    de: "„Unklar, zu viel im Kopf, Orientierungslos.“",
+    de: "Systemische Beratung in Freiburg – Finde deine innere Klarheit",
+    en: "Systemic Counseling in Freiburg – Find your inner clarity",
+  },
+  "hero.quote": {
+    de: "„Unklar, zu viel im Kopf, orientierungslos.“",
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "Dein Leben fühlt sich an als hätte es kein Oben und Unten mehr? Also würde die Mitte fehlen? Systemische Methoden haben mir da raus geholfen. Erfahre hier mehr zu meinem 1:1 Coaching.",
-    en: "Does your life feel like it has no up or down anymore? As if the center were missing? Systemic methods helped me find my way out. Learn more about my 1:1 coaching here.",
+    de: "Dein Leben fühlt sich an, als hätte es kein Oben und Unten mehr? Die innere Mitte fehlt? Ich begleite dich dabei, das Chaos im Kopf zu sortieren. Erfahre hier mehr zu meiner systemischen 1:1 Beratung und Familienaufstellung.",
+    en: "Does your life feel like it has no up or down anymore? Missing your inner center? I'll accompany you in sorting the chaos in your head. Learn more here about my 1:1 systemic counseling and family constellation work.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -368,8 +376,8 @@ export const translations: Translations = {
     en: "Discover impulses now",
   },
   "family.intro.text": {
-    de: "Familienaufstellung ist eine kraftvolle Methode des systemischen Coachings, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
-    en: "Family constellation is a powerful method of systemic coaching to uncover unconscious dynamics and entanglements within your family system. Often we carry burdens or patterns of our ancestors within us that block us in our current life without being aware of it. A constellation can make these deep-rooted causes visible and pave the way for clarity and lasting change.",
+    de: "Familienaufstellung ist eine kraftvolle Methode der systemischen Beratung, um unbewusste Dynamiken und Verstrickungen innerhalb deines Familiensystems aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Vorfahren in uns, die uns in unserem aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. Eine Aufstellung kann diese tief verwurzelten Ursachen sichtbar machen und den Weg für Klärung und nachhaltige Veränderung ebnen.",
+    en: "Family constellation is a powerful method of systemic counseling to uncover unconscious dynamics and entanglements within your family system. Often we carry burdens or patterns of our ancestors within us that block us in our current life without being aware of it. A constellation can make these deep-rooted causes visible and pave the way for clarity and lasting change.",
   },
   "family.subtitle": {
     de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare sichtbar.",
@@ -424,8 +432,8 @@ export const translations: Translations = {
     en: "Is this therapy?",
   },
   "family.faq.a4": {
-    de: "Nein. Familienaufstellung ist eine Form des systemischen Coachings und ersetzt keine Psychotherapie. Wenn du dich aktuell in einer akuten psychischen Krise befindest oder in psychotherapeutischer Behandlung bist, sprich bitte vorher mit deinem Therapeuten – wir schauen dann gemeinsam, ob und wann eine Aufstellung sinnvoll ist.",
-    en: "No. Family constellation is a form of systemic coaching and does not replace psychotherapy. If you are currently in an acute psychological crisis or in psychotherapeutic treatment, please speak with your therapist first – we'll then look together whether and when a constellation makes sense.",
+    de: "Nein. Familienaufstellung ist eine Form der systemischen Begleitung und ersetzt keine Psychotherapie. Wenn du dich aktuell in einer akuten psychischen Krise befindest oder in psychotherapeutischer Behandlung bist, sprich bitte vorher mit deinem Therapeuten – wir schauen dann gemeinsam, ob und wann eine Aufstellung sinnvoll ist.",
+    en: "No. Family constellation is a form of systemic accompaniment and does not replace psychotherapy. If you are currently in an acute psychological crisis or in psychotherapeutic treatment, please speak with your therapist first – we'll then look together whether and when a constellation makes sense.",
   },
   "family.faq.q5": {
     de: "Was, wenn ich emotional werde?",
