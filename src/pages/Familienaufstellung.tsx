@@ -256,7 +256,7 @@ const Familienaufstellung = () => {
 
 
         {/* E-Book Soft Conversion */}
-        <section className="py-32 md:py-40 bg-secondary/5">
+        <section className="py-14 md:py-20 bg-secondary/5">
           <div className="container mx-auto px-4 max-w-2xl">
             <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
               <div className="flex-shrink-0 p-3 rounded-full bg-secondary/10">
