@@ -79,9 +79,9 @@ const Familienaufstellung = () => {
 
       <main id="main-content" className="flex-1">
         {/* Title + Subline */}
-        <section id="methode" className="pt-16 md:pt-24 pb-16 md:pb-20">
+        <section id="methode" className="pt-12 md:pt-20 pb-10 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
               {t("family.title")}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
@@ -91,12 +91,12 @@ const Familienaufstellung = () => {
         </section>
 
         {/* Intro */}
-        <section className="pt-16 md:pt-24 pb-20 md:pb-28 bg-muted/40">
+        <section className="pt-6 md:pt-10 pb-14 md:pb-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-4">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
               {t("family.intro.title")}
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-[1.9] text-lg">
               {t("family.intro.text")}
             </p>
           </div>
