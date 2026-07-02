@@ -126,6 +126,23 @@ const SystemischeBeratung = () => {
           </div>
         </section>
 
+        {/* Stimmen aus der Praxis */}
+        <section className="py-14 md:py-20 bg-muted/40">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10">
+              Stimmen aus der Praxis
+            </h2>
+            <blockquote className="bg-card border border-border/50 rounded-3xl p-8 md:p-10 shadow-sm">
+              <p className="font-serif italic text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                „Jona hat ein super Gespür, den eigenen Prozess genau dorthin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Absolute Empfehlung.“
+              </p>
+              <footer className="text-muted-foreground text-sm">
+                – Johannes, 39
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
         {/* Für wen ist diese Form der Beratung? */}
         <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
