@@ -61,7 +61,7 @@ const Start = () => {
 
       <main id="main-content">
         {/* 1. Hero */}
-        <section className="pt-24 pb-20 md:pt-36 md:pb-24">
+        <section className="pt-28 pb-24 md:pt-44 md:pb-32">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
               Willkommen
