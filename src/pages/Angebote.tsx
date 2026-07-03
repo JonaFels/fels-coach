@@ -190,53 +190,6 @@ const Angebote = () => {
               </Button>
             </div>
 
-            <SectionDivider className="mb-16 md:mb-20" />
-
-            <p className="text-sm text-muted-foreground text-center mb-8 leading-relaxed max-w-xl mx-auto">
-              {language === "de"
-                ? "Du bist dir schon sicher? Dann buche hier deinen Termin – vor Ort in Freiburg oder online:"
-                : "Already sure? Then book your appointment here – in-person in Freiburg or online:"}
-            </p>
-
-            <div className="grid gap-8 md:grid-cols-2">
-              {offerings.map((offering, index) => (
-                <Card
-                  key={offering.titleKey}
-                  className={`relative group transition-all duration-300 hover:shadow-md hover:-translate-y-1 bg-card border-border/50 rounded-2xl ${
-                    offering.badgeKey ? "ring-1 ring-primary/30" : ""
-                  }`}
-                >
-                  {offering.badgeKey && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-medium px-3 py-1 rounded-full">
-                      {t(offering.badgeKey)}
-                    </div>
-                  )}
-                  <CardHeader className="pb-4">
-                    <CardTitle className="font-serif text-xl">{t(offering.titleKey)}</CardTitle>
-                    <CardDescription className="text-sm mt-2 leading-relaxed">{t(offering.descKey)}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-semibold text-foreground">{offering.price}€</span>
-                      <span className="text-sm text-muted-foreground">{t("offerings.perUnit")}</span>
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button
-                      variant={offering.badgeKey ? "default" : "outline"}
-                      className="w-full group/btn min-h-[44px]"
-                      onClick={() => {
-                        trackCalendarBookingStart("angebote_card", offering.semuid);
-                        openBooking(offering.semuid);
-                      }}
-                    >
-                      {t("offerings.book")}
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
           </div>
         </section>
 
