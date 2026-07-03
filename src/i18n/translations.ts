@@ -166,16 +166,16 @@ export const translations: Translations = {
     en: "Meaningful change needs a clear framework and genuine trust. Here you can see how our collaboration is structured – organized, personal, and on equal footing.",
   },
   "offerings.ablaufTitle": {
-    de: "So buchst du deinen Termin",
-    en: "How to book your appointment",
+    de: "So starten wir zusammen",
+    en: "How we start working together",
   },
   "offerings.step1": {
     de: "Kostenloses Erstgespräch – In 30 Minuten am Telefon klären wir dein Anliegen und schauen, ob die Chemie stimmt. Völlig unverbindlich.",
     en: "Free first call – In 30 minutes by phone we clarify your concern and see if the chemistry fits. Completely non-binding.",
   },
   "offerings.step2": {
-    de: "Termin wählen & buchen – Such dir online direkt einen passenden Termin aus oder schreib mir per E-Mail bzw. WhatsApp – ganz wie es dir lieber ist.",
-    en: "Choose & book your slot – Pick an appointment directly online or write me via email or WhatsApp – whatever you prefer.",
+    de: "Persönlicher Link zum Buchen – Wenn die Chemie stimmt, schicke ich dir anschließend per E-Mail einen direkten Link, über den du bequem deinen Termin online buchen kannst.",
+    en: "Personal booking link – If we are a good fit, I will send you a direct link via email afterwards, so you can easily book your appointment online.",
   },
   "offerings.step3": {
     de: "Sitzung starten – Wir treffen uns in meinem Praxisraum in der Karlstraße 51 in Freiburg oder online per Video – ganz wie es dir lieber ist. Den genauen Ablauf der Sitzung selbst findest du auf der Familienaufstellung-Seite.",
