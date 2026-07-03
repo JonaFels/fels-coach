@@ -120,16 +120,16 @@ const Angebote = () => {
         {/* Preise & Buchung */}
         <section className="py-40 md:py-48 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
+            <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-6">
               {t("offerings.preiseTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-24 md:mb-32 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
+            <p className="text-sm text-muted-foreground text-center mb-32 md:mb-40 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
               {t("offerings.preiseIntro")}
             </p>
 
             {/* Erstgespräch Highlight */}
             <div className="mb-32 md:mb-44 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
-              <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
+              <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-5">
                 {language === "de"
                   ? "Der entspannte Start in unsere Zusammenarbeit"
                   : "A relaxed start to our work together"}
@@ -163,12 +163,12 @@ const Angebote = () => {
             </div>
 
             {/* Preise & Termine – reine Info, keine Buchung */}
-            <div className="mt-4">
-              <div className="text-center mb-8">
-                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
+            <div className="mt-20 md:mt-28">
+              <div className="text-center mb-16 md:mb-20">
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                   {language === "de" ? "Preise & Termine" : "Prices & availability"}
                 </p>
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
                   {language === "de"
                     ? "Was dich erwartet – auf einen Blick"
                     : "Everything at a glance"}
@@ -180,9 +180,9 @@ const Angebote = () => {
                 </p>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2 mb-8">
+              <div className="grid gap-10 md:gap-12 md:grid-cols-2 mb-16 md:mb-20">
                 <div className="rounded-2xl border border-border/60 bg-card p-6 md:p-7">
-                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                  <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                       {language === "de" ? "Kennenlernen-Sitzung" : "Intro session"}
                     </h3>
@@ -190,7 +190,7 @@ const Angebote = () => {
                       {language === "de" ? "Einstieg" : "Entry"}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-7">
                     {language === "de"
                       ? "Dein Einstieg zum reduzierten Preis: Eine vollwertige Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten."
                       : "Your entry point at a reduced price: a full session to place your concern systemically and develop first steps."}
@@ -202,7 +202,7 @@ const Angebote = () => {
                 </div>
 
                 <div className="rounded-2xl border border-secondary/40 bg-secondary/5 p-6 md:p-7">
-                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                  <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                       {language === "de" ? "Coaching mit Einzelaufstellung" : "Coaching with constellation"}
                     </h3>
@@ -210,7 +210,7 @@ const Angebote = () => {
                       {language === "de" ? "Regulär" : "Regular"}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-7">
                     {language === "de"
                       ? "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten."
                       : "80 minutes of focused work on what matters most right now – systemic, solution-oriented, with concrete next steps."}
@@ -222,11 +222,11 @@ const Angebote = () => {
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-muted/40 border border-border/50 p-6 md:p-7 text-sm text-muted-foreground leading-relaxed">
-                <p className="font-medium text-foreground mb-2">
+              <div className="mt-12 md:mt-16 rounded-2xl bg-muted/40 border border-border/50 p-8 md:p-10 text-sm text-muted-foreground leading-relaxed">
+                <p className="font-medium text-foreground mb-4">
                   {language === "de" ? "Wann finden die Termine statt?" : "When are sessions offered?"}
                 </p>
-                <ul className="space-y-1.5">
+                <ul className="space-y-3">
                   <li>
                     • {language === "de"
                       ? "Vor Ort in Freiburg (Karlstraße 51) oder online per Video"
