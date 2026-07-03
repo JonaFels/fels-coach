@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
-import { CalendarCheck, Mail, Loader2 } from "lucide-react";
+import { useEffect } from "react";
+import { CalendarCheck, Mail, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const THERAPSY_URL =
-  "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_KENNENLERNEN =
+  "https://bookings.therapsy.at/?type=596fe883-643f-4ce2-aad7-81791c631b5d&id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_COACHING =
+  "https://bookings.therapsy.at/?type=4a663327-f5e0-4843-be57-24ddcb60ae9f&id=3f27492a3d11dc68041c958654a5b7e6";
 
 const steps = [
   {
     icon: CalendarCheck,
     title: "Termin wählen",
-    text: "Such dir im untenstehenden Kalender deinen Wunschtermin für unsere erste reguläre Session aus.",
+    text: "Wähle unten das passende Format und such dir im Kalender deinen Wunschtermin aus.",
   },
   {
     icon: Mail,
     title: "Postfach checken",
-    text: "Du erhältst direkt im Anschluss deine Bestätigung und die Zugangsdaten zu unserer Digital Academy.",
+    text: "Du erhältst direkt im Anschluss deine Bestätigung mit allen weiteren Infos.",
   },
 ];
 
@@ -78,66 +80,90 @@ const Start = () => {
                 Wähle deine erste Coaching-Session
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Beide Formate sind nach unserem Kennenlernen buchbar. Such dir
-                unten den passenden Termin aus.
+                Klicke auf dein Wunschformat, um direkt im Kalender deinen Termin
+                zu buchen.
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 mb-10">
-              <Card className="overflow-hidden border-border/60 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)]">
-                <CardContent className="p-6 md:p-7">
-                  <div className="flex items-baseline justify-between mb-2 gap-3">
-                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                      Kennenlernen-Sitzung
-                    </h3>
-                    <span className="text-sm font-medium text-secondary whitespace-nowrap">
-                      Einstieg
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                    Dein Einstieg zum reduzierten Preis: Eine vollwertige
-                    Sitzung, in der wir dein Anliegen systemisch einordnen und
-                    erste Lösungsansätze erarbeiten.
-                  </p>
-                  <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
-                    <span className="text-3xl font-semibold text-foreground">
-                      55&nbsp;€
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                      / 80&nbsp;Min.
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="grid gap-6 md:grid-cols-2">
+              <a
+                href={THERAPSY_KENNENLERNEN}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
+              >
+                <Card className="h-full overflow-hidden border-border/60 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
+                  <CardContent className="p-6 md:p-7 flex flex-col h-full">
+                    <div className="flex items-baseline justify-between mb-2 gap-3">
+                      <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
+                        Kennenlernen-Sitzung
+                      </h3>
+                      <span className="text-sm font-medium text-secondary whitespace-nowrap">
+                        Einstieg
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                      Dein Einstieg zum reduzierten Preis: Eine vollwertige
+                      Sitzung, in der wir dein Anliegen systemisch einordnen und
+                      erste Lösungsansätze erarbeiten.
+                    </p>
+                    <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/50 pt-4">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-3xl font-semibold text-foreground">
+                          55&nbsp;€
+                        </span>
+                        <span className="text-sm text-muted-foreground">
+                          / 80&nbsp;Min.
+                        </span>
+                      </div>
+                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary">
+                        Termin buchen
+                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
 
-              <Card className="overflow-hidden border-secondary/40 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] bg-secondary/5">
-                <CardContent className="p-6 md:p-7">
-                  <div className="flex items-baseline justify-between mb-2 gap-3">
-                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                      Coaching mit Einzelaufstellung
-                    </h3>
-                    <span className="text-sm font-medium text-secondary whitespace-nowrap">
-                      Regulär
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                    80 Minuten fokussierte Arbeit an dem, was gerade dran ist –
-                    systemisch, lösungsorientiert und mit konkreten nächsten
-                    Schritten.
-                  </p>
-                  <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
-                    <span className="text-3xl font-semibold text-foreground">
-                      95&nbsp;€
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                      / 80&nbsp;Min.
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
+              <a
+                href={THERAPSY_COACHING}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
+              >
+                <Card className="h-full overflow-hidden border-secondary/40 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] bg-secondary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
+                  <CardContent className="p-6 md:p-7 flex flex-col h-full">
+                    <div className="flex items-baseline justify-between mb-2 gap-3">
+                      <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
+                        Coaching mit Einzelaufstellung
+                      </h3>
+                      <span className="text-sm font-medium text-secondary whitespace-nowrap">
+                        Regulär
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                      80 Minuten fokussierte Arbeit an dem, was gerade dran ist –
+                      systemisch, lösungsorientiert und mit konkreten nächsten
+                      Schritten.
+                    </p>
+                    <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/50 pt-4">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-3xl font-semibold text-foreground">
+                          95&nbsp;€
+                        </span>
+                        <span className="text-sm text-muted-foreground">
+                          / 80&nbsp;Min.
+                        </span>
+                      </div>
+                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary">
+                        Termin buchen
+                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             </div>
-
-            <BookingFrame />
           </div>
         </section>
 
@@ -195,29 +221,6 @@ const Start = () => {
           © {new Date().getFullYear()} Jona Fels · Systemisches Coaching &amp; Familienaufstellung
         </div>
       </footer>
-    </div>
-  );
-};
-
-const BookingFrame = () => {
-  const [loaded, setLoaded] = useState(false);
-  return (
-    <div className="relative bg-white rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] ring-1 ring-black/5 overflow-hidden">
-      {!loaded && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-muted-foreground bg-white z-10">
-          <Loader2 className="w-6 h-6 animate-spin text-secondary" aria-hidden="true" />
-          <p className="text-sm">Lade Kalender…</p>
-        </div>
-      )}
-      <iframe
-        src={THERAPSY_URL}
-        title="Buchungskalender – Erste Coaching-Session"
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        className="block w-full border-0"
-        style={{ height: "700px" }}
-        allow="payment"
-      />
     </div>
   );
 };
