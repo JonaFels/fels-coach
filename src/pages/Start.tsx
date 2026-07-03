@@ -168,7 +168,7 @@ const Start = () => {
         </section>
 
         {/* 3. Nächste Schritte */}
-        <section className="py-28 md:py-40 bg-muted/30">
+        <section className="py-36 md:py-52 bg-muted/30">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
