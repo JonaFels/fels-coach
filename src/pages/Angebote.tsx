@@ -202,7 +202,7 @@ const Angebote = () => {
                 </div>
 
                 <div className="rounded-2xl border border-secondary/40 bg-secondary/5 p-6 md:p-7">
-                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                  <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                       {language === "de" ? "Coaching mit Einzelaufstellung" : "Coaching with constellation"}
                     </h3>
@@ -210,7 +210,7 @@ const Angebote = () => {
                       {language === "de" ? "Regulär" : "Regular"}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-7">
                     {language === "de"
                       ? "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten."
                       : "80 minutes of focused work on what matters most right now – systemic, solution-oriented, with concrete next steps."}
