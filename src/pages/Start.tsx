@@ -4,9 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
@@ -223,14 +220,6 @@ const Start = () => {
         onOpenChange={(open) => !open && setSelectedUrl(null)}
       >
         <DialogContent className="max-w-4xl w-[95vw] p-0 overflow-hidden gap-0">
-          <DialogHeader className="px-6 pt-6 pb-2">
-            <DialogTitle className="font-serif text-xl">
-              Termin buchen
-            </DialogTitle>
-            <DialogDescription>
-              Wähle einen passenden Termin im Kalender aus.
-            </DialogDescription>
-          </DialogHeader>
           {selectedUrl && (
             <div className="w-full h-[60vh] md:h-[65vh]">
               <iframe
