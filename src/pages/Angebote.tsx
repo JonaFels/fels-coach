@@ -123,7 +123,7 @@ const Angebote = () => {
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-6">
               {t("offerings.preiseTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-32 md:mb-40 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
+            <p className="text-sm text-muted-foreground text-center mb-40 md:mb-52 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
               {t("offerings.preiseIntro")}
             </p>
 
@@ -163,7 +163,7 @@ const Angebote = () => {
             </div>
 
             {/* Preise & Termine – reine Info, keine Buchung */}
-            <div className="mt-20 md:mt-28">
+            <div className="mt-32 md:mt-44">
               <div className="text-center mb-16 md:mb-20">
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                   {language === "de" ? "Preise & Termine" : "Prices & availability"}
