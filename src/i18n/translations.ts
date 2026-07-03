@@ -1217,8 +1217,8 @@ export const translations: Translations = {
     en: "We work on solutions that make a difference in your daily life.",
   },
   "offerings.ablaufIntro": {
-    de: "In drei einfachen Schritten von deiner ersten Anfrage bis zur Sitzung – vor Ort in Freiburg oder online.",
-    en: "In three simple steps from your first inquiry to your session – in-person in Freiburg or online.",
+    de: "Erst das kostenlose Erstgespräch, dann der persönliche Buchungslink – so starten wir gemeinsam, vor Ort in Freiburg oder online.",
+    en: "First the free introductory call, then your personal booking link – that's how we start together, in-person in Freiburg or online.",
   },
   "offerings.perUnit": {
     de: "/ 80 Min.",
