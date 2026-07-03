@@ -1,6 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CalendarCheck, Mail, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const THERAPSY_KENNENLERNEN =
