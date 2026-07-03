@@ -64,11 +64,6 @@ const Start = () => {
               Schön, dass du da bist!
               <span className="block text-secondary mt-2">Lass uns starten.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Unser Erstgespräch hat gezeigt, dass wir gemeinsam Großes erreichen
-              können. Hier findest du alles, um deinen offiziellen Start
-              einzurichten.
-            </p>
           </div>
         </section>
 
