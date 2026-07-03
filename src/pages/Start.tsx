@@ -48,7 +48,7 @@ const Start = () => {
             className="w-10 h-10 rounded-full object-cover object-[center_18%]"
           />
           <span className="font-serif text-base text-foreground">
-            Jona Fels · Systemisches Coaching
+            Jona Fels · Systemischer Berater &amp; Coach
           </span>
         </div>
       </header>
@@ -58,17 +58,12 @@ const Start = () => {
         <section className="pt-16 pb-12 md:pt-24 md:pb-16">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
-              Willkommen an Bord
+              Willkommen
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
               Schön, dass du da bist!
               <span className="block text-secondary mt-2">Lass uns starten.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Unser Erstgespräch hat gezeigt, dass wir gemeinsam Großes erreichen
-              können. Hier findest du alles, um deinen offiziellen Start
-              einzurichten.
-            </p>
           </div>
         </section>
 
