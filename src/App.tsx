@@ -30,6 +30,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
+const Start = lazy(() => import("./pages/Start"));
 const ProtectedRouteLazy = lazy(() =>
   import("./components/admin/ProtectedRoute").then((m) => ({ default: m.ProtectedRoute }))
 );
@@ -72,6 +73,7 @@ const App = () => (
               <Route path="/links" element={<Links />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/start" element={<Start />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route
                 path="/admin"
