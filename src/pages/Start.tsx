@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CalendarCheck, Mail, Sparkles, PlayCircle, Loader2 } from "lucide-react";
+import { CalendarCheck, Mail, Loader2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
@@ -10,17 +10,12 @@ const steps = [
   {
     icon: CalendarCheck,
     title: "Termin wählen",
-    text: "Such dir im obigen Kalender deinen Wunschtermin für unsere erste reguläre Session aus.",
+    text: "Such dir im untenstehenden Kalender deinen Wunschtermin für unsere erste reguläre Session aus.",
   },
   {
     icon: Mail,
     title: "Postfach checken",
     text: "Du erhältst direkt im Anschluss deine Bestätigung und die Zugangsdaten zu unserer Digital Academy.",
-  },
-  {
-    icon: Sparkles,
-    title: "Vorbereiten",
-    text: "Mach es dir gemütlich, leg dir Zettel und Stift bereit. Ich freue mich auf dich!",
   },
 ];
 
@@ -75,55 +70,90 @@ const Start = () => {
           </div>
         </section>
 
-        {/* 2. Video / Audio Platzhalter */}
+        {/* 2. Buchungsoptionen */}
         <section className="pb-16 md:pb-20">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <Card className="overflow-hidden border-border/60 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)]">
-              <div className="relative aspect-video bg-gradient-to-br from-secondary/15 via-muted to-primary/10 flex flex-col items-center justify-center text-center p-6">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-md mb-4">
-                  <PlayCircle className="w-9 h-9 md:w-11 md:h-11 text-secondary" aria-hidden="true" />
-                </div>
-                <p className="font-serif text-lg md:text-xl text-foreground mb-1">
-                  Persönliche Begrüßung
-                </p>
-                <p className="text-sm text-muted-foreground max-w-sm">
-                  Hier folgt in Kürze eine kurze Video- bzw. Audio-Botschaft von mir für dich.
-                </p>
-              </div>
-            </Card>
-          </div>
-        </section>
-
-        {/* 3. Terminbuchung */}
-        <section className="pb-16 md:pb-24 bg-muted/30 py-16 md:py-20">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center mb-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-10">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Sichere dir deine erste Coaching-Session
+                Wähle deine erste Coaching-Session
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Wähle unten in Ruhe deinen Wunschtermin. Du erhältst direkt im
-                Anschluss eine Bestätigung per E-Mail.
+                Beide Formate sind nach unserem Kennenlernen buchbar. Such dir
+                unten den passenden Termin aus.
               </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 mb-10">
+              <Card className="overflow-hidden border-border/60 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)]">
+                <CardContent className="p-6 md:p-7">
+                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
+                      Kennenlernen-Sitzung
+                    </h3>
+                    <span className="text-sm font-medium text-secondary whitespace-nowrap">
+                      Einstieg
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                    Dein Einstieg zum reduzierten Preis: Eine vollwertige
+                    Sitzung, in der wir dein Anliegen systemisch einordnen und
+                    erste Lösungsansätze erarbeiten.
+                  </p>
+                  <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
+                    <span className="text-3xl font-semibold text-foreground">
+                      55&nbsp;€
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      / 80&nbsp;Min.
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden border-secondary/40 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] bg-secondary/5">
+                <CardContent className="p-6 md:p-7">
+                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
+                      Coaching mit Einzelaufstellung
+                    </h3>
+                    <span className="text-sm font-medium text-secondary whitespace-nowrap">
+                      Regulär
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                    80 Minuten fokussierte Arbeit an dem, was gerade dran ist –
+                    systemisch, lösungsorientiert und mit konkreten nächsten
+                    Schritten.
+                  </p>
+                  <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
+                    <span className="text-3xl font-semibold text-foreground">
+                      95&nbsp;€
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      / 80&nbsp;Min.
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
             <BookingFrame />
           </div>
         </section>
 
-        {/* 4. Nächste Schritte */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 max-w-5xl">
+        {/* 3. Nächste Schritte */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
                 Was passiert danach?
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                In drei einfachen Schritten sind wir startklar.
+                In zwei einfachen Schritten sind wir startklar.
               </p>
             </div>
 
-            <ol className="grid gap-6 md:grid-cols-3">
+            <ol className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
               {steps.map((step, i) => (
                 <li key={step.title}>
                   <Card className="h-full border-border/60 rounded-2xl transition-all duration-300 hover:shadow-md hover:-translate-y-1">
