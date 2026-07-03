@@ -222,11 +222,11 @@ const Angebote = () => {
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-muted/40 border border-border/50 p-6 md:p-7 text-sm text-muted-foreground leading-relaxed">
-                <p className="font-medium text-foreground mb-2">
+              <div className="mt-12 md:mt-16 rounded-2xl bg-muted/40 border border-border/50 p-8 md:p-10 text-sm text-muted-foreground leading-relaxed">
+                <p className="font-medium text-foreground mb-4">
                   {language === "de" ? "Wann finden die Termine statt?" : "When are sessions offered?"}
                 </p>
-                <ul className="space-y-1.5">
+                <ul className="space-y-3">
                   <li>
                     • {language === "de"
                       ? "Vor Ort in Freiburg (Karlstraße 51) oder online per Video"
