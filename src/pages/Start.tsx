@@ -1,6 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CalendarCheck, Mail, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const THERAPSY_KENNENLERNEN =
@@ -22,6 +29,8 @@ const steps = [
 ];
 
 const Start = () => {
+  const [selectedUrl, setSelectedUrl] = useState<string | null>(null);
+
   useEffect(() => {
     const prev = document.title;
     document.title = "Willkommen – dein Start | Jona Fels";
@@ -81,11 +90,10 @@ const Start = () => {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <a
-                href={THERAPSY_KENNENLERNEN}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
+              <button
+                type="button"
+                onClick={() => setSelectedUrl(THERAPSY_KENNENLERNEN)}
+                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
               >
                 <Card className="h-full overflow-hidden border-border/60 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
                   <CardContent className="p-6 md:p-7 flex flex-col h-full">
@@ -118,13 +126,12 @@ const Start = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </a>
+              </button>
 
-              <a
-                href={THERAPSY_COACHING}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
+              <button
+                type="button"
+                onClick={() => setSelectedUrl(THERAPSY_COACHING)}
+                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
               >
                 <Card className="h-full overflow-hidden border-secondary/40 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] bg-secondary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
                   <CardContent className="p-6 md:p-7 flex flex-col h-full">
@@ -157,7 +164,7 @@ const Start = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -210,6 +217,32 @@ const Start = () => {
           </div>
         </section>
       </main>
+
+      <Dialog
+        open={!!selectedUrl}
+        onOpenChange={(open) => !open && setSelectedUrl(null)}
+      >
+        <DialogContent className="max-w-4xl w-[95vw] p-0 overflow-hidden gap-0">
+          <DialogHeader className="px-6 pt-6 pb-2">
+            <DialogTitle className="font-serif text-xl">
+              Termin buchen
+            </DialogTitle>
+            <DialogDescription>
+              Wähle einen passenden Termin im Kalender aus.
+            </DialogDescription>
+          </DialogHeader>
+          {selectedUrl && (
+            <div className="w-full h-[60vh] md:h-[65vh]">
+              <iframe
+                src={selectedUrl}
+                title="Therapsy Kalender"
+                className="w-full h-full border-0"
+                allow="fullscreen"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <footer className="py-8 border-t border-border/40">
         <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
