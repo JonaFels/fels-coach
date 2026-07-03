@@ -81,8 +81,10 @@ const Start = () => {
                 Wähle deine erste Coaching-Session
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Für den Start buchst du die Kennenlern-Sitzung. Danach kannst du
-                jederzeit ein reguläres Coaching buchen.
+                Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Vor
+                Ort in Freiburg oder online per Video – ganz wie es dir lieber ist.
+                Termine kannst du direkt über die beiden untenstehenden Optionen
+                online buchen – oder per E-Mail und WhatsApp vereinbaren.
               </p>
             </div>
 
