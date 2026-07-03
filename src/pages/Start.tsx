@@ -61,7 +61,7 @@ const Start = () => {
 
       <main id="main-content">
         {/* 1. Hero */}
-        <section className="pt-16 pb-12 md:pt-24 md:pb-16">
+        <section className="pt-24 pb-20 md:pt-36 md:pb-24">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
               Willkommen
@@ -74,7 +74,7 @@ const Start = () => {
         </section>
 
         {/* 2. Buchungsoptionen */}
-        <section className="pb-16 md:pb-20">
+        <section className="pb-24 md:pb-32">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-10">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
@@ -168,7 +168,7 @@ const Start = () => {
         </section>
 
         {/* 3. Nächste Schritte */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-28 md:py-40 bg-muted/30">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
