@@ -182,7 +182,7 @@ const Angebote = () => {
 
               <div className="grid gap-10 md:gap-12 md:grid-cols-2 mb-16 md:mb-20">
                 <div className="rounded-2xl border border-border/60 bg-card p-6 md:p-7">
-                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                  <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                       {language === "de" ? "Kennenlernen-Sitzung" : "Intro session"}
                     </h3>
@@ -190,7 +190,7 @@ const Angebote = () => {
                       {language === "de" ? "Einstieg" : "Entry"}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-7">
                     {language === "de"
                       ? "Dein Einstieg zum reduzierten Preis: Eine vollwertige Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten."
                       : "Your entry point at a reduced price: a full session to place your concern systemically and develop first steps."}
