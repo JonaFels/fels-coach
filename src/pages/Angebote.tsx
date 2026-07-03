@@ -185,8 +185,8 @@ const Angebote = () => {
                 </h2>
                 <p className="text-muted-foreground max-w-xl mx-auto">
                   {language === "de"
-                    ? "Damit du weißt, was möglich ist. Gebucht wird nach unserem kostenlosen Erstgespräch – gemeinsam finden wir den passenden Rahmen."
-                    : "So you know what's possible. Booking happens after our free intro call – together we'll find the right setting."}
+                    ? "Damit du weißt, was möglich ist. Nach unserem kostenlosen Erstgespräch kannst du einen Termin mit mir ausmachen."
+                    : "So you know what's possible. After our free intro call, you can book a session with me."
                 </p>
               </div>
 
