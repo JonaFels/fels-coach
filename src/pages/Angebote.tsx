@@ -164,7 +164,7 @@ const Angebote = () => {
 
             {/* Preise & Termine – reine Info, keine Buchung */}
             <div className="mt-32 md:mt-44">
-              <div className="text-center mb-16 md:mb-20">
+              <div className="text-center mb-24 md:mb-36">
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                   {language === "de" ? "Preise & Termine" : "Prices & availability"}
                 </p>
