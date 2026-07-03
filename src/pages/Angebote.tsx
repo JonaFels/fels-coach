@@ -1,40 +1,22 @@
 import { useState, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ArrowRight, Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
+import { Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { trackCalendarBookingStart, trackCTAClick } from "@/lib/tracking";
+import { trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
-import { SectionDivider } from "@/components/SectionDivider";
 
-
-const offerings = [
-  {
-    titleKey: "offerings.kennenlernen.title",
-    descKey: "offerings.kennenlernen.desc",
-    price: 55,
-    badgeKey: "offerings.badge.einstieg",
-    semuid: "609d5e7a-e208-4715-b073-e99206aebbf7",
-  },
-  {
-    titleKey: "offerings.coaching.title",
-    descKey: "offerings.coaching.desc",
-    price: 95,
-    semuid: "55df32ef-b5d1-468e-a4ba-f7f892398327",
-  },
-];
 
 const Angebote = () => {
   const { t, language } = useLanguage();
-  const { openBooking, BookingDialog } = useOrbnetBooking();
+  const { BookingDialog } = useOrbnetBooking();
   const booking = useErstgespraech();
   const { hash } = useLocation();
 
