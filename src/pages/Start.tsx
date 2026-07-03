@@ -58,7 +58,7 @@ const Start = () => {
         <section className="pt-16 pb-12 md:pt-24 md:pb-16">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
-              Willkommen an Bord
+              Willkommen
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
               Schön, dass du da bist!
