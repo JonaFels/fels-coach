@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Phone, Heart, Shield, Sparkles, MapPin, Video } from "lucide-react";
+import { Phone, Heart, Shield, Sparkles, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
