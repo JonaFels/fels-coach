@@ -61,7 +61,7 @@ const Start = () => {
 
       <main id="main-content">
         {/* 1. Hero */}
-        <section className="pt-24 pb-20 md:pt-36 md:pb-24">
+        <section className="pt-28 pb-24 md:pt-44 md:pb-32">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
               Willkommen
@@ -74,9 +74,9 @@ const Start = () => {
         </section>
 
         {/* 2. Buchungsoptionen */}
-        <section className="pb-24 md:pb-32">
+        <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-10">
+            <div className="text-center mb-16 md:mb-24">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
                 Wähle deine erste Coaching-Session
               </h2>
@@ -168,9 +168,9 @@ const Start = () => {
         </section>
 
         {/* 3. Nächste Schritte */}
-        <section className="py-28 md:py-40 bg-muted/30">
+        <section className="py-36 md:py-52 bg-muted/30">
           <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16 md:mb-24">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
                 Was passiert danach?
               </h2>
@@ -202,7 +202,7 @@ const Start = () => {
               ))}
             </ol>
 
-            <p className="text-center text-sm text-muted-foreground mt-12">
+            <p className="text-center text-sm text-muted-foreground mt-20 md:mt-28">
               Fragen? Schreib mir jederzeit an{" "}
               <a
                 href="mailto:kontakt@fels-coach.de"
