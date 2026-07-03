@@ -74,7 +74,7 @@ const Start = () => {
         </section>
 
         {/* 2. Buchungsoptionen */}
-        <section className="pb-24 md:pb-32">
+        <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-10">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
