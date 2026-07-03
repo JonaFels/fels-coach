@@ -200,10 +200,10 @@ const Start = () => {
             <p className="text-center text-sm text-muted-foreground mt-20 md:mt-28">
               Fragen? Schreib mir jederzeit an{" "}
               <a
-                href="mailto:kontakt@fels-coach.de"
+                href="mailto:jona@fels-coach.de"
                 className="text-secondary underline underline-offset-4 hover:no-underline"
               >
-                kontakt@fels-coach.de
+                jona@fels-coach.de
               </a>
               .
             </p>
