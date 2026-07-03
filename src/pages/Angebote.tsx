@@ -172,6 +172,90 @@ const Angebote = () => {
               </Button>
             </div>
 
+            {/* Preise & Termine – reine Info, keine Buchung */}
+            <div className="mt-4">
+              <div className="text-center mb-8">
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
+                  {language === "de" ? "Preise & Termine" : "Prices & availability"}
+                </p>
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
+                  {language === "de"
+                    ? "Was dich erwartet – auf einen Blick"
+                    : "Everything at a glance"}
+                </h2>
+                <p className="text-muted-foreground max-w-xl mx-auto">
+                  {language === "de"
+                    ? "Damit du weißt, was möglich ist. Gebucht wird nach unserem kostenlosen Erstgespräch – gemeinsam finden wir den passenden Rahmen."
+                    : "So you know what's possible. Booking happens after our free intro call – together we'll find the right setting."}
+                </p>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2 mb-8">
+                <div className="rounded-2xl border border-border/60 bg-card p-6 md:p-7">
+                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
+                      {language === "de" ? "Kennenlernen-Sitzung" : "Intro session"}
+                    </h3>
+                    <span className="text-sm font-medium text-secondary whitespace-nowrap">
+                      {language === "de" ? "Einstieg" : "Entry"}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                    {language === "de"
+                      ? "Dein Einstieg zum reduzierten Preis: Eine vollwertige Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten."
+                      : "Your entry point at a reduced price: a full session to place your concern systemically and develop first steps."}
+                  </p>
+                  <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
+                    <span className="text-3xl font-semibold text-foreground">55&nbsp;€</span>
+                    <span className="text-sm text-muted-foreground">/ 80&nbsp;Min.</span>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-secondary/40 bg-secondary/5 p-6 md:p-7">
+                  <div className="flex items-baseline justify-between mb-2 gap-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
+                      {language === "de" ? "Coaching mit Einzelaufstellung" : "Coaching with constellation"}
+                    </h3>
+                    <span className="text-sm font-medium text-secondary whitespace-nowrap">
+                      {language === "de" ? "Regulär" : "Regular"}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                    {language === "de"
+                      ? "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten."
+                      : "80 minutes of focused work on what matters most right now – systemic, solution-oriented, with concrete next steps."}
+                  </p>
+                  <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
+                    <span className="text-3xl font-semibold text-foreground">95&nbsp;€</span>
+                    <span className="text-sm text-muted-foreground">/ 80&nbsp;Min.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-muted/40 border border-border/50 p-6 md:p-7 text-sm text-muted-foreground leading-relaxed">
+                <p className="font-medium text-foreground mb-2">
+                  {language === "de" ? "Wann finden die Termine statt?" : "When are sessions offered?"}
+                </p>
+                <ul className="space-y-1.5">
+                  <li>
+                    • {language === "de"
+                      ? "Vor Ort in Freiburg (Karlstraße 51) oder online per Video"
+                      : "In person in Freiburg (Karlstraße 51) or online via video"}
+                  </li>
+                  <li>
+                    • {language === "de"
+                      ? "Regelmäßige Termine samstags von 14:00 – 20:00 Uhr"
+                      : "Regular slots on Saturdays, 2 pm – 8 pm"}
+                  </li>
+                  <li>
+                    • {language === "de"
+                      ? "Weitere Zeiten nach Absprache im Erstgespräch möglich"
+                      : "Additional times can be arranged in the intro call"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </section>
 
