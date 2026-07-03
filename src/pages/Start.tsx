@@ -80,11 +80,6 @@ const Start = () => {
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
                 Wähle deine erste Coaching-Session
               </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto">
-                Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Nach
-                unserem kostenlosen Erstgespräch schicke ich dir einen persönlichen
-                Link, über den du deinen Termin bequem online auswählst.
-              </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
