@@ -163,12 +163,12 @@ const Angebote = () => {
             </div>
 
             {/* Preise & Termine – reine Info, keine Buchung */}
-            <div className="mt-4">
-              <div className="text-center mb-8">
-                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
+            <div className="mt-20 md:mt-28">
+              <div className="text-center mb-16 md:mb-20">
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                   {language === "de" ? "Preise & Termine" : "Prices & availability"}
                 </p>
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
                   {language === "de"
                     ? "Was dich erwartet – auf einen Blick"
                     : "Everything at a glance"}
@@ -180,7 +180,7 @@ const Angebote = () => {
                 </p>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2 mb-8">
+              <div className="grid gap-10 md:gap-12 md:grid-cols-2 mb-16 md:mb-20">
                 <div className="rounded-2xl border border-border/60 bg-card p-6 md:p-7">
                   <div className="flex items-baseline justify-between mb-2 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
