@@ -48,7 +48,7 @@ const Start = () => {
             className="w-10 h-10 rounded-full object-cover object-[center_18%]"
           />
           <span className="font-serif text-base text-foreground">
-            Jona Fels · Systemisches Coaching
+            Jona Fels · Systemischer Berater &amp; Coach
           </span>
         </div>
       </header>
