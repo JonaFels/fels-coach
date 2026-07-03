@@ -123,19 +123,9 @@ const Angebote = () => {
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-3">
               {t("offerings.preiseTitle")}
             </h2>
-            <p className="text-sm text-muted-foreground text-center mb-3 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
+            <p className="text-sm text-muted-foreground text-center mb-24 md:mb-32 max-w-[600px] mx-auto leading-relaxed whitespace-pre-line">
               {t("offerings.preiseIntro")}
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-24 md:mb-32">
-              <span className="flex items-center gap-1.5">
-                <MapPin className="h-4 w-4" aria-hidden="true" />
-                {language === "de" ? "Präsenz in Freiburg" : "In-person in Freiburg"}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Video className="h-4 w-4" aria-hidden="true" />
-                {language === "de" ? "Online per Video" : "Online via video"}
-              </span>
-            </div>
 
             {/* Erstgespräch Highlight */}
             <div className="mb-32 md:mb-44 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">

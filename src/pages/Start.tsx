@@ -16,7 +16,7 @@ const steps = [
   {
     icon: CalendarCheck,
     title: "Termin wählen",
-    text: "Wähle unten das passende Format und such dir im Kalender deinen Wunschtermin aus.",
+    text: "Nach dem Erstgespräch erhältst du einen persönlichen Link. Wähle dort das passende Format und such dir im Kalender deinen Wunschtermin aus.",
   },
   {
     icon: Mail,
@@ -81,10 +81,9 @@ const Start = () => {
                 Wähle deine erste Coaching-Session
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Vor
-                Ort in Freiburg oder online per Video – ganz wie es dir lieber ist.
-                Termine kannst du direkt über die beiden untenstehenden Optionen
-                online buchen – oder per E-Mail und WhatsApp vereinbaren.
+                Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Nach
+                unserem kostenlosen Erstgespräch schicke ich dir einen persönlichen
+                Link, über den du deinen Termin bequem online auswählst.
               </p>
             </div>
 

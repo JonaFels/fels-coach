@@ -178,16 +178,16 @@ export const translations: Translations = {
     en: "Personal booking link – If we are a good fit, I will send you a direct link via email afterwards, so you can easily book your appointment online.",
   },
   "offerings.step3": {
-    de: "Sitzung starten – Wir treffen uns in meinem Praxisraum in der Karlstraße 51 in Freiburg oder online per Video – ganz wie es dir lieber ist. Den genauen Ablauf der Sitzung selbst findest du auf der Familienaufstellung-Seite.",
-    en: "Start the session – We meet in my practice room at Karlstraße 51 in Freiburg or online via video – whatever you prefer. You'll find the exact session flow on the Family Constellation page.",
+    de: "Sitzung starten – Den genauen Ablauf findest du auf der Familienaufstellung-Seite.",
+    en: "Start the session – You'll find the exact session flow on the Family Constellation page.",
   },
   "offerings.preiseTitle": {
     de: "Klare Konditionen",
     en: "Clear Conditions",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe. Vor Ort in Freiburg oder online per Video – ganz wie es dir lieber ist. Termine kannst du direkt über die beiden untenstehenden Optionen online buchen – oder per E-Mail und WhatsApp vereinbaren.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
-    en: "Each session lasts 80 minutes – enough time for real depth. In-person in Freiburg or online via video – whatever you prefer. You can book directly via the two options below – or arrange an appointment by email or WhatsApp.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
+    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
+    en: "Each session lasts 80 minutes – enough time for real depth.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
