@@ -4,9 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
