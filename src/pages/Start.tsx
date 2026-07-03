@@ -84,8 +84,8 @@ const Start = () => {
                 Wähle deine erste Coaching-Session
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Klicke auf dein Wunschformat, um direkt im Kalender deinen Termin
-                zu buchen.
+                Für den Start buchst du die Kennenlern-Sitzung. Danach kannst du
+                jederzeit ein reguläres Coaching buchen.
               </p>
             </div>
 
