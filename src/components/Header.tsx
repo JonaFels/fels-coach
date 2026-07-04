@@ -54,7 +54,7 @@ export const Header = () => {
               decoding="async"
             />
             <span className="font-serif text-[0.82rem] sm:text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-tight whitespace-nowrap">
-              Jona Fels <span className="text-foreground/60">–</span> Systemischer Berater
+              Jona Fels <span className="text-foreground/60">–</span> {t("header.brandSubtitle")}
             </span>
           </a>
 
