@@ -21,6 +21,10 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       localStorage.setItem("language", urlLang);
       return urlLang;
     }
+    if (window.location.pathname === "/en") {
+      localStorage.setItem("language", "en");
+      return "en";
+    }
     const saved = localStorage.getItem("language");
     return saved === "en" ? "en" : "de";
   });
