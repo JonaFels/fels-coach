@@ -30,6 +30,15 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     localStorage.setItem("language", lang);
   };
 
+  // Clean ?lang= from URL so it doesn't persist in the address bar
+  React.useEffect(() => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.has("lang")) {
+      url.searchParams.delete("lang");
+      window.history.replaceState({}, "", url.toString());
+    }
+  }, []);
+
   const t = useCallback(
     (key: string): string => {
       // CMS-Override gilt nur für Deutsch (siehe Plan: nur DE)
