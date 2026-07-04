@@ -65,7 +65,7 @@ export const Footer = () => {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="https://www.youtube.com/@JonaFels"
+            href={language === "en" ? "https://www.youtube.com/@JonaFels100" : "https://www.youtube.com/@JonaFels"}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"

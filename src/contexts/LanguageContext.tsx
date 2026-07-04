@@ -15,6 +15,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { getText } = useCMS();
   const [language, setLanguageState] = useState<Language>(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get("lang");
+    if (urlLang === "en" || urlLang === "de") {
+      localStorage.setItem("language", urlLang);
+      return urlLang;
+    }
     const saved = localStorage.getItem("language");
     return saved === "en" ? "en" : "de";
   });
@@ -23,6 +29,15 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLanguageState(lang);
     localStorage.setItem("language", lang);
   };
+
+  // Clean ?lang= from URL so it doesn't persist in the address bar
+  React.useEffect(() => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.has("lang")) {
+      url.searchParams.delete("lang");
+      window.history.replaceState({}, "", url.toString());
+    }
+  }, []);
 
   const t = useCallback(
     (key: string): string => {
