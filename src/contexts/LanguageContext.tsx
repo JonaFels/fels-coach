@@ -15,6 +15,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { getText } = useCMS();
   const [language, setLanguageState] = useState<Language>(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get("lang");
+    if (urlLang === "en" || urlLang === "de") {
+      localStorage.setItem("language", urlLang);
+      return urlLang;
+    }
     const saved = localStorage.getItem("language");
     return saved === "en" ? "en" : "de";
   });
