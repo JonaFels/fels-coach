@@ -31,7 +31,7 @@ const Links = () => {
   const socials = [
     { href: "https://www.instagram.com/jona.fels", icon: Instagram, label: "Instagram" },
     { href: "https://de.linkedin.com/in/jona-fels-coach", icon: Linkedin, label: "LinkedIn" },
-    { href: language === "en" ? "https://www.youtube.com/@JonaFels100" : "https://www.youtube.com/@JonaFels", icon: Youtube, label: "YouTube" },
+    { href: language === "en" ? "https://www.youtube.com/channel/UC8HPUPoQKXvC10jNBec8paw" : "https://www.youtube.com/@JonaFels", icon: Youtube, label: "YouTube" },
     { href: "https://m.facebook.com/profile.php?id=61562014600393", icon: Facebook, label: "Facebook" },
   ];
 
