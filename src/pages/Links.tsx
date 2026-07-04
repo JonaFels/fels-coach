@@ -1,4 +1,5 @@
 import { useErstgespraech } from "@/components/HashBookingTrigger";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
@@ -23,15 +24,16 @@ const linkButtons = [
   },
 ];
 
-const socials = [
-  { href: "https://www.instagram.com/jona.fels", icon: Instagram, label: "Instagram" },
-  { href: "https://de.linkedin.com/in/jona-fels-coach", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://www.youtube.com/@JonaFels", icon: Youtube, label: "YouTube" },
-  { href: "https://m.facebook.com/profile.php?id=61562014600393", icon: Facebook, label: "Facebook" },
-];
-
 const Links = () => {
   const booking = useErstgespraech();
+  const { language } = useLanguage();
+
+  const socials = [
+    { href: "https://www.instagram.com/jona.fels", icon: Instagram, label: "Instagram" },
+    { href: "https://de.linkedin.com/in/jona-fels-coach", icon: Linkedin, label: "LinkedIn" },
+    { href: language === "en" ? "https://www.youtube.com/@JonaFels100" : "https://www.youtube.com/@JonaFels", icon: Youtube, label: "YouTube" },
+    { href: "https://m.facebook.com/profile.php?id=61562014600393", icon: Facebook, label: "Facebook" },
+  ];
 
   return (
     <div
