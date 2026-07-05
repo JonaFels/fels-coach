@@ -51,8 +51,8 @@ export const translations: Translations = {
     en: "Free Consultation",
   },
   "nav.angebote": {
-    de: "Termine & Preise",
-    en: "Appointments & Prices",
+    de: "Dein Weg zu mir",
+    en: "Your Path to Me",
   },
   "nav.blog": {
     de: "Blog",
