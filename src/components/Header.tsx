@@ -6,7 +6,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useCMS } from "@/contexts/CMSContext";
 import { cn } from "@/lib/utils";
 import { trackLinkClick, trackNavToOffers } from "@/lib/tracking";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import logoIcon from "@/assets/coaching-logo-new.webp";
 
 const NAV_ITEMS = [
@@ -16,7 +15,6 @@ const NAV_ITEMS = [
   { key: "nav.angebote", href: "/angebote" },
   { key: "nav.ebook", href: "/impulse" },
   { key: "nav.blog", href: "/blog" },
-  { key: "nav.kontakt", href: "/kontakt" },
 ];
 
 export const Header = () => {
@@ -24,17 +22,12 @@ export const Header = () => {
   const { getImage } = useCMS();
   const logoSrc = getImage("branding.logo", logoIcon);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const booking = useErstgespraech();
 
   const handleNavClick = (key: string, href: string) => {
     trackLinkClick(t(key), href, "header_navigation");
   };
 
-  const handleCTAClick = (e: React.MouseEvent) => {
-    if (booking) {
-      e.preventDefault();
-      booking.openErstgespraech();
-    }
+  const handleCTAClick = () => {
     trackNavToOffers("header");
   };
 
