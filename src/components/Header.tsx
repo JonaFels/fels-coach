@@ -122,9 +122,9 @@ export const Header = () => {
                 asChild
               >
                 <a
-                  href="/kontakt#erstgespraech"
-                  onClick={(e) => {
-                    handleCTAClick(e);
+                  href="/kontakt"
+                  onClick={() => {
+                    handleCTAClick();
                     setIsMobileMenuOpen(false);
                   }}
                 >
