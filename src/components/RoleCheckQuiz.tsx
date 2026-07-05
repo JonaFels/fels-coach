@@ -128,7 +128,6 @@ const intensityFor = (percent: number): { label: string; tone: string } => {
 };
 
 export const RoleCheckQuiz = () => {
-  const booking = useErstgespraech();
   const [step, setStep] = useState<"start" | "quiz" | "lifearea" | "loading" | "result">("start");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
