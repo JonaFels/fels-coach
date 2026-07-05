@@ -14,20 +14,12 @@ export const Footer = () => {
           className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-5"
           aria-label="Footer-Navigation"
         >
-          <a href="/kontakt" className="hover:text-foreground transition-colors no-underline-effect">
-            {t("footer.contact")}
-          </a>
-          <span className="hidden md:inline text-border">·</span>
-          <a href="/angebote#anfahrt" className="hover:text-foreground transition-colors no-underline-effect">
-            {t("nav.anfahrt")}
+          <a href="/impressum" className="hover:text-foreground transition-colors no-underline-effect">
+            {t("footer.imprint")}
           </a>
           <span className="hidden md:inline text-border">·</span>
           <a href="/datenschutz" className="hover:text-foreground transition-colors no-underline-effect">
             {t("footer.privacy")}
-          </a>
-          <span className="hidden md:inline text-border">·</span>
-          <a href="/impressum" className="hover:text-foreground transition-colors no-underline-effect">
-            {t("footer.imprint")}
           </a>
           <span className="hidden md:inline text-border">·</span>
           <a href="/agb" className="hover:text-foreground transition-colors no-underline-effect">
