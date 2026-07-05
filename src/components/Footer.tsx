@@ -84,7 +84,7 @@ export const Footer = () => {
                 >
                   Praxinode
                 </a>
-                {" "}– Webseiten für Therapeuten & Coaches
+                {" "}– Praxissysteme für Therapeuten & Coaches
               </>
             ) : (
               <>
@@ -97,7 +97,7 @@ export const Footer = () => {
                 >
                   Praxinode
                 </a>
-                {" "}– Websites for therapists & coaches
+                {" "}– Practice systems for therapists & coaches
               </>
             )}
           </p>
