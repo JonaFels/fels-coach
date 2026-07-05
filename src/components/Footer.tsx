@@ -33,10 +33,6 @@ export const Footer = () => {
           <a href="/agb" className="hover:text-foreground transition-colors no-underline-effect">
             {t("footer.terms")}
           </a>
-          <span className="hidden md:inline text-border">·</span>
-          <a href="https://geschwister-freiburg.de/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors no-underline-effect">
-            {t("footer.geschwister")}
-          </a>
         </nav>
 
         {/* Social icons */}
