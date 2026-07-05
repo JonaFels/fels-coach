@@ -10,14 +10,12 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 import { useOrbnetBooking } from "@/components/OrbnetBooking";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 
 
 const Angebote = () => {
   const { t, language } = useLanguage();
   const { BookingDialog } = useOrbnetBooking();
-  const booking = useErstgespraech();
   const { hash } = useLocation();
 
   useLayoutEffect(() => {
@@ -145,14 +143,8 @@ const Angebote = () => {
                 asChild
               >
                 <a
-                  href="/kontakt#erstgespraech"
-                  onClick={(e) => {
-                    if (booking) {
-                      e.preventDefault();
-                      booking.openErstgespraech();
-                    }
-                    trackCTAClick("angebote_free_call", "angebote_page", "link");
-                  }}
+                  href="/kontakt"
+                  onClick={() => trackCTAClick("angebote_free_call", "angebote_page", "link")}
                 >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {language === "de"
@@ -297,14 +289,8 @@ const Angebote = () => {
               asChild
             >
               <a
-                href="/kontakt#erstgespraech"
-                onClick={(e) => {
-                  if (booking) {
-                    e.preventDefault();
-                    booking.openErstgespraech();
-                  }
-                  trackCTAClick("angebote_consultation", "angebote_page", "link");
-                }}
+                href="/kontakt"
+                onClick={() => trackCTAClick("angebote_consultation", "angebote_page", "link")}
               >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("offerings.unsureCta")}
