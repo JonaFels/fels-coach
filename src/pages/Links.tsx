@@ -1,4 +1,3 @@
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
@@ -25,7 +24,6 @@ const linkButtons = [
 ];
 
 const Links = () => {
-  const booking = useErstgespraech();
   const { language } = useLanguage();
 
   const socials = [
@@ -114,10 +112,9 @@ const Links = () => {
           </a>
 
           {/* 3. Primärer CTA — Erstgespräch (Akzent: Slate Sage, Brand-Farbe) */}
-          <button
-            type="button"
-            onClick={() => booking?.openErstgespraech()}
-            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25"
+          <a
+            href="/kontakt"
+            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25 no-underline-effect"
             style={{
               background:
                 "linear-gradient(135deg, #2F4F4F 0%, #3d6464 100%)",
@@ -128,7 +125,7 @@ const Links = () => {
             </span>
             <span className="flex-1 text-left">Kostenfreies Erstgespräch</span>
 
-          </button>
+          </a>
 
 
           {/* 4. Blog */}
