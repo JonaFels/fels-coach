@@ -20,13 +20,11 @@ import { useCMS } from "@/contexts/CMSContext";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 const Familienaufstellung = () => {
   const { t, language } = useLanguage();
   const { getImage } = useCMS();
   const familyImage = getImage("family.image", praxisAufstellung);
-  const booking = useErstgespraech();
   const heroRef = useRef<HTMLDivElement>(null);
 
   useHalfHeroHashScroll("#methode", heroRef);
@@ -134,14 +132,8 @@ const Familienaufstellung = () => {
             </p>
             <Button asChild variant="outline" className="min-h-[44px]">
               <Link
-                to="/kontakt#erstgespraech"
-                onClick={(e) => {
-                  if (booking) {
-                    e.preventDefault();
-                    booking.openErstgespraech();
-                  }
-                  trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link");
-                }}
+                to="/kontakt"
+                onClick={() => trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link")}
               >
                 {t("cta.bookNow")}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
@@ -289,14 +281,8 @@ const Familienaufstellung = () => {
               asChild
             >
               <a
-                href="/kontakt#erstgespraech"
-                onClick={(e) => {
-                  if (booking) {
-                    e.preventDefault();
-                    booking.openErstgespraech();
-                  }
-                  trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link");
-                }}
+                href="/kontakt"
+                onClick={() => trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")}
               >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t("cta.bookNow")}

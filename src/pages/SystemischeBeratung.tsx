@@ -12,7 +12,6 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { trackCTAClick } from "@/lib/tracking";
 
 const faqItems = [
@@ -31,15 +30,6 @@ const faqItems = [
 ];
 
 const SystemischeBeratung = () => {
-  const booking = useErstgespraech();
-
-  const handleCTA = (e: React.MouseEvent) => {
-    if (booking) {
-      e.preventDefault();
-      booking.openErstgespraech();
-    }
-    trackCTAClick("beratung_page_cta", "systemische_beratung", "link");
-  };
 
   const cards = [
     {
