@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { trackCTAClick } from "@/lib/tracking";
 
 /**
@@ -10,7 +9,6 @@ import { trackCTAClick } from "@/lib/tracking";
  * - Nur sichtbar auf Mobile (<md), Desktop hat Header-CTA.
  */
 export const StickyMobileCTA = () => {
-  const booking = useErstgespraech();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -33,14 +31,8 @@ export const StickyMobileCTA = () => {
       aria-hidden={!visible}
     >
       <a
-        href="/kontakt#erstgespraech"
-        onClick={(e) => {
-          if (booking) {
-            e.preventDefault();
-            booking.openErstgespraech();
-          }
-          trackCTAClick("sticky_mobile_cta", "sticky_bottom", "link");
-        }}
+        href="/kontakt"
+        onClick={() => trackCTAClick("sticky_mobile_cta", "sticky_bottom", "link")}
         className="flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground rounded-full py-4 shadow-xl shadow-foreground/15 ring-1 ring-foreground/5 font-medium text-base active:scale-[0.98] transition-transform"
       >
         <Phone className="h-4 w-4" aria-hidden="true" />

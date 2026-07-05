@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCMS } from "@/contexts/CMSContext";
 import { trackCTAClick } from "@/lib/tracking";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { Phone } from "lucide-react";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp";
@@ -10,7 +9,6 @@ import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp"
 export const Hero = () => {
   const { t } = useLanguage();
   const { getImage } = useCMS();
-  const booking = useErstgespraech();
   const priorityProps = { fetchpriority: "high" } as Record<string, string>;
   const heroImg = getImage("hero.image", profilBild);
   const heroImgMobile = getImage("hero.image_mobile", profilBildMobile);
@@ -41,14 +39,8 @@ export const Hero = () => {
                 asChild
               >
                 <a
-                  href="/kontakt#erstgespraech"
-                  onClick={(e) => {
-                    if (booking) {
-                      e.preventDefault();
-                      booking.openErstgespraech();
-                    }
-                    trackCTAClick("hero_consultation", "homepage_hero", "link");
-                  }}
+                  href="/kontakt"
+                  onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}
                 >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t("hero.ctaConsultation")}

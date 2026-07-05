@@ -12,7 +12,6 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { trackCTAClick } from "@/lib/tracking";
 
 const faqItems = [
@@ -31,15 +30,6 @@ const faqItems = [
 ];
 
 const SystemischeBeratung = () => {
-  const booking = useErstgespraech();
-
-  const handleCTA = (e: React.MouseEvent) => {
-    if (booking) {
-      e.preventDefault();
-      booking.openErstgespraech();
-    }
-    trackCTAClick("beratung_page_cta", "systemische_beratung", "link");
-  };
 
   const cards = [
     {
@@ -244,7 +234,7 @@ const SystemischeBeratung = () => {
               className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               asChild
             >
-              <a href="/kontakt#erstgespraech" onClick={handleCTA}>
+              <a href="/kontakt" onClick={() => trackCTAClick("beratung_page_cta", "systemische_beratung", "link")}>
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 Kostenloses Erstgespräch buchen
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
