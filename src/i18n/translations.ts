@@ -791,8 +791,8 @@ export const translations: Translations = {
     en: "Self-Help Group Geschwister Freiburg",
   },
   "about.geschwister.text": {
-    de: "Neben meiner Coaching-Praxis habe ich die Selbsthilfegruppe Geschwister Freiburg ins Leben gerufen – einen geschützten Raum speziell für erwachsene Geschwister von Menschen mit Behinderung, die mit den besonderen Herausforderungen ihrer Familiendynamik umgehen.",
-    en: "Alongside my coaching practice, I founded the self-help group Geschwister Freiburg – a safe space specifically for adult siblings of people with disabilities, dealing with the unique challenges of their family dynamics.",
+    de: "Neben meiner Coaching-Praxis habe ich die Selbsthilfegruppe Geschwister Freiburg ins Leben gerufen – einen geschützten Raum speziell für erwachsene Geschwister von Menschen mit Behinderung.",
+    en: "Alongside my coaching practice, I founded the self-help group Geschwister Freiburg – a safe space specifically for adult siblings of people with disabilities.",
   },
   "about.geschwister.cta": {
     de: "Mehr über Geschwister Freiburg",
