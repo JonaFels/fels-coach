@@ -89,7 +89,6 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
-
                 >
                   Praxinode
                 </a>
@@ -107,6 +106,33 @@ export const Footer = () => {
                   Praxinode
                 </a>
                 {" "}– Websites for therapists & coaches
+              </>
+            )}
+          </p>
+          <p className="text-center text-xs text-muted-foreground/70 mt-1">
+            {language === "de" ? (
+              <>
+                <a
+                  href="https://geschwister-freiburg.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
+                >
+                  Geschwister Freiburg
+                </a>
+                {" "}– Selbsthilfegruppe für erwachsene Geschwister von Menschen mit Behinderung
+              </>
+            ) : (
+              <>
+                <a
+                  href="https://geschwister-freiburg.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
+                >
+                  Geschwister Freiburg
+                </a>
+                {" "}– Self-help group for adult siblings of people with disabilities
               </>
             )}
           </p>
