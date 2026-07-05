@@ -1271,6 +1271,10 @@ export const translations: Translations = {
     de: "Kontakt",
     en: "Contact",
   },
+  "footer.geschwister": {
+    de: "Geschwister Freiburg",
+    en: "Geschwister Freiburg",
+  },
 
   // FAQ subtitle
   "faq.subtitle": {
