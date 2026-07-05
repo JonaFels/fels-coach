@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Loader2, Sparkles, ArrowRight, ArrowLeft, RefreshCw } from "lucide-react";
-import { useErstgespraech } from "@/components/HashBookingTrigger";
 import { trackCTAClick } from "@/lib/tracking";
 
 type Category = "lastentraeger" | "anpasser" | "anklaeger";
@@ -593,14 +592,8 @@ export const RoleCheckQuiz = () => {
                   className="min-h-[52px] px-8 text-base w-full sm:w-auto"
                 >
                   <a
-                    href="/kontakt#erstgespraech"
-                    onClick={(e) => {
-                      if (booking) {
-                        e.preventDefault();
-                        booking.openErstgespraech();
-                      }
-                      trackCTAClick("rollencheck_result", `quiz_${primaryType}`, "link");
-                    }}
+                    href="/kontakt"
+                    onClick={() => trackCTAClick("rollencheck_result", `quiz_${primaryType}`, "link")}
                   >
                     {primaryType === "integriert"
                       ? "Potenzial-Gespräch buchen"
