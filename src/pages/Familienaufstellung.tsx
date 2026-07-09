@@ -77,7 +77,7 @@ const Familienaufstellung = () => {
 
       <main id="main-content" className="flex-1">
         {/* Title + Subline */}
-        <section id="methode" className="pt-12 md:pt-20 pb-10 md:pb-14">
+        <section id="methode" className="pt-20 md:pt-28 pb-14 md:pb-20">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
               {t("family.title")}
