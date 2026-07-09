@@ -49,41 +49,11 @@ export const MethodSection = () => {
             ))}
           </div>
 
-          {/* Mein Ansatz – die Werkzeuge, mit denen ich arbeite */}
-          <div className="mt-2 mb-16 rounded-3xl border border-border/40 bg-transparent p-8 md:p-10">
-            <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground text-center mb-3">
-              {language === "de" ? "Mein Ansatz" : "My approach"}
-            </h3>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-8">
-              Ich kombiniere bewährte Methoden – immer mit dem Blick, was dir <em>gerade</em> am besten hilft.
-            </p>
-            <ul className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto" role="list">
-              {[
-                { t: "Familienstellen nach Hellinger", d: "Bodenanker, Repräsentanten, das wissende Feld.", link: "/systemische-familienaufstellung-freiburg" },
-                { t: "Systemischer Blick", d: "Was zu wem gehört – Ordnung im inneren System." },
-                { t: "Innere Anteile & Inneres Kind", d: "Arbeit mit Inneren Anteilen (IFS-inspiriert)." },
-                { t: "Präsenz & Prozessarbeit", d: "Im Moment bleiben – was lebendig ist, darf da sein." },
-              ].map((item) => (
-                <li
-                  key={item.t}
-                  className="flex flex-col gap-1 rounded-2xl border border-border/40 bg-background/70 px-4 py-3"
-                >
-                  {item.link ? (
-                    <Link
-                      to={item.link}
-                      onClick={() => trackCTAClick("method_family_link", "homepage_method", "link")}
-                      className="font-medium text-foreground text-sm md:text-base underline-offset-4 hover:underline transition-colors"
-                    >
-                      {item.t}
-                    </Link>
-                  ) : (
-                    <span className="font-medium text-foreground text-sm md:text-base">{item.t}</span>
-                  )}
-                  <span className="text-muted-foreground text-xs md:text-sm leading-relaxed">{item.d}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-8">
+            {language === "de"
+              ? "Ich kombiniere bewährte Methoden – immer mit dem Blick, was dir gerade am besten hilft."
+              : "I combine proven methods – always with an eye on what helps you most right now."}
+          </p>
 
           <div className="text-center">
             <Link
