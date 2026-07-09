@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight, Check, BookOpen, Quote } from "lucide-react";
+import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -247,30 +247,6 @@ const Familienaufstellung = () => {
 
 
 
-        {/* E-Book Soft Conversion */}
-        <section className="py-14 md:py-20 bg-secondary/5">
-          <div className="container mx-auto px-4 max-w-2xl">
-            <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-card border border-border/60 shadow-sm">
-              <div className="flex-shrink-0 p-3 rounded-full bg-secondary/10">
-                <BookOpen className="h-6 w-6 text-secondary" aria-hidden="true" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                  {t("family.ebookHint.title")}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {t("family.ebookHint.text")}
-                </p>
-                <Button asChild variant="outline" size="sm" className="min-h-[40px]">
-                  <Link to="/impulse">
-                    {t("family.ebookHint.cta")}
-                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Final CTA */}
         <section className="py-14 md:py-20 bg-muted/40">
