@@ -53,6 +53,7 @@ const Index = () => {
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
         <Hero />
+        <SectionDivider />
         <YouTubeIntro videoId="uzgmW4lzsqk" />
         <OfferingsCards />
         <CoachingPainPoints />

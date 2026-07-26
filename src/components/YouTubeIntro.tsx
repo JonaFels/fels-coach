@@ -29,7 +29,7 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
     <section
       id="video-intro"
       aria-labelledby="video-intro-heading"
-      className="py-16 md:py-24 bg-background"
+      className="pt-20 pb-16 md:pt-32 md:pb-24 bg-background"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
