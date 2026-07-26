@@ -66,26 +66,6 @@ export const OfferingsCards = () => {
             </div>
           </div>
 
-          {/* Gemeinsamer Rahmen */}
-          <div className="mt-10 pt-8 border-t border-border">
-            <p className="text-sm uppercase tracking-wider text-muted-foreground text-center mb-5">
-              Gleicher Rahmen für beide Formate
-            </p>
-            <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-foreground" role="list">
-              <li className="inline-flex items-center gap-2">
-                <Clock className="h-4 w-4 text-secondary" aria-hidden="true" />
-                80 Minuten pro Sitzung
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <Euro className="h-4 w-4 text-secondary" aria-hidden="true" />
-                95 € (Kennenlernen 55 €)
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-secondary" aria-hidden="true" />
-                Freiburg vor Ort oder online
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
