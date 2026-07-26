@@ -30,13 +30,13 @@ export const OfferingsCards = () => {
             >
               Familienaufstellung im Einzelsetting
             </Link>
-            . In der Systemischen Beratung arbeiten wir im Dialog und mit dem
-            Systembrett an deiner aktuellen Lebenssituation, lösen Blockaden und
-            ordnen deine inneren Anteile. In der Familienaufstellung machen wir
-            unbewusste Dynamiken deiner Herkunftsfamilie mit Bodenankern im Raum
-            sichtbar und lösen alte Verstrickungen. Du musst dich nicht im Vorfeld
-            für eine Methode entscheiden – wir wählen gemeinsam, was deinem Thema
-            gerade am besten dient.
+            . In der Systemischen Beratung arbeiten wir im geschützten Gespräch
+            an deiner aktuellen Lebenssituation, lösen Blockaden und ordnen deine
+            inneren Anteile. In der Familienaufstellung machen wir unbewusste
+            Dynamiken deiner Herkunftsfamilie mit Bodenankern im Raum sichtbar und
+            lösen alte Verstrickungen. Du musst dich nicht im Vorfeld für eine
+            Methode entscheiden – wir wählen gemeinsam, was deinem Thema gerade am
+            besten dient.
           </p>
         </div>
       </div>
