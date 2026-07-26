@@ -97,7 +97,7 @@ export const Header = () => {
         <div
           className={cn(
             "xl:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            isMobileMenuOpen ? "max-h-96 pb-4" : "max-h-0"
+            isMobileMenuOpen ? "max-h-[32rem] pb-4" : "max-h-0"
           )}
         >
           <nav className="flex flex-col gap-1 pt-2">
