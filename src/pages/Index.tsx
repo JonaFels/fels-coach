@@ -9,7 +9,6 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { MethodSection } from "@/components/MethodSection";
 import { FAQSection } from "@/components/FAQSection";
-import { RoleCheckQuiz } from "@/components/RoleCheckQuiz";
 import { YouTubeIntro } from "@/components/YouTubeIntro";
 import { CoachingPainPoints } from "@/components/CoachingPainPoints";
 import { OfferingsCards } from "@/components/OfferingsCards";
