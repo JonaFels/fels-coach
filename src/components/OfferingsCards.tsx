@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, MessageCircle, Users, Clock, MapPin, Euro } from "lucide-react";
+import { ArrowRight, MessageCircle, Users } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
 
 export const OfferingsCards = () => {
