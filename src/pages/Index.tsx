@@ -12,6 +12,7 @@ import { FAQSection } from "@/components/FAQSection";
 import { YouTubeIntro } from "@/components/YouTubeIntro";
 import { CoachingPainPoints } from "@/components/CoachingPainPoints";
 import { OfferingsCards } from "@/components/OfferingsCards";
+import { PraxisLocal } from "@/components/PraxisLocal";
 
 // Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
@@ -59,6 +60,7 @@ const Index = () => {
         <CoachingPainPoints />
         <SectionDivider />
         <AboutPreview />
+        <PraxisLocal />
         <TestimonialsSection />
         <SectionDivider />
         <MethodSection />

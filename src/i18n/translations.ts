@@ -71,12 +71,12 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Systemisches Coaching in Freiburg – Finde deine innere Klarheit",
-    en: "Systemic Coaching in Freiburg – Find your inner clarity",
+    de: "Praxis in Freiburg · 1:1 Begleitung",
+    en: "Practice in Freiburg · 1:1 guidance",
   },
   "hero.title": {
-    de: "Systemische Beratung & Coaching in Freiburg – Finde deine innere Klarheit",
-    en: "Systemic Counseling & Coaching in Freiburg – Find your inner clarity",
+    de: "Systemische Beratung & Familienaufstellung in Freiburg – Finde deine innere Klarheit",
+    en: "Systemic Counseling & Family Constellation in Freiburg – Find your inner clarity",
   },
   "hero.quote": {
     de: "„Unklar, zu viel im Kopf, orientierungslos.“",
@@ -815,8 +815,8 @@ export const translations: Translations = {
 
   // FAQ Section
   "faq.title": {
-    de: "Häufig gestellte Fragen",
-    en: "Frequently Asked Questions",
+    de: "Häufige Fragen (FAQ)",
+    en: "Frequently Asked Questions (FAQ)",
   },
 
   // Testimonials Section
@@ -854,8 +854,8 @@ export const translations: Translations = {
     en: "How do we do this concretely? – Safely in a 1-on-1 setting",
   },
   "method.title": {
-    de: "Familienaufstellung – alte Muster verstehen und lösen",
-    en: "Family Constellation – understand and release old patterns",
+    de: "Ablauf einer Familienaufstellung im 1:1",
+    en: "How a 1:1 family constellation works",
   },
   "method.description": {
     de: "Ich biete 1:1 Coaching an in denen wir eine Aufstellung zu zweit machen. Wir schauen hinter die Fassade, was bei dir im System wirkt. Und finden Lösungen, um deinen Platz zu finden.",
