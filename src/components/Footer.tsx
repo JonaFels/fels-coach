@@ -72,62 +72,6 @@ export const Footer = () => {
           <p className="text-center text-xs text-muted-foreground tracking-wide">
             © {currentYear} Systemische Beratung & Familienaufstellung in Freiburg – Jona Fels. {t("footer.rights")}
           </p>
-          <p className="text-center text-xs text-muted-foreground/70 mt-2">
-            {language === "de" ? (
-              <>
-                Auch:{" "}
-                <a
-                  href="https://praxinode.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
-                >
-                  Praxinode
-                </a>
-                {" "}– Praxissysteme für Therapeuten & Coaches
-              </>
-            ) : (
-              <>
-                Also:{" "}
-                <a
-                  href="https://praxinode.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
-                >
-                  Praxinode
-                </a>
-                {" "}– Practice systems for therapists & coaches
-              </>
-            )}
-          </p>
-          <p className="text-center text-xs text-muted-foreground/70 mt-1">
-            {language === "de" ? (
-              <>
-                <a
-                  href="https://geschwister-freiburg.de/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
-                >
-                  Geschwister Freiburg
-                </a>
-                {" "}– Selbsthilfegruppe für erwachsene Geschwister von Menschen mit Behinderung
-              </>
-            ) : (
-              <>
-                <a
-                  href="https://geschwister-freiburg.de/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-secondary underline underline-offset-2 decoration-secondary hover:decoration-2 hover:text-secondary/80 transition-colors"
-                >
-                  Geschwister Freiburg
-                </a>
-                {" "}– Self-help group for adult siblings of people with disabilities
-              </>
-            )}
-          </p>
         </div>
       </div>
     </footer>
