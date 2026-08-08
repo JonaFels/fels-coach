@@ -32,6 +32,8 @@ const AdminLogin = lazy(() => import("./pages/admin/Login"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const Start = lazy(() => import("./pages/Start"));
 const ErstgespraechBeta = lazy(() => import("./pages/ErstgespraechBeta"));
+const BookingLogin = lazy(() => import("./pages/booking/Login"));
+const BookingDashboard = lazy(() => import("./pages/booking/Dashboard"));
 const ProtectedRouteLazy = lazy(() =>
   import("./components/admin/ProtectedRoute").then((m) => ({ default: m.ProtectedRoute }))
 );
@@ -78,6 +80,8 @@ const App = () => (
               <Route path="/start" element={<Start />} />
               <Route path="/erstgespraech-beta" element={<ErstgespraechBeta />} />
               <Route path="/admin/login" element={<AdminLogin />} />
+              <Route path="/buchungen/login" element={<BookingLogin />} />
+              <Route path="/buchungen" element={<BookingDashboard />} />
 
               <Route
                 path="/admin"
