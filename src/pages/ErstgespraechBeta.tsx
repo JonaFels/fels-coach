@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
-import { CalendarClock, FileText, StickyNote, User, Receipt, Workflow } from "lucide-react";
+import { CalendarClock, FileText, Receipt, Workflow } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ClientFilePanel } from "@/components/booking/ClientFilePanel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+
 
 /**
  * ─────────────────────────────────────────────────────────────
