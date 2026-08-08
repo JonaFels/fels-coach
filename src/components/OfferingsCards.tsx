@@ -12,7 +12,7 @@ export const OfferingsCards = () => {
           </h2>
         </div>
 
-        <div className="bg-card border border-border rounded-3xl shadow-sm p-8 md:p-12">
+        <div className="bg-card border border-border rounded-md shadow-sm p-8 md:p-12">
           <p className="text-lg md:text-xl text-foreground leading-[1.8]">
             In meinem 1:1 Angebot nutze ich je nach Bedarf Methoden der{" "}
             <Link

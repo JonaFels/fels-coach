@@ -288,7 +288,7 @@ export const RoleCheckQuiz = () => {
   return (
     <section
       aria-labelledby="rollencheck-heading"
-      className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-sm"
+      className="relative overflow-hidden rounded-md border border-border bg-card shadow-sm"
     >
       <div
         aria-hidden="true"
@@ -456,7 +456,7 @@ export const RoleCheckQuiz = () => {
                       type="button"
                       onClick={() => handleLifeArea(opt.value)}
                       disabled={lifeArea !== null}
-                      className={`group rounded-2xl border bg-background transition-all duration-200 px-5 py-5 md:py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
+                      className={`group rounded-lg border bg-background transition-all duration-200 px-5 py-5 md:py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
                         isSelected
                           ? "border-secondary bg-secondary/10 shadow-sm"
                           : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"

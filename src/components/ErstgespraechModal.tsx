@@ -25,7 +25,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
       style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative w-full max-w-4xl my-auto rounded-2xl bg-white shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-4xl my-auto rounded-lg bg-white shadow-2xl overflow-hidden">
 
         <Button
           variant="ghost"

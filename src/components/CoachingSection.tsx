@@ -18,7 +18,7 @@ export const CoachingSection = () => {
             {painPoints.map(({ titleKey }) => (
               <div
                 key={titleKey}
-                className="text-center p-8 rounded-3xl border border-border/30 hover:border-border/60 transition-all duration-300 ease-in-out"
+                className="text-center p-8 rounded-md border border-border/30 hover:border-border/60 transition-all duration-300 ease-in-out"
               >
                 <p className="text-foreground font-medium leading-relaxed">{t(titleKey)}</p>
               </div>

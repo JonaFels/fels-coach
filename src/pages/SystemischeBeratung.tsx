@@ -101,7 +101,7 @@ const SystemischeBeratung = () => {
               {cards.map(({ Icon, title, text }) => (
                 <div
                   key={title}
-                  className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-card border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="w-12 h-12 rounded-xl bg-accent/60 flex items-center justify-center mb-5">
                     <Icon className="h-6 w-6 text-secondary" aria-hidden="true" />
@@ -122,7 +122,7 @@ const SystemischeBeratung = () => {
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10">
               Stimmen aus der Praxis
             </h2>
-            <blockquote className="bg-card border border-border/50 rounded-3xl p-8 md:p-10 shadow-sm">
+            <blockquote className="bg-card border border-border/50 rounded-md p-8 md:p-10 shadow-sm">
               <p className="font-serif italic text-lg md:text-xl text-foreground leading-relaxed mb-6">
                 „Jona hat ein super Gespür, den eigenen Prozess genau dorthin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Absolute Empfehlung.“
               </p>
@@ -143,7 +143,7 @@ const SystemischeBeratung = () => {
               {checkItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 bg-card border border-border/50 rounded-2xl px-5 py-4"
+                  className="flex items-start gap-3 bg-card border border-border/50 rounded-lg px-5 py-4"
                 >
                   <Check
                     className="h-5 w-5 text-secondary shrink-0 mt-0.5"
@@ -163,7 +163,7 @@ const SystemischeBeratung = () => {
               So unkompliziert starten wir
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+              <div className="bg-card border border-border rounded-lg p-8 shadow-sm text-center">
                 <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
                   <span className="font-serif text-xl font-semibold text-secondary">1</span>
                 </div>
@@ -174,7 +174,7 @@ const SystemischeBeratung = () => {
                   Buch dir über den Button einfach einen passenden Termin für unser kostenloses 30-minütiges Vorgespräch.
                 </p>
               </div>
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+              <div className="bg-card border border-border rounded-lg p-8 shadow-sm text-center">
                 <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
                   <span className="font-serif text-xl font-semibold text-secondary">2</span>
                 </div>
@@ -185,7 +185,7 @@ const SystemischeBeratung = () => {
                   Wir telefonieren oder sehen uns per Video. Du schilderst dein Anliegen und wir prüfen in Ruhe, ob die Chemie stimmt.
                 </p>
               </div>
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-sm text-center">
+              <div className="bg-card border border-border rounded-lg p-8 shadow-sm text-center">
                 <div className="w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center mx-auto mb-5">
                   <span className="font-serif text-xl font-semibold text-secondary">3</span>
                 </div>
@@ -206,7 +206,7 @@ const SystemischeBeratung = () => {
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center">
               Häufige Fragen
             </h2>
-            <div className="bg-card rounded-3xl border border-border/50 shadow-sm p-6 md:p-10">
+            <div className="bg-card rounded-md border border-border/50 shadow-sm p-6 md:p-10">
               <Accordion type="single" collapsible className="w-full">
                 {faqItems.map((faq, index) => (
                   <AccordionItem key={index} value={`faq-${index}`}>
@@ -231,7 +231,7 @@ const SystemischeBeratung = () => {
             </h2>
             <Button
               size="lg"
-              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               asChild
             >
               <a href="/kontakt" onClick={() => trackCTAClick("beratung_page_cta", "systemische_beratung", "link")}>

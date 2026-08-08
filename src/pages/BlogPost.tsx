@@ -230,7 +230,7 @@ const BlogPost = () => {
             <img
               src={src}
               alt={altText}
-              className="w-full h-auto sm:rounded-2xl"
+              className="w-full h-auto sm:rounded-lg"
               loading="lazy"
               decoding="async"
             />
@@ -372,7 +372,7 @@ const BlogPost = () => {
 
             {post.image && (
               <figure className="mb-16 md:mb-20 max-w-4xl">
-                <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-sm">
+                <div className="aspect-[16/9] rounded-lg overflow-hidden shadow-sm">
                   <img
                     src={post.image}
                     alt={imageAlt}
@@ -432,7 +432,7 @@ const BlogPost = () => {
 
             <aside
               aria-label="Angebote"
-              className="max-w-3xl mt-20 md:mt-28 rounded-2xl border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12"
+              className="max-w-3xl mt-20 md:mt-28 rounded-lg border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12"
             >
               <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground leading-snug mb-4">
                 Möchtest du an deinen eigenen Themen arbeiten?

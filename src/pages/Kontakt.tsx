@@ -49,7 +49,7 @@ const Kontakt = () => {
         {/* 1. Erstgespräch – Intro + Inline-Kalender */}
         <section id="erstgespraech" className="pt-10 pb-16 md:pt-16 md:pb-24 bg-background">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="bg-white rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] ring-1 ring-black/5 overflow-hidden">
+            <div className="bg-white rounded-md shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] ring-1 ring-black/5 overflow-hidden">
               <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
                 <img
                   src={portrait}

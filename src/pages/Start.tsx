@@ -86,9 +86,9 @@ const Start = () => {
               <button
                 type="button"
                 onClick={() => setSelectedUrl(THERAPSY_KENNENLERNEN)}
-                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
+                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-md"
               >
-                <Card className="h-full overflow-hidden border-border/60 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
+                <Card className="h-full overflow-hidden border-border/60 rounded-md shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
                   <CardContent className="p-6 md:p-7 flex flex-col h-full">
                     <div className="flex items-baseline justify-between mb-2 gap-3">
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
@@ -124,9 +124,9 @@ const Start = () => {
               <button
                 type="button"
                 onClick={() => setSelectedUrl(THERAPSY_COACHING)}
-                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-3xl"
+                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-md"
               >
-                <Card className="h-full overflow-hidden border-secondary/40 rounded-3xl shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] bg-secondary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
+                <Card className="h-full overflow-hidden border-secondary/40 rounded-md shadow-[0_10px_40px_-12px_rgba(15,40,80,0.12)] bg-secondary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_14px_50px_-12px_rgba(15,40,80,0.18)]">
                   <CardContent className="p-6 md:p-7 flex flex-col h-full">
                     <div className="flex items-baseline justify-between mb-2 gap-3">
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
@@ -177,7 +177,7 @@ const Start = () => {
             <ol className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
               {steps.map((step, i) => (
                 <li key={step.title}>
-                  <Card className="h-full border-border/60 rounded-2xl transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                  <Card className="h-full border-border/60 rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <CardContent className="pt-8 pb-7 px-6 text-center">
                       <div className="mx-auto mb-5 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center relative">
                         <step.icon className="w-6 h-6 text-secondary" aria-hidden="true" />

@@ -85,7 +85,7 @@ export const RelatedPosts = ({ currentSlug }: RelatedPostsProps) => {
           <li key={post.slug}>
             <Link
               to={`/blog/${post.slug}`}
-              className="group block h-full bg-card rounded-2xl border border-border/60 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
+              className="group block h-full bg-card rounded-lg border border-border/60 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
             >
               {post.image && (
                 <div className="aspect-video overflow-hidden">

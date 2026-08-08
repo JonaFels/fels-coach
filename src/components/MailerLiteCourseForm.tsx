@@ -64,7 +64,7 @@ export const MailerLiteCourseForm = () => {
         <div
           role="status"
           aria-live="polite"
-          className="relative max-w-md mx-auto bg-background/70 border border-border/60 rounded-2xl px-8 py-10 shadow-sm animate-fade-in"
+          className="relative max-w-md mx-auto bg-background/70 border border-border/60 rounded-lg px-8 py-10 shadow-sm animate-fade-in"
         >
           <div className="flex flex-col items-center text-center">
             <span className="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-5">

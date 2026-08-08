@@ -30,7 +30,7 @@ export const MethodSection = () => {
             {steps.map((_step, index) => (
               <div
                 key={index}
-                className="relative text-center p-10 rounded-3xl bg-card border border-border/50 hover:border-secondary/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                className="relative text-center p-10 rounded-md bg-card border border-border/50 hover:border-secondary/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
               >
                 <span
                   aria-hidden="true"
