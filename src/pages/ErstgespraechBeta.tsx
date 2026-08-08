@@ -41,7 +41,7 @@ const CAL_EVENTS = [
 ] as const;
 
 const ErstgespraechBeta = () => {
-  const [notes, setNotes] = useState("");
+  
   const [active, setActive] = useState<(typeof CAL_EVENTS)[number]["key"]>("erstgespraech");
 
   useEffect(() => {
