@@ -45,7 +45,7 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg ring-1 ring-border/20 bg-muted">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg ring-1 ring-border/20 bg-muted">
             {activated ? (
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&cc_load_policy=0`}

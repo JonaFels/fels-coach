@@ -37,7 +37,7 @@ export const CoachingPainPoints = () => {
           {painPoints.map((point, i) => (
             <li
               key={i}
-              className="flex items-start gap-3 rounded-2xl border border-border/40 bg-card/60 px-5 py-4"
+              className="flex items-start gap-3 rounded-lg border border-border/40 bg-card/60 px-5 py-4"
             >
               <CheckCircle
                 className="h-5 w-5 text-secondary shrink-0 mt-0.5"

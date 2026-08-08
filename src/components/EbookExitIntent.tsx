@@ -65,7 +65,7 @@ export const EbookExitIntent = () => {
       aria-label="Kostenloses E-Book"
       className="fixed z-40 bottom-20 md:bottom-6 right-4 md:right-6 left-4 md:left-auto md:max-w-sm animate-fade-in"
     >
-      <div className="relative bg-card border border-border rounded-2xl shadow-2xl shadow-foreground/10 p-5 md:p-6">
+      <div className="relative bg-card border border-border rounded-lg shadow-2xl shadow-foreground/10 p-5 md:p-6">
         <button
           type="button"
           onClick={dismiss}

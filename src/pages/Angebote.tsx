@@ -126,7 +126,7 @@ const Angebote = () => {
             </p>
 
             {/* Erstgespräch Highlight */}
-            <div className="mb-32 md:mb-44 rounded-2xl border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
+            <div className="mb-32 md:mb-44 rounded-lg border border-secondary/40 bg-secondary/10 p-8 md:p-10 text-center shadow-sm">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-5">
                 {language === "de"
                   ? "Der entspannte Start in unsere Zusammenarbeit"
@@ -173,7 +173,7 @@ const Angebote = () => {
               </div>
 
               <div className="grid gap-10 md:gap-12 md:grid-cols-2 mb-16 md:mb-20">
-                <div className="rounded-2xl border border-border/60 bg-card p-6 md:p-7">
+                <div className="rounded-lg border border-border/60 bg-card p-6 md:p-7">
                   <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                       {language === "de" ? "Kennenlernen-Sitzung" : "Intro session"}
@@ -193,7 +193,7 @@ const Angebote = () => {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-secondary/40 bg-secondary/5 p-6 md:p-7">
+                <div className="rounded-lg border border-secondary/40 bg-secondary/5 p-6 md:p-7">
                   <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                       {language === "de" ? "Coaching mit Einzelaufstellung" : "Coaching with constellation"}
@@ -214,7 +214,7 @@ const Angebote = () => {
                 </div>
               </div>
 
-              <div className="mt-12 md:mt-16 rounded-2xl bg-muted/40 border border-border/50 p-8 md:p-10 text-sm text-muted-foreground leading-relaxed">
+              <div className="mt-12 md:mt-16 rounded-lg bg-muted/40 border border-border/50 p-8 md:p-10 text-sm text-muted-foreground leading-relaxed">
                 <p className="font-medium text-foreground mb-4">
                   {language === "de" ? "Wann finden die Termine statt?" : "When are sessions offered?"}
                 </p>

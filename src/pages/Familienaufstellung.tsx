@@ -157,7 +157,7 @@ const Familienaufstellung = () => {
               </div>
 
               {/* Aufstellungsbild mit Bodenankern */}
-              <div className="rounded-2xl overflow-hidden shadow-md">
+              <div className="rounded-lg overflow-hidden shadow-md">
                 <img
                   src={familyImage}
                   alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
@@ -210,7 +210,7 @@ const Familienaufstellung = () => {
             >
               {t("family.faq.title")}
             </h2>
-            <div className="bg-card rounded-3xl border border-border/50 shadow-sm p-6 md:p-8">
+            <div className="bg-card rounded-md border border-border/50 shadow-sm p-6 md:p-8">
               <Accordion type="single" collapsible className="w-full">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <AccordionItem key={i} value={`family-faq-${i}`}>
@@ -233,7 +233,7 @@ const Familienaufstellung = () => {
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground text-center mb-8">
               {t("family.proof.title")}
             </h2>
-            <blockquote className="relative bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/60">
+            <blockquote className="relative bg-card rounded-lg p-8 md:p-10 shadow-sm border border-border/60">
               <Quote className="absolute top-6 left-6 h-7 w-7 text-secondary/25" aria-hidden="true" />
               <p className="text-muted-foreground italic leading-relaxed text-base md:text-lg pl-8">
                 „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit."
@@ -253,7 +253,7 @@ const Familienaufstellung = () => {
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <Button
               size="lg"
-              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               asChild
             >
               <a
