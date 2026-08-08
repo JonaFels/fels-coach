@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
-import { CalendarClock, FileText, StickyNote, User, Receipt, Workflow } from "lucide-react";
+import { CalendarClock, FileText, Receipt, Workflow } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ClientFilePanel } from "@/components/booking/ClientFilePanel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+
 
 /**
  * ─────────────────────────────────────────────────────────────
@@ -41,7 +41,7 @@ const CAL_EVENTS = [
 ] as const;
 
 const ErstgespraechBeta = () => {
-  const [notes, setNotes] = useState("");
+  
   const [active, setActive] = useState<(typeof CAL_EVENTS)[number]["key"]>("erstgespraech");
 
   useEffect(() => {
@@ -123,56 +123,12 @@ const ErstgespraechBeta = () => {
                   </p>
                 </CardContent>
               </Card>
-
-              {/* Notizen */}
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-2 space-y-0">
-                  <StickyNote className="h-5 w-5 text-primary" aria-hidden="true" />
-                  <CardTitle className="font-serif text-lg font-medium">Sitzungsnotizen</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <Textarea
-                    value={notes}
-                    onChange={(e) => setNotes(e.target.value)}
-                    placeholder="Anliegen, Auftrag, Hypothesen, nächste Schritte …"
-                    className="min-h-[220px] resize-y"
-                    aria-label="Sitzungsnotizen"
-                  />
-                  <p className="text-xs text-muted-foreground">
-                    Nur lokal im Browser – Speicherung folgt mit der Backend-Anbindung.
-                  </p>
-                </CardContent>
-              </Card>
             </section>
 
             {/* Akte / Meta */}
             <aside className="space-y-8">
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-2 space-y-0">
-                  <User className="h-5 w-5 text-primary" aria-hidden="true" />
-                  <CardTitle className="font-serif text-lg font-medium">Klientenakte</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm">
-                  <dl className="space-y-3">
-                    {[
-                      ["Name", "—"],
-                      ["E-Mail", "—"],
-                      ["Format", "Praxis Freiburg / Online"],
-                      ["Erstkontakt", "—"],
-                      ["Status", "Wartet auf Buchung"],
-                    ].map(([k, v]) => (
-                      <div key={k} className="flex justify-between gap-4">
-                        <dt className="text-muted-foreground">{k}</dt>
-                        <dd className="text-foreground text-right">{v}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                  <Separator className="my-4" />
-                  <p className="text-xs text-muted-foreground">
-                    Felder werden nach dem Cal.com-Webhook automatisch befüllt.
-                  </p>
-                </CardContent>
-              </Card>
+              <ClientFilePanel />
+
 
               <Card>
                 <CardHeader className="flex flex-row items-center gap-2 space-y-0">
