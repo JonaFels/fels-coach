@@ -10,26 +10,53 @@ import { Separator } from "@/components/ui/separator";
 
 /**
  * ─────────────────────────────────────────────────────────────
- *  HIER DEINE CAL.COM EVENT-URL EINTRAGEN
+ *  CAL.COM EVENTS
  *  Format: "<username>/<event-slug>"  (ohne https://cal.com/)
- *  Beispiel: "jona-fels/erstgespraech"
+ *  Später: "erstgespraech" ersetzt den Kalender auf /kontakt,
+ *  "kennenlernen" + "coaching" ersetzen die Kalender auf /start.
  * ─────────────────────────────────────────────────────────────
  */
-const CAL_LINK = "jona-fels/erstgespraech";
-const CAL_NAMESPACE = "erstgespraech";
+const CAL_EVENTS = [
+  {
+    key: "erstgespraech",
+    label: "Erstgespräch (telefonisch)",
+    meta: "Kostenlos · unverbindlich",
+    calLink: "fels-coach/erstgesprach-telefonisch",
+    replaces: "Ersetzt später den Kalender auf /kontakt",
+  },
+  {
+    key: "kennenlernen",
+    label: "Kennenlernen-Sitzung",
+    meta: "55 € · 80 Min.",
+    calLink: "fels-coach/kennenlernen-sitzung",
+    replaces: "Ersetzt später Kalender 1 auf /start",
+  },
+  {
+    key: "coaching",
+    label: "Coaching mit Einzelaufstellung",
+    meta: "95 € · 80 Min.",
+    calLink: "fels-coach/coaching-mit-einzelaufstellung",
+    replaces: "Ersetzt später Kalender 2 auf /start",
+  },
+] as const;
 
 const ErstgespraechBeta = () => {
   const [notes, setNotes] = useState("");
+  const [active, setActive] = useState<(typeof CAL_EVENTS)[number]["key"]>("erstgespraech");
 
   useEffect(() => {
     (async () => {
-      const cal = await getCalApi({ namespace: CAL_NAMESPACE });
-      cal("ui", {
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
+      for (const ev of CAL_EVENTS) {
+        const cal = await getCalApi({ namespace: ev.key });
+        cal("ui", {
+          hideEventTypeDetails: false,
+          layout: "month_view",
+        });
+      }
     })();
   }, []);
+
+  const activeEvent = CAL_EVENTS.find((e) => e.key === active)!;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -54,22 +81,45 @@ const ErstgespraechBeta = () => {
             {/* Buchung */}
             <section className="lg:col-span-2 space-y-8">
               <Card className="overflow-hidden">
-                <CardHeader className="flex flex-row items-center gap-2 space-y-0">
-                  <CalendarClock className="h-5 w-5 text-primary" aria-hidden="true" />
-                  <CardTitle className="font-serif text-lg font-medium">Termin buchen</CardTitle>
+                <CardHeader className="space-y-3">
+                  <div className="flex flex-row items-center gap-2">
+                    <CalendarClock className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <CardTitle className="font-serif text-lg font-medium">Termin buchen</CardTitle>
+                  </div>
+                  <div className="flex flex-wrap gap-2" role="tablist" aria-label="Terminart wählen">
+                    {CAL_EVENTS.map((ev) => (
+                      <button
+                        key={ev.key}
+                        type="button"
+                        role="tab"
+                        aria-selected={active === ev.key}
+                        onClick={() => setActive(ev.key)}
+                        className={`rounded-md border px-3 py-2 text-left text-sm transition-colors ${
+                          active === ev.key
+                            ? "border-primary bg-primary/10 text-foreground"
+                            : "border-border bg-card text-muted-foreground hover:bg-muted"
+                        }`}
+                      >
+                        <span className="block font-medium">{ev.label}</span>
+                        <span className="block text-xs opacity-80">{ev.meta}</span>
+                      </button>
+                    ))}
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <div className="rounded-md border border-border overflow-hidden bg-card">
                     <Cal
-                      namespace={CAL_NAMESPACE}
-                      calLink={CAL_LINK}
+                      key={activeEvent.key}
+                      namespace={activeEvent.key}
+                      calLink={activeEvent.calLink}
                       style={{ width: "100%", height: "640px", overflow: "scroll" }}
                       config={{ layout: "month_view" }}
                     />
                   </div>
                   <p className="text-xs text-muted-foreground mt-3">
-                    Event-URL wird in <code className="font-mono">src/pages/ErstgespraechBeta.tsx</code>{" "}
-                    über die Konstante <code className="font-mono">CAL_LINK</code> gesetzt.
+                    {activeEvent.replaces} · Event-URLs stehen in{" "}
+                    <code className="font-mono">src/pages/ErstgespraechBeta.tsx</code> unter{" "}
+                    <code className="font-mono">CAL_EVENTS</code>.
                   </p>
                 </CardContent>
               </Card>
