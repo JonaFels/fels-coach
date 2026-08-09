@@ -46,55 +46,19 @@ const Kontakt = () => {
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* 1. Erstgespräch – Intro + Inline-Kalender */}
-        <section id="erstgespraech" className="pt-10 pb-16 md:pt-16 md:pb-24 bg-background">
+        {/* 1. Schriftliche Kontaktmöglichkeiten */}
+        <section className="pt-10 pb-16 md:pt-16 md:pb-24 bg-background">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="bg-card rounded-md border border-border shadow-[var(--shadow-elevated)] overflow-hidden">
-              <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
-                <img
-                  src={portrait}
-                  alt="Jona Fels – Systemischer Berater in Freiburg"
-                  className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
-                  loading="eager"
-                  decoding="async"
-                  width={96}
-                  height={96}
-                />
-                <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
-                  {t("contact.calendarHeadline")}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Kostenlos · 30 Min · Unverbindlich
-                </p>
-              </div>
-
-              {/* Inline Kalender (Therapsy) – nahtlos in der Karte */}
-              <iframe
-                src={THERAPSY_URL}
-                title="Booking Widget"
-                loading="lazy"
-                className="block w-full border-0"
-                style={{ height: "600px" }}
-                allow="payment"
-              />
-            </div>
-          </div>
-        </section>
-
-
-        {/* 2. Alternative Kontaktwege */}
-        <section className="py-24 md:py-32 bg-muted/30">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-8 text-center">
+            <h1 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-8 text-center">
               {t("contact.altTitle")}
-            </h2>
+            </h1>
             <div className="grid gap-8 md:grid-cols-2">
               <ContactForm />
               <Card>
                 <CardContent className="pt-6">
-                  <h3 className="font-serif text-lg font-medium text-foreground mb-4">
+                  <h2 className="font-serif text-lg font-medium text-foreground mb-4">
                     {t("contact.directTitle")}
-                  </h3>
+                  </h2>
                   <div className="flex flex-col gap-4">
                     <a
                       href="https://wa.me/4917667608617"
@@ -117,6 +81,41 @@ const Kontakt = () => {
             </div>
           </div>
         </section>
+
+        {/* 2. Erstgespräch – Inline-Kalender */}
+        <section id="erstgespraech" className="py-24 md:py-32 bg-muted/30">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="bg-card rounded-md border border-border shadow-[var(--shadow-elevated)] overflow-hidden">
+              <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
+                <img
+                  src={portrait}
+                  alt="Jona Fels – Systemischer Berater in Freiburg"
+                  className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
+                  loading="lazy"
+                  decoding="async"
+                  width={96}
+                  height={96}
+                />
+                <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
+                  {t("contact.calendarHeadline")}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Kostenlos · 30 Min · Unverbindlich
+                </p>
+              </div>
+
+              <iframe
+                src={THERAPSY_URL}
+                title="Booking Widget"
+                loading="lazy"
+                className="block w-full border-0"
+                style={{ height: "600px" }}
+                allow="payment"
+              />
+            </div>
+          </div>
+        </section>
+
 
       </main>
       <Footer />
