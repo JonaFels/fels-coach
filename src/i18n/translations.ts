@@ -683,12 +683,12 @@ export const translations: Translations = {
 
   // Über mich Page
   "about.title": {
-    de: "Dein systemischer Coach in Freiburg",
-    en: "Your systemic coach in Freiburg",
+    de: "Dein systemischer Berater in Freiburg",
+    en: "Your systemic counselor in Freiburg",
   },
   "about.subtitle": {
-    de: "Wie ich aus alten Familienmustern herausgefunden habe",
-    en: "How I found my way out of old family patterns",
+    de: "Wie ich aus alten Familienmustern herausgefunden habe – und heute als Berater begleite",
+    en: "How I found my way out of old family patterns – and today accompany others as a counselor",
   },
   "about.intro1": {
     de: "Meine eigene Erfahrung hat mich dorthin gebracht, wo ich heute bin – und sie ist der Grund, warum ich überzeugt bin: In jedem von uns ist ein Kern, der ganz und klar ist, auch wenn er lange unter fremden Lasten verschüttet war.",
