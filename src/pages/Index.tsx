@@ -7,7 +7,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { SectionDivider } from "@/components/SectionDivider";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { MethodSection } from "@/components/MethodSection";
+
 import { FAQSection } from "@/components/FAQSection";
 import { YouTubeIntro } from "@/components/YouTubeIntro";
 import { CoachingPainPoints } from "@/components/CoachingPainPoints";
@@ -63,7 +63,6 @@ const Index = () => {
         <PraxisLocal />
         <TestimonialsSection />
         <SectionDivider />
-        <MethodSection />
         <FAQSection />
       </main>
       <Suspense fallback={null}>
