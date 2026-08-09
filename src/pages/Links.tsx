@@ -12,7 +12,7 @@ const linkButtons = [
   {
     href: "/",
     icon: HeartHandshake,
-    label: "1:1 Coaching in Freiburg",
+    label: "1:1 Beratung in Freiburg",
     sub: "Systemische Beratung & Familienaufstellung",
   },
   {
@@ -97,7 +97,7 @@ const Links = () => {
             </span>
           </a>
 
-          {/* 2. 1:1 Coaching */}
+          {/* 2. 1:1 Beratung */}
           <a
             href="/"
             className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
@@ -106,7 +106,7 @@ const Links = () => {
               <HeartHandshake className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
             </span>
             <span className="flex-1 text-left leading-tight">
-              <span className="block text-[14.5px] font-semibold">1:1 Coaching in Freiburg</span>
+              <span className="block text-[14.5px] font-semibold">1:1 Beratung in Freiburg</span>
               <span className="block text-[12px] text-[#1f3535]/60">Systemische Beratung & Familienaufstellung</span>
             </span>
           </a>

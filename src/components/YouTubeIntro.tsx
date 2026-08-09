@@ -17,7 +17,7 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
   const sub =
     subtitle ??
     (language === "de"
-      ? "In knapp drei Minuten erfährst du, wer ich bin, wie ich arbeite und für wen mein Coaching gedacht ist."
+      ? "In knapp drei Minuten erfährst du, wer ich bin, wie ich arbeite und für wen mein Beratung gedacht ist."
       : "In just under three minutes, I share who I am, how I work and who my coaching is for.");
   const playLabel = language === "de" ? "Video abspielen" : "Play video";
 

@@ -21,8 +21,8 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
     : getImage("praxis.sitzbereich_mobile", defaultMobile);
   const alt =
     variant === "lounge"
-      ? "Coaching-Praxis von Jona Fels in Freiburg – gemütlicher Lounge-Bereich mit Rattanstuhl und Glastisch"
-      : "Coaching-Praxis von Jona Fels in Freiburg – einladender Sitzbereich mit Sofa, Sessel und warmem Licht";
+      ? "Beratungspraxis von Jona Fels in Freiburg – gemütlicher Lounge-Bereich mit Rattanstuhl und Glastisch"
+      : "Beratungspraxis von Jona Fels in Freiburg – einladender Sitzbereich mit Sofa, Sessel und warmem Licht";
 
   return (
     <div className="w-full h-40 sm:h-52 md:h-[28vh] md:max-h-[280px] lg:h-[32vh] lg:max-h-[320px] overflow-hidden relative">
