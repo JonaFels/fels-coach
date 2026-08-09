@@ -195,7 +195,6 @@ export const cmsRegistry: CMSEntry[] = [
   { key: "nav.coaching", type: "text", category: "Navigation", label: "Nav: Coaching" },
   { key: "nav.familienaufstellung", type: "text", category: "Navigation", label: "Nav: Familienaufstellung" },
   { key: "nav.ueber", type: "text", category: "Navigation", label: "Nav: Über mich" },
-  { key: "nav.ebook", type: "text", category: "Navigation", label: "Nav: E-Book" },
   { key: "nav.kontakt", type: "text", category: "Navigation", label: "Nav: Kontakt" },
   { key: "nav.anfahrt", type: "text", category: "Navigation", label: "Nav: Anfahrt" },
   { key: "nav.termin", type: "text", category: "Navigation", label: "Nav: Termin" },
