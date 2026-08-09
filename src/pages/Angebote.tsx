@@ -61,7 +61,7 @@ const Angebote = () => {
           </div>
         </section>
 
-        {/* Honorar & Formate */}
+        {/* Preise & Formate */}
         <section className="py-36 md:py-44">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-6">

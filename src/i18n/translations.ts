@@ -163,8 +163,8 @@ export const translations: Translations = {
 
   // Offerings Section
   "offerings.title": {
-    de: "Ablauf & Honorar",
-    en: "Process & Fees",
+    de: "Ablauf & Preise",
+    en: "Process & Pricing",
   },
   "offerings.pageIntro": {
     de: "Gute Veränderung braucht einen klaren Rahmen und echtes Vertrauen. Hier siehst du, wie unsere Zusammenarbeit aufgebaut ist – strukturiert, persönlich und auf Augenhöhe.",
@@ -187,8 +187,8 @@ export const translations: Translations = {
     en: "Your session: We work in a focused, solution-oriented way on your topic – in a protected framework where your pace sets the direction.",
   },
   "offerings.preiseTitle": {
-    de: "Honorar & Formate",
-    en: "Fees & Formats",
+    de: "Preise & Formate",
+    en: "Pricing & Formats",
   },
   "offerings.preiseIntro": {
     de: "Jede Sitzung dauert 80 Minuten – das gibt uns genug Zeit für echte Tiefe und nachhaltige Lösungsansätze für deinen Alltag.",
