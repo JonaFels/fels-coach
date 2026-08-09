@@ -115,7 +115,7 @@ export const cmsRegistry: CMSEntry[] = [
   { key: "family.process.title", type: "text", category: "Familienaufstellung", label: "Ablauf Titel" },
   { key: "family.process.intro", type: "text", category: "Familienaufstellung", label: "Ablauf Intro" },
   { key: "family.process.stepsTitle", type: "text", category: "Familienaufstellung", label: "Schritte Titel" },
-  { key: "family.midCta.text", type: "text", category: "Familienaufstellung", label: "Mid-CTA Text" },
+  
   { key: "family.proof.title", type: "text", category: "Familienaufstellung", label: "Proof Titel" },
   { key: "family.faq.title", type: "text", category: "Familienaufstellung", label: "FAQ Titel" },
   { key: "family.imageCaption", type: "text", category: "Familienaufstellung", label: "Bild Caption" },
