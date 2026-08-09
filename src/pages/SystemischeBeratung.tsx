@@ -17,7 +17,11 @@ import { trackCTAClick } from "@/lib/tracking";
 const faqItems = [
   {
     q: "Was ist der Unterschied zu einer Familienaufstellung?",
-    a: "In der großen Aufstellung betrachten wir oft das gesamte Familiensystem. In der systemischen Beratung bleiben wir ganz nah an deinem aktuellen Gefühl und schauen gezielt auf die Personen, die diesen konkreten Schmerz gerade auslösen.",
+    a: "In der Aufstellung betrachten wir oft das gesamte Familiensystem. In der psychologischen Beratung bleiben wir ganz nah an deiner aktuellen Situation und erarbeiten konkrete Lösungswege für das, was dich gerade belastet.",
+  },
+  {
+    q: "Ist das eine heilkundliche Leistung?",
+    a: "Nein. Ich arbeite ausschließlich beratend und präventiv – außerhalb der Heilkunde. Meine Begleitung richtet sich an Menschen in belastenden Lebensphasen und ersetzt keine ärztliche oder heilkundliche Versorgung.",
   },
   {
     q: "Geht das auch online?",
@@ -34,26 +38,26 @@ const SystemischeBeratung = () => {
   const cards = [
     {
       Icon: Heart,
-      title: "Das Gefühl in Kontakt bringen",
-      text: "Wir beginnen genau da, wo du dich aktuell schlecht und orientierungslos fühlst. Anstatt das Gefühl wegzudrücken, geben wir ihm im geschützten Raum die Erlaubnis, da zu sein.",
+      title: "Krisen bewältigen",
+      text: "Wir beginnen genau da, wo du dich aktuell belastet und orientierungslos fühlst. Im geschützten Rahmen sortieren wir, was gerade zu viel ist – und was als Erstes Entlastung bringt.",
     },
     {
       Icon: Link,
-      title: "Verstrickungen aufdecken",
-      text: "Gemeinsam ergründen wir die Beziehungsebene. Wir decken unbewusste Dynamiken auf – wie etwa Identifikationen, Vereinnahmung oder tiefe Verstrickungen mit Personen, die dir nahestehen.",
+      title: "Muster und Konflikte verstehen",
+      text: "Gemeinsam schauen wir auf die Beziehungsebene: Welche Dynamiken, Rollen und Konflikte wirken im Hintergrund – in Partnerschaft, Familie oder Beruf – und halten dich in der Belastung fest?",
     },
     {
       Icon: Shield,
-      title: "Den Schmerz annehmen",
-      text: "Heilung entsteht durch Fühlen. Wir gehen gemeinsam durch den Schmerz und die Akzeptanz, dass eine nahe Person diese Gefühle in dir erzeugt hat. Wenn wir da hindurchgehen, entsteht echte, nachhaltige Befreiung.",
+      title: "Konkrete Lösungswege erarbeiten",
+      text: "Aus dem Verstehen wird Handeln: Wir entwickeln alltagstaugliche Schritte für Stressbewältigung, Abgrenzung und Neuorientierung – damit du wieder handlungsfähig wirst.",
     },
   ];
 
   const checkItems = [
-    "Du spürst eine tiefe innere Verzweiflung, kannst sie aber nicht logisch greifen.",
-    "Du fühlst dich in Beziehungen (Partnerschaft oder Familie) vereinnahmt oder verstrickt.",
-    "Du hast das Gefühl, das Leben anderer zu leben (Identifikation) und dich selbst verloren zu haben.",
-    "Du suchst keine oberflächlichen Ratschläge, sondern bist bereit, den Ursprung deines Schmerzes wirklich anzuschauen.",
+    "Du steckst in einer belastenden Lebensphase und suchst Orientierung und Entlastung.",
+    "Dauerhafter Stress, Überforderung oder Konflikte bestimmen deinen Alltag.",
+    "Du stehst vor einer Neuorientierung – beruflich, familiär oder in deiner Partnerschaft.",
+    "Du suchst keine oberflächlichen Ratschläge, sondern eine fundierte 1:1 Begleitung mit konkreten Lösungswegen.",
   ];
 
   return (
@@ -67,12 +71,13 @@ const SystemischeBeratung = () => {
         {/* Hero / Intro */}
         <section className="pt-12 md:pt-20 pb-10 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <p className="eyebrow mb-6">1:1 in Freiburg &amp; Online</p>
+            <p className="eyebrow mb-6">Psychologische Beratung · 1:1 in Freiburg &amp; Online</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-              Systemische Beratung &amp; 1:1 Begleitung in Freiburg
+              Psychologische Beratung &amp; Lebensberatung – fundierte 1:1 Begleitung in Freiburg
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
-              Aus der inneren Verzweiflung zurück in die Klarheit.
+              Klarheit in schwierigen Lebensphasen: Stress vorbeugen, Konflikte lösen und gemeinsam
+              tragfähige Wege aus der Belastung finden.
             </p>
           </div>
         </section>
@@ -81,12 +86,13 @@ const SystemischeBeratung = () => {
         <section className="pt-6 md:pt-10 pb-14 md:pb-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <p className="text-muted-foreground leading-[1.9] text-lg">
-              Kennst du dieses Gefühl von massiver Unklarheit, innerer Verzweiflung und dem
-              ständigen Nicht-Wissen, wie es weitergehen soll? In meiner systemischen Beratung
-              (oft auch als Beratung bezeichnet) weichen wir diesem Zustand nicht aus, sondern
-              gehen genau dort hinein. Im 1:1 Gespräch in meiner Praxis in der Karlstraße in Freiburg – oder flexibel online – bringen wir deine Gefühle in Kontakt und
-              finden heraus, welche Beziehungsdynamiken zu nahestehenden Personen eigentlich
-              hinter deinem Schmerz stecken.
+              Kennst du dieses Gefühl von Unklarheit, Überforderung und dem ständigen Nicht-Wissen,
+              wie es weitergehen soll? In meiner psychologischen Beratung und Lebensberatung
+              begleite ich dich im 1:1 – in meiner Praxis in der Karlstraße in Freiburg oder
+              flexibel online. Wir schauen gemeinsam auf deine aktuelle Situation, ordnen
+              Belastungen ein und erarbeiten konkrete Lösungswege für Stressbewältigung,
+              Konfliktlösung und Neuorientierung. Meine Arbeit ist beratend und präventiv und
+              ersetzt keine medizinische Versorgung.
             </p>
           </div>
         </section>
@@ -95,7 +101,7 @@ const SystemischeBeratung = () => {
         <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-12 text-center">
-              Wie wir arbeiten
+              So sieht die Beratung aus
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
               {cards.map(({ Icon, title, text }) => (
@@ -137,7 +143,7 @@ const SystemischeBeratung = () => {
         <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center">
-              Für wen ist diese Form der Beratung?
+              Für wen ist diese Beratung geeignet?
             </h2>
             <ul className="space-y-4" role="list">
               {checkItems.map((item) => (
@@ -171,7 +177,8 @@ const SystemischeBeratung = () => {
                   Termin wählen
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Buch dir über den Button einfach einen passenden Termin für unser kostenloses 30-minütiges Vorgespräch.
+                  Sichere dir über den Button einen passenden Termin für das kostenlose,
+                  30-minütige Erstgespräch.
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-8 shadow-sm text-center">
@@ -182,7 +189,8 @@ const SystemischeBeratung = () => {
                   Kennenlernen
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Wir telefonieren oder sehen uns per Video. Du schilderst dein Anliegen und wir prüfen in Ruhe, ob die Chemie stimmt.
+                  Wir telefonieren oder sehen uns per Video. Du schilderst dein Anliegen und wir
+                  klären in Ruhe, ob meine Beratung zu dir passt.
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-8 shadow-sm text-center">
@@ -190,10 +198,11 @@ const SystemischeBeratung = () => {
                   <span className="font-serif text-xl font-semibold text-secondary">3</span>
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  Prozessarbeit
+                  Beratungsgespräch
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Wenn alles passt, vereinbaren wir deine erste 1:1 Sitzung – entweder vor Ort in Freiburg oder online.
+                  Wenn alles passt, vereinbaren wir dein erstes 1:1 Beratungsgespräch – vor Ort in
+                  Freiburg oder online.
                 </p>
               </div>
             </div>
@@ -227,7 +236,7 @@ const SystemischeBeratung = () => {
         <section className="py-14 md:py-20 bg-muted/40">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
-              Lass uns den ersten Schritt durch die Unklarheit gemeinsam gehen.
+              Lass uns gemeinsam den ersten Schritt aus der Belastung gehen.
             </h2>
             <Button
               size="lg"
@@ -236,7 +245,7 @@ const SystemischeBeratung = () => {
             >
               <a href="/kontakt" onClick={() => trackCTAClick("beratung_page_cta", "systemische_beratung", "link")}>
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                Kostenloses Erstgespräch buchen
+                Kostenloses Erstgespräch vereinbaren
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </a>
             </Button>

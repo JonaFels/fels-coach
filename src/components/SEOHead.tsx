@@ -20,14 +20,22 @@ const defaultMeta = {
   },
 };
 
-const pageMeta: Record<string, Record<string, { title: string; description: string }>> = {
+const pageMeta: Record<string, Record<string, { title: string; description: string; keywords?: string }>> = {
   "/": {
     de: { title: "Systemische Beratung Freiburg | Jona Fels", description: "Fühlst du dich orientierungslos? Systemische Beratung & Familienaufstellung in Freiburg – 1:1 Begleitung und Familienaufstellung im Einzelsetting. Finde Klarheit." },
     en: { title: "Systemic Counseling Freiburg | Jona Fels", description: "Feeling disoriented? Systemic counseling & coaching in Freiburg – 1:1 accompaniment and family constellation as individual sessions. Find clarity." },
   },
   "/systemische-beratung-freiburg": {
-    de: { title: "Systemische 1:1 Beratung Freiburg | Jona Fels", description: "Innere Verzweiflung und Unklarheit? In der systemischen 1:1 Beratung in Freiburg decken wir verborgene Beziehungsdynamiken auf. Kostenloses Erstgespräch." },
-    en: { title: "Systemic 1:1 Counseling Freiburg | Jona Fels", description: "Inner desperation and uncertainty? In systemic 1:1 counseling in Freiburg we uncover hidden relationship dynamics. Free initial consultation." },
+    de: {
+      title: "Psychologische Beratung & Lebensberatung | 1:1 Begleitung",
+      description: "Psychologische Beratung & Lebensberatung in Freiburg und online: Krisenbegleitung, Stressbewältigung und konkrete Lösungswege im 1:1. Kostenloses Erstgespräch.",
+      keywords: "Psychologische Beratung, Lebensberatung, Krisenbegleitung, Stressbewältigung, Neuorientierung, Konfliktlösung, systemische Beratung Freiburg, 1:1 Beratung online",
+    },
+    en: {
+      title: "Psychological Counseling & Life Guidance | 1:1 Sessions",
+      description: "Psychological counseling and life guidance in Freiburg and online: support in crises, stress prevention and concrete solutions in 1:1 sessions. Free intro call.",
+      keywords: "psychological counseling, life guidance, crisis support, stress management, reorientation, conflict resolution, systemic counseling Freiburg",
+    },
   },
   "/angebote": {
     de: { title: "Preise & Termine – Systemische Beratung Freiburg | Jona Fels", description: "Buche deine systemische Beratung oder Familienaufstellung in Freiburg. Kennenlern-Session 55 €, Einzelsitzung 95 € – inkl. kostenlosem Erstgespräch." },
@@ -98,6 +106,10 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     };
 
     updateMeta("description", pageDescription);
+    const pageKeywords = (meta as { keywords?: string }).keywords;
+    if (pageKeywords) {
+      updateMeta("keywords", pageKeywords);
+    }
     updateMeta("og:title", pageTitle, true);
     updateMeta("og:description", pageDescription, true);
     updateMeta("og:image", pageImage, true);
