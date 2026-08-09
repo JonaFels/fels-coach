@@ -38,8 +38,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     },
   },
   "/angebote": {
-    de: { title: "Preise & Termine – Systemische Beratung Freiburg | Jona Fels", description: "Buche deine systemische Beratung oder Familienaufstellung in Freiburg. Kennenlern-Session 55 €, Einzelsitzung 95 € – inkl. kostenlosem Erstgespräch." },
-    en: { title: "Prices & Appointments – Systemic Counseling Freiburg | Jona Fels", description: "Book your systemic counseling or family constellation in Freiburg. Intro session €55, individual session €95 – free first call included." },
+    de: { title: "Ablauf & Honorar | Systemische Beratung Freiburg", description: "Kostenloses Erstgespräch, Kennenlern-Sitzung 55 €, Beratung mit Einzelaufstellung 95 € – in Freiburg oder online. Jona Fels." },
+    en: { title: "Process & Fees | Systemic Counseling Freiburg", description: "Free intro call, getting-to-know session €55, counseling with individual constellation €95 – in Freiburg or online. Jona Fels." },
   },
   "/systemische-familienaufstellung-freiburg": {
     de: { title: "Familienaufstellung Einzelsetting Freiburg | Jona Fels", description: "Familienaufstellung als Einzelsitzung in Freiburg: 1:1 mit Bodenankern, geschützt und vertraulich – ohne Gruppe. Jetzt kostenloses Erstgespräch buchen." },
