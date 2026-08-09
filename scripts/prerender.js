@@ -26,9 +26,9 @@ const routes = [
     description: 'Systemischer Coach in Freiburg ✓ Familienaufstellung & Familienstellen im 1:1 Setting ✓ Unbewusste Muster lösen ✓ Samstags 14–20 Uhr ✓ Jona Fels',
   },
   {
-    path: '/angebote', folder: 'angebote',
-    title: 'Jona Fels | Angebote & Termine',
-    description: 'Buche dein systemisches Coaching: Kennenlern-Session oder tiefgreifende Familienaufstellung in Freiburg.',
+    path: '/ablauf-preise', folder: 'ablauf-preise',
+    title: 'Ablauf & Honorar | Systemische Beratung Freiburg',
+    description: 'Erstgespräch, Ablauf und Honorar für systemische Beratung in Freiburg oder online: Kennenlernen 55 €, Beratung mit Einzelaufstellung 95 €.',
   },
   {
     path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg',

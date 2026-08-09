@@ -37,7 +37,7 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
       keywords: "psychological counseling, life guidance, crisis support, stress management, reorientation, conflict resolution, systemic counseling Freiburg",
     },
   },
-  "/angebote": {
+  "/ablauf-preise": {
     de: { title: "Ablauf & Honorar | Systemische Beratung Freiburg", description: "Kostenloses Erstgespräch, Kennenlern-Sitzung 55 €, Beratung mit Einzelaufstellung 95 € – in Freiburg oder online. Jona Fels." },
     en: { title: "Process & Fees | Systemic Counseling Freiburg", description: "Free intro call, getting-to-know session €55, counseling with individual constellation €95 – in Freiburg or online. Jona Fels." },
   },

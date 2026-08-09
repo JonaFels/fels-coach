@@ -29,7 +29,7 @@ Jona Fels ist ein systemischer Berater und ausgebildeter Familienaufsteller mit 
 ## Pages
 - [Startseite](/): Systemische Beratung & Familienaufstellung in Freiburg – Persönliche Begleitung durch Jona Fels.
 - [Über mich](/ueber-mich): Wer ich bin, meine Herangehensweise und Qualifikationen als systemischer Berater.
-- [Ablauf & Honorar](/angebote): Ablauf, Preise und Rahmenbedingungen für Beratung und Familienaufstellung in Freiburg.
+- [Ablauf & Honorar](/ablauf-preise): Ablauf, Preise und Rahmenbedingungen für Beratung und Familienaufstellung in Freiburg.
 - [Familienaufstellung](/familienaufstellung): Methodik der systemischen Einzelaufstellung mit Bodenankern.
 - [Blog](/blog): Artikel zu Familienaufstellung, persönlicher Entwicklung und systemischer Arbeit.
 - [Kontakt & Buchung](/kontakt): Termin vereinbaren, Erstgespräch buchen und direkter Kontakt.
