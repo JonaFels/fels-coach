@@ -78,7 +78,7 @@ const Start = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-16 md:mb-24">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Wähle deine erste Coaching-Session
+                Wähle deine erste Beratung-Session
               </h2>
             </div>
 
@@ -130,7 +130,7 @@ const Start = () => {
                   <CardContent className="p-6 md:p-7 flex flex-col h-full">
                     <div className="flex items-baseline justify-between mb-2 gap-3">
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                        Coaching mit Einzelaufstellung
+                        Beratung mit Einzelaufstellung
                       </h3>
                       <span className="text-sm font-medium text-secondary whitespace-nowrap">
                         Regulär
@@ -231,7 +231,7 @@ const Start = () => {
 
       <footer className="py-8 border-t border-border/40">
         <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Jona Fels · Systemisches Coaching &amp; Familienaufstellung
+          © {new Date().getFullYear()} Jona Fels · Systemische Beratung &amp; Familienaufstellung
         </div>
       </footer>
     </div>

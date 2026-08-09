@@ -35,7 +35,7 @@ interface AppointmentRow {
 const EVENT_TYPES = [
   "Erstgespräch (telefonisch)",
   "Kennenlernen-Sitzung",
-  "Coaching mit Einzelaufstellung",
+  "Beratung mit Einzelaufstellung",
 ];
 
 const formatDateTime = (iso: string) =>

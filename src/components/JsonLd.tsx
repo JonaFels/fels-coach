@@ -23,7 +23,7 @@ export const JsonLd = () => {
           url: "https://fels-coach.de",
           telephone: "+4917667608617",
           description:
-            "Systemische Familienaufstellung und Coaching in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
+            "Systemische Familienaufstellung und Beratung in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Karlstraße 51",
@@ -92,20 +92,20 @@ export const JsonLd = () => {
             "systemische Aufstellung Freiburg",
             "systemischer Coach Freiburg",
             "systemischer Coach",
-            "systemisches Coaching Freiburg",
+            "systemische Beratung Freiburg",
             "Coach Freiburg",
-            "Coaching Freiburg",
+            "Beratung Freiburg",
             "Familientherapie Freiburg",
             "innere Blockaden lösen",
             "unbewusste Muster auflösen",
-            "persönliche Entwicklung Coaching",
+            "persönliche Entwicklung Beratung",
           ],
           founder: {
             "@id": "https://fels-coach.de/#person",
           },
           hasOfferCatalog: {
             "@type": "OfferCatalog",
-            name: "Coaching-Angebote",
+            name: "Beratungsangebote",
             itemListElement: [
               {
                 "@type": "Offer",
@@ -134,7 +134,7 @@ export const JsonLd = () => {
                 itemOffered: {
                   "@type": "Service",
                   "@id": "https://fels-coach.de/#service-familienaufstellung",
-                  name: "Coaching mit Einzelaufstellung",
+                  name: "Beratung mit Einzelaufstellung",
                   description:
                     "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster und Blockaden erkennen und nachhaltig lösen.",
                   provider: { "@id": "https://fels-coach.de/#service" },
@@ -162,7 +162,7 @@ export const JsonLd = () => {
           familyName: "Fels",
           jobTitle: "Systemischer Berater & Familienaufsteller",
           description:
-            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Coaching und persönliche Entwicklung.",
+            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientierte Beratung und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           telephone: "+4917667608617",
@@ -184,7 +184,7 @@ export const JsonLd = () => {
             "Systemische Familienaufstellung",
             "Familienaufstellung mit Bodenankern",
             "Systemische Beratung",
-            "Lösungsorientiertes Coaching",
+            "Lösungsorientierte Beratung",
             "Persönlichkeitsentwicklung",
             "Unbewusste Familienmuster",
             "Innere Blockaden lösen",
@@ -210,7 +210,7 @@ export const JsonLd = () => {
           alternateName: "Jona Fels – Familienaufstellung Freiburg",
           url: "https://fels-coach.de",
           description:
-            "Systemische Familienaufstellungen und Coaching in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
+            "Systemische Familienaufstellungen und Beratung in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
           publisher: { "@id": "https://fels-coach.de/#service" },
           inLanguage: ["de", "en"],
         },
@@ -281,7 +281,7 @@ export const JsonLd = () => {
               name: "Übernimmt die Krankenkasse die Kosten?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+                text: "Nein. Beratung und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
               },
             },
             {
@@ -294,7 +294,7 @@ export const JsonLd = () => {
             },
             {
               "@type": "Question",
-              name: "Wo findet das Coaching statt und gibt es Wochenend-Termine?",
+              name: "Wo findet die Beratung statt und gibt es Wochenend-Termine?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau (Tram 3). Da viele Klient:innen berufstätig sind, biete ich meine Sitzungen schwerpunktmäßig samstags zwischen 14:00 und 20:00 Uhr an – mit Ruhe und ohne Alltagsstress.",

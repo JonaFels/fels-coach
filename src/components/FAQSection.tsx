@@ -22,14 +22,14 @@ const faqData = {
     },
     {
       question: "Übernimmt die Krankenkasse die Kosten?",
-      answer: "Nein. Coaching und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+      answer: "Nein. Beratung und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
       answer: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
     },
     {
-      question: "Wo findet das Coaching statt und gibt es Wochenend-Termine?",
+      question: "Wo findet die Beratung statt und gibt es Wochenend-Termine?",
       answer: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau (Tram 3). Da viele Klient:innen berufstätig sind, biete ich meine Sitzungen schwerpunktmäßig samstags zwischen 14:00 und 20:00 Uhr an – mit Ruhe und ohne Alltagsstress.",
     },
   ],
@@ -48,7 +48,7 @@ const faqData = {
     },
     {
       question: "Does health insurance cover the costs?",
-      answer: "No. Coaching and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (80 min.) is €70. In return, you're free to choose your own path – with no diagnosis and no medical record.",
+      answer: "No. Beratung and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (80 min.) is €70. In return, you're free to choose your own path – with no diagnosis and no medical record.",
     },
     {
       question: "How can I get started and is a preliminary consultation possible?",

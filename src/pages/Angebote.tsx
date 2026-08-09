@@ -196,7 +196,7 @@ const Angebote = () => {
                 <div className="rounded-lg border border-secondary/40 bg-secondary/5 p-6 md:p-7">
                   <div className="flex items-baseline justify-between mb-3 gap-3">
                     <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                      {language === "de" ? "Coaching mit Einzelaufstellung" : "Coaching with constellation"}
+                      {language === "de" ? "Beratung mit Einzelaufstellung" : "Coaching with constellation"}
                     </h3>
                     <span className="text-sm font-medium text-secondary whitespace-nowrap">
                       {language === "de" ? "Regulär" : "Regular"}

@@ -69,7 +69,7 @@ const SystemischeBeratung = () => {
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <p className="eyebrow mb-6">1:1 in Freiburg &amp; Online</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-              Systemische Beratung &amp; 1:1 Coaching in Freiburg
+              Systemische Beratung &amp; 1:1 Begleitung in Freiburg
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
               Aus der inneren Verzweiflung zurück in die Klarheit.
@@ -83,7 +83,7 @@ const SystemischeBeratung = () => {
             <p className="text-muted-foreground leading-[1.9] text-lg">
               Kennst du dieses Gefühl von massiver Unklarheit, innerer Verzweiflung und dem
               ständigen Nicht-Wissen, wie es weitergehen soll? In meiner systemischen Beratung
-              (oft auch als Coaching bezeichnet) weichen wir diesem Zustand nicht aus, sondern
+              (oft auch als Beratung bezeichnet) weichen wir diesem Zustand nicht aus, sondern
               gehen genau dort hinein. Im 1:1 Gespräch in meiner Praxis in der Karlstraße in Freiburg – oder flexibel online – bringen wir deine Gefühle in Kontakt und
               finden heraus, welche Beziehungsdynamiken zu nahestehenden Personen eigentlich
               hinter deinem Schmerz stecken.
