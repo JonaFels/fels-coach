@@ -36,15 +36,17 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Brand */}
           <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
-            <img
-              src={logoSrc}
-              alt="Jona Fels"
-              className="h-8 w-8 object-contain"
-              width={32}
-              height={32}
-              loading="eager"
-              decoding="async"
-            />
+            <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-[hsl(var(--fels-sage))]/50 shadow-sm">
+              <img
+                src={logoSrc}
+                alt="Jona Fels"
+                className="h-6 w-6 object-contain"
+                width={24}
+                height={24}
+                loading="eager"
+                decoding="async"
+              />
+            </span>
             <span className="font-serif text-[0.82rem] sm:text-[0.95rem] xl:text-lg font-normal text-foreground tracking-tight leading-tight whitespace-nowrap">
               Jona Fels <span className="text-foreground/60">–</span> {t("header.brandSubtitle")}
             </span>
