@@ -106,6 +106,9 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     };
 
     updateMeta("description", pageDescription);
+    if (meta && "keywords" in meta && meta.keywords) {
+      updateMeta("keywords", meta.keywords);
+    }
     updateMeta("og:title", pageTitle, true);
     updateMeta("og:description", pageDescription, true);
     updateMeta("og:image", pageImage, true);
