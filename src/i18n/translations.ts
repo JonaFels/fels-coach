@@ -51,8 +51,8 @@ export const translations: Translations = {
     en: "Free Intro Call",
   },
   "nav.angebote": {
-    de: "Dein Weg zu mir",
-    en: "Your Path to Me",
+    de: "Ablauf & Preise",
+    en: "Process & Pricing",
   },
   "nav.blog": {
     de: "Blog",
@@ -163,8 +163,8 @@ export const translations: Translations = {
 
   // Offerings Section
   "offerings.title": {
-    de: "So arbeiten wir zusammen",
-    en: "How We Work Together",
+    de: "Ablauf & Honorar",
+    en: "Process & Fees",
   },
   "offerings.pageIntro": {
     de: "Gute Veränderung braucht einen klaren Rahmen und echtes Vertrauen. Hier siehst du, wie unsere Zusammenarbeit aufgebaut ist – strukturiert, persönlich und auf Augenhöhe.",
@@ -175,40 +175,40 @@ export const translations: Translations = {
     en: "How we start working together",
   },
   "offerings.step1": {
-    de: "Kostenloses Erstgespräch – In 30 Minuten am Telefon klären wir dein Anliegen und schauen, ob die Chemie stimmt. Völlig unverbindlich.",
-    en: "Free first call – In 30 minutes by phone we clarify your concern and see if the chemistry fits. Completely non-binding.",
+    de: "Kostenloses Erstgespräch: In einem unverbindlichen 30-minütigen Telefonat klären wir dein Anliegen und schauen, ob die Chemie stimmt.",
+    en: "Free initial call: In a non-binding 30-minute phone call we clarify your concern and see if the chemistry is right.",
   },
   "offerings.step2": {
-    de: "Persönlicher Link zum Buchen – Wenn die Chemie stimmt, schicke ich dir anschließend per E-Mail einen direkten Link, über den du bequem deinen Termin online buchen kannst.",
-    en: "Personal booking link – If we are a good fit, I will send you a direct link via email afterwards, so you can easily book your appointment online.",
+    de: "Einfache Terminbuchung: Wenn mein Ansatz für dich passt, erhältst du einen persönlichen Link, über den du deinen ersten Termin bequem online auswählen kannst.",
+    en: "Simple appointment booking: If my approach fits you, you'll receive a personal link to conveniently choose your first appointment online.",
   },
   "offerings.step3": {
-    de: "Sitzung starten – Den genauen Ablauf findest du auf der Familienaufstellung-Seite.",
-    en: "Start the session – You'll find the exact session flow on the Family Constellation page.",
+    de: "Deine Sitzung: Wir arbeiten fokussiert und lösungsorientiert an deinem Thema – in einem geschützten Rahmen, in dem dein Tempo den Weg bestimmt.",
+    en: "Your session: We work in a focused, solution-oriented way on your topic – in a protected framework where your pace sets the direction.",
   },
   "offerings.preiseTitle": {
-    de: "Klare Konditionen",
-    en: "Clear Conditions",
+    de: "Honorar & Formate",
+    en: "Fees & Formats",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – genug Zeit für echte Tiefe.\n\nUnterstützung soll nicht am Geld scheitern: Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich gerne offen darauf an – wir finden eine vergünstigte Lösung, die für dich passt.",
-    en: "Each session lasts 80 minutes – enough time for real depth.\n\nSupport shouldn't fail because of money: If you can't currently afford the regular prices, please reach out openly – we'll find a reduced rate that works for you.",
+    de: "Jede Sitzung dauert 80 Minuten – das gibt uns genug Zeit für echte Tiefe und nachhaltige Lösungsansätze für deinen Alltag.",
+    en: "Each session lasts 80 minutes – giving us enough time for real depth and sustainable solution approaches for your everyday life.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
     en: "Getting-to-Know Session",
   },
   "offerings.kennenlernen.desc": {
-    de: "Dein Einstieg zum reduzierten Preis: Eine vollwertige Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten.",
-    en: "Your start at a reduced price: A full session where we place your concern in a systemic context and develop initial approaches.",
+    de: "Eine vollwertige erste Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten.",
+    en: "A full first session where we place your concern in a systemic context and develop initial solution approaches.",
   },
   "offerings.coaching.title": {
     de: "Beratung mit Einzelaufstellung",
-    en: "Coaching with Individual Constellation",
+    en: "Counseling with Individual Constellation",
   },
   "offerings.coaching.desc": {
-    de: "80 Minuten fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten.",
-    en: "80 minutes of focused work on what matters most right now – systemic, solution-oriented, and with concrete next steps.",
+    de: "Fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten.",
+    en: "Focused work on what matters most right now – systemic, solution-oriented, and with concrete next steps.",
   },
   "offerings.paket5.title": {
     de: "5er-Paket",
@@ -261,6 +261,26 @@ export const translations: Translations = {
   "offerings.paketEinloesen.desc": {
     de: "Du hast bereits ein 5er oder 10er Paket erworben? Dann wähle hier deinen nächsten Termin aus.",
     en: "Already purchased a 5 or 10 session package? Choose your next appointment here.",
+  },
+  "offerings.preiseNote": {
+    de: "Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich beim Erstgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
+    en: "If you can't currently afford the regular prices, please feel free to bring it up openly during the intro call. We'll find a reduced-rate solution that works for you.",
+  },
+  "offerings.rahmen.title": {
+    de: "Rahmenbedingungen",
+    en: "Framework",
+  },
+  "offerings.rahmen.location": {
+    de: "Vor Ort in der Praxis (Karlstraße 51, 79104 Freiburg im Breisgau) oder flexibel online per Video.",
+    en: "In person at the practice (Karlstraße 51, 79104 Freiburg im Breisgau) or flexibly online via video.",
+  },
+  "offerings.rahmen.times": {
+    de: "Reguläre Termine finden samstags von 14:00 bis 20:00 Uhr statt. Weitere Zeiten sind nach Absprache im Erstgespräch möglich.",
+    en: "Regular appointments take place Saturdays from 2:00 pm to 8:00 pm. Other times can be arranged by agreement in the intro call.",
+  },
+  "offerings.ctaButton": {
+    de: "Kostenloses Erstgespräch vereinbaren",
+    en: "Schedule a free intro call",
   },
 
   // Cookie Banner
