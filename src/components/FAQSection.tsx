@@ -29,7 +29,7 @@ const faqData = {
       answer: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
     },
     {
-      question: "Wo findet das Beratung statt und gibt es Wochenend-Termine?",
+      question: "Wo findet die Beratung statt und gibt es Wochenend-Termine?",
       answer: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau (Tram 3). Da viele Klient:innen berufstätig sind, biete ich meine Sitzungen schwerpunktmäßig samstags zwischen 14:00 und 20:00 Uhr an – mit Ruhe und ohne Alltagsstress.",
     },
   ],

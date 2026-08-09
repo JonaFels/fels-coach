@@ -26,8 +26,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Systemic Counseling Freiburg | Jona Fels", description: "Feeling disoriented? Systemic counseling & coaching in Freiburg – 1:1 accompaniment and family constellation as individual sessions. Find clarity." },
   },
   "/systemische-beratung-freiburg": {
-    de: { title: "1:1 Beratung & Beratung Freiburg | Jona Fels", description: "Innere Verzweiflung und Unklarheit? In der systemischen 1:1 Beratung in Freiburg decken wir verborgene Beziehungsdynamiken auf. Kostenloses Erstgespräch." },
-    en: { title: "1:1 Counseling & Beratung Freiburg | Jona Fels", description: "Inner desperation and uncertainty? In systemic 1:1 counseling in Freiburg we uncover hidden relationship dynamics. Free initial consultation." },
+    de: { title: "Systemische 1:1 Beratung Freiburg | Jona Fels", description: "Innere Verzweiflung und Unklarheit? In der systemischen 1:1 Beratung in Freiburg decken wir verborgene Beziehungsdynamiken auf. Kostenloses Erstgespräch." },
+    en: { title: "Systemic 1:1 Counseling Freiburg | Jona Fels", description: "Inner desperation and uncertainty? In systemic 1:1 counseling in Freiburg we uncover hidden relationship dynamics. Free initial consultation." },
   },
   "/angebote": {
     de: { title: "Preise & Termine – Systemische Beratung Freiburg | Jona Fels", description: "Buche deine systemische Beratung oder Familienaufstellung in Freiburg. Kennenlern-Session 55 €, Einzelsitzung 95 € – inkl. kostenlosem Erstgespräch." },
@@ -58,7 +58,7 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Imprint – Family Constellation Freiburg | Jona Fels", description: "Legal notice according to German law for Jona Fels – family constellation & coaching in Freiburg." },
   },
   "/agb": {
-    de: { title: "AGB – Familienaufstellung Freiburg | Jona Fels", description: "Buchungs- und Stornierungsregeln für Beratung- und Familienaufstellungs-Sitzungen bei Jona Fels in Freiburg." },
+    de: { title: "AGB – Familienaufstellung Freiburg | Jona Fels", description: "Buchungs- und Stornierungsregeln für Beratungs- und Familienaufstellungs-Sitzungen bei Jona Fels in Freiburg." },
     en: { title: "Terms – Family Constellation Freiburg | Jona Fels", description: "Booking and cancellation terms for coaching and family constellation sessions with Jona Fels in Freiburg." },
   },
 };

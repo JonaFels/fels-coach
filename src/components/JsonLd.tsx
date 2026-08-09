@@ -162,7 +162,7 @@ export const JsonLd = () => {
           familyName: "Fels",
           jobTitle: "Systemischer Berater & Familienaufsteller",
           description:
-            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientiertes Beratung und persönliche Entwicklung.",
+            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientierte Beratung und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           telephone: "+4917667608617",
@@ -184,7 +184,7 @@ export const JsonLd = () => {
             "Systemische Familienaufstellung",
             "Familienaufstellung mit Bodenankern",
             "Systemische Beratung",
-            "Lösungsorientiertes Beratung",
+            "Lösungsorientierte Beratung",
             "Persönlichkeitsentwicklung",
             "Unbewusste Familienmuster",
             "Innere Blockaden lösen",
@@ -294,7 +294,7 @@ export const JsonLd = () => {
             },
             {
               "@type": "Question",
-              name: "Wo findet das Beratung statt und gibt es Wochenend-Termine?",
+              name: "Wo findet die Beratung statt und gibt es Wochenend-Termine?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau (Tram 3). Da viele Klient:innen berufstätig sind, biete ich meine Sitzungen schwerpunktmäßig samstags zwischen 14:00 und 20:00 Uhr an – mit Ruhe und ohne Alltagsstress.",
