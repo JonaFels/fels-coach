@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { lazyWithRetry } from "@/lib/lazyWithRetry";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -64,6 +64,7 @@ const App = () => (
               <Route path="/index" element={<Index />} />
               <Route path="/en" element={<Index />} />
               <Route path="/angebote" element={<Angebote />} />
+              <Route path="/ablauf-preise" element={<Navigate to="/angebote" replace />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
               <Route path="/systemische-beratung-freiburg" element={<SystemischeBeratung />} />
               <Route path="/kontakt" element={<Kontakt />} />
