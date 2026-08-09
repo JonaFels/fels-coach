@@ -36,7 +36,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Brand */}
           <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
-            <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[hsl(40_40%_94%)] ring-1 ring-[hsl(40_30%_80%)]/60 shadow-sm">
+            <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-[hsl(var(--fels-sage))]/50 shadow-sm">
               <img
                 src={logoSrc}
                 alt="Jona Fels"
