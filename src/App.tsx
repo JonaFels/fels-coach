@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
@@ -16,24 +17,24 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 // Lazy: alle übrigen Routen + Admin (nicht im kritischen Pfad) → kleinerer initialer Bundle
-const Angebote = lazy(() => import("./pages/Angebote"));
-const Familienaufstellung = lazy(() => import("./pages/Familienaufstellung"));
-const SystemischeBeratung = lazy(() => import("./pages/SystemischeBeratung"));
-const Kontakt = lazy(() => import("./pages/Kontakt"));
-const UeberMich = lazy(() => import("./pages/UeberMich"));
-const Datenschutz = lazy(() => import("./pages/Datenschutz"));
-const Impressum = lazy(() => import("./pages/Impressum"));
-const AGB = lazy(() => import("./pages/AGB"));
-const Links = lazy(() => import("./pages/Links"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const AdminLogin = lazy(() => import("./pages/admin/Login"));
-const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
-const Start = lazy(() => import("./pages/Start"));
-const ErstgespraechBeta = lazy(() => import("./pages/ErstgespraechBeta"));
-const BookingLogin = lazy(() => import("./pages/booking/Login"));
-const BookingDashboard = lazy(() => import("./pages/booking/Dashboard"));
-const ProtectedRouteLazy = lazy(() =>
+const Angebote = lazyWithRetry(() => import("./pages/Angebote"));
+const Familienaufstellung = lazyWithRetry(() => import("./pages/Familienaufstellung"));
+const SystemischeBeratung = lazyWithRetry(() => import("./pages/SystemischeBeratung"));
+const Kontakt = lazyWithRetry(() => import("./pages/Kontakt"));
+const UeberMich = lazyWithRetry(() => import("./pages/UeberMich"));
+const Datenschutz = lazyWithRetry(() => import("./pages/Datenschutz"));
+const Impressum = lazyWithRetry(() => import("./pages/Impressum"));
+const AGB = lazyWithRetry(() => import("./pages/AGB"));
+const Links = lazyWithRetry(() => import("./pages/Links"));
+const Blog = lazyWithRetry(() => import("./pages/Blog"));
+const BlogPost = lazyWithRetry(() => import("./pages/BlogPost"));
+const AdminLogin = lazyWithRetry(() => import("./pages/admin/Login"));
+const AdminDashboard = lazyWithRetry(() => import("./pages/admin/Dashboard"));
+const Start = lazyWithRetry(() => import("./pages/Start"));
+const ErstgespraechBeta = lazyWithRetry(() => import("./pages/ErstgespraechBeta"));
+const BookingLogin = lazyWithRetry(() => import("./pages/booking/Login"));
+const BookingDashboard = lazyWithRetry(() => import("./pages/booking/Dashboard"));
+const ProtectedRouteLazy = lazyWithRetry(() =>
   import("./components/admin/ProtectedRoute").then((m) => ({ default: m.ProtectedRoute }))
 );
 
