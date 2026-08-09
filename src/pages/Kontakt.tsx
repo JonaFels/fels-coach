@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -73,6 +73,19 @@ const Kontakt = () => {
                       <div>
                         <span className="font-medium text-foreground block">{t("contact.telegramLabel")}</span>
                         <span className="text-sm text-muted-foreground">+49 176 67608617</span>
+                      </div>
+                    </a>
+                    <a
+                      href="mailto:jona@fels-coach.de"
+                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
+                      aria-label="E-Mail an jona@fels-coach.de schreiben"
+                    >
+                      <div className="p-2.5 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
+                      </div>
+                      <div>
+                        <span className="font-medium text-foreground block">{t("contact.emailLabel")}</span>
+                        <span className="text-sm text-muted-foreground break-all">jona@fels-coach.de</span>
                       </div>
                     </a>
                   </div>

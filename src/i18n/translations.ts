@@ -47,8 +47,8 @@ export const translations: Translations = {
     en: "Book Appointment",
   },
   "nav.contact": {
-    de: "Kostenloses Erstgespräch",
-    en: "Free Consultation",
+    de: "Gratis Erstgespräch",
+    en: "Free Intro Call",
   },
   "nav.angebote": {
     de: "Dein Weg zu mir",
