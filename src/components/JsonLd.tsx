@@ -151,22 +151,6 @@ export const JsonLd = () => {
                 },
                 availability: "https://schema.org/InStock",
               },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Book",
-                  "@id": "https://fels-coach.de/#ebook",
-                  name: "Der Weg zum Ganz-Sein",
-                  description:
-                    "Kostenloses E-Book über systemische Familienaufstellungen und persönliche Transformation.",
-                  author: { "@id": "https://fels-coach.de/#person" },
-                  inLanguage: "de",
-                  bookFormat: "https://schema.org/EBook",
-                },
-                price: "0.00",
-                priceCurrency: "EUR",
-                availability: "https://schema.org/InStock",
-              },
             ],
           },
         },

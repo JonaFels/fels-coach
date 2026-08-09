@@ -29,8 +29,6 @@ const staticRoutes = [
   { path: "/systemische-beratung-freiburg", changefreq: "monthly", priority: "0.9" },
   { path: "/angebote", changefreq: "weekly", priority: "0.9" },
   { path: "/systemische-familienaufstellung-freiburg", changefreq: "monthly", priority: "0.8" },
-  { path: "/impulse", changefreq: "monthly", priority: "0.8" },
-  { path: "/ebook", changefreq: "monthly", priority: "0.7" },
   { path: "/ueber-mich", changefreq: "monthly", priority: "0.7" },
   { path: "/kontakt", changefreq: "monthly", priority: "0.7" },
   { path: "/blog", changefreq: "weekly", priority: "0.7" },

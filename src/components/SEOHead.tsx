@@ -37,14 +37,6 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     de: { title: "Familienaufstellung Einzelsetting Freiburg | Jona Fels", description: "Familienaufstellung als Einzelsitzung in Freiburg: 1:1 mit Bodenankern, geschützt und vertraulich – ohne Gruppe. Jetzt kostenloses Erstgespräch buchen." },
     en: { title: "Family Constellation Individual Session Freiburg | Jona Fels", description: "Family constellation as a 1:1 individual session in Freiburg with floor anchors – confidential, no group. Book your free intro now." },
   },
-  "/impulse": {
-    de: { title: "Impulse zur Familienaufstellung – Freiburg | Jona Fels", description: "Kostenlose Impulse zu Familienaufstellung & Coaching: Erkenne unbewusste Muster, finde zurück zu dir und werde zum Fels." },
-    en: { title: "Impulses on Family Constellation – Freiburg | Jona Fels", description: "Free impulses on family constellation & coaching: Recognise unconscious patterns, find yourself and become the rock." },
-  },
-  "/ebook": {
-    de: { title: "Impulse zur Familienaufstellung – Freiburg | Jona Fels", description: "Kostenlose Impulse zu Familienaufstellung & Coaching: Erkenne unbewusste Muster, finde zurück zu dir und werde zum Fels." },
-    en: { title: "Impulses on Family Constellation – Freiburg | Jona Fels", description: "Free impulses on family constellation & coaching: Recognise unconscious patterns, find yourself and become the rock." },
-  },
   "/ueber-mich": {
     de: { title: "Über mich – Jona Fels, Systemischer Berater Freiburg", description: "Lerne Jona Fels kennen: Dein systemischer Berater in Freiburg. Erfahre, wie ich meine eigenen Muster durchbrach – und dich durch deine Unklarheit begleite." },
     en: { title: "About Me – Jona Fels, Systemic Counselor Freiburg", description: "Get to know Jona Fels: your systemic counselor in Freiburg. Learn how I broke through my own patterns – and accompany you through your uncertainty." },
