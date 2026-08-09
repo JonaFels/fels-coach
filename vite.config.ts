@@ -1,7 +1,21 @@
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+
+// Feste Fallback-Werte für den Cloudflare-Build, falls die Umgebungsvariablen
+// fehlen oder von Cloudflare mit defekten Werten überschrieben werden.
+const FALLBACK_SUPABASE_URL = "https://ywqucntgzlsrrefjfntk.supabase.co";
+const FALLBACK_SUPABASE_PUBLISHABLE_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3cXVjbnRnemxzcnJlZmpmbnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4OTcxOTAsImV4cCI6MjA4NTQ3MzE5MH0.6x-rZNm9lEDQGgVSU9ot0cA5OgSd_f_DK2YbGdPKM_s";
+
+function isValidSupabaseUrl(url: string | undefined): url is string {
+  return typeof url === "string" && url.startsWith("https://") && url.includes(".supabase.co");
+}
+
+function isValidSupabaseKey(key: string | undefined): key is string {
+  return typeof key === "string" && key.length > 20 && key.split(".").length === 3;
+}
 
 /**
  * Macht alle vite-injizierten <link rel="stylesheet"> non-blocking via
