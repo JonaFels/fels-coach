@@ -29,8 +29,11 @@ jobs:
           node-version: 20
           cache: "npm"
 
+      # npm install toleriert und repariert eine veraltete package-lock.json.
+      # Dadurch bricht das Deployment nicht mehr ab, wenn Lovable eine
+      # Abhängigkeit ergänzt, bevor die Lockdatei synchronisiert wurde.
       - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit
+        run: npm install --prefer-offline --no-audit --no-fund
 
       - name: Build (Vite + SSG Prerender + Sitemap)
         run: |

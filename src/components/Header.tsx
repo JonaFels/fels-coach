@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { key: "nav.beratung", href: "/systemische-beratung-freiburg" },
   { key: "nav.familienaufstellung", href: "/systemische-familienaufstellung-freiburg" },
   { key: "nav.ueber", href: "/ueber-mich" },
-  { key: "nav.angebote", href: "/angebote" },
+  { key: "nav.angebote", href: "/ablauf-preise" },
   { key: "nav.blog", href: "/blog" },
 ];
 
