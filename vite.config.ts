@@ -86,9 +86,32 @@ const lcpImagePreloadPlugin = (): Plugin => {
 };
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: "/",
-  server: {
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+
+  const viteSupabaseUrl = isValidSupabaseUrl(env.VITE_SUPABASE_URL)
+    ? env.VITE_SUPABASE_URL
+    : FALLBACK_SUPABASE_URL;
+  const viteSupabaseKey = isValidSupabaseKey(env.VITE_SUPABASE_PUBLISHABLE_KEY)
+    ? env.VITE_SUPABASE_PUBLISHABLE_KEY
+    : FALLBACK_SUPABASE_PUBLISHABLE_KEY;
+
+  if (!isValidSupabaseUrl(env.VITE_SUPABASE_URL)) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `[vite.config.ts] VITE_SUPABASE_URL ist ungültig (${env.VITE_SUPABASE_URL ?? "leer"}). Verwende Fallback.`
+    );
+  }
+  if (!isValidSupabaseKey(env.VITE_SUPABASE_PUBLISHABLE_KEY)) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `[vite.config.ts] VITE_SUPABASE_PUBLISHABLE_KEY ist ungültig. Verwende Fallback.`
+    );
+  }
+
+  return {
+    base: "/",
+    server: {
     host: "::",
     port: 8080,
     hmr: {
