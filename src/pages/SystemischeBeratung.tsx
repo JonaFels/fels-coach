@@ -20,8 +20,8 @@ const faqItems = [
     a: "In der Aufstellung betrachten wir oft das gesamte Familiensystem. In der psychologischen Beratung bleiben wir ganz nah an deiner aktuellen Situation und erarbeiten konkrete Lösungswege für das, was dich gerade belastet.",
   },
   {
-    q: "Ist das eine Therapie?",
-    a: "Nein. Ich arbeite ausschließlich beratend und präventiv – außerhalb der Heilkunde. Meine Begleitung richtet sich an Menschen in belastenden Lebensphasen, ersetzt aber keine medizinische oder heilkundliche Versorgung.",
+    q: "Ist das eine heilkundliche Leistung?",
+    a: "Nein. Ich arbeite ausschließlich beratend und präventiv – außerhalb der Heilkunde. Meine Begleitung richtet sich an Menschen in belastenden Lebensphasen und ersetzt keine ärztliche oder heilkundliche Versorgung.",
   },
   {
     q: "Geht das auch online?",
@@ -198,7 +198,7 @@ const SystemischeBeratung = () => {
                   <span className="font-serif text-xl font-semibold text-secondary">3</span>
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  Prozessarbeit
+                  Beratungsgespräch
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Wenn alles passt, vereinbaren wir dein erstes 1:1 Beratungsgespräch – vor Ort in
