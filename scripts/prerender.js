@@ -36,11 +36,6 @@ const routes = [
     description: 'Familienaufstellung in Freiburg – auch bekannt als Familienstellen. Ablauf, Nutzen und Methodik der systemischen Einzelaufstellung mit Bodenankern erklärt.',
   },
   {
-    path: '/impulse', folder: 'impulse',
-    title: 'Impulse zur Familienaufstellung – Freiburg | Jona Fels',
-    description: 'Kostenlose Impulse rund um Familienaufstellung & systemisches Coaching: Erkenne unbewusste Familienmuster, finde zurück zu dir selbst und werde zum Fels in deinem Leben.',
-  },
-  {
     path: '/kontakt', folder: 'kontakt',
     title: 'Jona Fels | Kontakt',
     description: 'Kontaktiere Jona Fels für ein kostenloses Erstgespräch. Erreichbar per E-Mail, WhatsApp oder Telegram.',

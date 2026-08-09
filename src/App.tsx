@@ -19,7 +19,6 @@ import NotFound from "./pages/NotFound";
 const Angebote = lazy(() => import("./pages/Angebote"));
 const Familienaufstellung = lazy(() => import("./pages/Familienaufstellung"));
 const SystemischeBeratung = lazy(() => import("./pages/SystemischeBeratung"));
-const Impulse = lazy(() => import("./pages/Ebook"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const UeberMich = lazy(() => import("./pages/UeberMich"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
@@ -66,9 +65,6 @@ const App = () => (
               <Route path="/angebote" element={<Angebote />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
               <Route path="/systemische-beratung-freiburg" element={<SystemischeBeratung />} />
-              <Route path="/impulse" element={<Impulse />} />
-              {/* Legacy redirect: /ebook -> /impulse (301 via Cloudflare Bulk Redirects; client fallback) */}
-              <Route path="/ebook" element={<Impulse />} />
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/ueber-mich" element={<UeberMich />} />
               <Route path="/datenschutz" element={<Datenschutz />} />

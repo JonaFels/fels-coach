@@ -322,7 +322,7 @@ Und natürlich machen sie uns auch glücklich. Doch liegt der jetzige Zustand an
 
 Und jetzt die goldene Frage, wie hören wir auf, Glück zu opfern?
 
-Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des [„Skripts des Lebens"](/impulse) erklärt wird. Lies in meinen Impulsen mehr darüber, wie du alte Muster durchbrichst.
+Zuerst die Erkenntnis, dass wir es tun und dann schauen, warum und wann wir es tun. Wo die Gefühle auftauchen? Und letztendlich eine neue Entscheidung treffen. Wie es in der Transaktionsanalyse durch die Theorie des „Skript des Lebens" erklärt wird.
 
 Wir finden einen Moment wie: „Wenn ich mich einlasse, werde ich zurück gelassen.". Und merken dort ist ein Schmerz und können sogar den Moment finden, als es mit soundso vielen Jahren mit Person soundso war, und wir nehmen ein Gefühl wahr und lassen es zu. Was vor vielleicht ein paar Tagen noch gar nicht möglich war. Und der Satz verschwindet, die nicht beendete Situation wurde beendet.
 
@@ -527,7 +527,7 @@ Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden.
 
 ## Den Kreislauf durchbrechen: So wählst du ein Umfeld, das dich wachsen lässt
 
-Im Idealfall ist ein Elternteil dabei, das einen ganz annehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genau ähnlich und vertraut wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die dein Potential sehen können und dich bestärken. Als ersten Schritt kannst du dir mein kostenloses [E-Book „Der Weg zum Ganzsein"](/ebook) holen – oder direkt ein [unverbindliches Kennenlerngespräch](/kontakt) vereinbaren.`,
+Im Idealfall ist ein Elternteil dabei, das einen ganz annehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genau ähnlich und vertraut wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die dein Potential sehen können und dich bestärken. Als ersten Schritt kannst du direkt ein [unverbindliches Kennenlerngespräch](/kontakt) vereinbaren.`,
       en: `## The Invisible Compass: Why Family Stories Steer Our Paths
 
 All paths in life are shaped — almost predetermined — by our family roots. Looking at the paths our parents or more distant ancestors took, we often find that we have taken similar steps ourselves. With professions, it can easily become apparent how family history continues. You can develop the understanding of being part of a system and how you sometimes go along, to please others, in order to create connection, even though it doesn't really match who you are.
