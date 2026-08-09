@@ -124,23 +124,6 @@ const Familienaufstellung = () => {
           </div>
         </section>
 
-        {/* Mid-page MicroCTA */}
-        <section className="py-14 md:py-20 bg-secondary/5">
-          <div className="container mx-auto px-4 max-w-2xl text-center">
-            <p className="text-muted-foreground mb-4 italic">
-              {t("family.midCta.text")}
-            </p>
-            <Button asChild variant="outline" className="min-h-[44px]">
-              <Link
-                to="/kontakt"
-                onClick={() => trackCTAClick("familienaufstellung_mid_cta", "familienaufstellung", "link")}
-              >
-                {t("cta.bookNow")}
-                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
-        </section>
 
         {/* Process */}
         <section className="py-14 md:py-20 bg-muted/40">
