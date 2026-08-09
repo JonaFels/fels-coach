@@ -148,8 +148,10 @@ export default defineConfig(({ mode }) => {
       },
       rollupOptions: {
         output: {
-          entryFileNames: 'assets/[name].[hash].js',
-          chunkFileNames: 'assets/[name].[hash].js',
+          // Stable JS paths prevent cached HTML/entry files from requesting
+          // deleted hash-named chunks during an atomic hosting rollout.
+          entryFileNames: 'assets/[name].js',
+          chunkFileNames: 'assets/[name].js',
           assetFileNames: 'assets/[name].[hash][extname]',
           manualChunks: {
             vendor: ["react", "react-dom", "react-router-dom"],
