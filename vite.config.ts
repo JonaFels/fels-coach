@@ -112,46 +112,51 @@ export default defineConfig(({ mode }) => {
   return {
     base: "/",
     server: {
-    host: "::",
-    port: 8080,
-    hmr: {
-      overlay: false,
-    },
-  },
-  plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-    asyncCssPlugin(),
-    lcpImagePreloadPlugin(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  build: {
-    minify: 'terser',
-    cssMinify: true,
-    sourcemap: false,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-      format: {
-        comments: false,
+      host: "::",
+      port: 8080,
+      hmr: {
+        overlay: false,
       },
     },
-    rollupOptions: {
-      output: {
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash][extname]',
-        manualChunks: {
-          vendor: ["react", "react-dom", "react-router-dom"],
-          ui: ["@radix-ui/react-accordion", "@radix-ui/react-dialog"],
+    plugins: [
+      react(),
+      mode === "development" && componentTagger(),
+      asyncCssPlugin(),
+      lcpImagePreloadPlugin(),
+    ].filter(Boolean),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+    define: {
+      "import.meta.env.VITE_SUPABASE_URL": JSON.stringify(viteSupabaseUrl),
+      "import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(viteSupabaseKey),
+    },
+    build: {
+      minify: 'terser',
+      cssMinify: true,
+      sourcemap: false,
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+        format: {
+          comments: false,
+        },
+      },
+      rollupOptions: {
+        output: {
+          entryFileNames: 'assets/[name].[hash].js',
+          chunkFileNames: 'assets/[name].[hash].js',
+          assetFileNames: 'assets/[name].[hash][extname]',
+          manualChunks: {
+            vendor: ["react", "react-dom", "react-router-dom"],
+            ui: ["@radix-ui/react-accordion", "@radix-ui/react-dialog"],
+          },
         },
       },
     },
-  },
-}));
+  };
+});
