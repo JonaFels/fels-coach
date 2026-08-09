@@ -230,26 +230,6 @@ const UeberMich = () => {
           </div>
         </section>
 
-        {/* Geschwister Freiburg */}
-        <section className="py-32 md:py-36 bg-muted/40">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-6 border-l-4 border-secondary pl-4">
-              {t("about.geschwister.title")}
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>{t("about.geschwister.text")}</p>
-              <a
-                href="https://geschwister-freiburg.de/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-medium text-foreground underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary transition-colors"
-              >
-                {t("about.geschwister.cta")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-        </section>
 
       </main>
       <Footer />
