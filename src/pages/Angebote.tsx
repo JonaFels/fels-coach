@@ -153,28 +153,6 @@ const Angebote = () => {
                 {t("offerings.ctaButton")}
               </a>
             </Button>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-              <a
-                href="/impressum"
-                className="hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
-              >
-                {language === "de" ? "Impressum" : "Imprint"}
-              </a>
-              <span>·</span>
-              <a
-                href="/datenschutz"
-                className="hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
-              >
-                {t("footer.privacy")}
-              </a>
-              <span>·</span>
-              <a
-                href="/agb"
-                className="hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
-              >
-                {t("footer.terms")}
-              </a>
-            </div>
           </div>
         </section>
       </main>
