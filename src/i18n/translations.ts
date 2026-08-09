@@ -388,10 +388,6 @@ export const translations: Translations = {
     de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare im 1:1 Raum sichtbar.",
     en: "When old family patterns block you – make the invisible visible in a 1:1 space.",
   },
-  "family.midCta.text": {
-    de: "Klingt das nach dem, wonach du suchst?",
-    en: "Sounds like what you're looking for?",
-  },
   "family.step4.title": {
     de: "4. Integration im Alltag",
     en: "4. Integration into daily life",
