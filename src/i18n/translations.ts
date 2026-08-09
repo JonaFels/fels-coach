@@ -836,49 +836,6 @@ export const translations: Translations = {
     en: "Read more about my journey",
   },
 
-  // Method Section (Homepage)
-  "method.intro": {
-    de: "Wie machen wir das konkret? – Geschützt im 1:1 Setting",
-    en: "How do we do this concretely? – Safely in a 1-on-1 setting",
-  },
-  "method.title": {
-    de: "Ablauf einer Familienaufstellung im 1:1",
-    en: "How a 1:1 family constellation works",
-  },
-  "method.description": {
-    de: "Ich biete 1:1 Beratung an in denen wir eine Aufstellung zu zweit machen. Wir schauen hinter die Fassade, was bei dir im System wirkt. Und finden Lösungen, um deinen Platz zu finden.",
-    en: "In individual sessions, we look together at which family dynamics still resonate within you today. No score-keeping, no blame – a gentle look at the root of your themes, so you can arrive clearly with yourself again.",
-  },
-  "method.step1.title": {
-    de: "Ankommen",
-    en: "Arrive",
-  },
-  "method.step1.desc": {
-    de: "Was beschäftigt dich gerade? Wir benennen das Thema, das dir aktuell am meisten Energie kostet – ohne Druck, ohne Bewertung.",
-    en: "What's on your mind right now? We name the topic that currently costs you the most energy – without pressure, without judgment.",
-  },
-  "method.step2.title": {
-    de: "Dynamiken sichtbar machen",
-    en: "Make dynamics visible",
-  },
-  "method.step2.desc": {
-    de: "Mit Bodenankern wird sichtbar, welche Rollen und Bindungen noch in dir wirken – und wo alte Muster deinen Alltag mitsteuern.",
-    en: "With floor anchors, the roles and bonds still at work within you become visible – and where old patterns are co-steering your everyday life.",
-  },
-  "method.step3.title": {
-    de: "Lösung",
-    en: "Resolution",
-  },
-  "method.step3.desc": {
-    de: "Du erlebst, wie es sich anfühlt, wenn Dynamiken klar werden und du deinen Platz einnimmst – mit mehr Ruhe in dir.",
-    en: "You experience what it feels like when dynamics become clear and you take your place – with more calm within you.",
-  },
-
-  "method.cta": {
-    de: "Mehr über die Methode erfahren",
-    en: "Learn more about the method",
-  },
-
   // Final CTA (Homepage)
   "finalCta.title": {
     de: "Werde zum Fels in deinem eigenen Leben.",
