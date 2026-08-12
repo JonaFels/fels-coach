@@ -47,20 +47,6 @@
       img{max-width:100%;height:auto;display:block;}
       a{color:inherit;text-decoration:inherit;}
       .skip-link{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-      /* Notfall-Inhalt ist standardmäßig unsichtbar und wird NUR eingeblendet,
-         wenn React nach mehreren Sekunden nachweislich nicht gestartet ist. */
-      #static-fallback{display:none;min-height:100vh;background:var(--bg);}
-      #fallback-notice{display:none;margin-top:40px;padding:18px 20px;border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:15px;line-height:1.6;}
-      #fallback-notice button{margin-top:14px;padding:12px 18px;background:var(--primary);color:var(--bg);border:0;font-weight:700;font:inherit;font-weight:700;cursor:pointer;}
-      .fallback-nav{max-width:1180px;margin:auto;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.14);font-family:'Playfair Fallback',Georgia,serif;font-size:18px;}
-      .fallback-main{max-width:940px;margin:auto;padding:clamp(64px,12vh,140px) 24px 80px;}
-      .fallback-kicker{color:var(--primary);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
-      .fallback-main h1{max-width:900px;margin:20px 0 24px;font-family:'Playfair Fallback',Georgia,serif;font-size:clamp(40px,6vw,76px);font-weight:500;line-height:1.08;}
-      .fallback-main p{max-width:680px;color:var(--muted);font-size:18px;line-height:1.7;}
-      .fallback-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px;}
-      .fallback-actions a{display:inline-block;padding:14px 20px;border:1px solid var(--primary);font-weight:700;}
-      .fallback-actions a:first-child{background:var(--primary);color:var(--bg);}
-      @keyframes show-fallback{to{opacity:1}}
     </style>
 
     <meta property="og:type" content="website" />
@@ -93,67 +79,7 @@
     <!-- Skip-Link für Barrierefreiheit (BFSG/WCAG 2.1 AA) -->
     <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
 
-    <div id="static-fallback">
-      <div class="fallback-nav">Jona Fels · Systemische Beratung &amp; Familienaufstellung</div>
-      <main class="fallback-main">
-        <div class="fallback-kicker">Praxis in Freiburg · Beratung auch online</div>
-        <h1>Systemische Beratung &amp; Familienaufstellung in Freiburg</h1>
-        <p>Ich begleite dich dabei, das Chaos im Kopf zu sortieren, wiederkehrende Muster zu verstehen und neue Klarheit für deinen Weg zu gewinnen.</p>
-        <div class="fallback-actions">
-          <a href="/kontakt">Kostenloses Kennenlerngespräch</a>
-          <a href="/systemische-beratung-freiburg">Mehr über die Beratung</a>
-        </div>
-        <div id="fallback-notice">
-          <strong>Die interaktive Version konnte nicht geladen werden.</strong><br />
-          Meist liegt das an einer alten zwischengespeicherten Version im Browser.
-          <br /><button type="button" id="fallback-reload">Seite neu laden</button>
-        </div>
-      </main>
-    </div>
     <div id="root"></div>
-
-    <noscript>
-      <style>#static-fallback{display:block}</style>
-    </noscript>
-    <script>
-      (function () {
-        function hardReload() {
-          var done = function () {
-            var u = new URL(window.location.href);
-            u.searchParams.set("_r", Date.now().toString());
-            window.location.replace(u.toString());
-          };
-          try {
-            var jobs = [];
-            if (window.caches && caches.keys) {
-              jobs.push(caches.keys().then(function (k) { return Promise.all(k.map(function (n) { return caches.delete(n); })); }));
-            }
-            if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
-              jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }));
-            }
-            Promise.all(jobs).then(done, done);
-            window.setTimeout(done, 1500);
-          } catch (e) { done(); }
-        }
-        document.addEventListener("click", function (e) {
-          if (e.target && e.target.id === "fallback-reload") hardReload();
-        });
-        window.setTimeout(function () {
-          var root = document.getElementById("root");
-          if (root && root.childElementCount > 0) return;
-          var shell = document.getElementById("static-fallback");
-          if (shell) shell.style.display = "block";
-          var notice = document.getElementById("fallback-notice");
-          if (notice) notice.style.display = "block";
-          var tried = false;
-          try { tried = window.sessionStorage.getItem("fels-recovery-attempt") === "1"; } catch (err) {}
-          if (!tried) {
-            try { window.sessionStorage.setItem("fels-recovery-attempt", "1"); } catch (err) {}
-            hardReload();
-          }
-        }, 8000);
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

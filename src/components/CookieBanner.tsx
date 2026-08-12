@@ -33,23 +33,36 @@ export const CookieBanner = () => {
   }, []);
 
   useEffect(() => {
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    let consent: string | null = null;
+    try {
+      consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    } catch {
+      setIsVisible(true);
+      return;
+    }
     if (!consent) {
       setIsVisible(true);
     } else {
-      const savedPrefs = JSON.parse(consent);
-      setPreferences(savedPrefs);
-      // Load tracking if user previously consented
-      if (savedPrefs.analytics) {
-        loadGTM();
-        loadGA4();
-        updateConsent(true);
+      try {
+        const savedPrefs = JSON.parse(consent) as CookiePreferences;
+        setPreferences(savedPrefs);
+        if (savedPrefs.analytics) {
+          loadGTM();
+          loadGA4();
+          updateConsent(true);
+        }
+      } catch {
+        setIsVisible(true);
       }
     }
   }, []);
 
   const savePreferences = (prefs: CookiePreferences) => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(prefs));
+    try {
+      localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(prefs));
+    } catch {
+      // Die Auswahl gilt in diesem Fall nur für die aktuelle Sitzung.
+    }
     setPreferences(prefs);
     setIsVisible(false);
     setShowPreferences(false);

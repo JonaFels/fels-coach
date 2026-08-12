@@ -115,6 +115,9 @@ export default defineConfig(({ mode }) => {
       "import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(viteSupabaseKey),
     },
     build: {
+      // Unterstützt auch ältere iOS-/Safari-Versionen zuverlässig.
+      target: "es2018",
+      cssTarget: "safari13",
       minify: 'terser',
       cssMinify: true,
       sourcemap: false,
