@@ -47,7 +47,9 @@
       img{max-width:100%;height:auto;display:block;}
       a{color:inherit;text-decoration:inherit;}
       .skip-link{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-      #static-fallback{min-height:100vh;opacity:0;animation:show-fallback .01s 4s forwards;background:var(--bg);}
+      /* Notfall-Inhalt ist standardmäßig unsichtbar und wird NUR eingeblendet,
+         wenn React nach mehreren Sekunden nachweislich nicht gestartet ist. */
+      #static-fallback{display:none;min-height:100vh;background:var(--bg);}
       #fallback-notice{display:none;margin-top:40px;padding:18px 20px;border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:15px;line-height:1.6;}
       #fallback-notice button{margin-top:14px;padding:12px 18px;background:var(--primary);color:var(--bg);border:0;font-weight:700;font:inherit;font-weight:700;cursor:pointer;}
       .fallback-nav{max-width:1180px;margin:auto;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.14);font-family:'Playfair Fallback',Georgia,serif;font-size:18px;}
@@ -111,7 +113,7 @@
     <div id="root"></div>
 
     <noscript>
-      <p>Bitte aktiviere JavaScript, damit die Webseite mit Terminbuchung geladen werden kann.</p>
+      <style>#static-fallback{display:block}</style>
     </noscript>
     <script>
       (function () {
@@ -139,6 +141,8 @@
         window.setTimeout(function () {
           var root = document.getElementById("root");
           if (root && root.childElementCount > 0) return;
+          var shell = document.getElementById("static-fallback");
+          if (shell) shell.style.display = "block";
           var notice = document.getElementById("fallback-notice");
           if (notice) notice.style.display = "block";
           var tried = false;
