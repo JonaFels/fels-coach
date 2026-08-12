@@ -12,26 +12,41 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const readStoredLanguage = (): Language | null => {
+  try {
+    return localStorage.getItem("language") === "en" ? "en" : null;
+  } catch {
+    return null;
+  }
+};
+
+const storeLanguage = (language: Language) => {
+  try {
+    localStorage.setItem("language", language);
+  } catch {
+    // Private Browsermodi können Web Storage blockieren.
+  }
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { getText } = useCMS();
   const [language, setLanguageState] = useState<Language>(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get("lang");
     if (urlLang === "en" || urlLang === "de") {
-      localStorage.setItem("language", urlLang);
+      storeLanguage(urlLang);
       return urlLang;
     }
     if (window.location.pathname === "/en") {
-      localStorage.setItem("language", "en");
+      storeLanguage("en");
       return "en";
     }
-    const saved = localStorage.getItem("language");
-    return saved === "en" ? "en" : "de";
+    return readStoredLanguage() ?? "de";
   });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("language", lang);
+    storeLanguage(lang);
   };
 
   // Clean ?lang= from URL so it doesn't persist in the address bar
