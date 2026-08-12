@@ -3,6 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Muss vor den von Vite eingefügten Bundles aktiv sein: repariert genau
+      // einmal veraltete Browser-Caches, ohne bei gesperrtem Storage zu loopen.
+      (function(){
+        var KEY='fels-recovery-attempt';
+        var params=new URLSearchParams(window.location.search);
+        var tried=params.has('_r');
+        try{tried=tried||sessionStorage.getItem(KEY)==='1';}catch(e){}
+        function recover(){
+          if(tried)return;
+          tried=true;
+          try{sessionStorage.setItem(KEY,'1');}catch(e){}
+          var done=function(){
+            var u=new URL(window.location.href);
+            u.searchParams.set('_r',Date.now().toString(36));
+            window.location.replace(u.toString());
+          };
+          var tasks=[];
+          if(window.caches&&caches.keys)tasks.push(caches.keys().then(function(ks){return Promise.all(ks.map(function(k){return caches.delete(k);}));}));
+          if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations)tasks.push(navigator.serviceWorker.getRegistrations().then(function(rs){return Promise.all(rs.map(function(r){return r.unregister();}));}));
+          Promise.all(tasks).then(done,done);
+        }
+        window.addEventListener('error',function(ev){
+          var target=ev&&ev.target;
+          var source=target&&(target.src||target.href)||'';
+          if(/\/assets\/.+\.(js|css)/.test(source)||(!target||target===window))recover();
+        },true);
+        window.addEventListener('unhandledrejection',recover);
+        window.setTimeout(function(){
+          var root=document.getElementById('root');
+          if(root&&root.childElementCount===0)recover();
+          else if(root&&root.childElementCount>0){try{sessionStorage.removeItem(KEY);}catch(e){}}
+        },5000);
+      })();
+    </script>
     <title>Systemische Beratung & Familienaufstellung Freiburg | Jona Fels</title>
     <meta name="description" content="Fühlst du dich orientierungslos? Systemische Beratung & Familienaufstellung in Freiburg – 1:1 Begleitung und Familienaufstellung im Einzelsetting. Finde Klarheit." />
     <meta name="author" content="Jona Fels" />
@@ -84,41 +119,6 @@
     <noscript>
       <p>Bitte aktiviere JavaScript, damit die Webseite mit Terminbuchung geladen werden kann.</p>
     </noscript>
-    <script>
-      // Einmalige Wiederherstellung, falls ein Browser noch veraltete Bundles
-      // oder einen alten Service Worker verwendet. Kein sichtbarer Preloader:
-      // die echte React-Seite wird ohne künstliche Blockade gestartet.
-      (function(){
-        var KEY='fels-recovery-attempt';
-        var tried=false;
-        try{tried=sessionStorage.getItem(KEY)==='1';}catch(e){}
-        function purgeAndReload(){
-          if(tried)return;
-          tried=true;
-          try{sessionStorage.setItem(KEY,'1');}catch(e){}
-          var done=function(){
-            var u=new URL(window.location.href);
-            u.searchParams.set('_r',Date.now().toString(36));
-            window.location.replace(u.toString());
-          };
-          var tasks=[];
-          if(window.caches&&caches.keys)tasks.push(caches.keys().then(function(ks){return Promise.all(ks.map(function(k){return caches.delete(k);}));}));
-          if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations)tasks.push(navigator.serviceWorker.getRegistrations().then(function(rs){return Promise.all(rs.map(function(r){return r.unregister();}));}));
-          Promise.all(tasks).then(done,done);
-        }
-        window.addEventListener('error',function(ev){
-          var t=ev&&ev.target;
-          var src=t&&(t.src||t.href)||'';
-          if(/\/assets\/.+\.(js|css)/.test(src)||(!t||t===window))purgeAndReload();
-        },true);
-        window.addEventListener('unhandledrejection',purgeAndReload);
-        window.setTimeout(function(){
-          var root=document.getElementById('root');
-          if(root&&root.childElementCount===0)purgeAndReload();
-          else{try{sessionStorage.removeItem(KEY);}catch(e){}}
-        },5000);
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
