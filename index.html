@@ -101,6 +101,11 @@
           <a href="/kontakt">Kostenloses Kennenlerngespräch</a>
           <a href="/systemische-beratung-freiburg">Mehr über die Beratung</a>
         </div>
+        <div id="fallback-notice">
+          <strong>Die interaktive Version konnte nicht geladen werden.</strong><br />
+          Meist liegt das an einer alten zwischengespeicherten Version im Browser.
+          <br /><button type="button" id="fallback-reload">Seite neu laden</button>
+        </div>
       </main>
     </div>
     <div id="root"></div>
@@ -108,6 +113,43 @@
     <noscript>
       <p>Bitte aktiviere JavaScript, damit die Webseite mit Terminbuchung geladen werden kann.</p>
     </noscript>
+    <script>
+      (function () {
+        function hardReload() {
+          var done = function () {
+            var u = new URL(window.location.href);
+            u.searchParams.set("_r", Date.now().toString());
+            window.location.replace(u.toString());
+          };
+          try {
+            var jobs = [];
+            if (window.caches && caches.keys) {
+              jobs.push(caches.keys().then(function (k) { return Promise.all(k.map(function (n) { return caches.delete(n); })); }));
+            }
+            if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+              jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }));
+            }
+            Promise.all(jobs).then(done, done);
+            window.setTimeout(done, 1500);
+          } catch (e) { done(); }
+        }
+        document.addEventListener("click", function (e) {
+          if (e.target && e.target.id === "fallback-reload") hardReload();
+        });
+        window.setTimeout(function () {
+          var root = document.getElementById("root");
+          if (root && root.childElementCount > 0) return;
+          var notice = document.getElementById("fallback-notice");
+          if (notice) notice.style.display = "block";
+          var tried = false;
+          try { tried = window.sessionStorage.getItem("fels-recovery-attempt") === "1"; } catch (err) {}
+          if (!tried) {
+            try { window.sessionStorage.setItem("fels-recovery-attempt", "1"); } catch (err) {}
+            hardReload();
+          }
+        }, 8000);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
