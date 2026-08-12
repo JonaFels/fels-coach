@@ -47,12 +47,6 @@
       img{max-width:100%;height:auto;display:block;}
       a{color:inherit;text-decoration:inherit;}
       .skip-link{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-      /* Pro-Shell: nur eine ruhige, korrekt eingefärbte Bühne — kein falsches Layout, das später ersetzt wird. */
-      #app-shell{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;background:var(--bg);color:var(--primary);font-family:'Playfair Display','Playfair Fallback',Georgia,serif;text-align:center;padding:2rem;opacity:1;transition:opacity .35s ease;pointer-events:none;z-index:1;}
-      #app-shell .wm{font-size:clamp(1.05rem,2vw,1.35rem);font-weight:600;letter-spacing:-.01em;line-height:1.3;max-width:32rem;}
-      #app-shell .sp{width:28px;height:28px;border-radius:50%;border:2px solid hsl(213 18% 26%);border-top-color:hsl(36 42% 64%);animation:sh-sp .9s linear infinite;}
-      @keyframes sh-sp{to{transform:rotate(360deg)}}
-      .app-shell--gone{opacity:0 !important;}
     </style>
 
     <meta property="og:type" content="website" />
@@ -87,59 +81,17 @@
 
     <div id="root"></div>
 
-    <!--
-      Pro-Pattern Sofort-Shell: keine Fake-Navigation, keine Fake-Hero (würde
-      beim React-Mount sichtbar ersetzt werden). Stattdessen eine ruhige,
-      korrekt eingefärbte Bühne mit Wortmarke + Spinner. Sobald React rendert,
-      wird die Shell sanft ausgeblendet und entfernt — kein Layout-Flash.
-    -->
-    <div id="app-shell" aria-hidden="true">
-      <div class="wm">Systemische Beratung &amp; Familienaufstellung</div>
-      <div class="sp" role="presentation"></div>
-      <noscript>
-        <p style="max-width:32rem;font-family:Montserrat,'Montserrat Fallback',sans-serif;font-size:1rem;color:hsl(40 14% 92%)">Bitte aktiviere JavaScript, damit die Webseite mit Terminbuchung geladen werden kann.</p>
-      </noscript>
-    </div>
+    <noscript>
+      <p>Bitte aktiviere JavaScript, damit die Webseite mit Terminbuchung geladen werden kann.</p>
+    </noscript>
     <script>
-      // Shell entfernen, sobald React etwas in #root gerendert hat.
-      (function(){
-        var root=document.getElementById('root');
-        var shell=document.getElementById('app-shell');
-        if(!root||!shell)return;
-        var done=false;
-        function remove(){
-          if(done)return;done=true;
-          shell.classList.add('app-shell--gone');
-          setTimeout(function(){shell&&shell.parentNode&&shell.parentNode.removeChild(shell);},400);
-        }
-        var mo=new MutationObserver(function(){
-          if(root.childElementCount>0){mo.disconnect();remove();}
-        });
-        mo.observe(root,{childList:true});
-        // Sicherheitsnetz – Shell maximal 6s anzeigen.
-        setTimeout(remove,6000);
-      })();
-    </script>
-    <script>
-      /*
-        Selbstheilung bei "nur Hintergrund sichtbar":
-        Wenn eine veraltete index.html gecached ist, zeigen Browser auf allen
-        Seiten/Unterseiten eine leere Bühne, weil die referenzierten
-        /assets/*.js nicht mehr existieren. Dieser Wächter erkennt das,
-        löscht Caches + ServiceWorker und lädt genau EINMAL hart neu.
-      */
+      // Einmalige Wiederherstellung, falls ein Browser noch veraltete Bundles
+      // oder einen alten Service Worker verwendet. Kein sichtbarer Preloader:
+      // die echte React-Seite wird ohne künstliche Blockade gestartet.
       (function(){
         var KEY='fels-recovery-attempt';
         var tried=false;
         try{tried=sessionStorage.getItem(KEY)==='1';}catch(e){}
-
-        // Alte ServiceWorker sind eine häufige Ursache für veraltete HTML/Assets.
-        if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
-          navigator.serviceWorker.getRegistrations().then(function(rs){
-            rs.forEach(function(r){r.unregister();});
-          }).catch(function(){});
-        }
-
         function purgeAndReload(){
           if(tried)return;
           tried=true;
@@ -149,32 +101,22 @@
             u.searchParams.set('_r',Date.now().toString(36));
             window.location.replace(u.toString());
           };
-          if(window.caches&&caches.keys){
-            caches.keys().then(function(ks){return Promise.all(ks.map(function(k){return caches.delete(k);}));}).then(done,done);
-          }else{done();}
+          var tasks=[];
+          if(window.caches&&caches.keys)tasks.push(caches.keys().then(function(ks){return Promise.all(ks.map(function(k){return caches.delete(k);}));}));
+          if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations)tasks.push(navigator.serviceWorker.getRegistrations().then(function(rs){return Promise.all(rs.map(function(r){return r.unregister();}));}));
+          Promise.all(tasks).then(done,done);
         }
-
-        // 1) Direkter Ladefehler eines Bundles
         window.addEventListener('error',function(ev){
           var t=ev&&ev.target;
-          if(!t||!t.tagName)return;
-          var src=t.src||t.href||'';
-          if(/\/assets\/.+\.(js|css)/.test(src))purgeAndReload();
+          var src=t&&(t.src||t.href)||'';
+          if(/\/assets\/.+\.(js|css)/.test(src)||(!t||t===window))purgeAndReload();
         },true);
-
-        // 2) Wächter: React hat nach 7s nichts gerendert
+        window.addEventListener('unhandledrejection',purgeAndReload);
         window.setTimeout(function(){
           var root=document.getElementById('root');
           if(root&&root.childElementCount===0)purgeAndReload();
-        },7000);
-
-        // 3) Erfolgreicher Start -> Flag zurücksetzen
-        window.addEventListener('load',function(){
-          window.setTimeout(function(){
-            var root=document.getElementById('root');
-            if(root&&root.childElementCount>0){try{sessionStorage.removeItem(KEY);}catch(e){}}
-          },2000);
-        });
+          else{try{sessionStorage.removeItem(KEY);}catch(e){}}
+        },5000);
       })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
