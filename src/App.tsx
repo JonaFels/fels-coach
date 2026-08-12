@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CMSProvider } from "@/contexts/CMSContext";
@@ -15,39 +13,30 @@ import { useAppTracking } from "@/hooks/useTracking";
 // Eager: Startseite (LCP-kritisch) + 404
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-
-// Lazy: alle übrigen Routen + Admin (nicht im kritischen Pfad) → kleinerer initialer Bundle
-const Angebote = lazyWithRetry(() => import("./pages/Angebote"));
-const Familienaufstellung = lazyWithRetry(() => import("./pages/Familienaufstellung"));
-const SystemischeBeratung = lazyWithRetry(() => import("./pages/SystemischeBeratung"));
-const Kontakt = lazyWithRetry(() => import("./pages/Kontakt"));
-const UeberMich = lazyWithRetry(() => import("./pages/UeberMich"));
-const Datenschutz = lazyWithRetry(() => import("./pages/Datenschutz"));
-const Impressum = lazyWithRetry(() => import("./pages/Impressum"));
-const AGB = lazyWithRetry(() => import("./pages/AGB"));
-const Links = lazyWithRetry(() => import("./pages/Links"));
-const Blog = lazyWithRetry(() => import("./pages/Blog"));
-const BlogPost = lazyWithRetry(() => import("./pages/BlogPost"));
-const AdminLogin = lazyWithRetry(() => import("./pages/admin/Login"));
-const AdminDashboard = lazyWithRetry(() => import("./pages/admin/Dashboard"));
-const Start = lazyWithRetry(() => import("./pages/Start"));
-const ErstgespraechBeta = lazyWithRetry(() => import("./pages/ErstgespraechBeta"));
-const BookingLogin = lazyWithRetry(() => import("./pages/booking/Login"));
-const BookingDashboard = lazyWithRetry(() => import("./pages/booking/Dashboard"));
-const ProtectedRouteLazy = lazyWithRetry(() =>
-  import("./components/admin/ProtectedRoute").then((m) => ({ default: m.ProtectedRoute }))
-);
+import Angebote from "./pages/Angebote";
+import Familienaufstellung from "./pages/Familienaufstellung";
+import SystemischeBeratung from "./pages/SystemischeBeratung";
+import Kontakt from "./pages/Kontakt";
+import UeberMich from "./pages/UeberMich";
+import Datenschutz from "./pages/Datenschutz";
+import Impressum from "./pages/Impressum";
+import AGB from "./pages/AGB";
+import Links from "./pages/Links";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import AdminLogin from "./pages/admin/Login";
+import AdminDashboard from "./pages/admin/Dashboard";
+import Start from "./pages/Start";
+import ErstgespraechBeta from "./pages/ErstgespraechBeta";
+import BookingLogin from "./pages/booking/Login";
+import BookingDashboard from "./pages/booking/Dashboard";
+import { ProtectedRoute } from "./components/admin/ProtectedRoute";
 
 // Separate component for tracking (needs Router context)
 const AppTracking = () => {
   useAppTracking();
   return null;
 };
-
-// Minimaler Fallback (kein Layout-Shift, schnell sichtbar)
-const RouteFallback = () => (
-  <div className="min-h-screen bg-background" aria-hidden="true" />
-);
 
 const App = () => (
   <CMSProvider>
@@ -58,8 +47,7 @@ const App = () => (
         <ScrollToTop />
         <ChatbaseWidget />
         <HashBookingTrigger>
-          <Suspense fallback={<RouteFallback />}>
-            <Routes>
+          <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/index" element={<Index />} />
               <Route path="/en" element={<Index />} />
@@ -84,15 +72,14 @@ const App = () => (
               <Route
                 path="/admin"
                 element={
-                  <ProtectedRouteLazy>
+                  <ProtectedRoute>
                     <AdminDashboard />
-                  </ProtectedRouteLazy>
+                  </ProtectedRoute>
                 }
               />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+          </Routes>
         </HashBookingTrigger>
       </BrowserRouter>
     </LanguageProvider>

@@ -137,10 +137,6 @@ export default defineConfig(({ mode }) => {
           entryFileNames: 'assets/[name].[hash].js',
           chunkFileNames: 'assets/[name].[hash].js',
           assetFileNames: 'assets/[name].[hash][extname]',
-          manualChunks: {
-            vendor: ["react", "react-dom", "react-router-dom"],
-            ui: ["@radix-ui/react-accordion", "@radix-ui/react-dialog"],
-          },
         },
       },
     },

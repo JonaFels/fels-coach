@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -13,11 +13,9 @@ import { YouTubeIntro } from "@/components/YouTubeIntro";
 import { CoachingPainPoints } from "@/components/CoachingPainPoints";
 import { OfferingsCards } from "@/components/OfferingsCards";
 import { PraxisLocal } from "@/components/PraxisLocal";
-
-// Below-the-fold per Lazy-Chunk → kleinerer initialer Bundle
-const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
-const CookieBanner = lazy(() => import("@/components/CookieBanner").then((m) => ({ default: m.CookieBanner })));
-const JsonLd = lazy(() => import("@/components/JsonLd").then((m) => ({ default: m.JsonLd })));
+import { Footer } from "@/components/Footer";
+import { CookieBanner } from "@/components/CookieBanner";
+import { JsonLd } from "@/components/JsonLd";
 const Index = () => {
   const { hash } = useLocation();
 
@@ -47,9 +45,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
 
       <SEOHead />
-      <Suspense fallback={null}>
-        <JsonLd />
-      </Suspense>
+      <JsonLd />
       <Header />
       <main id="main-content">
         <PraxisHeroBanner variant="sitzbereich" />
@@ -65,10 +61,8 @@ const Index = () => {
         <SectionDivider />
         <FAQSection />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-        <CookieBanner />
-      </Suspense>
+      <Footer />
+      <CookieBanner />
     </div>
   );
 };
