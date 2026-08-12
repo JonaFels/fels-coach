@@ -141,6 +141,8 @@
         window.setTimeout(function () {
           var root = document.getElementById("root");
           if (root && root.childElementCount > 0) return;
+          var shell = document.getElementById("static-fallback");
+          if (shell) shell.style.display = "block";
           var notice = document.getElementById("fallback-notice");
           if (notice) notice.style.display = "block";
           var tried = false;
