@@ -120,6 +120,63 @@
         setTimeout(remove,6000);
       })();
     </script>
+    <script>
+      /*
+        Selbstheilung bei "nur Hintergrund sichtbar":
+        Wenn eine veraltete index.html gecached ist, zeigen Browser auf allen
+        Seiten/Unterseiten eine leere Bühne, weil die referenzierten
+        /assets/*.js nicht mehr existieren. Dieser Wächter erkennt das,
+        löscht Caches + ServiceWorker und lädt genau EINMAL hart neu.
+      */
+      (function(){
+        var KEY='fels-recovery-attempt';
+        var tried=false;
+        try{tried=sessionStorage.getItem(KEY)==='1';}catch(e){}
+
+        // Alte ServiceWorker sind eine häufige Ursache für veraltete HTML/Assets.
+        if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
+          navigator.serviceWorker.getRegistrations().then(function(rs){
+            rs.forEach(function(r){r.unregister();});
+          }).catch(function(){});
+        }
+
+        function purgeAndReload(){
+          if(tried)return;
+          tried=true;
+          try{sessionStorage.setItem(KEY,'1');}catch(e){}
+          var done=function(){
+            var u=new URL(window.location.href);
+            u.searchParams.set('_r',Date.now().toString(36));
+            window.location.replace(u.toString());
+          };
+          if(window.caches&&caches.keys){
+            caches.keys().then(function(ks){return Promise.all(ks.map(function(k){return caches.delete(k);}));}).then(done,done);
+          }else{done();}
+        }
+
+        // 1) Direkter Ladefehler eines Bundles
+        window.addEventListener('error',function(ev){
+          var t=ev&&ev.target;
+          if(!t||!t.tagName)return;
+          var src=t.src||t.href||'';
+          if(/\/assets\/.+\.(js|css)/.test(src))purgeAndReload();
+        },true);
+
+        // 2) Wächter: React hat nach 7s nichts gerendert
+        window.setTimeout(function(){
+          var root=document.getElementById('root');
+          if(root&&root.childElementCount===0)purgeAndReload();
+        },7000);
+
+        // 3) Erfolgreicher Start -> Flag zurücksetzen
+        window.addEventListener('load',function(){
+          window.setTimeout(function(){
+            var root=document.getElementById('root');
+            if(root&&root.childElementCount>0){try{sessionStorage.removeItem(KEY);}catch(e){}}
+          },2000);
+        });
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
