@@ -292,9 +292,10 @@ export const translations: Translations = {
     en: "Also: Family Constellation in a Group",
   },
   "group.angeboteText": {
-    de: "Du suchst das Gruppenformat? Auf fels-familienstellen.de findest du aktuelle Gruppentermine und den offenen Rahmen für Aufstellungen in geschützter Gruppe.",
-    en: "Looking for the group format? Visit fels-familienstellen.de for current group dates and the open framework for constellations in a protected group.",
+    de: "Du suchst das Gruppenformat? Aktuelle Gruppentermine und den offenen Rahmen für Aufstellungen in geschützter Gruppe findest du auf {{link}}.",
+    en: "Looking for the group format? Find current group dates and the open framework for constellations in a protected group at {{link}}.",
   },
+
   "group.footerLink": {
     de: "Familienaufstellungen in Gruppe",
     en: "Family Constellations in Groups",
