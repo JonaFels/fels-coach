@@ -32,6 +32,34 @@ export const OfferingsCards = () => {
             online.
           </p>
         </div>
+
+        {/* Cross-Sell: Gruppenformat */}
+        <div className="mt-8 rounded-lg border border-secondary/20 bg-secondary/5 p-6 md:p-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
+              <Users className="h-5 w-5 text-secondary" aria-hidden="true" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
+                Lieber in Gruppe arbeiten?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Manchmal trägt eine Gruppe besonders weiter – wenn der Austausch und das Miterleben anderer Lerneffekte verstärken. Auf{" "}
+                <a
+                  href="https://fels-familienstellen.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackCTAClick("fels_familienstellen", "homepage_offerings", "external_link")}
+                  className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
+                >
+                  fels-familienstellen.de
+                </a>{" "}
+                findest du meine Familienaufstellungen im Gruppenformat.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
