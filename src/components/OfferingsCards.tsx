@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { Users } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const OfferingsCards = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-28 md:py-36 bg-muted/30">
       <div className="container mx-auto px-4 max-w-3xl">
@@ -41,20 +43,10 @@ export const OfferingsCards = () => {
             </div>
             <div className="flex-1">
               <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
-                Lieber in Gruppe arbeiten?
+                {t("group.homeTitle")}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                Manchmal trägt eine Gruppe besonders weiter – wenn der Austausch und das Miterleben anderer Lerneffekte verstärken. Auf{" "}
-                <a
-                  href="https://fels-familienstellen.de"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackCTAClick("fels_familienstellen", "homepage_offerings", "external_link")}
-                  className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
-                >
-                  fels-familienstellen.de
-                </a>{" "}
-                findest du meine Familienaufstellungen im Gruppenformat.
+                {t("group.homeText")}
               </p>
             </div>
           </div>
