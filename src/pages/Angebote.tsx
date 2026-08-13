@@ -1,7 +1,8 @@
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Phone } from "lucide-react";
+import { Phone, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -109,12 +110,47 @@ const Angebote = () => {
               </div>
             </div>
 
-            <div className="rounded-lg bg-muted/40 border border-border/50 p-6 md:p-8 text-sm text-muted-foreground leading-relaxed">
+            <div className="rounded-lg bg-muted/40 border border-border/50 p-6 md:p-8 text-sm text-muted-foreground leading-relaxed mb-8">
               <p className="font-medium text-foreground mb-2">
                 {language === "de" ? "Unterstützung soll nicht am Geld scheitern" : "Support shouldn't fail because of money"}
               </p>
               <p>{t("offerings.preiseNote")}</p>
             </div>
+
+            {/* Gruppenformat Cross-Sell */}
+            <div className="rounded-lg border border-secondary/20 bg-secondary/5 p-6 md:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
+                  <Users className="h-5 w-5 text-secondary" aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                    {t("group.angeboteTitle")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                    {t("group.angeboteText").split("{{link}}").map((part, i, arr) => (
+                      <span key={i}>
+                        {part}
+                        {i < arr.length - 1 && (
+                          <a
+                            href="https://fels-familienstellen.de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => trackCTAClick("fels_familienstellen", "angebote_page", "external_link")}
+                            className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
+                          >
+                            fels-familienstellen.de
+                          </a>
+                        )}
+                      </span>
+                    ))}
+                  </p>
+
+
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 

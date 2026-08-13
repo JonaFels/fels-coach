@@ -266,7 +266,42 @@ export const translations: Translations = {
     de: "Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich beim Erstgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
     en: "If you can't currently afford the regular prices, please feel free to bring it up openly during the intro call. We'll find a reduced-rate solution that works for you.",
   },
+  "group.homeTitle": {
+    de: "Lieber in Gruppe arbeiten?",
+    en: "Prefer to work in a group?",
+  },
+  "group.homeText": {
+    de: "Manchmal trägt eine Gruppe besonders weiter – wenn der Austausch und das Miterleben anderer Lerneffekte verstärken. Meine Familienaufstellungen im Gruppenformat findest du auf {{link}}.",
+    en: "Sometimes a group is especially helpful – when exchange and witnessing others' work deepen learning. You can find my family constellations in group format at {{link}}.",
+  },
+
+  "group.pageTitle": {
+    de: "Familienaufstellung in Gruppe",
+    en: "Family Constellation in a Group",
+  },
+  "group.pageText": {
+    de: "Neben dem 1:1 Setting biete ich regelmäßig Familienaufstellungen im geschützten Gruppenformat an. Dort kannst du dein eigenes Thema stellen, andere Aufstellungen miterleben und von der gemeinsamen Energie profitieren.",
+    en: "In addition to the 1:1 setting, I regularly offer family constellations in a protected group format. There you can bring your own topic, witness other constellations and benefit from the shared energy.",
+  },
+  "group.pageCta": {
+    de: "Gruppentermine ansehen",
+    en: "View group dates",
+  },
+  "group.angeboteTitle": {
+    de: "Auch: Familienaufstellung in Gruppe",
+    en: "Also: Family Constellation in a Group",
+  },
+  "group.angeboteText": {
+    de: "Du suchst das Gruppenformat? Aktuelle Gruppentermine und den offenen Rahmen für Aufstellungen in geschützter Gruppe findest du auf {{link}}.",
+    en: "Looking for the group format? Find current group dates and the open framework for constellations in a protected group at {{link}}.",
+  },
+
+  "group.footerLink": {
+    de: "Familienaufstellungen in Gruppe",
+    en: "Family Constellations in Groups",
+  },
   "offerings.rahmen.title": {
+
     de: "Rahmenbedingungen",
     en: "Framework",
   },
