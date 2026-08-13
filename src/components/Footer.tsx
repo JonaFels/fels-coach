@@ -69,12 +69,27 @@ export const Footer = () => {
           </a>
         </div>
 
+        {/* Group offerings link */}
+        <div className="mb-5 text-center">
+          <a
+            href="https://fels-familienstellen.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTAClick("fels_familienstellen", "footer", "external_link")}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline-effect"
+          >
+            <Users className="h-4 w-4" aria-hidden="true" />
+            {language === "de" ? "Familienaufstellungen in Gruppe" : "Family Constellations in Groups"}
+          </a>
+        </div>
+
         {/* Divider + Copyright */}
         <div className="border-t border-border/40 pt-4">
           <p className="text-center text-xs text-muted-foreground tracking-wide">
             © {currentYear} Jona Fels – Systemische Aufstellung, Freiburg. {t("footer.rights")}
           </p>
         </div>
+
       </div>
     </footer>
   );
