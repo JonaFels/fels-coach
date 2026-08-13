@@ -20,8 +20,8 @@ export const PraxisLocal = () => {
             </h2>
             <p className="text-muted-foreground text-lg leading-[1.9] mb-8">
               {isDe
-                ? "Mein Praxisraum für Systemische Beratung und Familienaufstellung liegt zentral in der Karlstraße 51 in Freiburg im Breisgau – ein ruhiger, geschützter Ort für deine 1:1 Sitzung. Wenn du weiter weg wohnst oder flexibel bleiben möchtest, begleite ich dich genauso gut online per Video."
-                : "My practice room for systemic counseling and family constellation is centrally located at Karlstraße 51 in Freiburg im Breisgau – a quiet, protected place for your 1:1 session. If you live further away, I accompany you online via video just as well."}
+                ? "Mein Praxisraum für Systemische Aufstellung und Familienaufstellung liegt zentral in der Karlstraße 51 in Freiburg im Breisgau – ein ruhiger, geschützter Ort für deine 1:1 Sitzung. Wenn du weiter weg wohnst oder flexibel bleiben möchtest, begleite ich dich genauso gut online per Video."
+                : "My practice room for systemic constellation and family constellation is centrally located at Karlstraße 51 in Freiburg im Breisgau – a quiet, protected place for your 1:1 session. If you live further away, I accompany you online via video just as well."}
             </p>
             <ul className="space-y-4 text-foreground" role="list">
               <li className="flex items-start gap-3">
@@ -51,7 +51,7 @@ export const PraxisLocal = () => {
             <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted/40 shadow-md shadow-foreground/5 ring-1 ring-border/10">
               <img
                 src={praxisAufstellung}
-                alt="Praxisraum Systemische Beratung Freiburg"
+                alt="Praxisraum Systemische Aufstellung Freiburg"
                 className="img-warm w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"

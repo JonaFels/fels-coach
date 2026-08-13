@@ -11,10 +11,10 @@ export const JsonLd = () => {
         {
           "@type": ["ProfessionalService", "LocalBusiness"],
           "@id": "https://fels-coach.de/#service",
-          name: "Systemische Beratung & Familienaufstellung in Freiburg – Jona Fels",
+          name: "Systemische Aufstellung & Familienaufstellung in Freiburg – Jona Fels",
           alternateName: [
             "Jona Fels – Familienaufstellung Freiburg",
-            "Jona Fels – Systemischer Berater Freiburg",
+            "Jona Fels – Systemischer Aufsteller Freiburg",
             "Familienstellen Freiburg – Jona Fels",
             "Familienaufstellung Einzelsitzung Freiburg",
             "Familienstellen Einzelsitzung Freiburg",
@@ -23,7 +23,7 @@ export const JsonLd = () => {
           url: "https://fels-coach.de",
           telephone: "+4917667608617",
           description:
-            "Systemische Familienaufstellung und Beratung in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
+            "Systemische Familienaufstellung und Aufstellungsarbeit in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Karlstraße 51",
@@ -92,32 +92,32 @@ export const JsonLd = () => {
             "systemische Aufstellung Freiburg",
             "systemischer Coach Freiburg",
             "systemischer Coach",
-            "systemische Beratung Freiburg",
+            "systemische Aufstellung Freiburg",
             "Coach Freiburg",
-            "Beratung Freiburg",
+            "Aufstellungsarbeit Freiburg",
             "Familientherapie Freiburg",
             "innere Blockaden lösen",
             "unbewusste Muster auflösen",
-            "persönliche Entwicklung Beratung",
+            "persönliche Entwicklung Aufstellungsarbeit",
           ],
           founder: {
             "@id": "https://fels-coach.de/#person",
           },
           hasOfferCatalog: {
             "@type": "OfferCatalog",
-            name: "Beratungsangebote",
+            name: "Aufstellungsangebote",
             itemListElement: [
               {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
                   "@id": "https://fels-coach.de/#service-kennenlernen",
-                  name: "Kennenlernen – Systemische Beratung",
+                  name: "Kennenlernen – Systemische Aufstellung",
                   description:
                     "Erstes Kennenlernen und Einstieg in die systemische Arbeit. Wir klären Ihr Anliegen und schauen, ob die Chemie stimmt.",
                   provider: { "@id": "https://fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
-                  serviceType: "Systemische Beratung",
+                  serviceType: "Systemische Aufstellung",
                 },
                 price: "55.00",
                 priceCurrency: "EUR",
@@ -134,7 +134,7 @@ export const JsonLd = () => {
                 itemOffered: {
                   "@type": "Service",
                   "@id": "https://fels-coach.de/#service-familienaufstellung",
-                  name: "Beratung mit Einzelaufstellung",
+                  name: "Aufstellung mit Einzelaufstellung",
                   description:
                     "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster und Blockaden erkennen und nachhaltig lösen.",
                   provider: { "@id": "https://fels-coach.de/#service" },
@@ -160,9 +160,9 @@ export const JsonLd = () => {
           name: "Jona Fels",
           givenName: "Jona",
           familyName: "Fels",
-          jobTitle: "Systemischer Berater & Familienaufsteller",
+          jobTitle: "Systemischer Aufsteller & Familienaufsteller",
           description:
-            "Systemischer Berater und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientierte Beratung und persönliche Entwicklung.",
+            "Systemischer Aufsteller und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientierte Aufstellungsarbeit und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
           telephone: "+4917667608617",
@@ -183,8 +183,8 @@ export const JsonLd = () => {
           knowsAbout: [
             "Systemische Familienaufstellung",
             "Familienaufstellung mit Bodenankern",
-            "Systemische Beratung",
-            "Lösungsorientierte Beratung",
+            "Systemische Aufstellung",
+            "Lösungsorientierte Aufstellungsarbeit",
             "Persönlichkeitsentwicklung",
             "Unbewusste Familienmuster",
             "Innere Blockaden lösen",
@@ -206,11 +206,11 @@ export const JsonLd = () => {
         {
           "@type": "WebSite",
           "@id": "https://fels-coach.de/#website",
-          name: "Systemische Beratung & Familienaufstellung in Freiburg – Jona Fels",
+          name: "Systemische Aufstellung & Familienaufstellung in Freiburg – Jona Fels",
           alternateName: "Jona Fels – Familienaufstellung Freiburg",
           url: "https://fels-coach.de",
           description:
-            "Systemische Familienaufstellungen und Beratung in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
+            "Systemische Familienaufstellungen und Aufstellungsarbeit in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
           publisher: { "@id": "https://fels-coach.de/#service" },
           inLanguage: ["de", "en"],
         },
@@ -281,7 +281,7 @@ export const JsonLd = () => {
               name: "Übernimmt die Krankenkasse die Kosten?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Nein. Beratung und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+                text: "Nein. Aufstellungsarbeit und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
               },
             },
             {
@@ -294,7 +294,7 @@ export const JsonLd = () => {
             },
             {
               "@type": "Question",
-              name: "Wo findet die Beratung statt und gibt es Wochenend-Termine?",
+              name: "Wo findet die Aufstellungsarbeit statt und gibt es Wochenend-Termine?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Mein Praxisraum liegt zentral in der Karlstraße 51, 79104 Freiburg im Breisgau (Tram 3). Da viele Klient:innen berufstätig sind, biete ich meine Sitzungen schwerpunktmäßig samstags zwischen 14:00 und 20:00 Uhr an – mit Ruhe und ohne Alltagsstress.",

@@ -141,7 +141,7 @@ const Datenschutz = () => {
             </p>
             <p>
               <strong>Zweck und Rechtsgrundlage:</strong> Die Einbindung erfolgt, um dir Inhalte über
-              mein Beratungsangebot ansprechend und barrierearm zu präsentieren. Rechtsgrundlage für die
+              mein Aufstellungsangebot ansprechend und barrierearm zu präsentieren. Rechtsgrundlage für die
               Einbindung ist mein berechtigtes Interesse an einer attraktiven Darstellung meines Angebots
               gemäß Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO. Soweit durch das Starten des Videos auf
               deinem Endgerät Informationen gespeichert oder ausgelesen werden, erfolgt dies auf
@@ -195,7 +195,7 @@ const Datenschutz = () => {
             <p>
               <strong>Rechtsgrundlage:</strong> Rechtsgrundlage der Verarbeitung ist deine Einwilligung
               durch die aktive Teilnahme am Test (Art. 6 Abs. 1 lit. a DSGVO) sowie mein berechtigtes
-              Interesse an einer qualitativen Verbesserung meines Beratungsangebots (Art. 6 Abs. 1 lit. f DSGVO).
+              Interesse an einer qualitativen Verbesserung meines Aufstellungsangebots (Art. 6 Abs. 1 lit. f DSGVO).
             </p>
             <p>
               <strong>Art der verarbeiteten Daten:</strong> Während du den Test durchläufst, werden deine
@@ -226,7 +226,7 @@ const Datenschutz = () => {
               <strong>Hinweis zum Charakter des Tests:</strong> Der Selbsttest dient ausschließlich der
               persönlichen Selbstreflexion und psychoedukativen Zwecken. Er stellt ausdrücklich keine
               psychologische oder medizinische Diagnose dar und ersetzt keine professionelle Therapie,
-              heilkundliche Behandlung oder ärztliche Beratung.
+              heilkundliche Behandlung oder ärztliche Aufstellungsarbeit.
             </p>
           </div>
         </div>

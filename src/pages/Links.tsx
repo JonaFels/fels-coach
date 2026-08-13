@@ -12,8 +12,8 @@ const linkButtons = [
   {
     href: "/",
     icon: HeartHandshake,
-    label: "1:1 Beratung in Freiburg",
-    sub: "Systemische Beratung & Familienaufstellung",
+    label: "1:1 Aufstellungsarbeit in Freiburg",
+    sub: "Systemische Aufstellung & Familienaufstellung",
   },
   {
     href: "/blog",
@@ -47,7 +47,7 @@ const Links = () => {
           <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-white/90 shadow-xl">
             <img
               src={portrait}
-              alt="Jona Fels – Systemischer Berater in Freiburg"
+              alt="Jona Fels – Systemischer Aufsteller in Freiburg"
               className="w-full h-full object-cover object-[center_18%]"
               loading="eager"
               decoding="async"
@@ -62,7 +62,7 @@ const Links = () => {
         {/* Handle */}
         <h1 className="mt-4 text-lg font-semibold tracking-tight">@jona.fels</h1>
         <p className="text-sm text-white/85 text-center mt-1 max-w-[320px] leading-relaxed">
-          Systemische Beratung & Familienaufstellung · Freiburg
+          Systemische Aufstellung & Familienaufstellung · Freiburg
         </p>
 
         {/* Socials */}
@@ -97,7 +97,7 @@ const Links = () => {
             </span>
           </a>
 
-          {/* 2. 1:1 Beratung */}
+          {/* 2. 1:1 Aufstellungsarbeit */}
           <a
             href="/"
             className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
@@ -106,8 +106,8 @@ const Links = () => {
               <HeartHandshake className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
             </span>
             <span className="flex-1 text-left leading-tight">
-              <span className="block text-[14.5px] font-semibold">1:1 Beratung in Freiburg</span>
-              <span className="block text-[12px] text-[#1f3535]/60">Systemische Beratung & Familienaufstellung</span>
+              <span className="block text-[14.5px] font-semibold">1:1 Aufstellungsarbeit in Freiburg</span>
+              <span className="block text-[12px] text-[#1f3535]/60">Systemische Aufstellung & Familienaufstellung</span>
             </span>
           </a>
 

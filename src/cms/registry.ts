@@ -192,7 +192,7 @@ export const cmsRegistry: CMSEntry[] = [
   { key: "footer.rights", type: "text", category: "Footer", label: "Copyright" },
 
   // ===== Navigation =====
-  { key: "nav.coaching", type: "text", category: "Navigation", label: "Nav: Beratung" },
+  { key: "nav.coaching", type: "text", category: "Navigation", label: "Nav: Aufstellungsarbeit" },
   { key: "nav.familienaufstellung", type: "text", category: "Navigation", label: "Nav: Familienaufstellung" },
   { key: "nav.ueber", type: "text", category: "Navigation", label: "Nav: Über mich" },
   { key: "nav.kontakt", type: "text", category: "Navigation", label: "Nav: Kontakt" },
