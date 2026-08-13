@@ -85,19 +85,6 @@ const Familienaufstellung = () => {
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
               {t("family.subtitle")}
             </p>
-            <div className="mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full px-8 py-6 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
-                onClick={() => trackCTAClick("family_hero_cta", "familienaufstellung", "button")}
-              >
-                <a href="/kontakt">
-                  <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
-                  {t("hero.cta")}
-                </a>
-              </Button>
-            </div>
           </div>
         </section>
 
