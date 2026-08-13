@@ -180,7 +180,7 @@ Und auch wenn die systemische Ansicht mittlerweile weit verbreitet ist, wird die
 
 Doch die kulturabhängig Einsortierung, dass im Westen die Individualisierung vor das System, bzw. Familie gesetzt wird, ist wahrscheinlich der Grund, warum die Theorie und Methode in z.B. südamerikanischen Ländern weiter verbreitet ist. Z.B. in Brasilien gibt es mehr als **fünfmal so viele aktive Familienaufsteller** wie in Deutschland. Aus philosophischer Sicht könnte man vermuten, dass mehr Ordnung bzw. Hierarchie eine größere System- oder Gruppen-Stabilität erzeugen und dafür den Individualismus einschränken. Wodurch klar wird, warum in Ländern in denen die Familie sehr wichtig ist und die Individualisierung der einzelnen Mitglieder untergeordnet ist, wie genau in Brasilien, China, Mexiko und Russland, das Familienstellen so populär geworden ist. In diesem Kontext von Individualisierung und Überordnung der Gruppe vor dem Individuum, stellt sich die Frage, wie einer sehr individualistischen Gesellschaft die Systemik weiter helfen kann – und bleibt bis heute spannend.
 
-Wenn dich interessiert, wie diese Wurzeln heute konkret in einer [systemischen Beratung in Freiburg](/systemische-beratung-freiburg) wirken oder wie ich [als Coach](/ueber-mich) damit arbeite, findest du auf den jeweiligen Seiten mehr dazu.`,
+Wenn dich interessiert, wie diese Wurzeln heute konkret in einer [systemischen Beratung in Freiburg](/systemische-familienaufstellung-freiburg) wirken oder wie ich [als Coach](/ueber-mich) damit arbeite, findest du auf den jeweiligen Seiten mehr dazu.`,
       en: `## From Freud to Hellinger: Where Family Constellations Really Come From
 
 One man above all laid the foundation for today's family constellations. **Bert Hellinger**. But of course, this therapeutic method belongs in a historical context of many evolving theories in the psychological world. Which is where we'll start.
@@ -312,7 +312,7 @@ Man stellt sich vor, dass all diese Gedanken zu einer quasi inneren Welt führen
 
 ## Der Einfluss unseres Umfelds: Warum wir unser Glück opfern
 
-Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [systemische Beratung](/systemische-beratung-freiburg) fällt.
+Nun neben der rein psychotherapeutischen oder spirituellen Sicht und den Methoden wie klassische Verhaltenstherapie oder die Praxis der Meditation, soll es um eine konkretere Herangehensweise gehen, die in diesem Fall eine Mischung aus beidem ist und hier unter die [systemische Beratung](/systemische-familienaufstellung-freiburg) fällt.
 
 Was hält den Menschen davon ab glücklich zu sein? Gedanken, ja und der Glaube an das selbstgemachte Weltbild, ja. Aber ganz greifbar, die direkte Umwelt, Freunde, Familie und alle anderen, die uns begleiten oder begleitet haben.
 
@@ -395,7 +395,7 @@ Whether through thoughts or feelings, processing the unfinished situations creat
       en: "Do you often feel like a stranger in your own life? Discover how family imprints bury your true Self and how you can stay true to yourself.",
     },
     content: {
-      de: `Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon entschieden. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Es ist wichtig, das Verständnis dafür zu entwickeln, [Teil eines Systems](/systemische-beratung-freiburg) zu sein und wie man manchmal zuliebe anderer, zum Gefallen, mitläuft, um Verbindung herzustellen. Ganz unbewusst.
+      de: `Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon entschieden. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Es ist wichtig, das Verständnis dafür zu entwickeln, [Teil eines Systems](/systemische-familienaufstellung-freiburg) zu sein und wie man manchmal zuliebe anderer, zum Gefallen, mitläuft, um Verbindung herzustellen. Ganz unbewusst.
 
 ## Zwischen Erwartungen und dem wahren Selbst
 
@@ -468,7 +468,7 @@ Was ist wahr und was nicht? Ich glaube, ganz am Anfang wusste ich es.
 
 ---
 
-Wenn du diesen Fragen weiter nachgehen willst: In meinem Artikel [„Wie die Umwelt unser wahres Selbst verschüttet"](/blog/wahres-selbst-finden-familiaere-praegung-loesen) vertiefe ich das Thema. Oder du schaust dir an, wie ich in der [systemischen Beratung in Freiburg und online](/systemische-beratung-freiburg) mit genau solchen Suchbewegungen arbeite.`,
+Wenn du diesen Fragen weiter nachgehen willst: In meinem Artikel [„Wie die Umwelt unser wahres Selbst verschüttet"](/blog/wahres-selbst-finden-familiaere-praegung-loesen) vertiefe ich das Thema. Oder du schaust dir an, wie ich in der [systemischen Beratung in Freiburg und online](/systemische-familienaufstellung-freiburg) mit genau solchen Suchbewegungen arbeite.`,
       en: `So I am simply who I am, I do what I want, and that's how it is. The blank slate. It happens out of circumstance. Or doesn't it?
 
 But then why do I want something different from others? If it is simply that my parents show me how it's done and I am unwritten, then I would have to do it exactly as they say. Or is there something in me that is entirely me? And what is that? A patchwork construct of the opinions of all the people in my life?
@@ -515,7 +515,7 @@ What is true and what is not? I believe that, right at the very beginning, I kne
     content: {
       de: `## Der unsichtbare Kompass: Warum Familiengeschichten unsere Wege lenken
 
-Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon vorbestimmt. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Du kannst das Verständnis entwickeln, [Teil eines Systems](/systemische-beratung-freiburg) zu sein und wie du manchmal zuliebe anderer, zum Gefallen, mitläufst, um Verbindung herzustellen, obwohl es dir nicht wirklich entspricht.
+Alle Wege im Leben sind von unseren Familienwurzeln geprägt, sogar fast schon vorbestimmt. Beim Betrachten der Wege, die unsere Eltern oder entferntere Vorfahren gegangen sind, können wir oft feststellen, dass wir selbst ähnliche Schritte eingeschlagen haben. Bei Berufen kann es leicht auffallen, wie sich die Familienhistorie weiterführt. Du kannst das Verständnis entwickeln, [Teil eines Systems](/systemische-familienaufstellung-freiburg) zu sein und wie du manchmal zuliebe anderer, zum Gefallen, mitläufst, um Verbindung herzustellen, obwohl es dir nicht wirklich entspricht.
 
 ## Erwartung vs. Realität: Lebst du dein Leben oder das deiner Eltern?
 
@@ -588,7 +588,7 @@ Und im selben Moment ist da etwas anderes, wie wenn man neben einem Wasserfall i
 
 Eine leise Tiefe in der etwas Echtes schlummert. Etwas das wie an einem Seil zupft und wir sehen nur wie es am anderen Ende schwingt und hören wie es klingt. Wie können wir nur etwas, das so schwer zu sehen ist, wirklich wahrnehmen?
 
-Es braucht sicherlich eine Menge Mut sozusagen dem Elefanten im Raum zu begegnen und nicht immer wieder die Geschichten zu erzählen. Doch nach intensiven Prozessen kann sich wirkliche Veränderung einstellen. Genau hier setzt meine Arbeit an: sowohl in der [systemischen Beratung](/systemische-beratung-freiburg) als auch in einer [Familienaufstellung im Einzelsetting](/systemische-familienaufstellung-freiburg). Ein guter erster Schritt ist ein [kostenloses Erstgespräch](/kontakt) – dort schauen wir gemeinsam, was für dich stimmig ist.`,
+Es braucht sicherlich eine Menge Mut sozusagen dem Elefanten im Raum zu begegnen und nicht immer wieder die Geschichten zu erzählen. Doch nach intensiven Prozessen kann sich wirkliche Veränderung einstellen. Genau hier setzt meine Arbeit an: sowohl in der [systemischen Beratung](/systemische-familienaufstellung-freiburg) als auch in einer [Familienaufstellung im Einzelsetting](/systemische-familienaufstellung-freiburg). Ein guter erster Schritt ist ein [kostenloses Erstgespräch](/kontakt) – dort schauen wir gemeinsam, was für dich stimmig ist.`,
       en: `Do you know this too? When someone tells you they went to a psychotherapist and it really wasn't good.
 
 ## The Deceptive Relief of Talking
