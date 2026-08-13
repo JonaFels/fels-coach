@@ -1,7 +1,8 @@
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Phone } from "lucide-react";
+import { Phone, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { Users } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
+
 
 export const OfferingsCards = () => {
   return (
