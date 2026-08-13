@@ -145,12 +145,10 @@ const Familienaufstellung = () => {
                 </div>
                 <div>
                   <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
-                    {language === "de" ? "Familienaufstellung in Gruppe" : "Family Constellation in a Group"}
+                    {t("group.pageTitle")}
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    {language === "de"
-                      ? "Neben dem 1:1 Setting biete ich regelmäßig Familienaufstellungen im geschützten Gruppenformat an. Dort kannst du dein eigenes Thema stellen, andere Aufstellungen miterleben und von der gemeinsamen Energie profitieren."
-                      : "In addition to the 1:1 setting, I regularly offer family constellations in a protected group format. There you can bring your own topic, witness other constellations and benefit from the shared energy."}
+                    {t("group.pageText")}
                   </p>
                   <a
                     href="https://fels-familienstellen.de"
@@ -159,9 +157,10 @@ const Familienaufstellung = () => {
                     onClick={() => trackCTAClick("fels_familienstellen", "familienaufstellung_page", "external_link")}
                     className="inline-flex items-center gap-2 font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
                   >
-                    {language === "de" ? "Gruppentermine ansehen" : "View group dates"}
+                    {t("group.pageCta")}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
+
                 </div>
               </div>
             </div>
