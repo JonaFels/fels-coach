@@ -79,11 +79,12 @@ export const Footer = () => {
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline-effect"
           >
             <Users className="h-4 w-4" aria-hidden="true" />
-            {language === "de" ? "Familienaufstellungen in Gruppe" : "Family Constellations in Groups"}
+            {t("group.footerLink")}
           </a>
         </div>
 
         {/* Divider + Copyright */}
+
         <div className="border-t border-border/40 pt-4">
           <p className="text-center text-xs text-muted-foreground tracking-wide">
             © {currentYear} Jona Fels – Systemische Aufstellung, Freiburg. {t("footer.rights")}
