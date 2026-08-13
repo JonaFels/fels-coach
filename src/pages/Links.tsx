@@ -128,6 +128,23 @@ const Links = () => {
 
           </a>
 
+          {/* Gruppenformat */}
+          <a
+            href="https://fels-familienstellen.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+          >
+            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
+              <Users className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            </span>
+            <span className="flex-1 text-left leading-tight">
+              <span className="block text-[14.5px] font-semibold">Gruppen-Familienaufstellung</span>
+              <span className="block text-[12px] text-[#1f3535]/60">Termine und Infos auf fels-familienstellen.de</span>
+            </span>
+          </a>
+
+
 
           {/* 4. Blog */}
           <a
