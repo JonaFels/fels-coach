@@ -135,6 +135,40 @@ const Familienaufstellung = () => {
           </div>
         </section>
 
+        {/* Gruppenformat Cross-Sell */}
+        <section className="py-14 md:py-20">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="bg-card rounded-lg border border-secondary/20 p-6 md:p-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
+                  <Users className="h-5 w-5 text-secondary" aria-hidden="true" />
+                </div>
+                <div>
+                  <h2 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
+                    {language === "de" ? "Familienaufstellung in Gruppe" : "Family Constellation in a Group"}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {language === "de"
+                      ? "Neben dem 1:1 Setting biete ich regelmäßig Familienaufstellungen im geschützten Gruppenformat an. Dort kannst du dein eigenes Thema stellen, andere Aufstellungen miterleben und von der gemeinsamen Energie profitieren."
+                      : "In addition to the 1:1 setting, I regularly offer family constellations in a protected group format. There you can bring your own topic, witness other constellations and benefit from the shared energy."}
+                  </p>
+                  <a
+                    href="https://fels-familienstellen.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackCTAClick("fels_familienstellen", "familienaufstellung_page", "external_link")}
+                    className="inline-flex items-center gap-2 font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
+                  >
+                    {language === "de" ? "Gruppentermine ansehen" : "View group dates"}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
 
         {/* Process */}
         <section className="py-14 md:py-20 bg-muted/40">
