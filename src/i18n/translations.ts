@@ -9,8 +9,8 @@ export type Translations = {
 
 export const translations: Translations = {
   "header.brandSubtitle": {
-    de: "Systemischer Berater",
-    en: "Systemic Counselor",
+    de: "Systemische Aufstellung",
+    en: "Systemic Constellation",
   },
 
   // Navigation
