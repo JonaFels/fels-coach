@@ -15,7 +15,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Angebote from "./pages/Angebote";
 import Familienaufstellung from "./pages/Familienaufstellung";
-import SystemischeBeratung from "./pages/SystemischeBeratung";
+
 import Kontakt from "./pages/Kontakt";
 import UeberMich from "./pages/UeberMich";
 import Datenschutz from "./pages/Datenschutz";
@@ -54,7 +54,7 @@ const App = () => (
               <Route path="/ablauf-preise" element={<Angebote />} />
               <Route path="/angebote" element={<Navigate to="/ablauf-preise" replace />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
-              <Route path="/systemische-beratung-freiburg" element={<SystemischeBeratung />} />
+              <Route path="/systemische-beratung-freiburg" element={<Navigate to="/systemische-familienaufstellung-freiburg" replace />} />
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/ueber-mich" element={<UeberMich />} />
               <Route path="/datenschutz" element={<Datenschutz />} />

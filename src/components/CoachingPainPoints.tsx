@@ -24,8 +24,8 @@ export const CoachingPainPoints = () => {
       <div className="container mx-auto px-4 max-w-4xl relative">
         <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-6 leading-tight">
         {isDe
-            ? "Wann ist systemische Beratung das Richtige für dich?"
-            : "When is systemic guidance right for you?"}
+            ? "Wann ist eine systemische Aufstellung das Richtige für dich?"
+            : "When is a systemic constellation right for you?"}
         </h2>
         <p className="text-muted-foreground text-lg leading-[1.9] text-center mb-12 max-w-2xl mx-auto">
           {isDe

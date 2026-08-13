@@ -26,7 +26,6 @@ const BLOG_DATA_FILE = join(__dirname, "..", "src", "data", "blogPosts.ts");
 /** Statische Routen mit Priorität & Änderungshäufigkeit */
 const staticRoutes = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/systemische-beratung-freiburg", changefreq: "monthly", priority: "0.9" },
   { path: "/ablauf-preise", changefreq: "weekly", priority: "0.9" },
   { path: "/systemische-familienaufstellung-freiburg", changefreq: "monthly", priority: "0.8" },
   { path: "/ueber-mich", changefreq: "monthly", priority: "0.7" },
