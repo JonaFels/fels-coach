@@ -1,5 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Youtube, Users } from "lucide-react";
+import { trackCTAClick } from "@/lib/tracking";
+
 
 export const Footer = () => {
   const { t, language } = useLanguage();
