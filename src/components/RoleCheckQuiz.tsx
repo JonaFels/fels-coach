@@ -99,7 +99,7 @@ const resultContent: Record<ResultType, {
     blindSpot:
       "Dein potenzieller 'blinder Fleck' ist lediglich die Gewohnheit: Erlaubst du dir wirklich schon, diese ungebundene Freiheit und Größe in all deinen Lebensbereichen voll auszuleben?",
     wayOut:
-      "Für Menschen mit einem integrierten Profil geht es im 1:1 Beratung nicht mehr um das Heilen alter Wunden, sondern um reine Potenzialentfaltung. Wie nutzt du diese freie Kraft für deine nächsten großen Visionen? Lass uns im Erstgespräch genau diesen Hebel ansetzen.",
+      "Für Menschen mit einem integrierten Profil geht es im 1:1 Aufstellungsarbeit nicht mehr um das Heilen alter Wunden, sondern um reine Potenzialentfaltung. Wie nutzt du diese freie Kraft für deine nächsten großen Visionen? Lass uns im Erstgespräch genau diesen Hebel ansetzen.",
   },
   ambivalent: {
     title: "Dein systemisches Profil: Das ambivalente Spektrum",
@@ -624,7 +624,7 @@ export const RoleCheckQuiz = () => {
                 <strong className="font-medium text-muted-foreground">Wichtiger Hinweis:</strong>{" "}
                 Dieser Test dient ausschließlich der persönlichen Selbstreflexion und psychoedukativen Zwecken.
                 Die Ergebnisse stellen keine absolute Wahrheit und keine psychologische oder medizinische Diagnose dar.
-                Ein solcher Test kann und soll keine professionelle Therapie, heilkundliche Behandlung oder ärztliche Beratung ersetzen.
+                Ein solcher Test kann und soll keine professionelle Therapie, heilkundliche Behandlung oder ärztliche Aufstellungsarbeit ersetzen.
               </p>
             </motion.div>
           )}

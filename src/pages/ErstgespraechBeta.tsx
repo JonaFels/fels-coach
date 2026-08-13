@@ -33,7 +33,7 @@ const CAL_EVENTS = [
   },
   {
     key: "coaching",
-    label: "Beratung mit Einzelaufstellung",
+    label: "Aufstellungsarbeit mit Einzelaufstellung",
     meta: "95 € · 80 Min.",
     calLink: "fels-coach/coaching-mit-einzelaufstellung",
     replaces: "Ersetzt später Kalender 2 auf /start",
