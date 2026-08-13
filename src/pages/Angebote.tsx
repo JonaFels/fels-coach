@@ -125,25 +125,12 @@ const Angebote = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                    {language === "de" ? "Auch: Familienaufstellung in Gruppe" : "Also: Family Constellation in a Group"}
+                    {t("group.angeboteTitle")}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                    {language === "de"
-                      ? "Du suchst das Gruppenformat? Auf "
-                      : "Looking for the group format? Visit "}
-                    <a
-                      href="https://fels-familienstellen.de"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => trackCTAClick("fels_familienstellen", "angebote_page", "external_link")}
-                      className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
-                    >
-                      fels-familienstellen.de
-                    </a>
-                    {language === "de"
-                      ? " findest du aktuelle Gruppentermine und den offenen Rahmen für Aufstellungen in geschützter Gruppe."
-                      : " for current group dates and the open framework for constellations in a protected group."}
+                    {t("group.angeboteText")}
                   </p>
+
                 </div>
               </div>
             </div>
