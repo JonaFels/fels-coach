@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Phone, Sparkles, Heart, Compass, Leaf, ArrowRight, Quote, Users } from "lucide-react";
 
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -86,16 +85,19 @@ const Familienaufstellung = () => {
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
               {t("family.subtitle")}
             </p>
-            <p className="mt-6 text-muted-foreground">
-              {language === "de" ? "Zurück zur " : "Back to "}
-              <Link
-                to="/"
-                className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
+            <div className="mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full px-8 py-6 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
+                onClick={() => trackCTAClick("family_hero_cta", "familienaufstellung", "button")}
               >
-                {language === "de" ? "Systemische Aufstellung" : "Systemic Constellation"}
-              </Link>
-              {language === "de" ? " in Freiburg." : " in Freiburg."}
-            </p>
+                <a href="/kontakt">
+                  <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
+                  {t("hero.cta")}
+                </a>
+              </Button>
+            </div>
           </div>
         </section>
 
