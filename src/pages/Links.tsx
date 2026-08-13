@@ -1,30 +1,12 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck, Users } from "lucide-react";
+import { HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck, Users } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
-const linkButtons = [
-  {
-    href: "/#rollencheck-quiz",
-    icon: Compass,
-    label: "3-Minuten Selbsttest",
-    sub: "Unbewusste Loyalitäten erkennen",
-  },
-  {
-    href: "/",
-    icon: HeartHandshake,
-    label: "1:1 Aufstellungsarbeit in Freiburg",
-    sub: "Systemische Aufstellung & Familienaufstellung",
-  },
-  {
-    href: "/blog",
-    icon: BookOpen,
-    label: "Blog",
-    sub: "Impulse zu Familie, Mustern & Wachstum",
-  },
-];
+
 
 const Links = () => {
+
   const { language } = useLanguage();
 
   const socials = [
