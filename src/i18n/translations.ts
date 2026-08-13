@@ -266,7 +266,40 @@ export const translations: Translations = {
     de: "Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich beim Erstgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
     en: "If you can't currently afford the regular prices, please feel free to bring it up openly during the intro call. We'll find a reduced-rate solution that works for you.",
   },
+  "group.homeTitle": {
+    de: "Lieber in Gruppe arbeiten?",
+    en: "Prefer to work in a group?",
+  },
+  "group.homeText": {
+    de: "Manchmal trägt eine Gruppe besonders weiter – wenn der Austausch und das Miterleben anderer Lerneffekte verstärken. Auf fels-familienstellen.de findest du meine Familienaufstellungen im Gruppenformat.",
+    en: "Sometimes a group is especially helpful – when exchange and witnessing others' work deepen learning. At fels-familienstellen.de you can find my family constellations in group format.",
+  },
+  "group.pageTitle": {
+    de: "Familienaufstellung in Gruppe",
+    en: "Family Constellation in a Group",
+  },
+  "group.pageText": {
+    de: "Neben dem 1:1 Setting biete ich regelmäßig Familienaufstellungen im geschützten Gruppenformat an. Dort kannst du dein eigenes Thema stellen, andere Aufstellungen miterleben und von der gemeinsamen Energie profitieren.",
+    en: "In addition to the 1:1 setting, I regularly offer family constellations in a protected group format. There you can bring your own topic, witness other constellations and benefit from the shared energy.",
+  },
+  "group.pageCta": {
+    de: "Gruppentermine ansehen",
+    en: "View group dates",
+  },
+  "group.angeboteTitle": {
+    de: "Auch: Familienaufstellung in Gruppe",
+    en: "Also: Family Constellation in a Group",
+  },
+  "group.angeboteText": {
+    de: "Du suchst das Gruppenformat? Auf fels-familienstellen.de findest du aktuelle Gruppentermine und den offenen Rahmen für Aufstellungen in geschützter Gruppe.",
+    en: "Looking for the group format? Visit fels-familienstellen.de for current group dates and the open framework for constellations in a protected group.",
+  },
+  "group.footerLink": {
+    de: "Familienaufstellungen in Gruppe",
+    en: "Family Constellations in Groups",
+  },
   "offerings.rahmen.title": {
+
     de: "Rahmenbedingungen",
     en: "Framework",
   },
