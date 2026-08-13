@@ -271,9 +271,10 @@ export const translations: Translations = {
     en: "Prefer to work in a group?",
   },
   "group.homeText": {
-    de: "Manchmal trägt eine Gruppe besonders weiter – wenn der Austausch und das Miterleben anderer Lerneffekte verstärken. Auf fels-familienstellen.de findest du meine Familienaufstellungen im Gruppenformat.",
-    en: "Sometimes a group is especially helpful – when exchange and witnessing others' work deepen learning. At fels-familienstellen.de you can find my family constellations in group format.",
+    de: "Manchmal trägt eine Gruppe besonders weiter – wenn der Austausch und das Miterleben anderer Lerneffekte verstärken. Meine Familienaufstellungen im Gruppenformat findest du auf {{link}}.",
+    en: "Sometimes a group is especially helpful – when exchange and witnessing others' work deepen learning. You can find my family constellations in group format at {{link}}.",
   },
+
   "group.pageTitle": {
     de: "Familienaufstellung in Gruppe",
     en: "Family Constellation in a Group",
