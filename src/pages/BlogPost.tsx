@@ -158,12 +158,6 @@ const BlogPost = () => {
     // Interne Auto-Verlinkung: max. 2 Nennungen pro Keyword-Gruppe pro Artikel.
     const autoLinkGroups: Array<{ href: string; keywords: string[]; count: number; max: number }> = [
       {
-        href: "/systemische-beratung-freiburg",
-        keywords: ["Systemische Beratung", "1:1 Beratung", "innere Unklarheit", "innere Verzweiflung"],
-        count: 0,
-        max: 2,
-      },
-      {
         href: "/systemische-familienaufstellung-freiburg",
         keywords: ["Familienaufstellung", "Familienstellen", "Bodenanker", "Herkunftsfamilie"],
         count: 0,
@@ -444,16 +438,16 @@ const BlogPost = () => {
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
-                  to="/systemische-beratung-freiburg"
+                  to="/systemische-familienaufstellung-freiburg"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-4 text-center text-sm md:text-base font-medium text-secondary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
                 >
-                  Zur systemischen 1:1 Beratung
+                  Zur Familienaufstellung
                 </Link>
                 <Link
-                  to="/systemische-familienaufstellung-freiburg"
+                  to="/kontakt"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
                 >
-                  Zur Familienaufstellung
+                  Kostenloses Kennenlerngespräch
                 </Link>
               </div>
             </aside>
