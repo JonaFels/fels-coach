@@ -85,6 +85,16 @@ const Familienaufstellung = () => {
             <p className="text-lg md:text-xl text-muted-foreground italic font-serif leading-relaxed">
               {t("family.subtitle")}
             </p>
+            <p className="mt-6 text-muted-foreground">
+              {language === "de" ? "Zurück zur " : "Back to "}
+              <Link
+                to="/"
+                className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
+              >
+                {language === "de" ? "Systemische Aufstellung" : "Systemic Constellation"}
+              </Link>
+              {language === "de" ? " in Freiburg." : " in Freiburg."}
+            </p>
           </div>
         </section>
 
@@ -143,7 +153,7 @@ const Familienaufstellung = () => {
               <div className="rounded-lg overflow-hidden shadow-md">
                 <img
                   src={familyImage}
-                  alt="Systemische Familienaufstellung in der Praxis – farbige Bodenanker markieren die Positionen der Familienmitglieder im Raum"
+                  alt="Familienaufstellung Freiburg im Einzelsetting – farbige Bodenanker markieren die Positionen der Familienmitglieder im Praxisraum"
                   className="w-full h-auto object-cover"
                   loading="lazy"
                 />
