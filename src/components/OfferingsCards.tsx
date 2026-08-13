@@ -20,7 +20,7 @@ export const OfferingsCards = () => {
               onClick={() => trackCTAClick("offering_aufstellung", "homepage_offerings", "link")}
               className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
             >
-              Familienaufstellung im Einzelsetting
+              Familienaufstellung Freiburg
             </Link>
             . Mit Bodenankern im Raum machen wir unbewusste Dynamiken deiner
             Herkunftsfamilie sichtbar und lösen alte Verstrickungen – geschützt,

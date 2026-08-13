@@ -22,16 +22,16 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string; keywords?: string }>> = {
   "/": {
-    de: { title: "Systemische Aufstellung Freiburg | Jona Fels", description: "Systemische Aufstellung & Familienaufstellung im Einzelsetting in Freiburg und online. Unbewusste Muster erkennen, Blockaden lösen, Klarheit finden." },
-    en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic and family constellation in 1:1 sessions in Freiburg and online. Recognise unconscious patterns, dissolve blocks and find clarity." },
+    de: { title: "Systemische Aufstellung Freiburg | Jona Fels", description: "Systemische Aufstellung in der Aufstellungspraxis Freiburg – 1:1, geschützt, auch online. Jetzt kostenloses Kennenlerngespräch vereinbaren." },
+    en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic constellation in my Freiburg practice – 1:1, confidential, also online. Book your free intro call with Jona Fels today." },
   },
   "/ablauf-preise": {
     de: { title: "Ablauf & Preise | Systemische Aufstellung Freiburg", description: "Kostenloses Erstgespräch, Kennenlern-Sitzung 55 €, Aufstellung mit Einzelaufstellung 95 € – in Freiburg oder online. Jona Fels." },
     en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free intro call, getting-to-know session €55, constellation work with individual constellation €95 – in Freiburg or online. Jona Fels." },
   },
   "/systemische-familienaufstellung-freiburg": {
-    de: { title: "Familienaufstellung Einzelsetting Freiburg | Jona Fels", description: "Familienaufstellung als Einzelsitzung in Freiburg: 1:1 mit Bodenankern, geschützt und vertraulich – ohne Gruppe. Jetzt kostenloses Erstgespräch buchen." },
-    en: { title: "Family Constellation Individual Session Freiburg | Jona Fels", description: "Family constellation as a 1:1 individual session in Freiburg with floor anchors – confidential, no group. Book your free intro now." },
+    de: { title: "Familienaufstellung Freiburg – Einzelsetting | Jona Fels", description: "Familienaufstellung Freiburg im Einzelsetting: 1:1 mit Bodenankern, vertraulich und ohne Gruppe. Kostenloses Kennenlerngespräch sichern." },
+    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation Freiburg in a 1:1 setting: floor anchors, confidential, no group. Book your free intro call with Jona Fels." },
   },
   "/ueber-mich": {
     de: { title: "Über mich – Jona Fels, Systemischer Aufsteller Freiburg", description: "Lerne Jona Fels kennen: Dein systemischer Aufsteller in Freiburg. Erfahre, wie ich meine eigenen Muster durchbrach – und dich durch deine Unklarheit begleite." },
