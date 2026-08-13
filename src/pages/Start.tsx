@@ -130,7 +130,7 @@ const Start = () => {
                   <CardContent className="p-6 md:p-7 flex flex-col h-full">
                     <div className="flex items-baseline justify-between mb-2 gap-3">
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                        Aufstellungsarbeit mit Einzelaufstellung
+                        Aufstellung mit Einzelaufstellung
                       </h3>
                       <span className="text-sm font-medium text-secondary whitespace-nowrap">
                         Regulär

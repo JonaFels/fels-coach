@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/ablauf-preise', folder: 'ablauf-preise',
     title: 'Ablauf & Preise | Systemische Aufstellung Freiburg',
-    description: 'Erstgespräch, Ablauf und Preise für systemische Aufstellung in Freiburg oder online: Kennenlernen 55 €, Aufstellungsarbeit mit Einzelaufstellung 95 €.',
+    description: 'Erstgespräch, Ablauf und Preise für systemische Aufstellung in Freiburg oder online: Kennenlernen 55 €, Aufstellung mit Einzelaufstellung 95 €.',
   },
   {
     path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg',

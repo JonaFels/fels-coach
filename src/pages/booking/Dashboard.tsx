@@ -111,7 +111,7 @@ const BookingDashboard = () => {
       owner_id: user.id,
       client_id: activeId,
       starts_at: new Date(newBooking.starts_at).toISOString(),
-      service: newBooking.service.trim() || "Aufstellungsarbeit mit Einzelaufstellung",
+      service: newBooking.service.trim() || "Aufstellung mit Einzelaufstellung",
       price_cents: newBooking.price ? Math.round(Number(newBooking.price) * 100) : null,
     });
     if (error) {
@@ -302,7 +302,7 @@ const BookingDashboard = () => {
                         <Label htmlFor="b-service">Leistung</Label>
                         <Input
                           id="b-service"
-                          placeholder="Aufstellungsarbeit mit Einzelaufstellung"
+                          placeholder="Aufstellung mit Einzelaufstellung"
                           value={newBooking.service}
                           onChange={(e) => setNewBooking({ ...newBooking, service: e.target.value })}
                         />
