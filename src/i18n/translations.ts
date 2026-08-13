@@ -71,20 +71,20 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.eyebrow": {
-    de: "Praxis in Freiburg · 1:1 Begleitung",
-    en: "Practice in Freiburg · 1:1 guidance",
+    de: "Aufstellungspraxis Freiburg · 1:1 Begleitung",
+    en: "Constellation practice Freiburg · 1:1 guidance",
   },
   "hero.title": {
-    de: "Systemische Aufstellung & Familienaufstellung in Freiburg – Finde deine innere Klarheit",
-    en: "Systemic Constellation & Family Constellation in Freiburg – Find your inner clarity",
+    de: "Systemische Aufstellung Freiburg – finde deine innere Klarheit",
+    en: "Systemic Constellation in Freiburg – find your inner clarity",
   },
   "hero.quote": {
     de: "„Unklar, zu viel im Kopf, orientierungslos.“",
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "Ich begleite dich dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Erfahre hier mehr zu meiner systemischen 1:1 Arbeit.",
-    en: "I accompany you in sorting the chaos in your head and dissolving emotional blockages. Learn more here about my systemic 1:1 work.",
+    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Wir starten mit einem kostenlosen Kennenlerngespräch – in Freiburg oder online.",
+    en: "In my constellation practice in Freiburg I accompany you 1:1 in sorting the chaos in your head and dissolving emotional blocks. We start with a free intro call – in Freiburg or online.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -345,12 +345,12 @@ export const translations: Translations = {
 
   // Familienaufstellung Page
   "family.title": {
-    de: "Familienaufstellung im Einzelsetting in Freiburg",
-    en: "Family Constellation in Individual Setting in Freiburg",
+    de: "Familienaufstellung Freiburg im Einzelsetting",
+    en: "Family Constellation Freiburg in an individual setting",
   },
   "family.intro.title": {
-    de: "Was in einer Aufstellung wirklich passiert",
-    en: "What really happens in a constellation",
+    de: "Was ist eine Familienaufstellung?",
+    en: "What is a family constellation?",
   },
   "family.aboutLink": {
     de: "Mehr über meinen Weg als Aufsteller erfahren",
@@ -485,8 +485,8 @@ export const translations: Translations = {
     en: "Dissolve blockages and recognize new solution paths.",
   },
   "family.process.title": {
-    de: "Der Ablauf einer Einzelaufstellung mit Bodenankern",
-    en: "The process of an individual constellation with floor anchors",
+    de: "Ablauf einer Familienaufstellung im Einzelsetting mit Bodenankern",
+    en: "Process of a family constellation in an individual setting with floor anchors",
   },
   "family.process.intro": {
     de: "Statt mit fremden Stellvertretern arbeiten wir in der Einzelarbeit mit sogenannten Bodenankern. Diese kleinen Markierungen am Boden stehen für Familienmitglieder, relevante Personen oder innere Aspekte deines Themas. Gemeinsam ergründen wir die Dynamiken, die sich zeigen, und verschieben die Bodenanker im Raum. Dabei gehe ich als systemischer Begleiter in die verschiedenen Rollen und spüre nach, was sich auf den einzelnen Positionen zeigt – und auch du darfst in Rollen gehen, um dein System aus neuen Perspektiven zu erleben. So entsteht Schritt für Schritt Klarheit.",
