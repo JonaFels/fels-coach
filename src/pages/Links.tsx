@@ -1,28 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Compass, HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck, Users } from "lucide-react";
+import { HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck, Users } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
-
-
-const linkButtons = [
-  {
-    href: "/#rollencheck-quiz",
-    icon: Compass,
-    label: "3-Minuten Selbsttest",
-    sub: "Unbewusste Loyalitäten erkennen",
-  },
-  {
-    href: "/",
-    icon: HeartHandshake,
-    label: "1:1 Aufstellungsarbeit in Freiburg",
-    sub: "Systemische Aufstellung & Familienaufstellung",
-  },
-  {
-    href: "/blog",
-    icon: BookOpen,
-    label: "Blog",
-    sub: "Impulse zu Familie, Mustern & Wachstum",
-  },
-];
 
 const Links = () => {
   const { language } = useLanguage();
@@ -84,18 +62,19 @@ const Links = () => {
 
         {/* Link list — psychologischer Funnel */}
         <div className="flex flex-col gap-3 w-full mt-8">
-          {/* 1. Selbsttest */}
+          {/* 1. Primärer CTA — Erstgespräch (Akzent: Slate Sage, Brand-Farbe) */}
           <a
-            href="/#rollencheck-quiz"
-            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+            href="/kontakt"
+            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25 no-underline-effect"
+            style={{
+              background:
+                "linear-gradient(135deg, #2F4F4F 0%, #3d6464 100%)",
+            }}
           >
-            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
-              <Compass className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center shrink-0 ring-1 ring-white/30">
+              <Phone className="w-4 h-4 text-white" aria-hidden="true" />
             </span>
-            <span className="flex-1 text-left leading-tight">
-              <span className="block text-[14.5px] font-semibold">3-Minuten Selbsttest</span>
-              <span className="block text-[12px] text-[#1f3535]/60">Unbewusste Loyalitäten erkennen</span>
-            </span>
+            <span className="flex-1 text-left">Kostenfreies Erstgespräch</span>
           </a>
 
           {/* 2. 1:1 Aufstellungsarbeit */}
@@ -112,23 +91,7 @@ const Links = () => {
             </span>
           </a>
 
-          {/* 3. Primärer CTA — Erstgespräch (Akzent: Slate Sage, Brand-Farbe) */}
-          <a
-            href="/kontakt"
-            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25 no-underline-effect"
-            style={{
-              background:
-                "linear-gradient(135deg, #2F4F4F 0%, #3d6464 100%)",
-            }}
-          >
-            <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center shrink-0 ring-1 ring-white/30">
-              <Phone className="w-4 h-4 text-white" aria-hidden="true" />
-            </span>
-            <span className="flex-1 text-left">Kostenfreies Erstgespräch</span>
-
-          </a>
-
-          {/* Gruppenformat */}
+          {/* 3. Gruppenformat */}
           <a
             href="https://fels-familienstellen.de"
             target="_blank"
@@ -144,8 +107,6 @@ const Links = () => {
             </span>
           </a>
 
-
-
           {/* 4. Blog */}
           <a
             href="/blog"
@@ -160,7 +121,6 @@ const Links = () => {
             </span>
           </a>
         </div>
-
 
         {/* Footer */}
         <div className="mt-12 mb-2 flex justify-center gap-4 text-[11px] text-white/70">
