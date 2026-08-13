@@ -128,8 +128,24 @@ const Angebote = () => {
                     {t("group.angeboteTitle")}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                    {t("group.angeboteText")}
+                    {t("group.angeboteText").split("{{link}}").map((part, i, arr) => (
+                      <span key={i}>
+                        {part}
+                        {i < arr.length - 1 && (
+                          <a
+                            href="https://fels-familienstellen.de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => trackCTAClick("fels_familienstellen", "angebote_page", "external_link")}
+                            className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
+                          >
+                            fels-familienstellen.de
+                          </a>
+                        )}
+                      </span>
+                    ))}
                   </p>
+
 
                 </div>
               </div>
