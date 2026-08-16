@@ -172,8 +172,8 @@
     line-height: 1.75;
     /* Precise geometric grid — barely-there, architectural, never organic. */
     background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.45) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.45) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--border) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.04) 1px, transparent 1px);
     background-size: 120px 120px, 120px 120px;
     background-attachment: fixed, fixed;
   }
@@ -416,4 +416,17 @@ h3 {
 }
 @media (prefers-reduced-motion: no-preference) {
   .img-warm { transition: filter 400ms ease; }
+}
+
+/* Logo recolor: harmonizes the icon with the warm terracotta/charcoal palette */
+.logo-recolor {
+  filter: sepia(90%) saturate(140%) hue-rotate(340deg) brightness(0.82) contrast(1.1);
+}
+
+/* Mobile breathing room: slightly more outer padding so text never touches the edges */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
