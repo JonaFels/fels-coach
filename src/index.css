@@ -420,7 +420,7 @@ h3 {
 
 /* Logo recolor: harmonizes the icon with the warm terracotta/charcoal palette */
 .logo-recolor {
-  filter: sepia(40%) saturate(160%) hue-rotate(345deg) brightness(0.95) contrast(1.05);
+  filter: sepia(90%) saturate(140%) hue-rotate(340deg) brightness(0.82) contrast(1.1);
 }
 
 /* Mobile breathing room: slightly more outer padding so text never touches the edges */
