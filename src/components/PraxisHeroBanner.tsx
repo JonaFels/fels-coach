@@ -25,20 +25,22 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
       : "Aufstellungspraxis von Jona Fels in Freiburg – einladender Sitzbereich mit Sofa, Sessel und warmem Licht";
 
   return (
-    <div className="w-full h-40 sm:h-52 md:h-[28vh] md:max-h-[280px] lg:h-[32vh] lg:max-h-[320px] overflow-hidden relative">
-      <img
-        src={image}
-        srcSet={`${imageMobile} 800w, ${image} 1400w`}
-        sizes="(max-width: 768px) 100vw, 1400px"
-        alt={alt}
-        className="img-warm w-full h-full object-cover object-center"
-        loading="eager"
-        decoding="async"
-        {...priorityProps}
-        width={1400}
-        height={583}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/40" />
+    <div className="w-full px-4 md:px-0">
+      <div className="h-40 sm:h-52 md:h-[28vh] md:max-h-[280px] lg:h-[32vh] lg:max-h-[320px] overflow-hidden relative rounded-lg md:rounded-none">
+        <img
+          src={image}
+          srcSet={`${imageMobile} 800w, ${image} 1400w`}
+          sizes="(max-width: 768px) 100vw, 1400px"
+          alt={alt}
+          className="img-warm w-full h-full object-cover object-center"
+          loading="eager"
+          decoding="async"
+          {...priorityProps}
+          width={1400}
+          height={583}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/40" />
+      </div>
     </div>
   );
 };

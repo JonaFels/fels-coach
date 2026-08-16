@@ -288,7 +288,7 @@ export const RoleCheckQuiz = () => {
   return (
     <section
       aria-labelledby="rollencheck-heading"
-      className="relative overflow-hidden rounded-md border border-border bg-card shadow-sm"
+      className="relative overflow-hidden rounded-lg border border-border bg-card shadow-[var(--shadow-soft)]"
     >
       <div
         aria-hidden="true"

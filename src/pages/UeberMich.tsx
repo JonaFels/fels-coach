@@ -39,7 +39,7 @@ const UeberMich = () => {
               <img
                 src={portrait}
                 alt="Jona Fels - Systemischer Aufsteller und Prozessbegleiter in Freiburg"
-                className="w-48 h-auto md:w-60 aspect-[4/5] rounded-lg object-cover object-center mx-auto shadow-xl ring-4 ring-background"
+                className="w-48 h-auto md:w-60 aspect-[4/5] rounded-lg object-cover object-center mx-auto shadow-[var(--shadow-soft)] ring-4 ring-background"
                 loading="eager"
                 width="208"
                 height="260"
@@ -165,7 +165,7 @@ const UeberMich = () => {
                       <img
                         src={zertifikatBracht}
                         alt="Vorschau Ausbildungsbescheinigung Familiensteller"
-                        className="h-12 w-9 object-cover rounded ring-1 ring-border group-hover:ring-secondary/50 transition"
+                        className="h-12 w-9 object-cover rounded ring-1 ring-border shadow-[var(--shadow-soft)] group-hover:ring-secondary/50 transition"
                         loading="lazy"
                       />
                       <span className="font-serif text-sm font-medium text-foreground underline-offset-2 group-hover:underline">
@@ -193,7 +193,7 @@ const UeberMich = () => {
                         <img
                           src={zertifikatBracht}
                           alt="Ausbildungsbescheinigung Familiensteller von Jona Fels, ausgestellt von Wolfgang Bracht, Freiburg April 2026"
-                          className="max-h-[72vh] w-auto h-auto object-contain rounded-md shadow-xl ring-1 ring-border"
+                          className="max-h-[72vh] w-auto h-auto object-contain rounded-md shadow-[var(--shadow-soft)] ring-1 ring-border"
                           loading="lazy"
                         />
                       </div>

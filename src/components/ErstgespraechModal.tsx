@@ -25,13 +25,13 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
       style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative w-full max-w-4xl my-auto rounded-lg bg-card border border-border shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-4xl my-auto rounded-lg bg-card border border-border shadow-[var(--shadow-elevated)] overflow-hidden">
 
         <Button
           variant="ghost"
           size="icon"
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 rounded-md bg-card/90 backdrop-blur-sm hover:bg-accent border border-border shadow"
+          className="absolute right-4 top-4 z-10 rounded-md bg-card/90 backdrop-blur-sm hover:bg-accent border border-border shadow-[var(--shadow-soft)]"
 
           aria-label="Schließen"
         >
@@ -43,7 +43,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
             <img
               src={profilBild}
               alt="Jona Fels – Systemischer Aufsteller in Freiburg"
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-[center_18%] shadow-md mb-3 no-fade"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-[center_18%] shadow-[var(--shadow-soft)] mb-3 no-fade"
               loading="lazy"
               decoding="async"
             />

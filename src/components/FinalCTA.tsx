@@ -35,7 +35,7 @@ export const FinalCTA = () => {
           </p>
           <Button
             size="lg"
-            className="text-base px-10 py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-background text-primary hover:bg-background/90"
+            className="rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all duration-300 hover:-translate-y-1 bg-background text-primary hover:bg-background/90"
             asChild
           >
             <a

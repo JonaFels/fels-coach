@@ -72,7 +72,7 @@ export const Header = () => {
             <LanguageSwitcher />
             <Button
               size="sm"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md text-[0.8rem] px-4"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg shadow-[var(--shadow-soft)] text-[0.8rem] px-4"
               asChild
             >
               <a
