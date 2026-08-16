@@ -118,7 +118,7 @@ export const ChatbaseWidget = () => {
       onClick={handleStartChat}
       disabled={isLoading}
       aria-label={label}
-      className="fixed bottom-4 right-4 z-40 flex items-center gap-2 rounded-full bg-secondary text-secondary-foreground px-4 py-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 disabled:opacity-70 disabled:cursor-wait"
+      className="fixed bottom-4 right-4 z-40 flex items-center gap-2 rounded-full bg-secondary text-secondary-foreground px-4 py-3 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] hover:scale-105 transition-all duration-200 disabled:opacity-70 disabled:cursor-wait"
     >
       <MessageCircle className="h-5 w-5" aria-hidden="true" />
       <span className="text-sm font-medium hidden sm:inline">

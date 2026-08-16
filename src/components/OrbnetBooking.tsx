@@ -87,7 +87,7 @@ const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => 
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative bg-background rounded-lg shadow-2xl w-full max-w-2xl h-[90vh] flex flex-col">
+      <div className="relative bg-background rounded-lg shadow-[var(--shadow-elevated)] w-full max-w-2xl h-[90vh] flex flex-col">
         <div className="flex items-center justify-between px-6 py-5 md:px-8 md:py-6 border-b border-border rounded-t-2xl">
           <h3 className="font-serif text-lg font-semibold text-foreground">Termin buchen</h3>
           <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full" aria-label="Schließen">
@@ -126,7 +126,7 @@ export const OrbnetFAB = () => {
         <Button
           onClick={() => setOpen(true)}
           size="lg"
-          className="rounded-full shadow-lg min-h-[56px] min-w-[56px] p-4 md:px-6 md:py-3"
+          className="rounded-full shadow-[var(--shadow-soft)] min-h-[56px] min-w-[56px] p-4 md:px-6 md:py-3"
           aria-label="Termin buchen"
         >
           <Calendar className="h-5 w-5 md:mr-2" aria-hidden="true" />
