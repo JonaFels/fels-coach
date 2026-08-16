@@ -49,13 +49,13 @@ const Angebote = () => {
             <h2 className="font-serif text-2xl font-semibold text-foreground text-center mb-12">
               {t("offerings.ablaufTitle")}
             </h2>
-            <ol className="space-y-8">
+            <ol className="space-y-10">
               {steps.map((key, i) => (
-                <li key={key} className="flex items-start gap-5">
+                <li key={key} className="flex items-start gap-6 rounded-lg bg-card border border-border/60 p-6 md:p-7">
                   <span className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold">
                     {i + 1}
                   </span>
-                  <p className="text-muted-foreground leading-relaxed pt-2">{t(key)}</p>
+                  <p className="text-muted-foreground leading-relaxed pt-1.5">{t(key)}</p>
                 </li>
               ))}
             </ol>

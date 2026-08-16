@@ -190,19 +190,19 @@ const Familienaufstellung = () => {
             <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-6 mt-12 text-center">
               {t("family.process.stepsTitle")}
             </h3>
-            <ol className="grid sm:grid-cols-2 gap-5" role="list">
+            <ol className="grid sm:grid-cols-2 gap-6" role="list">
               {steps.map((n) => (
                 <li
                   key={n}
-                  className="relative pl-14 pr-5 py-5 rounded-xl bg-card border border-border/60 shadow-sm"
+                  className="relative pl-16 pr-6 py-6 md:pl-20 md:pr-8 md:py-7 rounded-xl bg-card border border-border/60 shadow-sm"
                 >
                   <span
-                    className="absolute left-4 top-5 inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary-foreground font-serif font-semibold text-sm"
+                    className="absolute left-4 top-6 md:top-7 inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary-foreground font-serif font-semibold text-sm"
                     aria-hidden="true"
                   >
                     {n}
                   </span>
-                  <h4 className="font-serif text-base font-semibold text-foreground mb-1">
+                  <h4 className="font-serif text-base font-semibold text-foreground mb-2">
                     {t(`family.step${n}.title`).replace(/^\d+\.\s*/, "")}
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">

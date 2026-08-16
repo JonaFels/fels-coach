@@ -174,18 +174,18 @@ const Start = () => {
               </p>
             </div>
 
-            <ol className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
+            <ol className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
               {steps.map((step, i) => (
                 <li key={step.title}>
                   <Card className="h-full border-border/60 rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <CardContent className="pt-8 pb-7 px-6 text-center">
-                      <div className="mx-auto mb-5 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center relative">
+                    <CardContent className="p-8 md:p-10 text-center">
+                      <div className="mx-auto mb-6 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center relative">
                         <step.icon className="w-6 h-6 text-secondary" aria-hidden="true" />
                         <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-secondary text-secondary-foreground text-sm font-semibold flex items-center justify-center shadow">
                           {i + 1}
                         </span>
                       </div>
-                      <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                      <h3 className="font-serif text-lg font-semibold text-foreground mb-3">
                         {step.title}
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
