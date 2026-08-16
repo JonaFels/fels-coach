@@ -172,8 +172,8 @@
     line-height: 1.75;
     /* Precise geometric grid — barely-there, architectural, never organic. */
     background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.45) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.45) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--border) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.04) 1px, transparent 1px);
     background-size: 120px 120px, 120px 120px;
     background-attachment: fixed, fixed;
   }
