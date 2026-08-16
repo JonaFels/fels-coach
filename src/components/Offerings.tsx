@@ -52,7 +52,7 @@ export const Offerings = () => {
           {offerings.map((offering, index) => (
             <Card
               key={offering.titleKey}
-              className={`relative group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+              className={`relative group transition-all duration-300 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1 border-border/60 ${
                 offering.highlight
                   ? "border-secondary ring-1 ring-secondary"
                   : ""

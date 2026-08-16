@@ -174,7 +174,7 @@ const UeberMich = () => {
 
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl max-h-[94vh] p-0 border-0 bg-background overflow-hidden rounded-xl shadow-2xl">
+                  <DialogContent className="max-w-3xl max-h-[94vh] p-0 border-0 bg-background overflow-hidden rounded-xl shadow-[var(--shadow-elevated)]">
                     <div className="flex flex-col max-h-[94vh]">
                       <DialogHeader className="px-8 pt-7 pb-5 border-b border-border bg-muted/40">
                         <div className="flex items-center gap-3">

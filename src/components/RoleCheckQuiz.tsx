@@ -384,7 +384,7 @@ export const RoleCheckQuiz = () => {
                           disabled={isAdvancing}
                           className={`group w-full flex items-center gap-4 rounded-xl border bg-background transition-all duration-200 px-4 md:px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
                             isSelected
-                              ? "border-secondary bg-secondary/10 shadow-sm"
+                              ? "border-secondary bg-secondary/10 shadow-[var(--shadow-soft)]"
                               : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"
                           } ${isAdvancing && !isSelected ? "opacity-50" : ""}`}
                         >
@@ -458,7 +458,7 @@ export const RoleCheckQuiz = () => {
                       disabled={lifeArea !== null}
                       className={`group rounded-lg border bg-background transition-all duration-200 px-5 py-5 md:py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 ${
                         isSelected
-                          ? "border-secondary bg-secondary/10 shadow-sm"
+                          ? "border-secondary bg-secondary/10 shadow-[var(--shadow-soft)]"
                           : "border-border hover:border-secondary hover:bg-secondary/5 hover:-translate-y-0.5"
                       } ${lifeArea !== null && !isSelected ? "opacity-50" : ""}`}
                     >
