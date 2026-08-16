@@ -73,7 +73,7 @@ export const QuickRequestForm = () => {
 
   if (isSuccess) {
     return (
-      <Card className="bg-card/95 backdrop-blur-sm border-secondary/20">
+      <Card className="bg-card/95 backdrop-blur-sm border-secondary/20 shadow-[var(--shadow-soft)]">
         <CardContent className="pt-8">
           <div className="text-center py-6">
             <CheckCircle className="h-12 w-12 text-secondary mx-auto mb-4" aria-hidden="true" />
@@ -85,7 +85,7 @@ export const QuickRequestForm = () => {
   }
 
   return (
-    <Card className="bg-card/95 backdrop-blur-sm border-secondary/20">
+    <Card className="bg-card/95 backdrop-blur-sm border-secondary/20 shadow-[var(--shadow-soft)]">
       <CardContent className="pt-6">
         <div className="flex items-center gap-2 mb-3">
           <Phone className="h-5 w-5 text-secondary" aria-hidden="true" />

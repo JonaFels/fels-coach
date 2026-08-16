@@ -111,7 +111,7 @@ export const ContactForm = () => {
 
   if (isSuccess) {
     return (
-      <Card className="bg-card/95 backdrop-blur-sm">
+      <Card className="bg-card/95 backdrop-blur-sm border-border/60 shadow-[var(--shadow-soft)]">
         <CardContent className="pt-8">
           <div className="text-center py-8">
             <CheckCircle className="h-16 w-16 text-secondary mx-auto mb-4" aria-hidden="true" />
@@ -123,7 +123,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <Card className="bg-card/95 backdrop-blur-sm">
+    <Card className="bg-card/95 backdrop-blur-sm border-border/60 shadow-[var(--shadow-soft)]">
       <CardHeader>
         <CardTitle className="font-serif text-xl">{t("contactForm.title")}</CardTitle>
       </CardHeader>

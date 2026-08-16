@@ -17,7 +17,7 @@ export const QuickContactCTA = () => {
         </p>
         <Button
           size="lg"
-          className="min-h-[48px] px-8"
+          className="rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)]"
           asChild
         >
           <a

@@ -32,7 +32,7 @@ const Blog = () => {
             <div className="grid gap-6">
               {blogPosts.map((post) => (
                 <Link key={post.id} to={`/blog/${post.slug}`}>
-                  <Card className="overflow-hidden hover:shadow-md transition-shadow group">
+                  <Card className="overflow-hidden hover:shadow-[var(--shadow-elevated)] transition-shadow group rounded-lg">
                     <div className="flex flex-col md:flex-row">
                       {post.image && (
                         <div className="md:w-1/3 aspect-video md:aspect-square">

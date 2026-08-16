@@ -29,7 +29,7 @@ export const TestimonialsSection = () => {
 
         <div className="space-y-12">
           {/* Miriam – hervorgehoben für bessere Lesbarkeit */}
-          <blockquote className="relative bg-card rounded-lg p-12 md:p-16 shadow-sm border border-border/60">
+          <blockquote className="relative card-base p-12 md:p-16">
             <Quote className="absolute top-7 left-7 h-8 w-8 text-secondary/20" aria-hidden="true" />
             <p className="text-muted-foreground leading-[1.9] text-lg italic pl-8">
               „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong className="text-foreground font-semibold not-italic">tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an <strong className="text-foreground font-semibold not-italic">Klarheit und Sicherheit</strong>. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame, einfühlsame Begleitung."
@@ -42,7 +42,7 @@ export const TestimonialsSection = () => {
           </blockquote>
 
           {/* Johannes */}
-          <blockquote className="relative bg-card rounded-lg p-12 md:p-16 shadow-sm border border-border/60">
+          <blockquote className="relative card-base p-12 md:p-16">
             <Quote className="absolute top-7 left-7 h-8 w-8 text-secondary/20" aria-hidden="true" />
             <p className="text-muted-foreground leading-[1.9] text-lg italic pl-8">
               „Jona hat ein <strong className="text-foreground font-semibold not-italic">super Gespür</strong> den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem <strong className="text-foreground font-semibold not-italic">tieferen Verständnis</strong> und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder."

@@ -45,7 +45,7 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg ring-1 ring-border/20 bg-muted">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-[var(--shadow-soft)] ring-1 ring-border/20 bg-muted">
             {activated ? (
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&cc_load_policy=0`}
@@ -75,7 +75,7 @@ export const YouTubeIntro = ({ videoId, title, subtitle }: YouTubeIntroProps) =>
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
                 <span className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-full bg-background/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
+                  <span className="flex items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-full bg-background/95 shadow-[var(--shadow-elevated)] transition-transform duration-300 group-hover:scale-110">
                     <Play
                       className="h-7 w-7 md:h-9 md:w-9 text-primary fill-current ml-1"
                       aria-hidden="true"

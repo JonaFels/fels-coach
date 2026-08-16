@@ -13,17 +13,11 @@ const Links = () => {
   ];
 
   return (
-    <div
-      className="min-h-screen w-full flex flex-col items-center px-5 py-10"
-      style={{
-        background:
-          "linear-gradient(160deg, #2F4F4F 0%, #3d6464 35%, #6b8a7a 70%, #d9c9a8 100%)",
-      }}
-    >
-      <div className="w-full max-w-[500px] flex flex-col items-center text-white">
+    <div className="min-h-screen w-full flex flex-col items-center px-5 py-10 bg-background">
+      <div className="w-full max-w-[500px] flex flex-col items-center text-foreground">
         {/* Avatar */}
         <div className="relative">
-          <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-white/90 shadow-xl">
+          <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-[hsl(var(--fels-cream))] shadow-[var(--shadow-elevated)]">
             <img
               src={portrait}
               alt="Jona Fels – Systemischer Aufsteller in Freiburg"
@@ -33,14 +27,14 @@ const Links = () => {
             />
           </div>
           <BadgeCheck
-            className="absolute -bottom-1 -right-1 w-7 h-7 text-sky-300 bg-white rounded-full p-0.5 shadow"
+            className="absolute -bottom-1 -right-1 w-7 h-7 text-secondary bg-background rounded-full p-0.5 shadow-[var(--shadow-soft)]"
             aria-hidden="true"
           />
         </div>
 
         {/* Handle */}
         <h1 className="mt-4 text-lg font-semibold tracking-tight">@jona.fels</h1>
-        <p className="text-sm text-white/85 text-center mt-1 max-w-[320px] leading-relaxed">
+        <p className="text-sm text-muted-foreground text-center mt-1 max-w-[320px] leading-relaxed">
           Systemische Aufstellung & Familienaufstellung · Freiburg
         </p>
 
@@ -53,26 +47,25 @@ const Links = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-200 no-underline-effect"
+              className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center hover:bg-secondary/20 hover:scale-110 transition-all duration-200 no-underline-effect"
             >
-              <Icon className="w-4 h-4 text-white" />
+              <Icon className="w-4 h-4 text-secondary" />
             </a>
           ))}
         </div>
 
         {/* Link list — psychologischer Funnel */}
         <div className="flex flex-col gap-3 w-full mt-8">
-          {/* 1. Primärer CTA — Erstgespräch (Akzent: Slate Sage, Brand-Farbe) */}
+          {/* 1. Primärer CTA — Erstgespräch */}
           <a
             href="/kontakt"
-            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-white shadow-[0_10px_30px_-8px_rgba(15,40,40,0.55)] hover:shadow-[0_14px_38px_-8px_rgba(15,40,40,0.7)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-white/25 no-underline-effect"
+            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-primary-foreground shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-primary/10 no-underline-effect"
             style={{
-              background:
-                "linear-gradient(135deg, #2F4F4F 0%, #3d6464 100%)",
+              background: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%)",
             }}
           >
-            <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center shrink-0 ring-1 ring-white/30">
-              <Phone className="w-4 h-4 text-white" aria-hidden="true" />
+            <span className="w-9 h-9 rounded-full bg-primary-foreground/15 flex items-center justify-center shrink-0 ring-1 ring-primary-foreground/20">
+              <Phone className="w-4 h-4 text-primary-foreground" aria-hidden="true" />
             </span>
             <span className="flex-1 text-left">Kostenfreies Erstgespräch</span>
           </a>
@@ -80,14 +73,14 @@ const Links = () => {
           {/* 2. 1:1 Aufstellungsarbeit */}
           <a
             href="/"
-            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+            className="group w-full rounded-full bg-card text-foreground py-3.5 px-5 flex items-center gap-4 border border-border/60 shadow-[var(--shadow-soft)] hover:bg-card hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)] active:scale-[0.99] transition-all duration-200 no-underline-effect"
           >
-            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
-              <HeartHandshake className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            <span className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+              <HeartHandshake className="w-4 h-4 text-secondary" aria-hidden="true" />
             </span>
             <span className="flex-1 text-left leading-tight">
               <span className="block text-[14.5px] font-semibold">1:1 Aufstellungsarbeit in Freiburg</span>
-              <span className="block text-[12px] text-[#1f3535]/60">Systemische Aufstellung & Familienaufstellung</span>
+              <span className="block text-[12px] text-muted-foreground">Systemische Aufstellung & Familienaufstellung</span>
             </span>
           </a>
 
@@ -96,39 +89,39 @@ const Links = () => {
             href="https://fels-familienstellen.de"
             target="_blank"
             rel="noopener noreferrer"
-            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+            className="group w-full rounded-full bg-card text-foreground py-3.5 px-5 flex items-center gap-4 border border-border/60 shadow-[var(--shadow-soft)] hover:bg-card hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)] active:scale-[0.99] transition-all duration-200 no-underline-effect"
           >
-            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
-              <Users className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            <span className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+              <Users className="w-4 h-4 text-secondary" aria-hidden="true" />
             </span>
             <span className="flex-1 text-left leading-tight">
               <span className="block text-[14.5px] font-semibold">Gruppen-Familienaufstellung</span>
-              <span className="block text-[12px] text-[#1f3535]/60">Termine und Infos auf fels-familienstellen.de</span>
+              <span className="block text-[12px] text-muted-foreground">Termine und Infos auf fels-familienstellen.de</span>
             </span>
           </a>
 
           {/* 4. Blog */}
           <a
             href="/blog"
-            className="group w-full rounded-full bg-white/95 text-[#1f3535] py-3.5 px-5 flex items-center gap-4 shadow-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99] transition-all duration-200 no-underline-effect"
+            className="group w-full rounded-full bg-card text-foreground py-3.5 px-5 flex items-center gap-4 border border-border/60 shadow-[var(--shadow-soft)] hover:bg-card hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)] active:scale-[0.99] transition-all duration-200 no-underline-effect"
           >
-            <span className="w-9 h-9 rounded-full bg-[#2F4F4F]/10 flex items-center justify-center shrink-0">
-              <BookOpen className="w-4 h-4 text-[#2F4F4F]" aria-hidden="true" />
+            <span className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+              <BookOpen className="w-4 h-4 text-secondary" aria-hidden="true" />
             </span>
             <span className="flex-1 text-left leading-tight">
               <span className="block text-[14.5px] font-semibold">Blog</span>
-              <span className="block text-[12px] text-[#1f3535]/60">Impulse zu Familie, Mustern & Wachstum</span>
+              <span className="block text-[12px] text-muted-foreground">Impulse zu Familie, Mustern & Wachstum</span>
             </span>
           </a>
         </div>
 
         {/* Footer */}
-        <div className="mt-12 mb-2 flex justify-center gap-4 text-[11px] text-white/70">
-          <a href="/impressum" className="hover:text-white no-underline-effect">Impressum</a>
+        <div className="mt-12 mb-2 flex justify-center gap-4 text-[11px] text-muted-foreground">
+          <a href="/impressum" className="hover:text-foreground no-underline-effect">Impressum</a>
           <span aria-hidden="true">·</span>
-          <a href="/datenschutz" className="hover:text-white no-underline-effect">Datenschutz</a>
+          <a href="/datenschutz" className="hover:text-foreground no-underline-effect">Datenschutz</a>
         </div>
-        <p className="text-[10px] text-white/50 tracking-wider uppercase">fels-coach.de</p>
+        <p className="text-[10px] text-muted-foreground tracking-wider uppercase">fels-coach.de</p>
       </div>
     </div>
   );

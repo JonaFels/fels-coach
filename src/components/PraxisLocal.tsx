@@ -48,7 +48,7 @@ export const PraxisLocal = () => {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted/40 shadow-md shadow-foreground/5 ring-1 ring-border/10">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted/40 shadow-[var(--shadow-soft)] ring-1 ring-border/10">
               <img
                 src={praxisAufstellung}
                 alt="Aufstellungspraxis Freiburg – Praxisraum für Systemische Aufstellung in der Karlstraße 51"

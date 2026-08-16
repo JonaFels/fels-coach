@@ -17,7 +17,7 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
       <Button
         size="lg"
         variant={variant === "primary" ? "default" : variant === "secondary" ? "outline" : "ghost"}
-        className="min-h-[44px] min-w-[200px]"
+        className="min-w-[200px] rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)]"
         asChild
       >
         <a

@@ -51,7 +51,7 @@ const Angebote = () => {
             </h2>
             <ol className="space-y-10">
               {steps.map((key, i) => (
-                <li key={key} className="flex items-start gap-6 rounded-lg bg-card border border-border/60 p-6 md:p-7">
+                <li key={key} className="flex items-start gap-6 card-base p-6 md:p-7">
                   <span className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold">
                     {i + 1}
                   </span>
@@ -73,7 +73,7 @@ const Angebote = () => {
             </p>
 
             <div className="grid gap-8 md:grid-cols-2 mb-12">
-              <div className="rounded-lg border border-border/60 bg-card p-6 md:p-7">
+              <div className="card-base p-6 md:p-7">
                 <div className="flex items-baseline justify-between mb-3 gap-3">
                   <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
                     {t("offerings.kennenlernen.title")}
@@ -110,7 +110,7 @@ const Angebote = () => {
               </div>
             </div>
 
-            <div className="rounded-lg bg-muted/40 border border-border/50 p-6 md:p-8 text-sm text-muted-foreground leading-relaxed mb-8">
+            <div className="card-base border-border/50 p-6 md:p-8 text-sm text-muted-foreground leading-relaxed mb-8">
               <p className="font-medium text-foreground mb-2">
                 {language === "de" ? "Unterstützung soll nicht am Geld scheitern" : "Support shouldn't fail because of money"}
               </p>
@@ -118,7 +118,7 @@ const Angebote = () => {
             </div>
 
             {/* Gruppenformat Cross-Sell */}
-            <div className="rounded-lg border border-secondary/20 bg-secondary/5 p-6 md:p-8">
+            <div className="card-base border-secondary/20 bg-secondary/5 p-6 md:p-8">
               <div className="flex flex-col sm:flex-row sm:items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
                   <Users className="h-5 w-5 text-secondary" aria-hidden="true" />
@@ -178,7 +178,7 @@ const Angebote = () => {
           <div className="container mx-auto px-4 text-center max-w-lg">
             <Button
               size="lg"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md min-h-[44px] text-base px-8"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)]"
               asChild
             >
               <a

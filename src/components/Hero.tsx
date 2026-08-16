@@ -35,7 +35,7 @@ export const Hero = () => {
             <div className="mt-14 md:mt-16 flex flex-col items-center md:items-start gap-5 animate-fade-in-up [animation-delay:200ms]">
               <Button
                 size="lg"
-                className="text-base px-10 py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all duration-300 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -53,7 +53,7 @@ export const Hero = () => {
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-fade-in-up [animation-delay:200ms]">
             <div className="relative w-60 md:w-72 lg:w-80">
               <div className="absolute -inset-4 rounded-lg bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5" />
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-muted/40 shadow-md shadow-foreground/5 ring-1 ring-border/10">
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-muted/40 shadow-[var(--shadow-soft)] ring-1 ring-border/10">
                 <img
                   src={heroImgMobile}
                   srcSet={`${heroImgMobile} 450w, ${heroImg} 853w`}

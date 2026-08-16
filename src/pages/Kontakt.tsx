@@ -54,7 +54,7 @@ const Kontakt = () => {
             </h1>
             <div className="grid gap-8 md:grid-cols-2">
               <ContactForm />
-              <Card>
+              <Card className="card-base border-border/60">
                 <CardContent className="pt-6">
                   <h2 className="font-serif text-lg font-medium text-foreground mb-4">
                     {t("contact.directTitle")}
@@ -98,12 +98,12 @@ const Kontakt = () => {
         {/* 2. Erstgespräch – Inline-Kalender */}
         <section id="erstgespraech" className="py-24 md:py-32 bg-muted/30">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="bg-card rounded-md border border-border shadow-[var(--shadow-elevated)] overflow-hidden">
+            <div className="card-base border-border overflow-hidden">
               <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
                 <img
                   src={portrait}
                   alt="Jona Fels – Systemischer Aufsteller in Freiburg"
-                  className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-md mx-auto mb-4 no-fade"
+                  className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-[var(--shadow-soft)] mx-auto mb-4 no-fade"
                   loading="lazy"
                   decoding="async"
                   width={96}

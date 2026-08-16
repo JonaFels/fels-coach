@@ -110,7 +110,7 @@ const Familienaufstellung = () => {
               {benefits.map(({ key, Icon }) => (
                 <li
                   key={key}
-                  className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border/60 shadow-sm hover:shadow-md transition-shadow"
+                  className="flex items-start gap-4 p-5 card-base hover:shadow-[var(--shadow-elevated)] transition-shadow"
                 >
                   <div className="flex-shrink-0 p-2.5 rounded-full bg-secondary/10">
                     <Icon className="h-5 w-5 text-secondary" aria-hidden="true" />
@@ -127,7 +127,7 @@ const Familienaufstellung = () => {
         {/* Gruppenformat Cross-Sell */}
         <section className="py-14 md:py-20">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="bg-card rounded-lg border border-secondary/20 p-6 md:p-8 shadow-sm">
+            <div className="card-base border-secondary/20 p-6 md:p-8">
               <div className="flex flex-col sm:flex-row sm:items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
                   <Users className="h-5 w-5 text-secondary" aria-hidden="true" />
@@ -173,7 +173,7 @@ const Familienaufstellung = () => {
               </div>
 
               {/* Aufstellungsbild mit Bodenankern */}
-              <div className="rounded-lg overflow-hidden shadow-md">
+              <div className="rounded-lg overflow-hidden shadow-[var(--shadow-soft)]">
                 <img
                   src={familyImage}
                   alt="Familienaufstellung Freiburg im Einzelsetting – farbige Bodenanker markieren die Positionen der Familienmitglieder im Praxisraum"
@@ -194,7 +194,7 @@ const Familienaufstellung = () => {
               {steps.map((n) => (
                 <li
                   key={n}
-                  className="relative pl-16 pr-6 py-6 md:pl-20 md:pr-8 md:py-7 rounded-xl bg-card border border-border/60 shadow-sm"
+                  className="relative pl-16 pr-6 py-6 md:pl-20 md:pr-8 md:py-7 card-base"
                 >
                   <span
                     className="absolute left-4 top-6 md:top-7 inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary-foreground font-serif font-semibold text-sm"
@@ -226,7 +226,7 @@ const Familienaufstellung = () => {
             >
               {t("family.faq.title")}
             </h2>
-            <div className="bg-card rounded-md border border-border/50 shadow-sm p-6 md:p-8">
+            <div className="card-base p-6 md:p-8">
               <Accordion type="single" collapsible className="w-full">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <AccordionItem key={i} value={`family-faq-${i}`}>
@@ -249,7 +249,7 @@ const Familienaufstellung = () => {
             <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground text-center mb-8">
               {t("family.proof.title")}
             </h2>
-            <blockquote className="relative bg-card rounded-lg p-8 md:p-10 shadow-sm border border-border/60">
+            <blockquote className="relative card-base p-8 md:p-10">
               <Quote className="absolute top-6 left-6 h-7 w-7 text-secondary/25" aria-hidden="true" />
               <p className="text-muted-foreground italic leading-relaxed text-base md:text-lg pl-8">
                 „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit."
@@ -269,7 +269,7 @@ const Familienaufstellung = () => {
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <Button
               size="lg"
-              className="w-full sm:w-auto text-base px-6 sm:px-10 py-5 sm:py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-auto rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all duration-300 hover:-translate-y-1"
               asChild
             >
               <a

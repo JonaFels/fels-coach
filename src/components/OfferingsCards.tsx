@@ -16,7 +16,7 @@ export const OfferingsCards = () => {
           </h2>
         </div>
 
-        <div className="bg-card border border-border rounded-md shadow-sm p-8 md:p-12">
+        <div className="card-base p-8 md:p-12">
           <p className="text-lg md:text-xl text-foreground leading-[1.8]">
             In meinem 1:1 Angebot arbeiten wir mit der{" "}
             <Link
@@ -36,7 +36,7 @@ export const OfferingsCards = () => {
         </div>
 
         {/* Cross-Sell: Gruppenformat */}
-        <div className="mt-8 rounded-lg border border-secondary/20 bg-secondary/5 p-6 md:p-8">
+        <div className="mt-8 rounded-lg border border-secondary/20 bg-secondary/5 p-6 md:p-8 shadow-[var(--shadow-soft)]">
           <div className="flex flex-col sm:flex-row sm:items-center gap-5">
             <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
               <Users className="h-5 w-5 text-secondary" aria-hidden="true" />

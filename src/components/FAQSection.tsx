@@ -74,7 +74,7 @@ export const FAQSection = () => {
         <h2 id="faq-heading" className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-16 leading-tight">
           {t("faq.title")}
         </h2>
-        <div className="bg-card rounded-md border border-border/50 shadow-sm p-8 md:p-10">
+        <div className="card-base p-8 md:p-10">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>

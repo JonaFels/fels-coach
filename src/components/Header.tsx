@@ -36,7 +36,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Brand */}
           <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
-            <span className="relative flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-[hsl(var(--fels-cream))] shadow-sm">
+            <span className="relative flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-[hsl(var(--fels-cream))] shadow-[var(--shadow-soft)]">
               <img
                 src={logoSrc}
                 alt="Jona Fels"
@@ -72,7 +72,7 @@ export const Header = () => {
             <LanguageSwitcher />
             <Button
               size="sm"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md text-[0.8rem] px-4"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg shadow-[var(--shadow-soft)] text-[0.8rem] px-4"
               asChild
             >
               <a
@@ -120,7 +120,7 @@ export const Header = () => {
               <LanguageSwitcher />
               <Button
                 size="sm"
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[var(--shadow-soft)]"
                 asChild
               >
                 <a

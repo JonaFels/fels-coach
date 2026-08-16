@@ -7,7 +7,7 @@ export const AuthorBox = () => {
   const { t } = useLanguage();
 
   return (
-    <Card className="bg-card/95 backdrop-blur-sm mt-12">
+    <Card className="bg-card/95 backdrop-blur-sm border-border/60 mt-12 shadow-[var(--shadow-soft)]">
       <CardContent className="pt-6">
         <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
           <Link to="/ueber-mich" className="flex-shrink-0">

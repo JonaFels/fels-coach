@@ -95,7 +95,7 @@ export const CookieBanner = () => {
     return (
       <button
         onClick={openSettings}
-        className="fixed bottom-4 left-4 z-50 p-3 bg-card border border-border rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+        className="fixed bottom-4 left-4 z-50 p-3 bg-card border border-border rounded-full shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all duration-200 hover:scale-105"
         aria-label={t("cookie.settings")}
       >
         <Cookie className="h-5 w-5 text-foreground" />
@@ -106,7 +106,7 @@ export const CookieBanner = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50 animate-slide-in-right">
       {showPreferences ? (
-        <div className="w-[350px] bg-card border border-border rounded-lg shadow-xl p-5">
+        <div className="w-[350px] bg-card border border-border rounded-lg shadow-[var(--shadow-elevated)] p-5">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-serif text-lg font-semibold text-foreground">
               {t("cookie.title")}
@@ -162,7 +162,7 @@ export const CookieBanner = () => {
           </Button>
         </div>
       ) : (
-        <div className="w-[350px] bg-card border border-border rounded-lg shadow-xl p-5">
+        <div className="w-[350px] bg-card border border-border rounded-lg shadow-[var(--shadow-elevated)] p-5">
           <div className="flex items-start gap-3 mb-4">
             <Cookie className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
             <p className="text-sm text-foreground">{t("cookie.text")}</p>

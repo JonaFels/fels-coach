@@ -224,7 +224,7 @@ const BlogPost = () => {
             <img
               src={src}
               alt={altText}
-              className="w-full h-auto sm:rounded-lg"
+              className="w-full h-auto sm:rounded-lg shadow-[var(--shadow-soft)]"
               loading="lazy"
               decoding="async"
             />
@@ -366,7 +366,7 @@ const BlogPost = () => {
 
             {post.image && (
               <figure className="mb-16 md:mb-20 max-w-4xl">
-                <div className="aspect-[16/9] rounded-lg overflow-hidden shadow-sm">
+                <div className="aspect-[16/9] rounded-lg overflow-hidden shadow-[var(--shadow-soft)]">
                   <img
                     src={post.image}
                     alt={imageAlt}
@@ -426,7 +426,7 @@ const BlogPost = () => {
 
             <aside
               aria-label="Angebote"
-              className="max-w-3xl mt-20 md:mt-28 rounded-lg border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12"
+              className="max-w-3xl mt-20 md:mt-28 rounded-lg border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12 shadow-[var(--shadow-soft)]"
             >
               <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground leading-snug mb-4">
                 Möchtest du an deinen eigenen Themen arbeiten?
@@ -439,13 +439,13 @@ const BlogPost = () => {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   to="/systemische-familienaufstellung-freiburg"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-4 text-center text-sm md:text-base font-medium text-secondary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  className="group inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-5 py-4 text-center text-sm md:text-base font-medium text-secondary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
                 >
                   Zur Familienaufstellung
                 </Link>
                 <Link
                   to="/kontakt"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
+                  className="group inline-flex items-center justify-center gap-2 rounded-lg border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-[var(--shadow-elevated)]"
                 >
                   Kostenloses Kennenlerngespräch
                 </Link>
