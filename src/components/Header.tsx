@@ -40,7 +40,7 @@ export const Header = () => {
               <img
                 src={logoSrc}
                 alt="Jona Fels"
-                className="h-8 w-8 md:h-9 md:w-9 object-contain logo-recolor"
+                className="h-8 w-8 md:h-9 md:w-9 object-contain"
                 width={36}
                 height={36}
                 loading="eager"
