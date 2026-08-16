@@ -417,3 +417,16 @@ h3 {
 @media (prefers-reduced-motion: no-preference) {
   .img-warm { transition: filter 400ms ease; }
 }
+
+/* Logo recolor: harmonizes the icon with the warm terracotta/charcoal palette */
+.logo-recolor {
+  filter: sepia(40%) saturate(160%) hue-rotate(345deg) brightness(0.95) contrast(1.05);
+}
+
+/* Mobile breathing room: slightly more outer padding so text never touches the edges */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
