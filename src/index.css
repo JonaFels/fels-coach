@@ -39,60 +39,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fels Coach Design System – "The Logical Mystic & Benevolent Leader"
-   Deep midnight slate architecture + warm terracotta/brushed gold accents. */
+/* Fels Coach Design System – "The Clear, Benevolent Strategist"
+   Luminous structure: crisp white ground, cool pebble grays, warm sand accents. */
 
 @layer base {
   :root {
-    /* Background: deep midnight slate — the unbreakable container */
-    --background: 213 25% 13%;
-    /* Foreground: soft ash / off-white for surgical clarity */
-    --foreground: 40 14% 92%;
+    /* Background: crisp, near-white with a cool tint */
+    --background: 210 30% 99%;
+    /* Foreground: deep slate blue, never pure black */
+    --foreground: 214 32% 18%;
 
-    /* Card: one step lighter than the ground, clearly defined */
-    --card: 213 24% 17%;
-    --card-foreground: 40 14% 92%;
+    /* Card: soft pebble white, defined by hairline borders */
+    --card: 0 0% 100%;
+    --card-foreground: 214 32% 18%;
 
-    --popover: 213 24% 17%;
-    --popover-foreground: 40 14% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 32% 18%;
 
-    /* Primary: burnt terracotta — deliberate warmth, used for action */
-    --primary: 16 52% 50%;
-    --primary-foreground: 30 40% 97%;
+    /* Primary: soft terracotta — human warmth for actions */
+    --primary: 16 48% 48%;
+    --primary-foreground: 40 40% 98%;
 
-    /* Secondary: brushed gold / warm sand — quiet highlighting */
-    --secondary: 36 42% 64%;
-    --secondary-foreground: 213 25% 13%;
+    /* Secondary: muted gold / warm sand */
+    --secondary: 36 38% 56%;
+    --secondary-foreground: 214 32% 18%;
 
-    /* Muted: structural surface */
-    --muted: 213 22% 19%;
-    --muted-foreground: 40 10% 68%;
+    /* Muted: cool light silver surface */
+    --muted: 213 28% 96%;
+    --muted-foreground: 214 14% 44%;
 
-    /* Accent: subtle raised plane */
-    --accent: 213 20% 23%;
-    --accent-foreground: 40 14% 92%;
+    /* Accent: soft pebble gray plane */
+    --accent: 213 30% 94%;
+    --accent-foreground: 214 32% 18%;
 
-    --destructive: 0 55% 42%;
-    --destructive-foreground: 30 40% 97%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 40% 98%;
 
-    --border: 213 18% 26%;
-    --input: 213 18% 26%;
-    --ring: 36 42% 64%;
+    --border: 214 22% 89%;
+    --input: 214 22% 89%;
+    --ring: 36 38% 52%;
 
     /* Architectural, not bouncy */
     --radius: 0.375rem;
 
     /* Custom brand tokens */
-    --fels-charcoal: 213 25% 13%;
-    --fels-sage: 36 42% 64%;
-    --fels-sand: 30 25% 78%;
-    --fels-cream: 40 14% 92%;
-    --fels-sage-gray: 213 20% 23%;
+    --fels-charcoal: 214 32% 18%;
+    --fels-sage: 36 38% 56%;
+    --fels-sand: 32 32% 88%;
+    --fels-cream: 0 0% 100%;
+    --fels-sage-gray: 213 28% 96%;
 
-    /* Shadow system — depth on dark ground */
-    --shadow-soft: 0 1px 2px hsl(213 40% 3% / 0.5), 0 6px 18px hsl(213 40% 3% / 0.35);
-    --shadow-elevated: 0 4px 14px hsl(213 40% 3% / 0.5), 0 24px 50px -12px hsl(213 40% 3% / 0.6);
-    --shadow-ring: 0 0 0 1px hsl(var(--border)), 0 1px 2px hsl(213 40% 3% / 0.4);
+    /* Shadow system — light, minimal separation */
+    --shadow-soft: 0 1px 2px hsl(214 30% 30% / 0.06), 0 8px 20px -12px hsl(214 30% 30% / 0.12);
+    --shadow-elevated: 0 2px 6px hsl(214 30% 30% / 0.07), 0 20px 40px -20px hsl(214 30% 30% / 0.18);
+    --shadow-ring: 0 0 0 1px hsl(var(--border)), 0 1px 2px hsl(214 30% 30% / 0.06);
 
     /* Easing */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -107,53 +107,53 @@
     --space-3xl: 4rem;
 
     /* Sidebar tokens */
-    --sidebar-background: 213 26% 13%;
-    --sidebar-foreground: 40 14% 92%;
-    --sidebar-primary: 16 52% 50%;
-    --sidebar-primary-foreground: 30 40% 97%;
-    --sidebar-accent: 213 22% 19%;
-    --sidebar-accent-foreground: 40 14% 92%;
-    --sidebar-border: 213 18% 22%;
-    --sidebar-ring: 36 42% 64%;
+    --sidebar-background: 210 30% 99%;
+    --sidebar-foreground: 214 32% 18%;
+    --sidebar-primary: 16 48% 48%;
+    --sidebar-primary-foreground: 40 40% 98%;
+    --sidebar-accent: 213 28% 96%;
+    --sidebar-accent-foreground: 214 32% 18%;
+    --sidebar-border: 214 22% 89%;
+    --sidebar-ring: 36 38% 52%;
   }
 
   .dark {
-    --background: 213 25% 13%;
-    --foreground: 40 14% 92%;
+    --background: 210 30% 99%;
+    --foreground: 214 32% 18%;
 
-    --card: 213 24% 17%;
-    --card-foreground: 40 14% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 32% 18%;
 
-    --popover: 213 24% 17%;
-    --popover-foreground: 40 14% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 32% 18%;
 
-    --primary: 16 52% 50%;
-    --primary-foreground: 30 40% 97%;
+    --primary: 16 48% 48%;
+    --primary-foreground: 40 40% 98%;
 
-    --secondary: 36 42% 64%;
-    --secondary-foreground: 213 25% 13%;
+    --secondary: 36 38% 56%;
+    --secondary-foreground: 214 32% 18%;
 
-    --muted: 213 22% 19%;
-    --muted-foreground: 40 10% 68%;
+    --muted: 213 28% 96%;
+    --muted-foreground: 214 14% 44%;
 
-    --accent: 213 20% 23%;
-    --accent-foreground: 40 14% 92%;
+    --accent: 213 30% 94%;
+    --accent-foreground: 214 32% 18%;
 
-    --destructive: 0 55% 42%;
-    --destructive-foreground: 30 40% 97%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 40% 98%;
 
-    --border: 213 18% 26%;
-    --input: 213 18% 26%;
-    --ring: 36 42% 64%;
+    --border: 214 22% 89%;
+    --input: 214 22% 89%;
+    --ring: 36 38% 52%;
 
-    --sidebar-background: 213 24% 17%;
-    --sidebar-foreground: 40 14% 92%;
-    --sidebar-primary: 16 52% 50%;
-    --sidebar-primary-foreground: 30 40% 97%;
-    --sidebar-accent: 213 20% 23%;
-    --sidebar-accent-foreground: 40 14% 92%;
-    --sidebar-border: 213 18% 26%;
-    --sidebar-ring: 36 42% 64%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 214 32% 18%;
+    --sidebar-primary: 16 48% 48%;
+    --sidebar-primary-foreground: 40 40% 98%;
+    --sidebar-accent: 213 28% 96%;
+    --sidebar-accent-foreground: 214 32% 18%;
+    --sidebar-border: 214 22% 89%;
+    --sidebar-ring: 36 38% 52%;
   }
 }
 
