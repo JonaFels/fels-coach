@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Floating CTA-Button für Mobile.
