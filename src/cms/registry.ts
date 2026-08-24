@@ -199,6 +199,7 @@ export const cmsRegistry: CMSEntry[] = [
   { key: "nav.anfahrt", type: "text", category: "Navigation", label: "Nav: Anfahrt" },
   { key: "nav.termin", type: "text", category: "Navigation", label: "Nav: Termin" },
   { key: "nav.contact", type: "text", category: "Navigation", label: "Nav: Contact (CTA)" },
+  { key: "nav.contactShort", type: "text", category: "Navigation", label: "Nav: Contact (kurz / Mobile)" },
 
   // ===== CTAs =====
   { key: "cta.bookNow", type: "text", category: "CTAs (global)", label: "Jetzt buchen" },

@@ -118,22 +118,22 @@ export const Header = () => {
             ))}
             <div className="flex items-center justify-between px-3 pt-3 mt-2 border-t border-border">
               <LanguageSwitcher />
-              <Button
-                size="sm"
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[var(--shadow-soft)]"
-                asChild
+            <Button
+              size="sm"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[var(--shadow-soft)]"
+              asChild
+            >
+              <a
+                href="/kontakt"
+                onClick={() => {
+                  handleCTAClick();
+                  setIsMobileMenuOpen(false);
+                }}
               >
-                <a
-                  href="/kontakt"
-                  onClick={() => {
-                    handleCTAClick();
-                    setIsMobileMenuOpen(false);
-                  }}
-                >
-                  <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
-                  {t("nav.contact")}
-                </a>
-              </Button>
+                <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+                {t("nav.contactShort")}
+              </a>
+            </Button>
             </div>
           </nav>
         </div>

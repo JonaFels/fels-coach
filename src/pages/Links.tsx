@@ -3,7 +3,7 @@ import { HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Links = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const socials = [
     { href: "https://www.instagram.com/jona.fels", icon: Instagram, label: "Instagram" },
@@ -67,7 +67,7 @@ const Links = () => {
             <span className="w-9 h-9 rounded-full bg-primary-foreground/15 flex items-center justify-center shrink-0 ring-1 ring-primary-foreground/20">
               <Phone className="w-4 h-4 text-primary-foreground" aria-hidden="true" />
             </span>
-            <span className="flex-1 text-left">Kostenfreies Erstgespräch</span>
+            <span className="flex-1 text-left">{t("nav.contactShort")}</span>
           </a>
 
           {/* 2. 1:1 Aufstellungsarbeit */}

@@ -50,6 +50,10 @@ export const translations: Translations = {
     de: "Kostenloses Kennenlerngespräch",
     en: "Free Intro Call",
   },
+  "nav.contactShort": {
+    de: "Kennenlerngespräch",
+    en: "Free Intro",
+  },
   "nav.angebote": {
     de: "Ablauf & Preise",
     en: "Process & Pricing",

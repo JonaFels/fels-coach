@@ -447,7 +447,7 @@ const BlogPost = () => {
                   to="/kontakt"
                   className="group inline-flex items-center justify-center gap-2 rounded-lg border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-[var(--shadow-elevated)]"
                 >
-                  Kostenloses Kennenlerngespräch
+                  {t("nav.contactShort")}
                 </Link>
               </div>
             </aside>

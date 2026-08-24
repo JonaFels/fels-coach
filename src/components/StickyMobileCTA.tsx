@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Floating CTA-Button für Mobile.
@@ -9,6 +10,7 @@ import { trackCTAClick } from "@/lib/tracking";
  * - Nur sichtbar auf Mobile (<md), Desktop hat Header-CTA.
  */
 export const StickyMobileCTA = () => {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export const StickyMobileCTA = () => {
         className="flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground rounded-full py-4 shadow-[var(--shadow-elevated)] ring-1 ring-foreground/5 font-medium text-base active:scale-[0.98] transition-transform"
       >
         <Phone className="h-4 w-4" aria-hidden="true" />
-        Kostenloses Erstgespräch
+        {t("nav.contactShort")}
       </a>
     </div>
   );
