@@ -1098,11 +1098,11 @@ export const translations: Translations = {
      en: "Error sending. Please try again.",
    },
  
-   // Contact Page Redesign
+    // Contact Page Redesign
     "contact.headline": {
-      de: "Lass uns sprechen.",
-      en: "Let's talk.",
-   },
+      de: "Schreib mir – oder buch direkt einen Termin",
+      en: "Message me – or book a session directly",
+    },
    "contact.optionA.title": {
      de: "Option A: Rückruf anfordern",
      en: "Option A: Request Callback",
