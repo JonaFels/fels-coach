@@ -1129,6 +1129,10 @@ export const translations: Translations = {
     de: "",
     en: "",
   },
+  "contact.headline": {
+    de: "Schreib mir – oder buch direkt einen Termin",
+    en: "Message me – or book a session directly",
+  },
   "contact.altTitle": {
     de: "Oder schreib mir direkt",
     en: "Or write to me directly",
