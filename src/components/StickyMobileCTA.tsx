@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
  * - Nur sichtbar auf Mobile (<md), Desktop hat Header-CTA.
  */
 export const StickyMobileCTA = () => {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
