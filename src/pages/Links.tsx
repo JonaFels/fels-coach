@@ -3,7 +3,7 @@ import { HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Links = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const socials = [
     { href: "https://www.instagram.com/jona.fels", icon: Instagram, label: "Instagram" },
