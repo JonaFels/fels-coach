@@ -50,7 +50,7 @@ const Kontakt = () => {
         <section className="pt-10 pb-16 md:pt-16 md:pb-24 bg-background">
           <div className="container mx-auto px-4 max-w-3xl">
             <h1 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-8 text-center">
-              {t("contact.altTitle")}
+              {t("contact.headline")}
             </h1>
             <div className="grid gap-8 md:grid-cols-2">
               <ContactForm />
