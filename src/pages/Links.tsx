@@ -76,7 +76,7 @@ const Links = () => {
             </span>
             <span className="flex-1 text-left leading-tight">
               <span className="block text-[14.5px] font-semibold">Blog</span>
-              <span className="block text-[12px] text-muted-foreground">Impulse zu Familie, Mustern & Wachstum</span>
+              <span className="block text-[12px] text-muted-foreground">Impulse zu Aufstellungsarbeit, Mustern & Wachstum</span>
             </span>
           </a>
         </div>
