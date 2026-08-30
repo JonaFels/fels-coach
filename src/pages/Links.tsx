@@ -27,8 +27,9 @@ const Links = () => {
         {/* Handle */}
         <h1 className="mt-4 text-lg font-semibold tracking-tight">@jona.fels</h1>
         <p className="text-sm text-muted-foreground text-center mt-1 max-w-[320px] leading-relaxed">
-          Systemische Aufstellung & Familienaufstellung · Freiburg
+          Systemische Aufstellung · Freiburg
         </p>
+
 
 
         {/* Link list — psychologischer Funnel */}
