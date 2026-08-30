@@ -1,9 +1,8 @@
-import { useLanguage } from "@/contexts/LanguageContext";
-import { HeartHandshake, BookOpen, Phone, BadgeCheck, Users } from "lucide-react";
+import { HeartHandshake, BookOpen, BadgeCheck, Users } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Links = () => {
-  const { t } = useLanguage();
+
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center px-5 py-10 bg-background">
@@ -34,19 +33,7 @@ const Links = () => {
 
         {/* Link list — psychologischer Funnel */}
         <div className="flex flex-col gap-3 w-full mt-8">
-          {/* 1. Primärer CTA — Erstgespräch */}
-          <a
-            href="/kontakt"
-            className="group relative w-full rounded-full py-4 px-5 flex items-center gap-4 font-semibold text-[15px] text-primary-foreground shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-200 ring-1 ring-primary/10 no-underline-effect"
-            style={{
-              background: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%)",
-            }}
-          >
-            <span className="w-9 h-9 rounded-full bg-primary-foreground/15 flex items-center justify-center shrink-0 ring-1 ring-primary-foreground/20">
-              <Phone className="w-4 h-4 text-primary-foreground" aria-hidden="true" />
-            </span>
-            <span className="flex-1 text-left">{t("nav.contactShort")}</span>
-          </a>
+
 
           {/* 2. 1:1 Aufstellungsarbeit */}
           <a
