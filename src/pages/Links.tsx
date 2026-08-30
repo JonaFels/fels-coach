@@ -1,16 +1,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { HeartHandshake, BookOpen, Phone, Instagram, Facebook, Linkedin, Youtube, BadgeCheck, Users } from "lucide-react";
+import { HeartHandshake, BookOpen, Phone, BadgeCheck, Users } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Links = () => {
-  const { language, t } = useLanguage();
-
-  const socials = [
-    { href: "https://www.instagram.com/jona.fels", icon: Instagram, label: "Instagram" },
-    { href: "https://de.linkedin.com/in/jona-fels-coach", icon: Linkedin, label: "LinkedIn" },
-    { href: language === "en" ? "https://www.youtube.com/channel/UC8HPUPoQKXvC10jNBec8paw" : "https://www.youtube.com/@JonaFels", icon: Youtube, label: "YouTube" },
-    { href: "https://m.facebook.com/profile.php?id=61562014600393", icon: Facebook, label: "Facebook" },
-  ];
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center px-5 py-10 bg-background">
@@ -38,21 +31,6 @@ const Links = () => {
           Systemische Aufstellung & Familienaufstellung · Freiburg
         </p>
 
-        {/* Socials */}
-        <div className="flex items-center gap-3 mt-5">
-          {socials.map(({ href, icon: Icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center hover:bg-secondary/20 hover:scale-110 transition-all duration-200 no-underline-effect"
-            >
-              <Icon className="w-4 h-4 text-secondary" />
-            </a>
-          ))}
-        </div>
 
         {/* Link list — psychologischer Funnel */}
         <div className="flex flex-col gap-3 w-full mt-8">
