@@ -31,21 +31,6 @@ const Links = () => {
           Systemische Aufstellung & Familienaufstellung · Freiburg
         </p>
 
-        {/* Socials */}
-        <div className="flex items-center gap-3 mt-5">
-          {socials.map(({ href, icon: Icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center hover:bg-secondary/20 hover:scale-110 transition-all duration-200 no-underline-effect"
-            >
-              <Icon className="w-4 h-4 text-secondary" />
-            </a>
-          ))}
-        </div>
 
         {/* Link list — psychologischer Funnel */}
         <div className="flex flex-col gap-3 w-full mt-8">
