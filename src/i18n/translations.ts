@@ -47,12 +47,12 @@ export const translations: Translations = {
     en: "Book Appointment",
   },
   "nav.contact": {
-    de: "Kostenloses Kennenlerngespräch",
-    en: "Free Intro Call",
+    de: "Kostenloses Orientierungsgespräch",
+    en: "Free Discovery Call",
   },
   "nav.contactShort": {
-    de: "Kennenlerngespräch",
-    en: "Free Intro",
+    de: "Orientierungsgespräch",
+    en: "Free Discovery",
   },
   "nav.angebote": {
     de: "Ablauf & Preise",
@@ -87,8 +87,8 @@ export const translations: Translations = {
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Wir starten mit einem kostenlosen Kennenlerngespräch – in Freiburg oder online.",
-    en: "In my constellation practice in Freiburg I accompany you 1:1 in sorting the chaos in your head and dissolving emotional blocks. We start with a free intro call – in Freiburg or online.",
+    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Wir starten mit einem kostenlosen Orientierungsgespräch – in Freiburg oder online.",
+    en: "In my constellation practice in Freiburg I accompany you 1:1 in sorting the chaos in your head and dissolving emotional blocks. We start with a free discovery call – in Freiburg or online.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
@@ -268,7 +268,7 @@ export const translations: Translations = {
   },
   "offerings.preiseNote": {
     de: "Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich beim Erstgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
-    en: "If you can't currently afford the regular prices, please feel free to bring it up openly during the intro call. We'll find a reduced-rate solution that works for you.",
+    en: "If you can't currently afford the regular prices, please feel free to bring it up openly during the discovery call. We'll find a reduced-rate solution that works for you.",
   },
   "group.homeTitle": {
     de: "Lieber in Gruppe arbeiten?",
@@ -315,11 +315,11 @@ export const translations: Translations = {
   },
   "offerings.rahmen.times": {
     de: "Reguläre Termine finden samstags von 14:00 bis 20:00 Uhr statt. Weitere Zeiten sind nach Absprache im Erstgespräch möglich.",
-    en: "Regular appointments take place Saturdays from 2:00 pm to 8:00 pm. Other times can be arranged by agreement in the intro call.",
+    en: "Regular appointments take place Saturdays from 2:00 pm to 8:00 pm. Other times can be arranged by agreement in the discovery call.",
   },
   "offerings.ctaButton": {
-    de: "Kennenlerngespräch",
-    en: "Free intro call",
+    de: "Orientierungsgespräch",
+    en: "Free discovery call",
   },
 
 
@@ -1236,7 +1236,7 @@ export const translations: Translations = {
   },
   "offerings.ablaufIntro": {
     de: "Erst das kostenlose Erstgespräch, dann der persönliche Buchungslink – so starten wir gemeinsam, vor Ort in Freiburg oder online.",
-    en: "First the free introductory call, then your personal booking link – that's how we start together, in-person in Freiburg or online.",
+    en: "First the free discovery call, then your personal booking link – that's how we start together, in-person in Freiburg or online.",
   },
   "offerings.perUnit": {
     de: "/ 90 Min.",

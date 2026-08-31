@@ -45,7 +45,7 @@ const Kontakt = () => {
             <div className="mt-10 md:mt-14 card-base border-border overflow-hidden">
               <iframe
                 src={BOOKING_URL}
-                title="Terminbuchung – Kennenlerngespräch"
+                title="Terminbuchung – Orientierungsgespräch"
                 loading="lazy"
                 className="block w-full border-0"
                 style={{ height: "750px" }}
