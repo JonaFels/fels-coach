@@ -72,25 +72,7 @@ const Angebote = () => {
               {t("offerings.preiseIntro")}
             </p>
 
-            <div className="grid gap-8 md:grid-cols-2 mb-12">
-              <div className="card-base p-6 md:p-7">
-                <div className="flex items-baseline justify-between mb-3 gap-3">
-                  <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                    {t("offerings.kennenlernen.title")}
-                  </h3>
-                  <span className="text-sm font-medium text-secondary whitespace-nowrap">
-                    {language === "de" ? "Einstieg" : "Entry"}
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-7">
-                  {t("offerings.kennenlernen.desc")}
-                </p>
-                <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
-                  <span className="text-3xl font-semibold text-foreground">55&nbsp;€</span>
-                  <span className="text-sm text-muted-foreground">/ 90&nbsp;Min.</span>
-                </div>
-              </div>
-
+            <div className="mb-12 max-w-xl mx-auto">
               <div className="rounded-lg border border-secondary/40 bg-secondary/5 p-6 md:p-7">
                 <div className="flex items-baseline justify-between mb-3 gap-3">
                   <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
