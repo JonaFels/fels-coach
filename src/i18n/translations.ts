@@ -52,7 +52,7 @@ export const translations: Translations = {
   },
   "nav.contactShort": {
     de: "Orientierungsgespräch",
-    en: "Free Discovery",
+    en: "Discovery Call",
   },
   "nav.angebote": {
     de: "Ablauf & Preise",
@@ -180,7 +180,7 @@ export const translations: Translations = {
   },
   "offerings.step1": {
     de: "Kostenloses Erstgespräch: In einem unverbindlichen 30-minütigen Telefonat klären wir dein Anliegen und schauen, ob die Chemie stimmt.",
-    en: "Free initial call: In a non-binding 30-minute phone call we clarify your concern and see if the chemistry is right.",
+    en: "Free discovery call: In a non-binding 30-minute phone call we clarify your concern and see if the chemistry is right.",
   },
   "offerings.step2": {
     de: "Einfache Terminbuchung: Wenn mein Ansatz für dich passt, erhältst du einen persönlichen Link, über den du deinen ersten Termin bequem online auswählen kannst.",
@@ -899,7 +899,7 @@ export const translations: Translations = {
   },
   "finalCta.description": {
     de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt zu mehr Klarheit, gesunden Grenzen und deiner eigenen Standfestigkeit findest.",
-    en: "In a free 30-minute initial conversation, we'll see if the chemistry is right – and how you can step by step find more clarity, healthy boundaries and your own steadiness.",
+    en: "In a free 30-minute discovery call, we'll see if the chemistry is right – and how you can step by step find more clarity, healthy boundaries and your own steadiness.",
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",
@@ -1260,7 +1260,7 @@ export const translations: Translations = {
   },
   "offerings.unsureCta": {
     de: "Erstgespräch vereinbaren",
-    en: "Schedule Consultation",
+    en: "Book Discovery Call",
   },
   "offerings.unsureMicrocopy": {
     de: "völlig unverbindlich & persönlich",
