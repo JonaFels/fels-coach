@@ -22,16 +22,16 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string; keywords?: string }>> = {
   "/": {
-    de: { title: "Systemische Aufstellung Freiburg | Jona Fels", description: "Systemische Aufstellung in der Aufstellungspraxis Freiburg – 1:1, geschützt, auch online. Jetzt kostenloses Kennenlerngespräch vereinbaren." },
-    en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic constellation in my Freiburg practice – 1:1, confidential, also online. Book your free intro call with Jona Fels today." },
+    de: { title: "Systemische Aufstellung Freiburg | Jona Fels", description: "Systemische Aufstellung in der Aufstellungspraxis Freiburg – 1:1, geschützt, auch online. Jetzt kostenloses Orientierungsgespräch vereinbaren." },
+    en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic constellation in my Freiburg practice – 1:1, confidential, also online. Book your free discovery call with Jona Fels today." },
   },
   "/ablauf-preise": {
     de: { title: "Ablauf & Preise | Systemische Aufstellung Freiburg", description: "Kostenloses Erstgespräch, Kennenlern-Sitzung 55 €, Aufstellung mit Einzelaufstellung 110 € – in Freiburg oder online. Jona Fels." },
-    en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free intro call, getting-to-know session €55, constellation work with individual constellation €110 – in Freiburg or online. Jona Fels." },
+    en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free discovery call, getting-to-know session €55, constellation work with individual constellation €110 – in Freiburg or online. Jona Fels." },
   },
   "/systemische-familienaufstellung-freiburg": {
-    de: { title: "Familienaufstellung Freiburg – Einzelsetting | Jona Fels", description: "Familienaufstellung Freiburg im Einzelsetting: 1:1 mit Bodenankern, vertraulich und ohne Gruppe. Kostenloses Kennenlerngespräch sichern." },
-    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation Freiburg in a 1:1 setting: floor anchors, confidential, no group. Book your free intro call with Jona Fels." },
+    de: { title: "Familienaufstellung Freiburg – Einzelsetting | Jona Fels", description: "Familienaufstellung Freiburg im Einzelsetting: 1:1 mit Bodenankern, vertraulich und ohne Gruppe. Kostenloses Orientierungsgespräch sichern." },
+    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation Freiburg in a 1:1 setting: floor anchors, confidential, no group. Book your free discovery call with Jona Fels." },
   },
   "/ueber-mich": {
     de: { title: "Über mich – Jona Fels, Systemischer Aufsteller Freiburg", description: "Lerne Jona Fels kennen: Dein systemischer Aufsteller in Freiburg. Erfahre, wie ich meine eigenen Muster durchbrach – und dich durch deine Unklarheit begleite." },
@@ -39,7 +39,7 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
   },
   "/kontakt": {
     de: { title: "Kontakt – Systemische Aufstellung Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Erstgespräch zur systemischen Aufstellungsarbeit oder Familienaufstellung. Per Telefon, E-Mail oder WhatsApp." },
-    en: { title: "Contact – Systemic Constellation Freiburg | Jona Fels", description: "Contact Jona Fels in Freiburg for a free initial consultation on systemic constellation or family constellation. Via phone, email or WhatsApp." },
+    en: { title: "Contact – Systemic Constellation Freiburg | Jona Fels", description: "Contact Jona Fels in Freiburg for a free discovery call on systemic constellation or family constellation. Via phone, email or WhatsApp." },
   },
   "/blog": {
     de: { title: "Blog – Systemische Aufstellung & Aufstellung Freiburg | Jona Fels", description: "Artikel und Insights rund um Familienaufstellungen, systemische Prozessarbeit und persönliche Entwicklung – aus der Praxis in Freiburg." },

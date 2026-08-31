@@ -527,7 +527,7 @@ Im Kindesalter schon können die Talente und die Persönlichkeit erkannt werden.
 
 ## Den Kreislauf durchbrechen: So wählst du ein Umfeld, das dich wachsen lässt
 
-Im Idealfall ist ein Elternteil dabei, das einen ganz annehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genau ähnlich und vertraut wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die dein Potential sehen können und dich bestärken. Als ersten Schritt kannst du direkt ein [unverbindliches Kennenlerngespräch](/kontakt) vereinbaren.`,
+Im Idealfall ist ein Elternteil dabei, das einen ganz annehmen kann, wie man ist. Und wenn nicht, ist es vielleicht ein anderer Mensch. Oft sind aber die Menschen, die wir anziehen, genau ähnlich und vertraut wie die eigene Familie. Es ist aber immer möglich zu entscheiden, Menschen zu finden, die dein Potential sehen können und dich bestärken. Als ersten Schritt kannst du direkt ein [unverbindliches Orientierungsgespräch](/kontakt) vereinbaren.`,
       en: `## The Invisible Compass: Why Family Stories Steer Our Paths
 
 All paths in life are shaped — almost predetermined — by our family roots. Looking at the paths our parents or more distant ancestors took, we often find that we have taken similar steps ourselves. With professions, it can easily become apparent how family history continues. You can develop the understanding of being part of a system and how you sometimes go along, to please others, in order to create connection, even though it doesn't really match who you are.
