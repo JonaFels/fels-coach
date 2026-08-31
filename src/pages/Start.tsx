@@ -1,23 +1,10 @@
 import { useEffect } from "react";
-import { CalendarCheck, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const MEETERGO_AUFSTELLUNG =
   "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
 
-const steps = [
-  {
-    icon: CalendarCheck,
-    title: "Termin wählen",
-    text: "Nach dem Erstgespräch erhältst du einen persönlichen Link. Wähle dort das passende Format und such dir im Kalender deinen Wunschtermin aus.",
-  },
-  {
-    icon: Mail,
-    title: "Postfach checken",
-    text: "Du erhältst direkt im Anschluss deine Bestätigung mit allen weiteren Infos.",
-  },
-];
 
 const Start = () => {
 
