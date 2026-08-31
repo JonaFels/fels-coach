@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Instagram, Facebook, Linkedin, Youtube, Users } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
@@ -7,10 +8,12 @@ import { FooterDirections } from "@/components/FooterDirections";
 export const Footer = () => {
   const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const { pathname } = useLocation();
+  const showDirections = pathname !== "/";
 
   return (
     <footer className="border-t border-border/60 bg-primary/[0.03] mt-12 md:mt-16" style={{ contentVisibility: "auto" }}>
-      <FooterDirections />
+      {showDirections && <FooterDirections />}
       <div className="border-t border-border/50">
         <div className="container mx-auto px-5 max-w-5xl py-14 md:py-16 flex flex-col items-center gap-10">
 
