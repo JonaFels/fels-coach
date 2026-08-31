@@ -11,7 +11,7 @@ export const JsonLd = () => {
         {
           "@type": ["ProfessionalService", "LocalBusiness"],
           "@id": "https://fels-coach.de/#service",
-          name: "Systemische Aufstellung & Familienaufstellung in Freiburg – Jona Fels",
+          name: "Systemische Aufstellungen in Freiburg – Jona Fels",
           alternateName: [
             "Jona Fels – Familienaufstellung Freiburg",
             "Jona Fels – Systemischer Aufsteller Freiburg",
@@ -206,7 +206,7 @@ export const JsonLd = () => {
         {
           "@type": "WebSite",
           "@id": "https://fels-coach.de/#website",
-          name: "Systemische Aufstellung & Familienaufstellung in Freiburg – Jona Fels",
+          name: "Systemische Aufstellungen in Freiburg – Jona Fels",
           alternateName: "Jona Fels – Familienaufstellung Freiburg",
           url: "https://fels-coach.de",
           description:
