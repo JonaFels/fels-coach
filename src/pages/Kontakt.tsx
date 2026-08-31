@@ -25,14 +25,15 @@ const Kontakt = () => {
       setModalOpen(true);
       return;
     }
-    if (hash === "#anfahrt") {
-      navigate("/angebote#anfahrt", { replace: true });
-      return;
-    }
     const id = hash.replace("#", "");
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+    const scrollToEl = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+      return !!el;
+    };
+    if (!scrollToEl()) {
+      const timer = window.setTimeout(scrollToEl, 150);
+      return () => window.clearTimeout(timer);
     }
   }, [hash, navigate]);
 
