@@ -96,27 +96,12 @@ const Kontakt = () => {
         </section>
 
         {/* 2. Erstgespräch – Inline-Kalender */}
-        <section id="erstgespraech" className="py-24 md:py-32 bg-muted/30">
+        <section id="erstgespraech" className="py-20 md:py-28 bg-muted/30">
           <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-6 text-center">
+              {t("contact.calendarHeadline")}
+            </h2>
             <div className="card-base border-border overflow-hidden">
-              <div className="px-6 pt-10 pb-8 md:px-10 md:pt-12 md:pb-10 text-center">
-                <img
-                  src={portrait}
-                  alt="Jona Fels – Systemischer Aufsteller in Freiburg"
-                  className="w-24 h-24 rounded-full object-cover object-[center_20%] shadow-[var(--shadow-soft)] mx-auto mb-4 no-fade"
-                  loading="lazy"
-                  decoding="async"
-                  width={96}
-                  height={96}
-                />
-                <p className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
-                  {t("contact.calendarHeadline")}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Kostenlos · 30 Min · Unverbindlich
-                </p>
-              </div>
-
               <iframe
                 src={BOOKING_URL}
                 title="Terminbuchung – Kennenlerngespräch"
@@ -128,6 +113,7 @@ const Kontakt = () => {
             </div>
           </div>
         </section>
+
 
 
       </main>
