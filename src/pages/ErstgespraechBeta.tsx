@@ -27,14 +27,14 @@ const CAL_EVENTS = [
   {
     key: "kennenlernen",
     label: "Kennenlernen-Sitzung",
-    meta: "55 € · 80 Min.",
+    meta: "55 € · 90 Min.",
     calLink: "fels-coach/kennenlernen-sitzung",
     replaces: "Ersetzt später Kalender 1 auf /start",
   },
   {
     key: "coaching",
     label: "Aufstellung mit Einzelaufstellung",
-    meta: "95 € · 80 Min.",
+    meta: "110 € · 90 Min.",
     calLink: "fels-coach/coaching-mit-einzelaufstellung",
     replaces: "Ersetzt später Kalender 2 auf /start",
   },

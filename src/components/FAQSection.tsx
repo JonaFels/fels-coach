@@ -22,7 +22,7 @@ const faqData = {
     },
     {
       question: "Übernimmt die Krankenkasse die Kosten?",
-      answer: "Nein. Aufstellungsarbeit und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+      answer: "Nein. Aufstellungsarbeit und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (90 Min.) kostet 110 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
@@ -48,7 +48,7 @@ const faqData = {
     },
     {
       question: "Does health insurance cover the costs?",
-      answer: "No. Aufstellungsarbeit and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (80 min.) is €70. In return, you're free to choose your own path – with no diagnosis and no medical record.",
+      answer: "No. Aufstellungsarbeit and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (90 min.) is €70. In return, you're free to choose your own path – with no diagnosis and no medical record.",
     },
     {
       question: "How can I get started and is a preliminary consultation possible?",

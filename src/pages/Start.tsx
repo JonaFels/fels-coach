@@ -74,7 +74,7 @@ const Start = () => {
                 Systemische 1:1 Aufstellung
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                80 Minuten fokussierte Arbeit an dem, was gerade dran ist –
+                90 Minuten fokussierte Arbeit an dem, was gerade dran ist –
                 systemisch, lösungsorientiert und mit konkreten nächsten
                 Schritten. Wähle unten direkt deinen Wunschtermin.
               </p>

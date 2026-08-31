@@ -39,7 +39,7 @@ export const JsonLd = () => {
           },
           image: "https://fels-coach.de/logo.png",
           logo: "https://fels-coach.de/logo.png",
-          priceRange: "55 €–95 €",
+          priceRange: "55 €–110 €",
           currenciesAccepted: "EUR",
           paymentAccepted: "Cash, Bank Transfer",
           openingHoursSpecification: [
@@ -141,13 +141,13 @@ export const JsonLd = () => {
                   areaServed: "Freiburg im Breisgau",
                   serviceType: "Systemische Familienaufstellung",
                 },
-                price: "95.00",
+                price: "110.00",
                 priceCurrency: "EUR",
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: "95.00",
+                  price: "110.00",
                   priceCurrency: "EUR",
-                  unitText: "80 Minuten",
+                  unitText: "90 Minuten",
                 },
                 availability: "https://schema.org/InStock",
               },
@@ -281,7 +281,7 @@ export const JsonLd = () => {
               name: "Übernimmt die Krankenkasse die Kosten?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Nein. Aufstellungsarbeit und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (80 Min.) kostet 95 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
+                text: "Nein. Aufstellungsarbeit und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (90 Min.) kostet 110 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
               },
             },
             {

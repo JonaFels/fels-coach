@@ -87,7 +87,7 @@ const Angebote = () => {
                 </p>
                 <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
                   <span className="text-3xl font-semibold text-foreground">55&nbsp;€</span>
-                  <span className="text-sm text-muted-foreground">/ 80&nbsp;Min.</span>
+                  <span className="text-sm text-muted-foreground">/ 90&nbsp;Min.</span>
                 </div>
               </div>
 
@@ -104,8 +104,8 @@ const Angebote = () => {
                   {t("offerings.coaching.desc")}
                 </p>
                 <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
-                  <span className="text-3xl font-semibold text-foreground">95&nbsp;€</span>
-                  <span className="text-sm text-muted-foreground">/ 80&nbsp;Min.</span>
+                  <span className="text-3xl font-semibold text-foreground">110&nbsp;€</span>
+                  <span className="text-sm text-muted-foreground">/ 90&nbsp;Min.</span>
                 </div>
               </div>
             </div>
