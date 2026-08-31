@@ -8,10 +8,10 @@ declare global {
   }
 }
 
-const MEETERGO_BASE = "https://cal.meetergo.com/jona/kennenlernen";
-const MEETERGO_ERSTGESPRAECH = "https://cal.meetergo.com/jona/kennenlernen";
-const MEETERGO_KENNENLERNEN = "https://cal.meetergo.com/jona/kennenlernen";
-const MEETERGO_COACHING = "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_BASE = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_ERSTGESPRAECH = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_KENNENLERNEN = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_COACHING = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
 const SEMUID_TO_URL: Record<string, string> = {
   "609d5e7a-e208-4715-b073-e99206aebbf7": MEETERGO_KENNENLERNEN,
