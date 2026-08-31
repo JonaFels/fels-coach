@@ -1,23 +1,10 @@
 import { useEffect } from "react";
-import { CalendarCheck, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const MEETERGO_AUFSTELLUNG =
   "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
 
-const steps = [
-  {
-    icon: CalendarCheck,
-    title: "Termin wählen",
-    text: "Nach dem Erstgespräch erhältst du einen persönlichen Link. Wähle dort das passende Format und such dir im Kalender deinen Wunschtermin aus.",
-  },
-  {
-    icon: Mail,
-    title: "Postfach checken",
-    text: "Du erhältst direkt im Anschluss deine Bestätigung mit allen weiteren Infos.",
-  },
-];
 
 const Start = () => {
 
@@ -85,53 +72,6 @@ const Start = () => {
           </div>
         </section>
 
-        {/* 3. Nächste Schritte */}
-        <section className="py-36 md:py-52 bg-muted/30">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-16 md:mb-24">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Was passiert danach?
-              </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto">
-                In zwei einfachen Schritten sind wir startklar.
-              </p>
-            </div>
-
-            <ol className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
-              {steps.map((step, i) => (
-                <li key={step.title}>
-                  <Card className="h-full border-border/60 rounded-lg transition-all duration-300 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1">
-                    <CardContent className="p-8 md:p-10 text-center">
-                      <div className="mx-auto mb-6 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center relative">
-                        <step.icon className="w-6 h-6 text-secondary" aria-hidden="true" />
-                        <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-secondary text-secondary-foreground text-sm font-semibold flex items-center justify-center shadow-[var(--shadow-soft)]">
-                          {i + 1}
-                        </span>
-                      </div>
-                      <h3 className="font-serif text-lg font-semibold text-foreground mb-3">
-                        {step.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {step.text}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </li>
-              ))}
-            </ol>
-
-            <p className="text-center text-sm text-muted-foreground mt-20 md:mt-28">
-              Fragen? Schreib mir jederzeit an{" "}
-              <a
-                href="mailto:jona@fels-coach.de"
-                className="text-secondary underline underline-offset-4 hover:no-underline"
-              >
-                jona@fels-coach.de
-              </a>
-              .
-            </p>
-          </div>
-        </section>
       </main>
 
 
