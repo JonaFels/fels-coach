@@ -39,7 +39,7 @@ export const JsonLd = () => {
           },
           image: "https://fels-coach.de/logo.png",
           logo: "https://fels-coach.de/logo.png",
-          priceRange: "55 €–110 €",
+          priceRange: "110 €",
           currenciesAccepted: "EUR",
           paymentAccepted: "Cash, Bank Transfer",
           openingHoursSpecification: [
@@ -107,28 +107,6 @@ export const JsonLd = () => {
             "@type": "OfferCatalog",
             name: "Aufstellungsangebote",
             itemListElement: [
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  "@id": "https://fels-coach.de/#service-kennenlernen",
-                  name: "Kennenlernen – Systemische Aufstellung",
-                  description:
-                    "Erstes Kennenlernen und Einstieg in die systemische Arbeit. Wir klären Ihr Anliegen und schauen, ob die Chemie stimmt.",
-                  provider: { "@id": "https://fels-coach.de/#service" },
-                  areaServed: "Freiburg im Breisgau",
-                  serviceType: "Systemische Aufstellung",
-                },
-                price: "55.00",
-                priceCurrency: "EUR",
-                priceSpecification: {
-                  "@type": "UnitPriceSpecification",
-                  price: "55.00",
-                  priceCurrency: "EUR",
-                  unitText: "Sitzung",
-                },
-                availability: "https://schema.org/InStock",
-              },
               {
                 "@type": "Offer",
                 itemOffered: {
