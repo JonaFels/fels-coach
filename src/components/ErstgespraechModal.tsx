@@ -8,7 +8,7 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
-const THERAPSY_URL = "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
+const THERAPSY_URL = "https://cal.meetergo.com/jona/kennenlernen";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   useEffect(() => {
@@ -61,7 +61,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
             title="Booking Widget"
             loading="lazy"
             className="block w-full border-0"
-            style={{ height: "600px" }}
+            style={{ height: "750px" }}
             allow="payment"
           />
       </div>

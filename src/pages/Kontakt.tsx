@@ -12,7 +12,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const THERAPSY_URL = "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
+const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen";
 
 const Kontakt = () => {
   const { t } = useLanguage();
@@ -118,12 +118,12 @@ const Kontakt = () => {
               </div>
 
               <iframe
-                src={THERAPSY_URL}
-                title="Booking Widget"
+                src={BOOKING_URL}
+                title="Terminbuchung – Kennenlerngespräch"
                 loading="lazy"
                 className="block w-full border-0"
-                style={{ height: "600px" }}
-                allow="payment"
+                style={{ height: "750px" }}
+                allow="payment; camera; microphone; fullscreen"
               />
             </div>
           </div>
