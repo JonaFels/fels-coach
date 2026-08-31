@@ -118,12 +118,12 @@ const Kontakt = () => {
               </div>
 
               <iframe
-                src={THERAPSY_URL}
-                title="Booking Widget"
+                src={BOOKING_URL}
+                title="Terminbuchung – Kennenlerngespräch"
                 loading="lazy"
                 className="block w-full border-0"
-                style={{ height: "600px" }}
-                allow="payment"
+                style={{ height: "750px" }}
+                allow="payment; camera; microphone; fullscreen"
               />
             </div>
           </div>
