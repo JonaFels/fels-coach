@@ -195,8 +195,8 @@ export const translations: Translations = {
     en: "Pricing & Formats",
   },
   "offerings.preiseIntro": {
-    de: "Jede Sitzung dauert 80 Minuten – das gibt uns genug Zeit für echte Tiefe und nachhaltige Lösungsansätze für deinen Alltag.",
-    en: "Each session lasts 80 minutes – giving us enough time for real depth and sustainable solution approaches for your everyday life.",
+    de: "Jede Sitzung dauert 90 Minuten – das gibt uns genug Zeit für echte Tiefe und nachhaltige Lösungsansätze für deinen Alltag.",
+    en: "Each session lasts 90 minutes – giving us enough time for real depth and sustainable solution approaches for your everyday life.",
   },
   "offerings.kennenlernen.title": {
     de: "Kennenlernen-Sitzung",
@@ -440,8 +440,8 @@ export const translations: Translations = {
     en: "Discover impulses now",
   },
   "family.intro.text": {
-    de: "Familienaufstellung – auch Familienstellen genannt – ist eine kraftvolle Methode der systemischen Aufstellungsarbeit, um unbewusste Dynamiken und Verstrickungen aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Herkunftsfamilie in uns, die uns im aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. In meiner Praxis in der Karlstraße in Freiburg biete ich diese Arbeit exklusiv als Einzelsitzung im geschützten 1:1-Setting an. Das eignet sich besonders, wenn du dein Thema in einem vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Eine Sitzung dauert in der Regel 80 Minuten.",
-    en: "Family constellation – also called family constellations – is a powerful method of systemic constellation to uncover unconscious dynamics and entanglements. Often we carry burdens or patterns from our family of origin that block us in our current life without being aware of it. In my practice on Karlstraße in Freiburg, I offer this work exclusively as an individual session in a protected 1:1 setting. This is especially suitable if you want to work on your topic in a confidential framework without having to open up in front of a group. A session usually lasts 80 minutes.",
+    de: "Familienaufstellung – auch Familienstellen genannt – ist eine kraftvolle Methode der systemischen Aufstellungsarbeit, um unbewusste Dynamiken und Verstrickungen aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Herkunftsfamilie in uns, die uns im aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. In meiner Praxis in der Karlstraße in Freiburg biete ich diese Arbeit exklusiv als Einzelsitzung im geschützten 1:1-Setting an. Das eignet sich besonders, wenn du dein Thema in einem vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Eine Sitzung dauert in der Regel 90 Minuten.",
+    en: "Family constellation – also called family constellations – is a powerful method of systemic constellation to uncover unconscious dynamics and entanglements. Often we carry burdens or patterns from our family of origin that block us in our current life without being aware of it. In my practice on Karlstraße in Freiburg, I offer this work exclusively as an individual session in a protected 1:1 setting. This is especially suitable if you want to work on your topic in a confidential framework without having to open up in front of a group. A session usually lasts 90 minutes.",
   },
   "family.subtitle": {
     de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare im 1:1 Raum sichtbar.",
@@ -484,8 +484,8 @@ export const translations: Translations = {
     en: "How long does a session last?",
   },
   "family.faq.a3": {
-    de: "Eine Sitzung mit Einzelaufstellung dauert 80 Minuten. Wir nehmen uns die Zeit, die dein Thema braucht, ohne unter Druck zu geraten.",
-    en: "A session with individual constellation lasts 80 minutes. We take the time your topic needs, without pressure.",
+    de: "Eine Sitzung mit Einzelaufstellung dauert 90 Minuten. Wir nehmen uns die Zeit, die dein Thema braucht, ohne unter Druck zu geraten.",
+    en: "A session with individual constellation lasts 90 minutes. We take the time your topic needs, without pressure.",
   },
   "family.faq.q4": {
     de: "Ist das eine Therapie?",
@@ -1238,8 +1238,8 @@ export const translations: Translations = {
     en: "First the free introductory call, then your personal booking link – that's how we start together, in-person in Freiburg or online.",
   },
   "offerings.perUnit": {
-    de: "/ 80 Min.",
-    en: "/ 80 min.",
+    de: "/ 90 Min.",
+    en: "/ 90 min.",
   },
   "offerings.location": {
     de: "Präsenz & Online",
