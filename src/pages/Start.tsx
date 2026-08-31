@@ -144,23 +144,6 @@ const Start = () => {
         </section>
       </main>
 
-      <Dialog
-        open={!!selectedUrl}
-        onOpenChange={(open) => !open && setSelectedUrl(null)}
-      >
-        <DialogContent className="max-w-4xl w-[95vw] p-0 overflow-hidden gap-0">
-          {selectedUrl && (
-            <div className="w-full h-[60vh] md:h-[65vh]">
-              <iframe
-                src={selectedUrl}
-                title="meetergo Kalender"
-                className="w-full h-full border-0"
-                allow="fullscreen"
-              />
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
 
       <footer className="py-8 border-t border-border/40">
         <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
