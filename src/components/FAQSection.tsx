@@ -48,7 +48,7 @@ const faqData = {
     },
     {
       question: "Does health insurance cover the costs?",
-      answer: "No. Aufstellungsarbeit and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (90 min.) is €70. In return, you're free to choose your own path – with no diagnosis and no medical record.",
+      answer: "No. Aufstellungsarbeit and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (90 min.) is €110. In return, you're free to choose your own path – with no diagnosis and no medical record.",
     },
     {
       question: "How can I get started and is a preliminary consultation possible?",
