@@ -8,14 +8,14 @@ declare global {
   }
 }
 
-const THERAPSY_BASE = "https://bookings.therapsy.at/?id=3f27492a3d11dc68041c958654a5b7e6";
-const THERAPSY_ERSTGESPRAECH = "https://bookings.therapsy.at/?type=c28ea3d9-ea19-45f5-a025-6f5eff92b199&id=3f27492a3d11dc68041c958654a5b7e6";
-const THERAPSY_KENNENLERNEN = "https://bookings.therapsy.at/?type=596fe883-643f-4ce2-aad7-81791c631b5d&id=3f27492a3d11dc68041c958654a5b7e6";
-const THERAPSY_COACHING = "https://bookings.therapsy.at/?type=4a663327-f5e0-4843-be57-24ddcb60ae9f&id=3f27492a3d11dc68041c958654a5b7e6";
+const MEETERGO_BASE = "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_ERSTGESPRAECH = "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_KENNENLERNEN = "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_COACHING = "https://cal.meetergo.com/jona/kennenlernen";
 
 const SEMUID_TO_URL: Record<string, string> = {
-  "609d5e7a-e208-4715-b073-e99206aebbf7": THERAPSY_KENNENLERNEN,
-  "55df32ef-b5d1-468e-a4ba-f7f892398327": THERAPSY_COACHING,
+  "609d5e7a-e208-4715-b073-e99206aebbf7": MEETERGO_KENNENLERNEN,
+  "55df32ef-b5d1-468e-a4ba-f7f892398327": MEETERGO_COACHING,
 };
 
 interface OrbnetDialogProps {
@@ -25,7 +25,7 @@ interface OrbnetDialogProps {
 }
 
 const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
-  const url = SEMUID_TO_URL[semuid] ?? THERAPSY_ERSTGESPRAECH;
+  const url = SEMUID_TO_URL[semuid] ?? MEETERGO_ERSTGESPRAECH;
   useEffect(() => {
     if (!open) return;
     window.loadCustomCssOverrides?.();
@@ -134,7 +134,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url={THERAPSY_BASE}
+        url={MEETERGO_BASE}
         open={open}
         onClose={() => setOpen(false)}
       />

@@ -28,8 +28,6 @@ import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
 import Start from "./pages/Start";
 import ErstgespraechBeta from "./pages/ErstgespraechBeta";
-import BookingLogin from "./pages/booking/Login";
-import BookingDashboard from "./pages/booking/Dashboard";
 import { ProtectedRoute } from "./components/admin/ProtectedRoute";
 
 // Separate component for tracking (needs Router context)
@@ -66,8 +64,6 @@ const App = () => (
               <Route path="/start" element={<Start />} />
               <Route path="/erstgespraech-beta" element={<ErstgespraechBeta />} />
               <Route path="/admin/login" element={<AdminLogin />} />
-              <Route path="/buchungen/login" element={<BookingLogin />} />
-              <Route path="/buchungen" element={<BookingDashboard />} />
 
               <Route
                 path="/admin"
