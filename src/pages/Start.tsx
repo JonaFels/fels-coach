@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
-import { CalendarCheck, Mail, ArrowRight } from "lucide-react";
+import { useEffect } from "react";
+import { CalendarCheck, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-} from "@/components/ui/dialog";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const MEETERGO_KENNENLERNEN =
-  "https://cal.meetergo.com/jona/kennenlernen";
-const MEETERGO_COACHING =
-  "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_AUFSTELLUNG =
+  "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
 
 const steps = [
   {
