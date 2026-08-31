@@ -7,10 +7,10 @@ import {
 } from "@/components/ui/dialog";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const THERAPSY_KENNENLERNEN =
-  "https://bookings.therapsy.at/?type=596fe883-643f-4ce2-aad7-81791c631b5d&id=3f27492a3d11dc68041c958654a5b7e6";
-const THERAPSY_COACHING =
-  "https://bookings.therapsy.at/?type=4a663327-f5e0-4843-be57-24ddcb60ae9f&id=3f27492a3d11dc68041c958654a5b7e6";
+const MEETERGO_KENNENLERNEN =
+  "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_COACHING =
+  "https://cal.meetergo.com/jona/kennenlernen";
 
 const steps = [
   {
@@ -85,7 +85,7 @@ const Start = () => {
             <div className="grid gap-6 md:grid-cols-2">
               <button
                 type="button"
-                onClick={() => setSelectedUrl(THERAPSY_KENNENLERNEN)}
+                onClick={() => setSelectedUrl(MEETERGO_KENNENLERNEN)}
                 className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-lg"
               >
                 <Card className="h-full overflow-hidden border-border/60 rounded-lg shadow-[var(--shadow-soft)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-elevated)]">
@@ -123,7 +123,7 @@ const Start = () => {
 
               <button
                 type="button"
-                onClick={() => setSelectedUrl(THERAPSY_COACHING)}
+                onClick={() => setSelectedUrl(MEETERGO_COACHING)}
                 className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-lg"
               >
                 <Card className="h-full overflow-hidden border-secondary/40 rounded-lg shadow-[var(--shadow-soft)] bg-secondary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-elevated)]">
@@ -220,7 +220,7 @@ const Start = () => {
             <div className="w-full h-[60vh] md:h-[65vh]">
               <iframe
                 src={selectedUrl}
-                title="Therapsy Kalender"
+                title="meetergo Kalender"
                 className="w-full h-full border-0"
                 allow="fullscreen"
               />

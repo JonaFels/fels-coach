@@ -8,7 +8,7 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
-const THERAPSY_URL = "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_URL = "https://cal.meetergo.com/jona/kennenlernen";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   useEffect(() => {
@@ -55,9 +55,9 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
             </p>
           </div>
 
-          {/* Therapsy Booking Embed – nahtlos in der Karte */}
+          {/* meetergo Booking Embed – nahtlos in der Karte */}
           <iframe
-            src={THERAPSY_URL}
+            src={MEETERGO_URL}
             title="Booking Widget"
             loading="lazy"
             className="block w-full border-0"
