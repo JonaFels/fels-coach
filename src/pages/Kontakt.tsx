@@ -1,30 +1,17 @@
-import { useLayoutEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { MessageCircle, Mail } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { useLayoutEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { ContactForm } from "@/components/ContactForm";
-import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 
 const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
 const Kontakt = () => {
-  const { t } = useLanguage();
   const { hash } = useLocation();
-  const navigate = useNavigate();
-  const [modalOpen, setModalOpen] = useState(false);
 
-  // Legacy: redirect #anfahrt to /angebote#anfahrt
   useLayoutEffect(() => {
     if (!hash) return;
-    if (hash === "#erstgespraech") {
-      setModalOpen(true);
-      return;
-    }
     const id = hash.replace("#", "");
     const scrollToEl = () => {
       const el = document.getElementById(id);
@@ -35,7 +22,7 @@ const Kontakt = () => {
       const timer = window.setTimeout(scrollToEl, 150);
       return () => window.clearTimeout(timer);
     }
-  }, [hash, navigate]);
+  }, [hash]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -43,62 +30,18 @@ const Kontakt = () => {
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* 1. Schriftliche Kontaktmöglichkeiten */}
-        <section className="pt-10 pb-16 md:pt-16 md:pb-24 bg-background">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h1 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-8 text-center">
-              {t("contact.headline")}
+        {/* 1. Hero – Buchung im Fokus */}
+        <section id="erstgespraech" className="pt-14 pb-20 md:pt-24 md:pb-28 bg-background scroll-mt-24">
+          <div className="container mx-auto px-5 max-w-3xl">
+            <h1 className="font-serif text-[clamp(1.75rem,5vw,2.75rem)] leading-tight font-medium text-foreground text-center text-balance">
+              Lass uns kurz sprechen – unverbindlich und kostenfrei.
             </h1>
-            <div className="grid gap-8 md:grid-cols-2">
-              <ContactForm />
-              <Card className="card-base border-border/60">
-                <CardContent className="pt-6">
-                  <h2 className="font-serif text-lg font-medium text-foreground mb-4">
-                    {t("contact.directTitle")}
-                  </h2>
-                  <div className="flex flex-col gap-4">
-                    <a
-                      href="https://wa.me/4917667608617"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
-                      aria-label="WhatsApp öffnen"
-                    >
-                      <div className="p-2.5 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <MessageCircle className="h-5 w-5 text-primary" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <span className="font-medium text-foreground block">{t("contact.telegramLabel")}</span>
-                        <span className="text-sm text-muted-foreground">+49 176 67608617</span>
-                      </div>
-                    </a>
-                    <a
-                      href="mailto:jona@fels-coach.de"
-                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
-                      aria-label="E-Mail an jona@fels-coach.de schreiben"
-                    >
-                      <div className="p-2.5 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <span className="font-medium text-foreground block">{t("contact.emailLabel")}</span>
-                        <span className="text-sm text-muted-foreground break-all">jona@fels-coach.de</span>
-                      </div>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+            <p className="mt-6 text-center text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              Wähle direkt deinen Termin für ein 20-minütiges Orientierungsgespräch. Wir klären dein
+              Anliegen in Ruhe und schauen, ob die Chemie für eine Zusammenarbeit stimmt.
+            </p>
 
-        {/* 2. Erstgespräch – Inline-Kalender */}
-        <section id="erstgespraech" className="py-20 md:py-28 bg-muted/30">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-6 text-center">
-              {t("contact.calendarHeadline")}
-            </h2>
-            <div className="card-base border-border overflow-hidden">
+            <div className="mt-10 md:mt-14 card-base border-border overflow-hidden">
               <iframe
                 src={BOOKING_URL}
                 title="Terminbuchung – Kennenlerngespräch"
@@ -111,12 +54,28 @@ const Kontakt = () => {
           </div>
         </section>
 
-
-
+        {/* 2. Direkter Kontakt */}
+        <section className="py-20 md:py-28 border-t border-border/60 bg-muted/20">
+          <div className="container mx-auto px-5 max-w-2xl text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-medium text-foreground">
+              Direkter Kontakt
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              Für Presseanfragen, Kooperationen oder sonstige Fragen abseits einer Terminbuchung
+              erreichst du mich per E-Mail:
+            </p>
+            <a
+              href="mailto:jona@fels-coach.de"
+              className="mt-8 inline-block font-serif text-[clamp(1.25rem,4.5vw,2rem)] text-foreground hover:text-primary transition-colors break-all no-underline-effect"
+            >
+              jona@fels-coach.de
+            </a>
+          </div>
+        </section>
       </main>
+
       <Footer />
       <CookieBanner />
-      <ErstgespraechModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };

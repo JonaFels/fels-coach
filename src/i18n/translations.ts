@@ -1149,8 +1149,8 @@ export const translations: Translations = {
 
   // Kontakt Page – Anfahrt
   "contact.directions.title": {
-    de: "Anfahrt",
-    en: "Directions",
+    de: "Anfahrt & Praxisraum",
+    en: "Directions & Practice Room",
   },
   "contact.directions.intro": {
     de: "Mein Praxisraum befindet sich in der Karlstraße 51 im Stadtteil Herdern/Neuburg.",

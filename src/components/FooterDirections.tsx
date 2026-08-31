@@ -27,73 +27,74 @@ export const FooterDirections = () => {
           {t("contact.directions.intro")}
         </p>
 
-        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
-          {/* Karte */}
-          <div className="rounded-lg overflow-hidden ring-1 ring-border/40 shadow-[var(--shadow-soft)] bg-muted/30">
-            <iframe
-              title={`Google Maps – ${MAPS_QUERY}`}
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=15&output=embed`}
-              width="100%"
-              height="300"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              style={{ border: 0, display: "block" }}
-            />
+        <p className="mt-4 flex items-center justify-center gap-2 text-sm text-foreground">
+          <MapPin className="h-4 w-4 text-primary shrink-0" aria-hidden="true" />
+          <span>{t("contact.directions.address")}</span>
+        </p>
+
+        {/* Details – 3 Spalten */}
+        <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="rounded-lg bg-muted/40 ring-1 ring-border/30 p-6">
+            <h3 className="flex items-center gap-2 text-sm font-medium text-foreground">
+              <TramFront className="h-4 w-4 text-primary" aria-hidden="true" />
+              {t("contact.directions.tram")}
+            </h3>
+            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
+              <li>{t("contact.directions.tramLine")}</li>
+              <li>{t("contact.directions.tramStop")}</li>
+              <li>{t("contact.directions.tramWalk")}</li>
+            </ul>
           </div>
 
-          {/* Wegbeschreibung */}
-          <div className="space-y-5">
-            <p className="flex items-start gap-3 text-sm text-foreground">
-              <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" aria-hidden="true" />
-              <span>{t("contact.directions.address")}</span>
-            </p>
+          <div className="rounded-lg bg-muted/40 ring-1 ring-border/30 p-6">
+            <h3 className="flex items-center gap-2 text-sm font-medium text-foreground">
+              <Car className="h-4 w-4 text-primary" aria-hidden="true" />
+              {t("contact.directions.car")}
+            </h3>
+            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
+              <li>{t("contact.directions.carParking")}</li>
+              <li>{t("contact.directions.carTip")}</li>
+            </ul>
+          </div>
 
-            <div className="rounded-lg bg-muted/40 ring-1 ring-border/30 p-5">
-              <h3 className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <TramFront className="h-4 w-4 text-primary" aria-hidden="true" />
-                {t("contact.directions.tram")}
-              </h3>
-              <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                <li>{t("contact.directions.tramLine")}</li>
-                <li>{t("contact.directions.tramStop")}</li>
-                <li>{t("contact.directions.tramWalk")}</li>
-              </ul>
-            </div>
-
-            <div className="rounded-lg bg-muted/40 ring-1 ring-border/30 p-5">
-              <h3 className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <Car className="h-4 w-4 text-primary" aria-hidden="true" />
-                {t("contact.directions.car")}
-              </h3>
-              <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                <li>{t("contact.directions.carParking")}</li>
-                <li>{t("contact.directions.carTip")}</li>
-              </ul>
-            </div>
-
-            <div className="rounded-lg bg-muted/40 ring-1 ring-border/30 p-5">
-              <h3 className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <DoorOpen className="h-4 w-4 text-primary" aria-hidden="true" />
-                {t("contact.directions.onSite")}
-              </h3>
-              <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                <li>{t("contact.directions.onSite1")}</li>
-                <li>{t("contact.directions.onSite2")}</li>
-                <li>{t("contact.directions.onSite3")}</li>
-              </ul>
-            </div>
-
-            <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(MAPS_QUERY)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:underline no-underline-effect"
-            >
-              <MapPin className="h-4 w-4" aria-hidden="true" />
-              Route in Google Maps öffnen
-            </a>
+          <div className="rounded-lg bg-muted/40 ring-1 ring-border/30 p-6 sm:col-span-2 lg:col-span-1">
+            <h3 className="flex items-center gap-2 text-sm font-medium text-foreground">
+              <DoorOpen className="h-4 w-4 text-primary" aria-hidden="true" />
+              {t("contact.directions.onSite")}
+            </h3>
+            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
+              <li>{t("contact.directions.onSite1")}</li>
+              <li>{t("contact.directions.onSite2")}</li>
+              <li>{t("contact.directions.onSite3")}</li>
+            </ul>
           </div>
         </div>
+
+        {/* Karte */}
+        <div className="mt-12 md:mt-16 rounded-lg overflow-hidden ring-1 ring-border/40 shadow-[var(--shadow-soft)] bg-muted/30">
+          <iframe
+            title={`Google Maps – ${MAPS_QUERY}`}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=15&output=embed`}
+            width="100%"
+            height="340"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            style={{ border: 0, display: "block" }}
+          />
+        </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(MAPS_QUERY)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:underline no-underline-effect"
+          >
+            <MapPin className="h-4 w-4" aria-hidden="true" />
+            Route in Google Maps öffnen
+          </a>
+        </div>
+
       </div>
     </section>
   );
