@@ -72,7 +72,7 @@ export const FooterDirections = () => {
         </div>
 
         {/* Karte */}
-        <div className="mt-12 md:mt-16 rounded-lg overflow-hidden ring-1 ring-border/40 shadow-[var(--shadow-soft)] bg-muted/30">
+        <div className="mt-16 md:mt-24 rounded-lg overflow-hidden ring-1 ring-border/40 shadow-[var(--shadow-soft)] bg-muted/30">
           <iframe
             title={`Google Maps – ${MAPS_QUERY}`}
             src={`https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=15&output=embed`}
@@ -84,7 +84,8 @@ export const FooterDirections = () => {
           />
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-10 md:mt-12 text-center">
+
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(MAPS_QUERY)}`}
             target="_blank"
