@@ -7,17 +7,13 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useCMS } from "@/contexts/CMSContext";
 import { ContactForm } from "@/components/ContactForm";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
 const Kontakt = () => {
   const { t } = useLanguage();
-  const { getImage } = useCMS();
-  const portrait = getImage("about.image", profilBild);
   const { hash } = useLocation();
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
