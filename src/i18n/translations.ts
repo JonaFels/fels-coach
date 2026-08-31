@@ -318,9 +318,10 @@ export const translations: Translations = {
     en: "Regular appointments take place Saturdays from 2:00 pm to 8:00 pm. Other times can be arranged by agreement in the intro call.",
   },
   "offerings.ctaButton": {
-    de: "Kostenloses Erstgespräch vereinbaren",
-    en: "Schedule a free intro call",
+    de: "Kennenlerngespräch",
+    en: "Free intro call",
   },
+
 
   // Cookie Banner
   "cookie.title": {
