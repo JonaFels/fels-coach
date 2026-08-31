@@ -34,7 +34,7 @@ interface AppointmentRow {
 
 const EVENT_TYPES = [
   "Erstgespräch (telefonisch)",
-  "Kennenlernen-Sitzung",
+  
   "Aufstellung mit Einzelaufstellung",
 ];
 
