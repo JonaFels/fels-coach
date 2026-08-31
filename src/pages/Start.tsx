@@ -66,92 +66,32 @@ const Start = () => {
           </div>
         </section>
 
-        {/* 2. Buchungsoptionen */}
+        {/* 2. Buchung – Systemische 1:1 Aufstellung */}
         <section className="pb-32 md:pb-44">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-16 md:mb-24">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="text-center mb-10 md:mb-14">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Wähle deine erste Aufstellungsarbeit-Session
+                Systemische 1:1 Aufstellung
               </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                80 Minuten fokussierte Arbeit an dem, was gerade dran ist –
+                systemisch, lösungsorientiert und mit konkreten nächsten
+                Schritten. Wähle unten direkt deinen Wunschtermin.
+              </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <button
-                type="button"
-                onClick={() => setSelectedUrl(MEETERGO_KENNENLERNEN)}
-                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-lg"
-              >
-                <Card className="h-full overflow-hidden border-border/60 rounded-lg shadow-[var(--shadow-soft)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-elevated)]">
-                  <CardContent className="p-6 md:p-7 flex flex-col h-full">
-                    <div className="flex items-baseline justify-between mb-2 gap-3">
-                      <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                        Kennenlernen-Sitzung
-                      </h3>
-                      <span className="text-sm font-medium text-secondary whitespace-nowrap">
-                        Einstieg
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                      Dein Einstieg zum reduzierten Preis: Eine vollwertige
-                      Sitzung, in der wir dein Anliegen systemisch einordnen und
-                      erste Lösungsansätze erarbeiten.
-                    </p>
-                    <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/50 pt-4">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-3xl font-semibold text-foreground">
-                          55&nbsp;€
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          / 80&nbsp;Min.
-                        </span>
-                      </div>
-                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary">
-                        Termin buchen
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setSelectedUrl(MEETERGO_COACHING)}
-                className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-lg"
-              >
-                <Card className="h-full overflow-hidden border-secondary/40 rounded-lg shadow-[var(--shadow-soft)] bg-secondary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-elevated)]">
-                  <CardContent className="p-6 md:p-7 flex flex-col h-full">
-                    <div className="flex items-baseline justify-between mb-2 gap-3">
-                      <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground">
-                        Aufstellung mit Einzelaufstellung
-                      </h3>
-                      <span className="text-sm font-medium text-secondary whitespace-nowrap">
-                        Regulär
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                      80 Minuten fokussierte Arbeit an dem, was gerade dran ist –
-                      systemisch, lösungsorientiert und mit konkreten nächsten
-                      Schritten.
-                    </p>
-                    <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/50 pt-4">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-3xl font-semibold text-foreground">
-                          95&nbsp;€
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          / 80&nbsp;Min.
-                        </span>
-                      </div>
-                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary">
-                        Termin buchen
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </button>
-            </div>
+            <Card className="overflow-hidden border-border/60 rounded-lg shadow-[var(--shadow-soft)]">
+              <CardContent className="p-0">
+                <iframe
+                  src={MEETERGO_AUFSTELLUNG}
+                  title="Terminbuchung – Systemische 1:1 Aufstellung"
+                  loading="lazy"
+                  className="block w-full border-0"
+                  style={{ height: "750px" }}
+                  allow="payment; camera; microphone; fullscreen"
+                />
+              </CardContent>
+            </Card>
           </div>
         </section>
 
