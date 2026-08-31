@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { ContactForm } from "@/components/ContactForm";
 
 const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
@@ -56,22 +57,29 @@ const Kontakt = () => {
 
         {/* 2. Direkter Kontakt */}
         <section className="py-20 md:py-28 border-t border-border/60 bg-muted/20">
-          <div className="container mx-auto px-5 max-w-2xl text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-medium text-foreground">
-              Direkter Kontakt
-            </h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              Für Presseanfragen, Kooperationen oder sonstige Fragen abseits einer Terminbuchung
-              erreichst du mich per E-Mail:
-            </p>
-            <a
-              href="mailto:jona@fels-coach.de"
-              className="mt-8 inline-block font-serif text-[clamp(1.25rem,4.5vw,2rem)] text-foreground hover:text-primary transition-colors break-all no-underline-effect"
-            >
-              jona@fels-coach.de
-            </a>
+          <div className="container mx-auto px-5 max-w-2xl">
+            <div className="text-center">
+              <h2 className="font-serif text-2xl md:text-3xl font-medium text-foreground">
+                Direkter Kontakt
+              </h2>
+              <p className="mt-5 text-muted-foreground leading-relaxed">
+                Schreib mir gerne direkt – per E-Mail oder über das Formular. Ich melde mich
+                zeitnah bei dir zurück.
+              </p>
+              <a
+                href="mailto:jona@fels-coach.de"
+                className="mt-8 inline-block font-serif text-[clamp(1.25rem,4.5vw,2rem)] text-foreground hover:text-primary transition-colors break-all no-underline-effect"
+              >
+                jona@fels-coach.de
+              </a>
+            </div>
+
+            <div className="mt-12 md:mt-16">
+              <ContactForm />
+            </div>
           </div>
         </section>
+
       </main>
 
       <Footer />
