@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Instagram, Facebook, Linkedin, Youtube, Users } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
+import { FooterDirections } from "@/components/FooterDirections";
 
 
 export const Footer = () => {
@@ -9,7 +10,9 @@ export const Footer = () => {
 
   return (
     <footer className="border-t border-border/60 bg-primary/[0.03] mt-12 md:mt-16" style={{ contentVisibility: "auto" }}>
+      <FooterDirections />
       <div className="container mx-auto px-4 max-w-5xl py-8 md:py-10">
+
 
         {/* Middle: Nav links */}
         <nav
