@@ -12,7 +12,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ErstgespraechModal } from "@/components/ErstgespraechModal";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen";
+const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
 const Kontakt = () => {
   const { t } = useLanguage();

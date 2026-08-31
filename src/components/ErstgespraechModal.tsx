@@ -8,7 +8,7 @@ interface ErstgespraechModalProps {
   onClose: () => void;
 }
 
-const MEETERGO_URL = "https://cal.meetergo.com/jona/kennenlernen";
+const MEETERGO_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   useEffect(() => {
