@@ -20,7 +20,6 @@ const steps = [
 ];
 
 const Start = () => {
-  const [selectedUrl, setSelectedUrl] = useState<string | null>(null);
 
   useEffect(() => {
     const prev = document.title;
