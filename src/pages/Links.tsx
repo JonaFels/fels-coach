@@ -46,7 +46,7 @@ const Links = () => {
             </span>
             <span className="flex-1 text-left leading-tight">
               <span className="block text-[14.5px] font-semibold">1:1 Aufstellungsarbeit in Freiburg</span>
-              <span className="block text-[12px] text-muted-foreground">Systemische Aufstellung & Familienaufstellung</span>
+              <span className="block text-[12px] text-muted-foreground">Systemische Aufstellungen</span>
             </span>
           </a>
 

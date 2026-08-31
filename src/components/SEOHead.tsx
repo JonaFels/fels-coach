@@ -106,8 +106,8 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     updateMeta("twitter:title", pageTitle);
     updateMeta("twitter:description", pageDescription);
     updateMeta("twitter:image", pageImage);
-    updateMeta("og:image:alt", "Jona Fels – Systemische Aufstellung & Familienaufstellung in Freiburg", true);
-    updateMeta("twitter:image:alt", "Jona Fels – Systemische Aufstellung & Familienaufstellung in Freiburg");
+    updateMeta("og:image:alt", "Jona Fels – Systemische Aufstellungen in Freiburg", true);
+    updateMeta("twitter:image:alt", "Jona Fels – Systemische Aufstellungen in Freiburg");
 
     // Update canonical link
     let canonical = document.querySelector('link[rel="canonical"]');

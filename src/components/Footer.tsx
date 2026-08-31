@@ -87,7 +87,7 @@ export const Footer = () => {
 
         <div className="border-t border-border/40 pt-4">
           <p className="text-center text-xs text-muted-foreground tracking-wide">
-            © {currentYear} Jona Fels – Systemische Aufstellung, Freiburg. {t("footer.rights")}
+            © {currentYear} Jona Fels – Systemische Aufstellungen, Freiburg. {t("footer.rights")}
           </p>
         </div>
 
