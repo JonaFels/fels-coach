@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const SITE_URL = 'https://fels-coach.de';
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.webp`;
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
 // Alle Routen mit SEO-Meta-Daten
 const routes = [
