@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { ContactForm } from "@/components/ContactForm";
 
 const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
 
