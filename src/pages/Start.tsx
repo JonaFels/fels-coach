@@ -69,16 +69,6 @@ const Start = () => {
         {/* 2. Buchung – Systemische 1:1 Aufstellung */}
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center mb-10 md:mb-14">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Systemische 1:1 Aufstellung
-              </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto">
-                90 Minuten fokussierte Arbeit an dem, was gerade dran ist –
-                systemisch, lösungsorientiert und mit konkreten nächsten
-                Schritten. Wähle unten direkt deinen Wunschtermin.
-              </p>
-            </div>
 
             <Card className="overflow-hidden border-border/60 rounded-lg shadow-[var(--shadow-soft)]">
               <CardContent className="p-0">
