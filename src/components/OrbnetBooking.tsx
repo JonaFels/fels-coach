@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Calendar, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 declare global {
   interface Window {
@@ -8,15 +9,12 @@ declare global {
   }
 }
 
-const MEETERGO_BASE = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
-const MEETERGO_ERSTGESPRAECH = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
-const MEETERGO_KENNENLERNEN = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
-const MEETERGO_COACHING = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_AUFSTELLUNG = "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
+const MEETERGO_ORIENTIERUNG_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const MEETERGO_ORIENTIERUNG_EN = "https://cal.meetergo.com/jona/discovery-call";
 
-const SEMUID_TO_URL: Record<string, string> = {
-  "609d5e7a-e208-4715-b073-e99206aebbf7": MEETERGO_KENNENLERNEN,
-  "55df32ef-b5d1-468e-a4ba-f7f892398327": MEETERGO_COACHING,
-};
+const getOrientationUrl = (language: string) =>
+  language === "en" ? MEETERGO_ORIENTIERUNG_EN : MEETERGO_ORIENTIERUNG_DE;
 
 interface OrbnetDialogProps {
   semuid: string;
@@ -24,8 +22,14 @@ interface OrbnetDialogProps {
   onClose: () => void;
 }
 
+const SEMUID_TO_URL: Record<string, (language: string) => string> = {
+  "609d5e7a-e208-4715-b073-e99206aebbf7": getOrientationUrl,
+  "55df32ef-b5d1-468e-a4ba-f7f892398327": () => MEETERGO_AUFSTELLUNG,
+};
+
 const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
-  const url = SEMUID_TO_URL[semuid] ?? MEETERGO_ERSTGESPRAECH;
+  const { language } = useLanguage();
+  const url = SEMUID_TO_URL[semuid]?.(language) ?? getOrientationUrl(language);
   useEffect(() => {
     if (!open) return;
     window.loadCustomCssOverrides?.();
@@ -119,6 +123,7 @@ const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => 
 // Global FAB button
 export const OrbnetFAB = () => {
   const [open, setOpen] = useState(false);
+  const { language } = useLanguage();
 
   return (
     <>
@@ -134,7 +139,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url={MEETERGO_BASE}
+        url={getOrientationUrl(language)}
         open={open}
         onClose={() => setOpen(false)}
       />

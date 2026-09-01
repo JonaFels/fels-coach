@@ -5,11 +5,15 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { ContactForm } from "@/components/ContactForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const BOOKING_URL_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const BOOKING_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 const Kontakt = () => {
   const { hash } = useLocation();
+  const { language } = useLanguage();
+  const bookingUrl = language === "en" ? BOOKING_URL_EN : BOOKING_URL_DE;
 
   useLayoutEffect(() => {
     if (!hash) return;
@@ -44,7 +48,7 @@ const Kontakt = () => {
 
             <div className="mt-10 md:mt-14 card-base border-border overflow-hidden">
               <iframe
-                src={BOOKING_URL}
+                src={bookingUrl}
                 title="Terminbuchung – Orientierungsgespräch"
                 loading="lazy"
                 className="block w-full border-0"

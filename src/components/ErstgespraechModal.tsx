@@ -2,15 +2,20 @@ import { useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ErstgespraechModalProps {
   open: boolean;
   onClose: () => void;
 }
 
-const MEETERGO_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_URL_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const MEETERGO_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
+  const { language } = useLanguage();
+  const meetergoUrl = language === "en" ? MEETERGO_URL_EN : MEETERGO_URL_DE;
+
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
@@ -57,7 +62,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
           {/* meetergo Booking Embed – nahtlos in der Karte */}
           <iframe
-            src={MEETERGO_URL}
+            src={meetergoUrl}
             title="Booking Widget"
             loading="lazy"
             className="block w-full border-0"
