@@ -1,9 +1,7 @@
 import { useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { BookingModeTabs } from "@/components/BookingModeTabs";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-const MEETERGO_AUFSTELLUNG =
-  "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
 
 
 const Start = () => {
