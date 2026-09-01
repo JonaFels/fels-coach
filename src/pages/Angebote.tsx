@@ -155,25 +155,6 @@ const Angebote = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-36 md:py-44">
-          <div className="container mx-auto px-4 text-center max-w-lg">
-            <Button
-              size="lg"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] max-w-full whitespace-normal text-center"
-              asChild
-            >
-
-              <a
-                href="/kontakt"
-                onClick={() => trackCTAClick("ablauf_honorar_cta", "angebote_page", "link")}
-              >
-                <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                {t("offerings.ctaButton")}
-              </a>
-            </Button>
-          </div>
-        </section>
       </main>
 
       <Footer />
