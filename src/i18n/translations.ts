@@ -207,8 +207,8 @@ export const translations: Translations = {
     en: "A full first session where we place your concern in a systemic context and develop initial solution approaches.",
   },
   "offerings.coaching.title": {
-    de: "Aufstellung mit Einzelaufstellung",
-    en: "Constellation Work with Individual Constellation",
+    de: "Systemische 1:1 Aufstellung",
+    en: "Systemic 1:1 Constellation",
   },
   "offerings.coaching.desc": {
     de: "Fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten.",
