@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BookingModeTabs } from "@/components/BookingModeTabs";
+import { BookingSections } from "@/components/BookingSections";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
@@ -54,23 +54,27 @@ const Start = () => {
         {/* 2. Buchung – Systemische 1:1 Aufstellung */}
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
-            <BookingModeTabs
-              copy={{
-                onsiteLabel: "Vor Ort in Freiburg",
-                onlineLabel: "Online per Video",
-                onsiteHint:
-                  "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
-                onlineHint:
-                  "Videocall von überall · 90 Minuten · 110 €",
-                onsiteUrl:
-                  "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
-                onlineUrl:
-                  "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
-                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung",
-              }}
+            <BookingSections
+              options={[
+                {
+                  kind: "onsite",
+                  label: "Vor Ort in Freiburg",
+                  hint: "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
+                  url: "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
+                  iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung vor Ort",
+                },
+                {
+                  kind: "online",
+                  label: "Online per Video",
+                  hint: "Videocall von überall · 90 Minuten · 110 €",
+                  url: "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
+                  iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung online",
+                },
+              ]}
             />
           </div>
         </section>
+
 
 
       </main>
