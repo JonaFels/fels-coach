@@ -314,7 +314,7 @@ export const translations: Translations = {
     en: "In person at the practice (Karlstraße 51, 79104 Freiburg im Breisgau) or flexibly online via video.",
   },
   "offerings.rahmen.times": {
-    de: "Reguläre Termine finden samstags von 14:00 bis 20:00 Uhr statt. Weitere Zeiten sind nach Absprache im Erstgespräch möglich.",
+    de: "Reguläre Termine finden samstags von 14:00 bis 20:00 Uhr statt. Weitere Zeiten sind nach Absprache im Orientierungsgespräch möglich.",
     en: "Regular appointments take place Saturdays from 2:00 pm to 8:00 pm. Other times can be arranged by agreement in the discovery call.",
   },
   "offerings.ctaButton": {
