@@ -22,8 +22,14 @@ interface OrbnetDialogProps {
   onClose: () => void;
 }
 
+const SEMUID_TO_URL: Record<string, (language: string) => string> = {
+  "609d5e7a-e208-4715-b073-e99206aebbf7": getOrientationUrl,
+  "55df32ef-b5d1-468e-a4ba-f7f892398327": () => MEETERGO_AUFSTELLUNG,
+};
+
 const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
-  const url = SEMUID_TO_URL[semuid] ?? MEETERGO_ERSTGESPRAECH;
+  const { language } = useLanguage();
+  const url = SEMUID_TO_URL[semuid]?.(language) ?? getOrientationUrl(language);
   useEffect(() => {
     if (!open) return;
     window.loadCustomCssOverrides?.();
