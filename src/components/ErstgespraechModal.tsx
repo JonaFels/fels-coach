@@ -62,7 +62,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
 
           {/* meetergo Booking Embed – nahtlos in der Karte */}
           <iframe
-            src={MEETERGO_URL}
+            src={meetergoUrl}
             title="Booking Widget"
             loading="lazy"
             className="block w-full border-0"
