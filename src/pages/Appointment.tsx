@@ -2,13 +2,10 @@ import { useEffect } from "react";
 import { BookingModeTabs } from "@/components/BookingModeTabs";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
-
-
-const Start = () => {
-
+const Appointment = () => {
   useEffect(() => {
     const prev = document.title;
-    document.title = "Willkommen – dein Start | Jona Fels";
+    document.title = "Book your appointment | Jona Fels";
     const meta = document.querySelector('meta[name="robots"]');
     const created = !meta;
     const tag = meta ?? document.createElement("meta");
@@ -23,7 +20,6 @@ const Start = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Minimal top bar – kein Header/Footer, da versteckte Onboarding-Seite */}
       <header className="py-6 border-b border-border/40">
         <div className="container mx-auto px-4 flex items-center justify-center gap-3">
           <img
@@ -32,57 +28,51 @@ const Start = () => {
             className="w-10 h-10 rounded-full object-cover object-[center_18%]"
           />
           <span className="font-serif text-base text-foreground">
-            Jona Fels · Systemischer Aufsteller
+            Jona Fels · Systemic Constellation Facilitator
           </span>
         </div>
       </header>
 
       <main id="main-content">
-        {/* 1. Hero */}
         <section className="pt-28 pb-24 md:pt-44 md:pb-32">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
-              Willkommen
+              Welcome
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Schön, dass du da bist!
-              <span className="block text-secondary mt-2">Lass uns starten.</span>
+              Good to have you here.
+              <span className="block text-secondary mt-2">Let's get started.</span>
             </h1>
           </div>
         </section>
 
-        {/* 2. Buchung – Systemische 1:1 Aufstellung */}
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
             <BookingModeTabs
               copy={{
-                onsiteLabel: "Vor Ort in Freiburg",
-                onlineLabel: "Online per Video",
+                onsiteLabel: "In person in Freiburg",
+                onlineLabel: "Online via video",
                 onsiteHint:
-                  "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
-                onlineHint:
-                  "Videocall von überall · 90 Minuten · 110 €",
+                  "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
+                onlineHint: "Video call from anywhere · 90 minutes · €110",
                 onsiteUrl:
-                  "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
+                  "https://cal.meetergo.com/jona/systemic-constellation?lang=en",
                 onlineUrl:
-                  "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
-                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung",
+                  "https://cal.meetergo.com/jona/systemic-constellation-1?lang=en",
+                iframeTitle: "Booking – Systemic 1:1 Constellation",
               }}
             />
           </div>
         </section>
-
-
       </main>
-
 
       <footer className="py-8 border-t border-border/40">
         <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Jona Fels · Systemische Aufstellung &amp; Familienaufstellung
+          © {new Date().getFullYear()} Jona Fels · Systemic Constellation Work
         </div>
       </footer>
     </div>
   );
 };
 
-export default Start;
+export default Appointment;
