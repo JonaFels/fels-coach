@@ -48,20 +48,25 @@ const Appointment = () => {
 
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
-            <BookingModeTabs
-              copy={{
-                onsiteLabel: "In person in Freiburg",
-                onlineLabel: "Online via video",
-                onsiteHint:
-                  "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
-                onlineHint: "Video call from anywhere · 90 minutes · €110",
-                onsiteUrl:
-                  "https://cal.meetergo.com/jona/systemic-constellation?lang=en",
-                onlineUrl:
-                  "https://cal.meetergo.com/jona/systemic-constellation-1?lang=en",
-                iframeTitle: "Booking – Systemic 1:1 Constellation",
-              }}
+            <BookingSections
+              options={[
+                {
+                  kind: "onsite",
+                  label: "In person in Freiburg",
+                  hint: "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
+                  url: "https://cal.meetergo.com/jona/systemic-constellation?lang=en",
+                  iframeTitle: "Booking – Systemic 1:1 Constellation in person",
+                },
+                {
+                  kind: "online",
+                  label: "Online via video",
+                  hint: "Video call from anywhere · 90 minutes · €110",
+                  url: "https://cal.meetergo.com/jona/systemic-constellation-1?lang=en",
+                  iframeTitle: "Booking – Systemic 1:1 Constellation online",
+                },
+              ]}
             />
+
           </div>
         </section>
       </main>
