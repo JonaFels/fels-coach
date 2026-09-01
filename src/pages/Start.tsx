@@ -54,21 +54,24 @@ const Start = () => {
         {/* 2. Buchung – Systemische 1:1 Aufstellung */}
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
-
-            <Card className="overflow-hidden border-border/60 rounded-lg shadow-[var(--shadow-soft)]">
-              <CardContent className="p-0">
-                <iframe
-                  src={MEETERGO_AUFSTELLUNG}
-                  title="Terminbuchung – Systemische 1:1 Aufstellung"
-                  loading="lazy"
-                  className="block w-full border-0"
-                  style={{ height: "750px" }}
-                  allow="payment; camera; microphone; fullscreen"
-                />
-              </CardContent>
-            </Card>
+            <BookingModeTabs
+              copy={{
+                onsiteLabel: "Vor Ort in Freiburg",
+                onlineLabel: "Online per Video",
+                onsiteHint:
+                  "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
+                onlineHint:
+                  "Videocall von überall · 90 Minuten · 110 €",
+                onsiteUrl:
+                  "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
+                onlineUrl:
+                  "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
+                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung",
+              }}
+            />
           </div>
         </section>
+
 
       </main>
 
