@@ -26,8 +26,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic constellation in my Freiburg practice – 1:1, confidential, also online. Book your free discovery call with Jona Fels today." },
   },
   "/ablauf-preise": {
-    de: { title: "Ablauf & Preise | Systemische Aufstellung Freiburg", description: "Kostenloses Orientierungsgespräch, Aufstellung mit Einzelaufstellung 110 € (90 Min.) – in Freiburg oder online. Jona Fels." },
-    en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free discovery call, constellation work with individual constellation €110 (90 min) – in Freiburg or online. Jona Fels." },
+    de: { title: "Ablauf & Preise | Systemische Aufstellung Freiburg", description: "Kostenloses Orientierungsgespräch, Systemische 1:1 Aufstellung 110 € (90 Min.) – in Freiburg oder online. Jona Fels." },
+    en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free discovery call, Systemic 1:1 Constellation €110 (90 min) – in Freiburg or online. Jona Fels." },
   },
   "/systemische-familienaufstellung-freiburg": {
     de: { title: "Familienaufstellung Freiburg – Einzelsetting | Jona Fels", description: "Familienaufstellung Freiburg im Einzelsetting: 1:1 mit Bodenankern, vertraulich und ohne Gruppe. Kostenloses Orientierungsgespräch sichern." },
