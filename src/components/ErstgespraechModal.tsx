@@ -13,6 +13,9 @@ const MEETERGO_URL_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
 const MEETERGO_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
+  const { language } = useLanguage();
+  const meetergoUrl = language === "en" ? MEETERGO_URL_EN : MEETERGO_URL_DE;
+
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
