@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BookingModeTabs } from "@/components/BookingModeTabs";
+import { BookingSections } from "@/components/BookingSections";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Appointment = () => {
