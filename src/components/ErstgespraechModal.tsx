@@ -2,13 +2,15 @@ import { useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ErstgespraechModalProps {
   open: boolean;
   onClose: () => void;
 }
 
-const MEETERGO_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_URL_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const MEETERGO_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   useEffect(() => {
