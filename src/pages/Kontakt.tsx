@@ -12,6 +12,8 @@ const BOOKING_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 const Kontakt = () => {
   const { hash } = useLocation();
+  const { language } = useLanguage();
+  const bookingUrl = language === "en" ? BOOKING_URL_EN : BOOKING_URL_DE;
 
   useLayoutEffect(() => {
     if (!hash) return;
