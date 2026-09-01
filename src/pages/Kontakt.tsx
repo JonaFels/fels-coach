@@ -5,8 +5,10 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
 import { ContactForm } from "@/components/ContactForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const BOOKING_URL = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const BOOKING_URL_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const BOOKING_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 const Kontakt = () => {
   const { hash } = useLocation();
