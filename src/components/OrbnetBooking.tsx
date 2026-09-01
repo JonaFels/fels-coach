@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Calendar, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 declare global {
   interface Window {
@@ -8,15 +9,12 @@ declare global {
   }
 }
 
-const MEETERGO_BASE = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
-const MEETERGO_ERSTGESPRAECH = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
-const MEETERGO_KENNENLERNEN = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
-const MEETERGO_COACHING = "https://cal.meetergo.com/jona/kennenlernen?lang=de";
+const MEETERGO_AUFSTELLUNG = "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
+const MEETERGO_ORIENTIERUNG_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const MEETERGO_ORIENTIERUNG_EN = "https://cal.meetergo.com/jona/discovery-call";
 
-const SEMUID_TO_URL: Record<string, string> = {
-  "609d5e7a-e208-4715-b073-e99206aebbf7": MEETERGO_KENNENLERNEN,
-  "55df32ef-b5d1-468e-a4ba-f7f892398327": MEETERGO_COACHING,
-};
+const getOrientationUrl = (language: string) =>
+  language === "en" ? MEETERGO_ORIENTIERUNG_EN : MEETERGO_ORIENTIERUNG_DE;
 
 interface OrbnetDialogProps {
   semuid: string;
