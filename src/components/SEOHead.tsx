@@ -38,8 +38,8 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "About Me – Jona Fels, Systemic Constellation Facilitator Freiburg", description: "Get to know Jona Fels: your systemic constellation facilitator in Freiburg. Learn how I broke through my own patterns – and accompany you through your uncertainty." },
   },
   "/kontakt": {
-    de: { title: "Kontakt – Systemische Aufstellung Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Erstgespräch zur systemischen Aufstellungsarbeit oder Familienaufstellung. Per Telefon, E-Mail oder WhatsApp." },
-    en: { title: "Contact – Systemic Constellation Freiburg | Jona Fels", description: "Contact Jona Fels in Freiburg for a free discovery call on systemic constellation or family constellation. Via phone, email or WhatsApp." },
+    de: { title: "Kontakt – Systemische Aufstellung Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Orientierungsgespräch zur systemischen Aufstellungsarbeit oder Familienaufstellung. Per Telefon oder E-Mail." },
+    en: { title: "Contact – Systemic Constellation Freiburg | Jona Fels", description: "Contact Jona Fels in Freiburg for a free discovery call on systemic constellation or family constellation. Via phone or email." },
   },
   "/blog": {
     de: { title: "Blog – Systemische Aufstellung & Aufstellung Freiburg | Jona Fels", description: "Artikel und Insights rund um Familienaufstellungen, systemische Prozessarbeit und persönliche Entwicklung – aus der Praxis in Freiburg." },
