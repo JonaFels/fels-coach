@@ -123,6 +123,7 @@ const OrbnetIframeDialog = ({ url, open, onClose }: OrbnetIframeDialogProps) => 
 // Global FAB button
 export const OrbnetFAB = () => {
   const [open, setOpen] = useState(false);
+  const { language } = useLanguage();
 
   return (
     <>
@@ -138,7 +139,7 @@ export const OrbnetFAB = () => {
         </Button>
       </div>
       <OrbnetIframeDialog
-        url={MEETERGO_BASE}
+        url={getOrientationUrl(language)}
         open={open}
         onClose={() => setOpen(false)}
       />
