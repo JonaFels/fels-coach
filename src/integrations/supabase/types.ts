@@ -14,47 +14,6 @@ export type Database = {
   }
   public: {
     Tables: {
-      appointments: {
-        Row: {
-          client_id: string
-          created_at: string
-          event_type: string
-          id: string
-          lexoffice_invoice_id: string | null
-          start_time: string
-          status: string
-          updated_at: string
-        }
-        Insert: {
-          client_id: string
-          created_at?: string
-          event_type: string
-          id?: string
-          lexoffice_invoice_id?: string | null
-          start_time: string
-          status?: string
-          updated_at?: string
-        }
-        Update: {
-          client_id?: string
-          created_at?: string
-          event_type?: string
-          id?: string
-          lexoffice_invoice_id?: string | null
-          start_time?: string
-          status?: string
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "appointments_client_id_fkey"
-            columns: ["client_id"]
-            isOneToOne: false
-            referencedRelation: "clients"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
       callback_requests: {
         Row: {
           contact: string
@@ -73,42 +32,6 @@ export type Database = {
           contact_type?: string
           created_at?: string
           id?: string
-        }
-        Relationships: []
-      }
-      clients: {
-        Row: {
-          created_at: string
-          email: string
-          full_name: string
-          id: string
-          notes: string | null
-          package_credits_remaining: number
-          package_credits_total: number
-          phone: string | null
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          email: string
-          full_name: string
-          id?: string
-          notes?: string | null
-          package_credits_remaining?: number
-          package_credits_total?: number
-          phone?: string | null
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          email?: string
-          full_name?: string
-          id?: string
-          notes?: string | null
-          package_credits_remaining?: number
-          package_credits_total?: number
-          phone?: string | null
-          updated_at?: string
         }
         Relationships: []
       }
