@@ -28,7 +28,7 @@ import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
 import Start from "./pages/Start";
 import Appointment from "./pages/Appointment";
-import ErstgespraechBeta from "./pages/ErstgespraechBeta";
+
 
 import { ProtectedRoute } from "./components/admin/ProtectedRoute";
 
@@ -66,8 +66,6 @@ const App = () => (
               <Route path="/termin" element={<Start />} />
               <Route path="/appointment" element={<Appointment />} />
               <Route path="/start" element={<Navigate to="/termin" replace />} />
-
-              <Route path="/erstgespraech-beta" element={<ErstgespraechBeta />} />
               <Route path="/admin/login" element={<AdminLogin />} />
 
               <Route
