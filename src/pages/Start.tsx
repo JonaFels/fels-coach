@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { MapPin, Video } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { BookingSections } from "@/components/BookingSections";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
@@ -48,6 +50,25 @@ const Start = () => {
               Schön, dass du da bist!
               <span className="block text-secondary mt-2">Lass uns starten.</span>
             </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8">
+              Hier buchst du deine Systemische 1:1 Aufstellung (90 Minuten, 110 €).
+              Du hast die Wahl: <strong className="text-foreground font-medium">vor Ort in Freiburg</strong> oder{" "}
+              <strong className="text-foreground font-medium">online per Video</strong> – beide Kalender findest du unten.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Button asChild size="lg" className="w-full sm:w-auto">
+                <a href="#termin-onsite">
+                  <MapPin className="h-4 w-4 mr-2" aria-hidden="true" />
+                  Termin vor Ort wählen
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                <a href="#termin-online">
+                  <Video className="h-4 w-4 mr-2" aria-hidden="true" />
+                  Online-Termin wählen
+                </a>
+              </Button>
+            </div>
           </div>
         </section>
 
