@@ -51,6 +51,28 @@ const Appointment = () => {
 
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
+            <BookingOptionCards
+              heading="Step 1"
+              subheading="How would you like to meet?"
+              choices={[
+                {
+                  kind: "onsite",
+                  icon: "map",
+                  title: "In person in Freiburg",
+                  subtitle: "At the practice room",
+                  details: "Karlstraße 51, 79104 Freiburg · 90 min · €110",
+                  cta: "Book in person",
+                },
+                {
+                  kind: "online",
+                  icon: "video",
+                  title: "Online via video",
+                  subtitle: "From anywhere",
+                  details: "Video call · 90 min · €110",
+                  cta: "Book online",
+                },
+              ]}
+            />
             <BookingSections
               options={[
                 {
