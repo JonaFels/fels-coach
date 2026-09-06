@@ -12,7 +12,7 @@ export interface BookingOption {
 export const BookingSections = ({ options }: { options: BookingOption[] }) => (
   <div className="space-y-16 md:space-y-24">
     {options.map((option) => (
-      <div key={option.kind}>
+      <div key={option.kind} id={`termin-${option.kind}`} className="scroll-mt-24">
         <div className="flex items-center justify-center gap-2 mb-2">
           {option.kind === "onsite" ? (
             <MapPin className="h-4 w-4 text-secondary" aria-hidden="true" />
