@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { MapPin, Video } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { BookingSections } from "@/components/BookingSections";
+import { BookingOptionCards } from "@/components/BookingOptionCards";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
