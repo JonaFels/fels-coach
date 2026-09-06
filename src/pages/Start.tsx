@@ -57,6 +57,28 @@ const Start = () => {
         {/* 2. Buchung – Systemische 1:1 Aufstellung */}
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
+            <BookingOptionCards
+              heading="Schritt 1"
+              subheading="Wo möchtest du deinen Termin wahrnehmen?"
+              choices={[
+                {
+                  kind: "onsite",
+                  icon: "map",
+                  title: "Vor Ort in Freiburg",
+                  subtitle: "Persönlich im Praxisraum",
+                  details: "Karlstraße 51, 79104 Freiburg · 90 Min · 110 €",
+                  cta: "Termin vor Ort wählen",
+                },
+                {
+                  kind: "online",
+                  icon: "video",
+                  title: "Online per Video",
+                  subtitle: "Bequem von überall",
+                  details: "Videocall · 90 Min · 110 €",
+                  cta: "Online-Termin wählen",
+                },
+              ]}
+            />
             <BookingSections
               options={[
                 {

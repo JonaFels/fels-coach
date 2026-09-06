@@ -35,34 +35,17 @@ const Appointment = () => {
       </header>
 
       <main id="main-content">
-        <section className="pt-28 pb-24 md:pt-44 md:pb-32">
+        <section className="pt-24 pb-10 md:pt-36 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
+            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-4">
               Welcome
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Good to have you here.
-              <span className="block text-secondary mt-2">Let's get started.</span>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
+              Book your Systemic 1:1 Constellation
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8">
-              This is where you book your Systemic 1:1 Constellation (90 minutes, €110).
-              Your choice: <strong className="text-foreground font-medium">in person in Freiburg</strong> or{" "}
-              <strong className="text-foreground font-medium">online via video</strong> – both calendars are below.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              90 minutes · €110 · Choose in person in Freiburg or online via video.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button asChild size="lg" className="w-full sm:w-auto">
-                <a href="#termin-onsite">
-                  <MapPin className="h-4 w-4 mr-2" aria-hidden="true" />
-                  Book in person
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-                <a href="#termin-online">
-                  <Video className="h-4 w-4 mr-2" aria-hidden="true" />
-                  Book online
-                </a>
-              </Button>
-            </div>
           </div>
         </section>
 
