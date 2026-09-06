@@ -5,8 +5,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { HashBookingTrigger } from "@/components/HashBookingTrigger";
 import { Toaster } from "@/components/ui/toaster";
 
-// Eager-Import: vermeidet "Failed to fetch dynamically imported module" im Lovable-Preview
-import { ChatbaseWidget } from "@/components/ChatbaseWidget";
+
 
 
 import { useAppTracking } from "@/hooks/useTracking";
@@ -45,7 +44,6 @@ const App = () => (
       <BrowserRouter>
         <AppTracking />
         <ScrollToTop />
-        <ChatbaseWidget />
         <HashBookingTrigger>
           <Routes>
               <Route path="/" element={<Index />} />
