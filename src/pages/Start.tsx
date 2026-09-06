@@ -40,34 +40,17 @@ const Start = () => {
 
       <main id="main-content">
         {/* 1. Hero */}
-        <section className="pt-28 pb-24 md:pt-44 md:pb-32">
+        <section className="pt-24 pb-10 md:pt-36 md:pb-14">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-5">
+            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-4">
               Willkommen
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Schön, dass du da bist!
-              <span className="block text-secondary mt-2">Lass uns starten.</span>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
+              Buche deine Systemische 1:1 Aufstellung
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8">
-              Hier buchst du deine Systemische 1:1 Aufstellung (90 Minuten, 110 €).
-              Du hast die Wahl: <strong className="text-foreground font-medium">vor Ort in Freiburg</strong> oder{" "}
-              <strong className="text-foreground font-medium">online per Video</strong> – beide Kalender findest du unten.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              90 Minuten · 110 € · Wähle einfach vor Ort in Freiburg oder online per Video.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button asChild size="lg" className="w-full sm:w-auto">
-                <a href="#termin-onsite">
-                  <MapPin className="h-4 w-4 mr-2" aria-hidden="true" />
-                  Termin vor Ort wählen
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-                <a href="#termin-online">
-                  <Video className="h-4 w-4 mr-2" aria-hidden="true" />
-                  Online-Termin wählen
-                </a>
-              </Button>
-            </div>
           </div>
         </section>
 
