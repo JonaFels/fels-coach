@@ -396,6 +396,22 @@ img.no-fade {
   }
 }
 
+/* Sanftes Einblenden für aufklappbare Bereiche (z. B. Online-Kalender) */
+.animate-fade-in {
+  animation: panel-fade-in 0.4s ease-out;
+}
+
+@keyframes panel-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Footer Performance: content-visibility für Off-screen Bereiche */
 footer {
   content-visibility: auto;
