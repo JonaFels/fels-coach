@@ -26,7 +26,7 @@ const faqData = {
     },
     {
       question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
-      answer: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Vorgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
+      answer: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 20-minütiges Vorgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
     },
     {
       question: "Wo findet die Aufstellungsarbeit statt und gibt es Wochenend-Termine?",
@@ -52,7 +52,7 @@ const faqData = {
     },
     {
       question: "How can I get started and is a preliminary consultation possible?",
-      answer: "The first step is simple: Request a free 30-minute preliminary consultation via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
+      answer: "The first step is simple: Request a free 20-minute preliminary consultation via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
     },
     {
       question: "Where does coaching take place and are there weekend appointments?",

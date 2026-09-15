@@ -267,7 +267,7 @@ export const JsonLd = () => {
               name: "Wie kann ich starten und ist ein Orientierungsgespräch möglich?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 30-minütiges Orientierungsgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
+                text: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 20-minütiges Orientierungsgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
               },
             },
             {
