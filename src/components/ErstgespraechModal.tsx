@@ -56,7 +56,7 @@ export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) =
               Lass uns unverbindlich sprechen
             </h3>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl">
-              In 30 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus.
+              In 20 Minuten klären wir deine Fragen, schauen auf deine aktuelle Blockade und prüfen, ob ich der richtige Coach für dich bin. Wähle einfach unten deinen Wunschtermin aus.
             </p>
           </div>
 

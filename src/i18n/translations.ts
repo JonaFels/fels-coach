@@ -95,8 +95,8 @@ export const translations: Translations = {
     en: "Schedule Free Consultation",
   },
   "hero.microcopy": {
-    de: "Völlig unverbindlich & persönlich – 30 Minuten, die Klarheit schaffen.",
-    en: "Completely non-binding & personal – 30 minutes that create clarity.",
+    de: "Völlig unverbindlich & persönlich – 20 Minuten, die Klarheit schaffen.",
+    en: "Completely non-binding & personal – 20 minutes that create clarity.",
   },
   "hero.ctaConsultation": {
     de: "Lass uns einfach mal reden",
@@ -104,7 +104,7 @@ export const translations: Translations = {
   },
   "hero.ctaMicrocopy": {
     de: "Unverbindlich & persönlich – 30 Min., die zeigen, ob du dich gesehen fühlst.",
-    en: "Non-binding & personal – 30 min. to see if you feel understood.",
+    en: "Non-binding & personal – 20 min. to see if you feel understood.",
   },
   "hero.socialProof": {
     de: "Über 100 Menschen begleitet – auf dem Weg zu gesunden Grenzen und sich selbst.",
@@ -179,8 +179,8 @@ export const translations: Translations = {
     en: "How we start working together",
   },
   "offerings.step1": {
-    de: "Kostenloses Erstgespräch: In einem unverbindlichen 30-minütigen Telefonat klären wir dein Anliegen und schauen, ob die Chemie stimmt.",
-    en: "Free discovery call: In a non-binding 30-minute phone call we clarify your concern and see if the chemistry is right.",
+    de: "Kostenloses Erstgespräch: In einem unverbindlichen 20-minütigen Telefonat klären wir dein Anliegen und schauen, ob die Chemie stimmt.",
+    en: "Free discovery call: In a non-binding 20-minute phone call we clarify your concern and see if the chemistry is right.",
   },
   "offerings.step2": {
     de: "Einfache Terminbuchung: Wenn mein Ansatz für dich passt, erhältst du einen persönlichen Link, über den du deinen ersten Termin bequem online auswählen kannst.",
@@ -898,16 +898,16 @@ export const translations: Translations = {
     en: "Become the rock in your own life.",
   },
   "finalCta.description": {
-    de: "In einem kostenlosen 30-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt zu mehr Klarheit, gesunden Grenzen und deiner eigenen Standfestigkeit findest.",
-    en: "In a free 30-minute discovery call, we'll see if the chemistry is right – and how you can step by step find more clarity, healthy boundaries and your own steadiness.",
+    de: "In einem kostenlosen 20-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt zu mehr Klarheit, gesunden Grenzen und deiner eigenen Standfestigkeit findest.",
+    en: "In a free 20-minute discovery call, we'll see if the chemistry is right – and how you can step by step find more clarity, healthy boundaries and your own steadiness.",
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",
     en: "Secure your appointment now",
   },
   "finalCta.microcopy": {
-    de: "Kostenlos · 30 Minuten · Unverbindlich",
-    en: "Free · 30 minutes · Non-binding",
+    de: "Kostenlos · 20 Minuten · Unverbindlich",
+    en: "Free · 20 minutes · Non-binding",
   },
 
   "author.writtenBy": {
@@ -1255,8 +1255,8 @@ export const translations: Translations = {
     en: "Let's have a quick chat",
   },
   "offerings.unsureText": {
-    de: "Du bist dir noch nicht sicher, ob das das Richtige für dich ist? Lass uns in einem kostenlosen 30-Minuten-Vorgespräch unverbindlich schauen, ob es passt – ganz ohne Druck und Erwartung.",
-    en: "Not sure yet whether this is the right fit for you? Let's take 30 minutes for a free, no-strings chat to see if it feels right – without any pressure or expectation.",
+    de: "Du bist dir noch nicht sicher, ob das das Richtige für dich ist? Lass uns in einem kostenlosen 20-Minuten-Vorgespräch unverbindlich schauen, ob es passt – ganz ohne Druck und Erwartung.",
+    en: "Not sure yet whether this is the right fit for you? Let's take 20 minutes for a free, no-strings chat to see if it feels right – without any pressure or expectation.",
   },
   "offerings.unsureCta": {
     de: "Erstgespräch vereinbaren",
