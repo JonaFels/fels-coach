@@ -103,7 +103,7 @@ export const translations: Translations = {
     en: "Let's just talk",
   },
   "hero.ctaMicrocopy": {
-    de: "Unverbindlich & persönlich – 30 Min., die zeigen, ob du dich gesehen fühlst.",
+    de: "Unverbindlich & persönlich – 20 Min., die zeigen, ob du dich gesehen fühlst.",
     en: "Non-binding & personal – 20 min. to see if you feel understood.",
   },
   "hero.socialProof": {
