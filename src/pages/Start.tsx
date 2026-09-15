@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { BookingSections } from "@/components/BookingSections";
-import { BookingOptionCards } from "@/components/BookingOptionCards";
+import { BookingOnsiteFirst } from "@/components/BookingOnsiteFirst";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 
@@ -49,53 +48,30 @@ const Start = () => {
               Buche deine Systemische 1:1 Aufstellung
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              90 Minuten · 110 € · Wähle einfach vor Ort in Freiburg oder online per Video.
+              90 Minuten · 110 € · Vor Ort in Freiburg – auf Wunsch auch online per Video.
             </p>
           </div>
         </section>
 
-        {/* 2. Buchung – Systemische 1:1 Aufstellung */}
+        {/* 2. Buchung – Vor Ort zuerst, online als Option */}
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
-            <BookingOptionCards
-              heading="Schritt 1"
-              subheading="Wo möchtest du deinen Termin wahrnehmen?"
-              choices={[
-                {
-                  kind: "onsite",
-                  icon: "map",
-                  title: "Vor Ort in Freiburg",
-                  subtitle: "Persönlich im Praxisraum",
-                  details: "Karlstraße 51, 79104 Freiburg · 90 Min · 110 €",
-                  cta: "Termin vor Ort wählen",
-                },
-                {
-                  kind: "online",
-                  icon: "video",
-                  title: "Online per Video",
-                  subtitle: "Bequem von überall",
-                  details: "Videocall · 90 Min · 110 €",
-                  cta: "Online-Termin wählen",
-                },
-              ]}
-            />
-            <BookingSections
-              options={[
-                {
-                  kind: "onsite",
-                  label: "Vor Ort in Freiburg",
-                  hint: "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
-                  url: "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
-                  iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung vor Ort",
-                },
-                {
-                  kind: "online",
-                  label: "Online per Video",
-                  hint: "Videocall von überall · 90 Minuten · 110 €",
-                  url: "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
-                  iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung online",
-                },
-              ]}
+            <BookingOnsiteFirst
+              onsite={{
+                label: "Vor Ort in Freiburg",
+                hint: "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
+                url: "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
+                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung vor Ort",
+              }}
+              online={{
+                label: "Online per Video",
+                hint: "Videocall von überall · 90 Minuten · 110 €",
+                url: "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
+                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung online",
+              }}
+              onlinePrompt="Lieber online? Online-Kalender anzeigen"
+              showLabel="Online-Kalender anzeigen"
+              hideLabel="Online-Kalender ausblenden"
             />
           </div>
         </section>

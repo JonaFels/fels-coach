@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { BookingSections } from "@/components/BookingSections";
-import { BookingOptionCards } from "@/components/BookingOptionCards";
+import { BookingOnsiteFirst } from "@/components/BookingOnsiteFirst";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 const Appointment = () => {
@@ -44,54 +43,30 @@ const Appointment = () => {
               Book your Systemic 1:1 Constellation
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              90 minutes · €110 · Choose in person in Freiburg or online via video.
+              90 minutes · €110 · In person in Freiburg – online via video also available.
             </p>
           </div>
         </section>
 
         <section className="pb-32 md:pb-44">
           <div className="container mx-auto px-4 max-w-3xl">
-            <BookingOptionCards
-              heading="Step 1"
-              subheading="How would you like to meet?"
-              choices={[
-                {
-                  kind: "onsite",
-                  icon: "map",
-                  title: "In person in Freiburg",
-                  subtitle: "At the practice room",
-                  details: "Karlstraße 51, 79104 Freiburg · 90 min · €110",
-                  cta: "Book in person",
-                },
-                {
-                  kind: "online",
-                  icon: "video",
-                  title: "Online via video",
-                  subtitle: "From anywhere",
-                  details: "Video call · 90 min · €110",
-                  cta: "Book online",
-                },
-              ]}
+            <BookingOnsiteFirst
+              onsite={{
+                label: "In person in Freiburg",
+                hint: "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
+                url: "https://cal.meetergo.com/jona/systemic-constellation?lang=en",
+                iframeTitle: "Booking – Systemic 1:1 Constellation in person",
+              }}
+              online={{
+                label: "Online via video",
+                hint: "Video call from anywhere · 90 minutes · €110",
+                url: "https://cal.meetergo.com/jona/systemic-constellation-1?lang=en",
+                iframeTitle: "Booking – Systemic 1:1 Constellation online",
+              }}
+              onlinePrompt="Prefer online? Show the online calendar"
+              showLabel="Show the online calendar"
+              hideLabel="Hide the online calendar"
             />
-            <BookingSections
-              options={[
-                {
-                  kind: "onsite",
-                  label: "In person in Freiburg",
-                  hint: "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
-                  url: "https://cal.meetergo.com/jona/systemic-constellation?lang=en",
-                  iframeTitle: "Booking – Systemic 1:1 Constellation in person",
-                },
-                {
-                  kind: "online",
-                  label: "Online via video",
-                  hint: "Video call from anywhere · 90 minutes · €110",
-                  url: "https://cal.meetergo.com/jona/systemic-constellation-1?lang=en",
-                  iframeTitle: "Booking – Systemic 1:1 Constellation online",
-                },
-              ]}
-            />
-
           </div>
         </section>
       </main>
