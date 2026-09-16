@@ -22,11 +22,11 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string; keywords?: string }>> = {
   "/": {
-    de: { title: "Systemische Aufstellung Freiburg | Jona Fels", description: "Systemische Aufstellung in der Aufstellungspraxis Freiburg – 1:1, geschützt, auch online. Jetzt kostenloses Orientierungsgespräch vereinbaren." },
+    de: { title: "Systemische Aufstellungen Freiburg | Jona Fels", description: "Systemische Aufstellungen in der Aufstellungspraxis Freiburg – 1:1, geschützt, auch online. Jetzt kostenloses Orientierungsgespräch vereinbaren." },
     en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic constellation in my Freiburg practice – 1:1, confidential, also online. Book your free discovery call with Jona Fels today." },
   },
   "/ablauf-preise": {
-    de: { title: "Ablauf & Preise | Systemische Aufstellung Freiburg", description: "Kostenloses Orientierungsgespräch, Systemische 1:1 Aufstellung 110 € (90 Min.) – in Freiburg oder online. Jona Fels." },
+    de: { title: "Ablauf & Preise | Systemische Aufstellungen Freiburg", description: "Kostenloses Orientierungsgespräch, Systemische 1:1 Aufstellung 110 € (90 Min.) – in Freiburg oder online. Jona Fels." },
     en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free discovery call, Systemic 1:1 Constellation €110 (90 min) – in Freiburg or online. Jona Fels." },
   },
   "/systemische-familienaufstellung-freiburg": {
@@ -38,11 +38,11 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     en: { title: "About Me – Jona Fels, Systemic Constellation Facilitator Freiburg", description: "Get to know Jona Fels: your systemic constellation facilitator in Freiburg. Learn how I broke through my own patterns – and accompany you through your uncertainty." },
   },
   "/kontakt": {
-    de: { title: "Kontakt – Systemische Aufstellung Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Orientierungsgespräch zur systemischen Aufstellungsarbeit oder Familienaufstellung. Per Telefon oder E-Mail." },
+    de: { title: "Kontakt – Systemische Aufstellungen Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Orientierungsgespräch zur systemischen Aufstellungsarbeit oder Familienaufstellung. Per Telefon oder E-Mail." },
     en: { title: "Contact – Systemic Constellation Freiburg | Jona Fels", description: "Contact Jona Fels in Freiburg for a free discovery call on systemic constellation or family constellation. Via phone or email." },
   },
   "/blog": {
-    de: { title: "Blog – Systemische Aufstellung & Aufstellung Freiburg | Jona Fels", description: "Artikel und Insights rund um Familienaufstellungen, systemische Prozessarbeit und persönliche Entwicklung – aus der Praxis in Freiburg." },
+    de: { title: "Blog – Systemische Aufstellungen & Aufstellung Freiburg | Jona Fels", description: "Artikel und Insights rund um Familienaufstellungen, systemische Prozessarbeit und persönliche Entwicklung – aus der Praxis in Freiburg." },
     en: { title: "Blog – Systemic Constellation & Constellation Freiburg | Jona Fels", description: "Articles and insights on family constellations, systemic process work and personal growth – from the practice in Freiburg." },
   },
   "/datenschutz": {
