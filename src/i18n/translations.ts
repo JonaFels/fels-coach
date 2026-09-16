@@ -9,17 +9,17 @@ export type Translations = {
 
 export const translations: Translations = {
   "header.brandSubtitle": {
-    de: "Systemische Aufstellung",
+    de: "Systemische Aufstellungen",
     en: "Systemic Constellation",
   },
 
   // Navigation
   "nav.coaching": {
-    de: "Systemische Aufstellung",
+    de: "Systemische Aufstellungen",
     en: "Systemic Constellation",
   },
   "nav.beratung": {
-    de: "Systemische Aufstellung",
+    de: "Systemische Aufstellungen",
     en: "Systemic Constellation",
   },
   "nav.familienaufstellung": {
@@ -79,7 +79,7 @@ export const translations: Translations = {
     en: "Constellation practice Freiburg · 1:1 guidance",
   },
   "hero.title": {
-    de: "Systemische Aufstellung Freiburg – finde deine innere Klarheit",
+    de: "Systemische Aufstellungen Freiburg – finde deine innere Klarheit",
     en: "Systemic Constellation in Freiburg – find your inner clarity",
   },
   "hero.quote": {
@@ -1311,7 +1311,7 @@ export const translations: Translations = {
   "terms.s1.heading": { de: "1. Geltungsbereich", en: "1. Scope" },
   "terms.s1.text": { de: "Diese Allgemeinen Gesch\u00e4ftsbedingungen gelten f\u00fcr alle Vereinbarungen und Dienstleistungen zwischen Systemische Aufstellungen in Freiburg \u2013 Jona Fels (nachfolgend \u201EAufsteller\u201C) und dir als Klient:in. Sie bilden die vertragliche Grundlage unserer Zusammenarbeit, sofern wir nicht individuell etwas anderes schriftlich vereinbaren.", en: "These General Terms and Conditions apply to all agreements and services between Systemic Constellations in Freiburg \u2013 Jona Fels (hereinafter \u201CConstellation Facilitator\u201D) and you as a client. They form the contractual basis of our collaboration unless we individually agree otherwise in writing." },
   "terms.s2.heading": { de: "2. Leistungsangebot & Abgrenzung zur Heilkunde", en: "2. Services & Distinction from Medical Practice" },
-  "terms.s2.p1": { de: "Ich biete systemische Aufstellung und Familienaufstellungen an. Dabei geht es darum, dir einen geschützten Raum zu geben, in dem du Klarheit über deine Themen gewinnen kannst – sei es in familiären Zusammenhängen, persönlichen Entscheidungen oder inneren Prozessen.", en: "I offer systemic coaching and family constellations. The aim is to provide you with a safe space where you can gain clarity about your issues – be it in family contexts, personal decisions, or inner processes." },
+  "terms.s2.p1": { de: "Ich biete systemische Aufstellungen und Familienaufstellungen an. Dabei geht es darum, dir einen geschützten Raum zu geben, in dem du Klarheit über deine Themen gewinnen kannst – sei es in familiären Zusammenhängen, persönlichen Entscheidungen oder inneren Prozessen.", en: "I offer systemic coaching and family constellations. The aim is to provide you with a safe space where you can gain clarity about your issues – be it in family contexts, personal decisions, or inner processes." },
   "terms.s2.p2": { de: "Meine Aufstellungsarbeit dient der Persönlichkeitsentwicklung und Lösungsfindung. Sie ist keine Psychotherapie und ersetzt keine medizinische, ärztliche oder psychiatrische Diagnose und Behandlung. Wenn du dich aktuell in einer psychischen Krise befindest oder in therapeutischer Behandlung bist, sprich mich bitte vor der Buchung offen darauf an. Gemeinsam schauen wir, ob eine Aufstellungsarbeit für dich sinnvoll und machbar ist.", en: "My coaching serves personal development and finding solutions. It is not psychotherapy and does not replace medical or psychiatric diagnosis and treatment. If you are currently in a mental health crisis or undergoing therapeutic treatment, please let me know openly before booking. Together we will assess whether coaching is appropriate and feasible for you." },
   "terms.s3.heading": { de: "3. Vertragsschluss & Terminbuchung", en: "3. Contract Conclusion & Booking" },
   "terms.s3.text": { de: "Unsere Zusammenarbeit beginnt ganz unkompliziert: Du buchst einen Termin über mein Online-Buchungssystem (Orbnet), per E-Mail oder über WhatsApp. Mit deiner Buchung und meiner anschließenden Terminbestätigung kommt der verbindliche Vertrag zwischen uns zustande.", en: "Our collaboration begins very simply: You book an appointment through my online booking system (Orbnet), by email, or via WhatsApp. The binding contract between us is concluded with your booking and my subsequent appointment confirmation." },

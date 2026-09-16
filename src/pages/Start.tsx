@@ -83,7 +83,7 @@ const Start = () => {
 
       <footer className="py-8 border-t border-border/40">
         <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Jona Fels · Systemische Aufstellung &amp; Familienaufstellung
+          © {new Date().getFullYear()} Jona Fels · Systemische Aufstellungen &amp; Familienaufstellung
         </div>
       </footer>
     </div>

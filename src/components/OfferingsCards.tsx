@@ -12,7 +12,7 @@ export const OfferingsCards = () => {
         <div className="text-center mb-14 md:mb-16">
           <p className="eyebrow mb-4">Mein 1:1 Angebot</p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground leading-tight">
-            Systemische Aufstellung im Einzelsetting
+            Systemische Aufstellungen im Einzelsetting
           </h2>
         </div>
 
