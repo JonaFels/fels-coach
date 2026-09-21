@@ -26,7 +26,7 @@ const Impressum = () => {
 
             <h3>{t("imprint.contactHeading")}</h3>
             <p>
-              {t("imprint.phone")}: 0176 67608617<br />
+              {t("imprint.phone")}: 0160 90369443<br />
               E-Mail: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
             </p>
 

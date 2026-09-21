@@ -21,7 +21,7 @@ export const JsonLd = () => {
             "Familienstellen Einzelsetting Freiburg",
           ],
           url: "https://fels-coach.de",
-          telephone: "+4917667608617",
+          telephone: "+4916090369443",
           description:
             "Systemische Familienaufstellung und Aufstellungsarbeit in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
           address: {
@@ -143,7 +143,7 @@ export const JsonLd = () => {
             "Systemischer Aufsteller und Familienaufsteller in Freiburg. Spezialisiert auf Einzelaufstellungen mit Bodenankern, lösungsorientierte Aufstellungsarbeit und persönliche Entwicklung.",
           url: "https://fels-coach.de/ueber-mich",
           image: "https://fels-coach.de/assets/jona-fels-systemisches-coaching.webp",
-          telephone: "+4917667608617",
+          telephone: "+4916090369443",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Karlstraße 51",
