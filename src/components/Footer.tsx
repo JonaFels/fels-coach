@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Instagram, Facebook, Linkedin, Youtube, Users } from "lucide-react";
+import { Linkedin, Youtube } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
 import { FooterDirections } from "@/components/FooterDirections";
 
