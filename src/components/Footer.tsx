@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Instagram, Facebook, Linkedin, Youtube, Users } from "lucide-react";
+import { Linkedin, Youtube, Users } from "lucide-react";
 import { trackCTAClick } from "@/lib/tracking";
 import { FooterDirections } from "@/components/FooterDirections";
 
@@ -39,8 +39,6 @@ export const Footer = () => {
           {/* Social icons */}
           <div className="flex items-center justify-center gap-3">
             {[
-              { href: "https://www.instagram.com/jona.fels", label: "Instagram", Icon: Instagram },
-              { href: "https://m.facebook.com/profile.php?id=61562014600393", label: "Facebook", Icon: Facebook },
               { href: "https://de.linkedin.com/in/jona-fels-coach", label: "LinkedIn", Icon: Linkedin },
               {
                 href:
