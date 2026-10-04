@@ -412,6 +412,20 @@ img.no-fade {
   }
 }
 
+/* Cookie-Banner: flache Leiste gleitet von unten ein */
+@keyframes bar-slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-bar-up {
+  animation: bar-slide-up 0.4s var(--ease-out-expo);
+}
+
 /* Footer Performance: content-visibility für Off-screen Bereiche */
 footer {
   content-visibility: auto;

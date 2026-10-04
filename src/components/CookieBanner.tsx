@@ -104,9 +104,10 @@ export const CookieBanner = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 animate-slide-in-right">
-      {showPreferences ? (
-        <div className="w-[350px] bg-card border border-border rounded-lg shadow-[var(--shadow-elevated)] p-5">
+    <>
+      {/* Compact preferences panel — floats above the slim bar */}
+      {showPreferences && (
+        <div className="fixed bottom-16 right-4 left-4 sm:left-auto z-50 w-auto sm:w-[350px] bg-card border border-border rounded-lg shadow-[var(--shadow-elevated)] p-5 animate-fade-in">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-serif text-lg font-semibold text-foreground">
               {t("cookie.title")}
@@ -114,6 +115,7 @@ export const CookieBanner = () => {
             <button
               onClick={() => setShowPreferences(false)}
               className="p-1 hover:bg-muted rounded-md transition-colors"
+              aria-label={t("cookie.settings")}
             >
               <X className="h-4 w-4 text-muted-foreground" />
             </button>
@@ -161,36 +163,40 @@ export const CookieBanner = () => {
             {t("cookie.save")}
           </Button>
         </div>
-      ) : (
-        <div className="w-[350px] bg-card border border-border rounded-lg shadow-[var(--shadow-elevated)] p-5">
-          <div className="flex items-start gap-3 mb-4">
-            <Cookie className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-            <p className="text-sm text-foreground">{t("cookie.text")}</p>
+      )}
+
+      {/* Slim full-width consent bar — minimal height, sits flush at the bottom edge */}
+      <div className="fixed bottom-0 inset-x-0 z-50 bg-card border-t border-border shadow-[var(--shadow-soft)] animate-bar-up">
+        <div className="container mx-auto flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 px-4 py-2.5 sm:py-2">
+          <div className="flex items-start gap-2.5 flex-1 min-w-0">
+            <Cookie className="h-4 w-4 mt-0.5 flex-shrink-0 text-muted-foreground" />
+            <p className="text-xs leading-snug text-muted-foreground">
+              {t("cookie.text")}
+            </p>
           </div>
 
-          <div className="flex gap-2">
-            <Button onClick={acceptAll} size="sm" className="flex-1">
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <Button onClick={acceptAll} size="sm" className="h-8">
               {t("cookie.accept")}
             </Button>
             <Button
               onClick={rejectAll}
               variant="outline"
               size="sm"
-              className="flex-1"
+              className="h-8"
             >
               {t("cookie.reject")}
             </Button>
+            <button
+              onClick={() => setShowPreferences(true)}
+              className="p-2 rounded-md hover:bg-muted transition-colors"
+              aria-label={t("cookie.settings")}
+            >
+              <Settings className="h-4 w-4 text-muted-foreground" />
+            </button>
           </div>
-
-          <button
-            onClick={() => setShowPreferences(true)}
-            className="flex items-center justify-center gap-1.5 w-full mt-3 text-xs text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Settings className="h-3.5 w-3.5" />
-            {t("cookie.settings")}
-          </button>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 };
