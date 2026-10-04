@@ -87,8 +87,8 @@ export const translations: Translations = {
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Wir starten mit einem kostenlosen Orientierungsgespräch – in Freiburg oder online.",
-    en: "In my constellation practice in Freiburg I accompany you 1:1 in sorting the chaos in your head and dissolving emotional blocks. We start with a free discovery call – in Freiburg or online.",
+    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich – vor Ort oder online – im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Wir starten mit einem kostenlosen Orientierungsgespräch per Telefon oder Video.",
+    en: "In my constellation practice in Freiburg I accompany you – in person or online – 1:1 in sorting the chaos in your head and dissolving emotional blocks. We start with a free discovery call by phone or video.",
   },
   "hero.cta": {
     de: "Kostenloses Vorgespräch vereinbaren",
