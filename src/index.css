@@ -1,17 +1,17 @@
 /* Latin-Subset, font-display: optional → vermeidet Layout-Shifts beim Schriftartenwechsel (CLS-Fix). */
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Lora';
   font-style: normal;
   font-weight: 400;
   font-display: optional;
-  src: url('@fontsource/playfair-display/files/playfair-display-latin-400-normal.woff2') format('woff2');
+  src: url('@fontsource/lora/files/lora-latin-400-normal.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Lora';
   font-style: normal;
   font-weight: 600;
   font-display: optional;
-  src: url('@fontsource/playfair-display/files/playfair-display-latin-600-normal.woff2') format('woff2');
+  src: url('@fontsource/lora/files/lora-latin-600-normal.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Montserrat';
@@ -45,54 +45,54 @@
 @layer base {
   :root {
     /* Background: crisp, near-white with a cool tint */
-    --background: 210 30% 99%;
+    --background: 40 33% 96%;
     /* Foreground: deep slate blue, never pure black */
-    --foreground: 214 32% 18%;
+    --foreground: 24 24% 16%;
 
     /* Card: soft pebble white, defined by hairline borders */
-    --card: 0 0% 100%;
-    --card-foreground: 214 32% 18%;
+    --card: 40 28% 93%;
+    --card-foreground: 24 24% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 214 32% 18%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 24 24% 16%;
 
     /* Primary: soft terracotta — human warmth for actions */
-    --primary: 16 48% 48%;
-    --primary-foreground: 40 40% 98%;
+    --primary: 16 48% 46%;
+    --primary-foreground: 40 40% 97%;
 
     /* Secondary: muted gold / warm sand */
-    --secondary: 36 38% 56%;
-    --secondary-foreground: 214 32% 18%;
+    --secondary: 27 34% 38%;
+    --secondary-foreground: 40 40% 97%;
 
     /* Muted: cool light silver surface */
-    --muted: 213 28% 96%;
-    --muted-foreground: 214 14% 44%;
+    --muted: 40 33% 97%;
+    --muted-foreground: 24 14% 36%;
 
     /* Accent: soft pebble gray plane */
-    --accent: 213 30% 94%;
-    --accent-foreground: 214 32% 18%;
+    --accent: 95 16% 82%;
+    --accent-foreground: 24 24% 16%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 40 40% 98%;
 
-    --border: 214 22% 89%;
-    --input: 214 22% 89%;
-    --ring: 36 38% 52%;
+    --border: 36 22% 84%;
+    --input: 36 22% 84%;
+    --ring: 27 34% 38%;
 
     /* Architectural, not bouncy */
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
     /* Custom brand tokens */
-    --fels-charcoal: 214 32% 18%;
-    --fels-sage: 36 38% 56%;
-    --fels-sand: 32 32% 88%;
-    --fels-cream: 0 0% 100%;
-    --fels-sage-gray: 213 28% 96%;
+    --fels-charcoal: 24 24% 16%;
+    --fels-sage: 95 16% 82%;
+    --fels-sand: 40 28% 93%;
+    --fels-cream: 40 33% 97%;
+    --fels-sage-gray: 40 28% 93%;
 
     /* Shadow system — soft, diffuse, floating just above the grid */
-    --shadow-soft: 0 10px 30px -10px hsl(214 30% 30% / 0.05), 0 4px 12px -4px hsl(214 30% 30% / 0.03);
-    --shadow-elevated: 0 16px 40px -12px hsl(214 30% 30% / 0.08), 0 6px 16px -6px hsl(214 30% 30% / 0.04);
-    --shadow-ring: 0 0 0 1px hsl(var(--border)), 0 10px 30px -10px hsl(214 30% 30% / 0.05);
+    --shadow-soft: 0 10px 30px -16px hsl(24 24% 16% / 0.10);
+    --shadow-elevated: 0 18px 40px -18px hsl(24 24% 16% / 0.16);
+    --shadow-ring: 0 0 0 1px hsl(var(--border)), 0 10px 30px -16px hsl(24 24% 16% / 0.10);
 
     /* Easing */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -107,53 +107,53 @@
     --space-3xl: 4rem;
 
     /* Sidebar tokens */
-    --sidebar-background: 210 30% 99%;
-    --sidebar-foreground: 214 32% 18%;
-    --sidebar-primary: 16 48% 48%;
+    --sidebar-background: 40 33% 96%;
+    --sidebar-foreground: 24 24% 16%;
+    --sidebar-primary: 16 48% 46%;
     --sidebar-primary-foreground: 40 40% 98%;
-    --sidebar-accent: 213 28% 96%;
-    --sidebar-accent-foreground: 214 32% 18%;
-    --sidebar-border: 214 22% 89%;
-    --sidebar-ring: 36 38% 52%;
+    --sidebar-accent: 40 28% 93%;
+    --sidebar-accent-foreground: 24 24% 16%;
+    --sidebar-border: 36 22% 84%;
+    --sidebar-ring: 27 34% 38%;
   }
 
   .dark {
-    --background: 210 30% 99%;
-    --foreground: 214 32% 18%;
+    --background: 40 33% 96%;
+    --foreground: 24 24% 16%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 214 32% 18%;
+    --card: 40 28% 93%;
+    --card-foreground: 24 24% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 214 32% 18%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 24 24% 16%;
 
-    --primary: 16 48% 48%;
-    --primary-foreground: 40 40% 98%;
+    --primary: 16 48% 46%;
+    --primary-foreground: 40 40% 97%;
 
-    --secondary: 36 38% 56%;
-    --secondary-foreground: 214 32% 18%;
+    --secondary: 27 34% 38%;
+    --secondary-foreground: 40 40% 97%;
 
-    --muted: 213 28% 96%;
-    --muted-foreground: 214 14% 44%;
+    --muted: 40 33% 97%;
+    --muted-foreground: 24 14% 36%;
 
-    --accent: 213 30% 94%;
-    --accent-foreground: 214 32% 18%;
+    --accent: 95 16% 82%;
+    --accent-foreground: 24 24% 16%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 40 40% 98%;
 
-    --border: 214 22% 89%;
-    --input: 214 22% 89%;
-    --ring: 36 38% 52%;
+    --border: 36 22% 84%;
+    --input: 36 22% 84%;
+    --ring: 27 34% 38%;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 214 32% 18%;
-    --sidebar-primary: 16 48% 48%;
+    --sidebar-background: 40 33% 96%;
+    --sidebar-foreground: 24 24% 16%;
+    --sidebar-primary: 16 48% 46%;
     --sidebar-primary-foreground: 40 40% 98%;
-    --sidebar-accent: 213 28% 96%;
-    --sidebar-accent-foreground: 214 32% 18%;
-    --sidebar-border: 214 22% 89%;
-    --sidebar-ring: 36 38% 52%;
+    --sidebar-accent: 40 28% 93%;
+    --sidebar-accent-foreground: 24 24% 16%;
+    --sidebar-border: 36 22% 84%;
+    --sidebar-ring: 27 34% 38%;
   }
 }
 
@@ -171,9 +171,7 @@
     @apply bg-background text-foreground font-sans antialiased;
     line-height: 1.75;
     /* Precise geometric grid — barely-there, architectural, never organic. */
-    background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.04) 1px, transparent 1px);
+    background-image: none;
     background-size: 120px 120px, 120px 120px;
     background-attachment: fixed, fixed;
   }
@@ -450,7 +448,7 @@ h3 {
 
 /* Einheitliche Bildsprache: dezent warmer Linen-Ton über alle Hero/Praxis-Fotos */
 .img-warm {
-  filter: saturate(0.85) contrast(1.06) brightness(0.92);
+  filter: sepia(0.12) saturate(0.9) contrast(1.04) brightness(0.96);
 }
 @media (prefers-reduced-motion: no-preference) {
   .img-warm { transition: filter 400ms ease; }
