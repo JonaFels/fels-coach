@@ -26,7 +26,7 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
 
   return (
     <div className="w-full px-4 md:px-0">
-      <div className="h-40 sm:h-52 md:h-[28vh] md:max-h-[280px] lg:h-[32vh] lg:max-h-[320px] overflow-hidden relative rounded-lg md:rounded-none">
+      <div className="h-40 sm:h-44 md:h-[28vh] md:max-h-[300px] overflow-hidden relative rounded-lg md:rounded-none">
         <img
           src={image}
           srcSet={`${imageMobile} 800w, ${image} 1400w`}
@@ -39,7 +39,7 @@ export const PraxisHeroBanner = ({ variant = "sitzbereich" }: PraxisHeroBannerPr
           width={1400}
           height={583}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-transparent to-background/50" />
       </div>
     </div>
   );

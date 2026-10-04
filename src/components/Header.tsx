@@ -31,12 +31,12 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-muted/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-40 w-full bg-background/85 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Brand */}
           <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
-            <span className="relative flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-[hsl(var(--fels-cream))] shadow-[var(--shadow-soft)]">
+            <span className="relative flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-secondary/50 shadow-[var(--shadow-soft)]">
               <img
                 src={logoSrc}
                 alt="Jona Fels"
@@ -60,7 +60,7 @@ export const Header = () => {
                 key={item.key}
                 href={item.href}
                 onClick={() => handleNavClick(item.key, item.href)}
-                className="text-[0.8rem] font-medium text-foreground/80 hover:text-foreground transition-colors whitespace-nowrap"
+                className="text-[0.8125rem] font-medium text-foreground/75 hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {t(item.key)}
               </a>
