@@ -1124,7 +1124,19 @@ export const translations: Translations = {
   // Kontakt Page – Kalender
   "contact.calendarHeadline": {
     de: "Lass uns kurz sprechen – unverbindlich und kostenfrei.",
-    en: "Let's have a quick talk – non-binding and free of charge.",
+    en: "Let's have a quick chat – no strings attached, free of charge.",
+  },
+  "contact.calendarIntro": {
+    de: "Wähle direkt deinen Termin für ein 20-minütiges Orientierungsgespräch. Wir klären dein Anliegen in Ruhe und schauen, ob die Chemie für eine Zusammenarbeit stimmt.",
+    en: "Book a 20-minute discovery call directly. We'll talk through your situation at a relaxed pace and see whether we're a good fit to work together.",
+  },
+  "contact.calendarIframeTitle": {
+    de: "Terminbuchung – Orientierungsgespräch",
+    en: "Booking – Discovery Call",
+  },
+  "contact.directText": {
+    de: "Schreib mir gerne direkt – per E-Mail oder über das Formular. Ich melde mich zeitnah bei dir zurück.",
+    en: "Feel free to write to me directly – by email or via the form. I'll get back to you shortly.",
   },
   "contact.calendarMicrocopy": {
     de: "",

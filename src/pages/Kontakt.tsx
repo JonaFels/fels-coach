@@ -12,7 +12,7 @@ const BOOKING_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
 
 const Kontakt = () => {
   const { hash } = useLocation();
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const bookingUrl = language === "en" ? BOOKING_URL_EN : BOOKING_URL_DE;
 
   useLayoutEffect(() => {
@@ -39,17 +39,16 @@ const Kontakt = () => {
         <section id="erstgespraech" className="pt-14 pb-20 md:pt-24 md:pb-28 bg-background scroll-mt-24">
           <div className="container mx-auto px-5 max-w-3xl">
             <h1 className="font-serif text-[clamp(1.75rem,5vw,2.75rem)] leading-tight font-medium text-foreground text-center text-balance">
-              Lass uns kurz sprechen – unverbindlich und kostenfrei.
+              {t("contact.calendarHeadline")}
             </h1>
             <p className="mt-6 text-center text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Wähle direkt deinen Termin für ein 20-minütiges Orientierungsgespräch. Wir klären dein
-              Anliegen in Ruhe und schauen, ob die Chemie für eine Zusammenarbeit stimmt.
+              {t("contact.calendarIntro")}
             </p>
 
             <div className="mt-10 md:mt-14 card-base border-border overflow-hidden">
               <iframe
                 src={bookingUrl}
-                title="Terminbuchung – Orientierungsgespräch"
+                title={t("contact.calendarIframeTitle")}
                 loading="lazy"
                 className="block w-full border-0"
                 style={{ height: "750px" }}
@@ -64,11 +63,10 @@ const Kontakt = () => {
           <div className="container mx-auto px-5 max-w-2xl">
             <div className="text-center">
               <h2 className="font-serif text-2xl md:text-3xl font-medium text-foreground">
-                Direkter Kontakt
+                {t("contact.directTitle")}
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                Schreib mir gerne direkt – per E-Mail oder über das Formular. Ich melde mich
-                zeitnah bei dir zurück.
+                {t("contact.directText")}
               </p>
               <a
                 href="mailto:jona@fels-coach.de"
