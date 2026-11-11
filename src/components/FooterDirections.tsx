@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MapPin, TramFront, Car, DoorOpen } from "lucide-react";
 
@@ -7,7 +8,9 @@ const MAPS_QUERY = "Karlstraße 51, 79104 Freiburg im Breisgau";
  * Anfahrt-Bereich im Footer: Karte + Wegbeschreibung (ÖPNV, Auto, Vor Ort).
  */
 export const FooterDirections = () => {
-  const { t, language } = useLanguage();
+  const { t, language, localize } = useLanguage();
+  // Zwei-Klick-Lösung: Google Maps wird erst nach aktivem Klick geladen (DSGVO/TDDDG).
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   return (
     <section
@@ -73,15 +76,35 @@ export const FooterDirections = () => {
 
         {/* Karte */}
         <div className="mt-16 md:mt-24 rounded-lg overflow-hidden ring-1 ring-border/40 shadow-[var(--shadow-soft)] bg-muted/30">
-          <iframe
-            title={`Google Maps – ${MAPS_QUERY}`}
-            src={`https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=15&output=embed`}
-            width="100%"
-            height="340"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            style={{ border: 0, display: "block" }}
-          />
+          {mapLoaded ? (
+            <iframe
+              title={`Google Maps – ${MAPS_QUERY}`}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=15&output=embed`}
+              width="100%"
+              height="340"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0, display: "block" }}
+            />
+          ) : (
+            <div className="flex h-[340px] flex-col items-center justify-center gap-4 px-6 text-center">
+              <MapPin className="h-8 w-8 text-primary" aria-hidden="true" />
+              <p className="text-sm font-medium text-foreground">{MAPS_QUERY}</p>
+              <button
+                type="button"
+                onClick={() => setMapLoaded(true)}
+                className="rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary"
+              >
+                {t("map.load")}
+              </button>
+              <p className="max-w-sm text-xs text-muted-foreground leading-relaxed">
+                {t("map.notice")}{" "}
+                <a href={localize("/datenschutz")} className="underline underline-offset-2">
+                  {t("footer.privacy")}
+                </a>
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="mt-10 md:mt-12 text-center">

@@ -63,6 +63,7 @@ const Datenschutz = () => {
             <p>{t("privacy.s4.p1")}</p>
             <p>{t("privacy.s4.p2")}</p>
             <p>{t("privacy.s4.p3")}</p>
+            <p>{t("privacy.s4.p4")}</p>
 
             <hr />
 
@@ -80,18 +81,11 @@ const Datenschutz = () => {
 
             <hr />
 
-
-            <h2>{t("privacy.s8.heading")}</h2>
-            <p>{t("privacy.s8.p1")}</p>
-            <p>{t("privacy.s8.p2")}</p>
-            <p>{t("privacy.s8.p3")}</p>
-            <p>{t("privacy.s8.p4")}</p>
-
-            <hr />
-
             <h2>{t("privacy.s9.heading")}</h2>
             <p>{t("privacy.s9.p1")}</p>
             <p><strong>{language === "de" ? "Besonderer Schutz von Gesundheitsdaten:" : "Special protection of health data:"}</strong> {t("privacy.s9.p2")}</p>
+            <p>{t("privacy.s9.p4")}</p>
+            <p>{t("privacy.s9.p5")}</p>
             <p>{t("privacy.s9.p3")}</p>
 
             <hr />
@@ -104,6 +98,12 @@ const Datenschutz = () => {
 
             <h2>{t("privacy.s11.heading")}</h2>
             <p>{t("privacy.s11.text")}</p>
+
+            <hr />
+
+            <h2>{t("privacy.maps.heading")}</h2>
+            <p>{t("privacy.maps.p1")}</p>
+            <p>{t("privacy.maps.p2")}</p>
 
             <hr />
 
@@ -231,6 +231,7 @@ const Datenschutz = () => {
           </>
           )}
 
+            <p className="text-sm text-muted-foreground">{t("privacy.updated")}</p>
           </div>
         </div>
       </main>
