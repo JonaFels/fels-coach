@@ -7,7 +7,7 @@ const MAPS_QUERY = "Karlstraße 51, 79104 Freiburg im Breisgau";
  * Anfahrt-Bereich im Footer: Karte + Wegbeschreibung (ÖPNV, Auto, Vor Ort).
  */
 export const FooterDirections = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section
@@ -93,7 +93,7 @@ export const FooterDirections = () => {
             className="inline-flex items-center gap-2 text-sm text-primary hover:underline no-underline-effect"
           >
             <MapPin className="h-4 w-4" aria-hidden="true" />
-            Route in Google Maps öffnen
+            {language === "de" ? "Route in Google Maps öffnen" : "Open route in Google Maps"}
           </a>
         </div>
 

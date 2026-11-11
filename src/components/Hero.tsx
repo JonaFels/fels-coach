@@ -7,7 +7,7 @@ import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 import profilBildMobile from "@/assets/jona-fels-systemisches-coaching-450.webp";
 
 export const Hero = () => {
-  const { t, language } = useLanguage();
+  const { t, language, localize } = useLanguage();
   const facts = language === "en"
     ? [{ icon: Video, text: "Free 20-min discovery call by phone or video" }, { icon: MapPin, text: "In Freiburg or online · in English or German" }, { icon: Clock, text: "90 minutes · 110 €" }]
     : [{ icon: Video, text: "Kostenloses Orientierungsgespräch – 20 Min. per Telefon oder Video" }, { icon: MapPin, text: "Vor Ort in Freiburg oder online · auf Deutsch oder Englisch" }, { icon: Clock, text: "90 Minuten · 110 €" }];
@@ -50,7 +50,7 @@ export const Hero = () => {
                 asChild
               >
                 <a
-                  href="/kontakt"
+                  href={localize("/kontakt")}
                   onClick={() => trackCTAClick("hero_consultation", "homepage_hero", "link")}
                 >
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />

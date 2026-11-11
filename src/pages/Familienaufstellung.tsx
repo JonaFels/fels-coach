@@ -12,6 +12,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SEOHead } from "@/components/SEOHead";
+import { miriam, translatedNote } from "@/data/testimonials";
 import { JsonLd } from "@/components/JsonLd";
 
 import { trackCTAClick } from "@/lib/tracking";
@@ -22,7 +23,7 @@ import praxisAufstellung from "@/assets/praxis-aufstellung.webp";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
 
 const Familienaufstellung = () => {
-  const { t, language } = useLanguage();
+  const { t, language, localize } = useLanguage();
   const { getImage } = useCMS();
   const familyImage = getImage("family.image", praxisAufstellung);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -252,10 +253,11 @@ const Familienaufstellung = () => {
             <blockquote className="relative card-base p-8 md:p-10">
               <Quote className="absolute top-6 left-6 h-7 w-7 text-secondary/25" aria-hidden="true" />
               <p className="text-muted-foreground italic leading-relaxed text-base md:text-lg pl-8">
-                „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine tiefgehende Präsenz sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an Klarheit und Sicherheit."
+                „{miriam[language].map((part) => part.text).join("")}"
               </p>
               <footer className="mt-5 pl-8">
-                <span className="font-medium text-foreground text-sm">– Miriam</span>
+                <span className="font-medium text-foreground text-sm">– {miriam.name}</span>
+                {language === "en" && <span className="block text-xs text-muted-foreground mt-1">{translatedNote}</span>}
               </footer>
             </blockquote>
           </div>
@@ -273,7 +275,7 @@ const Familienaufstellung = () => {
               asChild
             >
               <a
-                href="/kontakt"
+                href={localize("/kontakt")}
                 onClick={() => trackCTAClick("familienaufstellung_cta", "familienaufstellung", "link")}
               >
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />

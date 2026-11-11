@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 ];
 
 export const Header = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
   const { getImage } = useCMS();
   const logoSrc = getImage("branding.logo", logoIcon);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Brand */}
-          <a href="/" className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
+          <a href={localize("/")} className="flex-shrink-0 flex items-center gap-2.5 no-underline-effect">
             <span className="relative flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full bg-[hsl(var(--fels-cream))] ring-1 ring-secondary/50 shadow-[var(--shadow-soft)]">
               <img
                 src={logoSrc}
@@ -58,7 +58,7 @@ export const Header = () => {
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.key}
-                href={item.href}
+                href={localize(item.href)}
                 onClick={() => handleNavClick(item.key, item.href)}
                 className="text-[0.8125rem] font-medium text-foreground/75 hover:text-foreground transition-colors whitespace-nowrap"
               >
@@ -76,7 +76,7 @@ export const Header = () => {
               asChild
             >
               <a
-                href="/kontakt"
+                href={localize("/kontakt")}
                 onClick={handleCTAClick}
               >
                 <Phone className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
@@ -106,7 +106,7 @@ export const Header = () => {
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.key}
-                href={item.href}
+                href={localize(item.href)}
                 onClick={() => {
                   handleNavClick(item.key, item.href);
                   setIsMobileMenuOpen(false);
@@ -124,7 +124,7 @@ export const Header = () => {
               asChild
             >
               <a
-                href="/kontakt"
+                href={localize("/kontakt")}
                 onClick={() => {
                   handleCTAClick();
                   setIsMobileMenuOpen(false);

@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
     slug: "familienstellen-in-einer-einzelsitzung",
     title: {
       de: "Keine Gruppe nötig: Wie du Klarheit für dein Familiensystem im 1:1 Aufstellungsarbeit findest",
-      en: "No Group Needed: How to Find Clarity for Your Family System in 1:1 Aufstellungsarbeit",
+      en: "No Group Needed: How to Find Clarity for Your Family System in a 1:1 Constellation",
     },
     metaTitle: "Familienstellen 1:1 in Freiburg – Klarheit ohne Gruppe",
     metaDescription:

@@ -11,7 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { blogPosts, clampMeta, slugify } from "@/data/blogPosts";
 import { ArrowLeft, Clock, List } from "lucide-react";
 import { format, parseISO } from "date-fns";
-import { de } from "date-fns/locale";
+import { de, enUS } from "date-fns/locale";
 import DOMPurify from "dompurify";
 
 // Beim Vorrendern (Build, kein DOM) ist DOMPurify nicht verfügbar. Die Blog-Inhalte
@@ -27,28 +27,28 @@ interface TocItem {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useLanguage();
+  const { t, language, localize } = useLanguage();
 
   const post = blogPosts.find((p) => p.slug === slug);
 
   // Article JSON-LD pro Blogpost (dynamisch je Slug)
   useEffect(() => {
     if (!post) return;
-    const url = `https://fels-coach.de/blog/${post.slug}`;
+    const url = `https://fels-coach.de${localize(`/blog/${post.slug}`)}`;
     const schema = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      headline: post.title.de,
-      description: post.metaDescription ?? post.excerpt.de,
+      headline: post.title[language],
+      inLanguage: language,
+      description: language === "de" ? post.metaDescription ?? post.excerpt.de : post.excerpt.en,
       image: post.image
         ? `https://fels-coach.de${post.image.startsWith("/") ? "" : "/"}${post.image}`
         : undefined,
       datePublished: post.publishedAt,
       dateModified: post.publishedAt,
-      inLanguage: "de",
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       url,
-      author: { "@type": "Person", name: "Jona Fels", url: "https://fels-coach.de/ueber-mich" },
+      author: { "@type": "Person", name: "Jona Fels", url: `https://fels-coach.de${localize("/ueber-mich")}` },
       publisher: {
         "@type": "Organization",
         name: "Systemische Aufstellungen",
@@ -63,7 +63,7 @@ const BlogPost = () => {
     return () => {
       script.remove();
     };
-  }, [post]);
+  }, [post, language, localize]);
 
   // Optionales FAQPage-Schema – nur ausspielen wenn der Post FAQs definiert
   useEffect(() => {
@@ -85,12 +85,12 @@ const BlogPost = () => {
     return () => {
       script.remove();
     };
-  }, [post]);
+  }, [post, language, localize]);
 
   // TOC + Lesezeit aus Content ableiten
   const { toc, readingTime } = useMemo(() => {
     if (!post) return { toc: [] as TocItem[], readingTime: 0 };
-    const lines = post.content.de.split("\n");
+    const lines = post.content[language].split("\n");
     const tocItems: TocItem[] = [];
     const usedIds = new Set<string>();
     lines.forEach((raw) => {
@@ -114,9 +114,9 @@ const BlogPost = () => {
         tocItems.push({ id, text, level });
       }
     });
-    const words = post.content.de.split(/\s+/).filter(Boolean).length;
+    const words = post.content[language].split(/\s+/).filter(Boolean).length;
     return { toc: tocItems, readingTime: Math.max(1, Math.round(words / 200)) };
-  }, [post]);
+  }, [post, language]);
 
   const [activeId, setActiveId] = useState<string>("");
 
@@ -139,11 +139,13 @@ const BlogPost = () => {
   }, [toc, post]);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={localize("/blog")} replace />;
   }
 
   const formatDate = (dateString: string) => {
-    return format(parseISO(dateString), "d. MMMM yyyy", { locale: de });
+    return language === "de"
+      ? format(parseISO(dateString), "d. MMMM yyyy", { locale: de })
+      : format(parseISO(dateString), "MMMM d, yyyy", { locale: enUS });
   };
 
   const renderContent = (content: string) => {
@@ -328,9 +330,13 @@ const BlogPost = () => {
 
   };
 
-  const metaTitle = clampMeta(post.metaTitle ?? `${post.title.de} | Jona Fels`, 60);
-  const metaDescription = clampMeta(post.metaDescription ?? post.excerpt.de, 150);
-  const imageAlt = post.imageAlt?.trim() || `Titelbild: ${post.title.de}`;
+  const metaTitle =
+    language === "de"
+      ? clampMeta(post.metaTitle ?? `${post.title[language]} | Jona Fels`, 60)
+      : clampMeta(`${post.title.en} | Jona Fels`, 60);
+  const metaDescription = clampMeta(language === "de" ? post.metaDescription ?? post.excerpt.de : post.excerpt.en, 150);
+  const imageAlt =
+    language === "de" ? post.imageAlt?.trim() || `Titelbild: ${post.title[language]}` : `Cover image: ${post.title.en}`;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -340,7 +346,7 @@ const BlogPost = () => {
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <Link
-              to="/blog"
+              to={localize("/blog")}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-10 md:mb-14 min-h-[44px] text-sm"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
@@ -352,10 +358,10 @@ const BlogPost = () => {
                 Journal
               </p>
               <h1 className="font-serif text-3xl md:text-5xl lg:text-[3.25rem] font-semibold text-foreground leading-[1.1] mb-7 tracking-tight">
-                {post.title.de}
+                {post.title[language]}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-[1.55] mb-8 font-serif italic">
-                {post.excerpt.de}
+                {post.excerpt[language]}
               </p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground border-t border-border/60 pt-6">
                 <span className="font-medium text-foreground">Jona Fels</span>
@@ -364,7 +370,7 @@ const BlogPost = () => {
                 <span className="text-border">·</span>
                 <span className="inline-flex items-center gap-1.5">
                   <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                  {readingTime} Min Lesezeit
+                  {readingTime} {language === "de" ? "Min. Lesezeit" : "min read"}
                 </span>
               </div>
             </header>
@@ -386,7 +392,7 @@ const BlogPost = () => {
 
             <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-16 xl:gap-24">
               <article className="max-w-[680px]">
-                <div className="prose-content">{renderContent(post.content.de)}</div>
+                <div className="prose-content">{renderContent(post.content[language])}</div>
                 <div className="mt-16 md:mt-20">
                   <AuthorBox />
                 </div>
@@ -398,7 +404,7 @@ const BlogPost = () => {
                   <div className="sticky top-28">
                     <p className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium mb-4">
                       <List className="h-3.5 w-3.5" aria-hidden="true" />
-                      In diesem Artikel
+                      {language === "de" ? "In diesem Artikel" : "In this article"}
                     </p>
                     <nav>
                       <ul className="space-y-2.5 text-sm border-l border-border/60">
@@ -430,26 +436,26 @@ const BlogPost = () => {
             </div>
 
             <aside
-              aria-label="Angebote"
+              aria-label={language === "de" ? "Angebote" : "Offers"}
               className="max-w-3xl mt-20 md:mt-28 rounded-lg border border-secondary/15 bg-secondary/5 px-6 py-10 md:px-10 md:py-12 shadow-[var(--shadow-soft)]"
             >
               <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground leading-snug mb-4">
-                Möchtest du an deinen eigenen Themen arbeiten?
+                {language === "de" ? "Möchtest du an deinen eigenen Themen arbeiten?" : "Would you like to work on your own topics?"}
               </h3>
               <p className="text-foreground/80 leading-[1.7] text-[1.05rem] mb-8 max-w-2xl">
-                Wenn dieser Artikel in dir etwas angestoßen hat und du spürst, dass du dir bei
-                Unklarheiten oder alten Mustern professionelle Begleitung wünschst, lass uns
-                sprechen.
+                {language === "de"
+                  ? "Wenn dieser Artikel in dir etwas angestoßen hat und du spürst, dass du dir bei Unklarheiten oder alten Mustern professionelle Begleitung wünschst, lass uns sprechen."
+                  : "If this article has stirred something in you and you feel you'd like professional support with uncertainty or old patterns, let's talk."}
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
-                  to="/systemische-familienaufstellung-freiburg"
+                  to={localize("/systemische-familienaufstellung-freiburg")}
                   className="group inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-5 py-4 text-center text-sm md:text-base font-medium text-secondary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
                 >
-                  Zur Familienaufstellung
+                  {language === "de" ? "Zur Familienaufstellung" : "About family constellation"}
                 </Link>
                 <Link
-                  to="/kontakt"
+                  to={localize("/kontakt")}
                   className="group inline-flex items-center justify-center gap-2 rounded-lg border border-secondary/40 bg-background px-5 py-4 text-center text-sm md:text-base font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-[var(--shadow-elevated)]"
                 >
                   {t("nav.contactShort")}

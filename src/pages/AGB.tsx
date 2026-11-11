@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 
 const AGB = () => {
-  const { t } = useLanguage();
+  const { t, language, localize } = useLanguage();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -17,6 +17,11 @@ const AGB = () => {
           <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
             {t("terms.title")}
           </h1>
+          {language === "en" && (
+            <p className="text-center text-sm text-muted-foreground -mt-8 mb-12">
+              This is a courtesy translation. In case of doubt, the German version is legally binding.
+            </p>
+          )}
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <h2>{t("terms.clientInfo")}</h2>
@@ -53,7 +58,7 @@ const AGB = () => {
             <p>{t("terms.s7.p2")}</p>
 
             <h3>{t("terms.s8.heading")}</h3>
-            <p>{t("terms.s8.text")} {t("terms.s8.privacyLink")} <Link to="/datenschutz" className="underline hover:text-secondary">{t("terms.s8.privacyLinkText")}</Link>.</p>
+            <p>{t("terms.s8.text")} {t("terms.s8.privacyLink")} <Link to={localize("/datenschutz")} className="underline hover:text-secondary">{t("terms.s8.privacyLinkText")}</Link>.</p>
 
             <h3>{t("terms.s9.heading")}</h3>
             <p>{t("terms.s9.p1")} <a href="mailto:jona@fels-coach.de" className="underline hover:text-secondary">jona@fels-coach.de</a>).</p>

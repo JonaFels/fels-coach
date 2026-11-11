@@ -6,7 +6,7 @@ import { FooterDirections } from "@/components/FooterDirections";
 
 
 export const Footer = () => {
-  const { t, language } = useLanguage();
+  const { t, language, localize } = useLanguage();
   const currentYear = new Date().getFullYear();
   const { pathname } = useLocation();
   const showDirections = !["/", "/ablauf-preise", "/agb", "/datenschutz", "/impressum"].includes(pathname);
@@ -22,16 +22,16 @@ export const Footer = () => {
             className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground"
             aria-label="Footer-Navigation"
           >
-            <a href="/kontakt#anfahrt" className="hover:text-foreground transition-colors no-underline-effect">
-              Anfahrt
+            <a href={localize("/kontakt#anfahrt")} className="hover:text-foreground transition-colors no-underline-effect">
+              {t("nav.anfahrt")}
             </a>
-            <a href="/impressum" className="hover:text-foreground transition-colors no-underline-effect">
+            <a href={localize("/impressum")} className="hover:text-foreground transition-colors no-underline-effect">
               {t("footer.imprint")}
             </a>
-            <a href="/datenschutz" className="hover:text-foreground transition-colors no-underline-effect">
+            <a href={localize("/datenschutz")} className="hover:text-foreground transition-colors no-underline-effect">
               {t("footer.privacy")}
             </a>
-            <a href="/agb" className="hover:text-foreground transition-colors no-underline-effect">
+            <a href={localize("/agb")} className="hover:text-foreground transition-colors no-underline-effect">
               {t("footer.terms")}
             </a>
           </nav>
@@ -80,7 +80,7 @@ export const Footer = () => {
               {t("legal.notTherapy")}
             </p>
             <p className="text-center text-xs text-muted-foreground tracking-wide leading-relaxed">
-              © {currentYear} Jona Fels – Systemische Aufstellungen, Freiburg. {t("footer.rights")}
+              © {currentYear} Jona Fels – {language === "de" ? "Systemische Aufstellungen, Freiburg" : "Systemic Constellations, Freiburg"}. {t("footer.rights")}
             </p>
           </div>
 

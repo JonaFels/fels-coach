@@ -48,15 +48,15 @@ const faqData = {
     },
     {
       question: "Does health insurance cover the costs?",
-      answer: "No. Aufstellungsarbeit and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (90 min.) is €110. In return, you're free to choose your own path – with no diagnosis and no medical record.",
+      answer: "No. Constellation work and family constellation are not medical treatment, so they are offered as self-pay services. One session (90 min.) is €110. In return, you're free to choose your own path – with no diagnosis and no medical record.",
     },
     {
       question: "How can I get started and is there a free discovery call?",
       answer: "The first step is simple: Request a free 20-minute discovery call via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
     },
     {
-      question: "Where does coaching take place and are there weekend appointments?",
-      answer: "My practice is centrally located at Karlstraße 51, 79104 Freiburg im Breisgau (tram 3). Since many of my clients work during the week, I mainly offer sessions on Saturdays between 2:00 PM and 8:00 PM – calm, and without everyday stress.",
+      question: "Where do sessions take place, and are there weekend appointments?",
+      answer: "My practice is centrally located at Karlstraße 51, 79104 Freiburg im Breisgau (tram 3). Since many of my clients work during the week, I mainly offer sessions on Saturdays between 2:00 PM and 8:00 PM – calm, and without everyday stress. Sessions are also available online, in English or German.",
     },
   ],
 };

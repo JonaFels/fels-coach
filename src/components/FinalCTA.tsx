@@ -5,7 +5,7 @@ import { trackCTAClick } from "@/lib/tracking";
 import { useErstgespraech } from "@/components/HashBookingTrigger";
 
 export const FinalCTA = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
   const booking = useErstgespraech();
 
   return (
@@ -39,7 +39,7 @@ export const FinalCTA = () => {
             asChild
           >
             <a
-              href="/kontakt#erstgespraech"
+              href={localize("/kontakt#erstgespraech")}
               onClick={(e) => {
                 if (booking) {
                   e.preventDefault();

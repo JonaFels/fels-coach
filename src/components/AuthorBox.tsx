@@ -4,13 +4,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
 
 export const AuthorBox = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
 
   return (
     <Card className="bg-card/95 backdrop-blur-sm border-border/60 mt-12 shadow-[var(--shadow-soft)]">
       <CardContent className="pt-6">
         <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-          <Link to="/ueber-mich" className="flex-shrink-0">
+          <Link to={localize("/ueber-mich")} className="flex-shrink-0">
             <img
               src={profilBild}
               alt="Jona Fels - Systemischer Aufsteller und Prozessbegleiter in Freiburg"
@@ -22,7 +22,7 @@ export const AuthorBox = () => {
             <p className="text-sm text-muted-foreground uppercase tracking-wide mb-1">
               {t("author.writtenBy")}
             </p>
-            <Link to="/ueber-mich" className="hover:text-secondary transition-colors">
+            <Link to={localize("/ueber-mich")} className="hover:text-secondary transition-colors">
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 Jona Fels
               </h3>
@@ -38,7 +38,7 @@ export const AuthorBox = () => {
                 {t("author.credential1")}
               </span>
               <Link
-                to="/kontakt"
+                to={localize("/kontakt")}
                 className="inline-flex items-center px-4 py-1.5 text-xs font-medium rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
               >
                 {t("nav.contactShort")}

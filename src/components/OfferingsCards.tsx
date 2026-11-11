@@ -4,34 +4,31 @@ import { trackCTAClick } from "@/lib/tracking";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const OfferingsCards = () => {
-  const { t } = useLanguage();
+  const { t, language, localize } = useLanguage();
 
   return (
     <section className="py-28 md:py-36 bg-muted/30">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-14 md:mb-16">
-          <p className="eyebrow mb-4">Mein 1:1 Angebot</p>
+          <p className="eyebrow mb-4">{language === "de" ? "Mein 1:1 Angebot" : "My 1:1 offer"}</p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground leading-tight">
-            Systemische Aufstellungen im Einzelsetting
+            {language === "de" ? "Systemische Aufstellungen im Einzelsetting" : "Systemic constellations in a 1:1 setting"}
           </h2>
         </div>
 
         <div className="card-base p-8 md:p-12">
           <p className="text-lg md:text-xl text-foreground leading-[1.8]">
-            In meinem 1:1 Angebot arbeiten wir mit der{" "}
+            {language === "de" ? "In meinem 1:1 Angebot arbeiten wir mit der " : "In my 1:1 sessions we work with "}
             <Link
-              to="/systemische-familienaufstellung-freiburg"
+              to={localize("/systemische-familienaufstellung-freiburg")}
               onClick={() => trackCTAClick("offering_aufstellung", "homepage_offerings", "link")}
               className="font-medium text-secondary underline underline-offset-4 decoration-1 hover:decoration-2"
             >
-              Familienaufstellung Freiburg
+              {language === "de" ? "Familienaufstellung Freiburg" : "family constellation in Freiburg"}
             </Link>
-            . Mit Bodenankern im Raum machen wir unbewusste Dynamiken deiner
-            Herkunftsfamilie sichtbar und lösen alte Verstrickungen – geschützt,
-            vertraulich und ohne Gruppe. Eingebettet ist die Aufstellung immer in
-            ein ruhiges Gespräch: Wir ordnen, was gerade viel ist, und schauen
-            gemeinsam, welcher Schritt für dich stimmig ist – in Freiburg oder
-            online.
+            {language === "de"
+              ? ". Mit Bodenankern im Raum machen wir unbewusste Dynamiken deiner Herkunftsfamilie sichtbar – geschützt, vertraulich und ohne Gruppe. Eingebettet ist die Aufstellung immer in ein ruhiges Gespräch: Wir ordnen, was gerade viel ist, und schauen gemeinsam, welcher Schritt für dich stimmig ist – in Freiburg oder online, auf Deutsch oder Englisch."
+              : ". Using floor anchors in the room, we make unconscious dynamics of your family of origin visible – safely, confidentially and without a group. The constellation is always embedded in a calm conversation: we sort out what feels like too much right now and explore together which next step feels right for you – in Freiburg or online, in English or German."}
           </p>
         </div>
 

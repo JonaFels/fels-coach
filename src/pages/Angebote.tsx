@@ -85,8 +85,8 @@ const Angebote = () => {
                   {t("offerings.coaching.desc")}
                 </p>
                 <div className="flex items-baseline gap-2 border-t border-border/50 pt-4">
-                  <span className="text-3xl font-semibold text-foreground">110&nbsp;€</span>
-                  <span className="text-sm text-muted-foreground">/ 90&nbsp;Min.</span>
+                  <span className="text-3xl font-semibold text-foreground">{language === "de" ? "110\u00a0€" : "€110"}</span>
+                  <span className="text-sm text-muted-foreground">{language === "de" ? "/ 90\u00a0Min." : "/ 90\u00a0min"}</span>
                 </div>
               </div>
             </div>

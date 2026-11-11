@@ -9,7 +9,7 @@ import { Home } from "lucide-react";
 
 const NotFound = () => {
   const location = useLocation();
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
@@ -33,7 +33,7 @@ const NotFound = () => {
             {t("notFound.text")}
           </p>
           <Button asChild size="lg" className="min-h-[44px]">
-            <Link to="/">
+            <Link to={localize("/")}>
               <Home className="mr-2 h-4 w-4" aria-hidden="true" />
               {t("notFound.backHome")}
             </Link>

@@ -10,7 +10,7 @@ interface MicroCTAProps {
 }
 
 export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
 
   return (
     <div className={cn("flex flex-col items-center justify-center py-8", className)}>
@@ -21,7 +21,7 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
         asChild
       >
         <a
-          href="/kontakt"
+          href={localize("/kontakt")}
           onClick={() => trackCTAClick("micro_cta_vorgespraech", "micro_cta", "link")}
         >
           <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -34,11 +34,11 @@ export const MicroCTA = ({ variant = "primary", className }: MicroCTAProps) => {
 };
 
 export const InlineCTA = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
 
   return (
     <a
-      href="/kontakt"
+      href={localize("/kontakt")}
       className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors group"
     >
       {t("cta.learnMore")}

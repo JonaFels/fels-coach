@@ -8,13 +8,15 @@ import { blogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
 
 import { format, parseISO } from "date-fns";
-import { de } from "date-fns/locale";
+import { de, enUS } from "date-fns/locale";
 
 const Blog = () => {
-  const { t } = useLanguage();
+  const { t, language, localize } = useLanguage();
 
   const formatDate = (dateString: string) => {
-    return format(parseISO(dateString), "d. MMMM yyyy", { locale: de });
+    return language === "de"
+      ? format(parseISO(dateString), "d. MMMM yyyy", { locale: de })
+      : format(parseISO(dateString), "MMMM d, yyyy", { locale: enUS });
   };
 
   return (
@@ -31,14 +33,14 @@ const Blog = () => {
 
             <div className="grid gap-6">
               {blogPosts.map((post) => (
-                <Link key={post.id} to={`/blog/${post.slug}`}>
+                <Link key={post.id} to={localize(`/blog/${post.slug}`)}>
                   <Card className="overflow-hidden hover:shadow-[var(--shadow-elevated)] transition-shadow group rounded-lg">
                     <div className="flex flex-col md:flex-row">
                       {post.image && (
                         <div className="md:w-1/3 aspect-video md:aspect-square">
                           <img
                             src={post.image}
-                            alt={`Blogbeitrag: ${post.title.de}`}
+                            alt={language === "de" ? `Blogbeitrag: ${post.title[language]}` : `Blog post: ${post.title.en}`}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             loading="lazy"
                           />
@@ -47,9 +49,9 @@ const Blog = () => {
                       <CardContent className="flex-1 p-6 flex flex-col justify-center">
                         <p className="text-sm text-muted-foreground mb-2">{formatDate(post.publishedAt)}</p>
                         <h2 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-secondary transition-colors">
-                          {post.title.de}
+                          {post.title[language]}
                         </h2>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt.de}</p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt[language]}</p>
                       </CardContent>
                     </div>
                   </Card>

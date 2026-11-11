@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 
 export const AboutPreview = () => {
-  const { t, language } = useLanguage();
+  const { t, language, localize } = useLanguage();
 
   return (
     <section className="py-36 md:py-48 relative bg-muted/40">
@@ -23,7 +23,7 @@ export const AboutPreview = () => {
           </div>
           <div className="mt-14 text-center">
             <Link
-              to="/ueber-mich#portrait"
+              to={localize("/ueber-mich#portrait")}
               onClick={() => trackCTAClick("about_preview_more", "homepage_about", "link")}
               className="inline-flex items-center gap-2 text-base font-medium text-secondary underline-offset-4 hover:underline transition-colors"
             >

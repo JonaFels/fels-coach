@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SITE_URL, hasTranslation, toEnglishPath, toGermanPath } from "@/lib/i18nRoutes";
 
 interface SEOHeadProps {
   title?: string;
@@ -25,31 +26,27 @@ const defaultMeta = {
 const pageMeta: Record<string, Record<string, { title: string; description: string; keywords?: string }>> = {
   "/": {
     de: { title: "Familienaufstellung Freiburg im Einzelsetting | Jona Fels", description: "Familienaufstellung in Freiburg im 1:1 Setting – mit Bodenankern, ohne Gruppe, vor Ort oder online. 90 Min. für 110 €. Kostenloses Orientierungsgespräch vereinbaren." },
-    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation in Freiburg in a 1:1 setting – with floor anchors, no group, in person or online. 90 min for €110. Book your free discovery call." },
-  },
-  "/en": {
-    de: { title: "Familienaufstellung Freiburg im Einzelsetting | Jona Fels", description: "Familienaufstellung in Freiburg im 1:1 Setting – mit Bodenankern, ohne Gruppe, vor Ort oder online. 90 Min. für 110 €. Kostenloses Orientierungsgespräch vereinbaren." },
-    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation in Freiburg in a 1:1 setting – with floor anchors, no group, in person or online. 90 min for €110. Book your free discovery call." },
+    en: { title: "Family Constellation in Freiburg – in English | Jona Fels", description: "Family constellation in Freiburg in a 1:1 setting – in English or German, in person or online. 90 min for €110. Book your free 20-minute discovery call." },
   },
   "/ablauf-preise": {
     de: { title: "Ablauf & Preise | Systemische Aufstellungen Freiburg", description: "Kostenloses Orientierungsgespräch (Telefon/Video), Systemische 1:1 Aufstellung 110 € (90 Min.) – vor Ort in Freiburg oder online. Jona Fels." },
-    en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free discovery call (phone/video), Systemic 1:1 Constellation €110 (90 min) – in person in Freiburg or online. Jona Fels." },
+    en: { title: "Process & Pricing | Family Constellation Freiburg", description: "Free 20-minute discovery call, then a 90-minute 1:1 constellation for €110 – in Freiburg or online, in English or German." },
   },
   "/systemische-familienaufstellung-freiburg": {
     de: { title: "Familienaufstellung im Einzelsetting: Ablauf & Methode | Jona Fels", description: "Wie läuft eine Familienaufstellung im Einzelsetting ab? Bodenanker statt Stellvertreter, vertraulich und ohne Gruppe – Methode und Ablauf in Freiburg erklärt." },
-    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation Freiburg in a 1:1 setting: floor anchors, confidential, no group. Book your free discovery call with Jona Fels." },
+    en: { title: "Family Constellation 1:1: Process & Method | Jona Fels", description: "How does a 1:1 family constellation work? Floor anchors instead of stand-ins, confidential and without a group – sessions in English in Freiburg or online." },
   },
   "/ueber-mich": {
     de: { title: "Über mich – Jona Fels, Systemischer Aufsteller Freiburg", description: "Lerne Jona Fels kennen: Dein systemischer Aufsteller in Freiburg. Erfahre, wie ich meine eigenen Muster durchbrach – und dich durch deine Unklarheit begleite." },
-    en: { title: "About Me – Jona Fels, Systemic Constellation Facilitator Freiburg", description: "Get to know Jona Fels: your systemic constellation facilitator in Freiburg. Learn how I broke through my own patterns – and accompany you through your uncertainty." },
+    en: { title: "About Jona Fels – Family Constellation Facilitator, Freiburg", description: "Get to know Jona Fels, family constellation facilitator in Freiburg: how I found my way out of old family patterns – and how I support you, in English or German." },
   },
   "/kontakt": {
     de: { title: "Kontakt – Systemische Aufstellungen Freiburg | Jona Fels", description: "Kontaktiere Jona Fels in Freiburg für ein kostenloses Orientierungsgespräch zur systemischen Aufstellungsarbeit oder Familienaufstellung. Per Telefon oder E-Mail." },
-    en: { title: "Contact – Systemic Constellation Freiburg | Jona Fels", description: "Contact Jona Fels in Freiburg for a free discovery call on systemic constellation or family constellation. Via phone or email." },
+    en: { title: "Contact – Family Constellation Freiburg | Jona Fels", description: "Get in touch with Jona Fels in Freiburg for a free 20-minute discovery call about family constellation – by phone or video, in English or German." },
   },
   "/blog": {
     de: { title: "Blog – Systemische Aufstellungen & Aufstellung Freiburg | Jona Fels", description: "Artikel und Insights rund um Familienaufstellungen, systemische Prozessarbeit und persönliche Entwicklung – aus der Praxis in Freiburg." },
-    en: { title: "Blog – Systemic Constellation & Constellation Freiburg | Jona Fels", description: "Articles and insights on family constellations, systemic process work and personal growth – from the practice in Freiburg." },
+    en: { title: "Blog – Family Constellation & Systemic Work | Jona Fels", description: "Articles on family constellation, systemic work and personal growth – from my practice in Freiburg." },
   },
   "/datenschutz": {
     de: { title: "Datenschutz – Familienaufstellung Freiburg | Jona Fels", description: "Datenschutzerklärung gemäß DSGVO für die Website von Jona Fels – Familienaufstellung & Aufstellungsarbeit in Freiburg." },
@@ -67,10 +64,6 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     de: { title: "Termin buchen | Jona Fels", description: "Termin für eine Systemische 1:1 Aufstellung bei Jona Fels buchen – 90 Minuten, 110 €, in Freiburg oder online." },
     en: { title: "Book an appointment | Jona Fels", description: "Book a systemic 1:1 constellation with Jona Fels – 90 minutes, €110, in Freiburg or online." },
   },
-  "/appointment": {
-    de: { title: "Termin buchen | Jona Fels", description: "Termin für eine Systemische 1:1 Aufstellung bei Jona Fels buchen – 90 Minuten, 110 €, in Freiburg oder online." },
-    en: { title: "Book an appointment | Jona Fels", description: "Book a systemic 1:1 constellation with Jona Fels – 90 minutes, €110, in Freiburg or online." },
-  },
   "/agb": {
     de: { title: "AGB – Familienaufstellung Freiburg | Jona Fels", description: "Buchungs- und Stornierungsregeln für Aufstellungs- und Familienaufstellungs-Sitzungen bei Jona Fels in Freiburg." },
     en: { title: "Terms – Family Constellation Freiburg | Jona Fels", description: "Booking and cancellation terms for coaching and family constellation sessions with Jona Fels in Freiburg." },
@@ -83,7 +76,9 @@ const resolveHead = (
   opts: { title?: string; description?: string; image?: string; type: string; noindex?: boolean },
 ): ResolvedHead => {
   const cleanPath = pathname === "/" ? "/" : pathname.replace(/\/$/, "");
-  const meta = pageMeta[cleanPath]?.[language] || defaultMeta[language];
+  // Meta-Texte sind unter der deutschen Adresse abgelegt (de + en).
+  const dePath = toGermanPath(cleanPath);
+  const meta = pageMeta[dePath]?.[language] || defaultMeta[language];
   const rawImage = opts.image || "https://fels-coach.de/og-image.png";
   // Open Graph braucht ABSOLUTE URLs (sonst zieht Facebook/LinkedIn das Bild nicht).
   const pageImage = rawImage.startsWith("http")
@@ -96,7 +91,10 @@ const resolveHead = (
     // Canonical IMMER ohne www, ohne Query-String, ohne Trailing-Slash (außer Root)
     url: `https://fels-coach.de${cleanPath}`,
     type: opts.type,
-    noindex: Boolean(opts.noindex) || NOINDEX_PATHS.includes(cleanPath),
+    noindex: Boolean(opts.noindex) || NOINDEX_PATHS.includes(dePath) || (language === "en" && LEGAL_PATHS.includes(dePath)),
+    alternates: hasTranslation(cleanPath)
+      ? { de: `${SITE_URL}${toGermanPath(cleanPath)}`, en: `${SITE_URL}${toEnglishPath(cleanPath)}` }
+      : { de: `${SITE_URL}${cleanPath}` },
   };
 };
 
@@ -107,10 +105,14 @@ export interface ResolvedHead {
   url: string;
   type: string;
   noindex: boolean;
+  /** hreflang-Partner (deutsche und – falls vorhanden – englische Version). */
+  alternates?: { de: string; en?: string };
 }
 
 /** Seiten, die nicht in Google erscheinen sollen (Buchungs-/Admin-Strecken). */
-const NOINDEX_PATHS = ["/termine", "/appointment", "/admin", "/admin/login", "/links"];
+const NOINDEX_PATHS = ["/termine", "/admin", "/admin/login", "/links"];
+/** Rechtstexte: Deutsch ist maßgeblich, die englische Version wird nicht indexiert. */
+const LEGAL_PATHS = ["/impressum", "/datenschutz", "/agb"];
 
 /** Beim Vorrendern (scripts/prerender.js) sammelt SEOHead hier die Meta-Daten ein. */
 export const ssrHead: { current: ResolvedHead | null } = { current: null };

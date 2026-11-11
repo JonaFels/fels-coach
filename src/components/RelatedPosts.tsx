@@ -1,3 +1,4 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
@@ -60,6 +61,7 @@ interface RelatedPostsProps {
 }
 
 export const RelatedPosts = ({ currentSlug }: RelatedPostsProps) => {
+  const { language, localize } = useLanguage();
   const relatedSlugs = RELATED_MAP[currentSlug] ?? [];
   const related = relatedSlugs
     .map((slug) => blogPosts.find((p) => p.slug === slug))
@@ -77,21 +79,21 @@ export const RelatedPosts = ({ currentSlug }: RelatedPostsProps) => {
         id="related-posts-heading"
         className="font-serif text-2xl font-semibold text-foreground mb-6 text-center"
       >
-        Lesen als nächstes
+        {language === "de" ? "Lesen als nächstes" : "Read next"}
       </h2>
 
       <ul role="list" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {related.map((post) => (
           <li key={post.slug}>
             <Link
-              to={`/blog/${post.slug}`}
+              to={localize(`/blog/${post.slug}`)}
               className="group block h-full card-base overflow-hidden hover:shadow-[var(--shadow-elevated)] hover:-translate-y-0.5 transition-all duration-300"
             >
               {post.image && (
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={post.image}
-                    alt={post.imageAlt || post.title.de}
+                    alt={language === "de" ? post.imageAlt || post.title.de : post.title.en}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -100,13 +102,13 @@ export const RelatedPosts = ({ currentSlug }: RelatedPostsProps) => {
               )}
               <div className="p-5">
                 <h3 className="font-serif text-base font-semibold text-foreground leading-snug mb-2 group-hover:text-secondary transition-colors">
-                  {post.title.de}
+                  {post.title[language]}
                 </h3>
                 <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
-                  {post.excerpt.de}
+                  {post.excerpt[language]}
                 </p>
                 <span className="inline-flex items-center gap-1 text-sm text-secondary font-medium mt-3">
-                  Weiterlesen
+                  {language === "de" ? "Weiterlesen" : "Read more"}
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                 </span>
               </div>

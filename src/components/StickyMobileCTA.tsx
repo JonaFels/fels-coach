@@ -10,7 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
  * - Nur sichtbar auf Mobile (<md), Desktop hat Header-CTA.
  */
 export const StickyMobileCTA = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export const StickyMobileCTA = () => {
       aria-hidden={!visible}
     >
       <a
-        href="/kontakt"
+        href={localize("/kontakt")}
         onClick={() => trackCTAClick("sticky_mobile_cta", "sticky_bottom", "link")}
         className="flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground rounded-full py-4 shadow-[var(--shadow-elevated)] ring-1 ring-foreground/5 font-medium text-base active:scale-[0.98] transition-transform"
       >

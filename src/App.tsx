@@ -48,6 +48,16 @@ export const AppRoutes = () => (
               <Route path="/" element={<Index />} />
               <Route path="/index" element={<Index />} />
               <Route path="/en" element={<Index />} />
+              {/* Englische Seiten (Zuordnung in src/lib/i18nRoutes.ts) */}
+              <Route path="/en/process-pricing" element={<Angebote />} />
+              <Route path="/en/family-constellation-freiburg" element={<Familienaufstellung />} />
+              <Route path="/en/about" element={<UeberMich />} />
+              <Route path="/en/contact" element={<Kontakt />} />
+              <Route path="/en/blog" element={<Blog />} />
+              <Route path="/en/blog/:slug" element={<BlogPost />} />
+              <Route path="/en/imprint" element={<Impressum />} />
+              <Route path="/en/privacy" element={<Datenschutz />} />
+              <Route path="/en/terms" element={<AGB />} />
               <Route path="/ablauf-preise" element={<Angebote />} />
               <Route path="/angebote" element={<Navigate to="/ablauf-preise" replace />} />
               <Route path="/systemische-familienaufstellung-freiburg" element={<Familienaufstellung />} />
@@ -82,14 +92,14 @@ export const AppRoutes = () => (
 );
 
 const App = () => (
-  <CMSProvider>
-    <LanguageProvider>
-      <Toaster />
-      <BrowserRouter>
+  <BrowserRouter>
+    <CMSProvider>
+      <LanguageProvider>
+        <Toaster />
         <AppRoutes />
-      </BrowserRouter>
-    </LanguageProvider>
-  </CMSProvider>
+      </LanguageProvider>
+    </CMSProvider>
+  </BrowserRouter>
 );
 
 export default App;

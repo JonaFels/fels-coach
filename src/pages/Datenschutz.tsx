@@ -16,6 +16,11 @@ const Datenschutz = () => {
           <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
             {t("privacy.title")}
           </h1>
+          {language === "en" && (
+            <p className="text-center text-sm text-muted-foreground -mt-8 mb-12">
+              This is a courtesy translation. In case of doubt, the German version is legally binding.
+            </p>
+          )}
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <p>{t("privacy.intro")}</p>
@@ -29,7 +34,7 @@ const Datenschutz = () => {
               {t("privacy.s1.owner")}<br />
               Egonstraße 91<br />
               79106 Freiburg<br />
-              E-Mail: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
+              {language === "de" ? "E-Mail" : "Email"}: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
             </p>
 
             <hr />
@@ -102,6 +107,8 @@ const Datenschutz = () => {
 
             <hr />
 
+{language === "de" ? (
+          <>
             <h2>Einbindung von YouTube-Videos (erweiterter Datenschutzmodus)</h2>
             <p>
               Auf einzelnen Seiten dieser Website binde ich Videos der Plattform YouTube ein. Betreiber
@@ -165,6 +172,64 @@ const Datenschutz = () => {
                 https://www.youtube.com/howyoutubeworks/user-settings/privacy/
               </a>.
             </p>
+          </>
+          ) : (
+          <>
+            <h2>Embedded YouTube videos (privacy-enhanced mode)</h2>
+            <p>
+              On some pages of this website I embed videos from the YouTube platform. The platform is
+              operated by Google Ireland Limited ("Google"), Gordon House, Barrow Street, Dublin 4, Ireland.
+            </p>
+            <p>
+              <strong>Two-click solution &amp; privacy-enhanced mode:</strong> When you open a page with an
+              embedded video, <strong>no</strong> content is loaded from YouTube at first. You only see a
+              preview image served from my own server and a play button. A connection to YouTube's servers
+              is only established once you actively click the play button. I use YouTube's
+              "privacy-enhanced mode" (domain <em>youtube-nocookie.com</em>), in which, according to the
+              provider, no cookies for profiling your usage behaviour are set as long as you do not play
+              the video.
+            </p>
+            <p>
+              <strong>Data processed after starting the video:</strong> Once you start the video,
+              YouTube/Google may receive, among other things, your IP address, the date and time of access,
+              information about your browser and operating system, the referrer URL, possibly your device
+              ID and data on your interaction with the player. If you are logged into your Google account
+              at the same time, Google can assign this information directly to your personal account. You
+              can prevent this by logging out of your Google account before clicking the video.
+            </p>
+            <p>
+              <strong>Purpose and legal basis:</strong> The videos are embedded to present information about
+              my constellation work in an appealing and accessible way. The legal basis is my legitimate
+              interest in an attractive presentation of my services under Art.&nbsp;6(1)(f) GDPR. Insofar as
+              starting the video stores or reads information on your device, this is based on your consent
+              given by actively clicking the play button (§&nbsp;25(1) TDDDG in conjunction with
+              Art.&nbsp;6(1)(a) GDPR). You can withdraw this consent at any time for the future by no longer
+              playing the video or leaving the page.
+            </p>
+            <p>
+              <strong>Transfers to third countries:</strong> A transfer of your data to the USA or other
+              third countries cannot be ruled out. Google LLC is certified under the EU-US Data Privacy
+              Framework, so an adequacy decision of the European Commission applies to transfers to the USA.
+              In addition, the European Commission's standard contractual clauses apply.
+            </p>
+            <p>
+              <strong>Storage period:</strong> I do not know the exact storage period of the data collected
+              by YouTube/Google; it is determined by Google. Further information can be found in Google's
+              privacy policy at{" "}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                https://policies.google.com/privacy
+              </a>{" "}
+              and in YouTube's additional information at{" "}
+              <a
+                href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.youtube.com/howyoutubeworks/user-settings/privacy/
+              </a>.
+            </p>
+          </>
+          )}
 
           </div>
         </div>

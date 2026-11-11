@@ -21,7 +21,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export const ContactForm = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -207,7 +207,7 @@ export const ContactForm = () => {
 
           {/* Honeypot */}
           <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
-            <Label htmlFor="contact-website">Website (nicht ausfüllen)</Label>
+            <Label htmlFor="contact-website">{t("contact.honeypot")}</Label>
             <Input
               id="contact-website"
               type="text"
@@ -221,7 +221,7 @@ export const ContactForm = () => {
 
           <p className="text-sm text-muted-foreground leading-relaxed">
             {t("contactForm.privacyNotice")}{" "}
-            <Link to="/datenschutz" className="underline hover:text-secondary">
+            <Link to={localize("/datenschutz")} className="underline hover:text-secondary">
               {t("contactForm.privacyLink")}
             </Link>{" "}
             zu.

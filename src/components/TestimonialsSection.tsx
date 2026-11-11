@@ -1,11 +1,22 @@
 import { Quote } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { miriam, johannes, translatedNote, type TestimonialPart } from "@/data/testimonials";
 
-const johannes = {
-  name: "Johannes",
-  age: 39,
-  text: "Jona hat ein super Gespür den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem tieferen Verständnis und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder.",
-};
+const Quoted = ({ parts, strongClass }: { parts: TestimonialPart[]; strongClass: string }) => (
+  <>
+    „
+    {parts.map((part, i) =>
+      part.bold ? (
+        <strong key={i} className={strongClass}>
+          {part.text}
+        </strong>
+      ) : (
+        <span key={i}>{part.text}</span>
+      ),
+    )}
+    "
+  </>
+);
 
 export const TestimonialsSection = () => {
   const { t, language } = useLanguage();
@@ -32,11 +43,11 @@ export const TestimonialsSection = () => {
           <blockquote className="relative card-base p-12 md:p-16">
             <Quote className="absolute top-7 left-7 h-8 w-8 text-secondary/20" aria-hidden="true" />
             <p className="text-muted-foreground leading-[1.9] text-lg italic pl-8">
-              „Ich hatte eine 1:1 Aufstellung bei Jona und habe mich von Anfang an durch seine <strong className="text-foreground font-semibold not-italic">tiefgehende Präsenz</strong> sehr wohl gefühlt. Ich konnte mich in einem gut gehaltenen Rahmen mit meinem familiären Thema auseinandersetzen und gewann an <strong className="text-foreground font-semibold not-italic">Klarheit und Sicherheit</strong>. Ich bin sehr dankbar für die tiefen Erkenntnisse und die aufmerksame, einfühlsame Begleitung."
+              <Quoted parts={miriam[language]} strongClass="text-foreground font-semibold not-italic" />
             </p>
             <footer className="mt-8 pl-8">
               <span className="font-medium text-foreground">
-                – Miriam<span className="text-muted-foreground font-normal">, 29</span>
+                – {miriam.name}<span className="text-muted-foreground font-normal">, {miriam.age}</span>
               </span>
             </footer>
           </blockquote>
@@ -45,7 +56,7 @@ export const TestimonialsSection = () => {
           <blockquote className="relative card-base p-12 md:p-16">
             <Quote className="absolute top-7 left-7 h-8 w-8 text-secondary/20" aria-hidden="true" />
             <p className="text-muted-foreground leading-[1.9] text-lg italic pl-8">
-              „Jona hat ein <strong className="text-foreground font-semibold not-italic">super Gespür</strong> den eigenen Prozess genau da hin zu begleiten, wo es hängt. Es werden einem Dynamiken klar, die vorher so nicht bewusst waren. Dies führt zu einem <strong className="text-foreground font-semibold not-italic">tieferen Verständnis</strong> und einem Loslassen. Absolute Empfehlung. Ich komme gerne wieder."
+              <Quoted parts={johannes[language]} strongClass="text-foreground font-semibold not-italic" />
             </p>
             <footer className="mt-8 pl-8">
               <span className="font-medium text-foreground">
@@ -54,6 +65,9 @@ export const TestimonialsSection = () => {
             </footer>
           </blockquote>
         </div>
+        {language === "en" && (
+          <p className="mt-8 text-center text-xs text-muted-foreground">{translatedNote}</p>
+        )}
       </div>
     </section>
   );

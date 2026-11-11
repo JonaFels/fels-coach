@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
+/**
+ * Strukturierte Daten (schema.org) direkt im HTML – dadurch auch im
+ * vorgerenderten HTML für Suchmaschinen sichtbar.
+ */
 export const JsonLd = () => {
-  useEffect(() => {
-    const existing = document.querySelector('script[data-main-schema="true"]');
-    if (existing) existing.remove();
+  const { language } = useLanguage();
 
     const schema = {
       "@context": "https://schema.org",
@@ -281,16 +283,16 @@ export const JsonLd = () => {
       ],
     };
 
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-main-schema", "true");
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
+    // Die FAQ-Daten sind deutsch – auf englischen Seiten weglassen.
+    if (language === "en") {
+      schema["@graph"] = schema["@graph"].filter((node: { "@type"?: unknown }) => node["@type"] !== "FAQPage");
+    }
 
-    return () => {
-      script.remove();
-    };
-  }, []);
-
-  return null;
+  return (
+    <script
+      type="application/ld+json"
+      data-main-schema="true"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+    />
+  );
 };

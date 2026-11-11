@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { trackCTAClick } from "@/lib/tracking";
 
 export const QuickContactCTA = () => {
-  const { t } = useLanguage();
+  const { t, localize } = useLanguage();
 
   return (
     <section className="py-20 md:py-28 bg-muted/30">
@@ -21,7 +21,7 @@ export const QuickContactCTA = () => {
           asChild
         >
           <a
-            href="/kontakt"
+            href={localize("/kontakt")}
             onClick={() => trackCTAClick("quick_contact_cta", "homepage_quick_contact", "link")}
           >
             <Phone className="h-4 w-4 mr-2" aria-hidden="true" />

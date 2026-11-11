@@ -52,14 +52,15 @@ function injectHead(html, head, path, language) {
   html = setMeta(html, "name", "twitter:image", head.image);
   html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${head.url}" />`);
 
-  // hreflang: Startseite hat DE + EN, alle anderen Seiten nur DE.
+  // hreflang: verknüpft deutsche und englische Version derselben Seite.
   html = html.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/?>\s*/g, "");
+  const alt = head.alternates;
   const tags =
-    path === "/" || path === "/en"
-      ? `<link rel="alternate" hreflang="de" href="${SITE_URL}/" /><link rel="alternate" hreflang="en" href="${SITE_URL}/en" /><link rel="alternate" hreflang="x-default" href="${SITE_URL}/" />`
-      : head.noindex
-        ? ""
-        : `<link rel="alternate" hreflang="de" href="${head.url}" /><link rel="alternate" hreflang="x-default" href="${head.url}" />`;
+    head.noindex || !alt
+      ? ""
+      : alt.en
+        ? `<link rel="alternate" hreflang="de" href="${alt.de}" /><link rel="alternate" hreflang="en" href="${alt.en}" /><link rel="alternate" hreflang="x-default" href="${alt.de}" />`
+        : `<link rel="alternate" hreflang="de" href="${alt.de}" /><link rel="alternate" hreflang="x-default" href="${alt.de}" />`;
   if (tags) html = html.replace("</head>", `${tags}\n  </head>`);
   return html;
 }
@@ -121,7 +122,7 @@ async function main() {
   let ok = 0;
   for (const route of prerenderRoutes) {
     try {
-      const { html: body, head } = render(route.path, route.language);
+      const { html: body, head } = render(route.path);
       if (!head) throw new Error("Seite ohne <SEOHead />");
       write(route.path, minify(injectBody(injectHead(template, head, route.path, route.language), body)));
       ok++;
@@ -135,7 +136,7 @@ async function main() {
 
   // 404-Seite: Cloudflare Pages und GitHub Pages liefern sie mit Status 404 aus.
   try {
-    const { html: body, head } = render("/__404__", "de");
+    const { html: body, head } = render("/__404__");
     const notFoundHead = { ...head, title: "Seite nicht gefunden | Jona Fels", noindex: true, url: `${SITE_URL}/` };
     let html = injectHead(template, notFoundHead, "/__404__", "de");
     html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, "");

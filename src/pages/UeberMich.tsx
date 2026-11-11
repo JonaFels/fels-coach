@@ -16,7 +16,7 @@ import { PraxisHeroBanner } from "@/components/PraxisHeroBanner";
 import { useHalfHeroHashScroll } from "@/hooks/useHalfHeroHashScroll";
 
 const UeberMich = () => {
-  const { t, language } = useLanguage();
+  const { t, language, localize } = useLanguage();
   const { getImage } = useCMS();
   const portrait = getImage("about.image", profilBild);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -77,7 +77,7 @@ const UeberMich = () => {
                   <>
                     Wie ich konkret arbeite, erfährst du auf der Seite zur{" "}
                     <Link
-                      to="/systemische-familienaufstellung-freiburg"
+                      to={localize("/systemische-familienaufstellung-freiburg")}
                       className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
                     >
                       systemischen Familienaufstellung in Freiburg
@@ -88,7 +88,7 @@ const UeberMich = () => {
                   <>
                     To see how I actually work, visit the page on{" "}
                     <Link
-                      to="/systemische-familienaufstellung-freiburg"
+                      to={localize("/systemische-familienaufstellung-freiburg")}
                       className="underline underline-offset-4 decoration-secondary/50 hover:decoration-secondary text-foreground"
                     >
                       systemic family constellation in Freiburg
@@ -169,7 +169,7 @@ const UeberMich = () => {
                         loading="lazy"
                       />
                       <span className="font-serif text-sm font-medium text-foreground underline-offset-2 group-hover:underline">
-                        Zertifikat anschauen
+                        {language === "de" ? "Zertifikat anschauen" : "View certificate"}
                       </span>
 
                     </button>

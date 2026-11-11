@@ -5,7 +5,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Impressum = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -16,6 +16,11 @@ const Impressum = () => {
           <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
             {t("imprint.title")}
           </h1>
+          {language === "en" && (
+            <p className="text-center text-sm text-muted-foreground -mt-8 mb-12">
+              This is a courtesy translation. In case of doubt, the German version is legally binding.
+            </p>
+          )}
 
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <h3>{t("imprint.according")}</h3>
@@ -29,7 +34,7 @@ const Impressum = () => {
             <h3>{t("imprint.contactHeading")}</h3>
             <p>
               {t("imprint.phone")}: 0160 90369443<br />
-              E-Mail: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
+              {language === "de" ? "E-Mail" : "Email"}: <a href="mailto:jona@fels-coach.de">jona@fels-coach.de</a>
             </p>
 
             <h3>{t("imprint.vatHeading")}</h3>
@@ -42,7 +47,7 @@ const Impressum = () => {
             <p>
               {t("imprint.insuranceName")}<br />
               Continentale Sachversicherung AG<br />
-              Sitz der Gesellschaft: Dortmund<br />
+              {language === "de" ? "Sitz der Gesellschaft" : "Registered office"}: Dortmund<br />
               {t("imprint.insuranceNumber")} 536387517<br />
               {t("imprint.insuranceScope")}
             </p>

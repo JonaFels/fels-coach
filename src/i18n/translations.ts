@@ -76,7 +76,7 @@ export const translations: Translations = {
   // Hero Section
   "hero.eyebrow": {
     de: "Aufstellungspraxis Freiburg · 1:1 Begleitung",
-    en: "Constellation practice Freiburg · 1:1 guidance",
+    en: "Constellation practice in Freiburg · 1:1 sessions",
   },
   "hero.title": {
     de: "Familienaufstellung in Freiburg – im Einzelsetting",
@@ -84,11 +84,11 @@ export const translations: Translations = {
   },
   "hero.quote": {
     de: "„Unklar, zu viel im Kopf, orientierungslos.“",
-    en: "„Unclear, overwhelmed, without direction.“",
+    en: "“Unclear, overwhelmed, without direction.”",
   },
   "hero.subtitle": {
     de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich – vor Ort oder online – im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und alte Familienmuster sichtbar zu machen. Wir starten mit einem kostenlosen Orientierungsgespräch per Telefon oder Video.",
-    en: "In my constellation practice in Freiburg I accompany you – in person or online – 1:1 in sorting the chaos in your head and making old family patterns visible. We start with a free discovery call by phone or video.",
+    en: "In my practice in Freiburg – or online – I support you one-on-one in sorting out the chaos in your head and making old family patterns visible. Sessions are available in English or German. We start with a free discovery call by phone or video.",
   },
   "hero.cta": {
     de: "Kostenloses Orientierungsgespräch vereinbaren",
@@ -100,7 +100,7 @@ export const translations: Translations = {
   },
   "hero.ctaMicrocopy": {
     de: "Unverbindlich & persönlich – 20 Min., die zeigen, ob du dich gesehen fühlst.",
-    en: "Non-binding & personal – 20 min. to see if you feel understood.",
+    en: "No obligation, just a personal chat – 20 minutes to see whether you feel understood.",
   },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
@@ -114,7 +114,7 @@ export const translations: Translations = {
   // Aufstellungsarbeit Description (Homepage) – Pain Point
   "coaching.title": {
     de: "Endlich ankommen, wo der Sturm aufhört.",
-    en: "Finally arriving where the storm ends.",
+    en: "Find the calm after the storm.",
   },
   "coaching.intro": {
     de: "",
@@ -122,11 +122,11 @@ export const translations: Translations = {
   },
   "coaching.text1": {
     de: "Du sehnst dich danach, das ‚Müssen' hinter dir zu lassen?",
-    en: "Do you long to leave the 'having to' behind?",
+    en: "Do you long to leave all the “shoulds” behind?",
   },
   "coaching.text2": {
     de: "In meiner Aufstellungsarbeit schaffst du den Raum, um endlich bei dir selbst anzukommen. Ein sicherer Ort und eine Begleitung, die dir mit Aufrichtigkeit zur Seite steht.",
-    en: "In my constellation work you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
+    en: "My constellation work gives you the space to finally come home to yourself – a safe place and someone who stands by you with honesty.",
   },
   "coaching.details.title": {
     de: "Das Muster erkennen",
@@ -142,7 +142,7 @@ export const translations: Translations = {
   },
   "coaching.detail3": {
     de: "Gefühl der Fremdbestimmung",
-    en: "Feeling of being externally controlled",
+    en: "Feeling that others are running your life",
   },
   "coaching.learnMore": {
     de: "Methode verstehen",
@@ -176,11 +176,11 @@ export const translations: Translations = {
   },
   "offerings.step2": {
     de: "Einfache Terminbuchung: Wenn mein Ansatz für dich passt, erhältst du einen persönlichen Link, über den du deinen ersten Termin bequem online auswählen kannst.",
-    en: "Simple appointment booking: If my approach fits you, you'll receive a personal link to conveniently choose your first appointment online.",
+    en: "Easy booking: if my approach feels right for you, you'll get a personal link to choose your first appointment online.",
   },
   "offerings.step3": {
     de: "Deine Sitzung: Wir arbeiten fokussiert und lösungsorientiert an deinem Thema – in einem geschützten Rahmen, in dem dein Tempo den Weg bestimmt.",
-    en: "Your session: We work in a focused, solution-oriented way on your topic – in a protected framework where your pace sets the direction.",
+    en: "Your session: we work on your topic in a focused, solution-oriented way – in a safe setting where your pace sets the direction.",
   },
   "offerings.preiseTitle": {
     de: "Preise & Formate",
@@ -188,7 +188,7 @@ export const translations: Translations = {
   },
   "offerings.preiseIntro": {
     de: "Jede Sitzung dauert 90 Minuten – das gibt uns genug Zeit für echte Tiefe und nachhaltige Lösungsansätze für deinen Alltag.",
-    en: "Each session lasts 90 minutes – giving us enough time for real depth and sustainable solution approaches for your everyday life.",
+    en: "Each session lasts 90 minutes – enough time for real depth and for solutions that carry over into your everyday life.",
   },
   "offerings.coaching.title": {
     de: "Systemische 1:1 Aufstellung",
@@ -213,6 +213,10 @@ export const translations: Translations = {
   "offerings.minutes": {
     de: "Minuten",
     en: "minutes",
+  },
+  "contact.honeypot": {
+    de: "Website (nicht ausfüllen)",
+    en: "Website (leave empty)",
   },
   "legal.notTherapy": {
     de: "Wichtig: Systemische Aufstellungen sind keine Psychotherapie und keine Heilbehandlung. Sie stellen keine Diagnosen und ersetzen keine ärztliche oder psychotherapeutische Behandlung. Wenn du in Behandlung bist oder psychisch stark belastet, sprich bitte vorher mit deiner Ärztin, deinem Arzt oder deiner Therapeutin bzw. deinem Therapeuten.",
@@ -263,7 +267,7 @@ export const translations: Translations = {
   },
   "offerings.rahmen.location": {
     de: "Vor Ort in der Praxis (Karlstraße 51, 79104 Freiburg im Breisgau) oder flexibel online per Video – auf Deutsch oder Englisch.",
-    en: "In person at the practice (Karlstraße 51, 79104 Freiburg im Breisgau) or flexibly online via video.",
+    en: "In person at the practice (Karlstraße 51, 79104 Freiburg im Breisgau) or flexibly online via video – in English or German.",
   },
   "offerings.rahmen.times": {
     de: "Reguläre Termine finden samstags von 14:00 bis 20:00 Uhr statt. Weitere Zeiten sind nach Absprache im Orientierungsgespräch möglich.",
@@ -386,7 +390,7 @@ export const translations: Translations = {
   },
   "family.ebookHint.text": {
     de: "In meinem kostenlosen E-Book „Der Weg zum Ganzsein“ zeige ich dir, wie alte Familienmuster dich heute noch beeinflussen – und wie du den ersten Schritt zur Veränderung gehst.",
-    en: "In my free e-book „The Path to Wholeness“ I show you how old family patterns still influence you today – and how to take the first step toward change.",
+    en: "In my free e-book “The Path to Wholeness” (in German) I show you how old family patterns still influence you today – and how to take the first step toward change.",
   },
   "family.ebookHint.cta": {
     de: "Impulse jetzt entdecken",
@@ -394,7 +398,7 @@ export const translations: Translations = {
   },
   "family.intro.text": {
     de: "Familienaufstellung – auch Familienstellen genannt – ist eine kraftvolle Methode der systemischen Aufstellungsarbeit, um unbewusste Dynamiken und Verstrickungen aufzudecken. Oftmals tragen wir Lasten oder Muster unserer Herkunftsfamilie in uns, die uns im aktuellen Leben blockieren, ohne dass wir uns dessen bewusst sind. In meiner Praxis in der Karlstraße in Freiburg biete ich diese Arbeit exklusiv als Einzelsitzung im geschützten 1:1-Setting an. Das eignet sich besonders, wenn du dein Thema in einem vertraulichen Rahmen bearbeiten möchtest, ohne dich vor einer Gruppe öffnen zu müssen. Eine Sitzung dauert in der Regel 90 Minuten.",
-    en: "Family constellation – also called family constellations – is a powerful method of systemic constellation to uncover unconscious dynamics and entanglements. Often we carry burdens or patterns from our family of origin that block us in our current life without being aware of it. In my practice on Karlstraße in Freiburg, I offer this work exclusively as an individual session in a protected 1:1 setting. This is especially suitable if you want to work on your topic in a confidential framework without having to open up in front of a group. A session usually lasts 90 minutes.",
+    en: "Family constellation work – known in German as Familienaufstellung or Familienstellen – is a powerful systemic method for uncovering unconscious dynamics and entanglements. We often carry burdens or patterns from our family of origin that hold us back today without our being aware of it. In my practice on Karlstraße in Freiburg I offer this work exclusively as an individual session in a confidential 1:1 setting – ideal if you want to explore your topic privately rather than open up in front of a group. A session lasts 90 minutes and is available in English or German.",
   },
   "family.subtitle": {
     de: "Wenn alte Familienmuster dich blockieren – mach das Unsichtbare im 1:1 Raum sichtbar.",
@@ -465,8 +469,8 @@ export const translations: Translations = {
     en: "Dissolve entanglements and gain new perspectives.",
   },
   "family.benefit2": {
-    de: "Beziehungen zu Angehörigen klären und heilen.",
-    en: "Clarify and heal relationships with family members.",
+    de: "Beziehungen zu Angehörigen klären und neu ordnen.",
+    en: "Clarify and reorder relationships with family members.",
   },
   "family.benefit3": {
     de: "Mehr innere Freiheit, Zufriedenheit und Lebensenergie spüren.",
@@ -686,7 +690,7 @@ export const translations: Translations = {
   },
   "contact.text": {
     de: "Buche dir weiter unten direkt einen kostenlosen Telefontermin mit mir – oder schreib mir eine Nachricht. Ich freue mich, von dir zu hören!",
-    en: "Book a free phone call with me below – or send me a message. I look forward to hearing from you!",
+    en: "Book a free discovery call with me below – or send me a message. I look forward to hearing from you!",
   },
 
   // Über mich Page
@@ -736,7 +740,7 @@ export const translations: Translations = {
   },
   "about.cv.title": {
     de: "Lebenslauf",
-    en: "Resume",
+    en: "Background",
   },
   "about.cv1.year": {
     de: "2025 – 2026",
@@ -759,8 +763,8 @@ export const translations: Translations = {
     en: "2022 – 2023",
   },
   "about.cv2.title": {
-    de: "Allgemeiner Heilpraktiker",
-    en: "General Naturopath",
+    de: "Ausbildung zum Allgemeinen Heilpraktiker",
+    en: "Training as a Heilpraktiker (state-licensed non-medical practitioner)",
   },
   "about.cv2.desc": {
     de: "Studium an der Paracelsus Heilpraktikerschule Freiburg im Breisgau (700 Stunden).",
@@ -832,11 +836,11 @@ export const translations: Translations = {
   },
   "aboutPreview.text1": {
     de: "Ich habe viel Unklarheit und orientierungslose Zeiten durchlebt. Und damals schon entschieden, „so kann es nicht weiter gehen“. Schon früh mit sechzehn Jahren zufällig über Familienstellen gestolpert und es seitdem als meinen Weg daraus genutzt.",
-    en: "I have lived through a lot of confusion and disorienting times. And back then I already decided, \"this can't go on like this\". Early on, at sixteen, I stumbled across family constellation by chance and have used it as my way out ever since.",
+    en: "I went through a lot of confusion and times without direction – and even back then I decided: “It can’t go on like this.” At sixteen I stumbled across family constellation by chance, and it has been my way out ever since.",
   },
   "aboutPreview.text2": {
     de: "Durch Familienstellen habe ich erkannt, woher meine Verwirrungen kamen. Dass all die Prägungen durch mein Familiensystem der Ursprung dafür sind und nicht ich einfach defekt bin.",
-    en: "Through family constellation I recognised where my confusion came from. That all the imprinting through my family system is the origin – and not that I am simply broken.",
+    en: "Through family constellation I recognised where my confusion came from: it was rooted in the imprints of my family system – not in me being somehow broken.",
   },
 
   "aboutPreview.cta": {
@@ -855,7 +859,7 @@ export const translations: Translations = {
   },
   "finalCta.button": {
     de: "Sichere dir jetzt deinen Termin",
-    en: "Secure your appointment now",
+    en: "Book your free discovery call",
   },
   "finalCta.microcopy": {
     de: "Kostenlos · 20 Minuten · Unverbindlich",
