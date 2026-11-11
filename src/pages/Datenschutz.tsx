@@ -83,7 +83,6 @@ const Datenschutz = () => {
 
             <h2>{t("privacy.s9.heading")}</h2>
             <p>{t("privacy.s9.p1")}</p>
-            <p><strong>{language === "de" ? "Besonderer Schutz von Gesundheitsdaten:" : "Special protection of health data:"}</strong> {t("privacy.s9.p2")}</p>
             <p>{t("privacy.s9.p4")}</p>
             <p>{t("privacy.s9.p5")}</p>
             <p>{t("privacy.s9.p3")}</p>
