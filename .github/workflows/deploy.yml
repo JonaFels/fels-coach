@@ -35,17 +35,10 @@ jobs:
       - name: Install dependencies
         run: npm install --prefer-offline --no-audit --no-fund
 
-      - name: Build (Vite + SSG Prerender + Sitemap)
-        run: |
-          npm run build -- --base=/
-          node scripts/prerender.js
-          node scripts/generate-sitemap.js
-
-      # SPA-Fallback für GitHub Pages: 404.html = index.html,
-      # damit Deep-Links wie /impulse oder /kontakt nach einem
-      # direkten Aufruf / Refresh nicht in einen 404 laufen.
-      - name: Create SPA 404 fallback
-        run: cp dist/index.html dist/404.html
+      # npm run build = Vite-Build + Vorrendern aller Seiten + sitemap.xml + 404.html
+      # (siehe scripts/prerender.js). Gleicher Befehl wie bei Cloudflare Pages.
+      - name: Build (Vite + Vorrendern + Sitemap)
+        run: npm run build
 
       # CNAME für die Custom Domain (fels-coach.de via Cloudflare)
       - name: Write CNAME

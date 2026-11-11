@@ -68,7 +68,7 @@ const lcpImagePreloadPlugin = (): Plugin => {
 };
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, isSsrBuild }) => {
   const env = loadEnv(mode, process.cwd(), "");
 
   const viteSupabaseUrl = isValidSupabaseUrl(env.VITE_SUPABASE_URL)
@@ -130,7 +130,9 @@ export default defineConfig(({ mode }) => {
           comments: false,
         },
       },
-      rollupOptions: {
+      // Server-Build fürs Vorrendern: feste Dateinamen, kein public/-Kopieren.
+      ...(isSsrBuild ? { copyPublicDir: false, minify: false } : {}),
+      rollupOptions: isSsrBuild ? { output: { entryFileNames: "[name].js", chunkFileNames: "chunks/[name].js", assetFileNames: "assets/[name].[hash][extname]" } } : {
         output: {
           // Hash-basierte Dateinamen: Browser/CDN können neue Builds nicht
           // mit alten Bundles verwechseln (HTML wird immer no-cache geliefert).

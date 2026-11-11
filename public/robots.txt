@@ -36,4 +36,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://fels-coach.lovable.app/sitemap.xml
+Sitemap: https://fels-coach.de/sitemap.xml

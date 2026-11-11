@@ -25,8 +25,8 @@ const faqData = {
       answer: "Nein. Aufstellungsarbeit und Familienaufstellung sind keine Heilbehandlung im Sinne der gesetzlichen Krankenkassen und werden daher als Selbstzahlerleistung angeboten. Eine Sitzung (90 Min.) kostet 110 €. Dafür bist du frei in der Wahl deines Wegs – ohne Diagnose, ohne Aktenvermerk.",
     },
     {
-      question: "Wie kann ich starten und ist ein Vorgespräch möglich?",
-      answer: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 20-minütiges Vorgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
+      question: "Wie kann ich starten und gibt es ein kostenloses Orientierungsgespräch?",
+      answer: "Der erste Schritt ist einfach: Frag über den Button auf der Webseite ein kostenloses 20-minütiges Orientierungsgespräch an. So schauen wir, ob die Chemie stimmt und wie ich dich am besten unterstützen kann – völlig unverbindlich.",
     },
     {
       question: "Wo findet die Aufstellungsarbeit statt und gibt es Wochenend-Termine?",
@@ -51,8 +51,8 @@ const faqData = {
       answer: "No. Aufstellungsarbeit and family constellation are not considered medical treatment, so they are offered as self-pay services. One session (90 min.) is €110. In return, you're free to choose your own path – with no diagnosis and no medical record.",
     },
     {
-      question: "How can I get started and is a preliminary consultation possible?",
-      answer: "The first step is simple: Request a free 20-minute preliminary consultation via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
+      question: "How can I get started and is there a free discovery call?",
+      answer: "The first step is simple: Request a free 20-minute discovery call via the button on the website. This way we can see if the chemistry is right and how I can best support you – completely non-binding.",
     },
     {
       question: "Where does coaching take place and are there weekend appointments?",

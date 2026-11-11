@@ -76,6 +76,9 @@ export const Footer = () => {
 
           {/* Divider + Copyright */}
           <div className="w-full border-t border-border/40 pt-8">
+            <p className="max-w-3xl mx-auto mb-4 text-center text-xs text-muted-foreground/80 leading-relaxed">
+              {t("legal.notTherapy")}
+            </p>
             <p className="text-center text-xs text-muted-foreground tracking-wide leading-relaxed">
               © {currentYear} Jona Fels – Systemische Aufstellungen, Freiburg. {t("footer.rights")}
             </p>

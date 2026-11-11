@@ -23,7 +23,7 @@ export const JsonLd = () => {
           url: "https://fels-coach.de",
           telephone: "+4916090369443",
           description:
-            "Systemische Familienaufstellung und Aufstellungsarbeit in Freiburg im Breisgau. Unbewusste Muster erkennen, Blockaden lösen und persönliche Veränderung anstoßen – in Einzelsitzungen mit Bodenankern.",
+            "Systemische Familienaufstellung und Aufstellungsarbeit in Freiburg im Breisgau. Unbewusste Familienmuster sichtbar machen und neue Wege entdecken – in Einzelsitzungen mit Bodenankern, vor Ort oder online. 90 Minuten, 110 €.",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Karlstraße 51",
@@ -95,8 +95,6 @@ export const JsonLd = () => {
             "systemische Aufstellungen Freiburg",
             "Coach Freiburg",
             "Aufstellungsarbeit Freiburg",
-            "Familientherapie Freiburg",
-            "innere Blockaden lösen",
             "unbewusste Muster auflösen",
             "persönliche Entwicklung Aufstellungsarbeit",
           ],
@@ -114,7 +112,7 @@ export const JsonLd = () => {
                   "@id": "https://fels-coach.de/#service-familienaufstellung",
                   name: "Systemische 1:1 Aufstellung",
                   description:
-                    "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster und Blockaden erkennen und nachhaltig lösen.",
+                    "Tiefgreifende Einzelsitzung mit systemischer Aufstellungsarbeit und Bodenankern. Unbewusste Familienmuster sichtbar machen und neue Lösungswege entdecken. 90 Minuten, vor Ort in Freiburg oder online.",
                   provider: { "@id": "https://fels-coach.de/#service" },
                   areaServed: "Freiburg im Breisgau",
                   serviceType: "Systemische Familienaufstellung",
@@ -165,7 +163,6 @@ export const JsonLd = () => {
             "Lösungsorientierte Aufstellungsarbeit",
             "Persönlichkeitsentwicklung",
             "Unbewusste Familienmuster",
-            "Innere Blockaden lösen",
           ],
           hasCredential: [
             {
@@ -176,7 +173,7 @@ export const JsonLd = () => {
             {
               "@type": "EducationalOccupationalCredential",
               credentialCategory: "Ausbildung",
-              name: "Heilpraktiker-Ausbildung",
+              name: "Heilpraktiker (in Ausbildung)",
             },
           ],
           worksFor: { "@id": "https://fels-coach.de/#service" },
@@ -188,7 +185,7 @@ export const JsonLd = () => {
           alternateName: "Jona Fels – Familienaufstellung Freiburg",
           url: "https://fels-coach.de",
           description:
-            "Systemische Familienaufstellungen und Aufstellungsarbeit in Freiburg im Breisgau. Unbewusste Muster erkennen und innere Blockaden lösen.",
+            "Systemische Familienaufstellungen und Aufstellungsarbeit in Freiburg im Breisgau. Familienaufstellung im Einzelsetting – unbewusste Muster sichtbar machen.",
           publisher: { "@id": "https://fels-coach.de/#service" },
           inLanguage: ["de", "en"],
         },

@@ -1,1 +1,7 @@
-/*    /index.html   200
+# Alte/alternative Adressen dauerhaft weiterleiten (Cloudflare Pages)
+/index                          /                                          301
+/angebote                       /ablauf-preise                             301
+/systemische-beratung-freiburg  /systemische-familienaufstellung-freiburg  301
+/termin                         /termine                                   301
+/start                          /termine                                   301
+/impulse                        /blog                                      301

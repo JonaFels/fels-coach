@@ -7,6 +7,8 @@ interface SEOHeadProps {
   description?: string;
   image?: string;
   type?: string;
+  /** Seite nicht indexieren (z. B. 404). */
+  noindex?: boolean;
 }
 
 const defaultMeta = {
@@ -22,15 +24,19 @@ const defaultMeta = {
 
 const pageMeta: Record<string, Record<string, { title: string; description: string; keywords?: string }>> = {
   "/": {
-    de: { title: "Systemische Aufstellungen Freiburg | Jona Fels", description: "Systemische Aufstellungen in der Aufstellungspraxis Freiburg – 1:1, geschützt, auch online. Jetzt kostenloses Orientierungsgespräch vereinbaren." },
-    en: { title: "Systemic Constellation Freiburg | Jona Fels", description: "Systemic constellation in my Freiburg practice – 1:1, confidential, also online. Book your free discovery call with Jona Fels today." },
+    de: { title: "Familienaufstellung Freiburg im Einzelsetting | Jona Fels", description: "Familienaufstellung in Freiburg im 1:1 Setting – mit Bodenankern, ohne Gruppe, vor Ort oder online. 90 Min. für 110 €. Kostenloses Orientierungsgespräch vereinbaren." },
+    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation in Freiburg in a 1:1 setting – with floor anchors, no group, in person or online. 90 min for €110. Book your free discovery call." },
+  },
+  "/en": {
+    de: { title: "Familienaufstellung Freiburg im Einzelsetting | Jona Fels", description: "Familienaufstellung in Freiburg im 1:1 Setting – mit Bodenankern, ohne Gruppe, vor Ort oder online. 90 Min. für 110 €. Kostenloses Orientierungsgespräch vereinbaren." },
+    en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation in Freiburg in a 1:1 setting – with floor anchors, no group, in person or online. 90 min for €110. Book your free discovery call." },
   },
   "/ablauf-preise": {
     de: { title: "Ablauf & Preise | Systemische Aufstellungen Freiburg", description: "Kostenloses Orientierungsgespräch (Telefon/Video), Systemische 1:1 Aufstellung 110 € (90 Min.) – vor Ort in Freiburg oder online. Jona Fels." },
     en: { title: "Process & Pricing | Systemic Constellation Freiburg", description: "Free discovery call (phone/video), Systemic 1:1 Constellation €110 (90 min) – in person in Freiburg or online. Jona Fels." },
   },
   "/systemische-familienaufstellung-freiburg": {
-    de: { title: "Familienaufstellung Freiburg – Einzelsetting | Jona Fels", description: "Familienaufstellung Freiburg im Einzelsetting: 1:1 mit Bodenankern, vertraulich und ohne Gruppe. Kostenloses Orientierungsgespräch sichern." },
+    de: { title: "Familienaufstellung im Einzelsetting: Ablauf & Methode | Jona Fels", description: "Wie läuft eine Familienaufstellung im Einzelsetting ab? Bodenanker statt Stellvertreter, vertraulich und ohne Gruppe – Methode und Ablauf in Freiburg erklärt." },
     en: { title: "Family Constellation Freiburg – 1:1 Setting | Jona Fels", description: "Family constellation Freiburg in a 1:1 setting: floor anchors, confidential, no group. Book your free discovery call with Jona Fels." },
   },
   "/ueber-mich": {
@@ -53,31 +59,76 @@ const pageMeta: Record<string, Record<string, { title: string; description: stri
     de: { title: "Impressum – Familienaufstellung Freiburg | Jona Fels", description: "Impressum und rechtliche Angaben gemäß § 5 TMG für Jona Fels – Familienaufstellung & Aufstellungsarbeit in Freiburg." },
     en: { title: "Imprint – Family Constellation Freiburg | Jona Fels", description: "Legal notice according to German law for Jona Fels – family constellation & coaching in Freiburg." },
   },
+  "/links": {
+    de: { title: "Links | Jona Fels", description: "Alle Links zu Jona Fels – Familienaufstellung in Freiburg, Blog, YouTube und Kontakt." },
+    en: { title: "Links | Jona Fels", description: "All links to Jona Fels – family constellation in Freiburg, blog, YouTube and contact." },
+  },
+  "/termine": {
+    de: { title: "Termin buchen | Jona Fels", description: "Termin für eine Systemische 1:1 Aufstellung bei Jona Fels buchen – 90 Minuten, 110 €, in Freiburg oder online." },
+    en: { title: "Book an appointment | Jona Fels", description: "Book a systemic 1:1 constellation with Jona Fels – 90 minutes, €110, in Freiburg or online." },
+  },
+  "/appointment": {
+    de: { title: "Termin buchen | Jona Fels", description: "Termin für eine Systemische 1:1 Aufstellung bei Jona Fels buchen – 90 Minuten, 110 €, in Freiburg oder online." },
+    en: { title: "Book an appointment | Jona Fels", description: "Book a systemic 1:1 constellation with Jona Fels – 90 minutes, €110, in Freiburg or online." },
+  },
   "/agb": {
     de: { title: "AGB – Familienaufstellung Freiburg | Jona Fels", description: "Buchungs- und Stornierungsregeln für Aufstellungs- und Familienaufstellungs-Sitzungen bei Jona Fels in Freiburg." },
     en: { title: "Terms – Family Constellation Freiburg | Jona Fels", description: "Booking and cancellation terms for coaching and family constellation sessions with Jona Fels in Freiburg." },
   },
 };
 
-export const SEOHead = ({ title, description, image, type = "website" }: SEOHeadProps) => {
+const resolveHead = (
+  pathname: string,
+  language: "de" | "en",
+  opts: { title?: string; description?: string; image?: string; type: string; noindex?: boolean },
+): ResolvedHead => {
+  const cleanPath = pathname === "/" ? "/" : pathname.replace(/\/$/, "");
+  const meta = pageMeta[cleanPath]?.[language] || defaultMeta[language];
+  const rawImage = opts.image || "https://fels-coach.de/og-image.png";
+  // Open Graph braucht ABSOLUTE URLs (sonst zieht Facebook/LinkedIn das Bild nicht).
+  const pageImage = rawImage.startsWith("http")
+    ? rawImage
+    : `https://fels-coach.de${rawImage.startsWith("/") ? "" : "/"}${rawImage}`;
+  return {
+    title: opts.title || meta.title,
+    description: opts.description || meta.description,
+    image: pageImage,
+    // Canonical IMMER ohne www, ohne Query-String, ohne Trailing-Slash (außer Root)
+    url: `https://fels-coach.de${cleanPath}`,
+    type: opts.type,
+    noindex: Boolean(opts.noindex) || NOINDEX_PATHS.includes(cleanPath),
+  };
+};
+
+export interface ResolvedHead {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  type: string;
+  noindex: boolean;
+}
+
+/** Seiten, die nicht in Google erscheinen sollen (Buchungs-/Admin-Strecken). */
+const NOINDEX_PATHS = ["/termine", "/appointment", "/admin", "/admin/login", "/links"];
+
+/** Beim Vorrendern (scripts/prerender.js) sammelt SEOHead hier die Meta-Daten ein. */
+export const ssrHead: { current: ResolvedHead | null } = { current: null };
+
+export const SEOHead = ({ title, description, image, type = "website", noindex }: SEOHeadProps) => {
   const { language } = useLanguage();
   const location = useLocation();
   const pathname = location.pathname;
 
-  useEffect(() => {
-    const meta = pageMeta[pathname]?.[language] || defaultMeta[language];
-    const pageTitle = title || meta.title;
-    const pageDescription = description || meta.description;
-    const rawImage = image || "https://fels-coach.de/og-image.png";
-    // Open Graph braucht ABSOLUTE URLs (sonst zieht Facebook/LinkedIn das Bild nicht).
-    // Vite-Asset-Imports (z. B. /assets/blog-xxx.webp) zur Domain ergänzen.
-    const pageImage = rawImage.startsWith("http")
-      ? rawImage
-      : `https://fels-coach.de${rawImage.startsWith("/") ? "" : "/"}${rawImage}`;
-    // Canonical IMMER ohne www, ohne Query-String, ohne Trailing-Slash (außer Root)
-    const cleanPath = pathname === "/" ? "/" : pathname.replace(/\/$/, "");
-    const pageUrl = `https://fels-coach.de${cleanPath}`;
+  const resolved = resolveHead(pathname, language, { title, description, image, type, noindex });
 
+  // Auf dem Server (Build) gibt es keine Effekte – Werte direkt einsammeln.
+  if (typeof window === "undefined") {
+    ssrHead.current = resolved;
+  }
+
+  useEffect(() => {
+    const { title: pageTitle, description: pageDescription, image: pageImage, url: pageUrl } = resolved;
     // Update document title
     document.title = pageTitle;
 
@@ -94,10 +145,7 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     };
 
     updateMeta("description", pageDescription);
-    const pageKeywords = (meta as { keywords?: string }).keywords;
-    if (pageKeywords) {
-      updateMeta("keywords", pageKeywords);
-    }
+    updateMeta("robots", resolved.noindex ? "noindex, follow" : "index, follow");
     updateMeta("og:title", pageTitle, true);
     updateMeta("og:description", pageDescription, true);
     updateMeta("og:image", pageImage, true);
@@ -118,7 +166,7 @@ export const SEOHead = ({ title, description, image, type = "website" }: SEOHead
     }
     canonical.setAttribute("href", pageUrl);
 
-  }, [pathname, language, title, description, image, type]);
+  }, [resolved.title, resolved.description, resolved.image, resolved.url, resolved.noindex, type]);
 
   return null;
 };

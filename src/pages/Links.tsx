@@ -1,3 +1,4 @@
+import { SEOHead } from "@/components/SEOHead";
 import { HeartHandshake, BookOpen, BadgeCheck, Users } from "lucide-react";
 import portrait from "@/assets/jona-fels-systemisches-coaching.webp";
 
@@ -6,6 +7,7 @@ const Links = () => {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center px-5 py-10 bg-background">
+      <SEOHead />
       <div className="w-full max-w-[500px] flex flex-col items-center text-foreground">
         {/* Avatar */}
         <div className="relative">

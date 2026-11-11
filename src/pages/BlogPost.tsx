@@ -14,6 +14,11 @@ import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
 import DOMPurify from "dompurify";
 
+// Beim Vorrendern (Build, kein DOM) ist DOMPurify nicht verfügbar. Die Blog-Inhalte
+// stammen aus der eigenen Datei src/data/blogPosts.ts, daher dort unverändert.
+const sanitize = (html: string): string =>
+  typeof window === "undefined" || typeof DOMPurify.sanitize !== "function" ? html : DOMPurify.sanitize(html);
+
 interface TocItem {
   id: string;
   text: string;
@@ -200,7 +205,7 @@ const BlogPost = () => {
             role="list"
           >
             {listItems.map((item, i) => (
-              <li key={i} className="pl-2" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} />
+              <li key={i} className="pl-2" dangerouslySetInnerHTML={{ __html: sanitize(item) }} />
             ))}
           </ol>,
         );
@@ -312,7 +317,7 @@ const BlogPost = () => {
                 ? "first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:font-semibold first-letter:text-secondary first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:leading-[0.9]"
                 : ""
             }`}
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(processedLine) }}
+            dangerouslySetInnerHTML={{ __html: sanitize(processedLine) }}
           />,
         );
       }

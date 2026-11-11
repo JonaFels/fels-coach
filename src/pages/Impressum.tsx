@@ -1,3 +1,4 @@
+import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -8,6 +9,7 @@ const Impressum = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <Header />
       <main id="main-content" className="flex-1 py-32 md:py-36">
         <div className="container mx-auto px-4 max-w-3xl">

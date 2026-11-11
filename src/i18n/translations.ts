@@ -79,36 +79,28 @@ export const translations: Translations = {
     en: "Constellation practice Freiburg · 1:1 guidance",
   },
   "hero.title": {
-    de: "Systemische Aufstellungen Freiburg – finde deine innere Klarheit",
-    en: "Systemic Constellation in Freiburg – find your inner clarity",
+    de: "Familienaufstellung in Freiburg – im Einzelsetting",
+    en: "Family Constellation in Freiburg – in a 1:1 Setting",
   },
   "hero.quote": {
     de: "„Unklar, zu viel im Kopf, orientierungslos.“",
     en: "„Unclear, overwhelmed, without direction.“",
   },
   "hero.subtitle": {
-    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich – vor Ort oder online – im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und emotionale Blockaden zu lösen. Wir starten mit einem kostenlosen Orientierungsgespräch per Telefon oder Video.",
-    en: "In my constellation practice in Freiburg I accompany you – in person or online – 1:1 in sorting the chaos in your head and dissolving emotional blocks. We start with a free discovery call by phone or video.",
+    de: "In meiner Aufstellungspraxis in Freiburg begleite ich dich – vor Ort oder online – im 1:1 Setting dabei, das Chaos im Kopf zu sortieren und alte Familienmuster sichtbar zu machen. Wir starten mit einem kostenlosen Orientierungsgespräch per Telefon oder Video.",
+    en: "In my constellation practice in Freiburg I accompany you – in person or online – 1:1 in sorting the chaos in your head and making old family patterns visible. We start with a free discovery call by phone or video.",
   },
   "hero.cta": {
-    de: "Kostenloses Vorgespräch vereinbaren",
-    en: "Schedule Free Consultation",
-  },
-  "hero.microcopy": {
-    de: "Völlig unverbindlich & persönlich – 20 Minuten, die Klarheit schaffen.",
-    en: "Completely non-binding & personal – 20 minutes that create clarity.",
+    de: "Kostenloses Orientierungsgespräch vereinbaren",
+    en: "Book a Free Discovery Call",
   },
   "hero.ctaConsultation": {
-    de: "Lass uns einfach mal reden",
-    en: "Let's just talk",
+    de: "Kostenloses Orientierungsgespräch",
+    en: "Free Discovery Call",
   },
   "hero.ctaMicrocopy": {
     de: "Unverbindlich & persönlich – 20 Min., die zeigen, ob du dich gesehen fühlst.",
     en: "Non-binding & personal – 20 min. to see if you feel understood.",
-  },
-  "hero.socialProof": {
-    de: "Über 100 Menschen begleitet – auf dem Weg zu gesunden Grenzen und sich selbst.",
-    en: "Over 100 people guided – on their path to healthy boundaries and themselves.",
   },
   "hero.ctaAngebote": {
     de: "Meine Angebote entdecken",
@@ -134,7 +126,7 @@ export const translations: Translations = {
   },
   "coaching.text2": {
     de: "In meiner Aufstellungsarbeit schaffst du den Raum, um endlich bei dir selbst anzukommen. Ein sicherer Ort und eine Begleitung, die dir mit Aufrichtigkeit zur Seite steht.",
-    en: "In my coaching, you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
+    en: "In my constellation work you create the space to finally arrive at yourself. A safe place and guidance that stands by you with sincerity.",
   },
   "coaching.details.title": {
     de: "Das Muster erkennen",
@@ -145,8 +137,8 @@ export const translations: Translations = {
     en: "The same conflicts over and over",
   },
   "coaching.detail2": {
-    de: "Innere Blockaden trotz Wissen",
-    en: "Inner blockages despite knowledge",
+    de: "Innere Hürden trotz Wissen",
+    en: "Inner hurdles despite knowing better",
   },
   "coaching.detail3": {
     de: "Gefühl der Fremdbestimmung",
@@ -179,8 +171,8 @@ export const translations: Translations = {
     en: "How we start working together",
   },
   "offerings.step1": {
-    de: "Kostenloses Erstgespräch: In einem unverbindlichen 20-minütigen Telefonat klären wir dein Anliegen und schauen, ob die Chemie stimmt.",
-    en: "Free discovery call: In a non-binding 20-minute phone call we clarify your concern and see if the chemistry is right.",
+    de: "Kostenloses Orientierungsgespräch: In einem unverbindlichen 20-minütigen Gespräch per Telefon oder Video klären wir dein Anliegen und schauen, ob die Chemie stimmt.",
+    en: "Free discovery call: In a non-binding 20-minute call by phone or video we clarify your concern and see if the chemistry is right.",
   },
   "offerings.step2": {
     de: "Einfache Terminbuchung: Wenn mein Ansatz für dich passt, erhältst du einen persönlichen Link, über den du deinen ersten Termin bequem online auswählen kannst.",
@@ -198,14 +190,6 @@ export const translations: Translations = {
     de: "Jede Sitzung dauert 90 Minuten – das gibt uns genug Zeit für echte Tiefe und nachhaltige Lösungsansätze für deinen Alltag.",
     en: "Each session lasts 90 minutes – giving us enough time for real depth and sustainable solution approaches for your everyday life.",
   },
-  "offerings.kennenlernen.title": {
-    de: "Kennenlernen-Sitzung",
-    en: "Getting-to-Know Session",
-  },
-  "offerings.kennenlernen.desc": {
-    de: "Eine vollwertige erste Sitzung, in der wir dein Anliegen systemisch einordnen und erste Lösungsansätze erarbeiten.",
-    en: "A full first session where we place your concern in a systemic context and develop initial solution approaches.",
-  },
   "offerings.coaching.title": {
     de: "Systemische 1:1 Aufstellung",
     en: "Systemic 1:1 Constellation",
@@ -213,22 +197,6 @@ export const translations: Translations = {
   "offerings.coaching.desc": {
     de: "Fokussierte Arbeit an dem, was gerade dran ist – systemisch, lösungsorientiert und mit konkreten nächsten Schritten.",
     en: "Focused work on what matters most right now – systemic, solution-oriented, and with concrete next steps.",
-  },
-  "offerings.paket5.title": {
-    de: "5er-Paket",
-    en: "5-Session Package",
-  },
-  "offerings.paket5.desc": {
-    de: "Fünf reguläre Aufstellungstermine zum Vorteilspreis. Ideal für einen intensiven Prozess mit messbaren Fortschritten.",
-    en: "Five regular coaching sessions at a discounted rate. Ideal for an intensive process with measurable progress.",
-  },
-  "offerings.paket10.title": {
-    de: "10er-Paket",
-    en: "10-Session Package",
-  },
-  "offerings.paket10.desc": {
-    de: "Zehn reguläre Aufstellungstermine für eine umfassende Transformation. Begleitung größerer Entwicklungsprozesse mit tiefgreifender Klarheit.",
-    en: "Ten regular coaching sessions for comprehensive transformation. Accompaniment of larger development processes with profound clarity.",
   },
   "offerings.book": {
     de: "Jetzt Termin anfragen",
@@ -246,29 +214,13 @@ export const translations: Translations = {
     de: "Minuten",
     en: "minutes",
   },
-  "offerings.popular": {
-    de: "Beliebt",
-    en: "Popular",
-  },
-  "offerings.onlinePayment": {
-    de: "Nur online bezahlbar.",
-    en: "Online payment only.",
-  },
-  "offerings.oldPrice": {
-    de: "statt",
-    en: "instead of",
-  },
-  "offerings.paketEinloesen.title": {
-    de: "Paket einlösen",
-    en: "Redeem Package",
-  },
-  "offerings.paketEinloesen.desc": {
-    de: "Du hast bereits ein 5er oder 10er Paket erworben? Dann wähle hier deinen nächsten Termin aus.",
-    en: "Already purchased a 5 or 10 session package? Choose your next appointment here.",
+  "legal.notTherapy": {
+    de: "Wichtig: Systemische Aufstellungen sind keine Psychotherapie und keine Heilbehandlung. Sie stellen keine Diagnosen und ersetzen keine ärztliche oder psychotherapeutische Behandlung. Wenn du in Behandlung bist oder psychisch stark belastet, sprich bitte vorher mit deiner Ärztin, deinem Arzt oder deiner Therapeutin bzw. deinem Therapeuten.",
+    en: "Important: Systemic constellations are not psychotherapy and not a medical treatment. They do not provide diagnoses and do not replace medical or psychotherapeutic treatment. If you are in treatment or under severe psychological strain, please talk to your doctor or therapist first.",
   },
   "offerings.preiseNote": {
-    de: "Wenn du dir die regulären Preise gerade nicht leisten kannst, sprich mich beim Erstgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
-    en: "If you can't currently afford the regular prices, please feel free to bring it up openly during the discovery call. We'll find a reduced-rate solution that works for you.",
+    de: "Wenn du dir den regulären Preis gerade nicht leisten kannst, sprich mich im Orientierungsgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
+    en: "If you can't currently afford the regular price, please feel free to bring it up openly during the discovery call. We'll find a reduced-rate solution that works for you.",
   },
   "group.homeTitle": {
     de: "Lieber in Gruppe arbeiten?",
@@ -385,8 +337,8 @@ export const translations: Translations = {
 
   // Familienaufstellung Page
   "family.title": {
-    de: "Familienaufstellung Freiburg im Einzelsetting",
-    en: "Family Constellation Freiburg in an individual setting",
+    de: "Familienaufstellung im Einzelsetting: Ablauf & Methode",
+    en: "Family Constellation in a 1:1 Setting: Process & Method",
   },
   "family.intro.title": {
     de: "Was ist eine Familienaufstellung?",
@@ -521,8 +473,8 @@ export const translations: Translations = {
     en: "Feel more inner freedom, satisfaction and life energy.",
   },
   "family.benefit4": {
-    de: "Blockaden auflösen und neue Lösungswege erkennen.",
-    en: "Dissolve blockages and recognize new solution paths.",
+    de: "Festgefahrene Muster erkennen und neue Lösungswege entdecken.",
+    en: "Recognize stuck patterns and discover new ways forward.",
   },
   "family.process.title": {
     de: "Ablauf einer Familienaufstellung im Einzelsetting mit Bodenankern",
@@ -537,8 +489,8 @@ export const translations: Translations = {
     en: "The colored floor anchors mark the positions of family members, relevant persons, or inner parts in the room – they make dynamics visible and tangible.",
   },
   "family.step1.title": {
-    de: "1. Vorgespräch & Anliegen klären",
-    en: "1. Preliminary talk & clarify concerns",
+    de: "1. Orientierungsgespräch & Anliegen klären",
+    en: "1. Discovery call & clarify your concern",
   },
   "family.step1.text": {
     de: "Wir nehmen uns Zeit, dein spezifisches Anliegen und das Ziel der Aufstellung genau zu besprechen.",
@@ -898,7 +850,7 @@ export const translations: Translations = {
     en: "Become the rock in your own life.",
   },
   "finalCta.description": {
-    de: "In einem kostenlosen 20-minütigen Erstgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt zu mehr Klarheit, gesunden Grenzen und deiner eigenen Standfestigkeit findest.",
+    de: "In einem kostenlosen 20-minütigen Orientierungsgespräch klären wir, ob die Chemie stimmt – und wie du Schritt für Schritt zu mehr Klarheit, gesunden Grenzen und deiner eigenen Standfestigkeit findest.",
     en: "In a free 20-minute discovery call, we'll see if the chemistry is right – and how you can step by step find more clarity, healthy boundaries and your own steadiness.",
   },
   "finalCta.button": {
@@ -971,8 +923,8 @@ export const translations: Translations = {
 
   // Micro CTAs
   "cta.bookNow": {
-    de: "Kostenloses 30-Min. Vorgespräch",
-    en: "Free 30-Min. Consultation",
+    de: "Kostenloses Orientierungsgespräch (20 Min.)",
+    en: "Free Discovery Call (20 min.)",
   },
   "cta.bookNowMicrocopy": {
     de: "Lass uns schauen, ob die Chemie stimmt.",
@@ -1057,12 +1009,12 @@ export const translations: Translations = {
      en: "Let's have a quick chat.",
    },
    "quickCTA.subheadline": {
-     de: "Noch unsicher, ob dein Thema passt? Lass uns in einem kurzen Vorgespräch klären, ob mein Ansatz für dein Anliegen passt.",
-     en: "Still unsure if your topic fits? Let's clarify in a brief preliminary call whether my approach suits your concern.",
+     de: "Noch unsicher, ob dein Thema passt? Lass uns in einem kostenlosen Orientierungsgespräch klären, ob mein Ansatz für dein Anliegen passt.",
+     en: "Still unsure if your topic fits? Let's clarify in a free discovery call whether my approach suits your concern.",
    },
     "quickCTA.button": {
-      de: "Kostenloses 30-Min. Vorgespräch anfragen",
-      en: "Request Free 30-Min. Consultation",
+      de: "Kostenloses Orientierungsgespräch anfragen",
+      en: "Request a Free Discovery Call",
     },
     "quickCTA.microcopy": {
       de: "Völlig unverbindlich – lass uns schauen, ob die Chemie stimmt.",
@@ -1075,8 +1027,8 @@ export const translations: Translations = {
      en: "Quick Callback",
    },
     "quickRequest.description": {
-      de: "Hinterlasse mir deine E-Mail oder Telefonnummer. Ich melde mich in Kürze für ein unverbindliches Vorgespräch per Telefon.",
-      en: "Leave your email or phone number. I'll get back to you shortly for a non-binding preliminary phone call.",
+      de: "Hinterlasse mir deine E-Mail oder Telefonnummer. Ich melde mich in Kürze für ein kostenloses Orientierungsgespräch per Telefon.",
+      en: "Leave your email or phone number. I'll get back to you shortly for a free discovery call by phone.",
     },
    "quickRequest.placeholder": {
      de: "E-Mail oder Telefonnummer...",
@@ -1247,7 +1199,7 @@ export const translations: Translations = {
     en: "We work on solutions that make a difference in your daily life.",
   },
   "offerings.ablaufIntro": {
-    de: "Erst das kostenlose Erstgespräch, dann der persönliche Buchungslink – so starten wir gemeinsam, vor Ort in Freiburg oder online.",
+    de: "Erst das kostenlose Orientierungsgespräch, dann der persönliche Buchungslink – so starten wir gemeinsam, vor Ort in Freiburg oder online.",
     en: "First the free discovery call, then your personal booking link – that's how we start together, in-person in Freiburg or online.",
   },
   "offerings.perUnit": {
@@ -1267,12 +1219,12 @@ export const translations: Translations = {
     en: "Let's have a quick chat",
   },
   "offerings.unsureText": {
-    de: "Du bist dir noch nicht sicher, ob das das Richtige für dich ist? Lass uns in einem kostenlosen 20-Minuten-Vorgespräch unverbindlich schauen, ob es passt – ganz ohne Druck und Erwartung.",
+    de: "Du bist dir noch nicht sicher, ob das das Richtige für dich ist? Lass uns in einem kostenlosen 20-minütigen Orientierungsgespräch unverbindlich schauen, ob es passt – ganz ohne Druck und Erwartung.",
     en: "Not sure yet whether this is the right fit for you? Let's take 20 minutes for a free, no-strings chat to see if it feels right – without any pressure or expectation.",
   },
   "offerings.unsureCta": {
-    de: "Erstgespräch vereinbaren",
-    en: "Book Discovery Call",
+    de: "Orientierungsgespräch vereinbaren",
+    en: "Book a Discovery Call",
   },
   "offerings.unsureMicrocopy": {
     de: "völlig unverbindlich & persönlich",
@@ -1312,7 +1264,7 @@ export const translations: Translations = {
   "imprint.disputeEmail": { de: "Meine E-Mail-Adresse findest du oben im Impressum.", en: "You can find my email address above in the imprint." },
   "imprint.arbitrationHeading": { de: "Verbraucher­streit­beilegung / Universal­schlichtungs­stelle", en: "Consumer dispute resolution / Universal arbitration board" },
   "imprint.arbitrationText": { de: "Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.", en: "I am neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board." },
-  "imprint.coachingHeading": { de: "Berufsrechtlicher Hinweis zur Aufstellungsarbeit", en: "Legal notice regarding coaching" },
+  "imprint.coachingHeading": { de: "Berufsrechtlicher Hinweis zur Aufstellungsarbeit", en: "Professional notice regarding constellation work" },
   "imprint.coachingText": { de: "Mein Angebot im Rahmen der Systemischen Aufstellungsarbeit und der Familienaufstellungen dient der Persönlichkeitsentwicklung, der Gesundheitsprävention und der Lösungsfindung. Es stellt keine Heilbehandlung dar und ist kein Ersatz für eine medizinische, psychiatrische oder psychotherapeutische Diagnose oder Behandlung. Bei gesundheitlichen oder psychischen Beschwerden wende dich bitte an einen Arzt oder Psychotherapeuten.", en: "My services in the area of systemic coaching and family constellations are intended for personal development, health prevention, and finding solutions. They do not constitute medical treatment and are not a substitute for medical, psychiatric, or psychotherapeutic diagnosis or treatment. If you have health or psychological concerns, please consult a doctor or psychotherapist." },
   "imprint.scopeHeading": { de: "Geltungsbereich", en: "Scope" },
   "imprint.scopeText": { de: "Dieses Impressum gilt auch für meine Social-Media-Präsenzen und Profile auf Drittplattformen (z.\u00a0B. Instagram, LinkedIn).", en: "This imprint also applies to my social media presences and profiles on third-party platforms (e.g. Instagram, LinkedIn)." },
@@ -1395,6 +1347,4 @@ export const translations: Translations = {
   "privacy.s10.p2": { de: "Rechtsgrundlage: Erfüllung rechtlicher Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO).", en: "Legal basis: Fulfilment of legal obligations (Art. 6(1)(c) GDPR)." },
   "privacy.s11.heading": { de: "10. Datenübermittlung in Drittländer (USA)", en: "10. Data Transfer to Third Countries (USA)" },
   "privacy.s11.text": { de: "Einige der von mir eingesetzten Dienstleister haben ihren Hauptsitz in den USA (z.\u00a0B. Google, GitHub, Cloudflare, Resend). Wenn Daten in die USA übertragen werden, stütze ich mich auf den Angemessenheitsbeschluss der EU-Kommission (EU-US Data Privacy Framework) für zertifizierte Unternehmen. Sollte ein Unternehmen nicht zertifiziert sein, nutze ich hilfsweise EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO, um ein Datenschutzniveau zu gewährleisten, das dem europäischen Standard entspricht.", en: "Some of the service providers I use are headquartered in the USA (e.g. Google, GitHub, Cloudflare, Resend). When data is transferred to the USA, I rely on the EU Commission's adequacy decision (EU-US Data Privacy Framework) for certified companies. If a company is not certified, I use EU Standard Contractual Clauses (SCC) pursuant to Art. 46(2)(c) GDPR to ensure a level of data protection that corresponds to European standards." },
-  "privacy.s12.heading": { de: "11. Systemischer Rollen-Check", en: "11. Systemic Role Check" },
-  "privacy.s12.text": { de: "Auf unserer Webseite bieten wir einen interaktiven systemischen Rollen-Check an. Wenn du diesen Test nutzt, werden deine Antworten, die daraus resultierenden Auswertungsergebnisse sowie der von dir gewählte Lebensbereich in einer Datenbank gespeichert. Diese Speicherung dient der Bereitstellung der unmittelbaren Auswertung und der statistischen Optimierung meiner Aufstellungsangebote. Die Daten werden ausschließlich für systemische Auswertungszwecke verwendet. Zur Speicherung und Verarbeitung der Ergebnisse nutzen wir den Datenbank-Dienst Supabase (Supabase Inc., USA). Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag (AVV), der die Einhaltung europäischer Datenschutzstandards garantiert. Eine Identifizierung deiner Person durch diese Daten findet nicht statt, sofern du am Ende des Tests keine freiwilligen Kontaktdaten angibst. Rechtsgrundlage: Berechtigtes Interesse an der Bereitstellung interaktiver Aufstellungs-Tools (Art. 6 Abs. 1 lit. f DSGVO).", en: "On our website, we offer an interactive systemic role check. When you use this test, your answers, the resulting evaluation results, and your chosen life area are stored in a database. This storage serves to provide the immediate evaluation and to statistically optimize my coaching offerings. The data is used exclusively for systemic evaluation purposes. For storage and processing of the results, we use the database service Supabase (Supabase Inc., USA). A data processing agreement (DPA) is in place with the provider, guaranteeing compliance with European data protection standards. Your person cannot be identified from this data, provided you do not voluntarily provide contact details at the end of the test. Legal basis: Legitimate interest in providing interactive coaching tools (Art. 6(1)(f) GDPR)." },
 };

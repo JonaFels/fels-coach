@@ -1,3 +1,4 @@
+import { SEOHead } from "@/components/SEOHead";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "@/components/Header";
@@ -16,6 +17,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead noindex title="Seite nicht gefunden | Jona Fels" />
       <Header />
       <main id="main-content" className="flex-1 flex items-center justify-center bg-muted/30 py-16">
         <div className="container mx-auto px-4 text-center max-w-lg">

@@ -28,9 +28,12 @@ const storeLanguage = (language: Language) => {
   }
 };
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const LanguageProvider: React.FC<{ children: React.ReactNode; initialLanguage?: Language }> = ({ children, initialLanguage }) => {
   const { getText } = useCMS();
   const [language, setLanguageState] = useState<Language>(() => {
+    // Beim Vorrendern (Build) gibt es kein window – Sprache kommt dann von außen.
+    if (initialLanguage) return initialLanguage;
+    if (typeof window === "undefined") return "de";
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get("lang");
     if (urlLang === "en" || urlLang === "de") {

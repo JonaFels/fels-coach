@@ -37,11 +37,10 @@ const AppTracking = () => {
   return null;
 };
 
-const App = () => (
-  <CMSProvider>
-    <LanguageProvider>
-      <Toaster />
-      <BrowserRouter>
+// Routen separat, damit sie beim Vorrendern (scripts/prerender.js) mit
+// einem StaticRouter gerendert werden können.
+export const AppRoutes = () => (
+  <>
         <AppTracking />
         <ScrollToTop />
         <HashBookingTrigger>
@@ -79,6 +78,15 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
           </Routes>
         </HashBookingTrigger>
+  </>
+);
+
+const App = () => (
+  <CMSProvider>
+    <LanguageProvider>
+      <Toaster />
+      <BrowserRouter>
+        <AppRoutes />
       </BrowserRouter>
     </LanguageProvider>
   </CMSProvider>

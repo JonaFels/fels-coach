@@ -1,198 +1,153 @@
 /**
- * Prerender Script für Static Site Generation (SSG)
- * Generiert Ordner-basierte HTML-Dateien für clean URLs
- * Injiziert pro Seite korrekte Meta-Tags (Title, Description, Canonical, OG)
- * damit Crawler (Google, Medium, etc.) sofort die richtigen Infos im HTML finden.
- * 
- * Verwendung: node scripts/prerender.js
- * (Nach npm run build ausführen)
+ * Vorrendern (Static Site Generation) – läuft automatisch bei `npm run build`.
+ *
+ * Für jede Route wird eine eigene HTML-Datei erzeugt (z. B. dist/kontakt.html),
+ * die bereits enthält:
+ *   - den kompletten sichtbaren Seitentext (gerendert aus denselben React-Komponenten)
+ *   - Title, Description, Canonical, Open Graph, Twitter, robots, hreflang
+ * Dadurch sehen Google, Bing und KI-Bots (ChatGPT, Perplexity, Claude) den Inhalt
+ * sofort, ohne JavaScript ausführen zu müssen.
+ *
+ * Meta-Daten kommen aus src/components/SEOHead.tsx (eine Quelle für Browser + Build),
+ * die Routenliste aus src/entry-server.tsx, Blogartikel aus src/data/blogPosts.ts.
+ *
+ * Außerdem: dist/404.html (echter 404-Status bei Cloudflare/GitHub Pages) und
+ * dist/sitemap.xml.
+ *
+ * Fällt das Rendern einer Seite aus, wird sie trotzdem mit Meta-Daten erzeugt –
+ * das Deployment bricht nicht ab.
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath, pathToFileURL } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SITE_URL = "https://fels-coach.de";
+const distDir = join(__dirname, "..", "dist");
+const ssrEntry = join(__dirname, "..", "dist-ssr", "entry-server.js");
+const templatePath = join(distDir, "index.html");
 
-const SITE_URL = 'https://fels-coach.de';
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
+const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-// Alle Routen mit SEO-Meta-Daten
-const routes = [
-  {
-    path: '/', folder: null,
-    title: 'Systemischer Coach Freiburg | Familienaufstellung & Familienstellen – Jona Fels',
-    description: 'Systemischer Coach in Freiburg ✓ Familienaufstellung & Familienstellen im 1:1 Setting ✓ Unbewusste Muster lösen ✓ Samstags 14–20 Uhr ✓ Jona Fels',
-  },
-  {
-    path: '/ablauf-preise', folder: 'ablauf-preise',
-    title: 'Ablauf & Preise | Systemische Aufstellungen Freiburg',
-    description: 'Erstgespräch, Ablauf und Preise für systemische Aufstellungen in Freiburg oder online: Kennenlernen 55 €, Aufstellung mit Einzelaufstellung 95 €.',
-  },
-  {
-    path: '/systemische-familienaufstellung-freiburg', folder: 'systemische-familienaufstellung-freiburg',
-    title: 'Familienaufstellung & Familienstellen Freiburg | Jona Fels',
-    description: 'Familienaufstellung in Freiburg – auch bekannt als Familienstellen. Ablauf, Nutzen und Methodik der systemischen Einzelaufstellung mit Bodenankern erklärt.',
-  },
-  {
-    path: '/kontakt', folder: 'kontakt',
-    title: 'Jona Fels | Kontakt',
-    description: 'Kontaktiere Jona Fels für ein kostenloses Erstgespräch. Erreichbar per E-Mail, WhatsApp oder Telegram.',
-  },
-  {
-    path: '/ueber-mich', folder: 'ueber-mich',
-    title: 'Jona Fels | Über mich',
-    description: 'Lerne Jona Fels kennen: Familienaufsteller i.A. und Coach. Präzise und mitfühlende Begleitung auf deinem Weg.',
-  },
-  {
-    path: '/datenschutz', folder: 'datenschutz',
-    title: 'Jona Fels | Datenschutz',
-    description: 'Datenschutzerklärung gemäß DSGVO für die Website von Jona Fels Coaching.',
-  },
-  {
-    path: '/impressum', folder: 'impressum',
-    title: 'Jona Fels | Impressum',
-    description: 'Impressum und rechtliche Angaben gemäß § 5 TMG für Jona Fels Coaching.',
-  },
-  {
-    path: '/agb', folder: 'agb',
-    title: 'Jona Fels | AGB',
-    description: 'Buchungs- und Stornierungsregeln für Coaching-Sessions bei Jona Fels.',
-  },
-  {
-    path: '/blog', folder: 'blog',
-    title: 'Jona Fels | Blog',
-    description: 'Artikel und Insights zu Familienaufstellungen, systemischem Coaching und persönlicher Entwicklung.',
-  },
-  // Blog-Artikel
-  {
-    path: '/blog/familienstellen-in-einer-einzelsitzung', folder: 'blog/familienstellen-in-einer-einzelsitzung',
-    title: 'Keine Gruppe nötig: Familienstellen in einer Einzelsitzung | Jona Fels',
-    description: 'Erfahre, wie Familienaufstellungen auch ohne Gruppe funktionieren – in der Einzelsitzung mit Bodenankern.',
-  },
-  {
-    path: '/blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt', folder: 'blog/von-freud-bis-hellinger-woher-das-familienstellen-kommt',
-    title: 'Von Freud bis Hellinger: Woher das Familienstellen kommt | Jona Fels',
-    description: 'Die Geschichte der Familienaufstellung – von Sigmund Freud über Virginia Satir bis zu Bert Hellinger.',
-  },
-  {
-    path: '/blog/das-wissende-feld-wahrnehmung-beim-familienstellen', folder: 'blog/das-wissende-feld-wahrnehmung-beim-familienstellen',
-    title: 'Das wissende Feld: Wahrnehmung beim Familienstellen | Jona Fels',
-    description: 'Was ist das wissende Feld? Wie funktioniert die repräsentierende Wahrnehmung in Familienaufstellungen?',
-  },
-  {
-    path: '/blog/gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt', folder: 'blog/gefangen-im-alten-drehbuch-warum-das-glueck-oft-ausbleibt',
-    title: 'Gefangen im alten Drehbuch: Warum das Glück oft ausbleibt | Jona Fels',
-    description: 'Warum wiederholen wir immer die gleichen Muster? Wie unbewusste Lebensskripte dein Glück blockieren.',
-  },
-];
+function setMeta(html, attr, name, content) {
+  const re = new RegExp(`<meta ${attr}="${name.replace(/:/g, "\\:")}" content="[^"]*"\\s*\\/?>`);
+  const tag = `<meta ${attr}="${name}" content="${esc(content)}" />`;
+  return re.test(html) ? html.replace(re, tag) : html.replace("</head>", `  ${tag}\n  </head>`);
+}
 
-const distDir = join(__dirname, '..', 'dist');
-const templatePath = join(distDir, 'index.html');
+function injectHead(html, head, path, language) {
+  html = html.replace(/<html lang="[^"]*"/, `<html lang="${language}"`);
+  html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(head.title)}</title>`);
+  html = setMeta(html, "name", "description", head.description);
+  html = setMeta(html, "name", "robots", head.noindex ? "noindex, follow" : "index, follow");
+  html = setMeta(html, "property", "og:title", head.title);
+  html = setMeta(html, "property", "og:description", head.description);
+  html = setMeta(html, "property", "og:url", head.url);
+  html = setMeta(html, "property", "og:type", head.type);
+  html = setMeta(html, "property", "og:image", head.image);
+  html = setMeta(html, "property", "og:locale", language === "en" ? "en_US" : "de_DE");
+  html = setMeta(html, "name", "twitter:title", head.title);
+  html = setMeta(html, "name", "twitter:description", head.description);
+  html = setMeta(html, "name", "twitter:image", head.image);
+  html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${head.url}" />`);
 
-/**
- * Injiziert seitenspezifische Meta-Tags in das HTML-Template
- */
-function injectMeta(html, route) {
-  const url = `${SITE_URL}${route.path}`;
-  const title = route.title;
-  const description = route.description;
-  const image = route.image || DEFAULT_IMAGE;
-  const type = route.path.startsWith('/blog/') && route.path !== '/blog' ? 'article' : 'website';
-
-  // Title ersetzen
-  html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
-
-  // Meta description ersetzen
-  html = html.replace(
-    /<meta name="description" content="[^"]*"\s*\/?>/,
-    `<meta name="description" content="${description}" />`
-  );
-
-  // OG Tags ersetzen
-  html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/?>/, `<meta property="og:title" content="${title}" />`);
-  html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${description}" />`);
-  html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${url}" />`);
-  html = html.replace(/<meta property="og:type" content="[^"]*"\s*\/?>/, `<meta property="og:type" content="${type}" />`);
-  html = html.replace(/<meta property="og:image" content="[^"]*"\s*\/?>/, `<meta property="og:image" content="${image}" />`);
-
-  // Twitter Tags ersetzen
-  html = html.replace(/<meta name="twitter:title" content="[^"]*"\s*\/?>/, `<meta name="twitter:title" content="${title}" />`);
-  html = html.replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
-  html = html.replace(/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${image}" />`);
-
-  // Canonical Link einfügen / ersetzen (vor </head>)
-  if (!html.includes('rel="canonical"')) {
-    html = html.replace('</head>', `  <link rel="canonical" href="${url}" />\n  </head>`);
-  } else {
-    html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`);
-  }
-
-  // Hreflang-Tags: Self-Reference + x-default (nur DE, EN nur als Toggle, nicht eigenständig indexierbar)
-  html = html.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/?>\s*/g, '');
-  const hreflangTags =
-    `<link rel="alternate" hreflang="de" href="${url}" />` +
-    `<link rel="alternate" hreflang="x-default" href="${url}" />`;
-  html = html.replace('</head>', `${hreflangTags}\n  </head>`);
-
+  // hreflang: Startseite hat DE + EN, alle anderen Seiten nur DE.
+  html = html.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/?>\s*/g, "");
+  const tags =
+    path === "/" || path === "/en"
+      ? `<link rel="alternate" hreflang="de" href="${SITE_URL}/" /><link rel="alternate" hreflang="en" href="${SITE_URL}/en" /><link rel="alternate" hreflang="x-default" href="${SITE_URL}/" />`
+      : head.noindex
+        ? ""
+        : `<link rel="alternate" hreflang="de" href="${head.url}" /><link rel="alternate" hreflang="x-default" href="${head.url}" />`;
+  if (tags) html = html.replace("</head>", `${tags}\n  </head>`);
   return html;
 }
 
-/**
- * HTML minifizieren
- */
-function minifyHtml(html) {
-  return html
-    .replace(/<!--(?!\[if)[\s\S]*?-->/g, '')
-    .replace(/\s{2,}/g, ' ')
-    .replace(/>\s+</g, '><')
-    .replace(/^\s+|\s+$/gm, '')
-    .replace(/\n\s*\n/g, '\n')
+function injectBody(html, body) {
+  return html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+}
+
+const minify = (html) =>
+  html
+    .replace(/<!--(?!\[if)[\s\S]*?-->/g, "")
+    .replace(/\n\s*\n/g, "\n")
     .trim();
+
+function write(path, html) {
+  // "/kontakt" → dist/kontakt.html: Cloudflare Pages und GitHub Pages liefern das
+  // unter /kontakt aus (ohne Schrägstrich am Ende = passend zum Canonical).
+  const out = path === "/" ? join(distDir, "index.html") : join(distDir, `${path.replace(/^\//, "")}.html`);
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(out, html, "utf-8");
 }
 
-function ensureDir(dirPath) {
-  if (!existsSync(dirPath)) {
-    mkdirSync(dirPath, { recursive: true });
-  }
+function writeSitemap(routes) {
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = routes
+    .filter((r) => r.sitemap)
+    .map(
+      (r) =>
+        `  <url>\n    <loc>${SITE_URL}${r.path}</loc>\n    <lastmod>${r.lastmod || today}</lastmod>\n    <changefreq>${r.changefreq}</changefreq>\n    <priority>${r.priority}</priority>\n  </url>`,
+    )
+    .join("\n");
+  writeFileSync(
+    join(distDir, "sitemap.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`,
+    "utf-8",
+  );
 }
 
-function generateStaticPages() {
-  console.log('🚀 Starte SEO-optimiertes SSG Build...\n');
-
+async function main() {
   if (!existsSync(templatePath)) {
-    console.error('❌ Fehler: dist/index.html nicht gefunden!');
+    console.error("❌ dist/index.html nicht gefunden – erst `vite build` ausführen.");
     process.exit(1);
   }
+  if (!existsSync(ssrEntry)) {
+    console.warn("⚠️  dist-ssr/entry-server.js fehlt – Vorrendern übersprungen, Seite bleibt reine SPA.");
+    return;
+  }
 
-  const template = readFileSync(templatePath, 'utf-8');
+  // React-Hinweise zu useLayoutEffect beim Server-Rendern sind harmlos – ausblenden.
+  const origError = console.error;
+  console.error = (...args) => {
+    if (typeof args[0] === "string" && args[0].includes("useLayoutEffect does nothing on the server")) return;
+    origError(...args);
+  };
 
-  console.log(`📄 Generiere ${routes.length} HTML-Dateien mit individuellen Meta-Tags:\n`);
+  const template = readFileSync(templatePath, "utf-8");
+  const { render, prerenderRoutes } = await import(pathToFileURL(ssrEntry).href);
 
-  routes.forEach(route => {
-    let outputPath;
-    if (route.folder === null) {
-      outputPath = join(distDir, 'index.html');
-    } else {
-      const folderPath = join(distDir, route.folder);
-      ensureDir(folderPath);
-      outputPath = join(folderPath, 'index.html');
+  let ok = 0;
+  for (const route of prerenderRoutes) {
+    try {
+      const { html: body, head } = render(route.path, route.language);
+      if (!head) throw new Error("Seite ohne <SEOHead />");
+      write(route.path, minify(injectBody(injectHead(template, head, route.path, route.language), body)));
+      ok++;
+      console.log(`   ✅ ${route.path.padEnd(70)} ${head.noindex ? "(noindex)" : ""}`);
+    } catch (err) {
+      // Fallback: leere App-Hülle (noindex), damit die Adresse trotzdem funktioniert.
+      write(route.path, minify(setMeta(template, "name", "robots", "noindex, nofollow")));
+      console.warn(`   ⚠️  ${route.path}: ${err.message} – nur App-Hülle ohne vorgerenderten Inhalt (noindex).`);
     }
+  }
 
-    // Meta-Tags injizieren, dann minifizieren
-    const withMeta = injectMeta(template, route);
-    const minified = minifyHtml(withMeta);
+  // 404-Seite: Cloudflare Pages und GitHub Pages liefern sie mit Status 404 aus.
+  try {
+    const { html: body, head } = render("/__404__", "de");
+    const notFoundHead = { ...head, title: "Seite nicht gefunden | Jona Fels", noindex: true, url: `${SITE_URL}/` };
+    let html = injectHead(template, notFoundHead, "/__404__", "de");
+    html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, "");
+    writeFileSync(join(distDir, "404.html"), minify(injectBody(html, body)), "utf-8");
+    console.log("   ✅ 404.html");
+  } catch (err) {
+    console.warn(`   ⚠️  404.html: ${err.message}`);
+  }
 
-    writeFileSync(outputPath, minified, 'utf-8');
-    console.log(`   ✅ ${route.path.padEnd(60)} → title: "${route.title}"`);
-  });
-
-  console.log('\n✨ SEO-optimiertes SSG Build abgeschlossen!');
-  console.log('   ✓ Individuelle <title>, <meta description>, <link canonical> pro Seite');
-  console.log('   ✓ Open Graph Tags (og:title, og:description, og:url, og:type)');
-  console.log('   ✓ Twitter Card Tags');
-  console.log('   ✓ HTML minifiziert');
+  writeSitemap(prerenderRoutes);
+  console.error = origError;
+  console.log(`\n✨ ${ok}/${prerenderRoutes.length} Seiten vorgerendert, sitemap.xml geschrieben.`);
 }
 
-generateStaticPages();
+main();

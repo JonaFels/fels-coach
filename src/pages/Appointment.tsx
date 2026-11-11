@@ -1,3 +1,4 @@
+import { SEOHead } from "@/components/SEOHead";
 import { useEffect } from "react";
 import { BookingOnsiteFirst } from "@/components/BookingOnsiteFirst";
 import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
@@ -20,6 +21,7 @@ const Appointment = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead />
       <header className="py-6 border-b border-border/40">
         <div className="container mx-auto px-4 flex items-center justify-center gap-3">
           <img
