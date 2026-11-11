@@ -262,7 +262,7 @@ export const translations: Translations = {
     en: "Framework",
   },
   "offerings.rahmen.location": {
-    de: "Vor Ort in der Praxis (Karlstraße 51, 79104 Freiburg im Breisgau) oder flexibel online per Video.",
+    de: "Vor Ort in der Praxis (Karlstraße 51, 79104 Freiburg im Breisgau) oder flexibel online per Video – auf Deutsch oder Englisch.",
     en: "In person at the practice (Karlstraße 51, 79104 Freiburg im Breisgau) or flexibly online via video.",
   },
   "offerings.rahmen.times": {

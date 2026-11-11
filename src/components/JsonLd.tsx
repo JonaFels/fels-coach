@@ -134,6 +134,7 @@ export const JsonLd = () => {
           "@type": "Person",
           "@id": "https://fels-coach.de/#person",
           name: "Jona Fels",
+          knowsLanguage: ["de", "en"],
           givenName: "Jona",
           familyName: "Fels",
           jobTitle: "Systemischer Aufsteller & Familienaufsteller",
