@@ -223,8 +223,8 @@ export const translations: Translations = {
     en: "Important: Systemic constellations are not psychotherapy and not a medical treatment. They do not provide diagnoses and do not replace medical or psychotherapeutic treatment. If you are in treatment or under severe psychological strain, please talk to your doctor or therapist first.",
   },
   "offerings.paymentNote": {
-    de: "Bezahlt wird nach der Sitzung – vor Ort per Karte, Apple Pay oder Google Pay, bei Online-Sitzungen per Zahlungslink. Die Rechnung bekommst du direkt danach per E-Mail.",
-    en: "Payment is made after the session – in person by card, Apple Pay or Google Pay, or via a payment link for online sessions. You'll receive your invoice by email right afterwards.",
+    de: "Bezahlt wird nach der Sitzung – vor Ort kontaktlos per Karte (z.\u00a0B. Visa oder Mastercard), bei Online-Sitzungen per Zahlungslink. Die Rechnung bekommst du direkt danach per E-Mail.",
+    en: "Payment is made after the session – in person by contactless card (e.g. Visa or Mastercard), or via a payment link for online sessions. You'll receive your invoice by email right afterwards.",
   },
   "offerings.preiseNote": {
     de: "Wenn du dir den regulären Preis gerade nicht leisten kannst, sprich mich im Orientierungsgespräch gerne offen darauf an. Wir finden eine vergünstigte Lösung, die für dich passt.",
@@ -1161,8 +1161,8 @@ export const translations: Translations = {
     en: "On Site",
   },
   "contact.directions.onSite1": {
-    de: "Praxisraum im Erdgeschoss",
-    en: "Practice room on the ground floor",
+    de: "Praxisraum im Hochparterre (ein paar Stufen hoch)",
+    en: "Practice room on the raised ground floor (a few steps up)",
   },
   "contact.directions.onSite2": {
     de: "Es gibt einen kleinen Wartebereich",
@@ -1288,7 +1288,7 @@ export const translations: Translations = {
   "terms.s3.heading": { de: "3. Vertragsschluss & Terminbuchung", en: "3. Contract Conclusion & Booking" },
   "terms.s3.text": { de: "Unsere Zusammenarbeit beginnt ganz unkompliziert: Du buchst einen Termin über mein Online-Buchungssystem (Orbnet), per E-Mail oder über WhatsApp. Mit deiner Buchung und meiner anschließenden Terminbestätigung kommt der verbindliche Vertrag zwischen uns zustande.", en: "Our collaboration begins very simply: You book an appointment through my online booking system (Orbnet), by email, or via WhatsApp. The binding contract between us is concluded with your booking and my subsequent appointment confirmation." },
   "terms.s4.heading": { de: "4. Vergütung & Zahlungsbedingungen", en: "4. Fees & Payment Terms" },
-  "terms.s4.p1": { de: "Es gelten die Preise, die zum Zeitpunkt deiner Buchung auf meiner Webseite oder im Buchungssystem veröffentlicht sind. Bezahlt wird nach der Sitzung: vor Ort per Karte, Apple Pay oder Google Pay, bei Online-Sitzungen über einen Zahlungslink, den du per E-Mail oder Nachricht erhältst. Ein Zahlungslink ist innerhalb von 14 Tagen ohne Abzug zu begleichen. Die Rechnung bzw. Quittung erhältst du nach der Zahlung per E-Mail.", en: "The prices published on my website or in the booking system at the time of your booking apply. Payment is made after the session: in person by card, Apple Pay or Google Pay, or for online sessions via a payment link sent to you by email or message. A payment link is to be paid within 14 days without deduction. You will receive your invoice or receipt by email after payment." },
+  "terms.s4.p1": { de: "Es gelten die Preise, die zum Zeitpunkt deiner Buchung auf meiner Webseite oder im Buchungssystem veröffentlicht sind. Bezahlt wird nach der Sitzung: vor Ort kontaktlos per Karte (z.\u00a0B. Visa oder Mastercard), bei Online-Sitzungen über einen Zahlungslink, den du per E-Mail oder Nachricht erhältst. Ein Zahlungslink ist innerhalb von 14 Tagen ohne Abzug zu begleichen. Die Rechnung bzw. Quittung erhältst du nach der Zahlung per E-Mail.", en: "The prices published on my website or in the booking system at the time of your booking apply. Payment is made after the session: in person by contactless card (e.g. Visa or Mastercard), or for online sessions via a payment link sent to you by email or message. A payment link is to be paid within 14 days without deduction. You will receive your invoice or receipt by email after payment." },
   "terms.s4.p2": { de: "Gemäß § 19 UStG bin ich als Kleinunternehmer tätig und weise auf meinen Rechnungen daher keine Umsatzsteuer aus. Die aufgerufenen Preise sind Endpreise.", en: "Pursuant to § 19 UStG, I operate as a small business and therefore do not charge VAT on my invoices. The prices quoted are final prices." },
   "terms.s5.heading": { de: "5. Stornierungsbedingungen", en: "5. Cancellation Policy" },
   "terms.s5.intro": { de: "Ich verstehe, dass das Leben manchmal dazwischenkommt und sich Pläne ändern können. Für meine Planungssicherheit beachte bitte folgende Regelung:", en: "I understand that life sometimes gets in the way and plans can change. For my planning security, please note the following:" },
