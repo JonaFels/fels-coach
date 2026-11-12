@@ -56,13 +56,13 @@ const Appointment = () => {
               onsite={{
                 label: "In person in Freiburg",
                 hint: "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
-                url: "https://cal.meetergo.com/jona/systemic-constellation?lang=en",
+                url: "https://cal.meetergo.com/jona/aufstellung-freiburg?lang=en",
                 iframeTitle: "Booking – Systemic 1:1 Constellation in person",
               }}
               online={{
                 label: "Online via video",
                 hint: "Video call from anywhere · 90 minutes · €110",
-                url: "https://cal.meetergo.com/jona/systemic-constellation-1?lang=en",
+                url: "https://cal.meetergo.com/jona/aufstellung-online?lang=en",
                 iframeTitle: "Booking – Systemic 1:1 Constellation online",
               }}
               onlinePrompt="Prefer online? Show the online calendar"

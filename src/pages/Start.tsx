@@ -62,13 +62,13 @@ const Start = () => {
               onsite={{
                 label: "Vor Ort in Freiburg",
                 hint: "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
-                url: "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de",
+                url: "https://cal.meetergo.com/jona/aufstellung-freiburg?lang=de",
                 iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung vor Ort",
               }}
               online={{
                 label: "Online per Video",
                 hint: "Videocall von überall · 90 Minuten · 110 €",
-                url: "https://cal.meetergo.com/jona/systemische-11-aufstellung-1?lang=de",
+                url: "https://cal.meetergo.com/jona/aufstellung-online?lang=de",
                 iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung online",
               }}
               onlinePrompt="Lieber online? Online-Kalender anzeigen"

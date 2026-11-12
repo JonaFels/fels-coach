@@ -9,7 +9,9 @@ declare global {
   }
 }
 
-const MEETERGO_AUFSTELLUNG = "https://cal.meetergo.com/jona/systemische-11-aufstellung?lang=de";
+const MEETERGO_AUFSTELLUNG_BASE = "https://cal.meetergo.com/jona/aufstellung-freiburg";
+const getAufstellungUrl = (language: string) =>
+  `${MEETERGO_AUFSTELLUNG_BASE}?lang=${language === "en" ? "en" : "de"}`;
 const MEETERGO_ORIENTIERUNG_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
 const MEETERGO_ORIENTIERUNG_EN = "https://cal.meetergo.com/jona/discovery-call";
 
@@ -24,7 +26,7 @@ interface OrbnetDialogProps {
 
 const SEMUID_TO_URL: Record<string, (language: string) => string> = {
   "609d5e7a-e208-4715-b073-e99206aebbf7": getOrientationUrl,
-  "55df32ef-b5d1-468e-a4ba-f7f892398327": () => MEETERGO_AUFSTELLUNG,
+  "55df32ef-b5d1-468e-a4ba-f7f892398327": getAufstellungUrl,
 };
 
 const OrbnetDialog = ({ semuid, open, onClose }: OrbnetDialogProps) => {
