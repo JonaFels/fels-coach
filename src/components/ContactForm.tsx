@@ -21,7 +21,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export const ContactForm = () => {
-  const { t, localize } = useLanguage();
+  const { t, localize, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -66,21 +66,12 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const workerUrl = import.meta.env.VITE_WORKER_URL as string | undefined;
+      // Supabase-Funktion (EU): Benachrichtigung an Jona + Eingangsbestätigung an die Person
+      const endpoint =
+        (import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined) ||
+        "https://kvxoghnpaohcbxncmsdp.supabase.co/functions/v1/coach-contact";
 
-      if (!workerUrl) {
-        console.error(
-          "[ContactForm] VITE_WORKER_URL ist nicht gesetzt. " +
-          "Bitte die Umgebungsvariable in Cloudflare Pages (Settings → Environment variables) hinterlegen und neu deployen."
-        );
-        toast({
-          title: t("contactForm.error.notConfigured"),
-          variant: "destructive",
-        });
-        return;
-      }
-
-      const res = await fetch(workerUrl, {
+      const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -88,9 +79,10 @@ export const ContactForm = () => {
           email: formData.email,
           message: formData.message,
           website: formData.website || "",
+          lang: language,
         }),
       });
-      if (!res.ok) throw new Error(`Worker ${res.status}`);
+      if (!res.ok) throw new Error(`Kontakt ${res.status}`);
 
       setIsSuccess(true);
       trackContactFormSubmit(true);
