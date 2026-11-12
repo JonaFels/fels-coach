@@ -104,6 +104,10 @@ const Datenschutz = () => {
             <p>{t("privacy.maps.p1")}</p>
             <p>{t("privacy.maps.p2")}</p>
 
+            <h2>{t("privacy.youtube.heading")}</h2>
+            <p>{t("privacy.youtube.p1")}</p>
+            <p>{t("privacy.youtube.p2")}</p>
+
             <hr />
 
 {language === "de" ? (
