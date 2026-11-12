@@ -88,6 +88,9 @@ const Angebote = () => {
                   <span className="text-3xl font-semibold text-foreground">{language === "de" ? "110\u00a0€" : "€110"}</span>
                   <span className="text-sm text-muted-foreground">{language === "de" ? "/ 90\u00a0Min." : "/ 90\u00a0min"}</span>
                 </div>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+                  {t("offerings.paymentNote")}
+                </p>
               </div>
             </div>
 
