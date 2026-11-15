@@ -1,15 +1,36 @@
-import { SEOHead } from "@/components/SEOHead";
 import { useEffect } from "react";
-import { BookingOnsiteFirst } from "@/components/BookingOnsiteFirst";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import { BookingPageLayout, type BookingPageTexts } from "@/components/BookingPageLayout";
 
-
+const texts: BookingPageTexts = {
+  lang: "de",
+  brand: "Jona Fels · Systemischer Aufsteller",
+  eyebrow: "Termin buchen",
+  title: "Buche deine systemische 1:1-Aufstellung",
+  subtitle: "90 Minuten · 110 € · vor Ort in Freiburg oder online per Video",
+  trust: "Bezahlung erst nach der Sitzung – keine Vorkasse",
+  groupLabel: "Art des Termins wählen",
+  onsite: {
+    label: "Vor Ort in Freiburg",
+    hint: "Praxisraum Karlstraße 51, 79104 Freiburg",
+    url: "https://cal.meetergo.com/jona/aufstellung-freiburg?lang=de",
+    iframeTitle: "Terminbuchung – systemische 1:1-Aufstellung vor Ort",
+  },
+  online: {
+    label: "Online per Video",
+    hint: "Per Videocall – bequem von zu Hause",
+    url: "https://cal.meetergo.com/jona/aufstellung-online?lang=de",
+    iframeTitle: "Terminbuchung – systemische 1:1-Aufstellung online",
+  },
+  discoveryPrompt: "Noch unsicher, ob eine Aufstellung das Richtige für dich ist?",
+  discoveryLink: "Kostenloses Orientierungsgespräch (20 Min.) buchen",
+  discoveryUrl: "https://cal.meetergo.com/jona/orienrungsgesprach",
+  footer: "Jona Fels · Systemische Aufstellungen & Familienaufstellung",
+};
 
 const Start = () => {
-
   useEffect(() => {
     const prev = document.title;
-    document.title = "Willkommen – dein Start | Jona Fels";
+    document.title = "Termin buchen – systemische 1:1-Aufstellung | Jona Fels";
     const meta = document.querySelector('meta[name="robots"]');
     const created = !meta;
     const tag = meta ?? document.createElement("meta");
@@ -22,74 +43,7 @@ const Start = () => {
     };
   }, []);
 
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead />
-      {/* Minimal top bar – kein Header/Footer, da versteckte Onboarding-Seite */}
-      <header className="py-6 border-b border-border/40">
-        <div className="container mx-auto px-4 flex items-center justify-center gap-3">
-          <img
-            src={profilBild}
-            alt="Jona Fels"
-            className="w-10 h-10 rounded-full object-cover object-[center_18%]"
-          />
-          <span className="font-serif text-base text-foreground">
-            Jona Fels · Systemischer Aufsteller
-          </span>
-        </div>
-      </header>
-
-      <main id="main-content">
-        {/* 1. Hero */}
-        <section className="pt-24 pb-10 md:pt-36 md:pb-14">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-4">
-              Willkommen
-            </span>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
-              Buche deine Systemische 1:1 Aufstellung
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              90 Minuten · 110 € · Vor Ort in Freiburg – auf Wunsch auch online per Video.
-            </p>
-          </div>
-        </section>
-
-        {/* 2. Buchung – Vor Ort zuerst, online als Option */}
-        <section className="pb-32 md:pb-44">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <BookingOnsiteFirst
-              onsite={{
-                label: "Vor Ort in Freiburg",
-                hint: "Praxisraum Karlstraße 51, 79104 Freiburg · 90 Minuten · 110 €",
-                url: "https://cal.meetergo.com/jona/aufstellung-freiburg?lang=de",
-                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung vor Ort",
-              }}
-              online={{
-                label: "Online per Video",
-                hint: "Videocall von überall · 90 Minuten · 110 €",
-                url: "https://cal.meetergo.com/jona/aufstellung-online?lang=de",
-                iframeTitle: "Terminbuchung – Systemische 1:1 Aufstellung online",
-              }}
-              onlinePrompt="Lieber online? Online-Kalender anzeigen"
-              showLabel="Online-Kalender anzeigen"
-              hideLabel="Online-Kalender ausblenden"
-            />
-          </div>
-        </section>
-
-
-
-      </main>
-
-
-      <footer className="py-8 border-t border-border/40">
-        <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Jona Fels · Systemische Aufstellungen &amp; Familienaufstellung
-        </div>
-      </footer>
-    </div>
-  );
+  return <BookingPageLayout t={texts} />;
 };
 
 export default Start;

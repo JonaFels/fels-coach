@@ -1,12 +1,36 @@
-import { SEOHead } from "@/components/SEOHead";
 import { useEffect } from "react";
-import { BookingOnsiteFirst } from "@/components/BookingOnsiteFirst";
-import profilBild from "@/assets/jona-fels-systemisches-coaching.webp";
+import { BookingPageLayout, type BookingPageTexts } from "@/components/BookingPageLayout";
+
+const texts: BookingPageTexts = {
+  lang: "en",
+  brand: "Jona Fels · Systemic Constellation Facilitator",
+  eyebrow: "Book a session",
+  title: "Book your 1:1 Systemic Constellation",
+  subtitle: "90 minutes · €110 · in person in Freiburg or online via video",
+  trust: "Pay after the session – no prepayment",
+  groupLabel: "Choose session type",
+  onsite: {
+    label: "In person in Freiburg",
+    hint: "Practice room, Karlstraße 51, 79104 Freiburg, Germany",
+    url: "https://cal.meetergo.com/jona/aufstellung-freiburg?lang=en",
+    iframeTitle: "Booking – 1:1 Systemic Constellation in person",
+  },
+  online: {
+    label: "Online via video",
+    hint: "Video call – from wherever you are",
+    url: "https://cal.meetergo.com/jona/aufstellung-online?lang=en",
+    iframeTitle: "Booking – 1:1 Systemic Constellation online",
+  },
+  discoveryPrompt: "Not sure yet whether a constellation is right for you?",
+  discoveryLink: "Book a free 20-minute discovery call",
+  discoveryUrl: "https://cal.meetergo.com/jona/discovery-call",
+  footer: "Jona Fels · Systemic Constellation Work",
+};
 
 const Appointment = () => {
   useEffect(() => {
     const prev = document.title;
-    document.title = "Book your appointment | Jona Fels";
+    document.title = "Book your session – 1:1 Systemic Constellation | Jona Fels";
     const meta = document.querySelector('meta[name="robots"]');
     const created = !meta;
     const tag = meta ?? document.createElement("meta");
@@ -19,67 +43,7 @@ const Appointment = () => {
     };
   }, []);
 
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead />
-      <header className="py-6 border-b border-border/40">
-        <div className="container mx-auto px-4 flex items-center justify-center gap-3">
-          <img
-            src={profilBild}
-            alt="Jona Fels"
-            className="w-10 h-10 rounded-full object-cover object-[center_18%]"
-          />
-          <span className="font-serif text-base text-foreground">
-            Jona Fels · Systemic Constellation Facilitator
-          </span>
-        </div>
-      </header>
-
-      <main id="main-content">
-        <section className="pt-24 pb-10 md:pt-36 md:pb-14">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-secondary mb-4">
-              Welcome
-            </span>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
-              Book your Systemic 1:1 Constellation
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              90 minutes · €110 · In person in Freiburg – online via video also available.
-            </p>
-          </div>
-        </section>
-
-        <section className="pb-32 md:pb-44">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <BookingOnsiteFirst
-              onsite={{
-                label: "In person in Freiburg",
-                hint: "Practice room Karlstraße 51, 79104 Freiburg · 90 minutes · €110",
-                url: "https://cal.meetergo.com/jona/aufstellung-freiburg?lang=en",
-                iframeTitle: "Booking – Systemic 1:1 Constellation in person",
-              }}
-              online={{
-                label: "Online via video",
-                hint: "Video call from anywhere · 90 minutes · €110",
-                url: "https://cal.meetergo.com/jona/aufstellung-online?lang=en",
-                iframeTitle: "Booking – Systemic 1:1 Constellation online",
-              }}
-              onlinePrompt="Prefer online? Show the online calendar"
-              showLabel="Show the online calendar"
-              hideLabel="Hide the online calendar"
-            />
-          </div>
-        </section>
-      </main>
-
-      <footer className="py-8 border-t border-border/40">
-        <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Jona Fels · Systemic Constellation Work
-        </div>
-      </footer>
-    </div>
-  );
+  return <BookingPageLayout t={texts} />;
 };
 
 export default Appointment;
