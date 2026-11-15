@@ -71,7 +71,8 @@ export const AppRoutes = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/termine" element={<Start />} />
-              <Route path="/appointment" element={<Appointment />} />
+              <Route path="/appointments" element={<Appointment />} />
+              <Route path="/appointment" element={<Navigate to="/appointments" replace />} />
               <Route path="/termin" element={<Navigate to="/termine" replace />} />
               <Route path="/start" element={<Navigate to="/termine" replace />} />
               <Route path="/admin/login" element={<AdminLogin />} />

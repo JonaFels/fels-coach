@@ -21,7 +21,7 @@ export interface BookingPageTexts {
   footer: string;
 }
 
-/** Gemeinsames Layout der versteckten Buchungsseiten /termine (DE) und /appointment (EN). */
+/** Gemeinsames Layout der versteckten Buchungsseiten /termine (DE) und /appointments (EN). */
 export const BookingPageLayout = ({ t }: { t: BookingPageTexts }) => (
   <div className="min-h-screen bg-background" lang={t.lang}>
     <SEOHead />
@@ -44,7 +44,7 @@ export const BookingPageLayout = ({ t }: { t: BookingPageTexts }) => (
             <>
               <span className="text-foreground" aria-current="page">DE</span>
               <span className="text-muted-foreground/60">|</span>
-              <Link to="/appointment" hrefLang="en" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">EN</Link>
+              <Link to="/appointments" hrefLang="en" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">EN</Link>
             </>
           ) : (
             <>

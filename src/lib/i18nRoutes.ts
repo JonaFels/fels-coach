@@ -21,7 +21,7 @@ export const ROUTE_PAIRS: Record<string, string> = {
   "/impressum": "/en/imprint",
   "/datenschutz": "/en/privacy",
   "/agb": "/en/terms",
-  "/termine": "/appointment",
+  "/termine": "/appointments",
 };
 
 const EN_TO_DE: Record<string, string> = Object.fromEntries(
@@ -32,7 +32,7 @@ const clean = (path: string) => (path.length > 1 ? path.replace(/\/+$/, "") : pa
 
 export const languageFromPath = (pathname: string): Lang => {
   const p = clean(pathname);
-  return p === "/en" || p.startsWith("/en/") || p === "/appointment" ? "en" : "de";
+  return p === "/en" || p.startsWith("/en/") || p === "/appointments" ? "en" : "de";
 };
 
 /** Deutsche Grundadresse zu einer (deutschen oder englischen) Adresse. */
