@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useCallback } from "react";
+import React, { createContext, useContext, useCallback, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { languageFromPath, localizePath } from "@/lib/i18nRoutes";
 import { translations, Language } from "@/i18n/translations";
@@ -23,6 +23,11 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Die Sprache ergibt sich aus der Adresse: /en/... = Englisch, sonst Deutsch.
   const language: Language = languageFromPath(location.pathname);
+
+  // <html lang> beim Wechsel im Browser mitziehen (Screenreader, Übersetzungs-Tools).
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   // Umschalten = zur Entsprechung in der anderen Sprache wechseln (Anker bleibt erhalten).
   const setLanguage = useCallback(

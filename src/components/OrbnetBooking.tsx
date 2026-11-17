@@ -13,7 +13,7 @@ const MEETERGO_AUFSTELLUNG_BASE = "https://cal.meetergo.com/jona/aufstellung-fre
 const getAufstellungUrl = (language: string) =>
   `${MEETERGO_AUFSTELLUNG_BASE}?lang=${language === "en" ? "en" : "de"}`;
 const MEETERGO_ORIENTIERUNG_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
-const MEETERGO_ORIENTIERUNG_EN = "https://cal.meetergo.com/jona/discovery-call";
+const MEETERGO_ORIENTIERUNG_EN = "https://cal.meetergo.com/jona/discovery-call?lang=en";
 
 const getOrientationUrl = (language: string) =>
   language === "en" ? MEETERGO_ORIENTIERUNG_EN : MEETERGO_ORIENTIERUNG_DE;

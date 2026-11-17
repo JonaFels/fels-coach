@@ -169,6 +169,7 @@ const Datenschutz = () => {
               sowie in den ergänzenden Hinweisen von YouTube unter{" "}
               <a
                 href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/"
+                className="break-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -219,12 +220,13 @@ const Datenschutz = () => {
               <strong>Storage period:</strong> I do not know the exact storage period of the data collected
               by YouTube/Google; it is determined by Google. Further information can be found in Google's
               privacy policy at{" "}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              <a href="https://policies.google.com/privacy" className="break-all" target="_blank" rel="noopener noreferrer">
                 https://policies.google.com/privacy
               </a>{" "}
               and in YouTube's additional information at{" "}
               <a
                 href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/"
+                className="break-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
