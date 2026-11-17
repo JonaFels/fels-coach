@@ -23,7 +23,7 @@ const texts: BookingPageTexts = {
   },
   discoveryPrompt: "Not sure yet whether a constellation is right for you?",
   discoveryLink: "Book a free 20-minute discovery call",
-  discoveryUrl: "https://cal.meetergo.com/jona/discovery-call",
+  discoveryUrl: "https://cal.meetergo.com/jona/discovery-call?lang=en",
   footer: "Jona Fels · Systemic Constellation Work",
 };
 

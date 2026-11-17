@@ -10,7 +10,7 @@ interface ErstgespraechModalProps {
 }
 
 const MEETERGO_URL_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
-const MEETERGO_URL_EN = "https://cal.meetergo.com/jona/discovery-call";
+const MEETERGO_URL_EN = "https://cal.meetergo.com/jona/discovery-call?lang=en";
 
 export const ErstgespraechModal = ({ open, onClose }: ErstgespraechModalProps) => {
   const { language } = useLanguage();
