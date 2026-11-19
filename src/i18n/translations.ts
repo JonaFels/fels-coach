@@ -755,8 +755,8 @@ export const translations: Translations = {
     en: "Certified Family Constellation Facilitator (Wolfgang Bracht)",
   },
   "about.cv1.desc": {
-    de: "Umfassende Ausbildung in systemischer Aufstellungsarbeit, Trauma-Arbeit, NLP, Transaktionsanalyse und Pesso-Arbeit (203 Stunden).",
-    en: "Comprehensive training in systemic constellation work, trauma work, NLP, transactional analysis, and Pesso work (203 hours).",
+    de: "Ausbildung zum Familiensteller bei Wolfgang Bracht in Freiburg (29 Tage, 203 Stunden): Theorie und Praxis des Familienstellens, Trauma-Arbeit, Inneres-Kind- und Co-Dependency-Arbeit, Reichianische Körperarbeit, NLP, Transaktionsanalyse, Focusing, Logotherapie und Pesso-Arbeit.",
+    en: "Training as a family constellation facilitator with Wolfgang Bracht in Freiburg (29 days, 203 hours): theory and practice of family constellations, trauma work, inner child and co-dependency work, Reichian bodywork, NLP, transactional analysis, focusing, logotherapy and Pesso work.",
   },
   "about.cv1.badge": {
     de: "Abschluss: sehr gut",
@@ -791,12 +791,12 @@ export const translations: Translations = {
     en: "since May 2026",
   },
   "about.cv4.title": {
-    de: "Gestalttherapie-Ausbildung",
-    en: "Gestalt Therapy Training",
+    de: "Ausbildung in Transformativer Gestalttherapie",
+    en: "Training in Transformative Gestalt Therapy",
   },
   "about.cv4.desc": {
-    de: "Mehrjährige Ausbildung in Gestalttherapie bei Damiano Nöthen (Freiburg & Italien) – Vertiefung in Präsenz, Prozessarbeit und der bewussten Wahrnehmung dessen, was im Moment lebendig ist.",
-    en: "Multi-year training in Gestalt therapy with Damiano Nöthen (Freiburg & Italy) – deepening presence, process work, and conscious awareness of what is alive in the moment.",
+    de: "Mehrjährige Ausbildung am Gestalt Forum (Leitung: Damiano S. Nöthen) mit Präsenzseminaren in Italien – Vertiefung in Präsenz, Prozessarbeit und der bewussten Wahrnehmung dessen, was im Moment lebendig ist.",
+    en: "Multi-year training at Gestalt Forum (led by Damiano S. Nöthen) with residential seminars in Italy – deepening presence, process work, and conscious awareness of what is alive in the moment.",
   },
   "about.cv4.badge": {
     de: "laufend",
