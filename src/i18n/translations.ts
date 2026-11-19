@@ -755,8 +755,8 @@ export const translations: Translations = {
     en: "Certified Family Constellation Facilitator (Wolfgang Bracht)",
   },
   "about.cv1.desc": {
-    de: "Ausbildung zum Familiensteller bei Wolfgang Bracht in Freiburg (29 Tage, 203 Stunden): Theorie und Praxis des Familienstellens, Trauma-Arbeit, Inneres-Kind- und Co-Dependency-Arbeit, Reichianische Körperarbeit, NLP, Transaktionsanalyse, Focusing, Logotherapie und Pesso-Arbeit.",
-    en: "Training as a family constellation facilitator with Wolfgang Bracht in Freiburg (29 days, 203 hours): theory and practice of family constellations, trauma work, inner child and co-dependency work, Reichian bodywork, NLP, transactional analysis, focusing, logotherapy and Pesso work.",
+    de: "Ausbildung bei Wolfgang Bracht in Freiburg (29 Tage, 203 Stunden) – u. a. Trauma-Arbeit, Inneres-Kind-Arbeit, Körperarbeit, NLP, Transaktionsanalyse und Pesso-Arbeit.",
+    en: "Training with Wolfgang Bracht in Freiburg (29 days, 203 hours) – incl. trauma work, inner child work, bodywork, NLP, transactional analysis and Pesso work.",
   },
   "about.cv1.badge": {
     de: "Abschluss: sehr gut",
