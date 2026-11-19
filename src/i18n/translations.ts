@@ -755,8 +755,8 @@ export const translations: Translations = {
     en: "Certified Family Constellation Facilitator (Wolfgang Bracht)",
   },
   "about.cv1.desc": {
-    de: "Umfassende Ausbildung in systemischer Aufstellungsarbeit, Trauma-Therapie, NLP, Transaktionsanalyse und Pesso-Arbeit (203 Stunden).",
-    en: "Comprehensive training in systemic constellation work, trauma therapy, NLP, transactional analysis, and Pesso work (203 hours).",
+    de: "Umfassende Ausbildung in systemischer Aufstellungsarbeit, Trauma-Arbeit, NLP, Transaktionsanalyse und Pesso-Arbeit (203 Stunden).",
+    en: "Comprehensive training in systemic constellation work, trauma work, NLP, transactional analysis, and Pesso work (203 hours).",
   },
   "about.cv1.badge": {
     de: "Abschluss: sehr gut",
@@ -795,7 +795,7 @@ export const translations: Translations = {
     en: "Gestalt Therapy Training",
   },
   "about.cv4.desc": {
-    de: "Mehrjährige Ausbildung in Gestalttherapie bei Damiano Nöthen (Freiburg & Italien) – Vertiefung in Präsenz, Prozessarbeit und der bewussten Wahrnehmung des, was im Moment lebendig ist.",
+    de: "Mehrjährige Ausbildung in Gestalttherapie bei Damiano Nöthen (Freiburg & Italien) – Vertiefung in Präsenz, Prozessarbeit und der bewussten Wahrnehmung dessen, was im Moment lebendig ist.",
     en: "Multi-year training in Gestalt therapy with Damiano Nöthen (Freiburg & Italy) – deepening presence, process work, and conscious awareness of what is alive in the moment.",
   },
   "about.cv4.badge": {
