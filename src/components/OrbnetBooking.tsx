@@ -12,7 +12,7 @@ declare global {
 const MEETERGO_AUFSTELLUNG_BASE = "https://cal.meetergo.com/jona/aufstellung-freiburg";
 const getAufstellungUrl = (language: string) =>
   `${MEETERGO_AUFSTELLUNG_BASE}?lang=${language === "en" ? "en" : "de"}`;
-const MEETERGO_ORIENTIERUNG_DE = "https://cal.meetergo.com/jona/orienrungsgesprach";
+const MEETERGO_ORIENTIERUNG_DE = "https://cal.meetergo.com/jona/discovery-call?lang=de";
 const MEETERGO_ORIENTIERUNG_EN = "https://cal.meetergo.com/jona/discovery-call?lang=en";
 
 const getOrientationUrl = (language: string) =>
