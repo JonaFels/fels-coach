@@ -23,7 +23,7 @@ const texts: BookingPageTexts = {
   },
   discoveryPrompt: "Noch unsicher, ob eine Aufstellung das Richtige für dich ist?",
   discoveryLink: "Kostenloses Orientierungsgespräch (20 Min.) buchen",
-  discoveryUrl: "https://cal.meetergo.com/jona/orienrungsgesprach",
+  discoveryUrl: "https://cal.meetergo.com/jona/discovery-call?lang=de",
   footer: "Jona Fels · Systemische Aufstellungen & Familienaufstellung",
 };
 
