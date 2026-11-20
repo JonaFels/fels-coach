@@ -9,7 +9,7 @@ export const Footer = () => {
   const { t, language, localize } = useLanguage();
   const currentYear = new Date().getFullYear();
   const { pathname } = useLocation();
-  const showDirections = !["/", "/ablauf-preise", "/agb", "/datenschutz", "/impressum"].includes(pathname);
+  const showDirections = ["/kontakt", "/en/contact"].includes(pathname.replace(/\/$/, ""));
 
   return (
     <footer className="border-t border-border/60 bg-primary/[0.03] mt-12 md:mt-16" style={{ contentVisibility: "auto" }}>
