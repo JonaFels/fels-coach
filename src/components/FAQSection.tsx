@@ -17,6 +17,10 @@ const faqData = {
       answer: "Das darf sein – und ich halte den Rahmen für dich. Mein Job ist es, präsent und ruhig dabei zu sein, dich zu begleiten und dafür zu sorgen, dass du am Ende nicht aufgewühlt, sondern geerdet wieder rausgehst. Wir arbeiten in deinem Tempo, nichts wird erzwungen.",
     },
     {
+      question: "Warum duzt du mich?",
+      answer: "Mir ist wichtig, dass wir uns auf Augenhöhe begegnen. In der Aufstellungsarbeit geht es um sehr persönliche Themen – das „Du“ nimmt eine unnötige Distanz heraus und macht es oft leichter, offen zu sprechen. Wenn dir das „Sie“ lieber ist, sag es einfach. Das ist völlig in Ordnung, und wir bleiben dann beim Sie.",
+    },
+    {
       question: "Wie viele Sitzungen brauche ich, bis sich etwas verändert?",
       answer: "Das ist sehr individuell. Manche Klient:innen spüren bereits nach einer Aufstellung eine deutliche Entlastung, andere kommen über mehrere Monate in lockerer Folge. Häufig sind 3 bis 6 Sitzungen ein guter Rahmen, um ein Thema wirklich in die Tiefe zu bearbeiten – ich dränge dich aber zu nichts.",
     },
